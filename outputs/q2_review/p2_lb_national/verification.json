@@ -1,0 +1,476 @@
+{
+  "passed": true,
+  "status": "conditional_Q2_candidate_review_ready",
+  "checks": [
+    {
+      "name": "latest_national_results_match_code_inputs_sources",
+      "passed": true,
+      "detail": "20261018T161113651314Z"
+    },
+    {
+      "name": "full_regression_tests_no_skip",
+      "passed": true,
+      "detail": {
+        "tests": 225,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": true,
+        "seconds": 5.882617699971888,
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+      }
+    },
+    {
+      "name": "frozen_dependency_versions",
+      "passed": true,
+      "detail": {
+        "numpy": "2.3.5",
+        "scipy": "1.16.3",
+        "mesa": "3.3.1",
+        "pandas": "3.0.1",
+        "matplotlib": "3.10.7"
+      }
+    },
+    {
+      "name": "official_originals_and_Q1_contracts_equal_common_base",
+      "passed": true,
+      "detail": {
+        "data/sources.json": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f",
+        "data/evidence_reviews.json": "6043473c2192dc4c91d47c521bea5adb15b0b07197ad6c421b9216a6f207f376",
+        "workflow/model_inputs.json": "adcdca7ed33dc4048761a220c7a00b6585733117321ed1ce8571dd521c0520b0",
+        "只读工作区/final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+        "只读工作区/gemini_final_idea.md": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+        "只读工作区/README.md": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af",
+        "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf": "a892165c851da77c916d6f2dd7a9cf7062c1e37698a88641b3a3105bef90c963",
+        "附件1.xlsx": "4cd3f519f72d18869d33713fc9dd2ec7a3ba83d5178ee6d4170d37adf45ea1cd",
+        "附件2.xlsx": "7a35204be5db7e8cbfddf77a8a36604fafa87dabbf80c69c752b8b8f0d97a330",
+        "附件3.xlsx": "df616d471bd31fe865ad9d509ea3fc1fa68d8bd172af7c10bb15ffba7a74987e",
+        "附件4.xlsx": "a7945ce8d6c279ecb695c3e56b7d331c1d3f098a282b59a8d1826a69b8736eaf"
+      }
+    },
+    {
+      "name": "q1_18_scientific_outputs_preserved",
+      "passed": true,
+      "detail": [
+        "cost_sensitivity.svg",
+        "coverage.csv",
+        "demand_trends.svg",
+        "energy_assessment.csv",
+        "energy_roles.csv",
+        "gaps_and_conflicts.csv",
+        "history.csv",
+        "import_origins.csv",
+        "indicators.csv",
+        "model_handoff.csv",
+        "price_trends.svg",
+        "regional_comparison.csv",
+        "regional_shares.svg",
+        "renewable_regions.csv",
+        "report.md",
+        "static_balance.json",
+        "synergy_assessment.csv",
+        "technology_region_capacities.csv"
+      ]
+    },
+    {
+      "name": "frozen_empirical_thresholds_passed",
+      "passed": true,
+      "detail": {
+        "checks": {
+          "energy": true,
+          "generation": true,
+          "capacity": true,
+          "wind_capacity": true,
+          "solar_capacity": true,
+          "structure": true,
+          "sparse_training_combustion": true
+        },
+        "all_thresholds_passed": true,
+        "emissions_holdout": "No same-scope BTR 2022-2024 observation; not evaluated as zero error",
+        "team_approved": false
+      }
+    },
+    {
+      "name": "all_grid_trials_accounted",
+      "passed": true,
+      "detail": 216
+    },
+    {
+      "name": "missing_emissions_holdout_not_fabricated",
+      "passed": true,
+      "detail": {
+        "metric": "combustion_co2_t",
+        "n": 0,
+        "loss": null,
+        "mape": null,
+        "mae": null,
+        "missing_years": [
+          2022,
+          2023,
+          2024
+        ]
+      }
+    },
+    {
+      "name": "full_2025_2060_path",
+      "passed": true,
+      "detail": 36
+    },
+    {
+      "name": "exported_combustion_and_net_CO2_reconcile",
+      "passed": true,
+      "detail": [
+        {
+          "year": 2025,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2026,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2027,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 7.275957614183426e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2028,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.2737367544323206e-09,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2029,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": 0.00390625
+        },
+        {
+          "year": 2030,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2031,
+          "combustion_residual_t": -1.9073486328125e-06,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": 0.00390625
+        },
+        {
+          "year": 2032,
+          "combustion_residual_t": -1.9073486328125e-06,
+          "LP_max_residual_mwh": 1.6200374375330284e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2033,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.9610979506978765e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2034,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 3.637978807091713e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2035,
+          "combustion_residual_t": -1.9073486328125e-06,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": 0.0078125
+        },
+        {
+          "year": 2036,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2037,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": 0.0078125
+        },
+        {
+          "year": 2038,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.0913936421275139e-08,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2039,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.5011104298755527e-09,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2040,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 7.275957614183426e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2041,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 5.4569682106375694e-09,
+          "cash_residual_cny": -0.0078125
+        },
+        {
+          "year": 2042,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": 0.0078125
+        },
+        {
+          "year": 2043,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2044,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2045,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 5.4569682106375694e-09,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2046,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 7.275957614183426e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2047,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 3.637978807091713e-09,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2048,
+          "combustion_residual_t": -1.9073486328125e-06,
+          "LP_max_residual_mwh": 1.5916157281026244e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2049,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 2.1827872842550278e-08,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2050,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 7.275957614183426e-09,
+          "cash_residual_cny": 0.00390625
+        },
+        {
+          "year": 2051,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 3.637978807091713e-09,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2052,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2053,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.4551915228366852e-08,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2054,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": 0.00390625
+        },
+        {
+          "year": 2055,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": -0.0078125
+        },
+        {
+          "year": 2056,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": 0.00390625
+        },
+        {
+          "year": 2057,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 3.637978807091713e-09,
+          "cash_residual_cny": -0.0078125
+        },
+        {
+          "year": 2058,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 1.4551915228366852e-08,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2059,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.3642420526593924e-09,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2060,
+          "combustion_residual_t": -9.5367431640625e-07,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": 0.0
+        }
+      ]
+    },
+    {
+      "name": "small_physical_residuals",
+      "passed": true,
+      "detail": 2.1827872842550278e-08
+    },
+    {
+      "name": "cash_and_ETS_transfers_reconcile",
+      "passed": true,
+      "detail": "National annual CNY residual < 0.1; ETS residual < 0.001"
+    },
+    {
+      "name": "construction_commitments_funded",
+      "passed": true,
+      "detail": "Reserved funding equals sum of unpaid project commitments"
+    },
+    {
+      "name": "no_pre1991_nuclear_cohort",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "question2_all_target_metrics",
+      "passed": true,
+      "detail": [
+        "carbon_intensity_reduction_vs_2005",
+        "carbon_intensity_reduction_vs_2025",
+        "energy_intensity_reduction_vs_2005",
+        "net_co2_t",
+        "neutralisation_ratio",
+        "nonfossil_share_proxy",
+        "peak_value",
+        "peak_year",
+        "positive_co2_t",
+        "primary_energy_tce"
+      ]
+    },
+    {
+      "name": "all_sensitivity_runs_successful",
+      "passed": true,
+      "detail": {
+        "executed": 61,
+        "successful": 61,
+        "failures": 0,
+        "joint_sample_size": 12,
+        "morris_trajectories": 6,
+        "probabilistic_claim": false,
+        "range_interpretation": "Tested conditional domain, not confidence interval or real-world probability"
+      }
+    },
+    {
+      "name": "all_three_required_factors_two_sides",
+      "passed": true,
+      "detail": [
+        "carbon_price_multiplier=0.5",
+        "carbon_price_multiplier=1.5",
+        "cost_decline_delta=-0.01",
+        "cost_decline_delta=0.01",
+        "gdp_growth_delta=-0.01",
+        "gdp_growth_delta=0.01"
+      ]
+    },
+    {
+      "name": "Morris_and_joint_sampling_executed",
+      "passed": true,
+      "detail": {
+        "morris": 612,
+        "joint_samples": 12
+      }
+    },
+    {
+      "name": "fresh_process_reproduction",
+      "passed": true,
+      "detail": {
+        "returncode": 0,
+        "expected": 0,
+        "tail": "raining 100/216\nTraining 110/216\nTraining 120/216\nTraining 130/216\nTraining 140/216\nTraining 150/216\nTraining 160/216\nTraining 170/216\nTraining 180/216\nTraining 190/216\nTraining 200/216\nTraining 210/216\nSensitivity 5/61\nSensitivity 10/61\nSensitivity 15/61\nSensitivity 20/61\nSensitivity 25/61\nSensitivity 30/61\nSensitivity 35/61\nSensitivity 40/61\nSensitivity 45/61\nSensitivity 50/61\nSensitivity 55/61\nSensitivity 60/61\n{\"status\": \"success_conditional_candidate\", \"elapsed_seconds\": 24.56025439995574}\n"
+      }
+    },
+    {
+      "name": "all_scientific_artifacts_byte_identical",
+      "passed": true,
+      "detail": {
+        "artifacts": 24,
+        "hash_seed": 7919
+      }
+    },
+    {
+      "name": "admission_failure_probe",
+      "passed": true,
+      "detail": {
+        "returncode": 1,
+        "expected": 1,
+        "tail": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"E:\\Team\\2026JM\\SimulationModelingProblemA\\scripts\\run_q2_national.py\", line 390, in main\n    data,design,_=preflight(); dump(out/\"frozen_design.json\",design)\n                  ^^^^^^^^^^^\n  File \"<string>\", line 1, in <lambda>\n  File \"<string>\", line 1, in <genexpr>\nValueError: injected admission failure\n"
+      }
+    },
+    {
+      "name": "latest_failure_not_hidden_by_old_success",
+      "passed": true,
+      "detail": "Original success preserved under probe .attempts; primary delivery untouched"
+    }
+  ],
+  "team_approved": false,
+  "completion_scope": "Q2 author conditional aggregate research candidate; no official/all-GHG/probabilistic certification",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "mesa": "3.3.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.7"
+  },
+  "four_question_tasks_completed": true,
+  "independent_review_still_required": true,
+  "scientific_limits": [
+    "Already-seen evaluation reused for disclosed model revisions",
+    "No same-scope emissions holdout",
+    "PEO/nonfossil and process/sink bridges conditional",
+    "Representative day does not validate annual reliability",
+    "Not all-GHG neutrality"
+  ],
+  "elapsed_seconds": 27.754445599974133,
+  "current_hashes": {
+    "run.py": "3d427aae2aad978374ad751e99c7992c6edf9a7aabf85e40674c8cc28ba8722e",
+    "scripts/run_q2_national.py": "7feb532a57b5fea2bb4627722c445a414b3a96a580d58124312f01430c00bb82",
+    "scripts/build_q2_national_inputs.py": "cc4afd053149e3e28ed97b33fc1d56d2373452b8a148d843e090e91572f8192f",
+    "src/energy_model/q2_national.py": "c83bf39a8398d9c1d2513e5c73a8aafea620ee2ffc2edd57b15ffdda44f6e532",
+    "src/energy_model/q2_operations.py": "065a3c7ad575badb49cc3e5442fe009b88f6ede54dd877c25871b0a56fdaaa52",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0",
+    "data/catalog/q2_national_input_review.json": "87759254cb1e9d0f6d7b1d0a301df3d9239eae5b3c91a16fc4bb9fa4a4fa0746",
+    "data/processed/q2/national_observations.csv": "1c2efa84913dc07e25862ae307a38d12ce87819d9e51edfb967a41b090fc8954",
+    "data/processed/q2/technical_references.json": "af38ccd89ece76b7e37f929ec8056acd1cc6bcba47a2e403589766afb16ca62f",
+    "workflow/q2_national_design.json": "4746f93c131724b487cff4450d5d70fd8710431fce9eafd1e743c7074ee06b7e",
+    "tests/test_q2_national.py": "cff86997f277bb3e575f86455bb31c42f167b7e3f48a88bad74868edd6bb4584",
+    "scripts/review_q2_national_delivery.py": "fc50739d3368ddca2fea5bc8fd9312eca606228ad9a2b91344122b1d79b0cbb7"
+  }
+}

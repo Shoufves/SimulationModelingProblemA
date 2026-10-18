@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "owner": "p2/lb",
+  "base_sha": "804ec15ee43874303986a7ad91b2cde05c65b124",
+  "status": "author_frozen_candidate_not_team_approved",
+  "model_revision": 4,
+  "revision_disclosure": "V1 failed demand/generation/structure. V2 separated electricity elasticity using only 2005-2014 and corrected initial margins: demand/generation improved, but one wind+solar combined target hid severe technology-mix errors. V3 splits their capacity targets at unchanged combined family weight and calibrates one bounded relative investment-response parameter. All revisions followed already-seen evaluation; never blind validation. Earlier versions and results retained.",
+  "revision_4_disclosure": "V3 still overexpanded wind because construction capability automatically grew in proportion to every newly built asset. V4 bounds wind installation capability by initial construction capacity times GDP, separating fleet stock from construction-industry capacity; solar retains modular scaling. This disclosed structural revision uses no observed post-initial capacity as a driver; assessed on reused evaluation years.",
+  "scope": "China_mainland_conditional_aggregate",
+  "training_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "evaluation_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "evaluation_identity": "already_seen_not_blind",
+  "frozen_before_this_run_evaluation": true,
+  "parameter_grid": {
+    "activity_elasticity": [
+      0.5,
+      0.8,
+      1.1
+    ],
+    "investment_response": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "renewable_mix_response": [
+      0.4,
+      0.7,
+      1.0,
+      1.3
+    ],
+    "replacement_adoption": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "expectation_rate": [
+      0.25,
+      0.75
+    ]
+  },
+  "search_budget": 216,
+  "targets": [
+    {
+      "metric": "primary_energy_tce",
+      "observation": "consumption_10ktce",
+      "multiplier": 10000,
+      "scale_from_training_mean_fraction": 0.1,
+      "weight": 1,
+      "scale": 472926000.0
+    },
+    {
+      "metric": "peo_share",
+      "observation": "consumption_primary_electricity_other_pct",
+      "multiplier": 0.01,
+      "absolute_scale": 0.03,
+      "weight": 1,
+      "scale": 0.03
+    },
+    {
+      "metric": "total_capacity_mw",
+      "observation": "total_capacity_mw",
+      "multiplier": 1,
+      "scale_from_training_mean_fraction": 0.15,
+      "weight": 0.5,
+      "scale": 288098.7857142857
+    },
+    {
+      "metric": "wind_capacity_mw",
+      "observation": "wind_capacity_mw",
+      "multiplier": 1,
+      "scale_from_training_mean_fraction": 0.2,
+      "weight": 0.25,
+      "scale": 41292.857142857145
+    },
+    {
+      "metric": "solar_capacity_mw",
+      "observation": "solar_capacity_mw",
+      "multiplier": 1,
+      "scale_from_training_mean_fraction": 0.2,
+      "weight": 0.25,
+      "scale": 33903.71428571428
+    },
+    {
+      "metric": "electricity_generation_mwh",
+      "observation": "electricity_generation_mwh",
+      "multiplier": 1,
+      "scale_from_training_mean_fraction": 0.1,
+      "weight": 1,
+      "scale": 707644000.0
+    },
+    {
+      "metric": "combustion_co2_t",
+      "observation": "btr_combustion_co2_t",
+      "multiplier": 1,
+      "scale_from_training_mean_fraction": 0.15,
+      "weight": 1,
+      "scale": 1481694150.0
+    }
+  ],
+  "equivalent_relative_tolerance": 0.05,
+  "equivalent_absolute_tolerance": 0.02,
+  "fit_acceptance": {
+    "energy_mape": 0.1,
+    "generation_mape": 0.1,
+    "capacity_mape": 0.2,
+    "technology_capacity_mape": 0.25,
+    "peo_share_mae": 0.03,
+    "combustion_mape_training_only": 0.2
+  },
+  "peak_persistence_years": 5,
+  "sensitivity": {
+    "gdp_growth_delta": [
+      -0.01,
+      0.01
+    ],
+    "cost_decline_delta": [
+      -0.01,
+      0.01
+    ],
+    "carbon_price_multiplier": [
+      0.5,
+      1.5
+    ]
+  },
+  "joint_latin_hypercube_samples": 12,
+  "morris_trajectories": 6,
+  "seed": 204804,
+  "assumptions": {
+    "initial_years": {
+      "history": 2014,
+      "forecast": 2024
+    },
+    "gdp_future": {
+      "2025_2030": 0.045,
+      "2031_2040": 0.035,
+      "2041_2050": 0.025,
+      "2051_2060": 0.015
+    },
+    "gdp_future_basis": "Author conditional deceleration path, not official forecast; paired +/-1 percentage point and joint range",
+    "wind_solar_cost_decline": 0.03,
+    "cost_floor_fraction_of_2024": 0.45,
+    "historical_wind_solar_real_cost_decline": 0.06,
+    "discount_rate": 0.05,
+    "investment_budget_gdp_fraction": 0.025,
+    "wind_construction_gdp_elasticity": 1.0,
+    "wind_construction_basis": "Initial max(trailing-three-year net additions,35% initial stock) x GDP ratio; construction capability, not fleet size; stress elasticity 0.5/1.5",
+    "device_budget_gdp_fraction": 0.01,
+    "gdp_2024_price_level_cny": 134908400000000,
+    "initial_cash_basis": "Two years of reference construction capacity; reconstructed financing endowment, not observed company accounts",
+    "income_basis": "Service-income endowment covers energy purchases; financing inflows and internal transfers are recorded separately from national resource costs",
+    "initial_pipeline_basis": "Equal annual commissioning over lead time from trailing three-year net capacity additions, using only initial-year-and-earlier snapshots; no observed future additions",
+    "initial_generation_cohorts": "Uniform residual age over economic lifetime for pre-2009 stock, except nuclear ages limited to 1991-2009 by the first Chinese unit grid date; later positive observed net additions are separate cohorts; research retirement ages, not legal licence dates. Self-check corrected the earlier physically impossible pre-1991 nuclear cohorts.",
+    "initial_device_cohorts": "Uniform 1..15 remaining years; output capacities reconstructed from initial useful-service demand and 60% duty; no plant/device census claim",
+    "device_lifetime_years": 15,
+    "device_capex_cny_per_service_mw": 1000000,
+    "service_intensity_decline": 0.01,
+    "electricity_activity_elasticity": "Zero-intercept log growth fit against real GDP, 2005-2014 only, after declared intensity trend; separate from calibrated direct-fuel service elasticity",
+    "demand_fuel_archetypes": {
+      "coal": "industrial_heat_proxy",
+      "oil": "transport_proxy",
+      "gas": "building_heat_proxy"
+    },
+    "archetype_warning": "Fuel residuals are aggregate service proxies, not observed sector allocation; source sector tables include transformation and are not summed as final use",
+    "direct_fuel_efficiency": {
+      "coal": 0.75,
+      "oil": 0.25,
+      "gas": 0.85
+    },
+    "electric_service_efficiency": {
+      "coal": 0.95,
+      "oil": 0.9,
+      "gas": 2.5
+    },
+    "nonenergy_fuel_fraction": {
+      "coal": 0.06,
+      "oil": 0.18,
+      "gas": 0.07
+    },
+    "nonenergy_warning": "Initial non-energy fractions are assumptions, kept in primary energy and excluded from combustion; IPPU uses separate BTR bridge; inspect +/-50%",
+    "fuel_import_fraction": {
+      "coal": 0.1,
+      "oil": 0.72,
+      "gas": 0.42,
+      "biomass": 0.0
+    },
+    "fuel_supply_headroom": 1.3,
+    "fuel_supply_annual_growth": 0.025,
+    "fuel_capacity_warning": "Annual averages x explicit peak-deliverability headroom are engineering bounds, not observed hourly delivery rates",
+    "fuel_inventory_days": 3,
+    "fuel_inventory_initial_fraction": 0.5,
+    "oil_cost_cny_per_mwh": 350,
+    "biomass_cost_cny_per_mwh": 100,
+    "retail_price_cny_per_mwh": 650,
+    "generation_price_cny_per_mwh": 449,
+    "renewable_tariff_2014_proxy": {
+      "wind": 610,
+      "solar": 1000
+    },
+    "renewable_tariff_basis": "Explicit historical supported-price reconstruction, declining linearly to the 2021 common reference. Not a recovered province/project subsidy schedule; +/-20% structural check. Added after 2015-16 mechanical smoke test and before train search/holdout evaluation.",
+    "price_warning": "Constant real 2024 CNY reference prices; 449 originates in 2022 coal market mean and is an explicit all-technology tariff proxy, not universal actual settlement",
+    "grid_efficiency": 0.94,
+    "operation_period_hours": [
+      6,
+      6,
+      6,
+      6
+    ],
+    "load_shape": [
+      0.2,
+      0.25,
+      0.3,
+      0.25
+    ],
+    "wind_shape": [
+      1.1,
+      0.9,
+      0.85,
+      1.15
+    ],
+    "solar_shape": [
+      0,
+      1.4,
+      2.6,
+      0
+    ],
+    "window_repeats": 365,
+    "chronology_warning": "Deterministic representative day, perfect information within 24h, cyclic state; no seasonal adequacy or probabilistic reliability conclusion",
+    "new_storage_2024_power_mw": 73760,
+    "new_storage_2024_energy_mwh": 168200,
+    "new_storage_2014_power_mw": 0,
+    "storage_initial_fraction": 0.5,
+    "storage_roundtrip_efficiency": 0.85,
+    "storage_duration_hours": 2.3,
+    "storage_lifetime_years": 10,
+    "storage_capex_cny_per_mwh": 800000,
+    "storage_warning": "2024 announced new-type storage scale needs original-row match; 2014 new-type storage excluded by simplification (not an observation of zero); pumped-storage capacity remains in reported hydro with net energy budget",
+    "hydro_capex_cny_per_kw": 15000,
+    "oil_capex_cny_per_kw": 4000,
+    "biomass_capex_cny_per_kw": 10000,
+    "other_cost_warning": "Hydro/oil/biomass capex and solar/hydro fixed O&M are author engineering assumptions; +/-30% joint financial stress test",
+    "ets_2021_2025_proxy": {
+      "coal": 0.85,
+      "gas": 0.4
+    },
+    "ets_2026_benchmarks": {
+      "coal": 0.7894,
+      "gas": 0.3288
+    },
+    "ets_warning": "Output-based free-allocation archetypes; 2021-2025 benchmarks are sensitivity assumptions, not exact historical compliance; 2026 large-coal/gas source values applied only from publication year, then held real; no supply/heat/peak corrections or banked allowances; industry expansion only in process sensitivity",
+    "carbon_2024_cny_per_t": 96.018847,
+    "carbon_future_real_growth": 0.02,
+    "historical_carbon_price_proxy_cny": 50,
+    "primary_bridge": "Separate NBS fossil tce and initial PEO-to-noncombustion generation factor; hold factor within each experiment. Forecast nonfossil factor anchored to 2024 19.8% reference; report +/-10% bridge envelope, not exact official accounting",
+    "process_decline_per_year": 0.02,
+    "process_activity_elasticity": 0.5,
+    "removals_annual_growth": 0.0,
+    "carbon_bridge_warning": "BTR2021 process+waste extended by GDP^0.5 and 2% intensity decline; net CO2 land removals held at 1.346499 Gt; no negative-emission technology assumed. 2005 same BTR CO2 baseline. Not all-GHG neutrality",
+    "biomass_warning": "Biogenic combustion treated as inventory memo item; feedstock finite, no negative emissions; not a lifecycle carbon-neutrality assertion"
+  }
+}

@@ -6,18 +6,18 @@
     {
       "name": "all_tests",
       "passed": true,
-      "detail": ".......................................................................................................Q1 FAILED: Input hash mismatch: cost\n......................................Q1 FAILED: [Errno 2] No such file or directory: 'E:\\\\Team\\\\2026JM\\\\SimulationModelingProblemA\\\\tmp\\\\tests\\\\tmpnivp46y3\\\\missing.csv'\n....................................................................\n----------------------------------------------------------------------\nRan 209 tests in 5.598s\n\nOK\n"
+      "detail": ".......................................................................................................Q1 FAILED: Input hash mismatch: cost\n......................................Q1 FAILED: [Errno 2] No such file or directory: 'E:\\\\Team\\\\2026JM\\\\SimulationModelingProblemA\\\\tmp\\\\tests\\\\tmp80nilooe\\\\missing.csv'\n....................................................................................\n----------------------------------------------------------------------\nRan 225 tests in 5.882s\n\nOK\n"
     },
     {
       "name": "q2_tests_not_skipped",
       "passed": true,
       "detail": {
-        "tests": 209,
+        "tests": 225,
         "failures": 0,
         "errors": 0,
         "skipped": 0,
         "passed": true,
-        "seconds": 5.598296400043182,
+        "seconds": 5.882617699971888,
         "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
       }
     },
@@ -29,7 +29,7 @@
     {
       "name": "key_scan",
       "passed": true,
-      "detail": "{\n  \"working_tree\": {\n    \"scope\": \"working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening\",\n    \"excluded_directories\": [\n      \".git\",\n      \"tmp\",\n      \"data/restricted\"\n    ],\n    \"pattern\": \"Google API key format only; not an exhaustive credential audit\",\n    \"passed\": true,\n    \"findings\": [],\n    \"errors\": [],\n    \"files_scanned\": 1402,\n    \"payloads_scanned\": 2469,\n    \"zip_members_scanned\": 1067\n  }\n}\n"
+      "detail": "{\n  \"working_tree\": {\n    \"scope\": \"working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening\",\n    \"excluded_directories\": [\n      \".git\",\n      \"tmp\",\n      \"data/restricted\"\n    ],\n    \"pattern\": \"Google API key format only; not an exhaustive credential audit\",\n    \"passed\": true,\n    \"findings\": [],\n    \"errors\": [],\n    \"files_scanned\": 1492,\n    \"payloads_scanned\": 2559,\n    \"zip_members_scanned\": 1067\n  }\n}\n"
     },
     {
       "name": "nine_original_subsets",
@@ -73,19 +73,19 @@
     {
       "name": "national_expected_block",
       "passed": true,
-      "detail": "{\"status\": \"blocked_national_inputs\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb.attempts/20261018T152241Z-5e5bee29\", \"q2_scientific_complete\": false, \"error\": \"National historical/current initialization and common scientific design not admitted; see gaps_and_conflicts.csv\"}\n"
+      "detail": "{\"status\": \"blocked_national_inputs\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb.attempts/20261018T160542Z-b7799311\", \"q2_scientific_complete\": false, \"error\": \"National historical/current initialization and common scientific design not admitted; see gaps_and_conflicts.csv\"}\n"
     },
     {
       "name": "national_status_honest",
       "passed": true,
       "detail": {
-        "run_id": "20261018T152241Z-5e5bee29",
+        "run_id": "20261018T160542Z-b7799311",
         "owner": "p2/lb",
         "status": "blocked_national_inputs",
         "output_valid_for_this_attempt": false,
-        "attempt_path": "outputs/q2/p2_lb.attempts/20261018T152241Z-5e5bee29",
+        "attempt_path": "outputs/q2/p2_lb.attempts/20261018T160542Z-b7799311",
         "error": "National historical/current initialization and common scientific design not admitted; see gaps_and_conflicts.csv",
-        "manifest_sha256": "82e4d12638c5a4c3639eee4111ddeb2be5de11b8be5be9be94e3110bee651ad6"
+        "manifest_sha256": "90584044270ada9bab1ac019ec8512b1d87df09c0f4563fe375e182e8b00a194"
       }
     },
     {
@@ -129,12 +129,12 @@
     {
       "name": "changed_input_expected_failure",
       "passed": true,
-      "detail": "{\"status\": \"invalid_input\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb_reproduction.attempts/20261018T152258Z-5435a139\", \"q2_scientific_complete\": false, \"error\": \"ValueError: Missing/changed input: examples/q2/history_model.json\"}\n"
+      "detail": "{\"status\": \"invalid_input\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb_reproduction.attempts/20261018T160556Z-5d429fea\", \"q2_scientific_complete\": false, \"error\": \"ValueError: Missing/changed input: examples/q2/history_model.json\"}\n"
     },
     {
       "name": "old_success_preserved",
       "passed": true,
-      "detail": "41b9e7f953279c80a3d16cc0cb8c1109c154a03b2d53bd0580067e7c8e41e40e"
+      "detail": "349cea5ef63ceadb8614240a15e34861684a737799e71fce691183cd6611fb23"
     },
     {
       "name": "stale_success_rejected",
@@ -144,7 +144,7 @@
     {
       "name": "missing_input_expected_failure",
       "passed": true,
-      "detail": "{\"status\": \"invalid_input\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb_reproduction.attempts/20261018T152258Z-fee62e36\", \"q2_scientific_complete\": false, \"error\": \"FileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\\\\\Team\\\\\\\\2026JM\\\\\\\\SimulationModelingProblemA\\\\\\\\tmp\\\\\\\\q2-config-does-not-exist.json'\"}\n"
+      "detail": "{\"status\": \"invalid_input\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb_reproduction.attempts/20261018T160557Z-e0ea8ebc\", \"q2_scientific_complete\": false, \"error\": \"FileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\\\\\Team\\\\\\\\2026JM\\\\\\\\SimulationModelingProblemA\\\\\\\\tmp\\\\\\\\q2-config-does-not-exist.json'\"}\n"
     },
     {
       "name": "protected_contracts_unchanged",
@@ -285,9 +285,9 @@
       "expected": 2
     }
   ],
-  "seconds": 29.118896200030576,
+  "seconds": 27.352865800028667,
   "code_hashes": {
-    "run.py": "f0cbb654147bbb172a5508f3e22204967e90f5475f1da77689e1b2d224b3657f",
+    "run.py": "3d427aae2aad978374ad751e99c7992c6edf9a7aabf85e40674c8cc28ba8722e",
     "scripts/run_q2.py": "1f8e35da98626d5f3fda5061edc91c50ae639f672292d45b2613ff60132b15c7",
     "src/energy_model/q2_operations.py": "065a3c7ad575badb49cc3e5442fe009b88f6ede54dd877c25871b0a56fdaaa52",
     "src/energy_model/q2_agents.py": "1f0a4465183916ab475447736c3923e540fd0d82a7408b7cd2bfc00116da5290",
@@ -306,18 +306,18 @@
     "reportlab": "4.5.1"
   },
   "evidence_hashes": {
-    "all_tests.log": "72e17324c884375bf1348c5db3c7b9c9cb9e3da18e71a4883759c984f5845137",
-    "audit.log": "406286a0e6595c04a03b3f2a4b7ac5c275a102bbecd5333fa3483c59b7c29b6d",
+    "all_tests.log": "e536cb92a0349d9216c09d6fe482f2ac36517e31b45ea4dfbb31bf94f2a2e19d",
+    "audit.log": "df6cdd11d878475eacd2c9e20bcd84e78ab309ce6560855bfb5c4ac26e6f7506",
     "candidate_review.log": "bde70dff9cb6ca1d82fe1209cf21f51483f19402f8d7ea8eb99b8e878a5fc55f",
-    "changed_input_expected_failure.log": "ad42417566e45ce9ec94314f72922dbf11035f616543ddd4c30ab04634ca01f3",
+    "changed_input_expected_failure.log": "1ddd44b6419e22138be127b923fc6f5276f7c73594798aac214194fb61149cab",
     "engineering.log": "f38fc675e7a6e6d103351b169361e05c4ec95b08d13fb1950cd2c2f3b57fad84",
     "engineering_reproduction.log": "da9513c8935f019e707f30d45eee026c566c38aec0c7abe14f8857d37e47d760",
-    "key_scan.log": "09a32941e24aad5a68d66f70e1db9cdba649d7fd9f7fcc6c15f03ace9b852ec7",
-    "missing_input_expected_failure.log": "69f0d79156b2cbd468552ed0158f95933a47bb03c3baca2a9e74ab589c42ca91",
-    "national_expected_block.log": "26d168a33fa6649d75c16b7b8e276ae4328b3d4a6e189e24311869bb3e81b514",
+    "key_scan.log": "732cc4a465cbb068b19925a825aa32abc8d8dd0b325b227fa0341192757e9335",
+    "missing_input_expected_failure.log": "5ab7caf2330ab96599d6aac2ec38bb085d273cfecb951b2eda2b54c3c2b40461",
+    "national_expected_block.log": "1614fded61bbabc142fff09d02e45621ae86716ff2a82dbcf8cb2f25d76528d5",
     "nine_original_subsets.log": "5da9e52f12f5a13032091f0101f886b08fc98e3ff44ded4148416f3f2fa4e8f2",
     "q1_regression.log": "7d9963144043a75459a52a0ffae1afe168b5dbabf2937dcb9bf6335dd480f201",
-    "tests.json": "8176ea2a9dae4329cc700320d688d46a2c5df5c41ae06c48d21df5ab242fceb7",
-    "workspace_audit.json": "406286a0e6595c04a03b3f2a4b7ac5c275a102bbecd5333fa3483c59b7c29b6d"
+    "tests.json": "c7d53b41182f6c95ce37fed7ac30769161bccdef71e58f6a7df49247fe02639b",
+    "workspace_audit.json": "df6cdd11d878475eacd2c9e20bcd84e78ab309ce6560855bfb5c4ac26e6f7506"
   }
 }

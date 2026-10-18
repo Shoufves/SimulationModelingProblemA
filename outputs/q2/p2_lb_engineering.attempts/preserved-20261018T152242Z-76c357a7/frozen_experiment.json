@@ -1,0 +1,94 @@
+{
+  "status": "engineering_fixture_only_not_team_scientific_agreement",
+  "frozen_before_evaluation": true,
+  "training_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "evaluation_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "evaluation_identity": "already_seen_not_blind",
+  "parameter_grid": {
+    "activity_elasticity": [
+      0.9,
+      1,
+      1.1
+    ],
+    "investment_rate": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "replacement_rate": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "expectation_rate": [
+      0.5
+    ]
+  },
+  "search_budget": 27,
+  "equivalent_absolute_tolerance": 1e-07,
+  "equivalent_relative_tolerance": 0.05,
+  "peak_persistence_years": 5,
+  "acceptance_thresholds": null,
+  "scales_basis": "Fixed fixture engineering magnitudes, set before generation; no real-data threshold implied",
+  "targets": [
+    {
+      "metric": "primary_energy_mwh",
+      "family": "demand",
+      "scale": 400000,
+      "weight": 0.25
+    },
+    {
+      "metric": "nonfossil_primary_share",
+      "family": "structure",
+      "scale": 0.5,
+      "weight": 0.25
+    },
+    {
+      "metric": "capacity_mw",
+      "family": "capacity_generation",
+      "scale": 50,
+      "weight": 0.125
+    },
+    {
+      "metric": "generation_mwh",
+      "family": "capacity_generation",
+      "scale": 200000,
+      "weight": 0.125
+    },
+    {
+      "metric": "combustion_co2_t",
+      "family": "emissions",
+      "scale": 100000,
+      "weight": 0.25
+    }
+  ],
+  "sensitivity": {
+    "gdp_growth_delta": [
+      -0.01,
+      0.01
+    ],
+    "cost_decline_delta": [
+      -0.01,
+      0.01
+    ],
+    "carbon_price_multiplier": [
+      0.5,
+      1.5
+    ]
+  },
+  "sensitivity_basis": "Engine perturbations only: +/-1 percentage point, carbon x0.5/x1.5; not empirical uncertainty bounds",
+  "sensitivity_budget": 6,
+  "seed": 20261018
+}

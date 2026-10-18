@@ -52,6 +52,23 @@ Python3.11及以上；初次安装`python -m pip install -r requirements-q1.txt`
 
 界面依赖清单沿用原mmj版本。操作手册与截图保留；本次整理以命令行数据/模块复现为验收，未宣称重新完成浏览器交互验收。界面仍显示合成实验和局部证据，不能当全国预测演示。
 
+## P2/lb 全国聚合条件模型
+
+安装 `requirements-q2.txt`，数据审查和Q1回归还需已有的 `requirements-data.txt`、`requirements-q1.txt`。当前实测环境为Python3.12、Mesa3.3.1、SciPy1.16.3，原环境不自动升级依赖。
+
+```powershell
+python -B -X utf8 scripts/build_q2_national_inputs.py
+python -B -X utf8 run.py q2
+python -B -X utf8 scripts/review_q2_delivery.py
+python -B -X utf8 scripts/review_q2_national_delivery.py
+```
+
+第一条按原图复核转录、原始API/CSV和报告页表重建511条观测及技术参考，不变更原Q1契约。第二条执行216组训练搜索、已接触评估、独立2024初态及条件试验；结果见 `outputs/q2/p2_lb_national/`。第三条保留工程夹具和原Q1回归，包括故意拒绝未准入首轮配置的测试；其旧状态名称 `engineering_passed_national_blocked` 仅指这个旧配置，不能替代第四条的全国候选验收结论。第四条执行独立进程、不同哈希种子的复现及来源/结果/账本/失败语义核查。
+
+每次运行保留旧输出于同名 `.attempts/`；`latest-attempt.json`决定当前有效性。先前成功不能掩盖新失败。读取全国结果前调用 `scripts/run_q2_national.py` 中的 `verify_latest`，核对当前代码、输入、原件和全部结果哈希。`q2_scientific_complete=false` 是执行器不自行签发研究验收的约定；四任务交付结论见独立审查的 `outputs/q2_review/p2_lb_national/verification.json`，不代表团队批准。
+
+复现只承诺冻结假设内的确定性结果；碳排放留出缺测、统计桥接、代表日和反复使用评估窗口的限制见[模型修订记录](solutions/p2-lb-national-review.md)。
+
 ## 版本与恢复
 
 `archive/organization_20261017/file_disposition.csv` 逐文件记录旧路径→新位置或删除理由。修改过的文档/脚本原字节保存在 `edited_originals.zip`；复算前的结果与目录在 `prior_results.zip`。恢复时按该映射提取单个文件，不把全部旧目录覆盖回当前工程。

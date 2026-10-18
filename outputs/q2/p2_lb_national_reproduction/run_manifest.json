@@ -1,0 +1,60 @@
+{
+  "run_id": "20261018T161229324356Z",
+  "owner": "p2/lb",
+  "status": "success_conditional_candidate",
+  "q2_scientific_complete": false,
+  "code_hashes": {
+    "run.py": "3d427aae2aad978374ad751e99c7992c6edf9a7aabf85e40674c8cc28ba8722e",
+    "scripts/run_q2_national.py": "7feb532a57b5fea2bb4627722c445a414b3a96a580d58124312f01430c00bb82",
+    "scripts/build_q2_national_inputs.py": "cc4afd053149e3e28ed97b33fc1d56d2373452b8a148d843e090e91572f8192f",
+    "src/energy_model/q2_national.py": "c83bf39a8398d9c1d2513e5c73a8aafea620ee2ffc2edd57b15ffdda44f6e532",
+    "src/energy_model/q2_operations.py": "065a3c7ad575badb49cc3e5442fe009b88f6ede54dd877c25871b0a56fdaaa52",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
+  },
+  "input_hashes": {
+    "data/catalog/q2_national_input_review.json": "87759254cb1e9d0f6d7b1d0a301df3d9239eae5b3c91a16fc4bb9fa4a4fa0746",
+    "data/processed/q2/national_observations.csv": "1c2efa84913dc07e25862ae307a38d12ce87819d9e51edfb967a41b090fc8954",
+    "data/processed/q2/technical_references.json": "af38ccd89ece76b7e37f929ec8056acd1cc6bcba47a2e403589766afb16ca62f",
+    "workflow/q2_national_design.json": "4746f93c131724b487cff4450d5d70fd8710431fce9eafd1e743c7074ee06b7e"
+  },
+  "git_sha": "b22c14dd4dd558e26baed73d4c5219162e08e2e6",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "command": [
+    "scripts/run_q2_national.py",
+    "--output-dir",
+    "outputs/q2/p2_lb_national_reproduction"
+  ],
+  "team_approved": false,
+  "fit_thresholds_passed": true,
+  "max_residual": 2.1827872842550278e-08,
+  "sensitivity_failures": 0,
+  "completion_note": "Four task outputs exist; independent self-check and scientific adequacy assessment still required",
+  "elapsed_seconds": 24.56025439995574,
+  "outputs": {
+    "accounts.csv": "22f07e1b5179f83a329be46451d29d5bdcac4fa5a4f4ad41cae6b4deb918bd74",
+    "assets.csv": "29a7382df1f5748122a9b839f4cd9cd1d9a3683b217d701b18aed1f8f2312ec0",
+    "balances.csv": "c1b75847e40f1c3e80aa5b14cd765a1b07241cb09b50bb5129e82c956e3bbbee",
+    "baseline_path.csv": "5a37db529b80eb3b3067c81d16a8f703c564699347e1ddb4da17e12daf5434e5",
+    "behavior.csv": "52d6a10bb7cedd2953f150023639b6c346026a58873d16bd05a743092ebe7ba4",
+    "calibration.json": "adcfdbe68d3cdc64e456b7eddf2448974fd0658204f751a58e70e3721dc020e5",
+    "experiment_coverage.json": "9ab6ad40c5c0e4bf874863a59cf3e64a416073379c90d431167aa0a799e9be4c",
+    "external_emissions_diagnostic.csv": "d590c3256a6f70accda2786babaef34fac6d47046b815e412a45e079b70dea65",
+    "frozen_design.json": "8ef4e53c3281dacca3958e85356e7588c2dd07ba9eab19b78213ae87abdbf727",
+    "historical_path.csv": "e861c37da0e8ac369a66be9c8f035f7e98984b9c619b4b018500f043422b30dc",
+    "history_fit.csv": "d07768f054db0b5114f664bdfb2eb682c7a5df84ee9898ad4cedd0b89bd99812",
+    "morris_effects.csv": "6a38a634f9bc68f366dd18f99586ce7e3b2bc73051f3034257b17b9e12d32023",
+    "morris_summary.csv": "e1be369b5a321b1dd443a0f24e5734046a0e3e05fce3dfe3c8fb992d1d7398fa",
+    "national_paths.png": "ccdc2c8f79aa4b0deb57c03fe8303e4011f9d7048798a532986f07d25eded925",
+    "operations.csv": "07a5f8d1703aaaecdd54d19b2d6c7986a3010c36753696e3036203e221cbd2a4",
+    "peak.json": "7b8d796f02385babfcf8d27ceaed98ab31691a71d877c7dc8799aa781ef81e75",
+    "project_queue.json": "662a5c2ceb1182ebac0466812c9ddd437f575a6b07420a701e48a4eaf7ecc65c",
+    "report.md": "55c174b920e28ce184091ec27d506971a3606316c72bd6655767b7aa4ee4816f",
+    "sensitivity.csv": "c668559863cd434d6bf76b5dffab9673fd21658e2f354b369a16335251ad01b9",
+    "sensitivity_failures.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "solver_stages.csv": "02f4363c0ba49ee6b862622f527ec419cd060ea50707470ea014f0f6465e37ec",
+    "targets_2030_2060.csv": "35cfb55e46a2f3233594480ed02243bd788f48456f49a6b45c2a6dfa884e518a",
+    "training_selection.json": "f0db91731bc327c8bf722e2fd2dccf35be7bc201d229d924be35dc331f0420df",
+    "training_trials.json": "7b8a4995b25d120699b0bfdd65a83561422b8088c7fc1d10502e77d8adcd6996"
+  }
+}
