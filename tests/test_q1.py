@@ -178,6 +178,25 @@ class Q1ContractTests(unittest.TestCase):
             manifest=copy.deepcopy(self.manifest);mutate(manifest)
             with self.assertRaises(Q1Error):validate_inputs(ROOT,manifest)
 
+    def test_refreshed_manifest_hash_cannot_reuse_stale_semantic_review(self):
+        with fixture_dir(ROOT/"tmp/tests") as folder:
+            item=self.manifest["inputs"][0]
+            changed=folder/"changed.csv"
+            original=(ROOT/item["path"]).read_bytes()
+            changed.write_bytes(original.replace(b"596000",b"597000"))
+            self.assertNotEqual(original,changed.read_bytes())
+            manifest=copy.deepcopy(self.manifest)
+            manifest["inputs"][0].update(path=changed.relative_to(ROOT).as_posix(),
+                                        sha256=run_q1_assessment.sha(changed))
+            with self.assertRaisesRegex(Q1Error,"substantive review"):
+                validate_inputs(ROOT,manifest)
+
+    def test_changed_allowed_use_cannot_inherit_older_review(self):
+        manifest=copy.deepcopy(self.manifest)
+        manifest["inputs"][0]["allowed_use"]="national model initialization"
+        with self.assertRaisesRegex(Q1Error,"substantive review"):
+            validate_inputs(ROOT,manifest)
+
     def test_restricted_and_escape_paths_rejected_before_read(self):
         for p in ("data/restricted/household/file","../outside","D:/outside"):
             with self.assertRaises(Q1Error):inside(ROOT,p)
@@ -233,6 +252,49 @@ class Q1ContractTests(unittest.TestCase):
         self.assertTrue(all(r["status"]!="admitted" for r in handoff))
         self.assertEqual(static["national_2024_physical_energy_carbon_closure"]["status"],"blocked")
         self.assertEqual(static["hydrogen"]["approximate_category_sum"],3632)
+
+    def test_gdp_is_driver_and_handoff_retains_observation_boundaries(self):
+        inputs=validate_inputs(ROOT,self.manifest)
+        history,indicators,roles,handoff,gaps,static=calculate(ROOT,self.manifest,inputs)
+        records={r["record_id"]:r for r in history}
+        drivers=[r for r in handoff if r["variable"]=="NY.GDP.MKTP.KN"]
+        self.assertEqual(len(drivers),10)
+        self.assertTrue(all(r["kind"]=="外生驱动候选" for r in drivers))
+        self.assertTrue(all(r["kind"]!="校准目标候选" for r in drivers))
+        for row in handoff:
+            if row["status"]=="blocked":
+                continue
+            source=records[row["evidence"]]
+            for field in ("region","source_key","boundary"):
+                self.assertEqual(row[field],source[field])
+            self.assertEqual(row["source_status"],source["status"])
+
+    def test_regional_share_provenance_contains_both_full_denominators(self):
+        inputs=validate_inputs(ROOT,self.manifest)
+        history,indicators,roles,handoff,gaps,static=calculate(ROOT,self.manifest,inputs)
+        denominator_refs={r["record_id"] for r in history if r["year"]==2024 and
+            (r["input_id"]=="demand" or
+             r["input_id"]=="province" and r["variable"]=="generation_100GWh")}
+        self.assertEqual(len(denominator_refs),62)
+        for row in indicators:
+            if row["indicator_id"]=="province_share_difference":
+                self.assertEqual(set(row["input_refs"].split(";")),denominator_refs)
+
+    def test_2024_storage_units_precision_and_unknown_initial_soc(self):
+        inputs=validate_inputs(ROOT,self.manifest)
+        history,indicators,roles,handoff,gaps,static=calculate(ROOT,self.manifest,inputs)
+        storage=static["storage_2024"]
+        self.assertAlmostEqual(storage["power_gw"],73.76)
+        self.assertAlmostEqual(storage["energy_gwh_figure"],168.2)
+        self.assertAlmostEqual(storage["energy_gwh_paragraph"],168)
+        self.assertIsNone(storage["initial_soc"])
+        self.assertNotEqual(storage["power_gw"],136)  # 2025 update is not 2024 stock.
+        selected=[r for r in handoff if r["evidence"].startswith("storage_2024:")]
+        self.assertEqual(len(selected),2)  # Figure/text energy is not counted twice.
+        self.assertTrue(all(r["year"]==2024 and r["status"]=="candidate_not_admitted"
+                            for r in selected))
+        self.assertEqual(next(r["status"] for r in gaps if r["gap_id"]=="storage_2024"),
+                         "blocked_state")
 
     def test_scanner_never_opens_restricted_or_virtual_environment(self):
         parent=ROOT/"tmp/tests";parent.mkdir(parents=True,exist_ok=True)

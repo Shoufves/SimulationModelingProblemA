@@ -1,5 +1,7 @@
 """Run real engineering gates, independent Q1 reproduction and CLI failure probes."""
+import argparse
 import json
+from datetime import datetime
 from pathlib import Path
 import subprocess
 import sys
@@ -8,10 +10,16 @@ import uuid
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"src"))
-from energy_model.q1 import read_json,sha,write_json
+from energy_model.q1 import inside,read_json,sha,write_json
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--evidence",default="outputs/validation/q1_mmj_validation.json")
+    args=parser.parse_args()
+    out=inside(ROOT,args.evidence)
+    if not out.is_relative_to((ROOT/"outputs/validation").resolve()) or out.suffix!=".json":
+        parser.error("--evidence must be a JSON file under outputs/validation/")
     records=[]
     # These commands intentionally rewrite their shared "latest" reports. Keep
     # historical baseline files byte-for-byte, embedding this run in Q1 evidence.
@@ -71,7 +79,7 @@ def main():
         "scripts/audit_workspace.py","scripts/scan_google_keys.py","scripts/build_workspace_catalog.py"]
     result=dict(scope="Engineering gate execution; scientific scope/peer approval recorded separately",
         passed=all(r["passed"] for r in records) and same and no_success and diff.returncode==0,
-        executed_on="2026-10-18",python=sys.version,executable=sys.executable,
+        executed_on=datetime.now().astimezone().isoformat(),python=sys.version,executable=sys.executable,
         code_commit_sha=git("rev-parse","HEAD"),dirty_worktree=bool(git("status","--porcelain")),
         code_hashes={p:sha(ROOT/p) for p in code_paths},
         input_manifest_sha256=sha(ROOT/"workflow/q1_inputs.json"),
@@ -87,7 +95,7 @@ def main():
             missing_manifest_rejected=missing["passed"],no_output_created=no_success),
         diff_check=dict(passed=diff.returncode==0,stdout=diff.stdout,stderr=diff.stderr),
         executions=records,
-        scientific_status="Four scoped research sections implemented; 16 explicit gaps; A7 pending",
+        scientific_status="Q1 scientific coverage partial; explicit gaps remain; Draft, A7 pending",
         limits=["2021-2024 price version remains quarantined",
                 "2024 physical energy-carbon closure and complete operational state blocked",
                 "new extractions need peer/shared-input confirmation",
@@ -95,7 +103,6 @@ def main():
                 "six external B/C historical duplicates excluded, no existence/content claim",
                 "full test execution may require leaving Windows desktop sandbox due legacy tempfile ACLs",
                 "not national initialization, calibration or forecast; no merge authorization"])
-    out=ROOT/"outputs/validation/q1_mmj_validation.json"
     write_json(out,result)
     print(json.dumps(dict(passed=result["passed"],tests=result["tests"]["tests"],
         audit_checks=len(result["workspace_audit"]["checks"]),reproduction=same,

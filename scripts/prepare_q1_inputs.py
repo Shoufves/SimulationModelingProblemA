@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-from energy_model.q1 import read_csv, read_json, write_csv, write_json, sha, Q1Error
+from energy_model.q1 import read_csv, read_json, write_csv, write_json, sha, Q1Error, review_snapshot
 
 
 def main():
@@ -175,20 +175,49 @@ def main():
           len(cost_rows)==len(cost_expected) and all(equal(r["value"],cost_expected[r["variable"]])
           for r in cost_rows), "12 adopted China 2024 CAPEX/quantile/LCOE values checked")
     cost = []
-    for technology, om, cf, ompage, cfpage in [
-        ("onshore_wind", 29, .33, 209, 76), ("offshore_wind", 59, .37, 212, 123)]:
-        for variable, value, unit, p in [
-            ("fixed_om", om, "2024 USD/kW/year", ompage),
-            ("new_project_capacity_factor", cf, "fraction", cfpage),
-            ("economic_life", 25, "year", 202)]:
+    for technology, om, cf, ompage, cfpage, omtable, cftable in [
+        ("onshore_wind", 29, .33, 209, 76, "A3", "2.2"),
+        ("offshore_wind", 59, .37, 212, 123, "A6", "4.3")]:
+        for variable, value, unit, p, table in [
+            ("fixed_om", om, "2024 USD/kW/year", ompage, omtable),
+            ("new_project_capacity_factor", cf, "fraction", cfpage, cftable),
+            ("economic_life", 25, "year", 202, "A1")]:
             cost.append(dict(year=2024, region="China", variable=technology+"_"+variable,
                 value=value, unit=unit, source_id="IRENA_COST_2024_PDF",
-                source_locator=f"PDF p{p}; China 2024 / Table A1",
+                source_locator=f"PDF p{p}; Table {table}; "
+                               + ("Wind power economic-life assumption" if variable=="economic_life"
+                                  else "China 2024"),
                 status="reviewed_published_assumption" if variable != "new_project_capacity_factor"
                        else "reviewed_new_project_parameter",
-                boundary="New commissioned project sample; not national operating fleet; plant-gate unfirmed electricity",
+                boundary="New commissioned projects; CF generally ex ante; country averages not matched project data; "
+                         "O&M is a published assumption; not national operating fleet; plant-gate unfirmed electricity",
                 missing_reason=""))
     write_csv(out / "cost_method_parameters.csv", cost, fields)
+
+    # Existing locked-base PDF: PDF p21 / printed p011, read with Figure 1.
+    # Preserve paragraph and figure precision separately; neither is initial SOC.
+    storage_pdf = PdfReader(ROOT / "data/raw/lb/base/reports/storage_2025.pdf")
+    storage_text = re.sub(r"\s+", "", storage_pdf.pages[20].extract_text())
+    storage_heading = re.sub(r"\s+", "", storage_pdf.pages[19].extract_text())
+    check("storage_2024_paragraph_and_unit_review",
+          "截至2024年底" in storage_heading and
+          all(token in storage_text for token in ("7376万千瓦/1.68亿千瓦时", "2.3小时")),
+          "PDF p20-21 / printed pp010-011; 2024 commissioned cumulative stock, not 2025. "
+          "mmj visually checked p21 Figure 1: 7376 (10^4 kW), 16820 (10^4 kWh), 2.3 h; "
+          "paragraph energy 1.68*10^8 kWh retained separately from figure precision. Peer review pending.")
+    storage_records = []
+    for variable, value, unit, locator in [
+        ("new_storage_power", 7376, "10^4 kW", "opening paragraph and Figure 1; 2024 power"),
+        ("new_storage_energy_paragraph", 1.68, "10^8 kWh", "opening paragraph; 2024 energy"),
+        ("new_storage_energy_figure", 16820, "10^4 kWh", "Figure 1; 2024 energy bar"),
+        ("new_storage_average_duration", 2.3, "h", "opening paragraph and Figure 1; 2024 duration")]:
+        storage_records.append(dict(year=2024, region="China", variable=variable, value=value, unit=unit,
+            source_id="NEA_STORAGE_2025", source_locator="PDF p21 / printed p011; "+locator,
+            status="reviewed_published_rounded",
+            boundary="End-2024 commissioned new-type storage; excludes pumped hydro; nameplate not SOC; "
+                     "paragraph/figure energy precision retained separately; model-region mapping pending",
+            missing_reason=""))
+    write_csv(out / "storage_2024.csv", storage_records, fields)
 
     # Review all adopted snapshot fields against their source paragraphs.
     gas = PdfReader(ROOT / "data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf")
@@ -236,14 +265,14 @@ def main():
         check(capture + "_reviewed_capture", not mismatches, dict(rows=len(obs["observations"]),mismatches=mismatches,
               scope="Existing review/capture read with notes; adopted uses stay within original contract"))
     review_path = ROOT / "data/catalog/q1_evidence_review.json"
-    write_json(review_path, dict(reviewer="mmj", review_date="2026-10-18",
+    review = dict(reviewer="mmj", review_date="2026-10-18",
         base_sha="7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
         scope="Q1 descriptive research only; source agreement does not grant Q2 model admission",
         checks=reviews,
         manual_review="NBS image rows, headings and notes viewed in this session; IRENA tables/method "
                       "and gas/H2 paragraphs read from stored original PDFs. Two teammate reviews pending.",
         exclusions=["data/restricted/**", "quarantined WB edition and lb price files",
-                    "candidate transmission network", "regional storage shares not mapped to Q2 regions"]))
+                    "candidate transmission network", "regional storage shares not mapped to Q2 regions"])
 
     registry = {s["source_key"]: s for s in read_json(ROOT / "data/catalog/sources_unified.json")}
     ei = next(k for k in registry if k.endswith(":EI_DATA_2025") and "alternatives" in k)
@@ -261,6 +290,9 @@ def main():
          "2024 gas/H2; 2025 national storage power/energy/duration separately", "Gas definitions not bridged to EI; H2 exceeds/approx qualifiers; added storage not inventory"),
         ("cost", "data/processed/technology_accounting_parameters.csv", ["yx:IRENA_COST_2024_PDF"], "2024 China IRENA only", "CAPEX/quantiles/LCOE; IPCC and 2022 market price excluded; LCOE not additive to capex"),
         ("cost_method", "data/processed/q1/cost_method_parameters.csv", ["yx:IRENA_COST_2024_PDF"], "2024 new wind projects", "25y; source CF and O&M; common 3/5/7% real WACC is analysis assumption, not observed China financing"),
+        ("storage_2024", "data/processed/q1/storage_2024.csv", ["lb/base:NEA_STORAGE_2025"],
+         "2024 cumulative commissioned new-type storage, from report published 2025",
+         "Existing locked-base PDF p21; paragraph/figure energy precision separate; P/E not initial SOC; peer confirmation pending"),
         ("price", "data/processed/commodity_price_references.csv", ["yx:WB_PINK_SHEET_STABLE"], "2015-2024 requested; only 2015-2020 archived rows adopted", "Nominal international benchmarks; no quarantined edition, no China contract-price inference"),
         ("pipeline", "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv", [ei], "2024", "China pipeline imports; bcm GCV40MJ/m3; bins not invented countries"),
         ("lng", "data/processed/lb/trade_alternatives/lng_china_2024.csv", [ei], "2024", "China LNG imports same EI standard; no mixing with domestic gas"),
@@ -283,10 +315,14 @@ def main():
             allowed_use="Q1 descriptive research, diagnostics and Q2 candidate handoff",
             blocked_use="automatic national ABM initialization/calibration/forecast",
             locator="Per-row source_locator; JSON observations locator; trade sheet/cell"))
+    # Capture this only after the substantive checks above; refreshing a manifest
+    # fingerprint alone cannot reuse an older review for changed data or use.
+    review["reviewed_snapshot"] = review_snapshot(inputs, sources)
+    write_json(review_path, review)
     manifest = dict(schema_version=1, candidate="p1/mmj", base_sha="7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
         reviewed_on="2026-10-18", observation_window=[2015,2024],
         common_input_change=False,
-        incremental_extraction="Two new processed tables use originals already in locked base; candidate additions pending Issue/peer confirmation, not replacement shared baseline",
+        incremental_extraction="Three processed tables use originals already in locked base; province, cost method and 2024 storage are candidate additions pending Issue/peer confirmation, not replacement shared baseline",
         assumptions=dict(real_wacc=[.03,.05,.07], common_life_years=25,
                          cost_service="unfirmed plant-gate electricity; constant annual output; 8760 hours normalization"),
         evidence_review=dict(path="data/catalog/q1_evidence_review.json", sha256=sha(review_path)),

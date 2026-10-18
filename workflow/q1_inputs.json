@@ -8,7 +8,7 @@
     2024
   ],
   "common_input_change": false,
-  "incremental_extraction": "Two new processed tables use originals already in locked base; candidate additions pending Issue/peer confirmation, not replacement shared baseline",
+  "incremental_extraction": "Three processed tables use originals already in locked base; province, cost method and 2024 storage are candidate additions pending Issue/peer confirmation, not replacement shared baseline",
   "assumptions": {
     "real_wacc": [
       0.03,
@@ -20,7 +20,7 @@
   },
   "evidence_review": {
     "path": "data/catalog/q1_evidence_review.json",
-    "sha256": "5e5e8bab46cda6a00106d31084bac3d519d4fbb6c16f72e0693c807e5c662c1c"
+    "sha256": "713ba43dfdbcc0c50f5945055cb2a5436398b61b60f9da8d4025cc3be694da7a"
   },
   "inputs": [
     {
@@ -160,12 +160,26 @@
     {
       "id": "cost_method",
       "path": "data/processed/q1/cost_method_parameters.csv",
-      "sha256": "69d687d6d5aa81409dbbb840acec5a4d5bc2985b21730fdf8be7ce8136807e5f",
+      "sha256": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9",
       "source_keys": [
         "yx:IRENA_COST_2024_PDF"
       ],
       "coverage": "2024 new wind projects",
       "boundary": "25y; source CF and O&M; common 3/5/7% real WACC is analysis assumption, not observed China financing",
+      "evidence_status": "reviewed_Q1_only_pending_two_peer_reviews",
+      "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+      "blocked_use": "automatic national ABM initialization/calibration/forecast",
+      "locator": "Per-row source_locator; JSON observations locator; trade sheet/cell"
+    },
+    {
+      "id": "storage_2024",
+      "path": "data/processed/q1/storage_2024.csv",
+      "sha256": "e388f90ee66a476b7406d9956e3d875e7394c8e28b705317aff36b56a0c03c10",
+      "source_keys": [
+        "lb/base:NEA_STORAGE_2025"
+      ],
+      "coverage": "2024 cumulative commissioned new-type storage, from report published 2025",
+      "boundary": "Existing locked-base PDF p21; paragraph/figure energy precision separate; P/E not initial SOC; peer confirmation pending",
       "evidence_status": "reviewed_Q1_only_pending_two_peer_reviews",
       "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
       "blocked_use": "automatic national ABM initialization/calibration/forecast",
@@ -381,6 +395,14 @@
       "path": "data/raw/batch3_scenarios/irena_power_costs_2024.pdf",
       "sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
       "url": "https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2025/Jul/IRENA_TEC_RPGC_in_2024_2025.pdf",
+      "version": "Locked base source edition; see source_key and per-record locator",
+      "content_review": "q1_evidence_review.json",
+      "use": "Q1 scoped research only"
+    },
+    "lb/base:NEA_STORAGE_2025": {
+      "path": "data/raw/lb/base/reports/storage_2025.pdf",
+      "sha256": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3",
+      "url": "https://www.nea.gov.cn/20250731/1d40d09f75714280a9218d5bea178fbd/202507311d40d09f75714280a9218d5bea178fbd_453d9a0609da1d4456a8b12d843bd256cf.pdf",
       "version": "Locked base source edition; see source_key and per-record locator",
       "content_review": "q1_evidence_review.json",
       "use": "Q1 scoped research only"

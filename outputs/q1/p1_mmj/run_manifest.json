@@ -4,9 +4,9 @@
   "success": true,
   "result_status": "Q1_research_candidate_with_explicit_gaps_pending_A7",
   "base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
-  "code_commit_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+  "code_commit_sha": "8650c94e25f2a1c6a2a111df7a8bc272fb067875",
   "dirty_worktree": true,
-  "worktree_status": "M .gitignore\n M README.md\n M data/catalog/datasets_unified.csv\n M docs/RUNNING.md\n M outputs/validation/tests.json\n M outputs/validation/workspace_audit.json\n M outputs/workflow/next_prompt.md\n M outputs/workflow/status.json\n M outputs/workflow/status.md\n M run.py\n M scripts/audit_workspace.py\n M scripts/build_workspace_catalog.py\n M scripts/scan_google_keys.py\n?? .gitattributes\n?? data/catalog/q1_evidence_review.json\n?? data/processed/q1/\n?? docs/solutions/\n?? outputs/q1/\n?? outputs/validation/q1_mmj_validation.json\n?? scripts/prepare_q1_inputs.py\n?? scripts/run_q1_assessment.py\n?? scripts/validate_q1.py\n?? src/energy_model/q1.py\n?? tests/test_q1.py\n?? workflow/q1_inputs.json",
+  "worktree_status": "M README.md\n M data/catalog/datasets_unified.csv\n M data/catalog/q1_evidence_review.json\n M data/processed/q1/cost_method_parameters.csv\n M docs/RUNNING.md\n M docs/solutions/p1-mmj.md\n M outputs/q1/p1_mmj/gaps_and_conflicts.csv\n M outputs/q1/p1_mmj/history.csv\n M outputs/q1/p1_mmj/indicators.csv\n M outputs/q1/p1_mmj/model_handoff.csv\n M outputs/q1/p1_mmj/report.md\n M outputs/q1/p1_mmj/run_manifest.json\n M outputs/q1/p1_mmj/static_balance.json\n M outputs/validation/tests.json\n M outputs/validation/workspace_audit.json\n M outputs/workflow/next_prompt.md\n M outputs/workflow/status.json\n M outputs/workflow/status.md\n M scripts/prepare_q1_inputs.py\n M scripts/run_q1_assessment.py\n M scripts/validate_q1.py\n M src/energy_model/q1.py\n M tests/test_q1.py\n M workflow/q1_inputs.json\n?? data/processed/q1/storage_2024.csv\n?? docs/reviews/\n?? outputs/q1/.q1-mmj-f7c7b5b65d6c455aac6d43719b93d955/\n?? outputs/validation/q1_mmj_selfcheck_sandbox_validation.json\n?? outputs/validation/q1_mmj_selfcheck_validation.json",
   "command": [
     "python",
     "-B",
@@ -29,7 +29,7 @@
   "network_access": false,
   "input_manifest": {
     "path": "workflow/q1_inputs.json",
-    "sha256": "9f73f9a891d02419127bf69764051ebed78b71854f0f3fa100197cfab0610f37"
+    "sha256": "2d8e57b00ac1095fc2040171c233e339413733ab05377e780b9f3e43e70c433e"
   },
   "input_hashes": {
     "data/processed/unified/nbs_history.csv": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
@@ -41,7 +41,8 @@
     "data/processed/china_co2_gcb_annual.csv": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
     "data/processed/fuel_storage_hydrogen_snapshots.csv": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
     "data/processed/technology_accounting_parameters.csv": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
-    "data/processed/q1/cost_method_parameters.csv": "69d687d6d5aa81409dbbb840acec5a4d5bc2985b21730fdf8be7ce8136807e5f",
+    "data/processed/q1/cost_method_parameters.csv": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9",
+    "data/processed/q1/storage_2024.csv": "e388f90ee66a476b7406d9956e3d875e7394c8e28b705317aff36b56a0c03c10",
     "data/processed/commodity_price_references.csv": "c123f4ffffd9ccea2320ef951fc05d166696f6196aea1cb3ac31ec4e9586aa2d",
     "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f",
     "data/processed/lb/trade_alternatives/lng_china_2024.csv": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363",
@@ -66,6 +67,7 @@
     "yx:NDRC_GAS_APPARENT_2024": "a55466c36ff019534d5e36615377bb3779f344c516242dc17a20d04b7d026330",
     "yx:NEA_STORAGE_2025": "739bb225cb040415095b6d3e1de0c81f75ec32541e0613c823d849d190c44453",
     "yx:IRENA_COST_2024_PDF": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+    "lb/base:NEA_STORAGE_2025": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3",
     "yx:WB_PINK_SHEET_STABLE": "f25870f3ce992bf6caa6b7159ae3722c9411ab66108cef47aea2e4451a21961a",
     "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63",
     "mmj:S13": "fdcf2c563d51bdfe1135b2f2a3e88d87d2ada2c66acfaa6e075cf8fa15f88e98",
@@ -73,13 +75,13 @@
   },
   "evidence_review": {
     "path": "data/catalog/q1_evidence_review.json",
-    "sha256": "5e5e8bab46cda6a00106d31084bac3d519d4fbb6c16f72e0693c807e5c662c1c"
+    "sha256": "713ba43dfdbcc0c50f5945055cb2a5436398b61b60f9da8d4025cc3be694da7a"
   },
   "code_hashes": {
     "run.py": "688a6db72a3a94aaef16ffe4be2523bc032137f8954f2bb6376375f92380139d",
-    "scripts/run_q1_assessment.py": "e82c807b2bac732e0493d6bd606d16f5cef1f3ff25c962496e6ca7c0bbed6092",
-    "scripts/prepare_q1_inputs.py": "213b878fd35faafe8355371641efb8ca91f791a7d9adf1cd15d0bbb61ff882be",
-    "src/energy_model/q1.py": "59c43b469203c1cd77e60278d6f290130e1e465c9ee1b153bdd47c5333612cea"
+    "scripts/run_q1_assessment.py": "23d2db58cdfbdf0e71f517decdc61ba99edd36d15deaeb366092db8671eea445",
+    "scripts/prepare_q1_inputs.py": "4985868ca0b8ca124d7f5774d0ffea1ae8179ba741fad7cc3b69052f68a80218",
+    "src/energy_model/q1.py": "bab52cc0d6b1cb1c97803ffc275a68259ff6ae650712201063ab56cd80f8bd06"
   },
   "configuration": {
     "real_wacc": [
@@ -101,10 +103,10 @@
     "只读工作区/README.md": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af"
   },
   "counts": {
-    "history": 877,
-    "indicators": 164,
+    "history": 881,
+    "indicators": 168,
     "roles": 12,
-    "handoff": 322,
+    "handoff": 324,
     "gaps": 16
   },
   "scientific_limits": [
@@ -127,23 +129,23 @@
   ],
   "acceptance": {
     "A1": "candidate_results_with_itemized_coverage",
-    "A2": "four_dimensions_quantified_with_scope_limits",
+    "A2": "partial_scientific_coverage_key_gaps_remain_draft",
     "A3": "source_cells_and_review_attached_pending_independent_confirmation",
     "A4": "candidate_handoff_and_unclosed_physical_balance_explicit",
     "A5": "requires_independent_reproduction",
-    "A6": "see outputs/validation/q1_mmj_validation.json",
+    "A6": "see validation evidence matching this run's code_hashes",
     "A7": "pending_two_peer_reviews_no_merge"
   },
   "outputs": {
     "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
-    "gaps_and_conflicts.csv": "6ad61259c14e0e10d1031fa03216b0ba04172d5f7bb21c10cd05614d7680e7cb",
-    "history.csv": "807de6f9f577987d11b8bd742b0f11add54e2e4652778b80f1432bd666e0c99c",
-    "indicators.csv": "724c0b354de600fc3579d14fe03bae041bb892a8f0eb8ad4794b67cd215288cf",
-    "model_handoff.csv": "39fc22cf1f38cc26e0027ba98f7d36ee72849fe226ad541c15f02d3b71dc95c3",
+    "gaps_and_conflicts.csv": "9aaf8d55371d93b553b7779f1c77cebd914b9af6f3334c3a4603786fa951b465",
+    "history.csv": "c983a410acef77c6edfeeba191847c4625efe352512b50a728ac09957af056e9",
+    "indicators.csv": "35bd3aea2f6300876535ee2ccdd52e1db5a8d39a1cda2386f361abb87dc254f5",
+    "model_handoff.csv": "5fca67c96ed9a39141b4cf66159ebf3029ca9bd68f2dd8c86439d1ec220ed2fc",
     "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
     "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
     "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
-    "report.md": "9e8e7c3c588a7e7e2026d376062850281ab1dd46677d785b503fd551fdd61ba8",
-    "static_balance.json": "817ffec08e7342281dbd7d9cec0659918c466f62998cb63e0a26746b6bcae0dd"
+    "report.md": "0890bb67dc8d59caaa21194e6ae40808fb29a6187199354f570ae19568db006e",
+    "static_balance.json": "bd930ec58f865383e81905fa9a90f5b6b33e01a0d71e7e6893987377de588cfd"
   }
 }

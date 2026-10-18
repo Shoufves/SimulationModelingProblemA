@@ -20,7 +20,7 @@ python -m venv .venv
 | 命令 | 做什么 | 输出/边界 |
 |---|---|---|
 | `python -B -X utf8 run.py audit` | 检查原件、保留记录、原文备份、final引用、语法、唯一键及隔离 | outputs/validation/workspace_audit.json |
-| `python -B -X utf8 run.py test` | 原128项单元测试 | outputs/validation/tests.json；不替代科学验证 |
+| `python -B -X utf8 run.py test` | 既有测试及Q1计算/反例/契约测试 | outputs/validation/tests.json；数量以实际执行为准，不替代科学验证 |
 | `python -B -X utf8 run.py attachments` | 重建附件标准表及用途报告 | data/processed/attachment_assets.json、outputs/attachments |
 | `python -B -X utf8 run.py verify` | 检查原九子集，再重算初评/真实需求条件回算/许可案例 | outputs/current_assessment、calibration、asset_cases |
 | `python -B -X utf8 run.py prototype` | 合成主体机制与六次连续窗口对照 | outputs/prototype；非全国实测或预测 |

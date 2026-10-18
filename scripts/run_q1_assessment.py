@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from energy_model.q1 import (Q1Error, balance_table, concentration, identity, inside,
     number, price_volatility, ratio_records, read_csv, read_json, screening_lcoe,
-    sha, spatial_difference, write_csv, write_json)
+    sha, spatial_difference, write_csv, write_json, review_snapshot)
 
 HISTORY_FIELDS = ["record_id","year","region","energy","variable","value","unit",
     "source_key","source_locator","input_id","input_path","original_value","transformation",
@@ -22,7 +22,7 @@ INDICATOR_FIELDS = ["indicator_id","dimension","year","region","energy","value",
 GAP_FIELDS = ["gap_id","topic","years","status","evidence","reason","impact","next_action"]
 ROLE_FIELDS = ["energy","role","advantage","shortcoming","synergy","evidence","q2_position","boundary"]
 HANDOFF_FIELDS = ["handoff_id","kind","year","variable","value","unit","evidence",
-    "status","condition","model_position","split"]
+    "status","condition","model_position","split","region","source_key","boundary","source_status"]
 
 
 def git(*args):
@@ -47,7 +47,8 @@ def validate_inputs(root, manifest):
         raise Q1Error("Unknown Q1 input contract")
     ids = [r["id"] for r in manifest["inputs"]]
     expected = {"nbs","products","balance","demand","province","macro","co2","snapshot",
-                "cost","cost_method","price","pipeline","lng","coal_trade","communique","renewables"}
+                "cost","cost_method","price","pipeline","lng","coal_trade","communique","renewables",
+                "storage_2024"}
     if set(ids) != expected or len(ids) != len(expected):
         raise Q1Error("Missing or duplicate Q1 input groups")
     entries = [*manifest["inputs"], *manifest["sources"].values(), manifest["evidence_review"]]
@@ -58,6 +59,10 @@ def validate_inputs(root, manifest):
     review = read_json(inside(root, manifest["evidence_review"]["path"]))
     if not review["checks"] or not all(r["passed"] for r in review["checks"]):
         raise Q1Error("Q1 evidence review has unresolved failures")
+    if review.get("base_sha") != manifest.get("base_sha"):
+        raise Q1Error("Evidence review base does not match Q1 contract")
+    if review.get("reviewed_snapshot") != review_snapshot(manifest["inputs"], manifest["sources"]):
+        raise Q1Error("Input bytes, sources or permitted uses differ from substantive review")
     return {r["id"]: r for r in manifest["inputs"]}
 
 
@@ -313,7 +318,7 @@ def calculate(root, manifest, inputs):
         "same_year_31_province_diagnostic","两端分母各自31省合计；非输电量、非不安全概率")
     for r in spatial["regions"]:
         add("province_share_difference","协调",2024,"电力",100*r["share_difference"],"percentage point","描述",
-            "100*(G_i/sum(G)-D_i/sum(D))",[gen[r["region"]],demand[r["region"]]],
+            "100*(G_i/sum(G)-D_i/sum(D))",list(gen.values())+list(demand.values()),
             "same_year_31_province_diagnostic","正表示发电空间份额更大；实际潮流还需省际交易/损耗/边界",
             region=r["region"])
     for variable in ("new_storage_power","new_storage_energy","new_storage_average_duration"):
@@ -323,6 +328,24 @@ def calculate(root, manifest, inputs):
     power,energy=select("snapshot","new_storage_power",2025),select("snapshot","new_storage_energy",2025)
     add("storage_nameplate_energy_power_ratio","协调",2025,"新型储能",energy["value"]/power["value"],"h","描述",
         "GWh/GW",[energy,power],"separate_2025_update","总名牌比；不是所有项目统一时长；不是连续放电保障承诺")
+    sp=select("storage_2024","new_storage_power",2024)
+    se=select("storage_2024","new_storage_energy_figure",2024)
+    sep=select("storage_2024","new_storage_energy_paragraph",2024)
+    sd=select("storage_2024","new_storage_average_duration",2024)
+    if (sp["unit"],se["unit"],sep["unit"],sd["unit"]) != ("10^4 kW","10^4 kWh","10^8 kWh","h"):
+        raise Q1Error("2024 storage unit mismatch")
+    storage_2024=dict(power_gw=sp["value"]*.01,energy_gwh_figure=se["value"]*.01,
+        energy_gwh_paragraph=sep["value"]*100,published_average_duration_h=sd["value"],
+        nameplate_ratio_h=se["value"]/sp["value"],initial_soc=None,
+        interpretation="2024 cumulative commissioned stock; same-source paragraph/figure precision, not independent observations")
+    for key,value,unit,formula,records in [
+        ("storage_2024_power",storage_2024["power_gw"],"GW","10^4 kW * 0.01",[sp]),
+        ("storage_2024_energy_figure",storage_2024["energy_gwh_figure"],"GWh","10^4 kWh * 0.01",[se]),
+        ("storage_2024_energy_paragraph",storage_2024["energy_gwh_paragraph"],"GWh","10^8 kWh * 100",[sep]),
+        ("storage_2024_nameplate_ratio",storage_2024["nameplate_ratio_h"],"h","figure kWh / kW",[se,sp])]:
+        add(key,"协调",2024,"新型储能",value,unit,"描述",formula,records,
+            "candidate_extraction_pending_peer_confirmation",
+            "既有2025报告描述2024累计投运量；图文精度分存，同源不作独立观测；名牌量不代替SOC/可用率")
     # Carbon bookkeeping is a component identity plus an explicitly blocked physical crosscheck.
     carbon_ledgers=[]
     for year in range(2015,2025):
@@ -348,9 +371,10 @@ def calculate(root, manifest, inputs):
     gap("regional_grid","省际网络与弃电","2024","blocked_operational","province;demand;renewables",
         "空间份额不能还原潮流；利用率不能反推弃电；线路候选隔离","无法计算LOLP/弃电电量/小时调度约束",
         "核验省际交换、线路容量、小时供需及理论可发电量")
-    gap("storage_2024","储能初态","2024","blocked_state","renewables;snapshot",
-        "抽蓄只有功率；2025新型储能不可回填；SOC/效率/功率约束不足","不能初始化全国储能库存与保供时长",
-        "取得2024分技术分区功率能量及初始SOC")
+    gap("storage_2024","储能初态","2024","blocked_state","renewables;storage_2024;snapshot",
+        "已从本地原件提取2024新型储能P/E；分区分技术状态、SOC、效率与可用率仍不足；抽蓄缺能量",
+        "全国名牌规模已补候选，仍不能初始化储能库存或承诺保供时长",
+        "复核storage_2024新提取与图文精度；补分区分技术P/E、初始SOC与运行效率")
     gap("physical_carbon","物理燃烧/捕集碳账","2024","blocked_physical_crosscheck","balance;co2",
         "2024燃料投入、NCV、燃烧/原料分流、氧化率、过程排放和捕集/封存缺失",
         "GCB分项恒等式不构成能源-碳物理闭合；不输出净零",
@@ -370,8 +394,8 @@ def calculate(root, manifest, inputs):
         "WDI/GCB用CHN代码，NBS用大陆；GDP历史修订与基期未逐一桥接",
         "强度仅研究对照，不作为官方扣除指标或全国校准准入",
         "核对地域元数据及GDP修订/基价，提交Q2输入审查")
-    gap("new_extractions","共同输入增量确认","2024","pending_peer_confirmation","province;cost_method",
-        "源原件已在锁定base，两份细化表是本方案新提取","不悄悄替换三人共同输入",
+    gap("new_extractions","共同输入增量确认","2024","pending_peer_confirmation","province;cost_method;storage_2024",
+        "源原件已在锁定base，省表、成本方法、2024储能三份细化表是本方案新提取","不悄悄替换三人共同输入",
         "PR/Issue公开增量；两名成员核对后主持人确认是否修订共同输入")
     for ledger in ledgers:
         if ledger["year"]==2023:
@@ -386,14 +410,27 @@ def calculate(root, manifest, inputs):
         handoff.append(dict(handoff_id=r["record_id"],kind="初态候选",year=2024,
             variable=r["variable"],value=r["value"],unit=r["unit"],evidence=r["record_id"],
             status="candidate_not_admitted",condition="同口径源表审查；容量为年末且火电含非煤，水电含抽蓄",
-            model_position="年度规模/结构与容量边界；非机组初态",split="2024已接触留出"))
+            model_position="年度规模/结构与容量边界；非机组初态",split="2024已接触留出",
+            **{key:r[key] for key in ("region","source_key","boundary")},
+            source_status=r["status"]))
     for r in rows["nbs"] + rows["products"] + rows["macro"] + rows["co2"]:
         if 2015 <= r["year"] <= 2024:
-            handoff.append(dict(handoff_id="target_"+r["record_id"],kind="校准目标候选",year=r["year"],
+            driver = r["input_id"] == "macro"
+            handoff.append(dict(handoff_id=("driver_" if driver else "target_")+r["record_id"],
+                kind="外生驱动候选" if driver else "校准目标候选",year=r["year"],
                 variable=r["variable"],value=r["value"],unit=r["unit"],evidence=r["record_id"],
                 status="candidate_not_admitted",condition="去重、GDP/地域/排放口径桥接；不能当已校准",
-                model_position="历史损失函数候选；不复制同源版本",
+                model_position="历史活动条件；不作为能源模型拟合目标" if driver
+                               else "历史损失函数候选；不复制同源版本",
+                **{key:r[key] for key in ("region","source_key","boundary")},
+                source_status=r["status"],
                 split="训练2015-2021" if r["year"]<=2021 else "已接触留出2022-2024"))
+    for r in (sp,se):
+        handoff.append(dict(handoff_id=r["record_id"],kind="初态规模候选",year=2024,
+            variable=r["variable"],value=r["value"],unit=r["unit"],evidence=r["record_id"],
+            status="candidate_not_admitted",condition="新提取待两人核对；名牌P/E不等运行库存；SOC/效率/分区状态待补",
+            model_position="全国新型储能规模边界候选；不能独立初始化储能",split="2024已接触留出",
+            **{key:r[key] for key in ("region","source_key","boundary")},source_status=r["status"]))
     for key in ("regional_grid","storage_2024","physical_carbon","gas_net_dependency","firm_cost"):
         g=next(g for g in gaps if g["gap_id"]==key)
         handoff.append(dict(handoff_id="blocked_"+key,kind="约束/待补输入",year=2024,
@@ -406,7 +443,7 @@ def calculate(root, manifest, inputs):
             reasons=["同年燃料能源平衡与NCV/氧化率不足","原料/燃烧与过程排放未分","捕集/封存与移除不足"],
             double_count_controls=["电力是转换载体，不加到一次能源消费","氢生产投入不再作为新一次能源",
                                    "过程碳与燃烧碳分开","捕集不等于永久封存"]),
-        trade_concentration=concentration_results,spatial=spatial,prices=volatility,
+        trade_concentration=concentration_results,spatial=spatial,prices=volatility,storage_2024=storage_2024,
         comparable_costs=cost_result,
         hydrogen=dict(published_total_lower_bound_exclusive=val("snapshot","hydrogen_output",2024),
             approximate_category_sum=sum(val("snapshot",v,2024) for v in
@@ -463,7 +500,7 @@ def report(indicators,roles,gaps,static,history):
     lines = [
         "# Q1 当前多能源发展现状：mmj 候选研究交付",
         "",
-        "四项研究均已实现为离线可复现候选；工程与方法自检不等于 A7 两人批准。",
+        "四项研究均有离线可复现候选产物；关键科学缺口仍在，Q1完整科学验收部分完成，PR保持Draft。",
         "实际观测、条件成本实验和阻断项分别标记。全国真实初态、历史校准、预测仍未完成。",
         "",
         "## 1. 历史规模、结构、区域与贸易/价格",
@@ -516,10 +553,12 @@ def report(indicators,roles,gaps,static,history):
         f"2015=100指数为{v('energy_intensity_index'):.2f}；碳强度为{v('carbon_intensity'):.4f} tCO2/万元，"
         f"2015=100指数为{v('carbon_intensity_index'):.2f}。这表示单位产出的变化，不等于总排放下降。",
         "",
-        "经济性采用 IRENA 同一原件的2024中国新建风电样本CAPEX、O&M和CF，统一25年、年末折现与恒定年输出，"
+        "经济性采用 IRENA 同一原件的2024中国新建风电CAPEX均值、O&M假设及CF均值，统一25年、年末折现与恒定年输出，"
         "L=(CAPEX×CRF+O&M)/(8760×CF)，按3%、5%、7%实际WACC做敏感性。3/5/7%是透明分析假设，"
         "不是中国实测融资率。报告公布陆风/光伏/海风LCOE=0.029/0.033/0.056另列，技术WACC不同，"
         "不解释为固定融资净效应，不再叠加CAPEX/O&M。成本仅未保供厂门kWh，不评价等可靠性全系统服务。",
+        "原报告说明项目CF通常为事前估计；国家CAPEX和CF均值未逐项目配对。"
+        "本式是平均参数条件试算，不等于项目LCOE的加权平均，也不是全国在运机组实测成本。",
         "",
         "|技术|3%|5%|7%|单位|",
         "|---|---:|---:|---:|---|"]
@@ -539,7 +578,12 @@ def report(indicators,roles,gaps,static,history):
         f"省级发电合计{static['spatial']['generation_sum']:.2f}亿千瓦时，与全国产品表差"
         f"{static['spatial']['generation_sum_minus_national']:.2f}；用电合计{static['spatial']['consumption_sum']:.0f}亿千瓦时。"
         "未选到同版全国用电比较值，明确保留缺失。正份额差表示发电空间份额较大，不代表实测外送量。",
-        "2024抽蓄58.69GW仅功率；2025新型储能136GW/351GWh及约2.58h单独展示，不能回填2024或替代SOC。",
+        f"2024抽蓄58.69GW仅功率。既有储能报告新增提取2024年底新型储能"
+        f"{static['storage_2024']['power_gw']:.2f}GW；正文能量{static['storage_2024']['energy_gwh_paragraph']:g}GWh、"
+        f"图1能量{static['storage_2024']['energy_gwh_figure']:g}GWh分别保留，属于同源精度差，不平均、不计作独立证据。"
+        f"图1名牌E/P约{static['storage_2024']['nameplate_ratio_h']:.3f}h；公布平均时长"
+        f"{static['storage_2024']['published_average_duration_h']:g}h。新提取仍待两人确认，SOC/效率/分区运行状态未补齐。"
+        "2025新型储能136GW/351GWh及约2.58h单独展示，不能回填2024或替代SOC。",
         f"同表地区分布：山西/内蒙古原煤产量合计占全国{v('coal_shanxi_inner_mongolia_share'):.2f}%；"
         f"四川/新疆/陕西/内蒙古天然气产量合计占{v('gas_four_province_production_share'):.2f}%；"
         f"四川/云南水电发电合计占{v('hydro_sichuan_yunnan_generation_share'):.2f}%。"
@@ -585,6 +629,7 @@ def report(indicators,roles,gaps,static,history):
         "过程排放、捕集、封存与移除不齐全。电力、氢不再作为一次能量重复加总，捕集不等永久封存。",
         "",
         "model_handoff.csv给出2024年末规模/容量初态候选、2015—2024校准目标候选与阻断约束。"
+        "GDP单列为外生驱动候选，不进入能源模型拟合目标；每项观测候选保留地域、来源、边界和源状态。"
         "2015—2021用于训练；2022—2024是已接触留出，不重新包装为盲测。"
         "所有候选仍需Q2输入审查，未修改原九子集用途契约。",
         "",
@@ -594,7 +639,7 @@ def report(indicators,roles,gaps,static,history):
         "同可靠性跨能源成本、时序网络/弃电、2024储能状态、物理碳账、技术长面板和跨源地域/GDP桥接。"
         "这些限制不以零值填补，也不通过一致性检查自动准入。",
         "",
-        "A1—A4：四项研究方法、适用范围定量结果与证据缺项已交付候选；不是全国所有输入已补齐。"
+        "A1—A4：四项候选已交付，但覆盖与关键维度仍有缺口，只能标为部分完成，不能据文档齐全通过Q1完整验收。"
         "A5—A6：以本次run_manifest和validation证据中的实际执行为准。"
         "A7：待另外两人核对同一最终SHA并批准；当前没有正式验收通过或合并结论。",
         "",
@@ -704,10 +749,10 @@ def main():
                         handoff=len(handoff),gaps=len(gaps)),
             scientific_limits=[g["gap_id"] for g in gaps],
             acceptance=dict(A1="candidate_results_with_itemized_coverage",
-                A2="four_dimensions_quantified_with_scope_limits",
+                A2="partial_scientific_coverage_key_gaps_remain_draft",
                 A3="source_cells_and_review_attached_pending_independent_confirmation",
                 A4="candidate_handoff_and_unclosed_physical_balance_explicit",
-                A5="requires_independent_reproduction",A6="see outputs/validation/q1_mmj_validation.json",
+                A5="requires_independent_reproduction",A6="see validation evidence matching this run's code_hashes",
                 A7="pending_two_peer_reviews_no_merge"),
             outputs={p.name:sha(p) for p in sorted(staging.iterdir())})
         write_json(staging/"run_manifest.json",result)

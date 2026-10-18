@@ -25,6 +25,14 @@ def read_csv(path):
         return list(csv.DictReader(stream))
 
 
+def review_snapshot(inputs, sources):
+    """Bind semantic review to exact bytes, sources and permitted input uses."""
+    fields = ("path", "sha256", "source_keys", "coverage", "boundary",
+              "allowed_use", "blocked_use")
+    return dict(inputs={r["id"]: {key: r[key] for key in fields} for r in inputs},
+                sources=sources)
+
+
 def write_json(path, value):
     Path(path).write_bytes((json.dumps(value, ensure_ascii=False, indent=2,
                                       allow_nan=False) + "\n").encode("utf-8"))
