@@ -1,0 +1,13 @@
+﻿energy,role,advantage,shortcoming,synergy,evidence,q2_position,boundary
+煤,大规模供能与电热调节,国内规模大、可库存,碳排放、洗选口径和灵活性成本,与风光互补；热电耦合；CCUS需额外能耗,nbs/consumption_coal_pct; products/raw_coal_100Mt; balance/C09-05; co2/Coal,煤矿/热电主体；燃料库存、排放与运行约束,火电不等煤电；平衡表与产品表产量不同
+油,交通燃料和石化原料,液体燃料储运方便,净进口暴露大；燃烧与原料不能混算,终端电气化、替代燃料和炼化用氢,balance/C09-04; communique/crude_oil_import_quantity; co2/Oil,进口、炼化、交通与原料流分记,原油生产/进口不等全部石油消费；不双计制品
+气,工业/城市燃料与调峰发电,调节和终端用途广,进口来源集中、季节库存/甲烷和燃料成本未知,储气、管网、气电和需求响应,snapshot/gas_*; pipeline; lng; co2/Gas,气源-储气-气电链，季节与通道约束,国内体积与EI标准热值气不直接相加；不是非化石
+水电,可再生发电与调节,库容水电可提供调节,来水季节性、生态约束和跨区依赖,与风光储及跨区输送协同,nbs/hydro_10kW; province/hydro_generation_100GWh; renewables,常规水电与抽蓄分开；水量和库容约束,总水电含抽蓄；抽蓄不是一次能源；未计算水文可靠性
+核电,稳定低直接排放电量,全年稳定供电潜力,工程周期、资本和安全/运行约束资料不足,与可变电源协调检修和负荷调节,nbs/nuclear_10kW; communique/generation_nuclear,机组投建/检修/出力边界候选,年末容量非全年平均；不把直接低碳当全生命周期零碳
+风电,可变可再生电源,规模增长；同价年陆风成本参考低,出力时序/网络和消纳约束,跨区、储能、负荷响应与气煤调峰,nbs/wind_10kW; communique/generation_wind; renewables/wind_utilization_pct; cost,分区资源出力、建退役及成本主体,利用率不当容量因子；新建项目CF不替代全国存量
+光伏,可变日间电源,快速扩张；模块化部署,昼夜错配、网络和储能需求,储能、需求侧移峰、可再生电解制氢,nbs/solar_10kW; renewables/pv_generation; cost/utility_solar_PV_LCOE,区分太阳能总项与PV；DC/AC边界明确,不强合太阳能/PV版本；未给同融资PV重算或保供成本
+生物质,燃料型发电/热与资源利用,可调燃料路径候选,可持续原料、运输、生命周期排放与规模约束,热电联产；BECCS需可持续性及永久封存证明,renewables/biomass_capacity; renewables/biomass_generation; communique/thermal scope,原料供给、转换与过程碳,在火电分类中可能交叉；不重复加总；不默认碳中性/负排放
+氢能,二次载体和化工原料,可衔接难电气化需求与可再生电力,当前化石制氢主导；效率/储运成本缺失,电解-储氢-工业；化石制氢与CCUS分别计碳,snapshot/hydrogen_output; snapshot/*hydrogen*,生产投入/产氢/库存/终端用途与损失,总量>3650万吨；12.5万吨/年是可再生产能；不当新一次能源
+储能,跨时段搬运电能/气氢库存,功率与能量分开可描述调节,初始SOC、效率、时长与可用率不足,与风光、调峰、需求响应共同约束,renewables/pumped_storage_capacity; snapshot/new_storage_*,P/E/SOC/充放电效率连续状态,2025新型储能136GW/351GWh不回填2024；抽蓄不另加总容量
+输送,跨区电/气资源配置,缓解资源与负荷空间分离,候选线路未核验；容量/潮流和损耗缺失,风光水电外送、管道气与多区域平衡,province; demand; snapshot/gas_imports_pipeline,分区有向网络、流量上限与损耗,空间份额距离不是实际净外送或安全评分；未准入候选线路
+CCUS,排放捕集、利用与封存链,难减排路径候选,捕集率、能耗、运输与永久封存数据不足,工业、化石电厂及条件BECCS,static_balance.json/blocked physical carbon; co2 component boundary,排放生成/捕集/利用/永久封存分别记账,没有实测全国规模；捕集不等移除，利用不等永久封存

@@ -1,0 +1,323 @@
+﻿handoff_id,kind,year,variable,value,unit,evidence,status,condition,model_position,split
+nbs:127,初态候选,2024,hydro_10kW,43552.0,10^4 kW,nbs:127,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:128,初态候选,2024,nuclear_10kW,6083.0,10^4 kW,nbs:128,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:129,初态候选,2024,other_10kW,5.0,10^4 kW,nbs:129,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:130,初态候选,2024,solar_10kW,88742.0,10^4 kW,nbs:130,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:131,初态候选,2024,thermal_10kW,144462.0,10^4 kW,nbs:131,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:132,初态候选,2024,total_10kW,334922.0,10^4 kW,nbs:132,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:133,初态候选,2024,wind_10kW,52078.0,10^4 kW,nbs:133,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:324,初态候选,2024,consumption_10ktce,596000.0,10^4 tce,nbs:324,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:325,初态候选,2024,consumption_coal_pct,53.2,%,nbs:325,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:326,初态候选,2024,consumption_gas_pct,8.8,%,nbs:326,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:327,初态候选,2024,consumption_oil_pct,18.2,%,nbs:327,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:328,初态候选,2024,consumption_primary_electricity_other_pct,19.8,%,nbs:328,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:329,初态候选,2024,production_10ktce,498000.0,10^4 tce,nbs:329,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:330,初态候选,2024,production_coal_pct,63.9,%,nbs:330,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:331,初态候选,2024,production_gas_pct,6.2,%,nbs:331,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:332,初态候选,2024,production_oil_pct,6.1,%,nbs:332,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+nbs:333,初态候选,2024,production_primary_electricity_other_pct,23.8,%,nbs:333,candidate_not_admitted,同口径源表审查；容量为年末且火电含非煤，水电含抽蓄,年度规模/结构与容量边界；非机组初态,2024已接触留出
+target_nbs:64,校准目标候选,2015,hydro_10kW,31954.0,10^4 kW,nbs:64,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:65,校准目标候选,2015,nuclear_10kW,2717.0,10^4 kW,nbs:65,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:66,校准目标候选,2015,other_10kW,9.0,10^4 kW,nbs:66,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:67,校准目标候选,2015,solar_10kW,4218.0,10^4 kW,nbs:67,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:68,校准目标候选,2015,thermal_10kW,100554.0,10^4 kW,nbs:68,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:69,校准目标候选,2015,total_10kW,152527.0,10^4 kW,nbs:69,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:70,校准目标候选,2015,wind_10kW,13075.0,10^4 kW,nbs:70,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:71,校准目标候选,2016,hydro_10kW,33207.0,10^4 kW,nbs:71,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:72,校准目标候选,2016,nuclear_10kW,3364.0,10^4 kW,nbs:72,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:73,校准目标候选,2016,other_10kW,7.0,10^4 kW,nbs:73,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:74,校准目标候选,2016,solar_10kW,7631.0,10^4 kW,nbs:74,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:75,校准目标候选,2016,thermal_10kW,106094.0,10^4 kW,nbs:75,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:76,校准目标候选,2016,total_10kW,165051.0,10^4 kW,nbs:76,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:77,校准目标候选,2016,wind_10kW,14747.0,10^4 kW,nbs:77,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:78,校准目标候选,2017,hydro_10kW,34359.0,10^4 kW,nbs:78,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:79,校准目标候选,2017,nuclear_10kW,3582.0,10^4 kW,nbs:79,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:80,校准目标候选,2017,other_10kW,7.0,10^4 kW,nbs:80,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:81,校准目标候选,2017,solar_10kW,12942.0,10^4 kW,nbs:81,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:82,校准目标候选,2017,thermal_10kW,110495.0,10^4 kW,nbs:82,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:83,校准目标候选,2017,total_10kW,177708.0,10^4 kW,nbs:83,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:84,校准目标候选,2017,wind_10kW,16325.0,10^4 kW,nbs:84,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:85,校准目标候选,2018,hydro_10kW,35259.0,10^4 kW,nbs:85,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:86,校准目标候选,2018,nuclear_10kW,4466.0,10^4 kW,nbs:86,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:87,校准目标候选,2018,other_10kW,5.0,10^4 kW,nbs:87,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:88,校准目标候选,2018,solar_10kW,17433.0,10^4 kW,nbs:88,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:89,校准目标候选,2018,thermal_10kW,114408.0,10^4 kW,nbs:89,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:90,校准目标候选,2018,total_10kW,189997.0,10^4 kW,nbs:90,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:91,校准目标候选,2018,wind_10kW,18427.0,10^4 kW,nbs:91,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:92,校准目标候选,2019,hydro_10kW,35804.0,10^4 kW,nbs:92,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:93,校准目标候选,2019,nuclear_10kW,4874.0,10^4 kW,nbs:93,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:94,校准目标候选,2019,other_10kW,5.0,10^4 kW,nbs:94,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:95,校准目标候选,2019,solar_10kW,20429.0,10^4 kW,nbs:95,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:96,校准目标候选,2019,thermal_10kW,118957.0,10^4 kW,nbs:96,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:97,校准目标候选,2019,total_10kW,200985.0,10^4 kW,nbs:97,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:98,校准目标候选,2019,wind_10kW,20915.0,10^4 kW,nbs:98,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:99,校准目标候选,2020,hydro_10kW,37028.0,10^4 kW,nbs:99,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:100,校准目标候选,2020,nuclear_10kW,4989.0,10^4 kW,nbs:100,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:101,校准目标候选,2020,other_10kW,5.0,10^4 kW,nbs:101,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:102,校准目标候选,2020,solar_10kW,25356.0,10^4 kW,nbs:102,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:103,校准目标候选,2020,thermal_10kW,124960.0,10^4 kW,nbs:103,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:104,校准目标候选,2020,total_10kW,220504.0,10^4 kW,nbs:104,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:105,校准目标候选,2020,wind_10kW,28165.0,10^4 kW,nbs:105,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:106,校准目标候选,2021,hydro_10kW,39094.0,10^4 kW,nbs:106,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:107,校准目标候选,2021,nuclear_10kW,5326.0,10^4 kW,nbs:107,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:108,校准目标候选,2021,other_10kW,5.0,10^4 kW,nbs:108,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:109,校准目标候选,2021,solar_10kW,30654.0,10^4 kW,nbs:109,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:110,校准目标候选,2021,thermal_10kW,129739.0,10^4 kW,nbs:110,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:111,校准目标候选,2021,total_10kW,237689.0,10^4 kW,nbs:111,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:112,校准目标候选,2021,wind_10kW,32871.0,10^4 kW,nbs:112,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:113,校准目标候选,2022,hydro_10kW,41396.0,10^4 kW,nbs:113,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:114,校准目标候选,2022,nuclear_10kW,5557.0,10^4 kW,nbs:114,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:115,校准目标候选,2022,other_10kW,5.0,10^4 kW,nbs:115,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:116,校准目标候选,2022,solar_10kW,39268.0,10^4 kW,nbs:116,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:117,校准目标候选,2022,thermal_10kW,133527.0,10^4 kW,nbs:117,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:118,校准目标候选,2022,total_10kW,256317.0,10^4 kW,nbs:118,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:119,校准目标候选,2022,wind_10kW,36564.0,10^4 kW,nbs:119,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:120,校准目标候选,2023,hydro_10kW,42237.0,10^4 kW,nbs:120,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:121,校准目标候选,2023,nuclear_10kW,5691.0,10^4 kW,nbs:121,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:122,校准目标候选,2023,other_10kW,5.0,10^4 kW,nbs:122,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:123,校准目标候选,2023,solar_10kW,61048.0,10^4 kW,nbs:123,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:124,校准目标候选,2023,thermal_10kW,139099.0,10^4 kW,nbs:124,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:125,校准目标候选,2023,total_10kW,292224.0,10^4 kW,nbs:125,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:126,校准目标候选,2023,wind_10kW,44144.0,10^4 kW,nbs:126,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:127,校准目标候选,2024,hydro_10kW,43552.0,10^4 kW,nbs:127,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:128,校准目标候选,2024,nuclear_10kW,6083.0,10^4 kW,nbs:128,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:129,校准目标候选,2024,other_10kW,5.0,10^4 kW,nbs:129,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:130,校准目标候选,2024,solar_10kW,88742.0,10^4 kW,nbs:130,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:131,校准目标候选,2024,thermal_10kW,144462.0,10^4 kW,nbs:131,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:132,校准目标候选,2024,total_10kW,334922.0,10^4 kW,nbs:132,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:133,校准目标候选,2024,wind_10kW,52078.0,10^4 kW,nbs:133,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:234,校准目标候选,2015,consumption_10ktce,434113.0,10^4 tce,nbs:234,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:235,校准目标候选,2015,consumption_coal_pct,63.8,%,nbs:235,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:236,校准目标候选,2015,consumption_gas_pct,5.8,%,nbs:236,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:237,校准目标候选,2015,consumption_oil_pct,18.4,%,nbs:237,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:238,校准目标候选,2015,consumption_primary_electricity_other_pct,12.0,%,nbs:238,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:239,校准目标候选,2015,production_10ktce,362193.0,10^4 tce,nbs:239,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:240,校准目标候选,2015,production_coal_pct,72.2,%,nbs:240,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:241,校准目标候选,2015,production_gas_pct,4.8,%,nbs:241,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:242,校准目标候选,2015,production_oil_pct,8.5,%,nbs:242,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:243,校准目标候选,2015,production_primary_electricity_other_pct,14.5,%,nbs:243,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:244,校准目标候选,2016,consumption_10ktce,441492.0,10^4 tce,nbs:244,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:245,校准目标候选,2016,consumption_coal_pct,62.2,%,nbs:245,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:246,校准目标候选,2016,consumption_gas_pct,6.1,%,nbs:246,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:247,校准目标候选,2016,consumption_oil_pct,18.7,%,nbs:247,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:248,校准目标候选,2016,consumption_primary_electricity_other_pct,13.0,%,nbs:248,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:249,校准目标候选,2016,production_10ktce,345954.0,10^4 tce,nbs:249,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:250,校准目标候选,2016,production_coal_pct,69.8,%,nbs:250,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:251,校准目标候选,2016,production_gas_pct,5.2,%,nbs:251,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:252,校准目标候选,2016,production_oil_pct,8.3,%,nbs:252,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:253,校准目标候选,2016,production_primary_electricity_other_pct,16.7,%,nbs:253,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:254,校准目标候选,2017,consumption_10ktce,455827.0,10^4 tce,nbs:254,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:255,校准目标候选,2017,consumption_coal_pct,60.6,%,nbs:255,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:256,校准目标候选,2017,consumption_gas_pct,6.9,%,nbs:256,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:257,校准目标候选,2017,consumption_oil_pct,18.9,%,nbs:257,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:258,校准目标候选,2017,consumption_primary_electricity_other_pct,13.6,%,nbs:258,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:259,校准目标候选,2017,production_10ktce,358867.0,10^4 tce,nbs:259,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:260,校准目标候选,2017,production_coal_pct,69.6,%,nbs:260,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:261,校准目标候选,2017,production_gas_pct,5.4,%,nbs:261,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:262,校准目标候选,2017,production_oil_pct,7.6,%,nbs:262,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:263,校准目标候选,2017,production_primary_electricity_other_pct,17.4,%,nbs:263,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:264,校准目标候选,2018,consumption_10ktce,471925.0,10^4 tce,nbs:264,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:265,校准目标候选,2018,consumption_coal_pct,59.0,%,nbs:265,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:266,校准目标候选,2018,consumption_gas_pct,7.6,%,nbs:266,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:267,校准目标候选,2018,consumption_oil_pct,18.9,%,nbs:267,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:268,校准目标候选,2018,consumption_primary_electricity_other_pct,14.5,%,nbs:268,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:269,校准目标候选,2018,production_10ktce,378859.0,10^4 tce,nbs:269,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:270,校准目标候选,2018,production_coal_pct,69.2,%,nbs:270,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:271,校准目标候选,2018,production_gas_pct,5.4,%,nbs:271,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:272,校准目标候选,2018,production_oil_pct,7.2,%,nbs:272,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:273,校准目标候选,2018,production_primary_electricity_other_pct,18.2,%,nbs:273,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:274,校准目标候选,2019,consumption_10ktce,485584.0,10^4 tce,nbs:274,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:275,校准目标候选,2019,consumption_coal_pct,57.5,%,nbs:275,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:276,校准目标候选,2019,consumption_gas_pct,8.0,%,nbs:276,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:277,校准目标候选,2019,consumption_oil_pct,19.0,%,nbs:277,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:278,校准目标候选,2019,consumption_primary_electricity_other_pct,15.4,%,nbs:278,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:279,校准目标候选,2019,production_10ktce,392606.0,10^4 tce,nbs:279,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:280,校准目标候选,2019,production_coal_pct,68.1,%,nbs:280,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:281,校准目标候选,2019,production_gas_pct,5.7,%,nbs:281,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:282,校准目标候选,2019,production_oil_pct,7.0,%,nbs:282,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:283,校准目标候选,2019,production_primary_electricity_other_pct,19.2,%,nbs:283,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:284,校准目标候选,2020,consumption_10ktce,496514.0,10^4 tce,nbs:284,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:285,校准目标候选,2020,consumption_coal_pct,56.7,%,nbs:285,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:286,校准目标候选,2020,consumption_gas_pct,8.4,%,nbs:286,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:287,校准目标候选,2020,consumption_oil_pct,18.9,%,nbs:287,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:288,校准目标候选,2020,consumption_primary_electricity_other_pct,16.0,%,nbs:288,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:289,校准目标候选,2020,production_10ktce,402671.0,10^4 tce,nbs:289,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:290,校准目标候选,2020,production_coal_pct,67.1,%,nbs:290,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:291,校准目标候选,2020,production_gas_pct,6.1,%,nbs:291,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:292,校准目标候选,2020,production_oil_pct,6.9,%,nbs:292,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:293,校准目标候选,2020,production_primary_electricity_other_pct,19.9,%,nbs:293,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:294,校准目标候选,2021,consumption_10ktce,525027.0,10^4 tce,nbs:294,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:295,校准目标候选,2021,consumption_coal_pct,55.7,%,nbs:295,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:296,校准目标候选,2021,consumption_gas_pct,8.8,%,nbs:296,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:297,校准目标候选,2021,consumption_oil_pct,18.8,%,nbs:297,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:298,校准目标候选,2021,consumption_primary_electricity_other_pct,16.7,%,nbs:298,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:299,校准目标候选,2021,production_10ktce,422789.0,10^4 tce,nbs:299,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:300,校准目标候选,2021,production_coal_pct,66.3,%,nbs:300,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:301,校准目标候选,2021,production_gas_pct,6.2,%,nbs:301,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:302,校准目标候选,2021,production_oil_pct,6.7,%,nbs:302,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:303,校准目标候选,2021,production_primary_electricity_other_pct,20.8,%,nbs:303,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_nbs:304,校准目标候选,2022,consumption_10ktce,541274.0,10^4 tce,nbs:304,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:305,校准目标候选,2022,consumption_coal_pct,55.6,%,nbs:305,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:306,校准目标候选,2022,consumption_gas_pct,8.4,%,nbs:306,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:307,校准目标候选,2022,consumption_oil_pct,18.4,%,nbs:307,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:308,校准目标候选,2022,consumption_primary_electricity_other_pct,17.6,%,nbs:308,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:309,校准目标候选,2022,production_10ktce,459507.0,10^4 tce,nbs:309,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:310,校准目标候选,2022,production_coal_pct,66.9,%,nbs:310,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:311,校准目标候选,2022,production_gas_pct,6.0,%,nbs:311,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:312,校准目标候选,2022,production_oil_pct,6.4,%,nbs:312,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:313,校准目标候选,2022,production_primary_electricity_other_pct,20.8,%,nbs:313,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:314,校准目标候选,2023,consumption_10ktce,571327.0,10^4 tce,nbs:314,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:315,校准目标候选,2023,consumption_coal_pct,54.8,%,nbs:315,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:316,校准目标候选,2023,consumption_gas_pct,8.5,%,nbs:316,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:317,校准目标候选,2023,consumption_oil_pct,18.8,%,nbs:317,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:318,校准目标候选,2023,consumption_primary_electricity_other_pct,17.9,%,nbs:318,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:319,校准目标候选,2023,production_10ktce,475979.0,10^4 tce,nbs:319,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:320,校准目标候选,2023,production_coal_pct,66.1,%,nbs:320,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:321,校准目标候选,2023,production_gas_pct,6.1,%,nbs:321,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:322,校准目标候选,2023,production_oil_pct,6.3,%,nbs:322,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:323,校准目标候选,2023,production_primary_electricity_other_pct,21.5,%,nbs:323,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:324,校准目标候选,2024,consumption_10ktce,596000.0,10^4 tce,nbs:324,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:325,校准目标候选,2024,consumption_coal_pct,53.2,%,nbs:325,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:326,校准目标候选,2024,consumption_gas_pct,8.8,%,nbs:326,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:327,校准目标候选,2024,consumption_oil_pct,18.2,%,nbs:327,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:328,校准目标候选,2024,consumption_primary_electricity_other_pct,19.8,%,nbs:328,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:329,校准目标候选,2024,production_10ktce,498000.0,10^4 tce,nbs:329,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:330,校准目标候选,2024,production_coal_pct,63.9,%,nbs:330,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:331,校准目标候选,2024,production_gas_pct,6.2,%,nbs:331,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:332,校准目标候选,2024,production_oil_pct,6.1,%,nbs:332,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_nbs:333,校准目标候选,2024,production_primary_electricity_other_pct,23.8,%,nbs:333,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:12,校准目标候选,2015,raw_coal_100Mt,37.47,10^8 t,products:12,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:13,校准目标候选,2015,natural_gas_100Mm3,1346.1,10^8 m3,products:13,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:14,校准目标候选,2015,coke_10kt,44822.54,10^4 t,products:14,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:15,校准目标候选,2015,generation_100GWh,58145.73,10^8 kWh,products:15,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:16,校准目标候选,2015,hydro_generation_100GWh,11302.7,10^8 kWh,products:16,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:17,校准目标候选,2016,raw_coal_100Mt,34.11,10^8 t,products:17,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:18,校准目标候选,2016,natural_gas_100Mm3,1368.65,10^8 m3,products:18,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:19,校准目标候选,2016,coke_10kt,44911.48,10^4 t,products:19,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:20,校准目标候选,2016,generation_100GWh,61331.6,10^8 kWh,products:20,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:21,校准目标候选,2016,hydro_generation_100GWh,11840.48,10^8 kWh,products:21,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:22,校准目标候选,2017,raw_coal_100Mt,35.24,10^8 t,products:22,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:23,校准目标候选,2017,natural_gas_100Mm3,1480.35,10^8 m3,products:23,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:24,校准目标候选,2017,coke_10kt,43142.55,10^4 t,products:24,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:25,校准目标候选,2017,generation_100GWh,66044.47,10^8 kWh,products:25,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:26,校准目标候选,2017,hydro_generation_100GWh,11978.65,10^8 kWh,products:26,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:27,校准目标候选,2018,raw_coal_100Mt,36.98,10^8 t,products:27,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:28,校准目标候选,2018,natural_gas_100Mm3,1601.59,10^8 m3,products:28,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:29,校准目标候选,2018,coke_10kt,44834.2,10^4 t,products:29,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:30,校准目标候选,2018,generation_100GWh,71661.33,10^8 kWh,products:30,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:31,校准目标候选,2018,hydro_generation_100GWh,12317.87,10^8 kWh,products:31,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:32,校准目标候选,2019,raw_coal_100Mt,38.46,10^8 t,products:32,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:33,校准目标候选,2019,natural_gas_100Mm3,1753.62,10^8 m3,products:33,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:34,校准目标候选,2019,coke_10kt,47126.16,10^4 t,products:34,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:35,校准目标候选,2019,generation_100GWh,75034.28,10^8 kWh,products:35,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:36,校准目标候选,2019,hydro_generation_100GWh,13044.38,10^8 kWh,products:36,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:37,校准目标候选,2020,raw_coal_100Mt,39.02,10^8 t,products:37,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:38,校准目标候选,2020,natural_gas_100Mm3,1924.95,10^8 m3,products:38,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:39,校准目标候选,2020,coke_10kt,47116.12,10^4 t,products:39,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:40,校准目标候选,2020,generation_100GWh,77790.6,10^8 kWh,products:40,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:41,校准目标候选,2020,hydro_generation_100GWh,13552.09,10^8 kWh,products:41,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:42,校准目标候选,2021,raw_coal_100Mt,41.26,10^8 t,products:42,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:43,校准目标候选,2021,natural_gas_100Mm3,2075.84,10^8 m3,products:43,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:44,校准目标候选,2021,coke_10kt,46445.78,10^4 t,products:44,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:45,校准目标候选,2021,generation_100GWh,85342.48,10^8 kWh,products:45,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:46,校准目标候选,2021,hydro_generation_100GWh,13389.99,10^8 kWh,products:46,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_products:47,校准目标候选,2022,raw_coal_100Mt,45.59,10^8 t,products:47,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:48,校准目标候选,2022,natural_gas_100Mm3,2201.1,10^8 m3,products:48,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:49,校准目标候选,2022,coke_10kt,47343.64,10^4 t,products:49,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:50,校准目标候选,2022,generation_100GWh,88487.12,10^8 kWh,products:50,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:51,校准目标候选,2022,hydro_generation_100GWh,13521.95,10^8 kWh,products:51,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:52,校准目标候选,2023,raw_coal_100Mt,47.23,10^8 t,products:52,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:53,校准目标候选,2023,natural_gas_100Mm3,2324.3,10^8 m3,products:53,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:54,校准目标候选,2023,coke_10kt,49260.0,10^4 t,products:54,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:55,校准目标候选,2023,generation_100GWh,94564.42,10^8 kWh,products:55,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:56,校准目标候选,2023,hydro_generation_100GWh,12858.48,10^8 kWh,products:56,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:57,校准目标候选,2024,raw_coal_100Mt,47.81,10^8 t,products:57,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:58,校准目标候选,2024,natural_gas_100Mm3,2464.51,10^8 m3,products:58,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:59,校准目标候选,2024,coke_10kt,48927.25,10^4 t,products:59,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:60,校准目标候选,2024,generation_100GWh,100868.81,10^8 kWh,products:60,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_products:61,校准目标候选,2024,hydro_generation_100GWh,14256.82,10^8 kWh,products:61,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_macro:3,校准目标候选,2024,NY.GDP.MKTP.KN,128209664468400.0,constant LCU (CNY; source series base),macro:3,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_macro:4,校准目标候选,2023,NY.GDP.MKTP.KN,122152950115800.0,constant LCU (CNY; source series base),macro:4,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_macro:5,校准目标候选,2022,NY.GDP.MKTP.KN,115877045457800.0,constant LCU (CNY; source series base),macro:5,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_macro:6,校准目标候选,2021,NY.GDP.MKTP.KN,112355972876200.0,constant LCU (CNY; source series base),macro:6,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_macro:7,校准目标候选,2020,NY.GDP.MKTP.KN,103486760000000.0,constant LCU (CNY; source series base),macro:7,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_macro:8,校准目标候选,2019,NY.GDP.MKTP.KN,101121029616900.0,constant LCU (CNY; source series base),macro:8,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_macro:9,校准目标候选,2018,NY.GDP.MKTP.KN,95336597795900.0,constant LCU (CNY; source series base),macro:9,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_macro:10,校准目标候选,2017,NY.GDP.MKTP.KN,89301758101700.0,constant LCU (CNY; source series base),macro:10,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_macro:11,校准目标候选,2016,NY.GDP.MKTP.KN,83544506358200.0,constant LCU (CNY; source series base),macro:11,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_macro:12,校准目标候选,2015,NY.GDP.MKTP.KN,78244469574600.0,constant LCU (CNY; source series base),macro:12,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:72,校准目标候选,2015,Total,9858.040443,Mt CO2,co2:72,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:73,校准目标候选,2015,Coal,7266.352288,Mt CO2,co2:73,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:74,校准目标候选,2015,Oil,1328.812391,Mt CO2,co2:74,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:75,校准目标候选,2015,Gas,380.052208,Mt CO2,co2:75,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:76,校准目标候选,2015,Cement,706.275107,Mt CO2,co2:76,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:77,校准目标候选,2015,Flaring,3.901279,Mt CO2,co2:77,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:78,校准目标候选,2015,Other,172.647169,Mt CO2,co2:78,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:79,校准目标候选,2016,Total,9748.174776,Mt CO2,co2:79,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:80,校准目标候选,2016,Coal,7071.8864,Mt CO2,co2:80,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:81,校准目标候选,2016,Oil,1357.84176,Mt CO2,co2:81,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:82,校准目标候选,2016,Gas,421.7264,Mt CO2,co2:82,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:83,校准目标候选,2016,Cement,728.112449,Mt CO2,co2:83,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:84,校准目标候选,2016,Flaring,3.090373,Mt CO2,co2:84,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:85,校准目标候选,2016,Other,165.517394,Mt CO2,co2:85,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:86,校准目标候选,2017,Total,10000.013645,Mt CO2,co2:86,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:87,校准目标候选,2017,Coal,7163.662272,Mt CO2,co2:87,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:88,校准目标候选,2017,Oil,1430.594144,Mt CO2,co2:88,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:89,校准目标候选,2017,Gas,486.35936,Mt CO2,co2:89,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:90,校准目标候选,2017,Cement,740.558572,Mt CO2,co2:90,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:91,校准目标候选,2017,Flaring,2.969262,Mt CO2,co2:91,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:92,校准目标候选,2017,Other,175.870034,Mt CO2,co2:92,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:93,校准目标候选,2018,Total,10346.790234,Mt CO2,co2:93,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:94,校准目标候选,2018,Coal,7316.700224,Mt CO2,co2:94,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:95,校准目标候选,2018,Oil,1500.477616,Mt CO2,co2:95,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:96,校准目标候选,2018,Gas,575.368912,Mt CO2,co2:96,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:97,校准目标候选,2018,Cement,752.743378,Mt CO2,co2:97,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:98,校准目标候选,2018,Flaring,3.408357,Mt CO2,co2:98,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:99,校准目标候选,2018,Other,198.091747,Mt CO2,co2:99,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:100,校准目标候选,2019,Total,10713.514488,Mt CO2,co2:100,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:101,校准目标候选,2019,Coal,7522.57672,Mt CO2,co2:101,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:102,校准目标候选,2019,Oil,1559.739152,Mt CO2,co2:102,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:103,校准目标候选,2019,Gas,630.17136,Mt CO2,co2:103,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:104,校准目标候选,2019,Cement,805.948006,Mt CO2,co2:104,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:105,校准目标候选,2019,Flaring,3.83925,Mt CO2,co2:105,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:106,校准目标候选,2019,Other,191.24,Mt CO2,co2:106,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:107,校准目标候选,2020,Total,10896.5204,Mt CO2,co2:107,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:108,校准目标候选,2020,Coal,7679.3823,Mt CO2,co2:108,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:109,校准目标候选,2020,Oil,1523.058327,Mt CO2,co2:109,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:110,校准目标候选,2020,Gas,676.473096,Mt CO2,co2:110,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:111,校准目标候选,2020,Cement,828.71,Mt CO2,co2:111,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:112,校准目标候选,2020,Flaring,5.169677,Mt CO2,co2:112,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:113,校准目标候选,2020,Other,183.727,Mt CO2,co2:113,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:114,校准目标候选,2021,Total,11284.401137,Mt CO2,co2:114,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:115,校准目标候选,2021,Coal,8004.203215,Mt CO2,co2:115,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:116,校准目标候选,2021,Oil,1521.109098,Mt CO2,co2:116,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:117,校准目标候选,2021,Gas,765.332404,Mt CO2,co2:117,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:118,校准目标候选,2021,Cement,802.485,Mt CO2,co2:118,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:119,校准目标候选,2021,Flaring,4.81242,Mt CO2,co2:119,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:120,校准目标候选,2021,Other,186.459,Mt CO2,co2:120,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,训练2015-2021
+target_co2:121,校准目标候选,2022,Total,11711.807356,Mt CO2,co2:121,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:122,校准目标候选,2022,Coal,8468.947515,Mt CO2,co2:122,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:123,校准目标候选,2022,Oil,1559.720832,Mt CO2,co2:123,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:124,校准目标候选,2022,Gas,773.224769,Mt CO2,co2:124,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:125,校准目标候选,2022,Cement,718.776883,Mt CO2,co2:125,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:126,校准目标候选,2022,Flaring,4.678356,Mt CO2,co2:126,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:127,校准目标候选,2022,Other,186.459,Mt CO2,co2:127,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:128,校准目标候选,2023,Total,12172.009027,Mt CO2,co2:128,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:129,校准目标候选,2023,Coal,8740.890938,Mt CO2,co2:129,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:130,校准目标候选,2023,Oil,1729.580294,Mt CO2,co2:130,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:131,校准目标候选,2023,Gas,828.896923,Mt CO2,co2:131,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:132,校准目标候选,2023,Cement,681.688038,Mt CO2,co2:132,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:133,校准目标候选,2023,Flaring,4.493834,Mt CO2,co2:133,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:134,校准目标候选,2023,Other,186.459,Mt CO2,co2:134,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:135,校准目标候选,2024,Total,12289.036755,Mt CO2,co2:135,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:136,校准目标候选,2024,Coal,8886.02066,Mt CO2,co2:136,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:137,校准目标候选,2024,Oil,1705.385689,Mt CO2,co2:137,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:138,校准目标候选,2024,Gas,889.406384,Mt CO2,co2:138,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:139,校准目标候选,2024,Cement,617.751898,Mt CO2,co2:139,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:140,校准目标候选,2024,Flaring,4.013123,Mt CO2,co2:140,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+target_co2:141,校准目标候选,2024,Other,186.459,Mt CO2,co2:141,candidate_not_admitted,去重、GDP/地域/排放口径桥接；不能当已校准,历史损失函数候选；不复制同源版本,已接触留出2022-2024
+blocked_regional_grid,约束/待补输入,2024,省际网络与弃电,,见缺口,province;demand;renewables,blocked,空间份额不能还原潮流；利用率不能反推弃电；线路候选隔离,无法计算LOLP/弃电电量/小时调度约束,不进入校准
+blocked_storage_2024,约束/待补输入,2024,储能初态,,见缺口,renewables;snapshot,blocked,抽蓄只有功率；2025新型储能不可回填；SOC/效率/功率约束不足,不能初始化全国储能库存与保供时长,不进入校准
+blocked_physical_carbon,约束/待补输入,2024,物理燃烧/捕集碳账,,见缺口,balance;co2,blocked,2024燃料投入、NCV、燃烧/原料分流、氧化率、过程排放和捕集/封存缺失,GCB分项恒等式不构成能源-碳物理闭合；不输出净零,不进入校准
+blocked_gas_net_dependency,约束/待补输入,2024,天然气净进口依赖,,见缺口,snapshot,blocked,缺同口径出口、消费、库存；EI标准热值与国内体积未桥接,只给同报告进口CR5与EI分通道集中度,不进入校准
+blocked_firm_cost,约束/待补输入,2024,跨能源保供成本,,见缺口,cost;cost_method,blocked,统一风电厂门发电成本不含时序、可靠性、储能与输电外部成本,不作九能源成本排序；PV无共同融资重算,不进入校准

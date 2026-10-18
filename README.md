@@ -16,6 +16,7 @@
 | [创新备选阅读版](docs/gemini_final_idea_阅读版.md) | 基础主线验收后再启用的算法实验 |
 | [三人 Git 协作规程](docs/17_git_collaboration.md) | 三人同题并行、Agent 开工、分支、PR、独立评审及合并 |
 | [P0 → P1/Q1 开工单](docs/rounds/P0_P1_Q1.md) | 问题一的输入范围、交付物、验收与起跑线锁定状态 |
+| [P1/mmj Q1 候选研究](docs/solutions/p1-mmj.md) | 四项研究、四维诊断、能源角色、静态核对和Q2候选交接；待两人评审 |
 
 ## 目录职责
 
@@ -52,15 +53,18 @@ A题/
 ```powershell
 python -B -X utf8 run.py audit          # 原件、文件去留、链接、去重及隔离检查
 python -B -X utf8 scripts/scan_google_keys.py # 扫描工作树及 ZIP 内的 Google API key
-python -B -X utf8 run.py test           # 128项已有测试
+python -B -X utf8 run.py test           # 全部既有测试和Q1反例验证
 python -B -X utf8 run.py attachments    # 官方附件标准化，保留890条记录及重复组
 python -B -X utf8 run.py verify         # 准入检查及限定初评/需求回算/许可案例
 python -B -X utf8 run.py prototype      # 合成年度主体及连续储能窗口
 python -B -X utf8 run.py catalog        # 重建来源、数据目录及统计局唯一记录视图
 python -B -X utf8 run.py reproduce-lb --recipe trade
+python -B -X utf8 run.py q1 --output-dir outputs/q1/p1_mmj # Q1研究候选，保留缺口
 ```
 
 原 `run_*.ps1` 入口继续可用。图形界面另装 `requirements-workbench.txt`；主线数据核验不依赖界面。完整说明见[运行指南](docs/RUNNING.md)。
+
+Q1使用`workflow/q1_inputs.json`登记的本地输入与matplotlib，不隐式联网。评审改输出目录为`outputs/q1/review_mmj`，不覆盖其他方案或无归属目录。2021—2024价格版本、2024储能初态、网络时序和独立物理碳核对等缺口仍阻断，不代表全国初始化或校准完成。默认扫描和审计不打开`data/restricted`内容；审计仅查其存在和大小，未证明其内容哈希不变。
 
 ## 固定研究约束
 

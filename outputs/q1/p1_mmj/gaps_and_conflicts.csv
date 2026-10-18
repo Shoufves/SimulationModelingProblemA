@@ -1,0 +1,17 @@
+﻿gap_id,topic,years,status,evidence,reason,impact,next_action
+price_2021_2024,价格,2021-2024,blocked_version,price,可用旧版止于2020；新版及lb价格隔离未解除,不能称完整十年波动/国内到厂价,共同审查清洁原始版本及价年，另行输入修订
+nonfossil_consumption,非化石一次消费,2015-2024,blocked_definition,nbs;communique,一次电力及其他、含气清洁能源均不直接等于非化石,低碳分维保留煤份额/强度诊断，不给该点估计,取得同口径非化石分类与折标系数
+gas_net_dependency,天然气净进口依赖,2024,blocked_boundary,snapshot,缺同口径出口、消费、库存；EI标准热值与国内体积未桥接,只给同报告进口CR5与EI分通道集中度,获取完整天然气平衡表和标准状态
+firm_cost,跨能源保供成本,2024,not_estimated,cost;cost_method,统一风电厂门发电成本不含时序、可靠性、储能与输电外部成本,不作九能源成本排序；PV无共同融资重算,补全热电燃料、运行与网络边界后比较同可靠性服务
+regional_grid,省际网络与弃电,2024,blocked_operational,province;demand;renewables,空间份额不能还原潮流；利用率不能反推弃电；线路候选隔离,无法计算LOLP/弃电电量/小时调度约束,核验省际交换、线路容量、小时供需及理论可发电量
+storage_2024,储能初态,2024,blocked_state,renewables;snapshot,抽蓄只有功率；2025新型储能不可回填；SOC/效率/功率约束不足,不能初始化全国储能库存与保供时长,取得2024分技术分区功率能量及初始SOC
+physical_carbon,物理燃烧/捕集碳账,2024,blocked_physical_crosscheck,balance;co2,2024燃料投入、NCV、燃烧/原料分流、氧化率、过程排放和捕集/封存缺失,GCB分项恒等式不构成能源-碳物理闭合；不输出净零,以燃烧活动重建，捕集与封存分记，电力不重复记消费侧排放
+hydrogen_categories,氢统计,2024,approximate_and_lower_bound,snapshot,>3650总量与约2070+760+770+32=3632；类别近似且总量是下界,18只是相对公布门槛的差，不是精确统计残差；产能不当产量,取得有上下界的分类与原料/燃料去向；不强配平
+cross_release,发电版本差异,2024,conflict_preserved,products;communique;renewables,NBS水14256.82/风9970.4/太阳能8390.4 vs NEA水14239/风9916/PV8341(亿kWh),不平均；NBS规模与NEA技术参考分别输出；太阳能与PV不是同名技术,由两人复核范围/修订版本；不得当独立校准目标
+ten_year_technology,技术完整历史/区域,2015-2024,partial_coverage,history.csv,全国规模/结构/容量十年；细分发电、氢、生物质与分区技术历史仍缺,缺年不插值；全国项目清单不由官方附件样本外推,补充同口径能源产品/技术年表
+mainland_bridge,跨源地域和GDP定义,2015-2024,candidate_cross_source,macro;co2;nbs,WDI/GCB用CHN代码，NBS用大陆；GDP历史修订与基期未逐一桥接,强度仅研究对照，不作为官方扣除指标或全国校准准入,核对地域元数据及GDP修订/基价，提交Q2输入审查
+new_extractions,共同输入增量确认,2024,pending_peer_confirmation,province;cost_method,源原件已在锁定base，两份细化表是本方案新提取,不悄悄替换三人共同输入,PR/Issue公开增量；两名成员核对后主持人确认是否修订共同输入
+balance_NBS_2025_C09-03,静态账残差,2023,published_residual,NBS_2025_C09-03,"{""supply_minus_consumption"": 15520.0, ""published_difference"": 15519.0, ""difference_rounding_residual"": 1.0}",保留实际差异；不强配平，不外推2024,按原表范围、库存与舍入逐项核对
+balance_NBS_2025_C09-04,静态账残差,2023,published_residual,NBS_2025_C09-04,"{""supply_minus_consumption"": 1890.0, ""published_difference"": 1890.0, ""difference_rounding_residual"": 0.0}",保留实际差异；不强配平，不外推2024,按原表范围、库存与舍入逐项核对
+balance_NBS_2025_C09-05,静态账残差,2023,published_residual,NBS_2025_C09-05,"{""supply_minus_consumption"": 19890.0, ""published_difference"": 19890.0, ""difference_rounding_residual"": 0.0}",保留实际差异；不强配平，不外推2024,按原表范围、库存与舍入逐项核对
+balance_NBS_2025_C09-06,静态账残差,2023,published_residual,NBS_2025_C09-06,"{""supply_minus_consumption"": 1.0, ""published_difference"": null, ""difference_rounding_residual"": null}",保留实际差异；不强配平，不外推2024,按原表范围、库存与舍入逐项核对

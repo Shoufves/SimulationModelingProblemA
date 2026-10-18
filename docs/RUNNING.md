@@ -1,5 +1,11 @@
 # 运行与复现
 
+## Q1 候选研究入口（p1/mmj）
+
+`python -B -X utf8 run.py q1 --output-dir outputs/q1/p1_mmj`离线生成历史、指标、12类角色、Q2交接、缺口、静态账、图文报告和运行manifest。评审使用独立目录`outputs/q1/review_mmj`。缺输入、指纹/口径错误返回非零；无归属目录不覆盖。正常运行需matplotlib，核心计算使用标准库；实质证据重建脚本`prepare_q1_inputs.py`另需openpyxl、pypdf、lxml，不在常规复现中隐式调用。
+
+见[候选说明](solutions/p1-mmj.md)。四维结果各有限定范围，不宣称全国校准或Q2准入完成。默认审计对`data/restricted`只验证存在/大小，密钥扫描剪枝私有内容与环境/临时缓存；结果明确披露排除范围。官方附件及只读原文仍逐字节核验。
+
 在A题目录执行。Python 3.11及以上；本轮使用本机捆绑Python 3.12.14。核心模型和测试主要使用标准库；附件需要openpyxl，yx/lb离线提取需要pandas/numpy/lxml/pypdf/pdfplumber。
 
 ```powershell

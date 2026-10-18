@@ -22,11 +22,14 @@ def tests():
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command',choices=['audit','catalog','test','attachments','verify','prototype','baseline','reproduce-lb','status'])
+    parser.add_argument('command',choices=['audit','catalog','test','attachments','verify','prototype','baseline','reproduce-lb','status','q1'])
     parser.add_argument('--recipe',choices=['national','trade','international','ai_trade'],default='trade')
+    parser.add_argument('--output-dir',default='outputs/q1/p1_mmj')
+    parser.add_argument('--inputs',default='workflow/q1_inputs.json')
     args=parser.parse_args()
     os.chdir(ROOT)
     if args.command=='test':return tests()
+    if args.command=='q1':return script('run_q1_assessment.py','--output-dir',args.output_dir,'--inputs',args.inputs)
     if args.command=='reproduce-lb':return script('reproduce_lb.py',args.recipe)
     jobs={
         'audit':[('audit_workspace.py',)],

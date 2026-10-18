@@ -1,0 +1,765 @@
+{
+  "scope": "Engineering gate execution; scientific scope/peer approval recorded separately",
+  "passed": true,
+  "executed_on": "2026-10-18",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\CSF2026\\mmj\\SimulationModelingProblemA\\.venv\\Scripts\\python.exe",
+  "code_commit_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+  "dirty_worktree": true,
+  "code_hashes": {
+    "run.py": "688a6db72a3a94aaef16ffe4be2523bc032137f8954f2bb6376375f92380139d",
+    "scripts/run_q1_assessment.py": "e82c807b2bac732e0493d6bd606d16f5cef1f3ff25c962496e6ca7c0bbed6092",
+    "scripts/prepare_q1_inputs.py": "213b878fd35faafe8355371641efb8ca91f791a7d9adf1cd15d0bbb61ff882be",
+    "scripts/validate_q1.py": "43efc4259d95a0a35168f1f51f7cd923b345b7538e5877ae3bff52db52cab588",
+    "src/energy_model/q1.py": "59c43b469203c1cd77e60278d6f290130e1e465c9ee1b153bdd47c5333612cea",
+    "tests/test_q1.py": "c239107997c8eaf70bd7662b4c13182c578c8ec3c8fd8ff5b56786b42d6f88e5",
+    "scripts/audit_workspace.py": "65b5497f1edaad1ecf8282a98b08ad647c7d03d2f223f27ae37e9d1dd48a0cac",
+    "scripts/scan_google_keys.py": "58b3a8c5bfc195573eed158d8f082c9c35018ec12a934ba7b68e9d369750455a",
+    "scripts/build_workspace_catalog.py": "76a1c1d90b09abd2537e37b62297b138f3954c729a997d22f285e7fee72bbeb4"
+  },
+  "input_manifest_sha256": "9f73f9a891d02419127bf69764051ebed78b71854f0f3fa100197cfab0610f37",
+  "tests": {
+    "tests": 153,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "seconds": 6.004637200006982,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "workspace_audit": {
+    "scope": "Workspace preservation and engineering checks only; not completion of final research.",
+    "passed": true,
+    "checks": [
+      {
+        "check": "retained_files_match_inventory",
+        "passed": true,
+        "detail": {
+          "scope": "nonrestricted file hashes; restricted existence/size only, NOT content preservation proof",
+          "resolved_original_paths": 1117,
+          "missing": [],
+          "unrecoverable_modifications": [],
+          "restricted_metadata_only": [
+            {
+              "path": "data/restricted/household/data/household_energy_source_fig4.csv",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 1.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 2.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 3.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 4.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 5.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 6.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            }
+          ],
+          "external_history_not_verified": [
+            {
+              "path": "../B题/2026年第二届全国大学生仿真建模应用挑战赛B题.pdf",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            },
+            {
+              "path": "../C题/2026年第二届全国大学生仿真建模应用挑战赛C题.pdf",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            },
+            {
+              "path": "../C题/附件1：车辆参数表.xlsx",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            },
+            {
+              "path": "../C题/附件2：4段路程车辆行驶数据.xlsx",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            },
+            {
+              "path": "../C题/附件3：参考工况.xlsx",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            },
+            {
+              "path": "../C题/附件4：部件特性（OCV—SOC、内阻、电机效率）.xlsx",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            }
+          ]
+        }
+      },
+      {
+        "check": "working_tree_google_api_keys_absent",
+        "passed": true,
+        "detail": {
+          "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
+          "excluded_directories": [
+            "tmp",
+            "data/restricted"
+          ],
+          "pattern": "Google API key format only; not an exhaustive credential audit",
+          "passed": true,
+          "findings": [],
+          "errors": [],
+          "files_scanned": 1163,
+          "payloads_scanned": 2230,
+          "zip_members_scanned": 1067
+        }
+      },
+      {
+        "check": "protected_directory_unchanged",
+        "passed": true,
+        "detail": 3
+      },
+      {
+        "check": "five_official_originals_unchanged",
+        "passed": true,
+        "detail": [
+          "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+          "附件1.xlsx",
+          "附件2.xlsx",
+          "附件3.xlsx",
+          "附件4.xlsx"
+        ]
+      },
+      {
+        "check": "three_workspaces_consolidated",
+        "passed": true,
+        "detail": "one A workspace"
+      },
+      {
+        "check": "no_B_C_payload",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "check": "all_final_references_resolve",
+        "passed": true,
+        "detail": {
+          "count": 118,
+          "missing": []
+        }
+      },
+      {
+        "check": "final_reader_links_resolve",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "check": "retained_python_syntax",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "check": "unified_data_keys_unique",
+        "passed": true,
+        "detail": 362
+      },
+      {
+        "check": "unified_rows_trace_to_files",
+        "passed": true,
+        "detail": 362
+      },
+      {
+        "check": "scope_not_promoted",
+        "passed": true,
+        "detail": "formal admission still governed by model_inputs and evidence_reviews"
+      },
+      {
+        "check": "known_quarantine_preserved",
+        "passed": true,
+        "detail": [
+          "data/processed/lb/base/prices/worldbank_energy_annual_2000_latest.csv",
+          "data/processed/lb/base/prices/worldbank_energy_monthly_2000_latest.csv",
+          "data/processed/transmission_lines_candidate.csv"
+        ]
+      },
+      {
+        "check": "raw_exact_duplicates_removed",
+        "passed": true,
+        "detail": []
+      }
+    ],
+    "original_files": 5846,
+    "removed_files": 4776,
+    "removed_bytes": 296840178
+  },
+  "original_nine_subset_check": {
+    "passed": true,
+    "errors": [],
+    "accepted_inputs": [
+      {
+        "dataset_path": "data/observations/demand_energy_total_2015_2024.json",
+        "review_id": "R-S01-DEMAND-20261017",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+        "review_id": "R-S06-GDP-20261017",
+        "source_ids": [
+          "S06"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "review_id": "R-S17-20261016",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/energy_official_communique_2024.json",
+        "review_id": "R-S13-20261017",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_official_report_2024.json",
+        "review_id": "R-S22-20261017",
+        "source_ids": [
+          "S22"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_apparent_consumption_2024.json",
+        "review_id": "R-S23-20261017",
+        "source_ids": [
+          "S23"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/electricity_demand_official_2024.json",
+        "review_id": "R-S24-20261017",
+        "source_ids": [
+          "S24"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "review_id": "R-S25-20261017",
+        "source_ids": [
+          "S25"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/qinshan_asset_permit_case.json",
+        "review_id": "R-QINSHAN-ASSETS-20261017",
+        "source_ids": [
+          "S26",
+          "S27",
+          "S28"
+        ]
+      }
+    ],
+    "declared_inputs": 9,
+    "limitation": "仅检查已登记子集的证据结构和文件一致性；不自动验证原文真伪、转录正确性、数据覆盖完整性、情景参数或模型有效性。未准入不等于原数值错误。"
+  },
+  "latest_reports_preserved": [
+    "outputs/validation/tests.json",
+    "outputs/validation/workspace_audit.json",
+    "outputs/workflow/status.json",
+    "outputs/workflow/status.md",
+    "outputs/workflow/next_prompt.md"
+  ],
+  "key_scan": {
+    "working_tree": {
+      "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
+      "excluded_directories": [
+        "tmp",
+        "data/restricted"
+      ],
+      "pattern": "Google API key format only; not an exhaustive credential audit",
+      "passed": true,
+      "findings": [],
+      "errors": [],
+      "files_scanned": 1163,
+      "payloads_scanned": 2230,
+      "zip_members_scanned": 1067
+    }
+  },
+  "source_review": {
+    "reviewer": "mmj",
+    "review_date": "2026-10-18",
+    "base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+    "scope": "Q1 descriptive research only; source agreement does not grant Q2 model admission",
+    "checks": [
+      {
+        "check": "NBS_unique_view_and_products_vs_reviewed_transcription",
+        "passed": true,
+        "detail": {
+          "rows": 220,
+          "image_review": "C09-01/02/15/19; 2015-2024 rows and notes",
+          "caution": "same-source concordance, not independent validation"
+        }
+      },
+      {
+        "check": "NBS_balance_cells",
+        "passed": true,
+        "detail": "164 cells; C09-03/04/05/06 selected-year columns; nested rows not additive"
+      },
+      {
+        "check": "NBS_province_demand_cells",
+        "passed": true,
+        "detail": "124 cells; C09-14; provincial use rounded to integer 10^8 kWh"
+      },
+      {
+        "check": "new_provincial_transcription_visual_review",
+        "passed": true,
+        "detail": "mmj/2026-10-18 viewed C09-19 image: 31 province names and four columns; blank Shanghai hydro retained; C09-14 2024 demand column independently reread. One transcription, awaiting teammate review; not an independent observation."
+      },
+      {
+        "check": "WDI_constant_GDP_raw_JSON",
+        "passed": true,
+        "detail": {
+          "rows": 10,
+          "version": "2026-10-08",
+          "scope": "source series constant LCU base; not asserted to be 2020-price GDP"
+        }
+      },
+      {
+        "check": "GCB_raw_country_component_cells",
+        "passed": true,
+        "detail": {
+          "rows": 70,
+          "scope": "GCB2025v15 territorial fossil and industry; no removals"
+        }
+      },
+      {
+        "check": "EI_cells_pipeline_gas_china_2024",
+        "passed": true,
+        "detail": {
+          "rows": 22,
+          "sheet": "Gas trade 2024 - pipeline",
+          "cells": [
+            "B27",
+            "C27",
+            "D27",
+            "E27",
+            "F27",
+            "G27",
+            "H27",
+            "I27",
+            "J27",
+            "K27",
+            "L27",
+            "M27",
+            "N27",
+            "O27",
+            "P27",
+            "Q27",
+            "R27",
+            "S27",
+            "T27",
+            "U27",
+            "V27",
+            "W27"
+          ],
+          "scope": "2024 China imports; source bins include aggregates; GCV 40 MJ/m3 gas or EJ coal"
+        }
+      },
+      {
+        "check": "EI_cells_lng_china_2024",
+        "passed": true,
+        "detail": {
+          "rows": 23,
+          "sheet": "Gas trade 2024 - LNG",
+          "cells": [
+            "B28",
+            "C28",
+            "D28",
+            "E28",
+            "F28",
+            "G28",
+            "H28",
+            "I28",
+            "J28",
+            "K28",
+            "L28",
+            "M28",
+            "N28",
+            "O28",
+            "P28",
+            "Q28",
+            "R28",
+            "S28",
+            "T28",
+            "U28",
+            "V28",
+            "W28",
+            "X28"
+          ],
+          "scope": "2024 China imports; source bins include aggregates; GCV 40 MJ/m3 gas or EJ coal"
+        }
+      },
+      {
+        "check": "EI_cells_coal_china_2024_EJ",
+        "passed": true,
+        "detail": {
+          "rows": 15,
+          "sheet": "Coal trade movements 2024",
+          "cells": [
+            "J5",
+            "J6",
+            "J7",
+            "J8",
+            "J9",
+            "J10",
+            "J11",
+            "J12",
+            "J13",
+            "J14",
+            "J15",
+            "J16",
+            "J17",
+            "J18",
+            "J19"
+          ],
+          "scope": "2024 China imports; source bins include aggregates; GCV 40 MJ/m3 gas or EJ coal"
+        }
+      },
+      {
+        "check": "WB_archived_workbook_cells",
+        "passed": true,
+        "detail": {
+          "rows": 36,
+          "sheet": "Annual Prices (Nominal)",
+          "header_row": 7,
+          "coverage": "2015-2020 only; quarantined edition excluded, not bridged"
+        }
+      },
+      {
+        "check": "IRENA_PDF_p71_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p95_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p119_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p76_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p123_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p209_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p212_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p202_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p84_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p106_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p126_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "cost_table_vs_reviewed_PDF_rows",
+        "passed": true,
+        "detail": "12 adopted China 2024 CAPEX/quantile/LCOE values checked"
+      },
+      {
+        "check": "storage_original_unit_conversion",
+        "passed": true,
+        "detail": "1.36*100 GW, 3.51*100 GWh; 2025 installed source paragraph read with year"
+      },
+      {
+        "check": "snapshot_source_paragraphs",
+        "passed": true,
+        "detail": {
+          "rows": 20,
+          "mismatches": [],
+          "locators": "gas PDF pp10-13; hydrogen pp16-17; NDRC annual paragraph; NEA storage installed statement",
+          "qualifiers": "H2 total EXCEEDS 3650, categories approximate; renewable H2 capacity not output; storage is 2025"
+        }
+      },
+      {
+        "check": "S13_reviewed_capture",
+        "passed": true,
+        "detail": {
+          "rows": 33,
+          "mismatches": [],
+          "scope": "Existing review/capture read with notes; adopted uses stay within original contract"
+        }
+      },
+      {
+        "check": "S25_reviewed_capture",
+        "passed": true,
+        "detail": {
+          "rows": 15,
+          "mismatches": [],
+          "scope": "Existing review/capture read with notes; adopted uses stay within original contract"
+        }
+      }
+    ],
+    "manual_review": "NBS image rows, headings and notes viewed in this session; IRENA tables/method and gas/H2 paragraphs read from stored original PDFs. Two teammate reviews pending.",
+    "exclusions": [
+      "data/restricted/**",
+      "quarantined WB edition and lb price files",
+      "candidate transmission network",
+      "regional storage shares not mapped to Q2 regions"
+    ]
+  },
+  "independent_reproduction": {
+    "passed": true,
+    "compared": "All 10 scientific artifacts, including PNGs; runtime manifests separately retained",
+    "author_outputs": {
+      "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
+      "gaps_and_conflicts.csv": "6ad61259c14e0e10d1031fa03216b0ba04172d5f7bb21c10cd05614d7680e7cb",
+      "history.csv": "807de6f9f577987d11b8bd742b0f11add54e2e4652778b80f1432bd666e0c99c",
+      "indicators.csv": "724c0b354de600fc3579d14fe03bae041bb892a8f0eb8ad4794b67cd215288cf",
+      "model_handoff.csv": "39fc22cf1f38cc26e0027ba98f7d36ee72849fe226ad541c15f02d3b71dc95c3",
+      "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
+      "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
+      "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
+      "report.md": "9e8e7c3c588a7e7e2026d376062850281ab1dd46677d785b503fd551fdd61ba8",
+      "static_balance.json": "817ffec08e7342281dbd7d9cec0659918c466f62998cb63e0a26746b6bcae0dd"
+    },
+    "review_outputs": {
+      "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
+      "gaps_and_conflicts.csv": "6ad61259c14e0e10d1031fa03216b0ba04172d5f7bb21c10cd05614d7680e7cb",
+      "history.csv": "807de6f9f577987d11b8bd742b0f11add54e2e4652778b80f1432bd666e0c99c",
+      "indicators.csv": "724c0b354de600fc3579d14fe03bae041bb892a8f0eb8ad4794b67cd215288cf",
+      "model_handoff.csv": "39fc22cf1f38cc26e0027ba98f7d36ee72849fe226ad541c15f02d3b71dc95c3",
+      "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
+      "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
+      "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
+      "report.md": "9e8e7c3c588a7e7e2026d376062850281ab1dd46677d785b503fd551fdd61ba8",
+      "static_balance.json": "817ffec08e7342281dbd7d9cec0659918c466f62998cb63e0a26746b6bcae0dd"
+    }
+  },
+  "negative_cli_probes": {
+    "tampered_input_rejected": true,
+    "missing_manifest_rejected": true,
+    "no_output_created": true
+  },
+  "diff_check": {
+    "passed": true,
+    "stdout": "",
+    "stderr": "warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/RUNNING.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'scripts/audit_workspace.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'scripts/build_workspace_catalog.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'scripts/scan_google_keys.py', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "executions": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "test"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 8.704,
+      "stdout": "",
+      "stderr": ".........................................................................................................................Q1 FAILED: Output must be a dedicated directory under outputs/q1/\n...Q1 FAILED: Refusing to overwrite a directory not owned by this Q1 candidate\n.............................\n----------------------------------------------------------------------\nRan 153 tests in 6.004s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "audit"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 27.622,
+      "stdout": "{\n  \"scope\": \"Workspace preservation and engineering checks only; not completion of final research.\",\n  \"passed\": true,\n  \"checks\": [\n    {\n      \"check\": \"retained_files_match_inventory\",\n      \"passed\": true,\n      \"detail\": {\n        \"scope\": \"nonrestricted file hashes; restricted existence/size only, NOT content preservation proof\",\n        \"resolved_original_paths\": 1117,\n        \"missing\": [],\n        \"unrecoverable_modifications\": [],\n        \"restricted_metadata_only\": [\n          {\n            \"path\": \"data/restricted/household/data/household_energy_source_fig4.csv\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 1.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 2.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 3.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 4.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 5.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 6.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          }\n        ],\n        \"external_history_not_verified\": [\n          {\n            \"path\": \"../B题/2026年第二届全国大学生仿真建模应用挑战赛B题.pdf\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          },\n          {\n            \"path\": \"../C题/2026年第二届全国大学生仿真建模应用挑战赛C题.pdf\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          },\n          {\n            \"path\": \"../C题/附件1：车辆参数表.xlsx\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          },\n          {\n            \"path\": \"../C题/附件2：4段路程车辆行驶数据.xlsx\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          },\n          {\n            \"path\": \"../C题/附件3：参考工况.xlsx\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          },\n          {\n            \"path\": \"../C题/附件4：部件特性（OCV—SOC、内阻、电机效率）.xlsx\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          }\n        ]\n      }\n    },\n    {\n      \"check\": \"working_tree_google_api_keys_absent\",\n      \"passed\": true,\n      \"detail\": {\n        \"scope\": \"working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening\",\n        \"excluded_directories\": [\n          \"tmp\",\n          \"data/restricted\"\n        ],\n        \"pattern\": \"Google API key format only; not an exhaustive credential audit\",\n        \"passed\": true,\n        \"findings\": [],\n        \"errors\": [],\n        \"files_scanned\": 1163,\n        \"payloads_scanned\": 2230,\n        \"zip_members_scanned\": 1067\n      }\n    },\n    {\n      \"check\": \"protected_directory_unchanged\",\n      \"passed\": true,\n      \"detail\": 3\n    },\n    {\n      \"check\": \"five_official_originals_unchanged\",\n      \"passed\": true,\n      \"detail\": [\n        \"2026年第二届全国大学生仿真建模应用挑战赛A题.pdf\",\n        \"附件1.xlsx\",\n        \"附件2.xlsx\",\n        \"附件3.xlsx\",\n        \"附件4.xlsx\"\n      ]\n    },\n    {\n      \"check\": \"three_workspaces_consolidated\",\n      \"passed\": true,\n      \"detail\": \"one A workspace\"\n    },\n    {\n      \"check\": \"no_B_C_payload\",\n      \"passed\": true,\n      \"detail\": []\n    },\n    {\n      \"check\": \"all_final_references_resolve\",\n      \"passed\": true,\n      \"detail\": {\n        \"count\": 118,\n        \"missing\": []\n      }\n    },\n    {\n      \"check\": \"final_reader_links_resolve\",\n      \"passed\": true,\n      \"detail\": []\n    },\n    {\n      \"check\": \"retained_python_syntax\",\n      \"passed\": true,\n      \"detail\": []\n    },\n    {\n      \"check\": \"unified_data_keys_unique\",\n      \"passed\": true,\n      \"detail\": 362\n    },\n    {\n      \"check\": \"unified_rows_trace_to_files\",\n      \"passed\": true,\n      \"detail\": 362\n    },\n    {\n      \"check\": \"scope_not_promoted\",\n      \"passed\": true,\n      \"detail\": \"formal admission still governed by model_inputs and evidence_reviews\"\n    },\n    {\n      \"check\": \"known_quarantine_preserved\",\n      \"passed\": true,\n      \"detail\": [\n        \"data/processed/lb/base/prices/worldbank_energy_annual_2000_latest.csv\",\n        \"data/processed/lb/base/prices/worldbank_energy_monthly_2000_latest.csv\",\n        \"data/processed/transmission_lines_candidate.csv\"\n      ]\n    },\n    {\n      \"check\": \"raw_exact_duplicates_removed\",\n      \"passed\": true,\n      \"detail\": []\n    }\n  ],\n  \"original_files\": 5846,\n  \"removed_files\": 4776,\n  \"removed_bytes\": 296840178\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/scan_google_keys.py"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 3.452,
+      "stdout": "{\n  \"working_tree\": {\n    \"scope\": \"working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening\",\n    \"excluded_directories\": [\n      \"tmp\",\n      \"data/restricted\"\n    ],\n    \"pattern\": \"Google API key format only; not an exhaustive credential audit\",\n    \"passed\": true,\n    \"findings\": [],\n    \"errors\": [],\n    \"files_scanned\": 1163,\n    \"payloads_scanned\": 2230,\n    \"zip_members_scanned\": 1067\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/workflow_status.py",
+        "--check-formal-inputs"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 0.399,
+      "stdout": "已生成 outputs/workflow/；提示词阶段 W2。\n结构检查通过。正式输入检查：通过。\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q1",
+        "--output-dir",
+        "outputs/q1/p1_mmj"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 6.397,
+      "stdout": "{\"success\": true, \"output_dir\": \"outputs/q1/p1_mmj\", \"counts\": {\"history\": 877, \"indicators\": 164, \"roles\": 12, \"handoff\": 322, \"gaps\": 16}, \"acceptance\": \"candidate pending two peer reviews; gaps explicit\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q1",
+        "--output-dir",
+        "outputs/q1/review_mmj_validation"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 5.463,
+      "stdout": "{\"success\": true, \"output_dir\": \"outputs/q1/review_mmj_validation\", \"counts\": {\"history\": 877, \"indicators\": 164, \"roles\": 12, \"handoff\": 322, \"gaps\": 16}, \"acceptance\": \"candidate pending two peer reviews; gaps explicit\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q1",
+        "--inputs",
+        "tmp/q1-validation-0e940b00badd40149bc686d458d74ac0/tampered.json",
+        "--output-dir",
+        "outputs/q1/negative_q1-validation-0e940b00badd40149bc686d458d74ac0"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "passed": true,
+      "seconds": 1.291,
+      "stdout": "",
+      "stderr": "Q1 FAILED: Input missing or fingerprint mismatch: data/processed/unified/nbs_history.csv\n"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q1",
+        "--inputs",
+        "tmp/q1-validation-0e940b00badd40149bc686d458d74ac0/missing.json",
+        "--output-dir",
+        "outputs/q1/negative_q1-validation-0e940b00badd40149bc686d458d74ac0"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "passed": true,
+      "seconds": 1.219,
+      "stdout": "",
+      "stderr": "Q1 FAILED: [Errno 2] No such file or directory: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\q1-validation-0e940b00badd40149bc686d458d74ac0\\\\missing.json'\n"
+    }
+  ],
+  "scientific_status": "Four scoped research sections implemented; 16 explicit gaps; A7 pending",
+  "limits": [
+    "2021-2024 price version remains quarantined",
+    "2024 physical energy-carbon closure and complete operational state blocked",
+    "new extractions need peer/shared-input confirmation",
+    "restricted files: metadata only, no content hashes checked",
+    "six external B/C historical duplicates excluded, no existence/content claim",
+    "full test execution may require leaving Windows desktop sandbox due legacy tempfile ACLs",
+    "not national initialization, calibration or forecast; no merge authorization"
+  ]
+}

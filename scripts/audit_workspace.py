@@ -10,6 +10,24 @@ AUDIT=ROOT/'archive/organization_20261017'
 def sha(path):
     with path.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
 
+def inventory_scope(root, record):
+    """Original organization records may refer to out-of-repository B/C copies.
+
+    Those six external-duplicate records are retention history, not dependencies
+    that an A-only Git clone should open or recreate.
+    """
+    root=Path(root).resolve()
+    target=(root/record['target']).resolve()
+    if not target.is_relative_to(root):
+        parts=Path(record['target']).parts
+        if (record['action']=='external_duplicate' and len(parts)>=3
+                and parts[0]=='..' and parts[1] in ('B题','C题')):
+            return 'external_history_not_verified'
+        raise ValueError('Unexpected inventory target outside A repository: '+record['target'])
+    if target.relative_to(root).as_posix().startswith('data/restricted/'):
+        return 'restricted_metadata_only'
+    return 'repository_content'
+
 def main():
     checks=[]
     def check(name,passed,detail):checks.append(dict(check=name,passed=bool(passed),detail=detail))
@@ -20,11 +38,24 @@ def main():
         if p.exists():
             with zipfile.ZipFile(p) as z:
                 archives.append({n:hashlib.sha256(z.read(n)).hexdigest() for n in z.namelist()})
-    missing=[];modified=[];retained=0
+    missing=[];modified=[];retained=0;restricted_metadata=[];external_history=[]
     for r in plan:
         if not r['target']:continue
+        scope=inventory_scope(ROOT,r)
+        if scope=='external_history_not_verified':
+            external_history.append(dict(path=r['target'],action=r['action'],
+                content_read=False,existence_verified=False,
+                reason='Out-of-repository B/C retention history; excluded from A clone audit'))
+            continue
         p=ROOT/r['target']
         if not p.is_file():missing.append(r['path']);continue
+        if scope=='restricted_metadata_only':
+            same_size=p.stat().st_size==r['bytes']
+            restricted_metadata.append(dict(path=r['target'],size_matches_inventory=same_size,
+                content_read=False,content_hash_verified=False))
+            if not same_size:modified.append(r['path']+' (metadata size changed)')
+            retained+=1
+            continue
         h=sha(p)
         stored_copy=(r.get('representation')=='offline_html'
             and r['target'].startswith('data/raw/') and p.suffix=='.html'
@@ -32,7 +63,10 @@ def main():
         if h!=r['sha256'] and not stored_copy and not any(d.get(r['target'])==r['sha256'] for d in archives):
             modified.append(r['path'])
         retained+=1
-    check('retained_files_match_inventory',not missing and not modified,dict(resolved_original_paths=retained,missing=missing,unrecoverable_modifications=modified))
+    check('retained_files_match_inventory',not missing and not modified,dict(
+        scope='nonrestricted file hashes; restricted existence/size only, NOT content preservation proof',
+        resolved_original_paths=retained,missing=missing,unrecoverable_modifications=modified,
+        restricted_metadata_only=restricted_metadata,external_history_not_verified=external_history))
     key_scan=scan_workspace()
     check('working_tree_google_api_keys_absent',key_scan['passed'],key_scan)
     check('protected_directory_unchanged',all(sha(ROOT/r['target'])==r['sha256'] for r in plan if r['action']=='protect'),3)

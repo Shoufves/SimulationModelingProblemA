@@ -108,6 +108,10 @@ def datasets(refs):
         use=info.get('use','补充核对；按final B3及来源说明限定用途')
         if rel in admitted:
             status='reviewed_scoped_existing_contract';use=admitted[rel]['purpose']
+        elif rel.startswith('data/processed/q1/'):
+            status='reviewed_Q1_candidate'
+            use='Q1 descriptive research, diagnostics and Q2 candidate handoff'
+            boundary='Candidate extraction from locked base originals; see workflow/q1_inputs.json and data/catalog/q1_evidence_review.json; pending peer confirmation, not national model admission.'
         elif '/observations/' in rel:
             obj=load(p);status=obj.get('status','candidate')
             use=obj.get('scope',use)

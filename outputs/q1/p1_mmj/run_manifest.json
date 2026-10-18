@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "candidate": "p1/mmj",
+  "success": true,
+  "result_status": "Q1_research_candidate_with_explicit_gaps_pending_A7",
+  "base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+  "code_commit_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+  "dirty_worktree": true,
+  "worktree_status": "M .gitignore\n M README.md\n M data/catalog/datasets_unified.csv\n M docs/RUNNING.md\n M outputs/validation/tests.json\n M outputs/validation/workspace_audit.json\n M outputs/workflow/next_prompt.md\n M outputs/workflow/status.json\n M outputs/workflow/status.md\n M run.py\n M scripts/audit_workspace.py\n M scripts/build_workspace_catalog.py\n M scripts/scan_google_keys.py\n?? .gitattributes\n?? data/catalog/q1_evidence_review.json\n?? data/processed/q1/\n?? docs/solutions/\n?? outputs/q1/\n?? outputs/validation/q1_mmj_validation.json\n?? scripts/prepare_q1_inputs.py\n?? scripts/run_q1_assessment.py\n?? scripts/validate_q1.py\n?? src/energy_model/q1.py\n?? tests/test_q1.py\n?? workflow/q1_inputs.json",
+  "command": [
+    "python",
+    "-B",
+    "-X",
+    "utf8",
+    "run.py",
+    "q1",
+    "--inputs",
+    "workflow/q1_inputs.json",
+    "--output-dir",
+    "outputs/q1/p1_mmj"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\CSF2026\\mmj\\SimulationModelingProblemA\\.venv\\Scripts\\python.exe",
+  "dependencies": {
+    "matplotlib": "3.10.8",
+    "core": "Python standard library"
+  },
+  "random_steps": false,
+  "network_access": false,
+  "input_manifest": {
+    "path": "workflow/q1_inputs.json",
+    "sha256": "9f73f9a891d02419127bf69764051ebed78b71854f0f3fa100197cfab0610f37"
+  },
+  "input_hashes": {
+    "data/processed/unified/nbs_history.csv": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+    "data/processed/nbs_products_annual.csv": "6fb964607aa68d86f9297a039aeb472c7860324ec21e67da11dbcd7bd8f92642",
+    "data/processed/nbs_balance_checkpoints.csv": "8121d87c60acf5f8c457245f7d1d512f69b4c652dea717a5f823aae3192a3193",
+    "data/processed/nbs_province_demand.csv": "2ed23bee6511030b5b3b8b60c8aa63e1ea65e7bbd967c5958bc6307f7a228e91",
+    "data/processed/q1/province_products_2024.csv": "8773d85284966522dd398ffd0ab29209af0bc8f7d68cdd4552f012cf7eff4525",
+    "data/processed/china_macro_annual.csv": "5b033c6e8593031ff5c223dda4f2e7de42a2d9b77030bed85018f82c5969b1d8",
+    "data/processed/china_co2_gcb_annual.csv": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
+    "data/processed/fuel_storage_hydrogen_snapshots.csv": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
+    "data/processed/technology_accounting_parameters.csv": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
+    "data/processed/q1/cost_method_parameters.csv": "69d687d6d5aa81409dbbb840acec5a4d5bc2985b21730fdf8be7ce8136807e5f",
+    "data/processed/commodity_price_references.csv": "c123f4ffffd9ccea2320ef951fc05d166696f6196aea1cb3ac31ec4e9586aa2d",
+    "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f",
+    "data/processed/lb/trade_alternatives/lng_china_2024.csv": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363",
+    "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv": "bf10eb6cfb4cba6bebe7b239e861271fac4b9e2e0047a2dc488ba6224584775c",
+    "data/observations/energy_official_communique_2024.json": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+    "data/observations/renewable_operation_official_2024.json": "f59303c667f0529820da3ecd3bb5386445eb5a248051325681641626aacfcb55"
+  },
+  "source_hashes": {
+    "yx:NBS_2025_C09-01": "cc7d20189a1782dd3e6327e173a0871ab0ffdcc2304e8a521e9a885cdf5b4ae3",
+    "yx:NBS_2025_C09-02": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+    "yx:NBS_2025_C09-15": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+    "yx:NBS_2025_C09-19": "7b1d1c5d526905e4611c80f9fd97b637de3b62385218733aa20b55599b0f4d75",
+    "yx:NBS_2025_C09-03": "7b64dcf6845ab84955be19ed60cc68c00764f75ba623f4e623c18deb3018022d",
+    "yx:NBS_2025_C09-04": "04879f1944b4f45aaddcd17c6f8e4f9d7d576f9ab85f04ba1049dcbd73f7b6b5",
+    "yx:NBS_2025_C09-05": "2d29ed89b2cbe42a1adefe75ad63621b42617184b0f094d19def390694dbe988",
+    "yx:NBS_2025_C09-06": "8d415663790fc15d22add695af264dab44f847009367891b7613b629e94d02b3",
+    "yx:NBS_2025_C09-14": "792f54dc21b686356d6e4ea6d49277155a2fef3799b9b1622094548599e488d9",
+    "yx:WDI_CHINA_MACRO": "8ee1bc173ee4bda7975a045b791c8b3f6af3ee8d0f9995ce52d23f896d0a3200",
+    "yx:GCB_GCB2025v15_MtCO2_flat": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+    "yx:NEA_NATURAL_GAS_2025": "6e46cb5edb3bec945c45871750b7c35b267341fbce37745200414993106fea5d",
+    "yx:NEA_HYDROGEN_2025": "0c88c1a6255f778277d008cb641cee9c71fab1936786a010e692d536142eb6ed",
+    "yx:NDRC_GAS_APPARENT_2024": "a55466c36ff019534d5e36615377bb3779f344c516242dc17a20d04b7d026330",
+    "yx:NEA_STORAGE_2025": "739bb225cb040415095b6d3e1de0c81f75ec32541e0613c823d849d190c44453",
+    "yx:IRENA_COST_2024_PDF": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+    "yx:WB_PINK_SHEET_STABLE": "f25870f3ce992bf6caa6b7159ae3722c9411ab66108cef47aea2e4451a21961a",
+    "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63",
+    "mmj:S13": "fdcf2c563d51bdfe1135b2f2a3e88d87d2ada2c66acfaa6e075cf8fa15f88e98",
+    "mmj:S25": "5092f8d6083287214961de9c402abc8c9a77aee318c9b22a78b55f078ecba679"
+  },
+  "evidence_review": {
+    "path": "data/catalog/q1_evidence_review.json",
+    "sha256": "5e5e8bab46cda6a00106d31084bac3d519d4fbb6c16f72e0693c807e5c662c1c"
+  },
+  "code_hashes": {
+    "run.py": "688a6db72a3a94aaef16ffe4be2523bc032137f8954f2bb6376375f92380139d",
+    "scripts/run_q1_assessment.py": "e82c807b2bac732e0493d6bd606d16f5cef1f3ff25c962496e6ca7c0bbed6092",
+    "scripts/prepare_q1_inputs.py": "213b878fd35faafe8355371641efb8ca91f791a7d9adf1cd15d0bbb61ff882be",
+    "src/energy_model/q1.py": "59c43b469203c1cd77e60278d6f290130e1e465c9ee1b153bdd47c5333612cea"
+  },
+  "configuration": {
+    "real_wacc": [
+      0.03,
+      0.05,
+      0.07
+    ],
+    "common_life_years": 25,
+    "cost_service": "unfirmed plant-gate electricity; constant annual output; 8760 hours normalization"
+  },
+  "protected_originals_verified": {
+    "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf": "a892165c851da77c916d6f2dd7a9cf7062c1e37698a88641b3a3105bef90c963",
+    "附件1.xlsx": "4cd3f519f72d18869d33713fc9dd2ec7a3ba83d5178ee6d4170d37adf45ea1cd",
+    "附件2.xlsx": "7a35204be5db7e8cbfddf77a8a36604fafa87dabbf80c69c752b8b8f0d97a330",
+    "附件3.xlsx": "df616d471bd31fe865ad9d509ea3fc1fa68d8bd172af7c10bb15ffba7a74987e",
+    "附件4.xlsx": "a7945ce8d6c279ecb695c3e56b7d331c1d3f098a282b59a8d1826a69b8736eaf",
+    "只读工作区/final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+    "只读工作区/gemini_final_idea.md": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+    "只读工作区/README.md": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af"
+  },
+  "counts": {
+    "history": 877,
+    "indicators": 164,
+    "roles": 12,
+    "handoff": 322,
+    "gaps": 16
+  },
+  "scientific_limits": [
+    "price_2021_2024",
+    "nonfossil_consumption",
+    "gas_net_dependency",
+    "firm_cost",
+    "regional_grid",
+    "storage_2024",
+    "physical_carbon",
+    "hydrogen_categories",
+    "cross_release",
+    "ten_year_technology",
+    "mainland_bridge",
+    "new_extractions",
+    "balance_NBS_2025_C09-03",
+    "balance_NBS_2025_C09-04",
+    "balance_NBS_2025_C09-05",
+    "balance_NBS_2025_C09-06"
+  ],
+  "acceptance": {
+    "A1": "candidate_results_with_itemized_coverage",
+    "A2": "four_dimensions_quantified_with_scope_limits",
+    "A3": "source_cells_and_review_attached_pending_independent_confirmation",
+    "A4": "candidate_handoff_and_unclosed_physical_balance_explicit",
+    "A5": "requires_independent_reproduction",
+    "A6": "see outputs/validation/q1_mmj_validation.json",
+    "A7": "pending_two_peer_reviews_no_merge"
+  },
+  "outputs": {
+    "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
+    "gaps_and_conflicts.csv": "6ad61259c14e0e10d1031fa03216b0ba04172d5f7bb21c10cd05614d7680e7cb",
+    "history.csv": "807de6f9f577987d11b8bd742b0f11add54e2e4652778b80f1432bd666e0c99c",
+    "indicators.csv": "724c0b354de600fc3579d14fe03bae041bb892a8f0eb8ad4794b67cd215288cf",
+    "model_handoff.csv": "39fc22cf1f38cc26e0027ba98f7d36ee72849fe226ad541c15f02d3b71dc95c3",
+    "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
+    "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
+    "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
+    "report.md": "9e8e7c3c588a7e7e2026d376062850281ab1dd46677d785b503fd551fdd61ba8",
+    "static_balance.json": "817ffec08e7342281dbd7d9cec0659918c466f62998cb63e0a26746b6bcae0dd"
+  }
+}

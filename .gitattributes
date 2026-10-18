@@ -1,0 +1,17 @@
+# Keep the new reproducible Q1 artifacts and hashed source files stable on Windows.
+/run.py text eol=lf
+/scripts/prepare_q1_inputs.py text eol=lf
+/scripts/run_q1_assessment.py text eol=lf
+/scripts/validate_q1.py text eol=lf
+/scripts/audit_workspace.py text eol=lf
+/scripts/scan_google_keys.py text eol=lf
+/scripts/build_workspace_catalog.py text eol=lf
+/src/energy_model/q1.py text eol=lf
+/tests/test_q1.py text eol=lf
+/workflow/q1_inputs.json -text
+/data/catalog/q1_evidence_review.json -text
+# The pre-existing catalog uses CRLF. Preserve its bytes and treat CR as EOL.
+/data/catalog/datasets_unified.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/data/processed/q1/** -text
+/outputs/q1/** -text
+/outputs/validation/q1_mmj_validation.json -text

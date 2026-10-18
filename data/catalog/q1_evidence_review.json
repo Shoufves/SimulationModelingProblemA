@@ -1,0 +1,252 @@
+{
+  "reviewer": "mmj",
+  "review_date": "2026-10-18",
+  "base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+  "scope": "Q1 descriptive research only; source agreement does not grant Q2 model admission",
+  "checks": [
+    {
+      "check": "NBS_unique_view_and_products_vs_reviewed_transcription",
+      "passed": true,
+      "detail": {
+        "rows": 220,
+        "image_review": "C09-01/02/15/19; 2015-2024 rows and notes",
+        "caution": "same-source concordance, not independent validation"
+      }
+    },
+    {
+      "check": "NBS_balance_cells",
+      "passed": true,
+      "detail": "164 cells; C09-03/04/05/06 selected-year columns; nested rows not additive"
+    },
+    {
+      "check": "NBS_province_demand_cells",
+      "passed": true,
+      "detail": "124 cells; C09-14; provincial use rounded to integer 10^8 kWh"
+    },
+    {
+      "check": "new_provincial_transcription_visual_review",
+      "passed": true,
+      "detail": "mmj/2026-10-18 viewed C09-19 image: 31 province names and four columns; blank Shanghai hydro retained; C09-14 2024 demand column independently reread. One transcription, awaiting teammate review; not an independent observation."
+    },
+    {
+      "check": "WDI_constant_GDP_raw_JSON",
+      "passed": true,
+      "detail": {
+        "rows": 10,
+        "version": "2026-10-08",
+        "scope": "source series constant LCU base; not asserted to be 2020-price GDP"
+      }
+    },
+    {
+      "check": "GCB_raw_country_component_cells",
+      "passed": true,
+      "detail": {
+        "rows": 70,
+        "scope": "GCB2025v15 territorial fossil and industry; no removals"
+      }
+    },
+    {
+      "check": "EI_cells_pipeline_gas_china_2024",
+      "passed": true,
+      "detail": {
+        "rows": 22,
+        "sheet": "Gas trade 2024 - pipeline",
+        "cells": [
+          "B27",
+          "C27",
+          "D27",
+          "E27",
+          "F27",
+          "G27",
+          "H27",
+          "I27",
+          "J27",
+          "K27",
+          "L27",
+          "M27",
+          "N27",
+          "O27",
+          "P27",
+          "Q27",
+          "R27",
+          "S27",
+          "T27",
+          "U27",
+          "V27",
+          "W27"
+        ],
+        "scope": "2024 China imports; source bins include aggregates; GCV 40 MJ/m3 gas or EJ coal"
+      }
+    },
+    {
+      "check": "EI_cells_lng_china_2024",
+      "passed": true,
+      "detail": {
+        "rows": 23,
+        "sheet": "Gas trade 2024 - LNG",
+        "cells": [
+          "B28",
+          "C28",
+          "D28",
+          "E28",
+          "F28",
+          "G28",
+          "H28",
+          "I28",
+          "J28",
+          "K28",
+          "L28",
+          "M28",
+          "N28",
+          "O28",
+          "P28",
+          "Q28",
+          "R28",
+          "S28",
+          "T28",
+          "U28",
+          "V28",
+          "W28",
+          "X28"
+        ],
+        "scope": "2024 China imports; source bins include aggregates; GCV 40 MJ/m3 gas or EJ coal"
+      }
+    },
+    {
+      "check": "EI_cells_coal_china_2024_EJ",
+      "passed": true,
+      "detail": {
+        "rows": 15,
+        "sheet": "Coal trade movements 2024",
+        "cells": [
+          "J5",
+          "J6",
+          "J7",
+          "J8",
+          "J9",
+          "J10",
+          "J11",
+          "J12",
+          "J13",
+          "J14",
+          "J15",
+          "J16",
+          "J17",
+          "J18",
+          "J19"
+        ],
+        "scope": "2024 China imports; source bins include aggregates; GCV 40 MJ/m3 gas or EJ coal"
+      }
+    },
+    {
+      "check": "WB_archived_workbook_cells",
+      "passed": true,
+      "detail": {
+        "rows": 36,
+        "sheet": "Annual Prices (Nominal)",
+        "header_row": 7,
+        "coverage": "2015-2020 only; quarantined edition excluded, not bridged"
+      }
+    },
+    {
+      "check": "IRENA_PDF_p71_table_row",
+      "passed": true,
+      "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+    },
+    {
+      "check": "IRENA_PDF_p95_table_row",
+      "passed": true,
+      "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+    },
+    {
+      "check": "IRENA_PDF_p119_table_row",
+      "passed": true,
+      "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+    },
+    {
+      "check": "IRENA_PDF_p76_table_row",
+      "passed": true,
+      "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+    },
+    {
+      "check": "IRENA_PDF_p123_table_row",
+      "passed": true,
+      "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+    },
+    {
+      "check": "IRENA_PDF_p209_table_row",
+      "passed": true,
+      "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+    },
+    {
+      "check": "IRENA_PDF_p212_table_row",
+      "passed": true,
+      "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+    },
+    {
+      "check": "IRENA_PDF_p202_table_row",
+      "passed": true,
+      "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+    },
+    {
+      "check": "IRENA_PDF_p84_table_row",
+      "passed": true,
+      "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+    },
+    {
+      "check": "IRENA_PDF_p106_table_row",
+      "passed": true,
+      "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+    },
+    {
+      "check": "IRENA_PDF_p126_table_row",
+      "passed": true,
+      "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+    },
+    {
+      "check": "cost_table_vs_reviewed_PDF_rows",
+      "passed": true,
+      "detail": "12 adopted China 2024 CAPEX/quantile/LCOE values checked"
+    },
+    {
+      "check": "storage_original_unit_conversion",
+      "passed": true,
+      "detail": "1.36*100 GW, 3.51*100 GWh; 2025 installed source paragraph read with year"
+    },
+    {
+      "check": "snapshot_source_paragraphs",
+      "passed": true,
+      "detail": {
+        "rows": 20,
+        "mismatches": [],
+        "locators": "gas PDF pp10-13; hydrogen pp16-17; NDRC annual paragraph; NEA storage installed statement",
+        "qualifiers": "H2 total EXCEEDS 3650, categories approximate; renewable H2 capacity not output; storage is 2025"
+      }
+    },
+    {
+      "check": "S13_reviewed_capture",
+      "passed": true,
+      "detail": {
+        "rows": 33,
+        "mismatches": [],
+        "scope": "Existing review/capture read with notes; adopted uses stay within original contract"
+      }
+    },
+    {
+      "check": "S25_reviewed_capture",
+      "passed": true,
+      "detail": {
+        "rows": 15,
+        "mismatches": [],
+        "scope": "Existing review/capture read with notes; adopted uses stay within original contract"
+      }
+    }
+  ],
+  "manual_review": "NBS image rows, headings and notes viewed in this session; IRENA tables/method and gas/H2 paragraphs read from stored original PDFs. Two teammate reviews pending.",
+  "exclusions": [
+    "data/restricted/**",
+    "quarantined WB edition and lb price files",
+    "candidate transmission network",
+    "regional storage shares not mapped to Q2 regions"
+  ]
+}

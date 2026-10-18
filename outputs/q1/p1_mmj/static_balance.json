@@ -1,0 +1,1717 @@
+{
+  "schema_version": 1,
+  "scope": "2023 detailed checkpoints separated from 2024 snapshot and 2025 update",
+  "energy_ledgers": [
+    {
+      "source": "NBS_2025_C09-03",
+      "year": 2015,
+      "unit": "10^4 tce",
+      "observed": {
+        "available_supply": 431636.0,
+        "primary_production": 362193.0,
+        "imports": 77695.0,
+        "exports": 9785.0,
+        "inventory_opening_minus_closing": 1532.0,
+        "consumption": 434113.0,
+        "final_consumption": 420110.0,
+        "conversion_losses": 18770.0,
+        "recovered_energy_deducted": 14492.0,
+        "losses": 9724.0,
+        "balance_difference": -2477.0
+      },
+      "supply": {
+        "terms": {
+          "primary_production": 1,
+          "imports": 1,
+          "exports": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 431636.0,
+        "computed": 431635.0,
+        "residual": 1.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "conversion_losses": 1,
+          "recovered_energy_deducted": -1,
+          "losses": 1
+        },
+        "target": "consumption",
+        "target_value": 434113.0,
+        "computed": 434112.0,
+        "residual": 1.0,
+        "missing": []
+      },
+      "supply_minus_consumption": -2477.0,
+      "published_difference": -2477.0,
+      "difference_rounding_residual": 0.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-04",
+      "year": 2015,
+      "unit": "10^4 t",
+      "observed": {
+        "available_supply": 55688.0,
+        "production_crude_oil": 21456.0,
+        "imports_oil_products_inclusive": 39749.0,
+        "exports_oil_products_inclusive": 5128.0,
+        "inventory_opening_minus_closing": -388.0,
+        "consumption": 55960.0,
+        "final_consumption": 52946.0,
+        "transformation_input": 2927.0,
+        "power_generation_input": 266.0,
+        "heat_input": 493.0,
+        "losses": 88.0,
+        "balance_difference": -272.0
+      },
+      "supply": {
+        "terms": {
+          "production_crude_oil": 1,
+          "imports_oil_products_inclusive": 1,
+          "exports_oil_products_inclusive": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 55688.0,
+        "computed": 55689.0,
+        "residual": -1.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transformation_input": 1,
+          "losses": 1
+        },
+        "target": "consumption",
+        "target_value": 55960.0,
+        "computed": 55961.0,
+        "residual": -1.0,
+        "missing": []
+      },
+      "supply_minus_consumption": -272.0,
+      "published_difference": -272.0,
+      "difference_rounding_residual": 0.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-05",
+      "year": 2015,
+      "unit": "10^4 t",
+      "observed": {
+        "available_supply": 397074.0,
+        "production_raw_coal": 374654.0,
+        "imports": 20406.0,
+        "exports": 534.0,
+        "inventory_opening_minus_closing": 2547.0,
+        "consumption": 399834.0,
+        "final_consumption": 112975.0,
+        "transformation_input": 267061.0,
+        "power_generation_input": 179568.0,
+        "heat_input": 24115.0,
+        "balance_difference": -2760.0
+      },
+      "supply": {
+        "terms": {
+          "production_raw_coal": 1,
+          "imports": 1,
+          "exports": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 397074.0,
+        "computed": 397073.0,
+        "residual": 1.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transformation_input": 1
+        },
+        "target": "consumption",
+        "target_value": 399834.0,
+        "computed": 380036.0,
+        "residual": 19798.0,
+        "missing": []
+      },
+      "supply_minus_consumption": -2760.0,
+      "published_difference": -2760.0,
+      "difference_rounding_residual": 0.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-06",
+      "year": 2015,
+      "unit": "10^8 kWh",
+      "observed": {
+        "available_supply": 58021.0,
+        "production": 58146.0,
+        "imports": 62.0,
+        "exports": 187.0,
+        "consumption": 58020.0,
+        "final_consumption": 55032.0,
+        "transmission_distribution_losses": 2988.0
+      },
+      "supply": {
+        "terms": {
+          "production": 1,
+          "imports": 1,
+          "exports": -1
+        },
+        "target": "available_supply",
+        "target_value": 58021.0,
+        "computed": 58021.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transmission_distribution_losses": 1
+        },
+        "target": "consumption",
+        "target_value": 58020.0,
+        "computed": 58020.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 1.0,
+      "published_difference": null,
+      "difference_rounding_residual": null,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-03",
+      "year": 2020,
+      "unit": "10^4 tce",
+      "observed": {
+        "available_supply": 502854.0,
+        "primary_production": 402671.0,
+        "imports": 124805.0,
+        "exports": 12838.0,
+        "inventory_opening_minus_closing": -11784.0,
+        "consumption": 496514.0,
+        "final_consumption": 490903.0,
+        "conversion_losses": 18472.0,
+        "recovered_energy_deducted": 23037.0,
+        "losses": 10175.0,
+        "balance_difference": 6341.0
+      },
+      "supply": {
+        "terms": {
+          "primary_production": 1,
+          "imports": 1,
+          "exports": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 502854.0,
+        "computed": 502854.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "conversion_losses": 1,
+          "recovered_energy_deducted": -1,
+          "losses": 1
+        },
+        "target": "consumption",
+        "target_value": 496514.0,
+        "computed": 496513.0,
+        "residual": 1.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 6340.0,
+      "published_difference": 6341.0,
+      "difference_rounding_residual": -1.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-04",
+      "year": 2020,
+      "unit": "10^4 t",
+      "observed": {
+        "available_supply": 67554.0,
+        "production_crude_oil": 19477.0,
+        "imports_oil_products_inclusive": 61272.0,
+        "exports_oil_products_inclusive": 7551.0,
+        "inventory_opening_minus_closing": -5644.0,
+        "consumption": 65369.0,
+        "final_consumption": 62085.0,
+        "transformation_input": 3266.0,
+        "power_generation_input": 322.0,
+        "heat_input": 678.0,
+        "losses": 18.0,
+        "balance_difference": 2185.0
+      },
+      "supply": {
+        "terms": {
+          "production_crude_oil": 1,
+          "imports_oil_products_inclusive": 1,
+          "exports_oil_products_inclusive": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 67554.0,
+        "computed": 67554.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transformation_input": 1,
+          "losses": 1
+        },
+        "target": "consumption",
+        "target_value": 65369.0,
+        "computed": 65369.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 2185.0,
+      "published_difference": 2185.0,
+      "difference_rounding_residual": 0.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-05",
+      "year": 2020,
+      "unit": "10^4 t",
+      "observed": {
+        "available_supply": 406008.0,
+        "production_raw_coal": 378826.0,
+        "imports": 30361.0,
+        "exports": 319.0,
+        "inventory_opening_minus_closing": -2860.0,
+        "consumption": 400299.0,
+        "final_consumption": 76316.0,
+        "transformation_input": 323983.0,
+        "power_generation_input": 213722.0,
+        "heat_input": 37696.0,
+        "balance_difference": 5709.0
+      },
+      "supply": {
+        "terms": {
+          "production_raw_coal": 1,
+          "imports": 1,
+          "exports": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 406008.0,
+        "computed": 406008.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transformation_input": 1
+        },
+        "target": "consumption",
+        "target_value": 400299.0,
+        "computed": 400299.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 5709.0,
+      "published_difference": 5709.0,
+      "difference_rounding_residual": 0.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-06",
+      "year": 2020,
+      "unit": "10^8 kWh",
+      "observed": {
+        "available_supply": 77620.0,
+        "production": 77791.0,
+        "imports": 48.0,
+        "exports": 218.0,
+        "consumption": 77620.0,
+        "final_consumption": 74387.0,
+        "transmission_distribution_losses": 3233.0
+      },
+      "supply": {
+        "terms": {
+          "production": 1,
+          "imports": 1,
+          "exports": -1
+        },
+        "target": "available_supply",
+        "target_value": 77620.0,
+        "computed": 77621.0,
+        "residual": -1.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transmission_distribution_losses": 1
+        },
+        "target": "consumption",
+        "target_value": 77620.0,
+        "computed": 77620.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 0.0,
+      "published_difference": null,
+      "difference_rounding_residual": null,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-03",
+      "year": 2022,
+      "unit": "10^4 tce",
+      "observed": {
+        "available_supply": 553787.0,
+        "primary_production": 459507.0,
+        "imports": 120236.0,
+        "exports": 12197.0,
+        "inventory_opening_minus_closing": -13759.0,
+        "consumption": 541274.0,
+        "final_consumption": 535683.0,
+        "conversion_losses": 20303.0,
+        "recovered_energy_deducted": 24255.0,
+        "losses": 9543.0,
+        "balance_difference": 12513.0
+      },
+      "supply": {
+        "terms": {
+          "primary_production": 1,
+          "imports": 1,
+          "exports": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 553787.0,
+        "computed": 553787.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "conversion_losses": 1,
+          "recovered_energy_deducted": -1,
+          "losses": 1
+        },
+        "target": "consumption",
+        "target_value": 541274.0,
+        "computed": 541274.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 12513.0,
+      "published_difference": 12513.0,
+      "difference_rounding_residual": 0.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-04",
+      "year": 2022,
+      "unit": "10^4 t",
+      "observed": {
+        "available_supply": 70810.0,
+        "production_crude_oil": 20472.0,
+        "imports_oil_products_inclusive": 58701.0,
+        "exports_oil_products_inclusive": 6704.0,
+        "inventory_opening_minus_closing": -1659.0,
+        "consumption": 69321.0,
+        "final_consumption": 67198.0,
+        "transformation_input": 2099.0,
+        "power_generation_input": 242.0,
+        "heat_input": 698.0,
+        "losses": 24.0,
+        "balance_difference": 1489.0
+      },
+      "supply": {
+        "terms": {
+          "production_crude_oil": 1,
+          "imports_oil_products_inclusive": 1,
+          "exports_oil_products_inclusive": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 70810.0,
+        "computed": 70810.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transformation_input": 1,
+          "losses": 1
+        },
+        "target": "consumption",
+        "target_value": 69321.0,
+        "computed": 69321.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 1489.0,
+      "published_difference": 1489.0,
+      "difference_rounding_residual": 0.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-05",
+      "year": 2022,
+      "unit": "10^4 t",
+      "observed": {
+        "available_supply": 461443.0,
+        "production_raw_coal": 440419.0,
+        "imports": 29370.0,
+        "exports": 401.0,
+        "inventory_opening_minus_closing": -7947.0,
+        "consumption": 444956.0,
+        "final_consumption": 75879.0,
+        "transformation_input": 369077.0,
+        "power_generation_input": 239566.0,
+        "heat_input": 51268.0,
+        "balance_difference": 16487.0
+      },
+      "supply": {
+        "terms": {
+          "production_raw_coal": 1,
+          "imports": 1,
+          "exports": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 461443.0,
+        "computed": 461441.0,
+        "residual": 2.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transformation_input": 1
+        },
+        "target": "consumption",
+        "target_value": 444956.0,
+        "computed": 444956.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 16487.0,
+      "published_difference": 16487.0,
+      "difference_rounding_residual": 0.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-06",
+      "year": 2022,
+      "unit": "10^8 kWh",
+      "observed": {
+        "available_supply": 88358.0,
+        "production": 88487.0,
+        "imports": 71.0,
+        "exports": 201.0,
+        "consumption": 88358.0,
+        "final_consumption": 85295.0,
+        "transmission_distribution_losses": 3063.0
+      },
+      "supply": {
+        "terms": {
+          "production": 1,
+          "imports": 1,
+          "exports": -1
+        },
+        "target": "available_supply",
+        "target_value": 88358.0,
+        "computed": 88357.0,
+        "residual": 1.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transmission_distribution_losses": 1
+        },
+        "target": "consumption",
+        "target_value": 88358.0,
+        "computed": 88358.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 0.0,
+      "published_difference": null,
+      "difference_rounding_residual": null,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-03",
+      "year": 2023,
+      "unit": "10^4 tce",
+      "observed": {
+        "available_supply": 586847.0,
+        "primary_production": 475979.0,
+        "imports": 145253.0,
+        "exports": 13625.0,
+        "inventory_opening_minus_closing": -20760.0,
+        "consumption": 571327.0,
+        "final_consumption": 567248.0,
+        "conversion_losses": 20682.0,
+        "recovered_energy_deducted": 26285.0,
+        "losses": 9682.0,
+        "balance_difference": 15519.0
+      },
+      "supply": {
+        "terms": {
+          "primary_production": 1,
+          "imports": 1,
+          "exports": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 586847.0,
+        "computed": 586847.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "conversion_losses": 1,
+          "recovered_energy_deducted": -1,
+          "losses": 1
+        },
+        "target": "consumption",
+        "target_value": 571327.0,
+        "computed": 571327.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 15520.0,
+      "published_difference": 15519.0,
+      "difference_rounding_residual": 1.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-04",
+      "year": 2023,
+      "unit": "10^4 t",
+      "observed": {
+        "available_supply": 77027.0,
+        "production_crude_oil": 20903.0,
+        "imports_oil_products_inclusive": 66812.0,
+        "exports_oil_products_inclusive": 7563.0,
+        "inventory_opening_minus_closing": -3124.0,
+        "consumption": 75137.0,
+        "final_consumption": 72915.0,
+        "transformation_input": 2205.0,
+        "power_generation_input": 248.0,
+        "heat_input": 774.0,
+        "losses": 17.0,
+        "balance_difference": 1890.0
+      },
+      "supply": {
+        "terms": {
+          "production_crude_oil": 1,
+          "imports_oil_products_inclusive": 1,
+          "exports_oil_products_inclusive": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 77027.0,
+        "computed": 77028.0,
+        "residual": -1.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transformation_input": 1,
+          "losses": 1
+        },
+        "target": "consumption",
+        "target_value": 75137.0,
+        "computed": 75137.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 1890.0,
+      "published_difference": 1890.0,
+      "difference_rounding_residual": 0.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-05",
+      "year": 2023,
+      "unit": "10^4 t",
+      "observed": {
+        "available_supply": 490645.0,
+        "production_raw_coal": 454124.0,
+        "imports": 47481.0,
+        "exports": 447.0,
+        "inventory_opening_minus_closing": -10512.0,
+        "consumption": 470755.0,
+        "final_consumption": 78988.0,
+        "transformation_input": 391767.0,
+        "power_generation_input": 254209.0,
+        "heat_input": 54776.0,
+        "balance_difference": 19890.0
+      },
+      "supply": {
+        "terms": {
+          "production_raw_coal": 1,
+          "imports": 1,
+          "exports": -1,
+          "inventory_opening_minus_closing": 1
+        },
+        "target": "available_supply",
+        "target_value": 490645.0,
+        "computed": 490646.0,
+        "residual": -1.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transformation_input": 1
+        },
+        "target": "consumption",
+        "target_value": 470755.0,
+        "computed": 470755.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 19890.0,
+      "published_difference": 19890.0,
+      "difference_rounding_residual": 0.0,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    },
+    {
+      "source": "NBS_2025_C09-06",
+      "year": 2023,
+      "unit": "10^8 kWh",
+      "observed": {
+        "available_supply": 94394.0,
+        "production": 94564.0,
+        "imports": 50.0,
+        "exports": 221.0,
+        "consumption": 94393.0,
+        "final_consumption": 91329.0,
+        "transmission_distribution_losses": 3064.0
+      },
+      "supply": {
+        "terms": {
+          "production": 1,
+          "imports": 1,
+          "exports": -1
+        },
+        "target": "available_supply",
+        "target_value": 94394.0,
+        "computed": 94393.0,
+        "residual": 1.0,
+        "missing": []
+      },
+      "use": {
+        "terms": {
+          "final_consumption": 1,
+          "transmission_distribution_losses": 1
+        },
+        "target": "consumption",
+        "target_value": 94393.0,
+        "computed": 94393.0,
+        "residual": 0.0,
+        "missing": []
+      },
+      "supply_minus_consumption": 1.0,
+      "published_difference": null,
+      "difference_rounding_residual": null,
+      "nested_terms_not_added": [
+        "power_generation_input",
+        "heat_input"
+      ],
+      "status": "published_checkpoint_not_forced_closed"
+    }
+  ],
+  "carbon_components": [
+    {
+      "year": 2015,
+      "unit": "Mt CO2",
+      "source": "yx:GCB_GCB2025v15_MtCO2_flat",
+      "boundary": "territorial fossil/industry; excludes land-use/removals; CHN code",
+      "observed": {
+        "Total": 9858.040443,
+        "Coal": 7266.352288,
+        "Oil": 1328.812391,
+        "Gas": 380.052208,
+        "Cement": 706.275107,
+        "Flaring": 3.901279,
+        "Other": 172.647169
+      },
+      "identity": {
+        "terms": {
+          "Coal": 1,
+          "Oil": 1,
+          "Gas": 1,
+          "Cement": 1,
+          "Flaring": 1,
+          "Other": 1
+        },
+        "target": "Total",
+        "target_value": 9858.040443,
+        "computed": 9858.040442,
+        "residual": 1.0000003385357559e-06,
+        "missing": []
+      },
+      "interpretation": "同清单分项核对，不是用燃料投入独立重建排放"
+    },
+    {
+      "year": 2016,
+      "unit": "Mt CO2",
+      "source": "yx:GCB_GCB2025v15_MtCO2_flat",
+      "boundary": "territorial fossil/industry; excludes land-use/removals; CHN code",
+      "observed": {
+        "Total": 9748.174776,
+        "Coal": 7071.8864,
+        "Oil": 1357.84176,
+        "Gas": 421.7264,
+        "Cement": 728.112449,
+        "Flaring": 3.090373,
+        "Other": 165.517394
+      },
+      "identity": {
+        "terms": {
+          "Coal": 1,
+          "Oil": 1,
+          "Gas": 1,
+          "Cement": 1,
+          "Flaring": 1,
+          "Other": 1
+        },
+        "target": "Total",
+        "target_value": 9748.174776,
+        "computed": 9748.174776,
+        "residual": 0.0,
+        "missing": []
+      },
+      "interpretation": "同清单分项核对，不是用燃料投入独立重建排放"
+    },
+    {
+      "year": 2017,
+      "unit": "Mt CO2",
+      "source": "yx:GCB_GCB2025v15_MtCO2_flat",
+      "boundary": "territorial fossil/industry; excludes land-use/removals; CHN code",
+      "observed": {
+        "Total": 10000.013645,
+        "Coal": 7163.662272,
+        "Oil": 1430.594144,
+        "Gas": 486.35936,
+        "Cement": 740.558572,
+        "Flaring": 2.969262,
+        "Other": 175.870034
+      },
+      "identity": {
+        "terms": {
+          "Coal": 1,
+          "Oil": 1,
+          "Gas": 1,
+          "Cement": 1,
+          "Flaring": 1,
+          "Other": 1
+        },
+        "target": "Total",
+        "target_value": 10000.013645,
+        "computed": 10000.013643999999,
+        "residual": 1.0000021575251594e-06,
+        "missing": []
+      },
+      "interpretation": "同清单分项核对，不是用燃料投入独立重建排放"
+    },
+    {
+      "year": 2018,
+      "unit": "Mt CO2",
+      "source": "yx:GCB_GCB2025v15_MtCO2_flat",
+      "boundary": "territorial fossil/industry; excludes land-use/removals; CHN code",
+      "observed": {
+        "Total": 10346.790234,
+        "Coal": 7316.700224,
+        "Oil": 1500.477616,
+        "Gas": 575.368912,
+        "Cement": 752.743378,
+        "Flaring": 3.408357,
+        "Other": 198.091747
+      },
+      "identity": {
+        "terms": {
+          "Coal": 1,
+          "Oil": 1,
+          "Gas": 1,
+          "Cement": 1,
+          "Flaring": 1,
+          "Other": 1
+        },
+        "target": "Total",
+        "target_value": 10346.790234,
+        "computed": 10346.790234,
+        "residual": 0.0,
+        "missing": []
+      },
+      "interpretation": "同清单分项核对，不是用燃料投入独立重建排放"
+    },
+    {
+      "year": 2019,
+      "unit": "Mt CO2",
+      "source": "yx:GCB_GCB2025v15_MtCO2_flat",
+      "boundary": "territorial fossil/industry; excludes land-use/removals; CHN code",
+      "observed": {
+        "Total": 10713.514488,
+        "Coal": 7522.57672,
+        "Oil": 1559.739152,
+        "Gas": 630.17136,
+        "Cement": 805.948006,
+        "Flaring": 3.83925,
+        "Other": 191.24
+      },
+      "identity": {
+        "terms": {
+          "Coal": 1,
+          "Oil": 1,
+          "Gas": 1,
+          "Cement": 1,
+          "Flaring": 1,
+          "Other": 1
+        },
+        "target": "Total",
+        "target_value": 10713.514488,
+        "computed": 10713.514488,
+        "residual": 0.0,
+        "missing": []
+      },
+      "interpretation": "同清单分项核对，不是用燃料投入独立重建排放"
+    },
+    {
+      "year": 2020,
+      "unit": "Mt CO2",
+      "source": "yx:GCB_GCB2025v15_MtCO2_flat",
+      "boundary": "territorial fossil/industry; excludes land-use/removals; CHN code",
+      "observed": {
+        "Total": 10896.5204,
+        "Coal": 7679.3823,
+        "Oil": 1523.058327,
+        "Gas": 676.473096,
+        "Cement": 828.71,
+        "Flaring": 5.169677,
+        "Other": 183.727
+      },
+      "identity": {
+        "terms": {
+          "Coal": 1,
+          "Oil": 1,
+          "Gas": 1,
+          "Cement": 1,
+          "Flaring": 1,
+          "Other": 1
+        },
+        "target": "Total",
+        "target_value": 10896.5204,
+        "computed": 10896.5204,
+        "residual": 0.0,
+        "missing": []
+      },
+      "interpretation": "同清单分项核对，不是用燃料投入独立重建排放"
+    },
+    {
+      "year": 2021,
+      "unit": "Mt CO2",
+      "source": "yx:GCB_GCB2025v15_MtCO2_flat",
+      "boundary": "territorial fossil/industry; excludes land-use/removals; CHN code",
+      "observed": {
+        "Total": 11284.401137,
+        "Coal": 8004.203215,
+        "Oil": 1521.109098,
+        "Gas": 765.332404,
+        "Cement": 802.485,
+        "Flaring": 4.81242,
+        "Other": 186.459
+      },
+      "identity": {
+        "terms": {
+          "Coal": 1,
+          "Oil": 1,
+          "Gas": 1,
+          "Cement": 1,
+          "Flaring": 1,
+          "Other": 1
+        },
+        "target": "Total",
+        "target_value": 11284.401137,
+        "computed": 11284.401136999999,
+        "residual": 1.8189894035458565e-12,
+        "missing": []
+      },
+      "interpretation": "同清单分项核对，不是用燃料投入独立重建排放"
+    },
+    {
+      "year": 2022,
+      "unit": "Mt CO2",
+      "source": "yx:GCB_GCB2025v15_MtCO2_flat",
+      "boundary": "territorial fossil/industry; excludes land-use/removals; CHN code",
+      "observed": {
+        "Total": 11711.807356,
+        "Coal": 8468.947515,
+        "Oil": 1559.720832,
+        "Gas": 773.224769,
+        "Cement": 718.776883,
+        "Flaring": 4.678356,
+        "Other": 186.459
+      },
+      "identity": {
+        "terms": {
+          "Coal": 1,
+          "Oil": 1,
+          "Gas": 1,
+          "Cement": 1,
+          "Flaring": 1,
+          "Other": 1
+        },
+        "target": "Total",
+        "target_value": 11711.807356,
+        "computed": 11711.807354999999,
+        "residual": 1.0000003385357559e-06,
+        "missing": []
+      },
+      "interpretation": "同清单分项核对，不是用燃料投入独立重建排放"
+    },
+    {
+      "year": 2023,
+      "unit": "Mt CO2",
+      "source": "yx:GCB_GCB2025v15_MtCO2_flat",
+      "boundary": "territorial fossil/industry; excludes land-use/removals; CHN code",
+      "observed": {
+        "Total": 12172.009027,
+        "Coal": 8740.890938,
+        "Oil": 1729.580294,
+        "Gas": 828.896923,
+        "Cement": 681.688038,
+        "Flaring": 4.493834,
+        "Other": 186.459
+      },
+      "identity": {
+        "terms": {
+          "Coal": 1,
+          "Oil": 1,
+          "Gas": 1,
+          "Cement": 1,
+          "Flaring": 1,
+          "Other": 1
+        },
+        "target": "Total",
+        "target_value": 12172.009027,
+        "computed": 12172.009027,
+        "residual": 0.0,
+        "missing": []
+      },
+      "interpretation": "同清单分项核对，不是用燃料投入独立重建排放"
+    },
+    {
+      "year": 2024,
+      "unit": "Mt CO2",
+      "source": "yx:GCB_GCB2025v15_MtCO2_flat",
+      "boundary": "territorial fossil/industry; excludes land-use/removals; CHN code",
+      "observed": {
+        "Total": 12289.036755,
+        "Coal": 8886.02066,
+        "Oil": 1705.385689,
+        "Gas": 889.406384,
+        "Cement": 617.751898,
+        "Flaring": 4.013123,
+        "Other": 186.459
+      },
+      "identity": {
+        "terms": {
+          "Coal": 1,
+          "Oil": 1,
+          "Gas": 1,
+          "Cement": 1,
+          "Flaring": 1,
+          "Other": 1
+        },
+        "target": "Total",
+        "target_value": 12289.036755,
+        "computed": 12289.036754,
+        "residual": 9.999985195463523e-07,
+        "missing": []
+      },
+      "interpretation": "同清单分项核对，不是用燃料投入独立重建排放"
+    }
+  ],
+  "national_2024_physical_energy_carbon_closure": {
+    "status": "blocked",
+    "value": null,
+    "reasons": [
+      "同年燃料能源平衡与NCV/氧化率不足",
+      "原料/燃烧与过程排放未分",
+      "捕集/封存与移除不足"
+    ],
+    "double_count_controls": [
+      "电力是转换载体，不加到一次能源消费",
+      "氢生产投入不再作为新一次能源",
+      "过程碳与燃烧碳分开",
+      "捕集不等于永久封存"
+    ]
+  },
+  "trade_concentration": {
+    "pipeline": {
+      "total": 71.2777959216855,
+      "reported_bin_hhi": 0.36243260481059325,
+      "country_hhi_lower_infimum": 0.36243260481059325,
+      "country_hhi_upper": 0.36243260481059325,
+      "unresolved_share": 0.0,
+      "exact_country_hhi": true
+    },
+    "lng": {
+      "total": 105.18859696417408,
+      "reported_bin_hhi": 0.20200278262684643,
+      "country_hhi_lower_infimum": 0.2017701212903483,
+      "country_hhi_upper": 0.20200278262684643,
+      "unresolved_share": 0.016011979833240052,
+      "exact_country_hhi": false
+    },
+    "coal_trade": {
+      "total": 11.61644160218221,
+      "reported_bin_hhi": 0.22436671808047376,
+      "country_hhi_lower_infimum": 0.22426031588231496,
+      "country_hhi_upper": 0.22436671808047376,
+      "unresolved_share": 0.014158590943267371,
+      "exact_country_hhi": false
+    }
+  },
+  "spatial": {
+    "value": 0.12656107234462657,
+    "generation_sum": 100868.83,
+    "consumption_sum": 98540.0,
+    "regions": [
+      {
+        "region": "北京",
+        "generation": 455.64,
+        "consumption": 1389.0,
+        "generation_share": 0.004517153614253283,
+        "consumption_share": 0.014095798660442459,
+        "share_difference": -0.009578645046189176
+      },
+      {
+        "region": "天津",
+        "generation": 879.95,
+        "consumption": 1085.0,
+        "generation_share": 0.008723705826666176,
+        "consumption_share": 0.011010757052973412,
+        "share_difference": -0.002287051226307235
+      },
+      {
+        "region": "河北",
+        "generation": 4334.58,
+        "consumption": 4987.0,
+        "generation_share": 0.04297244252758756,
+        "consumption_share": 0.05060888979094784,
+        "share_difference": -0.007636447263360283
+      },
+      {
+        "region": "山西",
+        "generation": 4629.49,
+        "consumption": 2972.0,
+        "generation_share": 0.04589614056195556,
+        "consumption_share": 0.03016034097828293,
+        "share_difference": 0.01573579958367263
+      },
+      {
+        "region": "内蒙古",
+        "generation": 8344.0,
+        "consumption": 5193.0,
+        "generation_share": 0.08272129259355937,
+        "consumption_share": 0.05269941140653542,
+        "share_difference": 0.030021881187023952
+      },
+      {
+        "region": "辽宁",
+        "generation": 2379.37,
+        "consumption": 2734.0,
+        "generation_share": 0.02358875383009796,
+        "consumption_share": 0.027745078140856506,
+        "share_difference": -0.004156324310758547
+      },
+      {
+        "region": "吉林",
+        "generation": 1179.62,
+        "consumption": 950.0,
+        "generation_share": 0.011694593860164729,
+        "consumption_share": 0.009640755023340775,
+        "share_difference": 0.0020538388368239544
+      },
+      {
+        "region": "黑龙江",
+        "generation": 1372.34,
+        "consumption": 1208.0,
+        "generation_share": 0.013605193993030354,
+        "consumption_share": 0.012258981124416481,
+        "share_difference": 0.001346212868613873
+      },
+      {
+        "region": "上海",
+        "generation": 1078.02,
+        "consumption": 1984.0,
+        "generation_share": 0.010687345139226855,
+        "consumption_share": 0.020133955754008524,
+        "share_difference": -0.00944661061478167
+      },
+      {
+        "region": "江苏",
+        "generation": 6807.37,
+        "consumption": 8487.0,
+        "generation_share": 0.06748734965994946,
+        "consumption_share": 0.08612746092957174,
+        "share_difference": -0.018640111269622284
+      },
+      {
+        "region": "浙江",
+        "generation": 4983.55,
+        "consumption": 6780.0,
+        "generation_share": 0.049406243732578244,
+        "consumption_share": 0.06880454637710574,
+        "share_difference": -0.0193983026445275
+      },
+      {
+        "region": "安徽",
+        "generation": 3863.46,
+        "consumption": 3598.0,
+        "generation_share": 0.038301822277506344,
+        "consumption_share": 0.03651309113050538,
+        "share_difference": 0.0017887311470009618
+      },
+      {
+        "region": "福建",
+        "generation": 3584.41,
+        "consumption": 3331.0,
+        "generation_share": 0.03553535814780443,
+        "consumption_share": 0.0338035315607875,
+        "share_difference": 0.0017318265870169339
+      },
+      {
+        "region": "江西",
+        "generation": 1963.38,
+        "consumption": 2180.0,
+        "generation_share": 0.019464684977509902,
+        "consumption_share": 0.022122995737771465,
+        "share_difference": -0.0026583107602615626
+      },
+      {
+        "region": "山东",
+        "generation": 6773.25,
+        "consumption": 8320.0,
+        "generation_share": 0.06714908857374473,
+        "consumption_share": 0.08443271767810026,
+        "share_difference": -0.017283629104355533
+      },
+      {
+        "region": "河南",
+        "generation": 3832.45,
+        "consumption": 4320.0,
+        "generation_share": 0.03799439331258229,
+        "consumption_share": 0.04384006494824437,
+        "share_difference": -0.005845671635662082
+      },
+      {
+        "region": "湖北",
+        "generation": 3498.65,
+        "consumption": 2944.0,
+        "generation_share": 0.034685145054225375,
+        "consumption_share": 0.02987619240917394,
+        "share_difference": 0.004808952645051434
+      },
+      {
+        "region": "湖南",
+        "generation": 1900.11,
+        "consumption": 2374.0,
+        "generation_share": 0.018837434715957346,
+        "consumption_share": 0.024091739395169474,
+        "share_difference": -0.005254304679212129
+      },
+      {
+        "region": "广东",
+        "generation": 7354.51,
+        "consumption": 9121.0,
+        "generation_share": 0.07291162195496864,
+        "consumption_share": 0.09256139638725391,
+        "share_difference": -0.019649774432285272
+      },
+      {
+        "region": "广西",
+        "generation": 2602.85,
+        "consumption": 2563.0,
+        "generation_share": 0.025804304461546742,
+        "consumption_share": 0.026009742236655167,
+        "share_difference": -0.00020543777510842465
+      },
+      {
+        "region": "海南",
+        "generation": 515.29,
+        "consumption": 519.0,
+        "generation_share": 0.005108515683189742,
+        "consumption_share": 0.0052668966916988025,
+        "share_difference": -0.00015838100850906062
+      },
+      {
+        "region": "重庆",
+        "generation": 1210.1,
+        "consumption": 1612.0,
+        "generation_share": 0.011996768476446092,
+        "consumption_share": 0.016358839050131926,
+        "share_difference": -0.004362070573685834
+      },
+      {
+        "region": "四川",
+        "generation": 5307.27,
+        "consumption": 4018.0,
+        "generation_share": 0.05261556022807046,
+        "consumption_share": 0.04077531966714025,
+        "share_difference": 0.011840240560930207
+      },
+      {
+        "region": "贵州",
+        "generation": 2556.1,
+        "consumption": 1902.0,
+        "generation_share": 0.02534083125580023,
+        "consumption_share": 0.019301806373046477,
+        "share_difference": 0.0060390248827537525
+      },
+      {
+        "region": "云南",
+        "generation": 4646.34,
+        "consumption": 2792.0,
+        "generation_share": 0.04606318919333158,
+        "consumption_share": 0.028333671605439415,
+        "share_difference": 0.017729517587892162
+      },
+      {
+        "region": "西藏",
+        "generation": 171.63,
+        "consumption": 154.0,
+        "generation_share": 0.0017015167123481058,
+        "consumption_share": 0.001562817130099452,
+        "share_difference": 0.00013869958224865375
+      },
+      {
+        "region": "陕西",
+        "generation": 3374.06,
+        "consumption": 2600.0,
+        "generation_share": 0.03344997656857921,
+        "consumption_share": 0.026385224274406333,
+        "share_difference": 0.0070647522941728776
+      },
+      {
+        "region": "甘肃",
+        "generation": 2271.5,
+        "consumption": 1746.0,
+        "generation_share": 0.02251934517333055,
+        "consumption_share": 0.0177186929165821,
+        "share_difference": 0.004800652256748451
+      },
+      {
+        "region": "青海",
+        "generation": 1153.5,
+        "consumption": 1054.0,
+        "generation_share": 0.011435643696868497,
+        "consumption_share": 0.010696163994317028,
+        "share_difference": 0.0007394797025514696
+      },
+      {
+        "region": "宁夏",
+        "generation": 2368.02,
+        "consumption": 1390.0,
+        "generation_share": 0.023476231458221534,
+        "consumption_share": 0.014105946823624925,
+        "share_difference": 0.00937028463459661
+      },
+      {
+        "region": "新疆",
+        "generation": 5478.02,
+        "consumption": 4233.0,
+        "generation_share": 0.05430835273889863,
+        "consumption_share": 0.04295717475137,
+        "share_difference": 0.011351177987528625
+      }
+    ],
+    "generation_sum_minus_national": 0.020000000004074536,
+    "consumption_national_comparator": null,
+    "consumption_national_comparator_reason": "同版本2024全国用电未在本轮所选表内；不跨版本强校正"
+  },
+  "prices": {
+    "Coal, Australian": {
+      "value": 0.2723068782922101,
+      "valid_pairs": [
+        [
+          2015,
+          2016
+        ],
+        [
+          2016,
+          2017
+        ],
+        [
+          2017,
+          2018
+        ],
+        [
+          2018,
+          2019
+        ],
+        [
+          2019,
+          2020
+        ]
+      ],
+      "observations": 5,
+      "covered_level_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "missing_years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    },
+    "Crude oil, Brent": {
+      "value": 0.2826821009401813,
+      "valid_pairs": [
+        [
+          2015,
+          2016
+        ],
+        [
+          2016,
+          2017
+        ],
+        [
+          2017,
+          2018
+        ],
+        [
+          2018,
+          2019
+        ],
+        [
+          2019,
+          2020
+        ]
+      ],
+      "observations": 5,
+      "covered_level_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "missing_years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    },
+    "Crude oil, average": {
+      "value": 0.27412092802733445,
+      "valid_pairs": [
+        [
+          2015,
+          2016
+        ],
+        [
+          2016,
+          2017
+        ],
+        [
+          2017,
+          2018
+        ],
+        [
+          2018,
+          2019
+        ],
+        [
+          2019,
+          2020
+        ]
+      ],
+      "observations": 5,
+      "covered_level_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "missing_years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    },
+    "Liquefied natural gas, Japan": {
+      "value": 0.2588541409630128,
+      "valid_pairs": [
+        [
+          2015,
+          2016
+        ],
+        [
+          2016,
+          2017
+        ],
+        [
+          2017,
+          2018
+        ],
+        [
+          2018,
+          2019
+        ],
+        [
+          2019,
+          2020
+        ]
+      ],
+      "observations": 5,
+      "covered_level_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "missing_years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    },
+    "Natural gas, Europe": {
+      "value": 0.37549557034889264,
+      "valid_pairs": [
+        [
+          2015,
+          2016
+        ],
+        [
+          2016,
+          2017
+        ],
+        [
+          2017,
+          2018
+        ],
+        [
+          2018,
+          2019
+        ],
+        [
+          2019,
+          2020
+        ]
+      ],
+      "observations": 5,
+      "covered_level_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "missing_years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    },
+    "Natural gas, US": {
+      "value": 0.17589885190507146,
+      "valid_pairs": [
+        [
+          2015,
+          2016
+        ],
+        [
+          2016,
+          2017
+        ],
+        [
+          2017,
+          2018
+        ],
+        [
+          2018,
+          2019
+        ],
+        [
+          2019,
+          2020
+        ]
+      ],
+      "observations": 5,
+      "covered_level_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "missing_years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    }
+  },
+  "comparable_costs": [
+    {
+      "technology": "onshore_wind",
+      "real_wacc": 0.03,
+      "life": 25.0,
+      "capex": 856.0,
+      "om": 29.0,
+      "cf": 0.33,
+      "value": 0.027036895533932948
+    },
+    {
+      "technology": "onshore_wind",
+      "real_wacc": 0.05,
+      "life": 25.0,
+      "capex": 856.0,
+      "om": 29.0,
+      "cf": 0.33,
+      "value": 0.031041685155714868
+    },
+    {
+      "technology": "onshore_wind",
+      "real_wacc": 0.07,
+      "life": 25.0,
+      "capex": 856.0,
+      "om": 29.0,
+      "cf": 0.33,
+      "value": 0.035441332067555606
+    },
+    {
+      "technology": "offshore_wind",
+      "real_wacc": 0.03,
+      "life": 25.0,
+      "capex": 1520.0,
+      "om": 59.0,
+      "cf": 0.37,
+      "value": 0.04513463037747569
+    },
+    {
+      "technology": "offshore_wind",
+      "real_wacc": 0.05,
+      "life": 25.0,
+      "capex": 1520.0,
+      "om": 59.0,
+      "cf": 0.37,
+      "value": 0.05147714892472818
+    },
+    {
+      "technology": "offshore_wind",
+      "real_wacc": 0.07,
+      "life": 25.0,
+      "capex": 1520.0,
+      "om": 59.0,
+      "cf": 0.37,
+      "value": 0.058445016097560074
+    }
+  ],
+  "hydrogen": {
+    "published_total_lower_bound_exclusive": 3650.0,
+    "approximate_category_sum": 3632.0,
+    "unit": "10^4 tonne",
+    "status": "not_an_exact_balance"
+  }
+}
