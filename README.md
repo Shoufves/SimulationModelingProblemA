@@ -12,6 +12,7 @@
 | [实施路线与缺口](docs/IMPLEMENTATION_ROADMAP.md) | 按final顺序衔接现有代码、数据和后续验收 |
 | [数据使用与去重规则](docs/DATA_GUIDE.md) | 唯一记录、来源命名空间、已核验/候选/隔离及扩展门槛 |
 | [运行说明](docs/RUNNING.md) | 环境、统一命令、局部成果的适用边界 |
+| [mmj历史修改与问题对应](docs/solutions/mmj-existing-work-inventory.md) | 协作前环境/F2/设备/H01工作的范围、证据及后续PR边界；不作为P1/Q1已完成方案 |
 | [整理验收报告](docs/ORGANIZATION_REPORT.md) | 文件去留、去重数量、保护与复现检查 |
 | [创新备选阅读版](docs/gemini_final_idea_阅读版.md) | 基础主线验收后再启用的算法实验 |
 | [三人 Git 协作规程](docs/17_git_collaboration.md) | 三人同题并行、Agent 开工、分支、PR、独立评审及合并 |
