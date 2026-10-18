@@ -1,0 +1,193 @@
+{
+  "scope": "Workspace preservation and engineering checks only; not completion of final research.",
+  "passed": true,
+  "checks": [
+    {
+      "check": "retained_files_match_inventory",
+      "passed": true,
+      "detail": {
+        "scope": "nonrestricted file hashes; restricted existence/size only, NOT content preservation proof",
+        "resolved_original_paths": 1117,
+        "missing": [],
+        "unrecoverable_modifications": [],
+        "restricted_metadata_only": [
+          {
+            "path": "data/restricted/household/data/household_energy_source_fig4.csv",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 1.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 2.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 3.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 4.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 5.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 6.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          }
+        ],
+        "external_historical_records": [
+          {
+            "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/B题/2026年第二届全国大学生仿真建模应用挑战赛B题.pdf",
+            "historical_target": "../B题/2026年第二届全国大学生仿真建模应用挑战赛B题.pdf",
+            "sha256": "104132baece63e54fcc8238d414bd31e8c6c0923402380ba41674b1eda812981",
+            "status": "historical_foreign_duplicate; external presence not checked"
+          },
+          {
+            "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/2026年第二届全国大学生仿真建模应用挑战赛C题.pdf",
+            "historical_target": "../C题/2026年第二届全国大学生仿真建模应用挑战赛C题.pdf",
+            "sha256": "5f98ef37a4052c58e7e514f77c5fb9463d14f1a3af36468e82489585efebdff0",
+            "status": "historical_foreign_duplicate; external presence not checked"
+          },
+          {
+            "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件1：车辆参数表.xlsx",
+            "historical_target": "../C题/附件1：车辆参数表.xlsx",
+            "sha256": "2bd051219c2cb3d6bb9fb22b2f6a29d1434aa0405aa5168216a747d8f6569abc",
+            "status": "historical_foreign_duplicate; external presence not checked"
+          },
+          {
+            "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件2：4段路程车辆行驶数据.xlsx",
+            "historical_target": "../C题/附件2：4段路程车辆行驶数据.xlsx",
+            "sha256": "c947f403767334b85afc1792eee46f2b74d0271a99af628b3fdd8c95cd7ddd1d",
+            "status": "historical_foreign_duplicate; external presence not checked"
+          },
+          {
+            "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件3：参考工况.xlsx",
+            "historical_target": "../C题/附件3：参考工况.xlsx",
+            "sha256": "75fdd54aa2f880b9e4e1e7539e4e4760f582917407afca41a29a6329533e7e49",
+            "status": "historical_foreign_duplicate; external presence not checked"
+          },
+          {
+            "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件4：部件特性（OCV—SOC、内阻、电机效率）.xlsx",
+            "historical_target": "../C题/附件4：部件特性（OCV—SOC、内阻、电机效率）.xlsx",
+            "sha256": "375d44e233362586ed4699abe3d95e691ace96fda880a55737f57087189a1776",
+            "status": "historical_foreign_duplicate; external presence not checked"
+          }
+        ]
+      }
+    },
+    {
+      "check": "working_tree_google_api_keys_absent",
+      "passed": true,
+      "detail": {
+        "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
+        "excluded_directories": [
+          ".git",
+          "tmp",
+          "data/restricted"
+        ],
+        "pattern": "Google API key format only; not an exhaustive credential audit",
+        "passed": true,
+        "findings": [],
+        "errors": [],
+        "files_scanned": 1402,
+        "payloads_scanned": 2469,
+        "zip_members_scanned": 1067
+      }
+    },
+    {
+      "check": "protected_directory_unchanged",
+      "passed": true,
+      "detail": 3
+    },
+    {
+      "check": "five_official_originals_unchanged",
+      "passed": true,
+      "detail": [
+        "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+        "附件1.xlsx",
+        "附件2.xlsx",
+        "附件3.xlsx",
+        "附件4.xlsx"
+      ]
+    },
+    {
+      "check": "three_workspaces_consolidated",
+      "passed": true,
+      "detail": "one A workspace"
+    },
+    {
+      "check": "no_B_C_payload",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "all_final_references_resolve",
+      "passed": true,
+      "detail": {
+        "count": 118,
+        "missing": []
+      }
+    },
+    {
+      "check": "final_reader_links_resolve",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "retained_python_syntax",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "unified_data_keys_unique",
+      "passed": true,
+      "detail": 362
+    },
+    {
+      "check": "unified_rows_trace_to_files",
+      "passed": true,
+      "detail": 362
+    },
+    {
+      "check": "scope_not_promoted",
+      "passed": true,
+      "detail": "formal admission still governed by model_inputs and evidence_reviews"
+    },
+    {
+      "check": "known_quarantine_preserved",
+      "passed": true,
+      "detail": [
+        "data/processed/lb/base/prices/worldbank_energy_annual_2000_latest.csv",
+        "data/processed/lb/base/prices/worldbank_energy_monthly_2000_latest.csv",
+        "data/processed/transmission_lines_candidate.csv"
+      ]
+    },
+    {
+      "check": "raw_exact_duplicates_removed",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "original_files": 5846,
+  "removed_files": 4776,
+  "removed_bytes": 296840178
+}

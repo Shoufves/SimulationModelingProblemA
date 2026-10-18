@@ -1,0 +1,1224 @@
+{
+  "scope": "synthetic_engineering_fixture",
+  "seed": 20261018,
+  "start_year": 2015,
+  "price_year": 2015,
+  "information": "known_deterministic_repeated_window_no_weather_probability",
+  "primary_accounting": "physical_LHV_noncombustion_equivalent_explicit",
+  "carbon_accounting": "combustion_only_plus_explicit_bridge_no_CCS",
+  "base_gdp_index": 100,
+  "periods": [
+    {
+      "hours": 6
+    },
+    {
+      "hours": 6
+    },
+    {
+      "hours": 6
+    },
+    {
+      "hours": 6
+    }
+  ],
+  "annual_repeats": 365,
+  "grid": {
+    "efficiency": 0.95,
+    "power_mw": 35
+  },
+  "storage": {
+    "power_mw": 3,
+    "energy_mwh": 12,
+    "initial_mwh": 6,
+    "charge_efficiency": 0.9,
+    "discharge_efficiency": 0.9,
+    "throughput_cost": 0.5,
+    "terminal_mwh": 6
+  },
+  "network": {
+    "initial_cash": 1000000000000.0,
+    "grid_capex_per_mw": 40000,
+    "storage_capex_per_mw": 100000,
+    "storage_hours": 4,
+    "build_limit_mw": 2,
+    "lead_years": 2,
+    "lifetime_years": 30
+  },
+  "government": {
+    "initial_cash": 0,
+    "plant_permit_mw_per_year": 3
+  },
+  "suppliers": {
+    "coal": {
+      "initial_cash": 1000000000000.0,
+      "markup": 0.1,
+      "nonfossil": false,
+      "operation": {
+        "domestic_mw": [
+          80,
+          80,
+          80,
+          80
+        ],
+        "import_mw": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "domestic_cost_per_mwh": 35,
+        "import_cost_per_mwh": 42.0,
+        "emission_t_per_mwh": 0.34,
+        "tank_mwh": 80,
+        "initial_mwh": 40,
+        "injection_mw": 10,
+        "withdrawal_mw": 10
+      }
+    },
+    "gas": {
+      "initial_cash": 1000000000000.0,
+      "markup": 0.1,
+      "nonfossil": false,
+      "operation": {
+        "domestic_mw": [
+          80,
+          80,
+          80,
+          80
+        ],
+        "import_mw": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "domestic_cost_per_mwh": 55,
+        "import_cost_per_mwh": 66.0,
+        "emission_t_per_mwh": 0.2,
+        "tank_mwh": 80,
+        "initial_mwh": 40,
+        "injection_mw": 10,
+        "withdrawal_mw": 10
+      }
+    },
+    "oil": {
+      "initial_cash": 1000000000000.0,
+      "markup": 0.1,
+      "nonfossil": false,
+      "operation": {
+        "domestic_mw": [
+          80,
+          80,
+          80,
+          80
+        ],
+        "import_mw": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "domestic_cost_per_mwh": 75,
+        "import_cost_per_mwh": 90.0,
+        "emission_t_per_mwh": 0.26,
+        "tank_mwh": 80,
+        "initial_mwh": 40,
+        "injection_mw": 10,
+        "withdrawal_mw": 10
+      }
+    },
+    "biomass": {
+      "initial_cash": 1000000000000.0,
+      "markup": 0.1,
+      "nonfossil": true,
+      "operation": {
+        "domestic_mw": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "import_mw": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "domestic_cost_per_mwh": 45,
+        "import_cost_per_mwh": 54.0,
+        "emission_t_per_mwh": 0.0,
+        "tank_mwh": 80,
+        "initial_mwh": 40,
+        "injection_mw": 10,
+        "withdrawal_mw": 10
+      }
+    }
+  },
+  "generators": {
+    "coal_plant": {
+      "initial_cash": 1000000000000.0,
+      "initial_expected_margin_per_mw": 5000,
+      "capex_per_mw": 180000,
+      "lifetime_years": 25,
+      "lead_years": 2,
+      "discount_rate": 0.05,
+      "build_limit_mw": 1,
+      "fixed_cost_per_mw": 2000,
+      "primary_equivalent_per_output_mwh": 1,
+      "nonfossil": false,
+      "operation": {
+        "input": "coal",
+        "output": "electricity",
+        "efficiency": 0.38,
+        "capacity_mw": 10,
+        "availability": [
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "variable_cost_per_mwh": 3,
+        "minimum_fraction": 0,
+        "ramp_mw_per_hour": 10,
+        "window_energy_budget_mwh": 1000000.0
+      }
+    },
+    "gas_plant": {
+      "initial_cash": 1000000000000.0,
+      "initial_expected_margin_per_mw": 5000,
+      "capex_per_mw": 180000,
+      "lifetime_years": 25,
+      "lead_years": 2,
+      "discount_rate": 0.05,
+      "build_limit_mw": 1,
+      "fixed_cost_per_mw": 2000,
+      "primary_equivalent_per_output_mwh": 1,
+      "nonfossil": false,
+      "operation": {
+        "input": "gas",
+        "output": "electricity",
+        "efficiency": 0.52,
+        "capacity_mw": 8,
+        "availability": [
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "variable_cost_per_mwh": 3,
+        "minimum_fraction": 0,
+        "ramp_mw_per_hour": 10,
+        "window_energy_budget_mwh": 1000000.0
+      }
+    },
+    "oil_plant": {
+      "initial_cash": 1000000000000.0,
+      "initial_expected_margin_per_mw": 5000,
+      "capex_per_mw": 180000,
+      "lifetime_years": 25,
+      "lead_years": 2,
+      "discount_rate": 0.05,
+      "build_limit_mw": 1,
+      "fixed_cost_per_mw": 2000,
+      "primary_equivalent_per_output_mwh": 1,
+      "nonfossil": false,
+      "operation": {
+        "input": "oil",
+        "output": "electricity",
+        "efficiency": 0.4,
+        "capacity_mw": 1,
+        "availability": [
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "variable_cost_per_mwh": 3,
+        "minimum_fraction": 0,
+        "ramp_mw_per_hour": 10,
+        "window_energy_budget_mwh": 1000000.0
+      }
+    },
+    "biomass_plant": {
+      "initial_cash": 1000000000000.0,
+      "initial_expected_margin_per_mw": 5000,
+      "capex_per_mw": 180000,
+      "lifetime_years": 25,
+      "lead_years": 2,
+      "discount_rate": 0.05,
+      "build_limit_mw": 1,
+      "fixed_cost_per_mw": 2000,
+      "primary_equivalent_per_output_mwh": 1,
+      "nonfossil": true,
+      "operation": {
+        "input": "biomass",
+        "output": "electricity",
+        "efficiency": 0.3,
+        "capacity_mw": 1,
+        "availability": [
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "variable_cost_per_mwh": 3,
+        "minimum_fraction": 0,
+        "ramp_mw_per_hour": 10,
+        "window_energy_budget_mwh": 1000000.0
+      }
+    },
+    "hydro_plant": {
+      "initial_cash": 1000000000000.0,
+      "initial_expected_margin_per_mw": 5000,
+      "capex_per_mw": 240000,
+      "lifetime_years": 25,
+      "lead_years": 3,
+      "discount_rate": 0.05,
+      "build_limit_mw": 1,
+      "fixed_cost_per_mw": 2000,
+      "primary_equivalent_per_output_mwh": 1,
+      "nonfossil": true,
+      "operation": {
+        "input": null,
+        "output": "electricity",
+        "efficiency": 1,
+        "capacity_mw": 3,
+        "availability": [
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "variable_cost_per_mwh": 3,
+        "minimum_fraction": 0,
+        "ramp_mw_per_hour": 10,
+        "window_energy_budget_mwh": 50
+      }
+    },
+    "nuclear_plant": {
+      "initial_cash": 1000000000000.0,
+      "initial_expected_margin_per_mw": 5000,
+      "capex_per_mw": 240000,
+      "lifetime_years": 25,
+      "lead_years": 3,
+      "discount_rate": 0.05,
+      "build_limit_mw": 1,
+      "fixed_cost_per_mw": 2000,
+      "primary_equivalent_per_output_mwh": 1,
+      "nonfossil": true,
+      "operation": {
+        "input": null,
+        "output": "electricity",
+        "efficiency": 1,
+        "capacity_mw": 4,
+        "availability": [
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        "variable_cost_per_mwh": 3,
+        "minimum_fraction": 0,
+        "ramp_mw_per_hour": 10,
+        "window_energy_budget_mwh": 1000000.0
+      }
+    },
+    "wind_plant": {
+      "initial_cash": 1000000000000.0,
+      "initial_expected_margin_per_mw": 5000,
+      "capex_per_mw": 240000,
+      "lifetime_years": 25,
+      "lead_years": 3,
+      "discount_rate": 0.05,
+      "build_limit_mw": 1,
+      "fixed_cost_per_mw": 2000,
+      "primary_equivalent_per_output_mwh": 1,
+      "nonfossil": true,
+      "operation": {
+        "input": null,
+        "output": "electricity",
+        "efficiency": 1,
+        "capacity_mw": 8,
+        "availability": [
+          0.5,
+          0.3,
+          0.4,
+          0.5
+        ],
+        "variable_cost_per_mwh": 3,
+        "minimum_fraction": 0,
+        "ramp_mw_per_hour": 10,
+        "window_energy_budget_mwh": 1000000.0
+      }
+    },
+    "solar_plant": {
+      "initial_cash": 1000000000000.0,
+      "initial_expected_margin_per_mw": 5000,
+      "capex_per_mw": 240000,
+      "lifetime_years": 25,
+      "lead_years": 3,
+      "discount_rate": 0.05,
+      "build_limit_mw": 1,
+      "fixed_cost_per_mw": 2000,
+      "primary_equivalent_per_output_mwh": 1,
+      "nonfossil": true,
+      "operation": {
+        "input": null,
+        "output": "electricity",
+        "efficiency": 1,
+        "capacity_mw": 10,
+        "availability": [
+          0,
+          0.6,
+          0.8,
+          0
+        ],
+        "variable_cost_per_mwh": 3,
+        "minimum_fraction": 0,
+        "ramp_mw_per_hour": 10,
+        "window_energy_budget_mwh": 1000000.0
+      }
+    },
+    "electrolyser": {
+      "initial_cash": 1000000000000.0,
+      "initial_expected_margin_per_mw": 0,
+      "capex_per_mw": 1000000,
+      "lifetime_years": 20,
+      "lead_years": 2,
+      "discount_rate": 0.05,
+      "build_limit_mw": 0.2,
+      "fixed_cost_per_mw": 100,
+      "primary_equivalent_per_output_mwh": 0,
+      "nonfossil": false,
+      "operation": {
+        "input": "electricity",
+        "output": "hydrogen",
+        "efficiency": 0.7,
+        "capacity_mw": 0.2,
+        "availability": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "variable_cost_per_mwh": 2,
+        "minimum_fraction": 0,
+        "ramp_mw_per_hour": 10,
+        "window_energy_budget_mwh": 1000000.0
+      }
+    },
+    "fuel_cell": {
+      "initial_cash": 1000000000000.0,
+      "initial_expected_margin_per_mw": 0,
+      "capex_per_mw": 1000000,
+      "lifetime_years": 20,
+      "lead_years": 2,
+      "discount_rate": 0.05,
+      "build_limit_mw": 0.2,
+      "fixed_cost_per_mw": 100,
+      "primary_equivalent_per_output_mwh": 0,
+      "nonfossil": false,
+      "operation": {
+        "input": "hydrogen",
+        "output": "electricity",
+        "efficiency": 0.5,
+        "capacity_mw": 0.2,
+        "availability": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "variable_cost_per_mwh": 2,
+        "minimum_fraction": 0,
+        "ramp_mw_per_hour": 10,
+        "window_energy_budget_mwh": 1000000.0
+      }
+    }
+  },
+  "consumers": {
+    "industry": {
+      "initial_cash": 1000000000000.0,
+      "fuel": "coal",
+      "fossil_service_mw": 12,
+      "electric_service_mw": 4,
+      "base_service_mwh": 100000,
+      "shape": [
+        0.2,
+        0.3,
+        0.3,
+        0.2
+      ],
+      "fuel_efficiency": 0.8,
+      "electric_efficiency": 1.0,
+      "service_intensity_decline": 0.005,
+      "priority": 1,
+      "device_lifetime_years": 15,
+      "capex_per_service_mw": 60000,
+      "installation_limit_mw": 1,
+      "payback_years": 8,
+      "income_per_service_mwh": 500
+    },
+    "transport": {
+      "initial_cash": 1000000000000.0,
+      "fuel": "oil",
+      "fossil_service_mw": 12,
+      "electric_service_mw": 4,
+      "base_service_mwh": 60000,
+      "shape": [
+        0.2,
+        0.3,
+        0.3,
+        0.2
+      ],
+      "fuel_efficiency": 0.8,
+      "electric_efficiency": 1.0,
+      "service_intensity_decline": 0.005,
+      "priority": 2,
+      "device_lifetime_years": 15,
+      "capex_per_service_mw": 60000,
+      "installation_limit_mw": 1,
+      "payback_years": 8,
+      "income_per_service_mwh": 500
+    },
+    "buildings": {
+      "initial_cash": 1000000000000.0,
+      "fuel": "gas",
+      "fossil_service_mw": 12,
+      "electric_service_mw": 4,
+      "base_service_mwh": 80000,
+      "shape": [
+        0.2,
+        0.3,
+        0.3,
+        0.2
+      ],
+      "fuel_efficiency": 0.8,
+      "electric_efficiency": 1.0,
+      "service_intensity_decline": 0.005,
+      "priority": 0,
+      "device_lifetime_years": 15,
+      "capex_per_service_mw": 60000,
+      "installation_limit_mw": 1,
+      "payback_years": 8,
+      "income_per_service_mwh": 500
+    }
+  },
+  "initial_cohorts": [
+    {
+      "id": "fixture/coal",
+      "plant": "coal_plant",
+      "capacity_mw": 10,
+      "online_year": 2010,
+      "retirement_year": 2035,
+      "legal_exit_year": 2035,
+      "status": "active"
+    },
+    {
+      "id": "fixture/gas",
+      "plant": "gas_plant",
+      "capacity_mw": 8,
+      "online_year": 2010,
+      "retirement_year": 2035,
+      "legal_exit_year": 2035,
+      "status": "active"
+    },
+    {
+      "id": "fixture/oil",
+      "plant": "oil_plant",
+      "capacity_mw": 1,
+      "online_year": 2010,
+      "retirement_year": 2035,
+      "legal_exit_year": 2035,
+      "status": "active"
+    },
+    {
+      "id": "fixture/biomass",
+      "plant": "biomass_plant",
+      "capacity_mw": 1,
+      "online_year": 2010,
+      "retirement_year": 2035,
+      "legal_exit_year": 2035,
+      "status": "active"
+    },
+    {
+      "id": "fixture/hydro",
+      "plant": "hydro_plant",
+      "capacity_mw": 3,
+      "online_year": 2010,
+      "retirement_year": 2035,
+      "legal_exit_year": 2035,
+      "status": "active"
+    },
+    {
+      "id": "fixture/nuclear",
+      "plant": "nuclear_plant",
+      "capacity_mw": 4,
+      "online_year": 2010,
+      "retirement_year": 2035,
+      "legal_exit_year": 2035,
+      "status": "active"
+    },
+    {
+      "id": "fixture/wind",
+      "plant": "wind_plant",
+      "capacity_mw": 8,
+      "online_year": 2010,
+      "retirement_year": 2035,
+      "legal_exit_year": 2035,
+      "status": "active"
+    },
+    {
+      "id": "fixture/solar",
+      "plant": "solar_plant",
+      "capacity_mw": 10,
+      "online_year": 2010,
+      "retirement_year": 2035,
+      "legal_exit_year": 2035,
+      "status": "active"
+    },
+    {
+      "id": "fixture/electrolyser",
+      "plant": "electrolyser",
+      "capacity_mw": 0.2,
+      "online_year": 2013,
+      "retirement_year": 2033,
+      "legal_exit_year": 2033,
+      "status": "active"
+    },
+    {
+      "id": "fixture/fuel_cell",
+      "plant": "fuel_cell",
+      "capacity_mw": 0.2,
+      "online_year": 2013,
+      "retirement_year": 2033,
+      "legal_exit_year": 2033,
+      "status": "active"
+    }
+  ],
+  "policies": [
+    {
+      "id": "fixture-net-charge",
+      "published_year": 2015,
+      "effective_year": 2015,
+      "basis": "SYNTHETIC net carbon charge, NOT China ETS/free allowances",
+      "coverage": {
+        "coal_plant": 1,
+        "gas_plant": 1,
+        "oil_plant": 1,
+        "biomass_plant": 1,
+        "hydro_plant": 1,
+        "nuclear_plant": 1,
+        "wind_plant": 1,
+        "solar_plant": 1,
+        "electrolyser": 1,
+        "fuel_cell": 1,
+        "industry": 1,
+        "transport": 1,
+        "buildings": 1
+      }
+    }
+  ],
+  "drivers": {
+    "2015": {
+      "gdp_index": 100.0,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2016": {
+      "gdp_index": 102.49999999999999,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2017": {
+      "gdp_index": 105.06249999999999,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2018": {
+      "gdp_index": 107.68906249999996,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2019": {
+      "gdp_index": 110.38128906249996,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2020": {
+      "gdp_index": 113.14082128906244,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2021": {
+      "gdp_index": 115.96934182128899,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2022": {
+      "gdp_index": 118.86857536682123,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2023": {
+      "gdp_index": 121.84028975099173,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2024": {
+      "gdp_index": 124.88629699476652,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2025": {
+      "gdp_index": 128.00845441963565,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2026": {
+      "gdp_index": 131.20866578012655,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2027": {
+      "gdp_index": 134.4888824246297,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2028": {
+      "gdp_index": 137.85110448524543,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2029": {
+      "gdp_index": 141.29738209737656,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2030": {
+      "gdp_index": 144.82981664981097,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2031": {
+      "gdp_index": 148.45056206605622,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2032": {
+      "gdp_index": 152.16182611770762,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2033": {
+      "gdp_index": 155.9658717706503,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2034": {
+      "gdp_index": 159.86501856491654,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2035": {
+      "gdp_index": 163.8616440290394,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2036": {
+      "gdp_index": 167.9581851297654,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2037": {
+      "gdp_index": 172.15713975800952,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2038": {
+      "gdp_index": 176.46106825195974,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2039": {
+      "gdp_index": 180.8725949582587,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2040": {
+      "gdp_index": 185.3944098322152,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2041": {
+      "gdp_index": 190.02927007802052,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2042": {
+      "gdp_index": 194.78000182997104,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2043": {
+      "gdp_index": 199.6495018757203,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2044": {
+      "gdp_index": 204.6407394226133,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2045": {
+      "gdp_index": 209.75675790817857,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2046": {
+      "gdp_index": 215.00067685588306,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2047": {
+      "gdp_index": 220.3756937772801,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2048": {
+      "gdp_index": 225.8850861217121,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2049": {
+      "gdp_index": 231.53221327475487,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2050": {
+      "gdp_index": 237.32051860662372,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2051": {
+      "gdp_index": 243.2535315717893,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2052": {
+      "gdp_index": 249.334869861084,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2053": {
+      "gdp_index": 255.5682416076111,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2054": {
+      "gdp_index": 261.9574476478013,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2055": {
+      "gdp_index": 268.5063838389963,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2056": {
+      "gdp_index": 275.21904343497124,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2057": {
+      "gdp_index": 282.0995195208455,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2058": {
+      "gdp_index": 289.1520075088666,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2059": {
+      "gdp_index": 296.38080769658825,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    },
+    "2060": {
+      "gdp_index": 303.7903278890029,
+      "cost_decline": 0.02,
+      "carbon_price": 50,
+      "generation_price": 90,
+      "retail_price": 110,
+      "hydrogen_price": 160
+    }
+  },
+  "carbon_bridge": {
+    "2015": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2016": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2017": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2018": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2019": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2020": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2021": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2022": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2023": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2024": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2025": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2026": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2027": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2028": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2029": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2030": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2031": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2032": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2033": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2034": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2035": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2036": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2037": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2038": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2039": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2040": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2041": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2042": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2043": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2044": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2045": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2046": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2047": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2048": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2049": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2050": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2051": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2052": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2053": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2054": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2055": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2056": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2057": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2058": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2059": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    },
+    "2060": {
+      "other_positive_t": 1000,
+      "net_removals_t": 100,
+      "basis": "SYNTHETIC constants, not inventories or forecasts; biomass zero EF is fixture convention"
+    }
+  }
+}

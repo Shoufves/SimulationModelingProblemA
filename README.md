@@ -50,6 +50,8 @@ A题/
 
 ## 常用命令
 
+P2/lb 首轮实现见 [问题二进度与限制](docs/solutions/p2-lb.md)：新增 Mesa 年度主体与 SciPy 跨时段运行、工程校准及灵敏度入口。**全国历史校准、2030/2060正式预测尚未完成**；`run.py q2` 默认因全国输入未准入返回非零，工程夹具需显式指定 `--config examples/q2/config.json`。本分支起点由用户指定为 `804ec15ee43874303986a7ad91b2cde05c65b124`。
+
 在本目录用 Python 3.11 及以上运行（本轮复现环境记录在 `outputs/validation/`）：
 
 ```powershell

@@ -1,0 +1,58 @@
+[
+  {
+    "source_key": "yx:GCB_GCB2025v15_MtCO2_flat",
+    "path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+    "actual_sha256": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+    "catalog_sha256": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+    "matches_catalog": true,
+    "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+  },
+  {
+    "source_key": "yx:IPCC_ENERGY_STATIONARY",
+    "path": "data/raw/batch3_scenarios/ipcc_2006_stationary_combustion.pdf",
+    "actual_sha256": "a25d9f96d7672df391b328de79d4cfd812c07fe79d5cf4a30d23d82d8f02985b",
+    "catalog_sha256": "a25d9f96d7672df391b328de79d4cfd812c07fe79d5cf4a30d23d82d8f02985b",
+    "matches_catalog": true,
+    "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+  },
+  {
+    "source_key": "yx:IRENA_COST_2024_PDF",
+    "path": "data/raw/batch3_scenarios/irena_power_costs_2024.pdf",
+    "actual_sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+    "catalog_sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+    "matches_catalog": true,
+    "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+  },
+  {
+    "source_key": "yx:POLICY_CARBON_2021",
+    "path": "data/raw/batch3_scenarios/policy_carbon_2021.html",
+    "actual_sha256": "e55cb582d619200931087b3b957beb20f795d5ce38caa79ee4f724fa3027bde6",
+    "catalog_sha256": "e55cb582d619200931087b3b957beb20f795d5ce38caa79ee4f724fa3027bde6",
+    "matches_catalog": true,
+    "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+  },
+  {
+    "source_key": "yx:POLICY_CARBON_2026",
+    "path": "data/raw/batch3_scenarios/policy_carbon_2026.html",
+    "actual_sha256": "4255be5af1310a854134f52b7ac03ceca142f08b675c6fcefb2a9570653ff83f",
+    "catalog_sha256": "4255be5af1310a854134f52b7ac03ceca142f08b675c6fcefb2a9570653ff83f",
+    "matches_catalog": true,
+    "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+  },
+  {
+    "source_key": "yx:NBS_2025_C09-02",
+    "path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+    "actual_sha256": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+    "catalog_sha256": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+    "matches_catalog": true,
+    "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+  },
+  {
+    "source_key": "yx:NBS_2025_C09-15",
+    "path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+    "actual_sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+    "catalog_sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+    "matches_catalog": true,
+    "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+  }
+]
