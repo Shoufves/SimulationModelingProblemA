@@ -55,6 +55,8 @@ def sources(aliases):
                and Path(r['path']).name.startswith('sources') and r['path'].endswith('.json')]
     specs=[('yx','data/catalog/sources.json','data/catalog/sources.json'),
            ('mmj','A题_mmj/data/sources.json','data/sources.json')]
+    if (CAT/'q1_sources.json').is_file():
+        specs.append(('q1','data/catalog/q1_sources.json','data/catalog/q1_sources.json'))
     specs.extend(('lb/'+('base' if Path(r['path'][len(LIB):]).parent.as_posix()=='.' else Path(r['path'][len(LIB):]).parent.as_posix()),r['path'],r['target']) for r in manifests)
     evidence=defaultdict(list)
     for review in load(ROOT/'data/evidence_reviews.json')['reviews']:
@@ -74,6 +76,10 @@ def sources(aliases):
                 else:
                     attempts=[(Path(old_manifest).parent/oldfile).as_posix(),LIB+oldfile]
             canonical=next((aliases[x] for x in attempts if x in aliases),'')
+            if namespace=='q1':
+                candidate=(ROOT/oldfile).resolve()
+                if not candidate.is_relative_to(ROOT/'data/raw/q1'):raise ValueError('Q1 original outside dedicated source directory')
+                canonical=candidate.relative_to(ROOT).as_posix()
             exists=bool(canonical and (ROOT/canonical).is_file())
             filehash=sha(ROOT/canonical) if exists else ''
             registry.append(dict(source_key=namespace+':'+sid,namespace=namespace,original_source_id=sid,
@@ -117,6 +123,10 @@ def datasets(refs):
             status='diagnostic_only';boundary+=' 主用已发表群体汇总；旧未加权汇总仅供差异诊断。'
         if any(x in rel for x in ('household','employment','ai_trade/compute')):
             use='扩展模块，按final E4数据门槛启用；'+use
+        if rel.startswith('data/processed/q1/'):
+            status='q1_descriptive_transcription_reviewed'
+            use='Q1描述/可比案例；审查见docs/solutions/p1-lb-input-review.md及p1-lb-additional-review.md；非ABM准入'
+            boundary='共同base原件转录及另行核验的公开补充；未获三人共同输入更新批准。逐行区分年份、来源及用途：旧成本投影、多年样本、2024实测和12月价格不混用；发用差非潮流。'
         rows.append(dict(path=rel,final_refs=';'.join(reverse[rel]),status=status,use=use,boundary=boundary,sha256=sha(p)))
     save_csv(CAT/'datasets_unified.csv',rows,['path','final_refs','status','use','boundary','sha256'])
     return rows

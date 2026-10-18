@@ -1,0 +1,414 @@
+{
+  "passed": true,
+  "scope": "Engineering and provenance checks only; not proof that all three Q1 subquestions are complete; not external acceptance A7",
+  "checks": [
+    {
+      "check": "p1_lb_success",
+      "passed": true,
+      "detail": {
+        "history": 2146,
+        "indicators": 182,
+        "regions": 31
+      }
+    },
+    {
+      "check": "p1_lb_output_set",
+      "passed": true,
+      "detail": [
+        "cost_sensitivity.svg",
+        "coverage.csv",
+        "demand_trends.svg",
+        "energy_assessment.csv",
+        "energy_roles.csv",
+        "gaps_and_conflicts.csv",
+        "history.csv",
+        "import_origins.csv",
+        "indicators.csv",
+        "model_handoff.csv",
+        "price_trends.svg",
+        "regional_comparison.csv",
+        "regional_shares.svg",
+        "renewable_regions.csv",
+        "report.md",
+        "static_balance.json",
+        "synergy_assessment.csv",
+        "technology_region_capacities.csv"
+      ]
+    },
+    {
+      "check": "p1_lb_output_hashes",
+      "passed": true,
+      "detail": {
+        "cost_sensitivity.svg": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6",
+        "coverage.csv": "4b553e7f838098de0387e7a547115e213c557b1938998b6d3f03c8f637dfb5da",
+        "demand_trends.svg": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406",
+        "energy_assessment.csv": "c0d33c6daabeb73699d1a3a18762b3047d5d668fa4a52688489150daab6e27dd",
+        "energy_roles.csv": "0bf7cc8027d537962a729e94e5020c5ac17eacf099b1fa1b3b8f96b8ff061b52",
+        "gaps_and_conflicts.csv": "9a97b06f8d96444fb15a1c0d73279c567bf4a4de7561c19b7f9b45b34f60d955",
+        "history.csv": "8231fa125863d3f8d7e2b3196dacccbad088cd1ae86f2f336ab981047d001600",
+        "import_origins.csv": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469",
+        "indicators.csv": "29ce942df6d0ab366ddc6d763560ff2d0461a6da12bbf6ad7322d5f0908edd49",
+        "model_handoff.csv": "db1eb38de5045791d652a649d8482fedb7a6917ce08dfd0e56c455ac451784cc",
+        "price_trends.svg": "858c13941f01b03c2f91dfb0ad2adfcf8ed5d598e9b9bb9b13cc1791f75553ab",
+        "regional_comparison.csv": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51",
+        "regional_shares.svg": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396",
+        "renewable_regions.csv": "f58324e3695af1f8836df0013bc1a3ad18b99b8dfd3472f9a1245d15a2b82373",
+        "report.md": "ad042cee7ed622ff5bb973c1a756b0ebb3c0ac3c027f54ba4f1fdac434bcba27",
+        "static_balance.json": "30a66292a4b577478c0f84f68dae004646dbbbc428a5ace8c95f3e2779ce7624",
+        "synergy_assessment.csv": "25f3d313131c8e201c6a999919a2acb5572c7aac80620dc2a5c594c913692ae3",
+        "technology_region_capacities.csv": "385739642cd63cba8f785b05a5a3d330566b91031824d01a62138843033f01f6"
+      }
+    },
+    {
+      "check": "p1_lb_code_current",
+      "passed": true,
+      "detail": {
+        "run.py": "389f172097a953bef2e45450a06f204dfd623404a6ab97559bec82f368499570",
+        "scripts/build_q1.py": "4b6f26d952e2d16c18f8852664e531db6ee89677b574c21d3086a42d73e458af",
+        "src/energy_model/q1.py": "ef5cfb7a484469dd559e047c4ae5b5805a01a02f855dac1303105d9ff8d69ceb",
+        "scripts/prepare_q1_review.py": "f632cfdf4c9a188f28f4a22c56c3565931243af126e2f97953c3816eed650f57",
+        "scripts/plot_q1.py": "69fb0c82f46bfe4ad5f73344178a949dbcf7aa783c178571d3311dfa4da6ed29",
+        "scripts/q1_additional_analysis.py": "9625f4797aff3e97f94a25dc24d36c8fa3d77497f7d7222b2ce30e51609e05bc",
+        "scripts/extract_q1_additions.py": "ed5e64deae95ac2ff13f83c38ba6516d86cf8b8822b1fe20c22956e15a3c4695",
+        "requirements-q1.txt": "f1b21977c06d06cc687ebb0b0f057787635239f3e446c436f78e722ce2699045"
+      }
+    },
+    {
+      "check": "p1_lb_config_current",
+      "passed": true,
+      "detail": "dc234baf4adae1e3b3c938aadf30bf1d77312f279753cb1f97194f9bcf04fb11"
+    },
+    {
+      "check": "lb_reproduction_success",
+      "passed": true,
+      "detail": {
+        "history": 2146,
+        "indicators": 182,
+        "regions": 31
+      }
+    },
+    {
+      "check": "lb_reproduction_output_set",
+      "passed": true,
+      "detail": [
+        "cost_sensitivity.svg",
+        "coverage.csv",
+        "demand_trends.svg",
+        "energy_assessment.csv",
+        "energy_roles.csv",
+        "gaps_and_conflicts.csv",
+        "history.csv",
+        "import_origins.csv",
+        "indicators.csv",
+        "model_handoff.csv",
+        "price_trends.svg",
+        "regional_comparison.csv",
+        "regional_shares.svg",
+        "renewable_regions.csv",
+        "report.md",
+        "static_balance.json",
+        "synergy_assessment.csv",
+        "technology_region_capacities.csv"
+      ]
+    },
+    {
+      "check": "lb_reproduction_output_hashes",
+      "passed": true,
+      "detail": {
+        "cost_sensitivity.svg": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6",
+        "coverage.csv": "4b553e7f838098de0387e7a547115e213c557b1938998b6d3f03c8f637dfb5da",
+        "demand_trends.svg": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406",
+        "energy_assessment.csv": "c0d33c6daabeb73699d1a3a18762b3047d5d668fa4a52688489150daab6e27dd",
+        "energy_roles.csv": "0bf7cc8027d537962a729e94e5020c5ac17eacf099b1fa1b3b8f96b8ff061b52",
+        "gaps_and_conflicts.csv": "9a97b06f8d96444fb15a1c0d73279c567bf4a4de7561c19b7f9b45b34f60d955",
+        "history.csv": "8231fa125863d3f8d7e2b3196dacccbad088cd1ae86f2f336ab981047d001600",
+        "import_origins.csv": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469",
+        "indicators.csv": "29ce942df6d0ab366ddc6d763560ff2d0461a6da12bbf6ad7322d5f0908edd49",
+        "model_handoff.csv": "db1eb38de5045791d652a649d8482fedb7a6917ce08dfd0e56c455ac451784cc",
+        "price_trends.svg": "858c13941f01b03c2f91dfb0ad2adfcf8ed5d598e9b9bb9b13cc1791f75553ab",
+        "regional_comparison.csv": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51",
+        "regional_shares.svg": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396",
+        "renewable_regions.csv": "f58324e3695af1f8836df0013bc1a3ad18b99b8dfd3472f9a1245d15a2b82373",
+        "report.md": "ad042cee7ed622ff5bb973c1a756b0ebb3c0ac3c027f54ba4f1fdac434bcba27",
+        "static_balance.json": "30a66292a4b577478c0f84f68dae004646dbbbc428a5ace8c95f3e2779ce7624",
+        "synergy_assessment.csv": "25f3d313131c8e201c6a999919a2acb5572c7aac80620dc2a5c594c913692ae3",
+        "technology_region_capacities.csv": "385739642cd63cba8f785b05a5a3d330566b91031824d01a62138843033f01f6"
+      }
+    },
+    {
+      "check": "lb_reproduction_code_current",
+      "passed": true,
+      "detail": {
+        "run.py": "389f172097a953bef2e45450a06f204dfd623404a6ab97559bec82f368499570",
+        "scripts/build_q1.py": "4b6f26d952e2d16c18f8852664e531db6ee89677b574c21d3086a42d73e458af",
+        "src/energy_model/q1.py": "ef5cfb7a484469dd559e047c4ae5b5805a01a02f855dac1303105d9ff8d69ceb",
+        "scripts/prepare_q1_review.py": "f632cfdf4c9a188f28f4a22c56c3565931243af126e2f97953c3816eed650f57",
+        "scripts/plot_q1.py": "69fb0c82f46bfe4ad5f73344178a949dbcf7aa783c178571d3311dfa4da6ed29",
+        "scripts/q1_additional_analysis.py": "9625f4797aff3e97f94a25dc24d36c8fa3d77497f7d7222b2ce30e51609e05bc",
+        "scripts/extract_q1_additions.py": "ed5e64deae95ac2ff13f83c38ba6516d86cf8b8822b1fe20c22956e15a3c4695",
+        "requirements-q1.txt": "f1b21977c06d06cc687ebb0b0f057787635239f3e446c436f78e722ce2699045"
+      }
+    },
+    {
+      "check": "lb_reproduction_config_current",
+      "passed": true,
+      "detail": "dc234baf4adae1e3b3c938aadf30bf1d77312f279753cb1f97194f9bcf04fb11"
+    },
+    {
+      "check": "independent_directory_reproduction",
+      "passed": true,
+      "detail": [
+        {
+          "file": "cost_sensitivity.svg",
+          "match": true,
+          "sha256": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6"
+        },
+        {
+          "file": "coverage.csv",
+          "match": true,
+          "sha256": "4b553e7f838098de0387e7a547115e213c557b1938998b6d3f03c8f637dfb5da"
+        },
+        {
+          "file": "demand_trends.svg",
+          "match": true,
+          "sha256": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406"
+        },
+        {
+          "file": "energy_assessment.csv",
+          "match": true,
+          "sha256": "c0d33c6daabeb73699d1a3a18762b3047d5d668fa4a52688489150daab6e27dd"
+        },
+        {
+          "file": "energy_roles.csv",
+          "match": true,
+          "sha256": "0bf7cc8027d537962a729e94e5020c5ac17eacf099b1fa1b3b8f96b8ff061b52"
+        },
+        {
+          "file": "gaps_and_conflicts.csv",
+          "match": true,
+          "sha256": "9a97b06f8d96444fb15a1c0d73279c567bf4a4de7561c19b7f9b45b34f60d955"
+        },
+        {
+          "file": "history.csv",
+          "match": true,
+          "sha256": "8231fa125863d3f8d7e2b3196dacccbad088cd1ae86f2f336ab981047d001600"
+        },
+        {
+          "file": "import_origins.csv",
+          "match": true,
+          "sha256": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469"
+        },
+        {
+          "file": "indicators.csv",
+          "match": true,
+          "sha256": "29ce942df6d0ab366ddc6d763560ff2d0461a6da12bbf6ad7322d5f0908edd49"
+        },
+        {
+          "file": "model_handoff.csv",
+          "match": true,
+          "sha256": "db1eb38de5045791d652a649d8482fedb7a6917ce08dfd0e56c455ac451784cc"
+        },
+        {
+          "file": "price_trends.svg",
+          "match": true,
+          "sha256": "858c13941f01b03c2f91dfb0ad2adfcf8ed5d598e9b9bb9b13cc1791f75553ab"
+        },
+        {
+          "file": "regional_comparison.csv",
+          "match": true,
+          "sha256": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51"
+        },
+        {
+          "file": "regional_shares.svg",
+          "match": true,
+          "sha256": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396"
+        },
+        {
+          "file": "renewable_regions.csv",
+          "match": true,
+          "sha256": "f58324e3695af1f8836df0013bc1a3ad18b99b8dfd3472f9a1245d15a2b82373"
+        },
+        {
+          "file": "report.md",
+          "match": true,
+          "sha256": "ad042cee7ed622ff5bb973c1a756b0ebb3c0ac3c027f54ba4f1fdac434bcba27"
+        },
+        {
+          "file": "static_balance.json",
+          "match": true,
+          "sha256": "30a66292a4b577478c0f84f68dae004646dbbbc428a5ace8c95f3e2779ce7624"
+        },
+        {
+          "file": "synergy_assessment.csv",
+          "match": true,
+          "sha256": "25f3d313131c8e201c6a999919a2acb5572c7aac80620dc2a5c594c913692ae3"
+        },
+        {
+          "file": "technology_region_capacities.csv",
+          "match": true,
+          "sha256": "385739642cd63cba8f785b05a5a3d330566b91031824d01a62138843033f01f6"
+        }
+      ]
+    },
+    {
+      "check": "unique_history_keys",
+      "passed": true,
+      "detail": 2146
+    },
+    {
+      "check": "four_dimensions_have_quantitative_evidence",
+      "passed": true,
+      "detail": {
+        "保障": 26,
+        "低碳": 74,
+        "经济": 39,
+        "协调": 43
+      }
+    },
+    {
+      "check": "indicator_inputs_resolve",
+      "passed": true,
+      "detail": 182
+    },
+    {
+      "check": "nine_energies_and_three_support_roles",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "check": "handoff_refs_resolve",
+      "passed": true,
+      "detail": 427
+    },
+    {
+      "check": "handoff_numeric_values",
+      "passed": true,
+      "detail": 233
+    },
+    {
+      "check": "price_quarantine_not_admitted",
+      "passed": true,
+      "detail": "Old archived source plus individually reviewed PDF releases; anomalous Europe 2024 excluded"
+    },
+    {
+      "check": "anomalous_price_cell_excluded",
+      "passed": true,
+      "detail": "2024 2.00 USD/MMBtu rejected; NEA TTF separately labelled"
+    },
+    {
+      "check": "per_energy_four_dimension_evidence",
+      "passed": true,
+      "detail": 36
+    },
+    {
+      "check": "synergy_conditions_and_evidence",
+      "passed": true,
+      "detail": 8
+    },
+    {
+      "check": "report_links_resolve",
+      "passed": true,
+      "detail": [
+        "../../../docs/solutions/p1-lb-final-acceptance.md",
+        "history.csv",
+        "coverage.csv",
+        "indicators.csv",
+        "../../../workflow/q1_inputs.json",
+        "regional_comparison.csv",
+        "static_balance.json",
+        "model_handoff.csv",
+        "demand_trends.svg",
+        "cost_sensitivity.svg",
+        "regional_shares.svg",
+        "gaps_and_conflicts.csv",
+        "run_manifest.json",
+        "../../../docs/solutions/p1-lb-input-review.md",
+        "energy_assessment.csv",
+        "synergy_assessment.csv",
+        "price_trends.svg",
+        "technology_region_capacities.csv",
+        "renewable_regions.csv",
+        "../../../docs/solutions/p1-lb-additional-review.md"
+      ]
+    },
+    {
+      "check": "demand_trends.svg_valid_svg",
+      "passed": true,
+      "detail": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406"
+    },
+    {
+      "check": "cost_sensitivity.svg_valid_svg",
+      "passed": true,
+      "detail": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6"
+    },
+    {
+      "check": "regional_shares.svg_valid_svg",
+      "passed": true,
+      "detail": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396"
+    },
+    {
+      "check": "price_trends.svg_valid_svg",
+      "passed": true,
+      "detail": "858c13941f01b03c2f91dfb0ad2adfcf8ed5d598e9b9bb9b13cc1791f75553ab"
+    },
+    {
+      "check": "ei_original_cell_checks.json",
+      "passed": true,
+      "detail": 60
+    },
+    {
+      "check": "price_original_cell_checks.json",
+      "passed": true,
+      "detail": 36
+    },
+    {
+      "check": "cost_original_line_checks.json",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "check": "tests.json",
+      "passed": true,
+      "detail": 163
+    },
+    {
+      "check": "workspace_audit.json",
+      "passed": true,
+      "detail": 14
+    },
+    {
+      "check": "original_admission_contracts_unchanged",
+      "passed": true,
+      "detail": [
+        {
+          "file": "data/sources.json",
+          "unchanged": true
+        },
+        {
+          "file": "data/evidence_reviews.json",
+          "unchanged": true
+        },
+        {
+          "file": "workflow/model_inputs.json",
+          "unchanged": true
+        }
+      ]
+    },
+    {
+      "check": "requested_base_is_ancestor",
+      "passed": true,
+      "detail": {
+        "base": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+        "head": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+        "branch": "p1/lb"
+      }
+    }
+  ],
+  "files": {
+    "history": 2146,
+    "indicators": 182,
+    "handoff": 427,
+    "numeric_candidates": 233
+  },
+  "pending_external_review": "Two real reviewers must approve the same final PR head before merge; local checks do not grant approval"
+}

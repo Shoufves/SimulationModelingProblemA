@@ -16,6 +16,7 @@
 | [创新备选阅读版](docs/gemini_final_idea_阅读版.md) | 基础主线验收后再启用的算法实验 |
 | [三人 Git 协作规程](docs/17_git_collaboration.md) | 三人同题并行、Agent 开工、分支、PR、独立评审及合并 |
 | [P0 → P1/Q1 开工单](docs/rounds/P0_P1_Q1.md) | 问题一的输入范围、交付物、验收与起跑线锁定状态 |
+| [P1/lb 问题一候选](docs/solutions/p1-lb.md) | 本分支的问题一报告、补齐后逐项核对、用途审查与复现入口；尚未替代三人评审 |
 
 ## 目录职责
 
@@ -52,7 +53,8 @@ A题/
 ```powershell
 python -B -X utf8 run.py audit          # 原件、文件去留、链接、去重及隔离检查
 python -B -X utf8 scripts/scan_google_keys.py # 扫描工作树及 ZIP 内的 Google API key
-python -B -X utf8 run.py test           # 128项已有测试
+python -B -X utf8 run.py test           # 全部现有测试，实际数量见validation结果
+python -B -X utf8 run.py q1 --output-dir outputs/q1/p1_lb # 问题一离线候选；先安装requirements-q1.txt
 python -B -X utf8 run.py attachments    # 官方附件标准化，保留890条记录及重复组
 python -B -X utf8 run.py verify         # 准入检查及限定初评/需求回算/许可案例
 python -B -X utf8 run.py prototype      # 合成年度主体及连续储能窗口
