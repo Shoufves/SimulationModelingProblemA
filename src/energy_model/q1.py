@@ -168,8 +168,9 @@ def screening_lcoe(capex, om, cf, life, real_wacc):
     if (not all(math.isfinite(x) for x in (capex, om, cf, life, real_wacc))
             or capex <= 0 or om < 0 or not 0 < cf <= 1 or life <= 0 or real_wacc < 0):
         raise Q1Error("Invalid cost assumptions")
+    # log1p/expm1 retain the r -> 0 limit when 1+r rounds to 1.
     crf = (1/life if real_wacc == 0 else
-           real_wacc / (1-(1+real_wacc)**(-life)))
+           real_wacc / -math.expm1(-life*math.log1p(real_wacc)))
     return (capex*crf + om) / (8760*cf)
 
 

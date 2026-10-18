@@ -17,6 +17,7 @@ sys.path.insert(0,str(ROOT/"scripts"))
 from energy_model.q1 import (Q1Error,balance_table,concentration,identity,inside,
     price_volatility,ratio_records,read_csv,read_json,screening_lcoe,spatial_difference)
 import run_q1_assessment
+import validate_q1
 from run_q1_assessment import validate_inputs,normalize,calculate
 from scan_google_keys import scan_workspace
 from audit_workspace import inventory_scope
@@ -138,6 +139,14 @@ class Q1CalculationTests(unittest.TestCase):
         for cf in (0,-.1,1.1,float("nan")):
             with self.assertRaises(Q1Error):screening_lcoe(1000,20,cf,25,.05)
 
+    def test_cost_near_zero_agrees_with_discounted_cash_flow(self):
+        for rate in (0,1e-20,1e-12,.03,.05,.07):
+            # Independent finite cash-flow sum, avoiding the CRF subtraction.
+            annuity=sum((1+rate)**(-year) for year in range(1,26))
+            discounted=(1000+20*annuity)/(8760*.5*annuity)
+            with self.subTest(rate=rate):
+                self.assertAlmostEqual(screening_lcoe(1000,20,.5,25,rate),discounted,places=13)
+
     def test_balance_missing_and_observed_residual_preserved(self):
         r=identity({"supply":100,"production":80},{"production":1,"imports":1},"supply")
         self.assertIsNone(r["residual"]);self.assertEqual(r["missing"],["imports"])
@@ -196,6 +205,38 @@ class Q1ContractTests(unittest.TestCase):
         manifest["inputs"][0]["allowed_use"]="national model initialization"
         with self.assertRaisesRegex(Q1Error,"substantive review"):
             validate_inputs(ROOT,manifest)
+
+    def test_invalid_sensitivity_and_unsupported_method_labels_rejected(self):
+        for rates in ([],[.03,.03],[-.01],[float("nan")],[float("inf")],[".05"],[True]):
+            manifest=copy.deepcopy(self.manifest)
+            manifest["assumptions"]["real_wacc"]=rates
+            with self.subTest(rates=rates),self.assertRaises(Q1Error):
+                validate_inputs(ROOT,manifest)
+        manifest=copy.deepcopy(self.manifest)
+        manifest["observation_window"]=[2016,2024]
+        with self.assertRaisesRegex(Q1Error,"observation window"):
+            validate_inputs(ROOT,manifest)
+        manifest=copy.deepcopy(self.manifest)
+        manifest["assumptions"]["cost_service"]="firmed electricity"
+        with self.assertRaisesRegex(Q1Error,"unfirmed"):
+            validate_inputs(ROOT,manifest)
+
+    def test_report_follows_actual_cost_rates_order_and_summary(self):
+        for rates in ([.07,.03,.05],[.031,.034]):
+            manifest=copy.deepcopy(self.manifest)
+            manifest["assumptions"]["real_wacc"]=rates
+            h,i,r,_,g,s=calculate(ROOT,manifest,validate_inputs(ROOT,manifest))
+            text=run_q1_assessment.report(i,r,g,s,h)
+            labels="|".join(f"{x*100:g}%" for x in rates)
+            self.assertIn("|技术|"+labels+"|单位|",text)
+            expected="|onshore_wind|"+"|".join(
+                f"{screening_lcoe(856,29,.33,25,rate):.5f}" for rate in rates)+"|2024 USD/kWh|"
+            self.assertIn(expected,text)
+            representative=.05 if .05 in rates else rates[0]
+            self.assertIn(f"统一25年、{representative*100:g}%实际WACC的陆风",text)
+            ids=[x["indicator_id"] for x in i if x["indicator_id"].startswith("screening_")]
+            self.assertEqual(len(ids),len(set(ids)))
+            self.assertEqual(len(ids),2*len(rates))
 
     def test_restricted_and_escape_paths_rejected_before_read(self):
         for p in ("data/restricted/household/file","../outside","D:/outside"):
@@ -312,6 +353,87 @@ class Q1ContractTests(unittest.TestCase):
             self.assertTrue(result["passed"])
             self.assertEqual(result["files_scanned"],1)
             self.assertIn("data/restricted",result["excluded_directories"])
+
+
+class Q1ValidationTests(unittest.TestCase):
+    def make_run(self,folder):
+        for name in validate_q1.ARTIFACTS:
+            (folder/name).write_bytes(("fixture "+name).encode())
+        expected=dict(candidate="p1/mmj",success=True,code_hashes={"code.py":"current"},
+                      input_manifest={"path":"inputs.json","sha256":"current"})
+        manifest=dict(expected,outputs={name:run_q1_assessment.sha(folder/name)
+                                       for name in sorted(validate_q1.ARTIFACTS)})
+        run_q1_assessment.write_json(folder/"run_manifest.json",manifest)
+        return expected,manifest
+
+    def test_reproduction_checks_actual_artifacts_not_just_matching_manifests(self):
+        with fixture_dir(ROOT/"tmp/tests") as folder:
+            expected,_=self.make_run(folder)
+            self.assertTrue(validate_q1.inspect_run(folder,".",True,expected)["passed"])
+            (folder/"history.csv").write_bytes(b"changed without refreshing either manifest")
+            result=validate_q1.inspect_run(folder,".",True,expected)
+            self.assertFalse(result["passed"])
+            self.assertIn("Artifact fingerprint mismatch: history.csv",result["errors"])
+
+    def test_old_valid_outputs_do_not_pass_after_failed_current_command(self):
+        with fixture_dir(ROOT/"tmp/tests") as folder:
+            expected,_=self.make_run(folder)
+            self.assertFalse(validate_q1.inspect_run(folder,".",False,expected)["passed"])
+
+    def test_stale_code_or_inputs_cannot_claim_current_reproduction(self):
+        with fixture_dir(ROOT/"tmp/tests") as folder:
+            expected,manifest=self.make_run(folder)
+            for key in ("code_hashes","input_manifest"):
+                changed=copy.deepcopy(manifest);changed[key]={}
+                run_q1_assessment.write_json(folder/"run_manifest.json",changed)
+                result=validate_q1.inspect_run(folder,".",True,expected)
+                self.assertFalse(result["passed"])
+                self.assertIn("Run identity mismatch: "+key,result["errors"])
+
+    def test_missing_malformed_or_unsafe_artifact_manifests_fail_closed(self):
+        with fixture_dir(ROOT/"tmp/tests") as folder:
+            expected,manifest=self.make_run(folder)
+            for output_map in ({},dict(manifest["outputs"],**{"../outside":"unused"})):
+                changed=dict(manifest,outputs=output_map)
+                run_q1_assessment.write_json(folder/"run_manifest.json",changed)
+                self.assertFalse(validate_q1.inspect_run(folder,".",True,expected)["passed"])
+            (folder/"run_manifest.json").write_bytes(b"{invalid")
+            self.assertFalse(validate_q1.inspect_run(folder,".",True,expected)["passed"])
+            (folder/"run_manifest.json").write_bytes(b"[]")
+            self.assertFalse(validate_q1.inspect_run(folder,".",True,expected)["passed"])
+            run_q1_assessment.write_json(folder/"run_manifest.json",manifest)
+            (folder/"history.csv").unlink()
+            self.assertFalse(validate_q1.inspect_run(folder,".",True,expected)["passed"])
+            (folder/"run_manifest.json").unlink()
+            self.assertFalse(validate_q1.inspect_run(folder,".",True,expected)["passed"])
+
+    def test_interrupted_validation_restores_existing_and_absent_reports(self):
+        for failure in ("child_launch","malformed_json"):
+            with self.subTest(failure=failure),fixture_dir(ROOT/"tmp/tests") as folder:
+                before={}
+                for index,name in enumerate(validate_q1.LATEST_PATHS):
+                    path=folder/name;path.parent.mkdir(parents=True,exist_ok=True)
+                    before[name]=b"historical bytes\r\n" if index%2==0 else None
+                    if before[name] is not None:
+                        path.write_bytes(before[name])
+                def broken_execute(arguments):
+                    for name in validate_q1.LATEST_PATHS:
+                        (folder/name).write_bytes(b"{invalid")
+                    if failure=="child_launch":
+                        raise OSError("simulated child launch failure")
+                    return run_q1_assessment.read_json(folder/validate_q1.LATEST_PATHS[0])
+                with patch.object(validate_q1,"ROOT",folder),self.assertRaises((OSError,ValueError)):
+                    validate_q1.run_checks(broken_execute)
+                for name,data in before.items():
+                    path=folder/name
+                    self.assertEqual(path.read_bytes() if path.exists() else None,data)
+
+    def test_evidence_path_cannot_overwrite_preserved_report(self):
+        with patch.object(sys,"argv",["validate_q1","--evidence","outputs/validation/tests.json"]),\
+                patch.object(validate_q1,"run_checks") as checks,self.assertRaises(SystemExit) as caught:
+            validate_q1.main()
+        self.assertEqual(caught.exception.code,2)
+        checks.assert_not_called()
 
 
 if __name__=="__main__":

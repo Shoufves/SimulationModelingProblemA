@@ -2,6 +2,7 @@
 import argparse
 import importlib.metadata
 import json
+import math
 import os
 from pathlib import Path
 import subprocess
@@ -45,6 +46,17 @@ def energy_name(var):
 def validate_inputs(root, manifest):
     if manifest.get("schema_version") != 1 or manifest.get("candidate") != "p1/mmj":
         raise Q1Error("Unknown Q1 input contract")
+    if manifest.get("observation_window") != [2015,2024]:
+        raise Q1Error("This Q1 method implements the shared 2015-2024 observation window")
+    assumptions=manifest["assumptions"]
+    rates=assumptions["real_wacc"]
+    if (not isinstance(rates,list) or not rates or
+            any(isinstance(r,bool) or not isinstance(r,(int,float)) or
+                not math.isfinite(r) or r<0 for r in rates) or len(set(rates))!=len(rates)):
+        raise Q1Error("WACC sensitivity requires distinct finite non-negative rates")
+    if assumptions["cost_service"] != (
+            "unfirmed plant-gate electricity; constant annual output; 8760 hours normalization"):
+        raise Q1Error("This cost method only implements the declared unfirmed plant-gate service")
     ids = [r["id"] for r in manifest["inputs"]]
     expected = {"nbs","products","balance","demand","province","macro","co2","snapshot",
                 "cost","cost_method","price","pipeline","lng","coal_trade","communique","renewables",
@@ -270,10 +282,10 @@ def calculate(root, manifest, inputs):
             value=screening_lcoe(cap["value"],om["value"],cf["value"],life["value"],rate)
             cost_result.append(dict(technology=technology,real_wacc=rate,life=life["value"],
                                    capex=cap["value"],om=om["value"],cf=cf["value"],value=value))
-            add(f"screening_{technology}_wacc_{rate:.2f}","经济",2024,technology,value,"2024 USD/kWh","越低越好",
+            add(f"screening_{technology}_wacc_{rate}","经济",2024,technology,value,"2024 USD/kWh","越低越好",
                 f"(CAPEX*CRF({rate},{life['value']})+OM)/(8760*CF)",[cap,cf,om,life],
                 "conditional_common_financing_sensitivity",
-                f"共同实际WACC={rate:.0%}为研究假设；25年、恒定年电量；未含储能/保供/系统接网外部成本；非全国校准成本")
+                f"共同实际WACC={rate*100:g}%为研究假设；{life['value']:g}年、恒定年电量；未含储能/保供/系统接网外部成本；非全国校准成本")
     for technology in ("onshore_wind","offshore_wind","utility_solar_PV"):
         r=select("cost",technology+"_LCOE",2024)
         add("published_"+technology+"_lcoe","经济",2024,technology,r["value"],r["unit"],"越低越好",
@@ -497,6 +509,15 @@ def make_roles():
 def report(indicators,roles,gaps,static,history):
     def v(key,year=2024):
         return next(r["value"] for r in indicators if r["indicator_id"]==key and r["year"]==year)
+    costs=static["comparable_costs"]
+    rates=[r["real_wacc"] for r in costs if r["technology"]=="onshore_wind"]
+    representative=.05 if .05 in rates else rates[0]
+    def cost(technology,rate):
+        return next(r["value"] for r in costs if
+                    r["technology"]==technology and r["real_wacc"]==rate)
+    life=costs[0]["life"]
+    rate_labels=[f"{rate*100:g}%" for rate in rates]
+    rate_text="、".join(rate_labels)
     lines = [
         "# Q1 当前多能源发展现状：mmj 候选研究交付",
         "",
@@ -534,7 +555,7 @@ def report(indicators,roles,gaps,static,history):
         "|---|---|---|",
         f"|保障|2023煤净进口依赖{v('net_import_dependency_煤',2023):.2f}%；石油{v('net_import_dependency_石油',2023):.2f}%|同表同单位；不是2024或原油依赖|",
         f"|低碳|2024煤份额{v('consumption_coal_pct'):.1f}%；水核风太阳能发电占比{v('hydro_nuclear_wind_solar_generation_share'):.2f}%|后者含水电抽蓄未拆分，不代替一次非化石份额|",
-        f"|经济|统一25年、5%实际WACC的陆风{v('screening_onshore_wind_wacc_0.05'):.5f}、海风{v('screening_offshore_wind_wacc_0.05'):.5f}（2024 USD/kWh）|共同融资条件实验，非官方LCOE重现、非到户或保供服务成本|",
+        f"|经济|统一{life:g}年、{representative*100:g}%实际WACC的陆风{cost('onshore_wind',representative):.5f}、海风{cost('offshore_wind',representative):.5f}（2024 USD/kWh）|共同融资条件实验，非官方LCOE重现、非到户或保供服务成本|",
         f"|协调|2024年31省发用电份额距离{v('provincial_generation_use_share_distance'):.5f}；风/PV利用率95.9%/96.8%|空间错配提示协调需求，不能直接断言不安全或推弃电量|",
         "",
         "保障方面，同EI标准的分通道管道气、LNG与EJ煤分别计算来源组HHI；未解析来源组给逐国HHI界，"
@@ -553,17 +574,17 @@ def report(indicators,roles,gaps,static,history):
         f"2015=100指数为{v('energy_intensity_index'):.2f}；碳强度为{v('carbon_intensity'):.4f} tCO2/万元，"
         f"2015=100指数为{v('carbon_intensity_index'):.2f}。这表示单位产出的变化，不等于总排放下降。",
         "",
-        "经济性采用 IRENA 同一原件的2024中国新建风电CAPEX均值、O&M假设及CF均值，统一25年、年末折现与恒定年输出，"
-        "L=(CAPEX×CRF+O&M)/(8760×CF)，按3%、5%、7%实际WACC做敏感性。3/5/7%是透明分析假设，"
+        f"经济性采用 IRENA 同一原件的2024中国新建风电CAPEX均值、O&M假设及CF均值，统一{life:g}年、年末折现与恒定年输出，"
+        f"L=(CAPEX×CRF+O&M)/(8760×CF)，按{rate_text}实际WACC做敏感性。这些折现率是透明分析假设，"
         "不是中国实测融资率。报告公布陆风/光伏/海风LCOE=0.029/0.033/0.056另列，技术WACC不同，"
         "不解释为固定融资净效应，不再叠加CAPEX/O&M。成本仅未保供厂门kWh，不评价等可靠性全系统服务。",
         "原报告说明项目CF通常为事前估计；国家CAPEX和CF均值未逐项目配对。"
         "本式是平均参数条件试算，不等于项目LCOE的加权平均，也不是全国在运机组实测成本。",
         "",
-        "|技术|3%|5%|7%|单位|",
-        "|---|---:|---:|---:|---|"]
+        "|技术|"+"|".join(rate_labels)+"|单位|",
+        "|---|"+"---:|"*len(rates)+"---|"]
     for tech in ("onshore_wind","offshore_wind"):
-        values=[r["value"] for r in static["comparable_costs"] if r["technology"]==tech]
+        values=[cost(tech,rate) for rate in rates]
         lines.append("|"+tech+"|"+"|".join(f"{x:.5f}" for x in values)+"|2024 USD/kWh|")
     lines += ["",
         "价格波动固定考察2015—2024，仅使用可核验旧版年度价格。六个国际基准各有2015—2020六水平、"

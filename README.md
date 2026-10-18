@@ -18,6 +18,7 @@
 | [P0 → P1/Q1 开工单](docs/rounds/P0_P1_Q1.md) | 问题一的输入范围、交付物、验收与起跑线锁定状态 |
 | [P1/mmj Q1 候选研究](docs/solutions/p1-mmj.md) | 四项研究、四维诊断、能源角色、静态核对和Q2候选交接；待两人评审 |
 | [mmj Q1 自查记录](docs/reviews/q1-mmj-selfcheck-20261018.md) | 问题修复、2024储能补提取与16项缺口处置；科学覆盖仍部分完成 |
+| [mmj Q1 第二轮自查](docs/reviews/q1-mmj-selfcheck-round2-20261018.md) | 数值边界、配置报告一致性、异常恢复与产物实际哈希核验 |
 
 ## 目录职责
 

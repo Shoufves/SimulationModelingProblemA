@@ -4,9 +4,9 @@
   "success": true,
   "result_status": "Q1_research_candidate_with_explicit_gaps_pending_A7",
   "base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
-  "code_commit_sha": "8650c94e25f2a1c6a2a111df7a8bc272fb067875",
+  "code_commit_sha": "0891132923138809f84a4ffbb1d6e9f77729ca61",
   "dirty_worktree": true,
-  "worktree_status": "M README.md\n M data/catalog/datasets_unified.csv\n M data/catalog/q1_evidence_review.json\n M data/processed/q1/cost_method_parameters.csv\n M docs/RUNNING.md\n M docs/solutions/p1-mmj.md\n M outputs/q1/p1_mmj/gaps_and_conflicts.csv\n M outputs/q1/p1_mmj/history.csv\n M outputs/q1/p1_mmj/indicators.csv\n M outputs/q1/p1_mmj/model_handoff.csv\n M outputs/q1/p1_mmj/report.md\n M outputs/q1/p1_mmj/run_manifest.json\n M outputs/q1/p1_mmj/static_balance.json\n M outputs/validation/tests.json\n M outputs/validation/workspace_audit.json\n M outputs/workflow/next_prompt.md\n M outputs/workflow/status.json\n M outputs/workflow/status.md\n M scripts/prepare_q1_inputs.py\n M scripts/run_q1_assessment.py\n M scripts/validate_q1.py\n M src/energy_model/q1.py\n M tests/test_q1.py\n M workflow/q1_inputs.json\n?? data/processed/q1/storage_2024.csv\n?? docs/reviews/\n?? outputs/q1/.q1-mmj-f7c7b5b65d6c455aac6d43719b93d955/\n?? outputs/validation/q1_mmj_selfcheck_sandbox_validation.json\n?? outputs/validation/q1_mmj_selfcheck_validation.json",
+  "worktree_status": "M README.md\n M docs/solutions/p1-mmj.md\n M outputs/validation/tests.json\n M outputs/validation/workspace_audit.json\n M outputs/workflow/next_prompt.md\n M outputs/workflow/status.json\n M outputs/workflow/status.md\n M scripts/run_q1_assessment.py\n M scripts/validate_q1.py\n M src/energy_model/q1.py\n M tests/test_q1.py\n?? docs/reviews/q1-mmj-selfcheck-round2-20261018.md\n?? outputs/q1/.q1-mmj-4a1855e55b634403aa7e359e7f5f0ca0/",
   "command": [
     "python",
     "-B",
@@ -79,9 +79,9 @@
   },
   "code_hashes": {
     "run.py": "688a6db72a3a94aaef16ffe4be2523bc032137f8954f2bb6376375f92380139d",
-    "scripts/run_q1_assessment.py": "23d2db58cdfbdf0e71f517decdc61ba99edd36d15deaeb366092db8671eea445",
+    "scripts/run_q1_assessment.py": "d7df40ce2920f0251135fd2a5e9cbf0647e1d37320a068021487a8d13f392bea",
     "scripts/prepare_q1_inputs.py": "4985868ca0b8ca124d7f5774d0ffea1ae8179ba741fad7cc3b69052f68a80218",
-    "src/energy_model/q1.py": "bab52cc0d6b1cb1c97803ffc275a68259ff6ae650712201063ab56cd80f8bd06"
+    "src/energy_model/q1.py": "a296131563eb9452825c269ae89d149ff2be5e478b1be981a065360907dfe1ec"
   },
   "configuration": {
     "real_wacc": [
@@ -140,12 +140,12 @@
     "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
     "gaps_and_conflicts.csv": "9aaf8d55371d93b553b7779f1c77cebd914b9af6f3334c3a4603786fa951b465",
     "history.csv": "c983a410acef77c6edfeeba191847c4625efe352512b50a728ac09957af056e9",
-    "indicators.csv": "35bd3aea2f6300876535ee2ccdd52e1db5a8d39a1cda2386f361abb87dc254f5",
+    "indicators.csv": "3f1a109fcb54d7d90dbc10cbc04922b702af3b5205fb76886b6f92caa81c6db2",
     "model_handoff.csv": "5fca67c96ed9a39141b4cf66159ebf3029ca9bd68f2dd8c86439d1ec220ed2fc",
     "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
     "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
     "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
-    "report.md": "0890bb67dc8d59caaa21194e6ae40808fb29a6187199354f570ae19568db006e",
-    "static_balance.json": "bd930ec58f865383e81905fa9a90f5b6b33e01a0d71e7e6893987377de588cfd"
+    "report.md": "ea3284e3b4540280f475ffe350ba34cd829005b846dd0535030c25075d6f3db7",
+    "static_balance.json": "1b036da474622b41adb2fd67df9cd5b5866491b55761a1d9f24f35954086e004"
   }
 }
