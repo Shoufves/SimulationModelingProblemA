@@ -1,0 +1,665 @@
+{
+  "schema_version": 1,
+  "prepared_at": "2026-10-18T12:02:23+08:00",
+  "phase": "P0",
+  "next_round": "P1",
+  "problem": "Q1",
+  "status": "preparation_issue_open_pending_publication_review_and_base_lock",
+  "reference_remote_main_sha": "064b91d323f16ced13a98181eeb5f5a16609a978",
+  "formal_base_sha": null,
+  "baseline_scope": "Checks were executed against reference commit code and recorded inputs while preparation documents were uncommitted. This is a preparation-time verification snapshot, not a published release verification or Q1 completion; current publishing and review progress is maintained in Issue #1 and its preparation PR.",
+  "github_issue": {
+    "number": 1,
+    "url": "https://github.com/Shoufves/SimulationModelingProblemA/issues/1",
+    "title": "P0 → P1/Q1：锁定问题一范围、输入与验收（准备中）",
+    "state": "open",
+    "created_at": "2026-10-18T04:03:20Z"
+  },
+  "checks": {
+    "tests": {
+      "command": "python -B -X utf8 run.py test",
+      "exit_code": 0,
+      "tests": 128,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "seconds": 1.237002099995152,
+      "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+    },
+    "workspace_audit": {
+      "command": "python -B -X utf8 run.py audit",
+      "exit_code": 0,
+      "passed": true,
+      "checks": 14,
+      "results": [
+        {
+          "check": "retained_files_match_inventory",
+          "passed": true
+        },
+        {
+          "check": "working_tree_google_api_keys_absent",
+          "passed": true
+        },
+        {
+          "check": "protected_directory_unchanged",
+          "passed": true
+        },
+        {
+          "check": "five_official_originals_unchanged",
+          "passed": true
+        },
+        {
+          "check": "three_workspaces_consolidated",
+          "passed": true
+        },
+        {
+          "check": "no_B_C_payload",
+          "passed": true
+        },
+        {
+          "check": "all_final_references_resolve",
+          "passed": true
+        },
+        {
+          "check": "final_reader_links_resolve",
+          "passed": true
+        },
+        {
+          "check": "retained_python_syntax",
+          "passed": true
+        },
+        {
+          "check": "unified_data_keys_unique",
+          "passed": true
+        },
+        {
+          "check": "unified_rows_trace_to_files",
+          "passed": true
+        },
+        {
+          "check": "scope_not_promoted",
+          "passed": true
+        },
+        {
+          "check": "known_quarantine_preserved",
+          "passed": true
+        },
+        {
+          "check": "raw_exact_duplicates_removed",
+          "passed": true
+        }
+      ]
+    },
+    "formal_inputs": {
+      "command": "python -B -X utf8 scripts/workflow_status.py --check-formal-inputs",
+      "exit_code": 0,
+      "passed": true,
+      "accepted_inputs": 9,
+      "errors": [],
+      "limitation": "仅检查已登记子集的证据结构和文件一致性；不自动验证原文真伪、转录正确性、数据覆盖完整性、情景参数或模型有效性。未准入不等于原数值错误。"
+    },
+    "q1_existing_partial_reproduction": {
+      "command": "python -B -X utf8 scripts/build_four_dimension_assessment.py",
+      "exit_code": 0,
+      "status": "partial_four_dimension_synthesis",
+      "metrics": 17,
+      "complete_q1": false,
+      "output": "outputs/current_assessment/four_dimensions_2024.json"
+    }
+  },
+  "execution_notes": [
+    "First test attempt in the restricted Windows sandbox reported 12 temporary-directory permission errors. The identical test command passed outside that sandbox; no tests or admission rules were changed.",
+    "The workflow-status CLI prints text and writes its JSON report. Formal-input results above were read from that report, not parsed from CLI text.",
+    "The Google API key format scan is included in the workspace audit; it is not an exhaustive scan for all credential types.",
+    "After preparation is merged, rerun baseline checks on the published main commit before filling formal_base_sha in the Issue."
+  ],
+  "input_snapshot": {
+    "reference_sha": "064b91d323f16ced13a98181eeb5f5a16609a978",
+    "purpose": "Fingerprints of existing common reference materials and input entry points; not a grant of new scientific uses or a full-repository data manifest.",
+    "restricted_row_data_read": false,
+    "files": [
+      {
+        "path": "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+        "bytes": 255100,
+        "sha256": "a892165c851da77c916d6f2dd7a9cf7062c1e37698a88641b3a3105bef90c963",
+        "git_blob": "f60b1a23939e531e8648ea87de16d1c514657671"
+      },
+      {
+        "path": "AGENTS.md",
+        "bytes": 1663,
+        "sha256": "2e4b918ce3226530f97ddd12f5e701edc478add53f91bfc26f236a16d2baeecd",
+        "git_blob": "9e197076565f8054af12c830e5256b9a0f74b4b8"
+      },
+      {
+        "path": "WORKFLOW.md",
+        "bytes": 2158,
+        "sha256": "97592ae4f20c31bec32a2e9c6eed296be537b1d0cc4fc49fc04eb0fd5afc4f19",
+        "git_blob": "e28e9e26edae8463ba1507822b79ccee1ee3a4f1"
+      },
+      {
+        "path": "data/catalog/datasets_unified.csv",
+        "bytes": 25595,
+        "sha256": "c5bbd628f9ade76492132f7f6a12465ee3791f7bf976cf342876c59738281ad5",
+        "git_blob": "2cf332db7acf92287135d045259bbfcc1191b38e"
+      },
+      {
+        "path": "data/catalog/final_references.json",
+        "bytes": 24777,
+        "sha256": "0a2c04b44979d867095826678f73c08972bf13bac1956c5877e7a347b4210a70",
+        "git_blob": "b2352f3b5516dc7278c00e1532c442f472fea7da"
+      },
+      {
+        "path": "data/catalog/nbs_record_conflicts.csv",
+        "bytes": 85,
+        "sha256": "02e1a4733e8e692d07affcdedae01a00373e478513b8d732c4e7f46754e4240b",
+        "git_blob": "142a603cd0a1d03cb2c1b5471423a65766307cae"
+      },
+      {
+        "path": "data/catalog/nbs_record_provenance.csv",
+        "bytes": 149352,
+        "sha256": "6dc5bad2fb8c555759921824a8e4eeef80053fe32c8f47535fde2e635673d95f",
+        "git_blob": "d76c154e511c6e8763bb7e6cc5e19b638991c057"
+      },
+      {
+        "path": "data/catalog/path_aliases.json",
+        "bytes": 147726,
+        "sha256": "ead19c85622daab9729921a53f1d152e1662e41a5795bd36b258fab2365abb75",
+        "git_blob": "da4256030909fb657e9416601f0a1d10f2832506"
+      },
+      {
+        "path": "data/catalog/sources_unified.json",
+        "bytes": 1039179,
+        "sha256": "b4388ab0ada1583f16f6353c4fea4f1fc401b4e0b4ee7966981e76738d051ffc",
+        "git_blob": "c90868d09460a4def1914a8c189ed630397782e1"
+      },
+      {
+        "path": "data/evidence_reviews.json",
+        "bytes": 26930,
+        "sha256": "6043473c2192dc4c91d47c521bea5adb15b0b07197ad6c421b9216a6f207f376",
+        "git_blob": "873db6168eeae224f150e48713970a7755f8fef5"
+      },
+      {
+        "path": "data/observations/demand_energy_total_2015_2024.json",
+        "bytes": 1163,
+        "sha256": "909be60ca5dd53e79059df6eb087db132b34ca1f831728efe2debb20a02e80f0",
+        "git_blob": "5ff8d8fb9044d58415d37a24a49db93f59ba8936"
+      },
+      {
+        "path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+        "bytes": 1122,
+        "sha256": "3769c34c8f38f39dd456665758da7f892dd11cf1eb90e0603f45254fecdbc6e1",
+        "git_blob": "4bcf5e61753be6321cb5af82244f1ab327e4a137"
+      },
+      {
+        "path": "data/observations/electricity_demand_official_2024.json",
+        "bytes": 2736,
+        "sha256": "145522816e8d23c8f96356875d3886186cf0f04ba2724f82b3f554f4c5a26f34",
+        "git_blob": "3f12f0cb2cfaf0186b1a992399aadccd7f70f299"
+      },
+      {
+        "path": "data/observations/energy_official_communique_2024.json",
+        "bytes": 6670,
+        "sha256": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+        "git_blob": "b6c61d83c372a778ab470eefd03b079b0222d87e"
+      },
+      {
+        "path": "data/observations/gas_apparent_consumption_2024.json",
+        "bytes": 990,
+        "sha256": "a0a0febf71f955b657bad404d66700db7804a056c36a5b3c2f01b4eb4ef7019a",
+        "git_blob": "de1260fab98662b1ec561b8bbed99b49e75609bc"
+      },
+      {
+        "path": "data/observations/gas_official_report_2024.json",
+        "bytes": 4990,
+        "sha256": "20a0a46a2113440e2cf65d9395ff4c4377587cd83124e9f92c0f266af2fadc9b",
+        "git_blob": "e58561fd4abccc0a59a71e1d7d143b734666a783"
+      },
+      {
+        "path": "data/observations/power_official_release_2024.json",
+        "bytes": 1796,
+        "sha256": "c4ad62a266a5136d9d8a76dc795bfd2140c90f16e26007a5e672a22207a3b90c",
+        "git_blob": "c383d349b64680f336fa90ad64af0a68074823e2"
+      },
+      {
+        "path": "data/observations/qinshan_asset_permit_case.json",
+        "bytes": 4669,
+        "sha256": "49377e3598b1f91f9fa226551e92ec06b860da3a9bf21f7f918e8993e0ee56e6",
+        "git_blob": "1fcd048a758844d8c7f615ce2aecb27cd86e1b7f"
+      },
+      {
+        "path": "data/observations/renewable_operation_official_2024.json",
+        "bytes": 3857,
+        "sha256": "f59303c667f0529820da3ecd3bb5386445eb5a248051325681641626aacfcb55",
+        "git_blob": "a7a81a4c6778d8d3160b83a65122cdb7caab3cd7"
+      },
+      {
+        "path": "data/processed/cea_market_annual.csv",
+        "bytes": 1355,
+        "sha256": "fbc8ce418c2457ae124123d3614fe2c2b58f34054c12833e489aab07fbf275fd",
+        "git_blob": "202d9dc85a5edf6b273e38c2dded9980b4bda4e4"
+      },
+      {
+        "path": "data/processed/china_co2_gcb_annual.csv",
+        "bytes": 29340,
+        "sha256": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
+        "git_blob": "6598ba5de67793e096354948c402e84a66d5bda0"
+      },
+      {
+        "path": "data/processed/china_energy_research_annual.csv",
+        "bytes": 199179,
+        "sha256": "ab1c42a9df72db6bcf7f7a73a849ac2e60eb14895517c661c0d0a4b203f8f4c5",
+        "git_blob": "c0f7b29d235349e1034f4ad0ded9d98062dd3eb1"
+      },
+      {
+        "path": "data/processed/china_macro_annual.csv",
+        "bytes": 26864,
+        "sha256": "5b033c6e8593031ff5c223dda4f2e7de42a2d9b77030bed85018f82c5969b1d8",
+        "git_blob": "21a8ca22c297ae03ea59c197be0abbc7d3569778"
+      },
+      {
+        "path": "data/processed/china_power_plants_wri_snapshot.csv",
+        "bytes": 1183688,
+        "sha256": "f36db4424663cf0b312ebb32d4f8219f4a7b4b816e3da279b758a78106b359c2",
+        "git_blob": "5d98f318c0e1bc7ece83c74b815a9d32eabf741f"
+      },
+      {
+        "path": "data/processed/commodity_price_references.csv",
+        "bytes": 54735,
+        "sha256": "c123f4ffffd9ccea2320ef951fc05d166696f6196aea1cb3ac31ec4e9586aa2d",
+        "git_blob": "ff3b688334b2f0c38cd1b4626721ea3a217453ed"
+      },
+      {
+        "path": "data/processed/commodity_price_version_comparison.csv",
+        "bytes": 6556,
+        "sha256": "dced003ad74050637b27033f8e728a219fc3d2b4234088ea0dc33fe8c380b12d",
+        "git_blob": "ec2cf544c92b1adea5005dfd1eb0fb00869f0162"
+      },
+      {
+        "path": "data/processed/electricity_co2_factors_2023.csv",
+        "bytes": 9579,
+        "sha256": "69689c85d2036b05f491941d46c7f62662784c2e26f541d278399a574644f670",
+        "git_blob": "48f5013445efb2095c9ce1cfbb2a7b9b3b42cfb4"
+      },
+      {
+        "path": "data/processed/fuel_storage_hydrogen_snapshots.csv",
+        "bytes": 5637,
+        "sha256": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
+        "git_blob": "61b4b8ca558382371534f4de39cabe0f643b4a37"
+      },
+      {
+        "path": "data/processed/lb/ai_trade/china_crude_origin_2025.csv",
+        "bytes": 875,
+        "sha256": "c5adefb1b7a8b00fe2999af904e4b796a6b8473b1cea03ad9f9a38587db8cc24",
+        "git_blob": "102bc9e9081a033a824a3b9f950f73d5e6cb3bd2"
+      },
+      {
+        "path": "data/processed/lb/ai_trade/china_lng_origin_2025.csv",
+        "bytes": 2039,
+        "sha256": "b15cebab7ce52efdcba4efcd01ffd0cb142b60722eb30575dd0fca82fccacd20",
+        "git_blob": "78558b6f3d4bbab09f625c7e771d193f71352bde"
+      },
+      {
+        "path": "data/processed/lb/ai_trade/compute_electricity_anchors.csv",
+        "bytes": 384,
+        "sha256": "62eabf5f360d1365bab7ccd262d1f249dd806d1d56c6826123285bb377c400b2",
+        "git_blob": "699d7d8d8dfbb2ca32ba95f321fdb1f4217bfe25"
+      },
+      {
+        "path": "data/processed/lb/base/emissions/carbonmonitor_province_sector_annual_2019_2025.csv",
+        "bytes": 86012,
+        "sha256": "f3f621de5cb7ca2aaa85aafc88535c2e635c6ae746471fe86f0d0e65235dcc5c",
+        "git_blob": "7c4b4ecda19104bcc9b76e6b2e8eb8df86757447"
+      },
+      {
+        "path": "data/processed/lb/base/emissions/china_grid_factors_2023.csv",
+        "bytes": 2555,
+        "sha256": "2ce84ae9f328570a9224f650997c2f94fcd65988bac6b6f6294fcc338587e297",
+        "git_blob": "26091e6723b23ba509a746f98b3f94f408b7f548"
+      },
+      {
+        "path": "data/processed/lb/base/irena/china_capacity_2016_2025.csv",
+        "bytes": 9691,
+        "sha256": "9b6c9464d7ad29f324202671172faee64c0283be21b92bae44ba54193a337e7f",
+        "git_blob": "d4780fd6e6331bf5b0b74bbdfe254bc518f54a15"
+      },
+      {
+        "path": "data/processed/lb/base/nbs/capacity_2005_2024.csv",
+        "bytes": 1248,
+        "sha256": "1af92874eb80156c78768c792be43d9af6fcd228a717ae277e227cdf38f10019",
+        "git_blob": "be526b022a1c47de1ea803cdc9331c9dc65834d5"
+      },
+      {
+        "path": "data/processed/lb/base/nbs/consumption_2005_2024.csv",
+        "bytes": 1073,
+        "sha256": "e38b3bda9aebed66a6e7dbcbcf2ae413e39c6d9de8380e6b4ec7f5a61c30c9e7",
+        "git_blob": "38bfe649c509929493b607ef800ae8561dc93f84"
+      },
+      {
+        "path": "data/processed/lb/base/nbs/production_2005_2024.csv",
+        "bytes": 1057,
+        "sha256": "78e952194f5245d3095cc5e6e1a677d36559d1367f2ae0cd3ad77a089723a2eb",
+        "git_blob": "81c11d8bfaf9da7df92cdaaf591ad27b33de5216"
+      },
+      {
+        "path": "data/processed/lb/base/nbs/real_gdp_growth_2005_2024.csv",
+        "bytes": 1670,
+        "sha256": "0046f77bdd036d10fa1d798a41fa3aff0b81d6daad4b807e94798039b72c8645",
+        "git_blob": "34fdc5f3dbaf9f5d8d88eaf38d8e67ed67dbcc1b"
+      },
+      {
+        "path": "data/processed/lb/base/owid/china_co2_2000_2025_available.csv",
+        "bytes": 16286,
+        "sha256": "3ad078a9e0d06cb48062d5516951a56f174de9c492ea3e00d57f0c9725e50aef",
+        "git_blob": "c7c969fa9d62953b6925a28e7427f13b6563264c"
+      },
+      {
+        "path": "data/processed/lb/base/owid/china_energy_2000_2025_available.csv",
+        "bytes": 27310,
+        "sha256": "b4e600cf53bf58e533c18e84d65ab9d86e44313998f16ee95712e725c5e9ef65",
+        "git_blob": "04f6bfdf4c89b49f97c99c0db90ac580ddf4f81f"
+      },
+      {
+        "path": "data/processed/lb/base/prices/worldbank_energy_annual_2000_latest.csv",
+        "bytes": 34999,
+        "sha256": "9ba36e86b4469418bf0ad3a7209470f1078540d530b60140af51ec0220bcfe1e",
+        "git_blob": "63246ffa2e5064e14e3f50d487b0c46ae07de1b4"
+      },
+      {
+        "path": "data/processed/lb/base/prices/worldbank_energy_monthly_2000_latest.csv",
+        "bytes": 419531,
+        "sha256": "8e83d51536242cc4472ca48a7ff1b669479430b64111f876b10a709167b7377b",
+        "git_blob": "aea52e44fc86986c7b0a32b7d3d11dcf58b514c0"
+      },
+      {
+        "path": "data/processed/lb/base/quality/worldbank_annual_monthly_check.csv",
+        "bytes": 20132,
+        "sha256": "dc35dcba7adb3fa23a600fcd0b8a22510a8e1bf14124a2665d1c78f5f11afdd4",
+        "git_blob": "4fe31ad92db1cd22326deb962be18e52f3108cb5"
+      },
+      {
+        "path": "data/processed/lb/employment/煤炭采洗就业_2023年末_分省扩展.csv",
+        "bytes": 4047,
+        "sha256": "8cd5def920bfabe07b9e67647b992a3a2a86b25c993a1a1190c3c18d3037e178",
+        "git_blob": "2135e85440ed48b1fcb530fc4c11317670331bf5"
+      },
+      {
+        "path": "data/processed/lb/household/household_energy_burden_fig5.csv",
+        "bytes": 9971,
+        "sha256": "f5e8c435aaeeece6480dafbaeddef065aded5f25c9680dcf3ea662a4bdc8daf2",
+        "git_blob": "cc14165004e93a5f52abca2ac9e5e3567b22a2b4"
+      },
+      {
+        "path": "data/processed/lb/household/household_energy_median_si_table2.csv",
+        "bytes": 2846,
+        "sha256": "6e014820336df731c4a9c3357212db0e2578cd2fa3b478f36264503ac95c11de",
+        "git_blob": "ab1fe6d537c3cbb1abb8c1c2500b0789d80c8321"
+      },
+      {
+        "path": "data/processed/lb/international/china_destination_route_flows_2020_1H2025.csv",
+        "bytes": 9521,
+        "sha256": "9dd64db86f0cb9949e9ab641e732e640a96e7fcca5164e6f87c7cd544c4700fd",
+        "git_blob": "e244e1fbdb3ce5ea5e11054fd21b20dda364400c"
+      },
+      {
+        "path": "data/processed/lb/international/eia_security_quarterly_2025_2026.csv",
+        "bytes": 92012,
+        "sha256": "53c7fba611b2838a9711a09a3e371d7db58a1f080f9ab5aac39b6b26e9ca244d",
+        "git_blob": "074f19b576512e6bd02fc60d02daa8faacabc33b"
+      },
+      {
+        "path": "data/processed/lb/international/route_crude_origin_destination_2020_1H2025.csv",
+        "bytes": 165853,
+        "sha256": "251e4e8ecc2a94945da1fbc92494d48c292737278c50b9e33118e38dbc5211b0",
+        "git_blob": "c8c2cdc029ea0f2374720a92aeba3455256ec771"
+      },
+      {
+        "path": "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv",
+        "bytes": 1573,
+        "sha256": "bf10eb6cfb4cba6bebe7b239e861271fac4b9e2e0047a2dc488ba6224584775c",
+        "git_blob": "e67fc23ef791c19ad5a86b1b2f0ca8ad20a367de"
+      },
+      {
+        "path": "data/processed/lb/trade_alternatives/coal_origins_2023_2025_CCTD.csv",
+        "bytes": 3255,
+        "sha256": "4968110a7ff72fb3eb417036123601361daa02ead9f9d145fdccbb5fa7ee9dec",
+        "git_blob": "4226b4374dff2b967eb62bf254d5f17cd417d94f"
+      },
+      {
+        "path": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "bytes": 3244,
+        "sha256": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363",
+        "git_blob": "e0dac9574cffe1082a6e6864d9fa88fd3a6c9c53"
+      },
+      {
+        "path": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "bytes": 2767,
+        "sha256": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f",
+        "git_blob": "8d82d931517c5badbcbe2d2042e93d5cf863ac1b"
+      },
+      {
+        "path": "data/processed/nbs_balance_checkpoints.csv",
+        "bytes": 66319,
+        "sha256": "8121d87c60acf5f8c457245f7d1d512f69b4c652dea717a5f823aae3192a3193",
+        "git_blob": "ba55876eb79b4260b38938b8127a5365447cf747"
+      },
+      {
+        "path": "data/processed/nbs_capacity_annual.csv",
+        "bytes": 19541,
+        "sha256": "e9f6a3c631bbf1e582054feb2f9a310fcec4b110f49338f0c19f865d801edbef",
+        "git_blob": "ab3a778305a53c0032cda11806351e12223f81a9"
+      },
+      {
+        "path": "data/processed/nbs_conversion_efficiency.csv",
+        "bytes": 13364,
+        "sha256": "7a43657dd0e0731f428ece5c4a5b9960b6017c0dc50c953bb9fb7056f03fb290",
+        "git_blob": "d09cfdcbc55fee27a9f42604a2127aac7878f6c7"
+      },
+      {
+        "path": "data/processed/nbs_energy_annual.csv",
+        "bytes": 42519,
+        "sha256": "ed48b8ad76a2198f323f0cd25e0f58da8686eee805701a5fb281935f3a5c8187",
+        "git_blob": "404ce502bef3f58362196c83bcba3da22da87706"
+      },
+      {
+        "path": "data/processed/nbs_latest_2025.csv",
+        "bytes": 2281,
+        "sha256": "d69acf4421c12d47ecd969090c3a9f9bcd510fbc4716dd1b3fce90838f4de2ef",
+        "git_blob": "e12a1fe8534cf351c744c2accf726dd88a2a87d0"
+      },
+      {
+        "path": "data/processed/nbs_products_annual.csv",
+        "bytes": 16780,
+        "sha256": "6fb964607aa68d86f9297a039aeb472c7860324ec21e67da11dbcd7bd8f92642",
+        "git_blob": "a4215783026f234cc0d19e947473bcdad5bdadbb"
+      },
+      {
+        "path": "data/processed/nbs_province_demand.csv",
+        "bytes": 24778,
+        "sha256": "2ed23bee6511030b5b3b8b60c8aa63e1ea65e7bbd967c5958bc6307f7a228e91",
+        "git_blob": "ab232df06d2a369ac03f7f1a56875678023e1ba4"
+      },
+      {
+        "path": "data/processed/nbs_sector_use_2023.csv",
+        "bytes": 33918,
+        "sha256": "2ac1f2fc7dd3f77ed25c46956c0f29be744a3b24d9737fe49c15ec565dfefc9b",
+        "git_blob": "779c23c2ae40a0b901112b3a51ac8d2ffde1557f"
+      },
+      {
+        "path": "data/processed/nea_electricity_2025.csv",
+        "bytes": 1466,
+        "sha256": "eef4ff15fe0b77c37e5dabfabfff5939b72427477877c50cf636f983b278d707",
+        "git_blob": "2b8b4ca1f6ce38064907fba1cc3fdc759cafa2d9"
+      },
+      {
+        "path": "data/processed/nea_renewables_2024_2025.csv",
+        "bytes": 7580,
+        "sha256": "6726f62a9d125862768b9f7e0b6dedffa170def5497e9b8247e1a35eac076db6",
+        "git_blob": "2783975d0b01e37a8d8eb7c6560d03ab2633da1b"
+      },
+      {
+        "path": "data/processed/policy_target_reference.csv",
+        "bytes": 1738,
+        "sha256": "c29fba83db1cd477f279a10cc58338f923b51a4e711a48cb9b93bdae20ee39f9",
+        "git_blob": "bd195c8c1bf8e85563ef6462e33bc65bb1391a13"
+      },
+      {
+        "path": "data/processed/project_timing_examples.csv",
+        "bytes": 1629,
+        "sha256": "e84a9c321a84b510179f349d49c582bc6f9e265a41e2960d7d03179b55c0d4a7",
+        "git_blob": "7d9302909a716c8bf2641a78e6f545b9020f1171"
+      },
+      {
+        "path": "data/processed/province_column_mapping.csv",
+        "bytes": 5304,
+        "sha256": "6efda94609097d95088fbf6ae5a26fcec582fef133fdfe064c998ae7bfa9a492",
+        "git_blob": "43078758a5c6420f0e606f60446a18aa2402dd58"
+      },
+      {
+        "path": "data/processed/province_load_2018_MWh.csv",
+        "bytes": 3499184,
+        "sha256": "b87064393836906c5dde37551561216b57a7e4788d73aeb4881a9c607a49b558",
+        "git_blob": "9c63e13aae1887dc7b6d0aba140c6c3dc19315f0"
+      },
+      {
+        "path": "data/processed/province_load_2018_summary.csv",
+        "bytes": 2866,
+        "sha256": "b0647c53f7875a9673ed7a24a3f9080dd5047193541a5b250cc32ce57de85a0e",
+        "git_blob": "d1a1c3e44765c2d79e98813295af52759d645be6"
+      },
+      {
+        "path": "data/processed/reservoir_attributes_candidate.csv",
+        "bytes": 7471,
+        "sha256": "1fab7896ede43926071bc0528dddfe0577dd43cee13db0ad58a678194c9a5c5f",
+        "git_blob": "2590b53ce082b98156e62d4cbf3dfe4e94bd9557"
+      },
+      {
+        "path": "data/processed/technology_accounting_parameters.csv",
+        "bytes": 5919,
+        "sha256": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
+        "git_blob": "67ea25046f2bea20e431f960ac4221618a35cab2"
+      },
+      {
+        "path": "data/processed/transmission_lines_candidate.csv",
+        "bytes": 16171,
+        "sha256": "ef36bdb18a2161303183edc34eacdabcf6a608a897f2505939e8c1a529881100",
+        "git_blob": "e15c7eb44238898cf70d8ee1fd6955cb3aca874e"
+      },
+      {
+        "path": "data/processed/unified/nbs_history.csv",
+        "bytes": 167787,
+        "sha256": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+        "git_blob": "8d8be5998f1f6b1b741c841746466b8695602ac0"
+      },
+      {
+        "path": "data/sources.json",
+        "bytes": 17182,
+        "sha256": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f",
+        "git_blob": "3924677eb407911f53d749ac55485963f500993a"
+      },
+      {
+        "path": "docs/DATA_GUIDE.md",
+        "bytes": 5016,
+        "sha256": "41dd13691c6104b998c811109cb580ae8b8af03f883ddab4f52b595ec3a9fc6a",
+        "git_blob": "aef78a4a73367788da13126701378fe0600f743c"
+      },
+      {
+        "path": "docs/IMPLEMENTATION_ROADMAP.md",
+        "bytes": 7094,
+        "sha256": "9cf92a6b8955cf251d84d8ea2e21d21e82288f95a14d2e432a9eeb691bccba42",
+        "git_blob": "a404a2028510e8b6f33802ee73c7c4f099303e02"
+      },
+      {
+        "path": "docs/RUNNING.md",
+        "bytes": 4021,
+        "sha256": "52f9d936f1f08dbf6e20f56c1142de246ce3ff55193fff042cc93636035c0420",
+        "git_blob": "fe5798c5f0a5f2ce7970be13ebcac17c75fd6d38"
+      },
+      {
+        "path": "docs/final_阅读版.md",
+        "bytes": 76154,
+        "sha256": "9a7035f26872eb277543175dab542e7fb9e415ef3f771bb686473ada3877ab87",
+        "git_blob": "7da35ce47f95bb2d1f583c9e0a8c46caf4b51245"
+      },
+      {
+        "path": "outputs/current_assessment/four_dimensions_2024.json",
+        "bytes": 19715,
+        "sha256": "578a080b3450d884945ac691e06d4f8c039594045daec4219d2e461110967eb8",
+        "git_blob": "e05d95db8bc1a6f793178863c29982333eb6cf1a"
+      },
+      {
+        "path": "run.py",
+        "bytes": 2580,
+        "sha256": "a45630877437d783b3a355c267bbc453d08fdd37fbfbd8a54cf3826b82a745fb",
+        "git_blob": "f2cad8c50005b3ac8c65a66d5989a38913a7c4b4"
+      },
+      {
+        "path": "scripts/build_four_dimension_assessment.py",
+        "bytes": 16091,
+        "sha256": "e3aea75ceece602cc911572961a11185548bace6150e1c03a9d1ca4950f06ffa",
+        "git_blob": "5e60a0a5e70f0beb59755a5d86ecdfd3911daee0"
+      },
+      {
+        "path": "scripts/workflow_status.py",
+        "bytes": 18470,
+        "sha256": "0a948df02f7a11e2f8f7afef0be49c1eeac44a9e9371bf2a3fc4300ed7046e9e",
+        "git_blob": "cbd8e9233033a34b3fc4a29ff72a227d9f1ef342"
+      },
+      {
+        "path": "workflow/final_route.json",
+        "bytes": 1360,
+        "sha256": "1f345ccf10c76f3d7ae3eee8d3c3d6f63a80ad7a547891b2ba5e8757cf0fdf40",
+        "git_blob": "9d81d47b5530d14f9b8967175cab6586650a7703"
+      },
+      {
+        "path": "workflow/model_inputs.json",
+        "bytes": 3055,
+        "sha256": "adcdca7ed33dc4048761a220c7a00b6585733117321ed1ce8571dd521c0520b0",
+        "git_blob": "47a0355b888c788471f1c6218663ca83b9228133"
+      },
+      {
+        "path": "只读工作区/README.md",
+        "bytes": 1987,
+        "sha256": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af",
+        "git_blob": "120c752e7644970d6848ea03e6ff22cc834d723f"
+      },
+      {
+        "path": "只读工作区/final.md",
+        "bytes": 80294,
+        "sha256": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+        "git_blob": "c757bfab3f97f4a662a8445d92b6a70ba46da371"
+      },
+      {
+        "path": "只读工作区/gemini_final_idea.md",
+        "bytes": 50209,
+        "sha256": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+        "git_blob": "6d61d4c900fe6c185fdff1b30780da922daac5c0"
+      },
+      {
+        "path": "附件1.xlsx",
+        "bytes": 35592,
+        "sha256": "4cd3f519f72d18869d33713fc9dd2ec7a3ba83d5178ee6d4170d37adf45ea1cd",
+        "git_blob": "1a6c849a191b8289cfe17d14fbe57171cdb50c5f"
+      },
+      {
+        "path": "附件2.xlsx",
+        "bytes": 19997,
+        "sha256": "7a35204be5db7e8cbfddf77a8a36604fafa87dabbf80c69c752b8b8f0d97a330",
+        "git_blob": "9ac45c169572a6432f499d32f1cd8c2b9f53da5d"
+      },
+      {
+        "path": "附件3.xlsx",
+        "bytes": 10556,
+        "sha256": "df616d471bd31fe865ad9d509ea3fc1fa68d8bd172af7c10bb15ffba7a74987e",
+        "git_blob": "063fe78bcc66ee75802811f086a0a3136a36a209"
+      },
+      {
+        "path": "附件4.xlsx",
+        "bytes": 10209,
+        "sha256": "a7945ce8d6c279ecb695c3e56b7d331c1d3f098a282b59a8d1826a69b8736eaf",
+        "git_blob": "487d5e126f592c0452b81ae05277e1f9ed7cb28e"
+      }
+    ]
+  },
+  "preparation_branch": "docs/p0-q1-preparation"
+}
