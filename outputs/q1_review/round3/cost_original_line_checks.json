@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "count": 12,
+  "checks": [
+    {
+      "page": 58,
+      "technology": "CCGT",
+      "capacity_factor": "85",
+      "discount": "3",
+      "transcribed": 81.48,
+      "source_lcoe": 81.48,
+      "source_line": "China CCGT 475 58% 3.95 6.49 8.80 0.06 0.03 0.01 53.54 10.45 13.49 81.48 84.00 86.29 China",
+      "match": true
+    },
+    {
+      "page": 58,
+      "technology": "CCGT",
+      "capacity_factor": "85",
+      "discount": "7",
+      "transcribed": 84.0,
+      "source_lcoe": 84.0,
+      "source_line": "China CCGT 475 58% 3.95 6.49 8.80 0.06 0.03 0.01 53.54 10.45 13.49 81.48 84.00 86.29 China",
+      "match": true
+    },
+    {
+      "page": 58,
+      "technology": "CCGT",
+      "capacity_factor": "85",
+      "discount": "10",
+      "transcribed": 86.29,
+      "source_lcoe": 86.29,
+      "source_line": "China CCGT 475 58% 3.95 6.49 8.80 0.06 0.03 0.01 53.54 10.45 13.49 81.48 84.00 86.29 China",
+      "match": true
+    },
+    {
+      "page": 58,
+      "technology": "Coal_USC",
+      "capacity_factor": "85",
+      "discount": "3",
+      "transcribed": 70.62,
+      "source_lcoe": 70.62,
+      "source_line": "China Ultra-supercritical 347 45% 4.86 8.95 12.75 0.06 0.02 0.01 28.02 22.70 14.97 70.62 74.66 78.45 China",
+      "match": true
+    },
+    {
+      "page": 58,
+      "technology": "Coal_USC",
+      "capacity_factor": "85",
+      "discount": "7",
+      "transcribed": 74.66,
+      "source_lcoe": 74.66,
+      "source_line": "China Ultra-supercritical 347 45% 4.86 8.95 12.75 0.06 0.02 0.01 28.02 22.70 14.97 70.62 74.66 78.45 China",
+      "match": true
+    },
+    {
+      "page": 58,
+      "technology": "Coal_USC",
+      "capacity_factor": "85",
+      "discount": "10",
+      "transcribed": 78.45,
+      "source_lcoe": 78.45,
+      "source_line": "China Ultra-supercritical 347 45% 4.86 8.95 12.75 0.06 0.02 0.01 28.02 22.70 14.97 70.62 74.66 78.45 China",
+      "match": true
+    },
+    {
+      "page": 60,
+      "technology": "Nuclear_LWR",
+      "capacity_factor": "85",
+      "discount": "3",
+      "transcribed": 49.92,
+      "source_lcoe": 49.92,
+      "source_line": "China LWR 950 33% 13.28 29.57 45.65 0.22 0.03 0.01 10.00 26.42 49.92 66.01 82.08 China",
+      "match": true
+    },
+    {
+      "page": 60,
+      "technology": "Nuclear_LWR",
+      "capacity_factor": "85",
+      "discount": "7",
+      "transcribed": 66.01,
+      "source_lcoe": 66.01,
+      "source_line": "China LWR 950 33% 13.28 29.57 45.65 0.22 0.03 0.01 10.00 26.42 49.92 66.01 82.08 China",
+      "match": true
+    },
+    {
+      "page": 60,
+      "technology": "Nuclear_LWR",
+      "capacity_factor": "85",
+      "discount": "10",
+      "transcribed": 82.08,
+      "source_lcoe": 82.08,
+      "source_line": "China LWR 950 33% 13.28 29.57 45.65 0.22 0.03 0.01 10.00 26.42 49.92 66.01 82.08 China",
+      "match": true
+    },
+    {
+      "page": 72,
+      "technology": "CCGT",
+      "capacity_factor": "50",
+      "discount": "7",
+      "transcribed": 91.0,
+      "source_lcoe": 91.0,
+      "source_line": "China CCGT 475 58% 6.72 1 1.04 14.96 0.10 0.05 0.03 53.54 10.45 15.94 86.73 91.00 94.91 China",
+      "match": true
+    },
+    {
+      "page": 72,
+      "technology": "Coal_USC",
+      "capacity_factor": "50",
+      "discount": "7",
+      "transcribed": 84.42,
+      "source_lcoe": 84.42,
+      "source_line": "China Ultra-supercritical 347 45% 8.26 15.21 21.67 0.10 0.04 0.02 28.02 22.70 18.45 77 .54 84.42 90.86 China",
+      "match": true
+    },
+    {
+      "page": 74,
+      "technology": "Nuclear_LWR",
+      "capacity_factor": "50",
+      "discount": "7",
+      "transcribed": 94.72,
+      "source_lcoe": 94.72,
+      "source_line": "China LWR 950 33% 22.58 50.26 77 .6 0.38 0.05 0.01 10.00 34.41 67 .36 94.72 122.03 China",
+      "match": true
+    }
+  ]
+}

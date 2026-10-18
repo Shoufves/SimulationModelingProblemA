@@ -4,6 +4,8 @@
 
 **先看路线，再选数据，再运行。** 当前能够复现附件处理、限定数据初评、需求统计回算、许可案例与合成机制实验。全国多智能体历史校准、年度与运行层耦合、2030/2060预测及政策优化仍需实施；整理完成不等于这些研究已完成。
 
+**当前 Q1 交付：lb 主线、mmj 补强。** 两份原候选已通过 yx 侧本地技术复审，尚未正式批准或合并；本次以 lb `353cca7` 为基础，接入 mmj `baf1975` 的统一风电成本、用途审查绑定与 GDP 外生驱动标识。见[整合与逐项来源](docs/solutions/p1-yx-integration.md)和[当前完整报告](outputs/q1/p1_yx/report.md)。默认 `run.py q1` 写入 `outputs/q1/p1_yx/`；整合 PR 须由 mmj、lb 针对同一最终提交评审批准。
+
 ## 阅读入口
 
 | 入口 | 用途 |
@@ -16,6 +18,7 @@
 | [创新备选阅读版](docs/gemini_final_idea_阅读版.md) | 基础主线验收后再启用的算法实验 |
 | [三人 Git 协作规程](docs/17_git_collaboration.md) | 三人同题并行、Agent 开工、分支、PR、独立评审及合并 |
 | [P0 → P1/Q1 开工单](docs/rounds/P0_P1_Q1.md) | 问题一的输入范围、交付物、验收与起跑线锁定状态 |
+| [P1/lb 问题一候选](docs/solutions/p1-lb.md) | 本分支的问题一报告、补齐后逐项核对、用途审查与复现入口；尚未替代三人评审 |
 
 ## 目录职责
 
@@ -52,7 +55,8 @@ A题/
 ```powershell
 python -B -X utf8 run.py audit          # 原件、文件去留、链接、去重及隔离检查
 python -B -X utf8 scripts/scan_google_keys.py # 扫描工作树及 ZIP 内的 Google API key
-python -B -X utf8 run.py test           # 128项已有测试
+python -B -X utf8 run.py test           # 全部现有测试，实际数量见validation结果
+python -B -X utf8 run.py q1 --output-dir outputs/q1/p1_yx # lb主线与mmj补强；先安装requirements-q1.txt
 python -B -X utf8 run.py attachments    # 官方附件标准化，保留890条记录及重复组
 python -B -X utf8 run.py verify         # 准入检查及限定初评/需求回算/许可案例
 python -B -X utf8 run.py prototype      # 合成年度主体及连续储能窗口

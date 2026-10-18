@@ -10,6 +10,22 @@ AUDIT=ROOT/'archive/organization_20261017'
 def sha(path):
     with path.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
 
+def is_external_history(r):
+    """Only the six recorded foreign-problem removals are clone-external history."""
+    known={
+        '104132baece63e54fcc8238d414bd31e8c6c0923402380ba41674b1eda812981',
+        '5f98ef37a4052c58e7e514f77c5fb9463d14f1a3af36468e82489585efebdff0',
+        '2bd051219c2cb3d6bb9fb22b2f6a29d1434aa0405aa5168216a747d8f6569abc',
+        'c947f403767334b85afc1792eee46f2b74d0271a99af628b3fdd8c95cd7ddd1d',
+        '75fdd54aa2f880b9e4e1e7539e4e4760f582917407afca41a29a6329533e7e49',
+        '375d44e233362586ed4699abe3d95e691ace96fda880a55737f57087189a1776'}
+    parts=r.get('target','').replace('\\','/').split('/')
+    prefix='A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/'
+    return (r.get('action')=='external_duplicate' and r.get('sha256') in known
+        and len(parts)==3 and parts[0]=='..' and parts[1] in ('B题','C题')
+        and parts[2] not in ('','.','..') and r.get('path')==prefix+'/'.join(parts[1:]))
+
+
 def main():
     checks=[]
     def check(name,passed,detail):checks.append(dict(check=name,passed=bool(passed),detail=detail))
@@ -20,11 +36,24 @@ def main():
         if p.exists():
             with zipfile.ZipFile(p) as z:
                 archives.append({n:hashlib.sha256(z.read(n)).hexdigest() for n in z.namelist()})
-    missing=[];modified=[];retained=0
+    missing=[];modified=[];retained=0;external_history=[];restricted_metadata=[]
     for r in plan:
         if not r['target']:continue
-        p=ROOT/r['target']
+        if is_external_history(r):
+            external_history.append(dict(path=r['path'],historical_target=r['target'],sha256=r['sha256'],
+                status='historical_foreign_duplicate; external presence not checked'))
+            continue
+        p=(ROOT/r['target']).resolve()
+        if not p.is_relative_to(ROOT):missing.append(r['path']+' (unexpected external target)');continue
         if not p.is_file():missing.append(r['path']);continue
+        # mmj baf1975: restricted retention is metadata-only, never a content read.
+        if p.relative_to(ROOT).as_posix().startswith('data/restricted/'):
+            same_size=p.stat().st_size==r['bytes']
+            restricted_metadata.append(dict(path=r['target'],size_matches_inventory=same_size,
+                content_read=False,content_hash_verified=False))
+            if not same_size:modified.append(r['path']+' (metadata size changed)')
+            retained+=1
+            continue
         h=sha(p)
         stored_copy=(r.get('representation')=='offline_html'
             and r['target'].startswith('data/raw/') and p.suffix=='.html'
@@ -32,7 +61,10 @@ def main():
         if h!=r['sha256'] and not stored_copy and not any(d.get(r['target'])==r['sha256'] for d in archives):
             modified.append(r['path'])
         retained+=1
-    check('retained_files_match_inventory',not missing and not modified,dict(resolved_original_paths=retained,missing=missing,unrecoverable_modifications=modified))
+    check('retained_files_match_inventory',not missing and not modified,dict(
+        scope='nonrestricted file hashes; restricted existence/size only, NOT content preservation proof',
+        resolved_original_paths=retained,missing=missing,unrecoverable_modifications=modified,
+        restricted_metadata_only=restricted_metadata,external_historical_records=external_history))
     key_scan=scan_workspace()
     check('working_tree_google_api_keys_absent',key_scan['passed'],key_scan)
     check('protected_directory_unchanged',all(sha(ROOT/r['target'])==r['sha256'] for r in plan if r['action']=='protect'),3)

@@ -1,0 +1,21 @@
+{
+  "review_date": "2026-10-18",
+  "reviewer": "lb local source recheck; external re-review pending",
+  "original_sha256": {
+    "china_ndc_2035.pdf": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d",
+    "storage_2025.pdf": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3"
+  },
+  "scope": "C1, C2, L2; originals unchanged; uses remain Q1 candidates",
+  "visual_checks": [
+    "NDC physical p5: preliminary 2024 19.8%",
+    "Storage physical p21: Figure 1 2021-2024 12 labels; body 168 vs figure 168.2 GWh; two regional scales and six regional power shares"
+  ],
+  "storage_conversion": "10^4 kW /100 = GW; 10^4 kWh /100 = GWh; 1.68*100 =168 GWh",
+  "storage_precision": "168.2 selected; 168 retained crosscheck only; duration 2.3 published not derived",
+  "price_definitions": [
+    "Europe archive Description!B12: April 2015 TTF, mixed 2015 excluded from returns",
+    "Coal archive Description!B4: January 2015 6000 kcal/kg spot",
+    "January 2023/January 2024/February 2025 PDFs p3: replacement from February 2022, mixed 2022; 2021 pre-switch, 2023-2024 futures"
+  ],
+  "source_texts": "Adjacent *_p*.txt; storage_p21.png and ndc_p5.png are visual review renders"
+}

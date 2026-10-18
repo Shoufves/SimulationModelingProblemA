@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "compared_files": 13,
+  "excluded": "run_manifest.json: output command and run metadata intentionally differ",
+  "checks": [
+    {
+      "file": "cost_sensitivity.svg",
+      "match": true,
+      "sha256": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6"
+    },
+    {
+      "file": "coverage.csv",
+      "match": true,
+      "sha256": "b6b3227f60dc5a7b9cce209aa9875da646cf69ed82ad17740a6ac4bb7620e6ea"
+    },
+    {
+      "file": "demand_trends.svg",
+      "match": true,
+      "sha256": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406"
+    },
+    {
+      "file": "energy_roles.csv",
+      "match": true,
+      "sha256": "0bf7cc8027d537962a729e94e5020c5ac17eacf099b1fa1b3b8f96b8ff061b52"
+    },
+    {
+      "file": "gaps_and_conflicts.csv",
+      "match": true,
+      "sha256": "2f77c2c08ebc47cfab60609e7a2194ba1ed25a65346295e37af97c2ff452a654"
+    },
+    {
+      "file": "history.csv",
+      "match": true,
+      "sha256": "8175d788f127356b58dfec12936ab4966ebe7029a510b7cab1ac4b823484585b"
+    },
+    {
+      "file": "import_origins.csv",
+      "match": true,
+      "sha256": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469"
+    },
+    {
+      "file": "indicators.csv",
+      "match": true,
+      "sha256": "e98f600f3c234c0cdc1ed8c6c388c3182c7a4b0e3daa666c4431e265c015736d"
+    },
+    {
+      "file": "model_handoff.csv",
+      "match": true,
+      "sha256": "330c2b539ec05756b85490a0561d9781087e5dfe0b6f141f0f85e8468e67b603"
+    },
+    {
+      "file": "regional_comparison.csv",
+      "match": true,
+      "sha256": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51"
+    },
+    {
+      "file": "regional_shares.svg",
+      "match": true,
+      "sha256": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396"
+    },
+    {
+      "file": "report.md",
+      "match": true,
+      "sha256": "6e28134f2848fba4b78ec5dbccb34f090061f3eb4ead1402991d26d7c6b88a8f"
+    },
+    {
+      "file": "static_balance.json",
+      "match": true,
+      "sha256": "ba991aefb7edab991dfa71b52ed3a4f59e13168acee6f06b951047efe827711c"
+    }
+  ]
+}

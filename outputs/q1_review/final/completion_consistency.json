@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": {
+    "36_unique_energy_dimensions": true,
+    "110_indicator_ids": true,
+    "hydrogen_station_scope": true,
+    "industrial_hydrogen_scope": true,
+    "eight_distinct_synergy_ids": true,
+    "solution_document_links_resolve": true
+  },
+  "missing_links": [],
+  "scope": "Final targeted consistency checks; scientific reasoning is documented in p1-lb-final-acceptance.md",
+  "visual_review": [
+    "price_trends.svg: rendered labels, scale, legend and 2023 European line endpoint verified",
+    "IRENA PDF p149/p173: China period, values, units and percentiles visually verified",
+    "Hydrogen PDF p18: prices and sample footnote visually verified"
+  ],
+  "acquisition_manifest_reuse": "Existing two January files reused; all 11 acquisition/error records preserved byte-for-byte in actual invocation"
+}

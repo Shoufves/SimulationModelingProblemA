@@ -2,13 +2,15 @@
 
 本文件将[最终方案](final_阅读版.md)落到整理后的目录。它是开发与验收清单，不把未来模块写成已实现功能。
 
+2026-10-18 Q1 进展：lb、mmj 两份候选已通过 yx 侧本地技术复审；当前以 lb 为主线，接入 mmj 的明确增量，见[整合清单及验证](solutions/p1-yx-integration.md)。本次以完整整合 PR 供 mmj、lb 正式评审，原候选尚未批准或合并。以下后续建模缺口仍保留，Q1 描述性验收不等于全国初态、年度运行闭环或预测已完成。
+
 ## 现有材料怎样共同支撑三问
 
 | 工作包 | 可直接复用的入口 | 现有结果的范围 | 继续工作及验收 |
 |---|---|---|---|
 | 题面与附件 | 根目录赛题/附件；scripts/build_attachments.py | 890条样本记录、单位与省份等部分字段核对、9组同名项 | 未知时点/状态/燃料保留；同名不等于同一机组 |
 | 全国历史底表 | data/processed/unified/nbs_history.csv；data/catalog/nbs_record_provenance.csv | 统计局同版数据的唯一记录与所有原转录定位 | 逐用途核验；不把同源转录当独立样本，不推广准入 |
-| Q1四维 | scripts/build_four_dimension_assessment.py；outputs/current_assessment/ | 2024局部初评及17项阶段指标 | 补同服务成本、价格、区域协调和安全；缺维不算完整总分 |
+| Q1四维 | run.py q1；outputs/q1/p1_yx/；原局部初评保留 | lb主线与mmj补强：历史、四维、条件成本、地区、逐能源诊断及候选交接 | 补强PR独立评审；同可靠性系统成本、时序网络与全国物理初态继续按缺口推进 |
 | 能源/碳核算 | src/energy_model/accounting.py、fuel_ledger.py | 守恒、单位、缺失感知、容量/储能和碳账基础 | 热值匹配；燃烧/原料分账；一次能源及捕集只计一次 |
 | 年度主体与队列 | src/energy_model/agents.py、asset_lifecycle.py | 合成投资/替代与秦山七机组八许可事件 | 实际融资、建设支出、许可可见时间、永久退出；Mesa年度阶段待集成 |
 | 连续运行 | src/energy_model/operations.py | 合成规则调度及连续SOC | 正式跨时段LP待实现；共享燃料、输送损耗、水能/生物质/氢/CCUS边界待接通 |

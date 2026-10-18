@@ -1,0 +1,52 @@
+{
+  "history_rows": 1709,
+  "indicators": 130,
+  "record_ids_unique": true,
+  "indicator_keys_unique": true,
+  "all_indicator_references_resolve": true,
+  "carbon_max_internal_residual_Mt": 1.0000021575251594e-06,
+  "province_generation_check": [
+    {
+      "account": "province_generation_sum",
+      "year": 2024,
+      "unit": "10^8 kWh",
+      "reported": 100868.81,
+      "calculated": 100868.83,
+      "arithmetic_residual": 0.020000000004074536,
+      "input_refs": [
+        "products:60",
+        "region_generation:2",
+        "region_generation:3",
+        "region_generation:4",
+        "region_generation:5",
+        "region_generation:6",
+        "region_generation:7",
+        "region_generation:8",
+        "region_generation:9",
+        "region_generation:10",
+        "region_generation:11",
+        "region_generation:12",
+        "region_generation:13",
+        "region_generation:14",
+        "region_generation:15",
+        "region_generation:16",
+        "region_generation:17",
+        "region_generation:18",
+        "region_generation:19",
+        "region_generation:20",
+        "region_generation:21",
+        "region_generation:22",
+        "region_generation:23",
+        "region_generation:24",
+        "region_generation:25",
+        "region_generation:26",
+        "region_generation:27",
+        "region_generation:28",
+        "region_generation:29",
+        "region_generation:30",
+        "region_generation:31",
+        "region_generation:32"
+      ]
+    }
+  ]
+}

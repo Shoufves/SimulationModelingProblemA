@@ -1,0 +1,335 @@
+{
+  "passed": true,
+  "scope": "Engineering and provenance checks only; not proof that all three Q1 subquestions are complete; not external acceptance A7",
+  "checks": [
+    {
+      "check": "p1_lb_success",
+      "passed": true,
+      "detail": {
+        "history": 1718,
+        "indicators": 133,
+        "regions": 31
+      }
+    },
+    {
+      "check": "p1_lb_output_set",
+      "passed": true,
+      "detail": [
+        "cost_sensitivity.svg",
+        "coverage.csv",
+        "demand_trends.svg",
+        "energy_roles.csv",
+        "gaps_and_conflicts.csv",
+        "history.csv",
+        "import_origins.csv",
+        "indicators.csv",
+        "model_handoff.csv",
+        "regional_comparison.csv",
+        "regional_shares.svg",
+        "report.md",
+        "static_balance.json"
+      ]
+    },
+    {
+      "check": "p1_lb_output_hashes",
+      "passed": true,
+      "detail": {
+        "cost_sensitivity.svg": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6",
+        "coverage.csv": "b6b3227f60dc5a7b9cce209aa9875da646cf69ed82ad17740a6ac4bb7620e6ea",
+        "demand_trends.svg": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406",
+        "energy_roles.csv": "0bf7cc8027d537962a729e94e5020c5ac17eacf099b1fa1b3b8f96b8ff061b52",
+        "gaps_and_conflicts.csv": "2f77c2c08ebc47cfab60609e7a2194ba1ed25a65346295e37af97c2ff452a654",
+        "history.csv": "8175d788f127356b58dfec12936ab4966ebe7029a510b7cab1ac4b823484585b",
+        "import_origins.csv": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469",
+        "indicators.csv": "e98f600f3c234c0cdc1ed8c6c388c3182c7a4b0e3daa666c4431e265c015736d",
+        "model_handoff.csv": "330c2b539ec05756b85490a0561d9781087e5dfe0b6f141f0f85e8468e67b603",
+        "regional_comparison.csv": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51",
+        "regional_shares.svg": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396",
+        "report.md": "6e28134f2848fba4b78ec5dbccb34f090061f3eb4ead1402991d26d7c6b88a8f",
+        "static_balance.json": "ba991aefb7edab991dfa71b52ed3a4f59e13168acee6f06b951047efe827711c"
+      }
+    },
+    {
+      "check": "p1_lb_code_current",
+      "passed": true,
+      "detail": {
+        "run.py": "389f172097a953bef2e45450a06f204dfd623404a6ab97559bec82f368499570",
+        "scripts/build_q1.py": "958803cb08c363e15d12009a3accb82fcf13d676101755d7a039a3b392fa2592",
+        "src/energy_model/q1.py": "ef5cfb7a484469dd559e047c4ae5b5805a01a02f855dac1303105d9ff8d69ceb",
+        "scripts/prepare_q1_review.py": "0bd241d12ae77c829c064d0047ae50888e171e00a328500d44334ee17792fcfd",
+        "scripts/plot_q1.py": "3e252db684c8a456c2a071c963351b1be3d9d69c239fade86755bd64119a3488",
+        "requirements-q1.txt": "f1b21977c06d06cc687ebb0b0f057787635239f3e446c436f78e722ce2699045"
+      }
+    },
+    {
+      "check": "p1_lb_config_current",
+      "passed": true,
+      "detail": "acc6dbeb65444ffddb37309908acfb055ad9e1b9ee84f4600f9407f89f9f79c0"
+    },
+    {
+      "check": "lb_reproduction_success",
+      "passed": true,
+      "detail": {
+        "history": 1718,
+        "indicators": 133,
+        "regions": 31
+      }
+    },
+    {
+      "check": "lb_reproduction_output_set",
+      "passed": true,
+      "detail": [
+        "cost_sensitivity.svg",
+        "coverage.csv",
+        "demand_trends.svg",
+        "energy_roles.csv",
+        "gaps_and_conflicts.csv",
+        "history.csv",
+        "import_origins.csv",
+        "indicators.csv",
+        "model_handoff.csv",
+        "regional_comparison.csv",
+        "regional_shares.svg",
+        "report.md",
+        "static_balance.json"
+      ]
+    },
+    {
+      "check": "lb_reproduction_output_hashes",
+      "passed": true,
+      "detail": {
+        "cost_sensitivity.svg": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6",
+        "coverage.csv": "b6b3227f60dc5a7b9cce209aa9875da646cf69ed82ad17740a6ac4bb7620e6ea",
+        "demand_trends.svg": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406",
+        "energy_roles.csv": "0bf7cc8027d537962a729e94e5020c5ac17eacf099b1fa1b3b8f96b8ff061b52",
+        "gaps_and_conflicts.csv": "2f77c2c08ebc47cfab60609e7a2194ba1ed25a65346295e37af97c2ff452a654",
+        "history.csv": "8175d788f127356b58dfec12936ab4966ebe7029a510b7cab1ac4b823484585b",
+        "import_origins.csv": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469",
+        "indicators.csv": "e98f600f3c234c0cdc1ed8c6c388c3182c7a4b0e3daa666c4431e265c015736d",
+        "model_handoff.csv": "330c2b539ec05756b85490a0561d9781087e5dfe0b6f141f0f85e8468e67b603",
+        "regional_comparison.csv": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51",
+        "regional_shares.svg": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396",
+        "report.md": "6e28134f2848fba4b78ec5dbccb34f090061f3eb4ead1402991d26d7c6b88a8f",
+        "static_balance.json": "ba991aefb7edab991dfa71b52ed3a4f59e13168acee6f06b951047efe827711c"
+      }
+    },
+    {
+      "check": "lb_reproduction_code_current",
+      "passed": true,
+      "detail": {
+        "run.py": "389f172097a953bef2e45450a06f204dfd623404a6ab97559bec82f368499570",
+        "scripts/build_q1.py": "958803cb08c363e15d12009a3accb82fcf13d676101755d7a039a3b392fa2592",
+        "src/energy_model/q1.py": "ef5cfb7a484469dd559e047c4ae5b5805a01a02f855dac1303105d9ff8d69ceb",
+        "scripts/prepare_q1_review.py": "0bd241d12ae77c829c064d0047ae50888e171e00a328500d44334ee17792fcfd",
+        "scripts/plot_q1.py": "3e252db684c8a456c2a071c963351b1be3d9d69c239fade86755bd64119a3488",
+        "requirements-q1.txt": "f1b21977c06d06cc687ebb0b0f057787635239f3e446c436f78e722ce2699045"
+      }
+    },
+    {
+      "check": "lb_reproduction_config_current",
+      "passed": true,
+      "detail": "acc6dbeb65444ffddb37309908acfb055ad9e1b9ee84f4600f9407f89f9f79c0"
+    },
+    {
+      "check": "independent_directory_reproduction",
+      "passed": true,
+      "detail": [
+        {
+          "file": "cost_sensitivity.svg",
+          "match": true,
+          "sha256": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6"
+        },
+        {
+          "file": "coverage.csv",
+          "match": true,
+          "sha256": "b6b3227f60dc5a7b9cce209aa9875da646cf69ed82ad17740a6ac4bb7620e6ea"
+        },
+        {
+          "file": "demand_trends.svg",
+          "match": true,
+          "sha256": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406"
+        },
+        {
+          "file": "energy_roles.csv",
+          "match": true,
+          "sha256": "0bf7cc8027d537962a729e94e5020c5ac17eacf099b1fa1b3b8f96b8ff061b52"
+        },
+        {
+          "file": "gaps_and_conflicts.csv",
+          "match": true,
+          "sha256": "2f77c2c08ebc47cfab60609e7a2194ba1ed25a65346295e37af97c2ff452a654"
+        },
+        {
+          "file": "history.csv",
+          "match": true,
+          "sha256": "8175d788f127356b58dfec12936ab4966ebe7029a510b7cab1ac4b823484585b"
+        },
+        {
+          "file": "import_origins.csv",
+          "match": true,
+          "sha256": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469"
+        },
+        {
+          "file": "indicators.csv",
+          "match": true,
+          "sha256": "e98f600f3c234c0cdc1ed8c6c388c3182c7a4b0e3daa666c4431e265c015736d"
+        },
+        {
+          "file": "model_handoff.csv",
+          "match": true,
+          "sha256": "330c2b539ec05756b85490a0561d9781087e5dfe0b6f141f0f85e8468e67b603"
+        },
+        {
+          "file": "regional_comparison.csv",
+          "match": true,
+          "sha256": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51"
+        },
+        {
+          "file": "regional_shares.svg",
+          "match": true,
+          "sha256": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396"
+        },
+        {
+          "file": "report.md",
+          "match": true,
+          "sha256": "6e28134f2848fba4b78ec5dbccb34f090061f3eb4ead1402991d26d7c6b88a8f"
+        },
+        {
+          "file": "static_balance.json",
+          "match": true,
+          "sha256": "ba991aefb7edab991dfa71b52ed3a4f59e13168acee6f06b951047efe827711c"
+        }
+      ]
+    },
+    {
+      "check": "unique_history_keys",
+      "passed": true,
+      "detail": 1718
+    },
+    {
+      "check": "four_dimensions_have_quantitative_evidence",
+      "passed": true,
+      "detail": {
+        "保障": 25,
+        "低碳": 64,
+        "经济": 21,
+        "协调": 23
+      }
+    },
+    {
+      "check": "indicator_inputs_resolve",
+      "passed": true,
+      "detail": 133
+    },
+    {
+      "check": "nine_energies_and_three_support_roles",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "check": "handoff_refs_resolve",
+      "passed": true,
+      "detail": 378
+    },
+    {
+      "check": "handoff_numeric_values",
+      "passed": true,
+      "detail": 233
+    },
+    {
+      "check": "price_quarantine_not_admitted",
+      "passed": true,
+      "detail": "2015–2020 effective within requested 2015–2024 window"
+    },
+    {
+      "check": "report_links_resolve",
+      "passed": true,
+      "detail": [
+        "../../../docs/solutions/p1-lb-recheck.md",
+        "history.csv",
+        "coverage.csv",
+        "indicators.csv",
+        "../../../workflow/q1_inputs.json",
+        "regional_comparison.csv",
+        "static_balance.json",
+        "model_handoff.csv",
+        "demand_trends.svg",
+        "cost_sensitivity.svg",
+        "regional_shares.svg",
+        "gaps_and_conflicts.csv",
+        "run_manifest.json",
+        "../../../docs/solutions/p1-lb-input-review.md"
+      ]
+    },
+    {
+      "check": "demand_trends.svg_valid_svg",
+      "passed": true,
+      "detail": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406"
+    },
+    {
+      "check": "cost_sensitivity.svg_valid_svg",
+      "passed": true,
+      "detail": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6"
+    },
+    {
+      "check": "regional_shares.svg_valid_svg",
+      "passed": true,
+      "detail": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396"
+    },
+    {
+      "check": "ei_original_cell_checks.json",
+      "passed": true,
+      "detail": 60
+    },
+    {
+      "check": "price_original_cell_checks.json",
+      "passed": true,
+      "detail": 36
+    },
+    {
+      "check": "cost_original_line_checks.json",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "check": "tests.json",
+      "passed": true,
+      "detail": 156
+    },
+    {
+      "check": "workspace_audit.json",
+      "passed": true,
+      "detail": 14
+    },
+    {
+      "check": "original_admission_contracts_unchanged",
+      "passed": true,
+      "detail": [
+        {
+          "file": "data/sources.json",
+          "unchanged": true
+        },
+        {
+          "file": "data/evidence_reviews.json",
+          "unchanged": true
+        },
+        {
+          "file": "workflow/model_inputs.json",
+          "unchanged": true
+        }
+      ]
+    },
+    {
+      "check": "requested_base_and_branch",
+      "passed": true,
+      "detail": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8"
+    }
+  ],
+  "files": {
+    "history": 1718,
+    "indicators": 133,
+    "handoff": 378,
+    "numeric_candidates": 233
+  },
+  "pending_external_review": "Two real reviewers and PR/merge not part of current local research request"
+}
