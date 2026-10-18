@@ -15,6 +15,6 @@
 
 `workflow/final_route.json` 记录主方案的窗口、情景、门槛与既有入口。`workflow/model_inputs.json` 的九个原准入子集保持原授权范围；统一目录不自动授予新数据正式准入。
 
-P2/Q2 准备见 `docs/rounds/P2_Q2.md`：覆盖 F2、F3 和 F4 的 S0/灵敏度，正式 base 由准备资料合并后在 Issue 锁定。问题二没有因本准备单写好而完成，`run.py q2` 仍待实现。
+P2/Q2 开发进行中，见 `docs/rounds/P2_Q2.md`：覆盖 F2、F3 和 F4 的 S0/灵敏度；用户已确认三人从 `804ec15ee43874303986a7ad91b2cde05c65b124` 开始，Issue #7 据此锁定共同 base，文档 PR #8 评审与开发并行。开发进行中不等于科学验收通过；该共同 base 的 `run.py q2` 尚未实现。
 
 常规次序：`run.py audit` → `run.py test` → `run.py attachments` → `run.py verify` → 按F1—F5补齐研究。`run.py prototype` 仅验证合成机制；当前没有可真实执行的全国预测命令。

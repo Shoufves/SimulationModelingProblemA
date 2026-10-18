@@ -4,7 +4,7 @@
 
 **先看路线，再选数据，再运行。** 当前能够复现附件处理、限定数据初评、需求统计回算、许可案例与合成机制实验。全国多智能体历史校准、年度与运行层耦合、2030/2060预测及政策优化仍需实施；整理完成不等于这些研究已完成。
 
-**Q1 已整合并合入 main：lb 主线、mmj 补强。** PR #6 的评审 head 为 `da8a983`，squash 合并提交为 `804ec15ee43874303986a7ad91b2cde05c65b124`；用户明确确认三人同意并授权合并，正式 reviews 留痕的例外见[轮次日志](docs/ROUND_LOG.md)。见[整合与逐项来源](docs/solutions/p1-yx-integration.md)和[完整报告](outputs/q1/p1_yx/report.md)。默认 `run.py q1` 写入 `outputs/q1/p1_yx/`。问题二现处[准备阶段](docs/rounds/P2_Q2.md)，正式 base 待准备资料入库并验证后在 Issue 锁定。
+**Q1 已整合并合入 main：lb 主线、mmj 补强。** PR #6 的评审 head 为 `da8a983`，squash 合并提交为 `804ec15ee43874303986a7ad91b2cde05c65b124`；用户明确确认三人同意并授权合并，正式 reviews 留痕的例外见[轮次日志](docs/ROUND_LOG.md)。见[整合与逐项来源](docs/solutions/p1-yx-integration.md)和[完整报告](outputs/q1/p1_yx/report.md)。默认 `run.py q1` 写入 `outputs/q1/p1_yx/`。[问题二开发进行中](docs/rounds/P2_Q2.md)：用户已确认三人共同 base 为上述 `804ec15` 完整提交，已在 Issue #7 补录；文档 PR #8 与开发并行评审，无需等待其合并再开工。
 
 ## 阅读入口
 
@@ -19,7 +19,7 @@
 | [三人 Git 协作规程](docs/17_git_collaboration.md) | 三人同题并行、Agent 开工、分支、PR、独立评审及合并 |
 | [P0 → P1/Q1 开工单](docs/rounds/P0_P1_Q1.md) | 问题一的输入范围、交付物、验收与起跑线锁定状态 |
 | [轮次日志](docs/ROUND_LOG.md) | 问题一采用关系、合并、验收、延期项及下一轮状态 |
-| [P2/Q2 开工单](docs/rounds/P2_Q2.md) | 问题二完整任务、输入用途、必交产物、验收与待锁定基线 |
+| [P2/Q2 任务与验收](docs/rounds/P2_Q2.md) | 问题二开发进行中；完整任务、输入用途、必交产物、验收与已锁定共同基线 |
 | [P1/lb 问题一候选](docs/solutions/p1-lb.md) | 本分支的问题一报告、补齐后逐项核对、用途审查与复现入口；尚未替代三人评审 |
 
 ## 目录职责
