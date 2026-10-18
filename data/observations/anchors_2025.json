@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1",
+  "source_ids": ["S02", "S04"],
+  "default_source_id": "S02",
+  "year": 2025,
+  "region": "中国，全国",
+  "status": "communique_values_pending_revision_and_series_alignment",
+  "observations": [
+    {"indicator_id": "gdp_current_price", "source_id": "S02", "value": 1401879, "unit": "亿元", "locator": "一、综合", "scope": "现价；不是强度计算用的不变价GDP"},
+    {"indicator_id": "real_gdp_growth_pct", "source_id": "S02", "value": 5.0, "unit": "%", "locator": "一、综合及注2", "scope": "按不变价格计算的增长速度"},
+    {"indicator_id": "primary_energy_production", "source_id": "S02", "value": 51.3, "unit": "亿吨标准煤", "locator": "三、工业和建筑业，表4前", "scope": "本轮已复核公报正文；初步统计数"},
+    {"indicator_id": "total_energy_consumption", "source_id": "S02", "value": 61.7, "unit": "亿吨标准煤", "locator": "十二、资源、环境和应急管理", "scope": "本轮已复核公报正文绝对量；初步统计数，另存为2025检验值"},
+    {"indicator_id": "coal_consumption_share", "source_id": "S02", "value": 51.4, "unit": "%", "locator": "十二、资源、环境和应急管理", "scope": "煤炭占能源消费总量"},
+    {"indicator_id": "petroleum_consumption_share", "source_id": "S04", "value": 18.2, "unit": "%", "locator": "官方摘要：能源消费结构", "scope": "石油占能源消费总量；全文脚注待核对"},
+    {"indicator_id": "natural_gas_consumption_share", "source_id": "S04", "value": 8.7, "unit": "%", "locator": "官方摘要：能源消费结构", "scope": "天然气占能源消费总量；全文脚注待核对"},
+    {"indicator_id": "primary_electricity_and_other_energy_share", "source_id": "S04", "value": 21.7, "unit": "%", "locator": "官方摘要：能源消费结构", "scope": "一次电力及其他能源；非化石口径桥接待核实"},
+    {"indicator_id": "generation_total", "value": 105752.5, "unit": "亿千瓦时", "locator": "表4", "scope": "公报表4发电量口径"},
+    {"indicator_id": "generation_thermal", "value": 63271.5, "unit": "亿千瓦时", "locator": "表4、注27", "scope": "含煤油气、生物质及余热余压余气"},
+    {"indicator_id": "generation_hydro", "value": 14616.7, "unit": "亿千瓦时", "locator": "表4", "scope": "水电；抽蓄分项需另核实"},
+    {"indicator_id": "generation_nuclear", "value": 4852.3, "unit": "亿千瓦时", "locator": "表4", "scope": "核电"},
+    {"indicator_id": "generation_wind", "value": 11279.2, "unit": "亿千瓦时", "locator": "表4", "scope": "风电"},
+    {"indicator_id": "generation_solar", "value": 11732.4, "unit": "亿千瓦时", "locator": "表4", "scope": "太阳能"},
+    {"indicator_id": "capacity_total", "value": 389134, "unit": "万千瓦", "locator": "表4后装机段落、注28", "scope": "年末存量；少量技术未在分项列出"},
+    {"indicator_id": "capacity_thermal", "value": 153904, "unit": "万千瓦", "locator": "表4后装机段落", "scope": "火电；待技术拆分"},
+    {"indicator_id": "capacity_hydro", "value": 44802, "unit": "万千瓦", "locator": "表4后装机段落", "scope": "水电；抽蓄分项需另核实"},
+    {"indicator_id": "capacity_nuclear", "value": 6248, "unit": "万千瓦", "locator": "表4后装机段落", "scope": "核电"},
+    {"indicator_id": "capacity_wind", "value": 64001, "unit": "万千瓦", "locator": "表4后装机段落", "scope": "风电"},
+    {"indicator_id": "capacity_solar", "value": 120173, "unit": "万千瓦", "locator": "表4后装机段落", "scope": "太阳能"}
+  ],
+  "notes": [
+    "发电量和装机记录均来自S02；未逐项写source_id的记录采用S02。",
+    "本轮复核后生产总量、消费总量和煤炭占比采用S02正文；其余三类占比仍采用S04。",
+    "原单位保留；不能将年末装机存量与年度发电流量直接相加。",
+    "发电分项与总量存在舍入差异，装机分项与总量存在未列技术差额。",
+    "仅作为初始核对记录；不是已经校准的模型基年状态。"
+  ]
+}

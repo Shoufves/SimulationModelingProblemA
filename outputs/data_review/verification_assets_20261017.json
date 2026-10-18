@@ -1,0 +1,1962 @@
+{
+  "checked_at": "2026-10-17T20:55:23+08:00",
+  "scope": "Actual asset state/file verification and unchanged demand numeric outputs; no new external-source review or behavioral calibration",
+  "passed": true,
+  "check_count": 387,
+  "checks": [
+    {
+      "name": "asset:sha256:data/evidence_reviews.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:data/observations/qinshan_asset_permit_case.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:data/processed/attachment_assets.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:data/raw/official/S26_qinshan_permits_2017_capture.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:data/raw/official/S27_qinshan_extension_2021_capture.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:data/raw/official/S28_qinshan_design_life_capture.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:data/sources.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:scripts/run_asset_lifecycle_case.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:scripts/workflow_status.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:src/energy_model/asset_lifecycle.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:workflow/asset_case.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:workflow/model_inputs.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:workflow/official_data_policy.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:workflow/provided_inputs.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:workflow/source_domains.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:sha256:附件4.xlsx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset:run_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:data/evidence_reviews.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:data/observations/demand_energy_total_2015_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:data/observations/demand_real_gdp_growth_2015_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:data/raw/official/S01_demand_excerpt_20261017.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:data/raw/official/S06_gdp_excerpt_20261017.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:data/sources.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:scripts/build_foundation.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:scripts/run_demand_hindcast.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:scripts/workflow_status.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:src/energy_model/baselines.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:workflow/demand_hindcast.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:workflow/model_inputs.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:sha256:workflow/official_data_policy.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demand:run_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unchanged_demand:limitations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unchanged_demand:historical_indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unchanged_demand:scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unchanged_demand:evaluation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unchanged_demand:training_rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unchanged_demand:configuration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unchanged_demand:evaluation_status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unchanged_demand:fitted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same_demand_datasets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provided_original:2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provided_original:附件1.xlsx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provided_original:附件2.xlsx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provided_original:附件3.xlsx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provided_original:附件4.xlsx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unit_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "event_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "attachment_binding",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original_capacities_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2020-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2020-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2020-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2020-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2020-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2020-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2020-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2020-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2020-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2020-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2020-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2020-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2020-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2020-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2020-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2020-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2020-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2021-07-30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-30:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-30:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-30:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-30:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-30:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-30:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-30:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-30:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-30:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-30:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-30:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-30:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-30:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-30:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2021-07-30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2021-07-30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2021-07-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-07-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-07-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2021-07-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2021-07-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2021-09-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-03:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-03:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-03:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-03:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-03:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-03:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-03:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-03:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-03:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-03:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-03:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-03:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-03:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-03:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2021-09-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2021-09-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2021-09-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-06:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-06:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-06:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-06:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-06:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-06:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-06:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-06:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-06:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-06:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-06:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-06:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-09-06:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-09-06:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2021-09-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2021-09-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2021-12-15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-15:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-15:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-15:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-15:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-15:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-15:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-15:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-15:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-15:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-15:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-15:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-15:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-15:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-15:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2021-12-15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2021-12-15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2021-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2021-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2021-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2021-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2021-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2024-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2024-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2024-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2024-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2024-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2024-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2024-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2024-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2024-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2024-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2024-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2024-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2024-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2024-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2024-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2024-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2024-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2030-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2030-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2030-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2030-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2030-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2030-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2030-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2030-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2030-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2030-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2030-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2030-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2030-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2030-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2030-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2030-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2030-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2040-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2040-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2040-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2040-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2040-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2040-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2040-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2040-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2040-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2040-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2040-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2040-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2040-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2040-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2040-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2040-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2040-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2041-07-30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-30:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-30:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-30:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-30:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-30:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-30:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-30:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-30:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-30:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-30:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-30:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-30:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-30:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-30:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2041-07-30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2041-07-30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2041-07-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-07-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-07-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2041-07-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2041-07-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2041-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2041-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2041-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2041-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2041-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2042-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2042-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2042-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2042-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2042-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2042-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2042-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2042-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2042-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2042-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2042-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2042-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2042-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2042-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2042-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2042-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2042-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2043-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2043-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2043-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2043-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2043-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2043-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2043-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2043-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2043-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2043-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2043-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2043-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2043-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2043-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2043-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2043-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2043-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2044-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2044-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2044-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2044-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2044-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2044-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2044-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2044-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2044-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2044-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2044-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2044-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2044-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2044-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2044-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2044-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2044-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2050-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2050-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2050-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2050-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2050-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2050-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2050-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2050-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2050-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2050-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2050-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2050-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2050-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2050-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2050-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2050-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2050-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2051-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2051-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2051-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2051-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2051-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2051-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2051-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2051-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2051-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2051-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2051-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2051-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2051-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2051-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2051-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2051-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2051-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "information_cutoff:2060-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2060-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2060-12-31:QINSHAN-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2060-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2060-12-31:QINSHAN-II-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2060-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2060-12-31:QINSHAN-II-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2060-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2060-12-31:QINSHAN-II-3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2060-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2060-12-31:QINSHAN-II-4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2060-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2060-12-31:QINSHAN-III-1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state:2060-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_physical_state:2060-12-31:QINSHAN-III-2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts:2060-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_aggregate:2060-12-31",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "extension_omission_effect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "workflow_checks_passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "requirements_not_promoted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_source_record:R-QINSHAN-ASSETS-20261017:S26",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_source_record:R-QINSHAN-ASSETS-20261017:S27",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_source_record:R-QINSHAN-ASSETS-20261017:S28",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_source_record:R-S01-DEMAND-20261017:S01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_source_record:R-S06-GDP-20261017:S06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_source_record:R-S17-20261016:S17",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_source_record:R-S13-20261017:S13",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_source_record:R-S22-20261017:S22",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_source_record:R-S23-20261017:S23",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_source_record:R-S24-20261017:S24",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_source_record:R-S25-20261017:S25",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "asset_result_path": "outputs/asset_cases/qinshan_8daa8f844e19a278/result.json",
+  "asset_result_sha256": "17f32226b75ebd84d7ac19e2ac14ae3c3ed34ad127913c42a1aca5f20831510a",
+  "demand_result_path": "outputs/calibration/demand_3312e2a52e0430a7/result.json",
+  "demand_result_sha256": "df6e368aba36bdb4581df0811ae8941c65ca6a2b60837349963b31565dc4ec22",
+  "prior_demand_result_sha256": "b70574e9941f2d3d2a2deea04e125b54c8b340435d1a2bbcb3e1eb5e32fcb225",
+  "limitations": [
+    "Document generation dates are replay conventions, not verified public dissemination dates.",
+    "Permit expiry counts do not measure actual retirement, available capacity or generation.",
+    "Annual agents remain synthetic; this real asset module is independent."
+  ],
+  "method_correction": {
+    "discarded_check": {
+      "name": "unchanged_prior_25_source_records",
+      "passed": false,
+      "detail": "d15e05cf9f5e6be333e76fac3b21beb7ae5cf89ece18aa570708c9bb777a72a0"
+    },
+    "reason": "不能用重新序列化前25条记录后的文件字节哈希与原目录原始字节哈希相比；JSON排版已改变。来源追加前已实际逐项验证25条规范记录一致并记录。最终检查按审查固定的规范来源记录哈希逐项比较，保留原失败尝试供审计。",
+    "attempt_record": "outputs/data_review/verification_assets_20261017_serialization_attempt.json"
+  }
+}

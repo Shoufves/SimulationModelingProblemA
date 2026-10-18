@@ -1,0 +1,22 @@
+﻿file,rows,columns,source,note
+data/nbs/consumption_2005_2024.csv,20,7,NBS_2025_C09-02,"Visually transcribed; total 10,000 tonnes standard coal; shares percent; original primary electricity and other category preserved"
+data/nbs/production_2005_2024.csv,20,7,NBS_2025_C09-01,"Visually transcribed; total 10,000 tonnes standard coal; shares percent; original primary electricity and other category preserved"
+data/nbs/capacity_2005_2024.csv,20,9,NBS_2025_C09-15,"Thermal includes coal/gas/oil/biomass; solar not identical to PV; blanks are missing, not zero"
+data/owid/china_energy_2000_2025_available.csv,26,130,OWID_ENERGY,Original field names/units. 2025 may be partial or absent. See coverage and codebook. Not national standard-coal accounting.
+data/owid/energy_codebook.csv,130,5,OWID_ENERGY_CODEBOOK,"Includes upstream sources, descriptions and units"
+data/owid/china_co2_2000_2025_available.csv,25,79,OWID_CO2,Original field names/units. 2025 may be partial or absent. See coverage and codebook. Not national standard-coal accounting.
+data/owid/co2_codebook.csv,79,5,OWID_CO2_CODEBOOK,"Includes upstream sources, descriptions and units"
+data/quality/owid_field_coverage.csv,209,7,OWID_ENERGY;OWID_CO2,
+data/prices/worldbank_energy_annual_2000_latest.csv,260,8,WB_PRICE_ANNUAL,Nominal USD prices. Downloaded workbook includes comparison/mismatch sheets; extracted source cells preserved and annual/monthly checks provided. Do not treat this as China domestic price.
+data/prices/worldbank_energy_monthly_2000_latest.csv,3210,8,WB_PRICE_MONTHLY,Nominal USD prices. Downloaded workbook includes comparison/mismatch sheets; extracted source cells preserved and annual/monthly checks provided. Do not treat this as China domestic price.
+data/quality/worldbank_annual_monthly_check.csv,260,6,WB_PRICE_ANNUAL;WB_PRICE_MONTHLY,"Simple monthly means are a consistency diagnostic, not proof of correct annual weighting"
+data/nbs/bulletin2025_source_table_03.csv,30,4,NBS_2025_BULLETIN_ALTERNATE,Source table extraction; original merged headers/footnotes must be checked in archived HTML
+data/nbs/bulletin2025_source_table_04.csv,10,4,NBS_2025_BULLETIN_ALTERNATE,Source table extraction; original merged headers/footnotes must be checked in archived HTML
+data/nbs/bulletin2025_source_table_12.csv,14,6,NBS_2025_BULLETIN_ALTERNATE,Source table extraction; original merged headers/footnotes must be checked in archived HTML
+raw/carbonmonitor/CM_China_v1.csv,363165,4,FIGSHARE_FILE_55875995,Original near-real-time estimates; preserve source time/province/sector/unit. Do not equate with annual inventory.
+data/quality/nbs_transcription_checks.csv,56,4,NBS_2025_C09-01;NBS_2025_C09-02;NBS_2025_C09-15,
+data/irena/china_capacity_2016_2025.csv,150,8,IRENA_CAPACITY_2026,PDF-position extraction. IRENA definitions differ from Chinese official biomass/waste accounting; hydro includes pumped storage but renewable_total excludes pure pumped storage. Original flags retained.
+data/quality/irena_component_checks.csv,30,4,IRENA_CAPACITY_2026,Identity checks detect column misalignment; original rounding allowed up to 1 MW
+data/emissions/china_grid_factors_2023.csv,40,7,CHINA_GRID_EF_2023,Electricity indirect-emission factors. Do not add indirect electricity emissions to producer combustion emissions in a national total. Missing provinces are not zero.
+data/nbs/real_gdp_growth_2005_2024.csv,20,5,NBS_2025_C03-04,Visually transcribed latest historical revision in 2025 yearbook. Do not use GNI column. Rates can chain a constant-price GDP index; they are not current-price RMB levels.
+data/emissions/carbonmonitor_province_sector_annual_2019_2025.csv,1085,8,FIGSHARE_FILE_55875995,Sum of original daily estimates. Use only complete_year for annual comparison. Sectors are reported separately; inspect definitions before totaling.

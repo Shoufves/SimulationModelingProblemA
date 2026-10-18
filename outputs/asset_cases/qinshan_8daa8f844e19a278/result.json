@@ -1,0 +1,3694 @@
+{
+  "run_id": "8daa8f844e19a278",
+  "scope": "真实许可事件的有限信息回放及遗漏延续事件的诊断对照；不预测实际退役或发电，不是经济行为校准",
+  "configuration": {
+    "schema_version": "1.0",
+    "dataset_path": "data/observations/qinshan_asset_permit_case.json",
+    "attachment_path": "data/processed/attachment_assets.json",
+    "evidence_cutoff": "2026-10-17",
+    "annual_years": [
+      2020,
+      2021,
+      2024,
+      2030,
+      2040,
+      2041,
+      2042,
+      2043,
+      2044,
+      2050,
+      2051,
+      2060
+    ],
+    "boundary_dates": [
+      "2021-07-30",
+      "2021-07-31",
+      "2021-09-03",
+      "2021-09-06",
+      "2021-12-15",
+      "2041-07-30",
+      "2041-07-31"
+    ],
+    "disabled_event_ids": [
+      "EXTENSION-2021-Q1"
+    ],
+    "scope": "真实许可事件的有限信息回放及遗漏延续事件的诊断对照；不预测实际退役或发电，不是经济行为校准",
+    "attachment_sha256": "f18a4ac4295fe4ba90d290d940e4e66ac80733c34fc8c05e81f4637767c85f39"
+  },
+  "attachment_bindings": [
+    {
+      "record_id": "ATT4-NUCLEAR-R0002",
+      "original_name": "秦山核电厂",
+      "source_file": "附件4.xlsx",
+      "sheet": "核电站",
+      "row": 2,
+      "original_capacity": 330,
+      "original_unit": null,
+      "unit_ids": [
+        "QINSHAN-1"
+      ],
+      "capacity_conversion": null,
+      "national_weight": null
+    },
+    {
+      "record_id": "ATT4-NUCLEAR-R0004",
+      "original_name": "秦山第二核电厂",
+      "source_file": "附件4.xlsx",
+      "sheet": "核电站",
+      "row": 4,
+      "original_capacity": 2620,
+      "original_unit": null,
+      "unit_ids": [
+        "QINSHAN-II-1",
+        "QINSHAN-II-2",
+        "QINSHAN-II-3",
+        "QINSHAN-II-4"
+      ],
+      "capacity_conversion": null,
+      "national_weight": null
+    },
+    {
+      "record_id": "ATT4-NUCLEAR-R0006",
+      "original_name": "秦山第三核电",
+      "source_file": "附件4.xlsx",
+      "sheet": "核电站",
+      "row": 6,
+      "original_capacity": 1456,
+      "original_unit": null,
+      "unit_ids": [
+        "QINSHAN-III-1",
+        "QINSHAN-III-2"
+      ],
+      "capacity_conversion": null,
+      "national_weight": null
+    }
+  ],
+  "unit_count": 7,
+  "permit_event_count": 8,
+  "snapshots": [
+    {
+      "as_of": "2020-12-31",
+      "information_cutoff": "2020-12-31",
+      "interpretation": "document_replay",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2021-07-30",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2021-07-30",
+      "information_cutoff": "2021-07-30",
+      "interpretation": "document_replay",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2021-07-30",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": false,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2021-07-31",
+      "information_cutoff": "2021-07-31",
+      "interpretation": "document_replay",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2021-07-30",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": false,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2021-09-03",
+      "information_cutoff": "2021-09-03",
+      "interpretation": "document_replay",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2021-07-30",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": false,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2021-09-06",
+      "information_cutoff": "2021-09-06",
+      "interpretation": "document_replay",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": false,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2021-12-15",
+      "information_cutoff": "2021-12-15",
+      "interpretation": "document_replay",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2021-12-31",
+      "information_cutoff": "2021-12-31",
+      "interpretation": "document_replay",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2024-12-31",
+      "information_cutoff": "2024-12-31",
+      "interpretation": "document_replay",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2030-12-31",
+      "information_cutoff": "2026-10-17",
+      "interpretation": "existing_document_end_dates_only_not_a_retirement_forecast",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2040-12-31",
+      "information_cutoff": "2026-10-17",
+      "interpretation": "existing_document_end_dates_only_not_a_retirement_forecast",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2041-07-30",
+      "information_cutoff": "2026-10-17",
+      "interpretation": "existing_document_end_dates_only_not_a_retirement_forecast",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2041-07-31",
+      "information_cutoff": "2026-10-17",
+      "interpretation": "existing_document_end_dates_only_not_a_retirement_forecast",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2041-12-31",
+      "information_cutoff": "2026-10-17",
+      "interpretation": "existing_document_end_dates_only_not_a_retirement_forecast",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "recorded_end_passed_needs_review": 2,
+        "covered_by_recorded_end_date": 5
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2042-12-31",
+      "information_cutoff": "2026-10-17",
+      "interpretation": "existing_document_end_dates_only_not_a_retirement_forecast",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "recorded_end_passed_needs_review": 3,
+        "covered_by_recorded_end_date": 4
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2043-12-31",
+      "information_cutoff": "2026-10-17",
+      "interpretation": "existing_document_end_dates_only_not_a_retirement_forecast",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "recorded_end_passed_needs_review": 4,
+        "covered_by_recorded_end_date": 3
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2044-12-31",
+      "information_cutoff": "2026-10-17",
+      "interpretation": "existing_document_end_dates_only_not_a_retirement_forecast",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "recorded_end_passed_needs_review": 5,
+        "covered_by_recorded_end_date": 2
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2050-12-31",
+      "information_cutoff": "2026-10-17",
+      "interpretation": "existing_document_end_dates_only_not_a_retirement_forecast",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "covered_by_recorded_end_date",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "recorded_end_passed_needs_review": 6,
+        "covered_by_recorded_end_date": 1
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2051-12-31",
+      "information_cutoff": "2026-10-17",
+      "interpretation": "existing_document_end_dates_only_not_a_retirement_forecast",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "recorded_end_passed_needs_review": 7
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    },
+    {
+      "as_of": "2060-12-31",
+      "information_cutoff": "2026-10-17",
+      "interpretation": "existing_document_end_dates_only_not_a_retirement_forecast",
+      "units": [
+        {
+          "unit_id": "QINSHAN-1",
+          "plant": "秦山核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0002",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "EXTENSION-2021-Q1",
+            "unit_id": "QINSHAN-1",
+            "source_id": "S27",
+            "document_date": "2021-09-03",
+            "known_from": "2021-09-06",
+            "valid_until": "2041-07-30",
+            "kind": "permit_extension"
+          },
+          "visible_lifecycle_fact": {
+            "unit_id": "QINSHAN-1",
+            "source_id": "S28",
+            "known_from": "2021-06-07",
+            "first_grid_date": "1991-12-15",
+            "design_reference_end": "2021-12-15",
+            "design_life_indicator": "qinshan_1_initial_design_life"
+          },
+          "design_reference_reached": true,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-1",
+          "plant": "秦山第二核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII1",
+            "unit_id": "QINSHAN-II-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2041-10-08",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-2",
+          "plant": "秦山第二核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII2",
+            "unit_id": "QINSHAN-II-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2044-01-28",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-3",
+          "plant": "秦山第二核电厂",
+          "unit": "3号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII3",
+            "unit_id": "QINSHAN-II-3",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2050-05-29",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-II-4",
+          "plant": "秦山第二核电厂",
+          "unit": "4号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0004",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QII4",
+            "unit_id": "QINSHAN-II-4",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2051-10-19",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-1",
+          "plant": "秦山第三核电厂",
+          "unit": "1号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII1",
+            "unit_id": "QINSHAN-III-1",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2042-07-17",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        },
+        {
+          "unit_id": "QINSHAN-III-2",
+          "plant": "秦山第三核电厂",
+          "unit": "2号机组",
+          "attachment_record_id": "ATT4-NUCLEAR-R0006",
+          "permit_status": "recorded_end_passed_needs_review",
+          "latest_visible_event": {
+            "event_id": "PERMIT-2017-QIII2",
+            "unit_id": "QINSHAN-III-2",
+            "source_id": "S26",
+            "document_date": "2017-12-20",
+            "known_from": "2017-12-20",
+            "valid_until": "2043-03-15",
+            "kind": "permit_record"
+          },
+          "visible_lifecycle_fact": null,
+          "design_reference_reached": null,
+          "capacity_mw": null,
+          "actual_operating_status": null,
+          "actual_retired": null,
+          "dispatch_available_capacity_mw": null
+        }
+      ],
+      "permit_counts": {
+        "recorded_end_passed_needs_review": 7
+      },
+      "actual_operating_capacity_mw": null,
+      "actual_retired_capacity_mw": null,
+      "national_expansion_weight": null
+    }
+  ],
+  "event_omission_comparisons": [
+    {
+      "as_of": "2020-12-31",
+      "all_selected_events_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "omitting_selected_extension_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2021-07-30",
+      "all_selected_events_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "omitting_selected_extension_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2021-07-31",
+      "all_selected_events_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2021-09-03",
+      "all_selected_events_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2021-09-06",
+      "all_selected_events_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "changed_unit_ids": [
+        "QINSHAN-1"
+      ],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2021-12-15",
+      "all_selected_events_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "changed_unit_ids": [
+        "QINSHAN-1"
+      ],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2021-12-31",
+      "all_selected_events_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "changed_unit_ids": [
+        "QINSHAN-1"
+      ],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2024-12-31",
+      "all_selected_events_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "changed_unit_ids": [
+        "QINSHAN-1"
+      ],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2030-12-31",
+      "all_selected_events_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "changed_unit_ids": [
+        "QINSHAN-1"
+      ],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2040-12-31",
+      "all_selected_events_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "changed_unit_ids": [
+        "QINSHAN-1"
+      ],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2041-07-30",
+      "all_selected_events_counts": {
+        "covered_by_recorded_end_date": 7
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "changed_unit_ids": [
+        "QINSHAN-1"
+      ],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2041-07-31",
+      "all_selected_events_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 1,
+        "covered_by_recorded_end_date": 6
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2041-12-31",
+      "all_selected_events_counts": {
+        "recorded_end_passed_needs_review": 2,
+        "covered_by_recorded_end_date": 5
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 2,
+        "covered_by_recorded_end_date": 5
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2042-12-31",
+      "all_selected_events_counts": {
+        "recorded_end_passed_needs_review": 3,
+        "covered_by_recorded_end_date": 4
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 3,
+        "covered_by_recorded_end_date": 4
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2043-12-31",
+      "all_selected_events_counts": {
+        "recorded_end_passed_needs_review": 4,
+        "covered_by_recorded_end_date": 3
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 4,
+        "covered_by_recorded_end_date": 3
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2044-12-31",
+      "all_selected_events_counts": {
+        "recorded_end_passed_needs_review": 5,
+        "covered_by_recorded_end_date": 2
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 5,
+        "covered_by_recorded_end_date": 2
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2050-12-31",
+      "all_selected_events_counts": {
+        "recorded_end_passed_needs_review": 6,
+        "covered_by_recorded_end_date": 1
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 6,
+        "covered_by_recorded_end_date": 1
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2051-12-31",
+      "all_selected_events_counts": {
+        "recorded_end_passed_needs_review": 7
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 7
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    },
+    {
+      "as_of": "2060-12-31",
+      "all_selected_events_counts": {
+        "recorded_end_passed_needs_review": 7
+      },
+      "omitting_selected_extension_counts": {
+        "recorded_end_passed_needs_review": 7
+      },
+      "changed_unit_ids": [],
+      "interpretation": "event_omission_diagnostic_not_energy_or_policy_effect"
+    }
+  ],
+  "ready_for": [
+    "selected_attachment_unit_identity",
+    "documented_permit_event_replay"
+  ],
+  "blocked_for": [
+    "precise_operating_capacity_initialization",
+    "commercial_commissioning_and_retirement",
+    "dispatch",
+    "economic_life_extension_decision",
+    "national_abm_calibration"
+  ],
+  "limitations": [
+    "7台机组只对应附件4中3条厂级记录，不是3台机组或全国完整清单；别名映射只限这些明确列名。",
+    "精确装机及商业投运时间未核实；附件330/2620/1456的单位和时间未据本文解决，不分摊到机组。",
+    "许可截止、设计寿命和实际退役分开；未取得实际退役、每日运行状态、延寿成本或自主投资决策输入。",
+    "文件生成日仅为回放信息时点约定；不是已核实的公众首次获知时间。",
+    "2021-07-31至新事件可见前的状态保持待核查，不补造停机、退役或行政法律结论。"
+  ],
+  "provenance": {
+    "bindings": [
+      {
+        "dataset_path": "data/observations/qinshan_asset_permit_case.json",
+        "review_id": "R-QINSHAN-ASSETS-20261017",
+        "source_ids": [
+          "S26",
+          "S27",
+          "S28"
+        ]
+      }
+    ],
+    "sha256": {
+      "data/evidence_reviews.json": "6043473c2192dc4c91d47c521bea5adb15b0b07197ad6c421b9216a6f207f376",
+      "data/observations/qinshan_asset_permit_case.json": "49377e3598b1f91f9fa226551e92ec06b860da3a9bf21f7f918e8993e0ee56e6",
+      "data/processed/attachment_assets.json": "f18a4ac4295fe4ba90d290d940e4e66ac80733c34fc8c05e81f4637767c85f39",
+      "data/raw/official/S26_qinshan_permits_2017_capture.txt": "f5812462da06dce6271ef885017f62fad0bb6feaf569cc7acc7ec72f0d5bdbad",
+      "data/raw/official/S27_qinshan_extension_2021_capture.txt": "6de93b6cf6a764f3ab1a86a75220062e6869b0836e9f765dd0761c0ded66187b",
+      "data/raw/official/S28_qinshan_design_life_capture.txt": "cc6bbf21c20636fa131a2e3105bf9222aec3e64e6eb77d6000d385fdb224780d",
+      "data/sources.json": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f",
+      "scripts/run_asset_lifecycle_case.py": "c340fdaae3cac7a338e5ae62dec5eaa702f703a565a1b8ba8c3bc3705e281a95",
+      "scripts/workflow_status.py": "0a948df02f7a11e2f8f7afef0be49c1eeac44a9e9371bf2a3fc4300ed7046e9e",
+      "src/energy_model/asset_lifecycle.py": "25630cf80932b7ad9a612f871d9cc1fd6c7012e602cc47a479ad2ec191c03493",
+      "workflow/asset_case.json": "e16999f4a9a0643896cdbe1c259b0865cf77dab7c7b5dca96911e1192ba11750",
+      "workflow/model_inputs.json": "adcdca7ed33dc4048761a220c7a00b6585733117321ed1ce8571dd521c0520b0",
+      "workflow/official_data_policy.md": "2877a973872c9cebdff84f6c06c280d80180089f9a3ebc173fb320a457c55922",
+      "workflow/provided_inputs.json": "06ef40b43fcb2a5e1fb75bd5812920f416e5c3043d8b03a0bd00d82804447ca9",
+      "workflow/source_domains.json": "bee397b0829d645c1badb73251f4139f16e4034af4d9f2e18a34aaed6a662fcb",
+      "附件4.xlsx": "a7945ce8d6c279ecb695c3e56b7d331c1d3f098a282b59a8d1826a69b8736eaf"
+    }
+  }
+}

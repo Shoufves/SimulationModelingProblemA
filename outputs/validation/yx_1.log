@@ -1,0 +1,42 @@
+{
+  "core_national_common_window": [
+    2014,
+    2024
+  ],
+  "core_window_year_count": 11,
+  "candidate_national_baseline": 2024,
+  "detailed_energy_balance_checkpoint": 2023,
+  "latest_partial_crosscheck": 2025,
+  "candidate_calibration_years": [
+    2014,
+    2020
+  ],
+  "candidate_holdout_years": [
+    2021,
+    2024
+  ],
+  "split_is_design_not_validation_result": true,
+  "not_in_common_window_claim": [
+    "continuous sector/provincial fuel balances",
+    "clean-version delivered fuel price and enterprise tariffs",
+    "same-year measured wind/solar/hydro/load event series",
+    "complete project financial/approval/construction queues",
+    "independent net-carbon-sink/removal pathway"
+  ],
+  "source_file_count": 62,
+  "failed_download_count": 7,
+  "processed_dataset_count": 27,
+  "registered_source_count": 69,
+  "acquired_sources_by_batch": {
+    "1": 35,
+    "2": 21,
+    "3": 6
+  },
+  "assumption_support_count": 12,
+  "gap_decision_count": 16,
+  "warning_count": 1,
+  "error_count": 0,
+  "no_model_calibration_simulation_or_optimization_performed": true
+}
+CHECK FAILED {'check': 'fx_2025_cross_source_agreement', 'passed': False, 'severity': 'warning', 'detail': 'WDI=7.18984737402171; NBS=7.1429 CNY/USD. Keep versions separate; no price conversion pending definition/version check.'}
+

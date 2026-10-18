@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-17",
+  "timezone": "Asia/Shanghai",
+  "official_url": "https://www.nea.gov.cn/20250829/a4e2deb9b6444df1a191b9d60c111ffd/20250829a4e2deb9b6444df1a191b9d60c111ffd_43ab87a785d1b64d49b9210dbc15d3781e.pdf",
+  "attempts": [
+    {"method": "sandboxed_python_urllib", "status": "failed", "error": "ConnectionRefusedError WinError 10061"},
+    {"method": "approved_escalated_python_urllib", "status": "failed", "error": "SSLEOFError UNEXPECTED_EOF_WHILE_READING"},
+    {"method": "web_direct_official_pdf_open", "status": "readable", "pages": 29},
+    {"method": "web_pdf_screenshot_visual_review", "status": "reviewed", "one_based_pages": [3, 6, 10, 11, 12, 13]}
+  ],
+  "original_binary_archived": false,
+  "local_pdf_path": null,
+  "local_screenshots_archived": false,
+  "local_text_capture": "data/raw/official/S22_selected_capture.txt",
+  "note": "未关闭证书验证，未从第三方下载替代原件；允许留存明确标注的官方PDF页面文本及手工核验记录，不能声称取得原PDF。"
+}

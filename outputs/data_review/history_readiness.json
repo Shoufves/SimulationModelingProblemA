@@ -1,0 +1,453 @@
+{
+  "window": "2015-2024",
+  "formal_input_check_passed": true,
+  "tables": [
+    {
+      "path": "data/observations/energy_consumption_2015_2024.json",
+      "label": "能源消费总量与结构",
+      "sha256": "fc2e26b41d3f3e54751e097f6969494884c4e69378efef894b9a72583166f126",
+      "recorded_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_years": [],
+      "missing_cells": [],
+      "source_ids": [
+        "S01"
+      ],
+      "issues": [
+        "evidence_review_pending"
+      ],
+      "all_ten_year_rows_present": true,
+      "all_recorded_cells_present": true,
+      "whole_dataset_admitted": false,
+      "historical_scope_reviewed": false,
+      "continuous_calibration_ready": false
+    },
+    {
+      "path": "data/observations/macro_growth_2015_2024.json",
+      "label": "实际GDP/能源/电力增速",
+      "sha256": "c8039a79be2f80fc18e42d2a5fcc1ea7e87939f5b9a67cb70e771baafd51ca14",
+      "recorded_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_years": [],
+      "missing_cells": [],
+      "source_ids": [
+        "S06"
+      ],
+      "issues": [
+        "evidence_review_pending"
+      ],
+      "all_ten_year_rows_present": true,
+      "all_recorded_cells_present": true,
+      "whole_dataset_admitted": false,
+      "historical_scope_reviewed": false,
+      "continuous_calibration_ready": false
+    },
+    {
+      "path": "data/observations/power_capacity_2015_2024.json",
+      "label": "分电源年末装机",
+      "sha256": "c2e25b7bcac1b38967526f00253e8807c27b9351af56a5d69263c23be82c3f27",
+      "recorded_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_years": [],
+      "missing_cells": [],
+      "source_ids": [
+        "S05"
+      ],
+      "issues": [
+        "evidence_review_pending"
+      ],
+      "all_ten_year_rows_present": true,
+      "all_recorded_cells_present": true,
+      "whole_dataset_admitted": false,
+      "historical_scope_reviewed": false,
+      "continuous_calibration_ready": false
+    },
+    {
+      "path": "data/observations/power_generation_2015_2024.json",
+      "label": "分电源发电量",
+      "sha256": "a6aae99a8d04304f29ccb291cabb6dab06ac208493cb498cb1fc149223738e11",
+      "recorded_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_years": [],
+      "missing_cells": [
+        {
+          "year": 2015,
+          "column": "solar"
+        },
+        {
+          "year": 2016,
+          "column": "solar"
+        },
+        {
+          "year": 2017,
+          "column": "solar"
+        },
+        {
+          "year": 2018,
+          "column": "solar"
+        },
+        {
+          "year": 2019,
+          "column": "solar"
+        },
+        {
+          "year": 2020,
+          "column": "solar"
+        },
+        {
+          "year": 2021,
+          "column": "solar"
+        },
+        {
+          "year": 2022,
+          "column": "solar"
+        },
+        {
+          "year": 2023,
+          "column": "solar"
+        }
+      ],
+      "source_ids": [
+        "S07",
+        "S08",
+        "S09",
+        "S13"
+      ],
+      "issues": [
+        "evidence_review_pending",
+        "mixed_sources_need_scope_revision_bridge",
+        "observations_missing"
+      ],
+      "all_ten_year_rows_present": true,
+      "all_recorded_cells_present": false,
+      "whole_dataset_admitted": false,
+      "historical_scope_reviewed": false,
+      "continuous_calibration_ready": false
+    },
+    {
+      "path": "data/observations/coal_balance_2015_2023.json",
+      "label": "煤炭平衡",
+      "sha256": "847d28b3884bf1f95930a413a501c8d58ab8d11537be88bdda8a9342a31a8c74",
+      "recorded_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "missing_years": [
+        2024
+      ],
+      "missing_cells": [
+        {
+          "year": 2020,
+          "column": "washing_loss"
+        },
+        {
+          "year": 2022,
+          "column": "washing_loss"
+        },
+        {
+          "year": 2023,
+          "column": "washing_loss"
+        }
+      ],
+      "source_ids": [
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "issues": [
+        "evidence_review_pending",
+        "mixed_sources_need_scope_revision_bridge",
+        "observations_missing"
+      ],
+      "all_ten_year_rows_present": false,
+      "all_recorded_cells_present": false,
+      "whole_dataset_admitted": false,
+      "historical_scope_reviewed": false,
+      "continuous_calibration_ready": false
+    },
+    {
+      "path": "data/observations/petroleum_balance_selected_years.json",
+      "label": "石油平衡",
+      "sha256": "f498bf491177655cc3f2e0aa2565988f8bd2a16526fb0700c094ca16b49b5b65",
+      "recorded_years": [
+        2015,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "missing_years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2024
+      ],
+      "missing_cells": [],
+      "source_ids": [
+        "S14",
+        "S15"
+      ],
+      "issues": [
+        "evidence_review_pending",
+        "mixed_sources_need_scope_revision_bridge",
+        "observations_missing"
+      ],
+      "all_ten_year_rows_present": false,
+      "all_recorded_cells_present": true,
+      "whole_dataset_admitted": false,
+      "historical_scope_reviewed": false,
+      "continuous_calibration_ready": false
+    },
+    {
+      "path": "data/observations/fuel_production_2023_2024.json",
+      "label": "煤油气实物产量",
+      "sha256": "f756a0a232a08c5b34d4d5302ffde1e0b455a62de0aab39a102a6839867c1606",
+      "recorded_years": [
+        2023,
+        2024
+      ],
+      "missing_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "missing_cells": [],
+      "source_ids": [
+        "S16"
+      ],
+      "issues": [
+        "evidence_review_pending",
+        "observations_missing"
+      ],
+      "all_ten_year_rows_present": false,
+      "all_recorded_cells_present": true,
+      "whole_dataset_admitted": false,
+      "historical_scope_reviewed": false,
+      "continuous_calibration_ready": false
+    }
+  ],
+  "single_year_matches": [
+    {
+      "candidate_path": "data/observations/energy_consumption_2015_2024.json",
+      "year": 2024,
+      "candidate_field": "total_energy_consumption",
+      "conversion_factor": 0.0001,
+      "candidate_normalized": 59.6,
+      "reviewed_dataset": "data/observations/energy_official_communique_2024.json",
+      "reviewed_field": "total_energy_consumption",
+      "reviewed_value": 59.6,
+      "difference": 0.0,
+      "status": "single_value_match_only_not_historical_admission"
+    },
+    {
+      "candidate_path": "data/observations/energy_consumption_2015_2024.json",
+      "year": 2024,
+      "candidate_field": "coal_share",
+      "conversion_factor": 1,
+      "candidate_normalized": 53.2,
+      "reviewed_dataset": "data/observations/energy_official_communique_2024.json",
+      "reviewed_field": "coal_consumption_share_pct",
+      "reviewed_value": 53.2,
+      "difference": 0.0,
+      "status": "single_value_match_only_not_historical_admission"
+    },
+    {
+      "candidate_path": "data/observations/macro_growth_2015_2024.json",
+      "year": 2024,
+      "candidate_field": "real_gdp_growth_pct",
+      "conversion_factor": 1,
+      "candidate_normalized": 5.0,
+      "reviewed_dataset": "data/observations/energy_official_communique_2024.json",
+      "reviewed_field": "real_gdp_growth_pct",
+      "reviewed_value": 5.0,
+      "difference": 0.0,
+      "status": "single_value_match_only_not_historical_admission"
+    },
+    {
+      "candidate_path": "data/observations/macro_growth_2015_2024.json",
+      "year": 2024,
+      "candidate_field": "energy_consumption_growth_pct",
+      "conversion_factor": 1,
+      "candidate_normalized": 4.3,
+      "reviewed_dataset": "data/observations/energy_official_communique_2024.json",
+      "reviewed_field": "total_energy_consumption_growth_pct",
+      "reviewed_value": 4.3,
+      "difference": 0.0,
+      "status": "single_value_match_only_not_historical_admission"
+    },
+    {
+      "candidate_path": "data/observations/macro_growth_2015_2024.json",
+      "year": 2024,
+      "candidate_field": "electricity_consumption_growth_pct",
+      "conversion_factor": 1,
+      "candidate_normalized": 6.8,
+      "reviewed_dataset": "data/observations/energy_official_communique_2024.json",
+      "reviewed_field": "electricity_consumption_growth_pct",
+      "reviewed_value": 6.8,
+      "difference": 0.0,
+      "status": "single_value_match_only_not_historical_admission"
+    },
+    {
+      "candidate_path": "data/observations/power_generation_2015_2024.json",
+      "year": 2024,
+      "candidate_field": "total",
+      "candidate_normalized": 100868.8,
+      "conversion_factor": 1,
+      "reviewed_dataset": "data/observations/energy_official_communique_2024.json",
+      "reviewed_field": "generation_total",
+      "reviewed_value": 100868.8,
+      "difference": 0.0,
+      "status": "single_row_match_only_not_historical_admission"
+    },
+    {
+      "candidate_path": "data/observations/power_generation_2015_2024.json",
+      "year": 2024,
+      "candidate_field": "thermal",
+      "candidate_normalized": 63742.6,
+      "conversion_factor": 1,
+      "reviewed_dataset": "data/observations/energy_official_communique_2024.json",
+      "reviewed_field": "generation_thermal",
+      "reviewed_value": 63742.6,
+      "difference": 0.0,
+      "status": "single_row_match_only_not_historical_admission"
+    },
+    {
+      "candidate_path": "data/observations/power_generation_2015_2024.json",
+      "year": 2024,
+      "candidate_field": "hydro",
+      "candidate_normalized": 14256.8,
+      "conversion_factor": 1,
+      "reviewed_dataset": "data/observations/energy_official_communique_2024.json",
+      "reviewed_field": "generation_hydro",
+      "reviewed_value": 14256.8,
+      "difference": 0.0,
+      "status": "single_row_match_only_not_historical_admission"
+    },
+    {
+      "candidate_path": "data/observations/power_generation_2015_2024.json",
+      "year": 2024,
+      "candidate_field": "nuclear",
+      "candidate_normalized": 4508.5,
+      "conversion_factor": 1,
+      "reviewed_dataset": "data/observations/energy_official_communique_2024.json",
+      "reviewed_field": "generation_nuclear",
+      "reviewed_value": 4508.5,
+      "difference": 0.0,
+      "status": "single_row_match_only_not_historical_admission"
+    },
+    {
+      "candidate_path": "data/observations/power_generation_2015_2024.json",
+      "year": 2024,
+      "candidate_field": "wind",
+      "candidate_normalized": 9970.4,
+      "conversion_factor": 1,
+      "reviewed_dataset": "data/observations/energy_official_communique_2024.json",
+      "reviewed_field": "generation_wind",
+      "reviewed_value": 9970.4,
+      "difference": 0.0,
+      "status": "single_row_match_only_not_historical_admission"
+    },
+    {
+      "candidate_path": "data/observations/power_generation_2015_2024.json",
+      "year": 2024,
+      "candidate_field": "solar",
+      "candidate_normalized": 8390.4,
+      "conversion_factor": 1,
+      "reviewed_dataset": "data/observations/energy_official_communique_2024.json",
+      "reviewed_field": "generation_solar",
+      "reviewed_value": 8390.4,
+      "difference": 0.0,
+      "status": "single_row_match_only_not_historical_admission"
+    }
+  ],
+  "genuinely_incomplete_families": [
+    {
+      "family": "天然气供需/部门完整历史",
+      "recorded_years_in_current_report": [
+        2024
+      ],
+      "missing_years_2015_2024": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "note": "2024仅报告/快报横截面，出口、库存和部门绝对量仍缺；并非完整平衡表"
+    },
+    {
+      "family": "部门终端燃烧/原料用能、热值/排放因子、成本设备寿命",
+      "recorded_years_in_current_model_input": [],
+      "note": "现有资料不能构成所需输入；逐字段补齐，不能借总消费十年覆盖替代"
+    }
+  ],
+  "input_sha256": {
+    "data/observations/energy_official_communique_2024.json": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+    "data/observations/gas_official_report_2024.json": "20a0a46a2113440e2cf65d9395ff4c4377587cd83124e9f92c0f266af2fadc9b"
+  },
+  "note": "转录来自同版不等于已核验；单年数值相同不等于历史范围/修订桥接完成。此检查不批准数据。",
+  "counts": {
+    "complete_rows_and_cells_single_source_tables": 3,
+    "tables_missing_years": 3,
+    "tables_with_mixed_sources": 3
+  },
+  "minimal_demand_subsets_admitted": true,
+  "minimal_demand_scope": "仅总能源10值和GDP增速10值；不批准原完整结构/宏观表"
+}

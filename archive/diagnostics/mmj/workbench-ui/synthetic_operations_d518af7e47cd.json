@@ -1,0 +1,694 @@
+{
+  "schema_version": "1.0",
+  "mode": "synthetic",
+  "kind": "operations",
+  "warning": "全部为合成的连续小时窗口；MW/MWh仅为程序单位，不对应中国观测、真实项目、年度可靠性或全国正式情景。",
+  "run_id": "d518af7e47cd",
+  "created_at": "2026-10-17T18:37:32+08:00",
+  "parameters": {
+    "window_name": "normal_variability",
+    "storage_capacity_mwh": 40.0,
+    "charge_limit_mw": 20.0,
+    "discharge_limit_mw": 12.0,
+    "load_multiplier": 1.0,
+    "carbon_multiplier": 1.0,
+    "grid_capacity_multiplier": 1.0
+  },
+  "configuration": {
+    "schema_version": "1.0",
+    "mode": "synthetic",
+    "warning": "全部为合成的连续小时窗口；MW/MWh仅为程序单位，不对应中国观测、真实项目、年度可靠性或全国正式情景。",
+    "parameter_groups": {
+      "generation": {
+        "basis": "synthetic_assumption",
+        "purpose": "区分水核风光煤气及可用出力",
+        "unit": "MW、CU/MWh及效率",
+        "sensitivity": "容量与可用比例"
+      },
+      "fuels": {
+        "basis": "synthetic_assumption",
+        "purpose": "约束火电燃料与燃烧排放",
+        "unit": "MW燃料、CU/MWh燃料、合成排放/MWh燃料",
+        "sensitivity": "燃料供给、价格和效率"
+      },
+      "storage": {
+        "basis": "synthetic_assumption",
+        "purpose": "检验跨时段储存与损耗",
+        "unit": "MWh、MW、效率和CU/MWh放电",
+        "sensitivity": "功率、容量、效率和初始库存"
+      },
+      "grid": {
+        "basis": "synthetic_assumption",
+        "purpose": "检验发电侧送出瓶颈",
+        "unit": "MW及送达效率",
+        "sensitivity": "送出上限和损耗"
+      },
+      "windows": {
+        "basis": "synthetic_assumption",
+        "purpose": "检验波动、持续低出力及线路受限",
+        "unit": "h、MW及可用比例",
+        "sensitivity": "时长、时序、负荷及冲击"
+      },
+      "policy": {
+        "basis": "synthetic_assumption",
+        "purpose": "检验含碳煤气排序",
+        "unit": "CU/合成排放单位",
+        "sensitivity": "当期碳价"
+      }
+    },
+    "generation": {
+      "hydro": {
+        "fuel": null,
+        "capacity_mw": 5,
+        "efficiency": 1,
+        "variable_cost": 0.03
+      },
+      "nuclear": {
+        "fuel": null,
+        "capacity_mw": 5,
+        "efficiency": 1,
+        "variable_cost": 0.02
+      },
+      "wind": {
+        "fuel": null,
+        "capacity_mw": 10,
+        "efficiency": 1,
+        "variable_cost": 0.01
+      },
+      "solar": {
+        "fuel": null,
+        "capacity_mw": 50,
+        "efficiency": 1,
+        "variable_cost": 0
+      },
+      "coal": {
+        "fuel": "coal",
+        "capacity_mw": 8,
+        "efficiency": 0.4,
+        "variable_cost": 0.2
+      },
+      "gas": {
+        "fuel": "gas",
+        "capacity_mw": 8,
+        "efficiency": 0.6,
+        "variable_cost": 0.3
+      }
+    },
+    "fuels": {
+      "coal": {
+        "supply_limit_mw_fuel": 20,
+        "price": 1,
+        "emission_factor": 1
+      },
+      "gas": {
+        "supply_limit_mw_fuel": 14,
+        "price": 1.5,
+        "emission_factor": 0.5
+      }
+    },
+    "storage": {
+      "capacity_mwh": 40.0,
+      "initial_energy_mwh": 0,
+      "charge_limit_mw": 20.0,
+      "discharge_limit_mw": 12.0,
+      "charge_efficiency": 0.9,
+      "discharge_efficiency": 0.9,
+      "discharge_variable_cost": 0.02
+    },
+    "grid": {
+      "transfer_limit_mw": 60.0,
+      "delivery_efficiency": 0.95
+    },
+    "policy": {
+      "carbon_price": 1.0
+    },
+    "windows": {
+      "normal_variability": {
+        "description": "先有光伏剩余，后有低出力缺口；合成窗口",
+        "steps": [
+          {
+            "duration_hours": 2,
+            "demand_mw": 30.0,
+            "availability": {
+              "hydro": 1,
+              "nuclear": 1,
+              "wind": 0.5,
+              "solar": 1,
+              "coal": 1,
+              "gas": 1
+            }
+          },
+          {
+            "duration_hours": 1,
+            "demand_mw": 30.0,
+            "availability": {
+              "hydro": 1,
+              "nuclear": 1,
+              "wind": 0.2,
+              "solar": 0.2,
+              "coal": 1,
+              "gas": 1
+            }
+          },
+          {
+            "duration_hours": 2,
+            "demand_mw": 35.0,
+            "availability": {
+              "hydro": 1,
+              "nuclear": 1,
+              "wind": 0.1,
+              "solar": 0,
+              "coal": 1,
+              "gas": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "configuration_sha256": "a07170b8c401ef63457c016d7d3d8cbcbf822f4791a51eebd7095414749cbd20",
+  "source_configuration_path": "examples/synthetic_operation_windows.json",
+  "source_configuration_sha256": "949763e28c85fa2eb303d1a4f284be74f7d0e50ce69170aff621acbfd1b50d86",
+  "implementation_sha256": {
+    "src/energy_model/workbench.py": "c7a1b64fd6a27b7fd086de7111d8e968146d8af378586ebfebebe01fdd10f5b8",
+    "src/energy_model/agents.py": "e1179e8dfcd14e0abf10c653b637c46f8c69eb33c10ac2b09819b85327b38855",
+    "src/energy_model/accounting.py": "5f1d7ad24fb2ae71daa1afad29763ac860b164e01d099bb9e881ebb70a28bcdd",
+    "src/energy_model/operations.py": "a2b3bc73b384b5fb0f39e0bd036666ddd3295d7acd30f99e4dacc7b85dc37f8e"
+  },
+  "cases": {
+    "with_storage": {
+      "mode": "synthetic",
+      "warning": "全部为合成的连续小时窗口；MW/MWh仅为程序单位，不对应中国观测、真实项目、年度可靠性或全国正式情景。",
+      "window_name": "normal_variability",
+      "description": "先有光伏剩余，后有低出力缺口；合成窗口",
+      "storage_enabled": true,
+      "rows": [
+        {
+          "period": 1,
+          "information_cutoff_period": 1,
+          "duration_hours": 2,
+          "demand_mw": 30.0,
+          "availability_observed": {
+            "hydro": 1,
+            "nuclear": 1,
+            "wind": 0.5,
+            "solar": 1,
+            "coal": 1,
+            "gas": 1
+          },
+          "carbon_price": 1.0,
+          "available_generation_mwh": {
+            "hydro": 10,
+            "nuclear": 10,
+            "wind": 10.0,
+            "solar": 100,
+            "coal": 16,
+            "gas": 16
+          },
+          "generation_mwh": {
+            "hydro": 0.0,
+            "nuclear": 0.0,
+            "wind": 3.1578947368421098,
+            "solar": 100.0,
+            "coal": 0.0,
+            "gas": 0.0
+          },
+          "unused_noncombustion_mwh": {
+            "hydro": 10.0,
+            "nuclear": 10.0,
+            "wind": 6.84210526315789,
+            "solar": 0.0
+          },
+          "fuel_input_mwh_lhv": {
+            "coal": 0.0,
+            "gas": 0.0
+          },
+          "fuel_supply_limit_mwh_lhv": {
+            "coal": 40,
+            "gas": 28
+          },
+          "grid_limit_mw": 60.0,
+          "grid_input_mwh": 63.15789473684211,
+          "electricity_requested_mwh": 60.0,
+          "electricity_served_mwh": 60.0,
+          "unserved_electricity_mwh": 0.0,
+          "grid_loss_mwh": 3.1578947368421084,
+          "thermal_conversion_loss_mwh": 0.0,
+          "storage": {
+            "opening_energy_mwh": 0,
+            "closing_energy_mwh": 36.0,
+            "charge_input_mwh": 40.0,
+            "discharge_output_mwh": 0.0,
+            "charge_loss_mwh": 3.999999999999999,
+            "discharge_loss_mwh": 0.0,
+            "rule": "current_noncombustion_surplus_then_discharge_before_fossil",
+            "location": "generation_side"
+          },
+          "energy_related_synthetic_emissions": 0.0,
+          "costs_cu": {
+            "fuel": 0.0,
+            "generation_variable_om": 0.031578947368421095,
+            "storage_variable": 0.0,
+            "resource_variable_total": 0.031578947368421095,
+            "carbon_payment": 0.0
+          },
+          "balance_residuals_mwh": {
+            "electricity_with_storage": 0.0,
+            "electricity_fuel_interface": 0.0
+          }
+        },
+        {
+          "period": 2,
+          "information_cutoff_period": 2,
+          "duration_hours": 1,
+          "demand_mw": 30.0,
+          "availability_observed": {
+            "hydro": 1,
+            "nuclear": 1,
+            "wind": 0.2,
+            "solar": 0.2,
+            "coal": 1,
+            "gas": 1
+          },
+          "carbon_price": 1.0,
+          "available_generation_mwh": {
+            "hydro": 5,
+            "nuclear": 5,
+            "wind": 2.0,
+            "solar": 10.0,
+            "coal": 8,
+            "gas": 8
+          },
+          "generation_mwh": {
+            "hydro": 5.0,
+            "nuclear": 5.0,
+            "wind": 2.0,
+            "solar": 10.0,
+            "coal": 0.0,
+            "gas": 0.0
+          },
+          "unused_noncombustion_mwh": {
+            "hydro": 0.0,
+            "nuclear": 0.0,
+            "wind": 0.0,
+            "solar": 0.0
+          },
+          "fuel_input_mwh_lhv": {
+            "coal": 0.0,
+            "gas": 0.0
+          },
+          "fuel_supply_limit_mwh_lhv": {
+            "coal": 20,
+            "gas": 14
+          },
+          "grid_limit_mw": 60.0,
+          "grid_input_mwh": 31.578947368421055,
+          "electricity_requested_mwh": 30.0,
+          "electricity_served_mwh": 30.0,
+          "unserved_electricity_mwh": 0.0,
+          "grid_loss_mwh": 1.5789473684210542,
+          "thermal_conversion_loss_mwh": 0.0,
+          "storage": {
+            "opening_energy_mwh": 36.0,
+            "closing_energy_mwh": 25.356725146198826,
+            "charge_input_mwh": 0.0,
+            "discharge_output_mwh": 9.578947368421055,
+            "charge_loss_mwh": 0.0,
+            "discharge_loss_mwh": 1.0643274853801177,
+            "rule": "current_noncombustion_surplus_then_discharge_before_fossil",
+            "location": "generation_side"
+          },
+          "energy_related_synthetic_emissions": 0.0,
+          "costs_cu": {
+            "fuel": 0.0,
+            "generation_variable_om": 0.27,
+            "storage_variable": 0.1915789473684211,
+            "resource_variable_total": 0.4615789473684211,
+            "carbon_payment": 0.0
+          },
+          "balance_residuals_mwh": {
+            "electricity_with_storage": 0.0,
+            "electricity_fuel_interface": 0.0
+          }
+        },
+        {
+          "period": 3,
+          "information_cutoff_period": 3,
+          "duration_hours": 2,
+          "demand_mw": 35.0,
+          "availability_observed": {
+            "hydro": 1,
+            "nuclear": 1,
+            "wind": 0.1,
+            "solar": 0,
+            "coal": 1,
+            "gas": 1
+          },
+          "carbon_price": 1.0,
+          "available_generation_mwh": {
+            "hydro": 10,
+            "nuclear": 10,
+            "wind": 2.0,
+            "solar": 0,
+            "coal": 16,
+            "gas": 16
+          },
+          "generation_mwh": {
+            "hydro": 10.0,
+            "nuclear": 10.0,
+            "wind": 2.0,
+            "solar": 0.0,
+            "coal": 12.863157894736851,
+            "gas": 16
+          },
+          "unused_noncombustion_mwh": {
+            "hydro": 0.0,
+            "nuclear": 0.0,
+            "wind": 0.0,
+            "solar": 0.0
+          },
+          "fuel_input_mwh_lhv": {
+            "coal": 32.157894736842124,
+            "gas": 26.666666666666668
+          },
+          "fuel_supply_limit_mwh_lhv": {
+            "coal": 40,
+            "gas": 28
+          },
+          "grid_limit_mw": 60.0,
+          "grid_input_mwh": 73.6842105263158,
+          "electricity_requested_mwh": 70.0,
+          "electricity_served_mwh": 70.0,
+          "unserved_electricity_mwh": 0.0,
+          "grid_loss_mwh": 3.684210526315793,
+          "thermal_conversion_loss_mwh": 29.961403508771944,
+          "storage": {
+            "opening_energy_mwh": 25.356725146198826,
+            "closing_energy_mwh": 0.0,
+            "charge_input_mwh": 0.0,
+            "discharge_output_mwh": 22.821052631578944,
+            "charge_loss_mwh": 0.0,
+            "discharge_loss_mwh": 2.535672514619884,
+            "rule": "current_noncombustion_surplus_then_discharge_before_fossil",
+            "location": "generation_side"
+          },
+          "energy_related_synthetic_emissions": 45.49122807017546,
+          "costs_cu": {
+            "fuel": 72.15789473684212,
+            "generation_variable_om": 7.89263157894737,
+            "storage_variable": 0.4564210526315789,
+            "resource_variable_total": 80.50694736842108,
+            "carbon_payment": 45.49122807017546
+          },
+          "balance_residuals_mwh": {
+            "electricity_with_storage": 0.0,
+            "electricity_fuel_interface": 0.0
+          }
+        }
+      ],
+      "opening_storage_mwh": 0,
+      "closing_storage_mwh": 0.0,
+      "initial_stock_upstream_cost_and_emissions_included": false,
+      "storage_capital_and_fixed_costs_included": false,
+      "annual_reliability": null,
+      "national_forecast": null
+    },
+    "without_storage": {
+      "mode": "synthetic",
+      "warning": "全部为合成的连续小时窗口；MW/MWh仅为程序单位，不对应中国观测、真实项目、年度可靠性或全国正式情景。",
+      "window_name": "normal_variability",
+      "description": "先有光伏剩余，后有低出力缺口；合成窗口",
+      "storage_enabled": false,
+      "rows": [
+        {
+          "period": 1,
+          "information_cutoff_period": 1,
+          "duration_hours": 2,
+          "demand_mw": 30.0,
+          "availability_observed": {
+            "hydro": 1,
+            "nuclear": 1,
+            "wind": 0.5,
+            "solar": 1,
+            "coal": 1,
+            "gas": 1
+          },
+          "carbon_price": 1.0,
+          "available_generation_mwh": {
+            "hydro": 10,
+            "nuclear": 10,
+            "wind": 10.0,
+            "solar": 100,
+            "coal": 16,
+            "gas": 16
+          },
+          "generation_mwh": {
+            "hydro": 0.0,
+            "nuclear": 0.0,
+            "wind": 0.0,
+            "solar": 63.15789473684211,
+            "coal": 0.0,
+            "gas": 0.0
+          },
+          "unused_noncombustion_mwh": {
+            "hydro": 10.0,
+            "nuclear": 10.0,
+            "wind": 10.0,
+            "solar": 36.84210526315789
+          },
+          "fuel_input_mwh_lhv": {
+            "coal": 0.0,
+            "gas": 0.0
+          },
+          "fuel_supply_limit_mwh_lhv": {
+            "coal": 40,
+            "gas": 28
+          },
+          "grid_limit_mw": 60.0,
+          "grid_input_mwh": 63.15789473684211,
+          "electricity_requested_mwh": 60.0,
+          "electricity_served_mwh": 60.0,
+          "unserved_electricity_mwh": 0.0,
+          "grid_loss_mwh": 3.1578947368421084,
+          "thermal_conversion_loss_mwh": 0.0,
+          "storage": {
+            "opening_energy_mwh": 0,
+            "closing_energy_mwh": 0.0,
+            "charge_input_mwh": 0.0,
+            "discharge_output_mwh": 0.0,
+            "charge_loss_mwh": 0.0,
+            "discharge_loss_mwh": 0.0,
+            "rule": "current_noncombustion_surplus_then_discharge_before_fossil",
+            "location": "generation_side"
+          },
+          "energy_related_synthetic_emissions": 0.0,
+          "costs_cu": {
+            "fuel": 0.0,
+            "generation_variable_om": 0.0,
+            "storage_variable": 0.0,
+            "resource_variable_total": 0.0,
+            "carbon_payment": 0.0
+          },
+          "balance_residuals_mwh": {
+            "electricity_with_storage": 0.0,
+            "electricity_fuel_interface": 0.0
+          }
+        },
+        {
+          "period": 2,
+          "information_cutoff_period": 2,
+          "duration_hours": 1,
+          "demand_mw": 30.0,
+          "availability_observed": {
+            "hydro": 1,
+            "nuclear": 1,
+            "wind": 0.2,
+            "solar": 0.2,
+            "coal": 1,
+            "gas": 1
+          },
+          "carbon_price": 1.0,
+          "available_generation_mwh": {
+            "hydro": 5,
+            "nuclear": 5,
+            "wind": 2.0,
+            "solar": 10.0,
+            "coal": 8,
+            "gas": 8
+          },
+          "generation_mwh": {
+            "hydro": 5.0,
+            "nuclear": 5.0,
+            "wind": 2.0,
+            "solar": 10.0,
+            "coal": 1.5789473684210549,
+            "gas": 8
+          },
+          "unused_noncombustion_mwh": {
+            "hydro": 0.0,
+            "nuclear": 0.0,
+            "wind": 0.0,
+            "solar": 0.0
+          },
+          "fuel_input_mwh_lhv": {
+            "coal": 3.947368421052637,
+            "gas": 13.333333333333334
+          },
+          "fuel_supply_limit_mwh_lhv": {
+            "coal": 20,
+            "gas": 14
+          },
+          "grid_limit_mw": 60.0,
+          "grid_input_mwh": 31.578947368421055,
+          "electricity_requested_mwh": 30.0,
+          "electricity_served_mwh": 30.0,
+          "unserved_electricity_mwh": 0.0,
+          "grid_loss_mwh": 1.5789473684210542,
+          "thermal_conversion_loss_mwh": 7.701754385964918,
+          "storage": {
+            "opening_energy_mwh": 0.0,
+            "closing_energy_mwh": 0.0,
+            "charge_input_mwh": 0.0,
+            "discharge_output_mwh": 0.0,
+            "charge_loss_mwh": 0.0,
+            "discharge_loss_mwh": 0.0,
+            "rule": "current_noncombustion_surplus_then_discharge_before_fossil",
+            "location": "generation_side"
+          },
+          "energy_related_synthetic_emissions": 10.614035087719305,
+          "costs_cu": {
+            "fuel": 23.947368421052637,
+            "generation_variable_om": 2.985789473684211,
+            "storage_variable": 0.0,
+            "resource_variable_total": 26.933157894736848,
+            "carbon_payment": 10.614035087719305
+          },
+          "balance_residuals_mwh": {
+            "electricity_with_storage": 0.0,
+            "electricity_fuel_interface": 0.0
+          }
+        },
+        {
+          "period": 3,
+          "information_cutoff_period": 3,
+          "duration_hours": 2,
+          "demand_mw": 35.0,
+          "availability_observed": {
+            "hydro": 1,
+            "nuclear": 1,
+            "wind": 0.1,
+            "solar": 0,
+            "coal": 1,
+            "gas": 1
+          },
+          "carbon_price": 1.0,
+          "available_generation_mwh": {
+            "hydro": 10,
+            "nuclear": 10,
+            "wind": 2.0,
+            "solar": 0,
+            "coal": 16,
+            "gas": 16
+          },
+          "generation_mwh": {
+            "hydro": 10.0,
+            "nuclear": 10.0,
+            "wind": 2.0,
+            "solar": 0.0,
+            "coal": 16,
+            "gas": 16
+          },
+          "unused_noncombustion_mwh": {
+            "hydro": 0.0,
+            "nuclear": 0.0,
+            "wind": 0.0,
+            "solar": 0.0
+          },
+          "fuel_input_mwh_lhv": {
+            "coal": 40.0,
+            "gas": 26.666666666666668
+          },
+          "fuel_supply_limit_mwh_lhv": {
+            "coal": 40,
+            "gas": 28
+          },
+          "grid_limit_mw": 60.0,
+          "grid_input_mwh": 54.0,
+          "electricity_requested_mwh": 70.0,
+          "electricity_served_mwh": 51.3,
+          "unserved_electricity_mwh": 18.700000000000003,
+          "grid_loss_mwh": 2.7000000000000024,
+          "thermal_conversion_loss_mwh": 34.66666666666667,
+          "storage": {
+            "opening_energy_mwh": 0.0,
+            "closing_energy_mwh": 0.0,
+            "charge_input_mwh": 0.0,
+            "discharge_output_mwh": 0.0,
+            "charge_loss_mwh": 0.0,
+            "discharge_loss_mwh": 0.0,
+            "rule": "current_noncombustion_surplus_then_discharge_before_fossil",
+            "location": "generation_side"
+          },
+          "energy_related_synthetic_emissions": 53.333333333333336,
+          "costs_cu": {
+            "fuel": 80.0,
+            "generation_variable_om": 8.52,
+            "storage_variable": 0.0,
+            "resource_variable_total": 88.52,
+            "carbon_payment": 53.333333333333336
+          },
+          "balance_residuals_mwh": {
+            "electricity_with_storage": 0.0,
+            "electricity_fuel_interface": 0.0
+          }
+        }
+      ],
+      "opening_storage_mwh": 0,
+      "closing_storage_mwh": 0.0,
+      "initial_stock_upstream_cost_and_emissions_included": false,
+      "storage_capital_and_fixed_costs_included": false,
+      "annual_reliability": null,
+      "national_forecast": null
+    }
+  },
+  "summaries": {
+    "with_storage": {
+      "window_hours": 5,
+      "requested_mwh": 160.0,
+      "unserved_mwh": 0.0,
+      "shortage_hours": 0,
+      "max_shortage_mw": 0.0,
+      "unused_noncombustion_mwh": 26.84210526315789,
+      "storage_charge_mwh": 40.0,
+      "storage_discharge_mwh": 32.4,
+      "storage_loss_mwh": 7.6000000000000005,
+      "opening_storage_mwh": 0,
+      "closing_storage_mwh": 0.0,
+      "energy_related_synthetic_emissions": 45.49122807017546,
+      "resource_variable_cost_cu": 81.00010526315792,
+      "carbon_payment_cu": 45.49122807017546,
+      "max_abs_balance_residual_mwh": 0.0
+    },
+    "without_storage": {
+      "window_hours": 5,
+      "requested_mwh": 160.0,
+      "unserved_mwh": 18.700000000000003,
+      "shortage_hours": 2,
+      "max_shortage_mw": 9.350000000000001,
+      "unused_noncombustion_mwh": 66.84210526315789,
+      "storage_charge_mwh": 0.0,
+      "storage_discharge_mwh": 0.0,
+      "storage_loss_mwh": 0.0,
+      "opening_storage_mwh": 0,
+      "closing_storage_mwh": 0.0,
+      "energy_related_synthetic_emissions": 63.947368421052644,
+      "resource_variable_cost_cu": 115.45315789473685,
+      "carbon_payment_cu": 63.947368421052644,
+      "max_abs_balance_residual_mwh": 0.0
+    }
+  },
+  "validation_status": "synthetic_mechanisms_only",
+  "national_forecast": null,
+  "historical_calibration": null,
+  "annual_reliability": null
+}

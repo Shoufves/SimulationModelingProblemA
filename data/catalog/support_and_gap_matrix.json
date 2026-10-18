@@ -1,0 +1,209 @@
+{
+  "round": 5,
+  "date": "2026-10-17",
+  "scope": "数据适用性及缺口登记；研究解释见唯一主文档第14节；不是假设检验结果。",
+  "assumptions": [
+    {
+      "id": "A01",
+      "datasets": ["nbs_province_demand.csv", "china_power_plants_wri_snapshot.csv", "transmission_lines_candidate.csv"],
+      "support": "可检查31省需求规模和候选电源位置；约6区及区内无瓶颈尚不能确定。",
+      "decision": "关联G01/G05/G16，先保留省到区域的可修改映射。"
+    },
+    {
+      "id": "A02",
+      "datasets": ["province_load_2018_MWh.csv", "reservoir_attributes_candidate.csv", "fuel_storage_hydrogen_snapshots.csv"],
+      "support": "可检查一组重建负荷曲线及储能功率/能量概念；不足以验证代表周误差和联合极端概率。",
+      "decision": "关联G04/G06，压力测试先解释为给定条件。"
+    },
+    {
+      "id": "A03",
+      "datasets": ["china_power_plants_wri_snapshot.csv", "project_timing_examples.csv"],
+      "support": "可描述燃料、位置、部分年龄和建设时滞实例；无融资审批与退出完整队列。",
+      "decision": "关联G08，不能声称识别主体行为。"
+    },
+    {
+      "id": "A04",
+      "datasets": ["china_macro_annual.csv", "nbs_sector_use_2023.csv", "nbs_latest_2025.csv"],
+      "support": "可约束全国需求驱动和部门规模截面；缺活动量、设备更新与效率的连续分解。",
+      "decision": "关联G01/G07，先减少独立行为参数。"
+    },
+    {
+      "id": "A05",
+      "datasets": ["commodity_price_references.csv", "cea_market_annual.csv", "policy_target_reference.csv"],
+      "support": "具备部分外生输入参照；价格新版隔离，政策目标不等于实施激励。",
+      "decision": "关联G02/G03/G13，未核对部分不能进入校准。"
+    },
+    {
+      "id": "A06",
+      "datasets": ["nbs_balance_checkpoints.csv", "fuel_storage_hydrogen_snapshots.csv", "transmission_lines_candidate.csv"],
+      "support": "可建立年度能量与贸易检查点；不能推定安全传输能力、可用库存或日提取能力。",
+      "decision": "关联G05/G06，年度约束与运行约束分别处理。"
+    },
+    {
+      "id": "A07",
+      "datasets": ["china_co2_gcb_annual.csv", "policy_target_reference.csv"],
+      "support": "可区分化石/工业排放分项；尚无可用净碳汇、净移除及全温室气体路径。",
+      "decision": "关联G11/G12，暂缓全国中和率与全GHG达标结论。"
+    },
+    {
+      "id": "A08",
+      "datasets": ["nbs_energy_annual.csv", "nbs_capacity_annual.csv", "china_macro_annual.csv", "china_co2_gcb_annual.csv"],
+      "support": "存在11年全国共同历史窗口；尚未开展识别性、校准或留出检验。",
+      "decision": "关联G14，少量参数、多规则对照作为后续设计。"
+    },
+    {
+      "id": "A09",
+      "datasets": ["technology_accounting_parameters.csv", "commodity_price_references.csv", "cea_market_annual.csv"],
+      "support": "有2022煤电市场均价及部分成本；不能建立连续企业合同收入或真实传导率。",
+      "decision": "关联G02/G03/G09，暂不估计复杂电价形成。"
+    },
+    {
+      "id": "A10",
+      "datasets": ["nbs_energy_annual.csv", "nbs_balance_checkpoints.csv", "nea_renewables_2024_2025.csv", "fuel_storage_hydrogen_snapshots.csv"],
+      "support": "全国多能源核算已有主要基础；各环节的行为细节并不等量可得。",
+      "decision": "关联G07/G09/G11/G16，按资料精度确定首版机制范围。"
+    },
+    {
+      "id": "H01",
+      "datasets": ["project_timing_examples.csv", "nbs_capacity_annual.csv", "nea_renewables_2024_2025.csv"],
+      "support": "有资产扩张、配套规模与长期项目建设实例；没有观测到转型速度/滞后导致安全变化的因果关系。",
+      "decision": "保留待检验；补齐G04/G05/G08/G09后才具备较完整对照条件。"
+    },
+    {
+      "id": "H02",
+      "datasets": ["fuel_storage_hydrogen_snapshots.csv", "nbs_sector_use_2023.csv", "province_load_2018_MWh.csv"],
+      "support": "天然气多用途共同供给具有数据入口；没有同期风光、气源、负荷、库存及行为反应的联合证据。",
+      "decision": "保留待检验；关联G04/G06/G07，仅条件实验不能证明现实传播。"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G01",
+      "datasets": ["nbs_sector_use_2023.csv", "nbs_balance_checkpoints.csv", "nbs_province_demand.csv"],
+      "missing": "连续部门能源服务、分省分技术生产消费及调入调出面板。",
+      "decision": "继续补查；首版先用全国和已有省级截面，减少区域及部门自由参数。",
+      "next_evidence": "能源统计年鉴、分省统计及能源局原表，核对2023/2024同一年度边界。",
+      "claim_limit": "不得将全国11年共同窗口表述为区域/部门完整窗口。"
+    },
+    {
+      "id": "G02",
+      "datasets": ["commodity_price_references.csv", "commodity_price_version_comparison.csv", "china_macro_annual.csv", "nbs_latest_2025.csv"],
+      "missing": "2021-2025干净版本国际价、中国交付/合同价、适用设备平减指数；2025汇率源间不一致。",
+      "decision": "继续补查；新版候选行隔离，暂停有争议的价格换算和历史成本校准。",
+      "next_evidence": "世界银行原始无编辑版本、国内交易/海关资料及国家外汇管理局定义；核查WDI版本。",
+      "claim_limit": "旧版价格止于2020；国际基准价不等于中国到厂价；CPI不自动用于设备成本。"
+    },
+    {
+      "id": "G03",
+      "datasets": ["cea_market_annual.csv", "policy_target_reference.csv"],
+      "missing": "2021-2023CEA连续交易序列和行业覆盖、免费配额及实际履约现金支出。",
+      "decision": "继续补查；碳价与配额规则分开，首版先用已核实年度参照。",
+      "next_evidence": "交易所历史日/月/年报及生态环境部各履约期配额文件。",
+      "claim_limit": "成交额/成交量不能叫每日收盘均价；全排放乘碳价不是企业实付额。"
+    },
+    {
+      "id": "G04",
+      "datasets": ["province_load_2018_MWh.csv", "reservoir_attributes_candidate.csv"],
+      "missing": "同年同区负荷、风光出力、来水及事件持续/恢复的连续序列。",
+      "decision": "继续补查；资料未取得前简化为条件压力测试，暂缓真实联合事件概率和小时可靠性结论。",
+      "next_evidence": "气象、水文和电网原始序列，或原作者明确年份单位的可复核气象驱动数据。",
+      "claim_limit": "2018重建负荷不是实测；未标年水库列不分配年份，未获取日来水文件。"
+    },
+    {
+      "id": "G05",
+      "datasets": ["transmission_lines_candidate.csv", "province_column_mapping.csv"],
+      "missing": "2024在运跨区通道、AC/DC核准标签、损耗及安全同时传输能力。",
+      "decision": "继续补查；候选线路全表隔离，未核对前简化区域输送表达。",
+      "next_evidence": "国家电网、南方电网和项目投运公告逐通道交叉核对。",
+      "claim_limit": "不自动互换AC/DC标签；2022名义容量不能冒充2024安全可用能力。"
+    },
+    {
+      "id": "G06",
+      "datasets": ["fuel_storage_hydrogen_snapshots.csv", "nbs_balance_checkpoints.csv"],
+      "missing": "煤油气逐来源/通道历史贸易、可动用库存、日提取率和事件供给分配。",
+      "decision": "继续补查；先保留已公布年度约束，暂缓具体库存续航天数和供应中断概率。",
+      "next_evidence": "海关来源国表、油气报告和储气设施工作气量/注采能力说明。",
+      "claim_limit": "天然气新增储气能力不是库存；统计库存变化不是战略库存存量。"
+    },
+    {
+      "id": "G07",
+      "datasets": ["china_macro_annual.csv", "nbs_sector_use_2023.csv", "nbs_latest_2025.csv"],
+      "missing": "交通周转、工业活动、设备存量/退出、效率和替代响应的连续资料。",
+      "decision": "继续补查；先简化需求分解，设备约束参数未取得依据时不赋任意点值。",
+      "next_evidence": "交通运输统计、公安全年车辆结构、工业产品活动量与设备更新研究原始证据。",
+      "claim_limit": "一年的新能源车存量和产量不足以识别设备更新或价格弹性。"
+    },
+    {
+      "id": "G08",
+      "datasets": ["project_timing_examples.csv", "china_power_plants_wri_snapshot.csv"],
+      "missing": "项目收益、融资审批、在建/排队、延期投产、停运/备用/永久退役记录。",
+      "decision": "继续补查；以少量已知项目作为检查例，简化申请和队列规则；暂缓经验延误分布。",
+      "next_evidence": "能源核准文件、项目公告、企业年报及项目级退休数据库。",
+      "claim_limit": "两个站址七条项目记录不是全国周期分布；设计寿命不是实际退役日。"
+    },
+    {
+      "id": "G09",
+      "datasets": ["technology_accounting_parameters.csv", "nbs_conversion_efficiency.csv", "fuel_storage_hydrogen_snapshots.csv"],
+      "missing": "煤气核电投资/运维、技术电效率、融资条件、储能往返效率和2024储能状态。",
+      "decision": "继续补查；已有中国风光项目成本分散范围仅供成本敏感性候选，其他参数在有依据前暂不赋值。",
+      "next_evidence": "中国技术成本与核算报告、储能项目技术文件、企业费用及设备性能资料。",
+      "claim_limit": "发电及供热总效率不是煤气机组电效率；LCOE不是额外运维费或企业售价。"
+    },
+    {
+      "id": "G10",
+      "datasets": ["technology_accounting_parameters.csv", "electricity_co2_factors_2023.csv"],
+      "missing": "具体煤油气品种低位热值、适用中国燃烧因子及非燃烧/原料用途分配。",
+      "decision": "使用已取得IPCC对应品种默认值与上下界作候选核算范围，同时补查中国适用因子。",
+      "next_evidence": "IPCC热值表、中国行业温室气体核算指南和燃料统计口径。",
+      "claim_limit": "IPCC上下界不是已知概率分布；电力消费分摊因子不重复加到发电排放。"
+    },
+    {
+      "id": "G11",
+      "datasets": ["fuel_storage_hydrogen_snapshots.csv", "nea_renewables_2024_2025.csv", "technology_accounting_parameters.csv"],
+      "missing": "CCUS捕集能耗/成本/封存、氢能效率用途、可持续生物质原料供给。",
+      "decision": "继续补查并简化首版；没有来源前不设置无限潜力或任意技术突破路径。",
+      "next_evidence": "国内CCUS项目/封存报告、氢能原始技术资料、生物质资源评估。",
+      "claim_limit": "制氢产能不是产量；生物质装机/发电量不能决定可持续原料上限。"
+    },
+    {
+      "id": "G12",
+      "datasets": ["china_co2_gcb_annual.csv", "policy_target_reference.csv"],
+      "missing": "同边界土地利用、自然碳汇、净移除和非CO2温室气体历史及路径。",
+      "decision": "继续补查，暂缓全国净零、中和率及2035全GHG净排放达标结论。",
+      "next_evidence": "国家温室气体清单、土地利用收支和净移除技术的独立资料。",
+      "claim_limit": "森林蓄积目标不是年度碳汇；化石和工业毛CO2不等于全经济净GHG。"
+    },
+    {
+      "id": "G13",
+      "datasets": ["policy_target_reference.csv", "china_macro_annual.csv"],
+      "missing": "已实施补偿/准入/预算规则及未来GDP、燃料价、技术下降率等完整路径。",
+      "decision": "继续补查；目标作比较基准，情景范围取得来源后再登记，不倒推参数以达标。",
+      "next_evidence": "生效政策与实施细则、官方或研究机构公开情景假设和适用范围。",
+      "claim_limit": "政策目标不是未来观测；不得宣称现有包已经支持四种完整可运行情景。"
+    },
+    {
+      "id": "G14",
+      "datasets": ["china_energy_research_annual.csv", "china_co2_gcb_annual.csv", "china_macro_annual.csv"],
+      "missing": "与模型输入充分独立的历史排放、机制行为及联合事件验证资料。",
+      "decision": "继续补查；区分时间留出、同源核算交叉检查和独立验证，暂缓后两者等同。",
+      "next_evidence": "国家清单/CEADs原始表及其上游活动量说明，另留历史时期和机制观测。",
+      "claim_limit": "OWID与GCB共享部分能源来源；WDI常取自国家统计，均非自动独立观测。"
+    },
+    {
+      "id": "G15",
+      "datasets": ["nbs_products_annual.csv", "nbs_balance_checkpoints.csv", "nbs_conversion_efficiency.csv", "nea_renewables_2024_2025.csv"],
+      "missing": "煤产量两表差异、平衡残差、效率2019断点、水电/PV统计范围及修订批次的完整解释。",
+      "decision": "继续补查并保留原值；先用单一口径作对应核算，不跨表强制闭合。",
+      "next_evidence": "国家统计局表注、统计制度、咨询答复及能源局发布批次说明。",
+      "claim_limit": "不静默用一个值覆盖另一个值，不把全部统计差异解释成物理损耗。"
+    },
+    {
+      "id": "G16",
+      "datasets": ["nbs_capacity_annual.csv", "nbs_province_demand.csv", "nea_renewables_2024_2025.csv", "fuel_storage_hydrogen_snapshots.csv"],
+      "missing": "同一2024基准的分区电源/储能、初始库存、资产队列和完整静态能源状态。",
+      "decision": "继续补查；2024仅定为全国候选基准，2023细账作检查点，暂不完成区域模型初始化。",
+      "next_evidence": "2024逐省技术容量、储能功率/能量、同年库存及在建核准资料。",
+      "claim_limit": "不能将2025储能存量、2022线路和2018曲线无说明拼为2024真实状态。"
+    }
+  ]
+}

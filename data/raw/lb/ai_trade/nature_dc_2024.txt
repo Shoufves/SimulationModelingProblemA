@@ -1,0 +1,513 @@
+
+    Spatial distribution and environmental attributes dataset of China’s large-scale data centers in 2024 | Scientific Data
+    Skip to main content
+Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain
+            the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in
+            Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles
+            and JavaScript.
+Advertisement
+                                View all journals
+                                Saved research
+                                Search
+    Account
+    Log in
+                                        Content
+                                        Explore content
+                                        About the journal
+                                            Publish with us
+                                        Sign up for alerts
+                                            RSS feed
+nature
+scientific data
+data descriptors
+                                    article
+                            Spatial distribution and environmental attributes dataset of China’s large-scale data centers in 2024
+                Download PDF
+                Download PDF
+Data Descriptor
+            Open access
+Published: 01 June 2026
+Spatial distribution and environmental attributes dataset of China’s large-scale data centers in 2024
+Ziwei Yang1,2,3, 
+Kaile Zhou1,2,3 & 
+Yue Niu1,2,3 
+                            Scientific Data
+                            volume 13,  Article number: 1249 (2026) Cite this article
+                    Save article
+                View saved research
+3964 Accesses
+1 Citations
+1 Altmetric
+Metrics details
+Abstract
+With the rapid development of artificial intelligence, the energy consumption of large-scale data centers continues to grow. Understanding the spatial distribution of large-scale data centers is important for optimizing power system planning, increasing renewable energy penetration, and improving energy efficiency. However, detailed information such as location and distribution of large-scale data centers is rarely available, limiting research on their energy consumption and environmental impacts. Therefore, we present a spatial distribution and environmental attributes dataset of China’s large-scale data centers in 2024. This study integrates Points of Interest from Amap with spatial features extracted from Sentinel-2 imagery and employs the Random Forest model to generate a spatial probability surface for large-scale data centers. The dataset contains the latitude and longitude of 1,005 large-scale data centers in China, urban environmental attributes (climate zone, elevation, annual average temperature, and precipitation), as well as model-generated probability surfaces and satellite image examples. This dataset can be used for estimating energy consumption of artificial intelligence infrastructure, planning and optimizing energy system, and evaluating and enhancing urban energy system resilience.
+Similar content being viewed by others
+                                        A high-resolution gridded dataset of biomass resource potentials in China with policy-aware land-use constraints for renewable energy planning
+                                        Article
+                                         Open access
+                                         26 June 2026
+                                        A fine spatial resolution modeling of urban carbon emissions: a case study of Shanghai, China
+                                        Article
+                                         Open access
+                                         03 June 2022
+                                        A 10-m national-scale map of ground-mounted photovoltaic power stations in China of 2020
+                                        Article
+                                         Open access
+                                         13 February 2024
+Explore related subjects
+            Discover the latest articles and news in related subjects.
+                            Big Data Analytics in Healthcare Systems
+Background & Summary
+Data centers have become essential infrastructure for supporting the rapid expansion of artificial intelligence, while their energy demand is also growing rapidly1. Particularly, in China, with the large-scale deployment of computationally intensive applications, large-scale data centers are continuously expanding2. In 2024, China’s data centers consumed over 166 terawatt-hours (TWh) of electricity, reflecting an annual growth rate of 16.1%3. The electricity consumption of national data centers is projected to reach 525.7 TWh by 2030, equivalent to the annual electricity demand of approximately 350 large-scale aluminum electrolysis plants or that of around 15 million households4. Such rapid growth also amplifies the regional heterogeneity in data center energy demand. Significant differences in energy consumption exist among data centers across different geographical locations, closely related to local environmental conditions such as temperature and humidity5,6. As these factors directly influence cooling loads and operational efficiency, understanding the geographical distribution of large-scale data centers is crucial for accurately assessing their energy demand. This assessment can further support the optimization of power system planning, the increased penetration of renewable energy, and  the improvement of energy efficiency7,8,9. However, information about the specific locations, land occupation, and spatial distribution of large-scale data centers is often not systematically recorded or made publicly available, which constrains accurate assessment of their electricity demand, cooling energy requirements, and environmental impacts.
+At present, datasets on the spatial distribution of large-scale data centers are still limited. The existing data are primarily sourced from policy documents, industry reports, and corporate announcements10,11,12. However, this kind of information is often fragmented, non-standardized, and lacks comprehensive, systematic, and reusable datasets at the provincial level. In addition, due to regulatory requirements and other factors, only a portion of data centers can be accessed through the Geographic Information System (GIS) platform, while a large number of data centers do not have publicly available geographic information records. For example, a recent study extracted data center locations from the Gaode point-of-interest (POI) database and administrative records of the Ministry of Industry and Information Technology to analyze how these data centers influence the geographic distribution of AI enterprises13. Although it provides valuable locational data, it is limited to facilities with public administrative registration and lacks detailed physical characteristics, such as rooftop structures and environmental attributes. More importantly, this reliance on public records makes it difficult to identify unpublicized data centers or their potential spatial distribution. Therefore, it is necessary to determine the spatial distribution of these unpublicized data centers through satellite remote sensing identification. Although some datasets have been developed using remote sensing or machine learning techniques to identify industrial parks or specific building types14,15,16, those specifically providing information on data center identification remain scarce. Importantly, industrial infrastructure exhibits visual characteristics that are highly similar to those of data centers, which may lead to potential misidentification. This similarity makes it challenging to precisely classify large-scale data centers and only enables the determination of their spatial probability surfaces.
+Therefore, this study constructed a spatial distribution and environmental attributes dataset of China’s large-scale data centers in 2024. This dataset mainly consists of two parts: (1) a verified, georeferenced facility-level dataset of confirmed large-scale data center locations enriched with environmental attributes, and (2) a spatial probability surface that indicates the potential presence of large-scale data centers. Specifically, the locations of large-scale data centers were initially collected and validated by utilizing Gaode POI data17,18. These confirmed facilities were georeferenced and subsequently enriched with environmental attributes, including climate zones, elevation, average annual temperature, and precipitation. Based on this confirmed POI dataset, remote sensing features—including Sentinel-2 spectral bands19,20, nighttime light observations21,22,23, gray level co-occurrence matrix (GLCM) texture metrics, and vegetation and built-up indices24—were extracted to characterize surrounding land-surface conditions. The validated POI locations were then used as positive samples to train a Random Forest (RF) model. The model output was interpreted as a spatial probability surface representing the relative likelihood of large-scale data center presence under different geographic conditions, rather than as a deterministic classification.
+Overall, this dataset has the following unique features and potential values. First, the dataset provides 1,005 verified large-scale data center locations collected from Gaode POI, forming a reliable nationwide georeferenced facility-level dataset for model training and spatial analysis. These point-level annotations are essential for validating classification models and investigating the spatial distribution characteristics of large-scale data centers. Second, the dataset includes region-wide remote sensing feature stacks for ten main provincial-level administrative regions. These feature stacks include spectral bands, vegetation and built-up indices, and GLCM-based texture metrics, providing standardized spatial descriptors of land surface conditions and enabling pixel-wise classification, deep learning model development, and remote sensing benchmarking. Third, the dataset provides an RF-generated spatial probability surface representing the relative likelihood of data center presence. These probabilistic surfaces complement the confirmed facility dataset by capturing spatial heterogeneity and highlighting areas with similar siting characteristics. Fourth, the dataset incorporates city-level environmental attributes—such as climate zone classification, elevation, average annual temperature, and annual precipitation—enabling integrated analysis of environmental constraints and geographical drivers influencing the distribution of large-scale data centers.
+The dataset can be used to analyze the distribution characteristics of large-scale data centers, thereby facilitating energy consumption estimation and strategic planning for future data center construction in conjunction with environmental conditions. Specifically, it enables a variety of applications, including:
+Estimating the energy consumption of artificial intelligence infrastructure. For instance, the electricity demand of large-scale data centers in different regions can be estimated by considering the physical area of the data centers and local environmental conditions.
+Planning and optimizing energy system. Identifying the clustering characteristics and spatial distribution differences of large-scale data centers can provide valuable insights for power system planning. The spatial probability surface highlights high-density regions, which—when integrated with environmental attributes and estimated electricity demand—enable a systematic assessment of potential sites for photovoltaic or other renewable energy facilities near data centers.
+Evaluating and enhancing urban energy system resilience. The spatial probability surface of large-scale data centers enables the identification of areas with high and concentrated energy loads. By understanding the spatial clustering and operational patterns of large-scale data centers, potential vulnerabilities in urban or regional energy system can be assessed and mitigated, thereby enhancing the overall robustness and reliability of the energy system.
+Methods
+Workflow overview
+The workflow of this study is illustrated in Fig. 1. It consists of three major stages: (1) compilation of confirmed large-scale data center locations, (2) construction of multi-source spatial feature layers, and (3) generation of spatial probability surfaces of large-scale data centers through machine learning modeling. All steps were conducted using the Google Earth Engine (GEE) platform and Quantum GIS (QGIS) software.
+Fig. 1
+Full size image
+Workflow of constructing the spatial distribution and environmental attributes dataset of large-scale data centers.
+Compilation of confirmed large-scale data center locations
+POI data have been extensively utilized in remote sensing research since they provide accurate geospatial coordinates and functional categories of human-built facilities25,26,27. These records are typically acquired from online mapping services28, geographic information platforms29, and other similar sources30,31. In this study, we leveraged POI records associated with “data center” retrieved from the Gaode Map platform28 to identify large-scale data centers. To ensure data reliability, all retrieved POIs were manually screened and validated. Duplicate entries, misclassified facilities, and ambiguous records such as small server rooms and unrelated IT offices were removed. In addition, each candidate location was visually inspected using high-resolution satellite imagery to verify the presence of large-scale industrial-type building structures consistent with data center facilities. After undergoing quality control and validation processes, a total of 1,005 confirmed large-scale data center locations were retained. These validated POIs constitute the confirmed facility-level dataset used in this study and serve as positive sample inputs for spatial probability surface modeling. The nationwide spatial distribution of the POI records derived from Gaode maps is shown in Fig. 2.
+Fig. 2
+Full size image
+Spatial distribution of large-scale data center POI locations and their counts derived from Gaode maps across China.
+Construction of multi-source spatial feature layersRemote sensing data sources
+Sentinel-2 imagery data
+Sentinel-2 provides global multispectral imagery with a 10-m resolution, offering finer spatial detail and fewer mixed-pixel effects compared to the Landsat data of the National Aeronautics and Space Administration (NASA)32. These advantages make it more appropriate for the accurate identification of large-scale data centers. All available cloud-free observations in 2024 were composited by calculating the median reflectance for the visible, near-infrared (NIR), and short-wave infrared (SWIR) bands (B2-B12). The visible and SWIR bands were employed to derive a set of spectral indices, including the normalized difference vegetation index (NDVI), the normalized difference built-up index (NDBI), the modified normalized difference water index (MNDWI), and the SWIR/NIR ratio. These indices capture information about vegetation, built-up structures, and surface moisture conditions33. Moreover, GLCM texture measures extracted from the NIR band characterize the structural regularity typical of large industrial complexes, enabling better discrimination between large-scale data centers and surrounding land uses34,35. Fig. 3 shows an example of the input features extracted from Sentinel-2 satellite images.
+Fig. 3
+Full size image
+Four input remote sensing feature layers for data center identification in Beijing: (a) Sentinel-2 true color composite. (b) NDVI. (c) Texture feature (standard deviation of Sentinel-2 Band 8). (d) Nighttime light from VIIRS monthly composite data.
+Nighttime light intensity
+The visible infrared imaging radiometer suite (VIIRS) annual nighttime light composite acts as an indicator of human activity and industrial intensity around large-scale data center clusters36,37. In comparison with optical imagery, nighttime light data can capture stable illumination patterns from industrial facilities, commercial zones, and energy-intensive operations38. By integrating VIIRS radiance, the model can more effectively distinguish large-scale data centers from visually similar but low-activity buildings.
+China administrative boundary data
+The administrative boundaries of China can be downloaded from the National Geomatics Center of China (NGCC)12. Using standardized administrative units ensures comparability among provincial-level administrative regions and avoids cross-boundary contamination during training and classification. These boundaries also facilitate the production of provincial-level administrative region-specific maps and subsequent spatial analysis. Table 1 presents the detailed information and sources of all the data used in this study.
+Table 1 Data sources, formats, resolutions, and temporal ranges of input data used in this study.
+Full size table
+                  Feature extraction and feature stack construction
+To construct a comprehensive representation of the physical, spectral, and structural characteristics of large-scale data center facilities, we generated a unified feature stack with a 10-m resolution. All features were derived from Sentinel-2 imagery, VIIRS nighttime lights, and texture metrics extracted from the GLCM. Table 2 summarizes all feature categories and their corresponding variables.
+Table 2 Feature categories and variables used for large-scale data center classification.
+Full size table
+We carefully selected six surface-reflectance bands from Sentinel-2 (B2, B3, B4, B8, B11, B12) to comprehensively capture detailed information across visible, NIR, and SWIR wavelengths. These specific bands are highly effective in differentiating industrial roofs, impervious surfaces, vegetation, and water bodies, which are all commonly found around large-scale data centers.
+Subsequently, a set of spectral indices was calculated to improve land-cover separability. Specifically, the NDVI can effectively distinguish vegetated areas from impervious surfaces, as shown in Eq. (1).
+$${\rm{NDVI}}=\frac{{\rho }_{B8}-{\rho }_{B4}}{{\rho }_{B8}+{\rho }_{B4}}$$
+                    (1)
+where \({\rho }_{B8}\) and \({\rho }_{B4}\) represent the surface reflectance of Sentinel-2 B8 (NIR) and B4 (red) bands, respectively.
+In contrast, the NDBI highlights built-up structures typically present in industrial campuses, as shown in Eq. (2).
+$${\rm{NDBI}}=\frac{{\rho }_{B11}-{\rho }_{B8}}{{\rho }_{B11}+{\rho }_{B8}}$$
+                    (2)
+where \({\rho }_{B11}\) denotes the reflectance of Sentinel-2 B11 (SWIR) band.
+The MNDWI aids in the identification of water bodies and wet surfaces, thereby minimizing false alarms, as shown in Eq. (3).
+$${\rm{MNDWI}}=\frac{{\rho }_{B3}-{\rho }_{B11}}{{\rho }_{B3}+{\rho }_{B11}}$$
+                    (3)
+where \({\rho }_{B3}\) is the reflectance of Sentinel-2 B3 (green) band.
+The SWIR/NIR ratio emphasizes material composition and enhances the detection of industrial rooftops, as shown in Eq. (4).
+$${\rm{SWIR}}/{\rm{NIR}}=\frac{{\rho }_{B11}}{{\rho }_{B8}}$$
+                    (4)
+These indices complement the raw spectral reflectance by amplifying the functional and material differences among land-cover types.
+Additionally, given that large-scale data centers typically comprise large rectangular buildings with highly regular surface features, five GLCM texture metrics were extracted to capture spatial structural characteristics. All GLCM calculations were standardized using well-defined parameters (Table 3).
+Table 3 Key parameters for GLCM texture metric calculation.
+Full size table
+Core texture descriptors were derived from multi-directional averaged GLCM matrices, and the key formulas are presented in Eqs. (5–10).
+$${\rm{Contrast}}={{\sum }_{i,j}(i-j)}^{2}P(i,j)$$
+                    (5)
+$${\rm{Entropy}}=-{\sum }_{i,j}P(i,j){\log }_{2}(P(i,j)+\varepsilon )$$
+                    (6)
+$${\rm{Variance}}={\sum }_{i,j}{(i-\mu )}^{2}P(i,j)$$
+                    (7)
+$$\mu ={\sum }_{i,j}iP(i,j)$$
+                    (8)
+$${\rm{Homogeneity}}={\sum }_{i,j}\frac{P(i,j)}{1+{(i-j)}^{2}}$$
+                    (9)
+$${\rm{Dissimilarity}}={\sum }_{i,j}|i-j|P(i,j)$$
+                    (10)
+where \({\rm{Contrast}}\) measures local intensity variation, \({\rm{Entropy}}\) quantifies texture randomness, \(\varepsilon ={10}^{-6}\) avoids \(\log (0)\), \({\rm{Variance}}\) reflects gray-level dispersion around the mean \(\mu \), \({\rm{Homogeneity}}\) is the Inverse Difference Moment, indicates surface uniformity, and \({\rm{Dissimilarity}}\) measures adjacent pixel gray-level differences. In addition, \(P(i,j)\) represents the joint probability of a pixel with gray level \(i\) being adjacent to a pixel with gray level \(j\) within the 3 × 3 calculation window.
+These texture descriptors capture the spatial variations in tone and surface uniformity, thus providing robust metrics for identifying large-scale built-up structures39,40.
+Furthermore, VIIRS nighttime radiance data (500-m resolution, resampled to 10-m via bilinear interpolation) were incorporated to characterize the stable illumination features associated with large-scale industrial and digital infrastructure facilities. This characteristic helps distinguish large-scale data centers from low-activity industrial warehouses41.
+All features were resampled to a consistent 10-m spatial resolution, geospatially aligned to the same coordinate system (WGS84/UTM Zone 50 N), and normalized to the range \([0,1]\) to support machine learning classification. The final feature stack integrated 6 spectral bands, 4 spectral indices, 5 texture metrics, and 1 nighttime light variable, resulting in a 16-dimensional feature space for subsequent RF model input.
+Generation of spatial probability surfaces of large-scale data centers
+A RF model was applied to generate a nationwide spatial probability surface of data center presence. This model complements the POI-based confirmed data center locations by identifying potential, unrecorded data centers that are not included in public POI datasets, thereby producing a more complete spatial distribution dataset.Sample construction
+The 1,005 validated POI data center locations were used as positive samples. To represent heterogeneous background conditions and reduce false positives, 2,010 negative samples were collected from diverse land-cover and built-up types, including vegetated areas (forests, grasslands, croplands), water bodies, bare land, and urban surfaces. Moreover, non-data center industrial facilities like logistics parks, warehouses, manufacturing plants, and commercial buildings were incorporated to enhance the discriminability between data centers and visually similar structures.
+In total, 3,015 samples were used for model training. The spatial distribution of the positive and negative samples is shown in Fig. 4.
+Fig. 4
+Full size image
+Spatial distribution of positive and negative training samples for large-scale data centers across China.Regional probabilistic modeling
+The primary reason for selecting the RF model for large-scale data center identification is its robust ability to model complex, nonlinear relationships in high-dimensional feature spaces42. Moreover, RF has been extensively and reliably employed in remote sensing tasks, such as built-up area mapping, industrial-facility detection, and land-use classification. RF has demonstrated good performance in the presence of noise and with limited training samples43,44,45.
+We implemented the RF classifiers using the GEE Application Programming Interface (API)46,47,48. Unlike conventional hard classification which assigns binary labels (0 or 1), the RF classifier in GEE can be configured to output class probabilities by setting the output mode parameter to “Probability”. In this configuration, each pixel value represents the proportion of decision trees voting for the positive class. This probabilistic output allows for a spatially continuous representation of the likelihood of data centers instead of discrete classification.
+Given that the study covers multiple provincial-level administrative regions across China, data centers exhibit significant visual and contextual variability due to differences in land use and siting environments. For example, data centers in highly urbanized regions such as Beijing or Guangdong are usually embedded within dense commercial or industrial complexes. In contrast, those in provincial-level administrative regions such as Inner Mongolia or Guizhou are frequently located in suburban industrial parks with more open surroundings. These regional disparities pose challenges for training a single nationwide model that can consistently achieve high accuracy.
+Considering regional heterogeneity, we employed a provincial-level, region-specific modeling approach, training individual RF classifiers for each province14. This regional modeling strategy effectively reduces intra-class variability, enhances the discriminative ability of spectral and textural features, and improves spatial consistency of the resulting probability surfaces17,20. Ten provincial-level administrative regions with sufficient validated data center samples were selected as modeling units. These regions collectively account for approximately 60% of all validated large-scale data centers in China. For each provincial-level administrative region, samples were randomly split into training and validation subsets in a 7:3 ratio—a common and widely accepted practice in remote sensing and machine learning classification studies14,15. Model performance was evaluated using precision, recall, and F1 score to ensure reliability of the probability estimates.Cross validation
+To assess spatial transferability, each provincial model was tested using samples from the remaining provinces in a pairwise cross-validation framework. This procedure provides an evaluation of model generalizability under heterogeneous geographic conditions and supports the robustness of the probability surface generation approach. Similarly, precision, recall, and F1 score were used as performance metrics to ensure consistency and comparability across assessments. Moreover, the cross-regional evaluation framework directly assesses the generalizability of each provincial model beyond its training region. If there were substantial overfitting to local characteristics, the performance would significantly decline when the model is applied to other provinces.Active learning
+Generating highly accurate spatial probability maps within a single iteration poses significant challenges, especially when the number of labeled samples is restricted. Therefore, we employed an active learning strategy to iteratively improve model performance. An initial RF model was trained using POI-validated samples from ten provincial-level administrative regions, producing preliminary probability outputs. Regions exhibiting misclassifications or low prediction confidence were identified and manually inspected to collect additional high-quality training samples. Subsequently, the model was then retrained using these augmented samples, and this iterative process was repeated until the performance metrics reached a stable state. After the final iteration, the optimized provincial RF classifiers were applied to the corresponding feature stacks to generate pixel-wise probability values ranging from 0 to 1. The resulting probability raster represents the model-estimated likelihood of large-scale data center presence and constitutes the probabilistic surface component of the dataset.
+Data Records
+The dataset provides a spatial distribution and environmental attributes dataset of China’s large-scale data centers in 2024, integrating validated POI records, RF model-derived spatial probability surfaces, and satellite imagery. It consists of three components: (1) verified POI locations of large-scale data centers across all 31 provincial-level administrative regions; (2) probability surfaces generated by RF models for ten provincial-level administrative regions that collectively hold approximately 60% of all known large-scale data centers in China; and (3) ten representative satellite images. Provincial-level feature calculation results are provided in component (2) of the dataset. This dataset complements confirmed POI locations with model-predicted probabilistic surfaces, effectively addressing the lack of publicly available geographic records for some large-scale data centers due to regulatory supervision requirement. All components of the dataset are openly and permanently accessible via the Science Data Bank (https://doi.org/10.57760/sciencedb.32970)49, with a unified geospatial projection (WGS84/UTM Zone 50 N) and a temporal baseline (2024). The source code is available on GitHub (https://github.com/ziweiyang1206/data-center-classification.git)50. The following is the structure and content of the data files in the dataset, along with illustrative examples for each component (Table 4 and Fig. 5). Specifically, Table 4 presents representative examples of environmental attributes for Beijing, which has a monsoon-influenced humid temperate climate.
+Table 4 Location and environmental attributes of typical large-scale data centers in Beijing.
+Full size table
+Fig. 5
+Full size image
+Data examples of different components of the dataset (using a certain data center in Beijing as an example). (a) Spatial probability surface. (b) A satellite image example.
+Verified POI dataset of large-scale data centers
+A comma-separated value (CSV) file contains verified large-scale data center records. Unlike the dataset provided by Ref. 13, which focuses primarily on locational coordinates for industrial layout analysis, this study offers multi-dimensional characterization of each facility. Specifically, this CSV file integrates provincial-level administrative region, city, longitude, latitude, average annual temperature, average annual precipitation, elevation, climate zone, and facility types, all of which are free of missing values. Climatic and topographic attributes were spatially linked to POI geolocations via point-to-raster spatial interpolation, consistent with the 2024 temporal baseline. All attributes were extracted and processed using GEE. The specific fields, detailed descriptions, and data sources/derivation methods are shown in Table 5.
+Table 5 Attributes and data sources of the verified large-scale data center POI dataset (CSV).
+Full size table
+Spatial probability surface for large-scale data centers
+This component consists of ten provincial-level administrative region-specific folders, each corresponding to one of the ten representative provinces. Each folder contains a high-resolution GeoTIFF raster file, a QGIS project file, and a metadata file. The GeoTIFF has a 10-m spatial resolution. Each raster file stores pixel values that represent the predicted probability of large-scale data centers (range: 0-1).
+Satellite images
+This component includes ten high-resolution satellite images that were manually captured from Google Earth high-resolution satellite imagery in 2024 with a spatial resolution of 0.5 m to 2 m. Each image corresponds to a typical large-scale data center within the provincial-level administrative region and reflects key visual characteristics, including building morphology, roof structure, and cooling system layout. Moreover, each image records the geographic coordinates (WGS84) of the data center and quantifies the facility footprint via Google Earth Pro measurement tool, with area results reported in square meters. The full set of annotated satellite imagery is hosted at a dedicated persistent Google Earth link (https://earth.google.com/earth/d/1Wiu-2pyGJs3lt6NVdQoTr_nZLsbBUxzL?usp = sharing) for interactive visualization and online access.
+Technical Validation
+Feature importance analysis
+The RF model provides feature importance scores, enabling direct interpretability of the model. To validate this advantage, we calculated the feature importance of 16 variables for each of the ten provincial-level administrative regions. All importance scores were normalized to ensure comparability of each feature’s relative contribution across regions. The normalized provincial-level scores were then averaged to obtain a national-scale ranking (Fig. 6).
+Fig. 6
+Full size image
+Feature importance. (a–j) Importance of 16 characteristics of Guangdong, Beijing, Jiangsu, Hebei, Anhui, Sichuan, Inner Mongolia, Shandong, Hubei, and Guizhou, respectively. (k) Proportion of feature importance at the national scale. (l) Proportion of different feature types in ten provincial-level administrative regions.
+Fig. 6a–j shows the normalized feature importance for each province. Nighttime light consistently ranks as the most important feature, often contributing more than 20% in some provinces. Key spectral bands (B8, B4, and B11) and index-based features (NDBI and MNDWI) also contribute meaningfully, highlighting their stable effectiveness in capturing built-up areas and characterizing large-scale data center infrastructure and associated impervious surfaces. Texture features, especially variance and homogeneity, further support classification by encoding spatial characteristics that are distinctive to these facilities.
+In addition, we conducted a lightweight ablation experiment using only the nighttime light feature (Table 6). The results indicate that nighttime light alone achieves a substantial F1 score (0.7819), but overall performance decreases compared with the full feature set (0.8875). This confirms that, while nighttime light is highly informative, the combination with spectral, index, and texture features is essential to robustly distinguish large-scale data centers.
+Table 6 F1 score of a lightweight ablation experiment using only the nighttime light feature.
+Full size table
+Fig. 6k presents the national-scale feature importance using the normalized scores. Fig. 6l summarizes the contributions of feature types (Spectral, Index, Texture, Nighttime light) across provinces. Nighttime light remains the dominant category, while index-based, spectral, and texture features provide complementary information. The normalized values also ensure that the sum of contributions per province equals 100%, allowing meaningful comparison across regions.
+Overall, these results demonstrate that each feature type contributes to the model’s predictive ability, and the combination of nighttime light with other features is necessary for high-accuracy identification of large-scale data centers.
+Accuracy assessment
+To comprehensively evaluate the reliability of the probability-based large-scale data center classification derived from multispectral satellite imagery, we conducted systematic accuracy assessments in the ten selected provincial-level administrative regions. The evaluation metrics encompass the Area Under the Receiver Operating Characteristic Curve (AUC), Accuracy, Precision, Recall, and F1 score (Fig. 7). Overall, the results consistently show strong classification performance, which validates the robustness and general applicability of the RF model in diverse geographic and environmental contexts.
+Fig. 7
+Full size image
+Model performance in ten provincial-level administrative regions.
+As shown in Fig. 7, most provinces achieved Accuracy values above 0.86. Jiangsu (0.95), Sichuan (0.92), and Inner Mongolia (0.985) exhibited particularly strong performance. These results reflect the model’s outstanding adaptability to both highly urbanized regions like Beijing and Guangdong and environmentally heterogeneous landscapes such as Guizhou and Hebei. Precision values generally exceeded 0.80 across all provincial-level administrative regions. Regions such as Anhui (0.857), Guizhou (0.909), and Beijing (0.913) exhibited excellent precision in controlling false positives, indicating that the classifier rarely misidentifies non-data center features as data centers. In contrast, Guangdong (0.828) and Hebei (0.765) showed relatively lower Precision, primarily due to spectral similarity between industrial buildings and other large artificial surfaces. Recall remained consistently high, with multiple provincial-level administrative regions achieving or exceeding 0.90. This demonstrates that the model can identify true data center pixels with a high probability, even in areas with mixed land cover. Even in provinces with comparatively lower Recall like Anhui (0.800) and Shandong (0.80), detection performance remained stable. The F1 score, balancing Precision and Recall, exceeded 0.83 in all provinces. Inner Mongolia (0.966), Jiangsu (0.958), and Sichuan (0.923) achieved the highest F1 scores, reflecting balanced and robust classification performance based on predicted probabilities.
+To rigorously evaluate model generalization and assess the necessity of provincial-level modeling, we trained a national-scale model and compared its F1 scores with those of province-specific models. We found that training on data from all provinces does not improve the overall F1 score. Instead, the national-scale model yields a lower average F1 score of 0.8276 compared to 0.8875 achieved by province-specific models. Furthermore, performance variation across provinces is heterogeneous: the national-scale model achieves comparable or slightly higher F1 scores only in provinces with similar geomorphic and built-up environments such as Guangdong and Hebei, whereas its performance declines in regions with distinct environmental characteristics such as Inner Mongolia. These results confirm that provincial-level stratified modeling effectively reduces regional bias and avoids overfitting, thereby validating our modeling strategy.
+The Receiver Operating Characteristic (ROC) curves for the ten provincial-level administrative regions further demonstrate the strong probabilistic discriminative capability of the RF model (Fig. 8).
+Fig. 8
+Full size image
+ROC curves and AUC distribution of RF-based probability model for data center identification. (a–j) ROC curves derived from predicted probability scores for large-scale data center identification in Guangdong, Beijing, Jiangsu, Hebei, Anhui, Sichuan, Inner Mongolia, Shandong, Hubei, and Guizhou, respectively. The orange curve represents the ROC curve, and the labeled value is the AUC of the corresponding model. (k) Distribution of model AUCs across the ten provinces with 95% confidence intervals. The blue bars denote the AUC of each province; the orange dashed line represents the mean AUC (0.91); and the orange area indicates the 95% confidence interval (0.87-0.94).
+The ROC curves (Fig. 8a–j), which are constructed based on predicted probability scores rather than binary outputs, indicate that the RF model achieves strong discriminative performance across all ten provinces. In each province, the ROC curve lies substantially above the 1:1 reference line, implying that high predicted probabilities are consistently associated with the actual locations of data centers, while non–data center areas are assigned comparatively low probability scores. Regions such as Inner Mongolia (AUC = 0.99), Shandong (AUC = 0.97), and Jiangsu (AUC = 0.95) have ROC curves approaching the upper-left corner, which reflects extremely robust classification performance. In contrast, regions with more heterogeneous land-use structures, including Anhui (AUC = 0.84), Hubei (AUC = 0.84), and Hebei (AUC = 0.88), show slightly flatter curves. Nevertheless, their ROC curves remain smooth and strongly convex, suggesting stable probabilistic ranking performance even in the face of mixed industrial, agricultural, and residential background conditions. Fig. 8k provides an overall summary of the AUC values with the 95% confidence interval. The provincial AUCs range from 0.84 to 0.99, with an average of 0.91, demonstrating consistently strong probabilistic discrimination across diverse geographic and socioeconomic conditions. The relatively narrow confidence interval further suggests robust generalization ability of the model.
+Cross validation
+To further assess the spatial transferability of provincial RF models under heterogeneous environmental conditions, we conducted a cross-regional transfer experiment. For each of the ten provinces, a RF model was trained using its own feature image and a balanced set of positive and negative samples. The trained model was then applied to the remaining nine provinces to generate probability predictions of data center presence, resulting in a 10 × 10 performance matrix (excluding the diagonal). For each train-test pair, probability outputs were converted into binary predictions using a consistent threshold, and accuracy, precision, recall, and F1 score were calculated based on balanced validation samples. To summarize transferability, we averaged the F1 scores of each trained model across the nine provinces in which it was externally tested (Fig. 9).
+Fig. 9
+Full size image
+Cross-regional transfer performance of the RF-based data center identification model. (a–d) Accuracy, Precision, Recall, and F1 score under inter-provincial model transfer, respectively.
+The cross-regional analysis reveals significant spatial variation in model generalizability. Models trained in Guizhou, Hubei, Hebei, and Shandong, exhibit relatively strong transferability, with the mean cross-regional F1 scores ranging from 0.80 to 0.81. This suggests that the spectral-textural feature patterns learned in these provinces capture the morphological characteristics of large-scale data centers that are widely shared across multiple regions.
+In contrast, models trained in provinces with highly distinctive environmental contexts, especially Inner Mongolia, show weaker transferability, with an average cross-regional F1 score of 0.684. Furthermore, models trained in other provinces perform poorly when transferred to Inner Mongolia. This is mainly due to the fact that large-scale data centers in Inner Mongolia are often located in sparsely built or industrial-desert transitional landscapes, whereas those in many eastern provinces are embedded within dense urban or peri-urban built-up environments. The divergence in background spectral and spatial patterns reduces inter-regional model compatibility. The cross-regional transfer experiment confirms that although provincial RF models exhibit stable probabilistic discrimination within their training domains and transfer well across provinces with comparable land-cover structures, domain heterogeneity remains a key constraint on nationwide generalization. These findings support a region-specific training strategy rather than reliance on a single, unified national model.
+Overall, the observed regional performance differences in this study highlight the influence of spatial heterogeneity and uncertainty in reference data on probabilistic discrimination. The validation results demonstrate robust province-specific model performance and consistent cross-regional transferability, providing a transparent assessment of dataset reliability across diverse environmental contexts.
+Usage Notes
+Ground-reference locations were collected from publicly available POI records and visually verified using satellite imagery. These points indicate reported facility locations rather than exact building footprints, so minor positional uncertainty may exist. Users requiring precise delineation should integrate high-resolution imagery or local data sources. The provided probabilistic maps represent the likelihood of large-scale data center presence—not binary classifications. Probability thresholds should be chosen according to specific analytical requirements. Model evaluation shows strong within-province performance, but cross-regional comparability may be affected by geographic heterogeneity. Users should take regional differences into account when interpreting probabilities. Example satellite images illustrate typical facility configurations and can serve as visual reference, training, or support the training or validation of automated detection models.
+Data availability
+The dataset is available at https://doi.org/10.57760/sciencedb.32970.
+Code availability
+The reproducible codes are available at https://github.com/ziweiyang1206/data-center-classification.git.
+References
+Andreadis, G. et al. Capelin: Data-Driven Compute Capacity Procurement for Cloud Datacenters Using Portfolios of Scenarios. IEEE Transactions on Parallel and Distributed Systems 33, 26–39 (2021).
+Article 
+                    Google Scholar 
+Hankendi, C., Coskun, A. & Sovacool, B. Why transparency matters for sustainable data centers and carbon-neutral artificial intelligence (AI). iScience 28, 113705 (2025).
+Article 
+    ADS 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Lin, W. AI drives data centers to become the main force of new electricity demand. China Energy News (2025).
+Liu, X. The power demand of AI data centers will double by 2030. Science and Technology Daily (2025).
+Ayyildiz, E., Yildirim, B. & Aydin, N. Location selection methodology for data center with renewable energy integration. Renewable Energy 250, 123270 (2025).
+Article 
+                    Google Scholar 
+Wang, F. & Lv, C. A data center expansion scheme considering net-zero carbon operation: Optimization of geographical location, on-site renewable utilization and green certificate purchase. Socio-Economic Planning Sciences 92, 101789 (2024).
+Article 
+                    Google Scholar 
+Cao, X. et al. Modeling of the hybrid operation of data networks and power networks and their participation in the economic operation of the system. Proceedings of the CSEE 38, 1448–1456 (2018).
+CAS 
+                    Google Scholar 
+Long, H., L. Z., Wang, X. Research on the Impact of the Great Development of Artificial Intelligence on Computionally and Energy. China’s informatization, 7-8 (2024).
+Yang, J., Wang, H. & Yang, C. Energy Challenges and Suggestions Brought by Intelligent Computing Power in the Era of Artificial Intelligence. Information and Communication Technology and Policy 51, 58–62 (2025).
+CAS 
+                    Google Scholar 
+China Communications Services Digital Infrastructure Industry Research Institute. White Paper on the Development of China’s Data Center Industry, https://aimg8.dlssyht.cn/u/551001/ueditor/file/276/551001/1684888884683143.pdf (2023).
+National Development and Reform Commission. Guidelines for the Construction of National Data Infrastructure, https://www.gov.cn/zhengce/zhengceku/202501/content_6996487.htm (2024).
+National Geomatics Center of China. https://www.webmap.cn/.
+Du, F., Wang, J. & Zhang, P. Role of computing power infrastructure in shaping the geographic landscape AI enterprise in China. Applied Geography 189, 103946 (2026).
+Article 
+                    Google Scholar 
+Wang, D. et al. A long-term high-resolution dataset of grasslands grazing intensity in China. Scientific Data 11, 1194 (2024).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Feng, Q. et al. A 10-m national-scale map of ground-mounted photovoltaic power stations in China of 2020. Scientific Data 11, 198 (2024).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Song, W., Chen, M. & Tang, Z. A 10-m scale chemical industrial parks map along the Yangtze River in 2021 based on machine learning. Scientific Data 11, 843 (2024).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Ginting, F. et al. High-resolution maps of rice cropping intensity across Southeast Asia. Scientific Data 12, 1408 (2025).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Liu, J., Wang, J. & Li, L. Vectorized solar photovoltaic installation dataset across China in 2015 and 2020. Scientific Data 11, 1446 (2024).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Liu, P. et al. Faster, better, and more accurate mapping of burned areas using Sentinel-2 multispectral images. Remote Sensing of Environment 333, 115137 (2026).
+Article 
+                    Google Scholar 
+Ye, L. & Weng, Q. A hybrid neural network for mangrove mapping considering tide states using Sentinel-2 imagery. Remote Sensing of Environment 329, 114917 (2025).
+Article 
+                    Google Scholar 
+Guo, J. et al. Global reconstruction of three decades of fine-grained nighttime light data with analysis of large-scale infrastructure and landmarks. Remote Sensing of Environment 331, 115036 (2025).
+Article 
+                    Google Scholar 
+Huang, H. et al. Towards building floor-level nighttime light exposure assessment using SDGSAT-1 GLI data. ISPRS Journal of Photogrammetry and Remote Sensing 223, 375–397 (2025).
+Article 
+    ADS 
+                    Google Scholar 
+Yu, B. et al. Temporal expansion of the nighttime light images of SDGSAT-1 satellite in illuminating ground object extraction by joint observation of NPP-VIIRS and sentinel-2A images. Remote Sensing of Environment 295, 113691 (2023).
+Article 
+                    Google Scholar 
+Ju, Y., Dronova, I. & Delclòs-Alió, X. A 10 m resolution urban green space map for major Latin American cities from Sentinel-2 remote sensing images and OpenStreetMap. Scientific Data 9, 586 (2022).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Li, T. et al. Mapping urban villages based on point-of-interest data and a deep learning approach. Cities 156, 105549 (2025).
+Article 
+                    Google Scholar 
+Wan, B., Wan, D. & Sheng, Q. Evaluating changes in business distribution within urban rail transit hubs in Beijing via Point of Interest (POI) data analysis (2008–2020). Frontiers of Architectural Research 13, 305–318 (2024).
+Article 
+                    Google Scholar 
+Zhang, Z. et al. Multi-grained estimation of nighttime light dynamics during the COVID-19 surge in Shanghai with SDGSAT-1 GIU imagery and point of interest data. Remote Sensing of Environment 328, 114822 (2025).
+Article 
+                    Google Scholar 
+Gaode open platform. https://amap.apifox.cn/doc-537183.
+Map World. https://cloudcenter.tianditu.gov.cn/dataSource.
+Baidu open platform. https://baidumap.apifox.cn/doc-1196392.
+Tencent open platform. https://lbs.qq.com/sem/authorization/?source=6147.
+Dogniaux, M. et al. Global satellite survey reveals uncertainty in landfill methane emissions. Nature 647, 397–402 (2025).
+Article 
+    ADS 
+    CAS 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Xie, Y. et al. An efficient approach for regional photovoltaic power forecasting optimization based on texture features from satellite images and transfer learning. Applied Energy 385, 125505 (2025).
+Article 
+                    Google Scholar 
+Wei, H. et al. A texture feature extraction method considering spatial continuity and gray diversity. International Journal of Applied Earth Observation and Geoinformation 130, 103896 (2024).
+Article 
+                    Google Scholar 
+Yu, H. et al. Dynamic urban morphology mapping in Chinese cities based on local climate zone approach. Scientific Data 12, 181 (2025).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Chen, X. et al. A global annual simulated VIIRS nighttime light dataset from 1992 to 2023. Scientific Data 11, 1380 (2024).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Tang, H. et al. Global nighttime light dataset from 1992 to 2022 with focus on low-light areas. Scientific Data 12, 982 (2025).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Zhang, L. et al. A Prolonged Artificial Nighttime-light Dataset of China (1984-2020). Scientific Data 11, 414 (2024).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Ye, T. et al. Vectorized building rooftop prints of the Qinghai-Tibetan Plateau and its neighboring regions. Scientific Data 12, 1013 (2025).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Swan, B. et al. ORBITaL-Net: A labeled training library for large-scale building feature extraction. Scientific Data 12, 1650 (2025).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Chen, Y. et al. California wildfire spread derived using VIIRS satellite observations and an object-based tracking system. Scientific Data 9, 249 (2022).
+Article 
+    PubMed 
+    PubMed Central 
+                    Google Scholar 
+Mallala, B. et al. Forecasting global sustainable energy from renewable sources using random forest algorithm. Results in Engineering 25, 103789 (2025).
+Article 
+    CAS 
+                    Google Scholar 
+Akbar, M. et al. Multi-model ensemble mapping of irrigated areas using remote sensing, machine learning, and ground truth data. Agricultural Water Management 312, 109416 (2025).
+Article 
+                    Google Scholar 
+Pawłuszek-Filipiak, K. et al. Temporal scalability analysis of spectral remote sensing and Machine Learning-Based models for forest mapping in the tropical region of Nigeria. International Journal of Applied Earth Observation and Geoinformation 140, 104598 (2025).
+Article 
+                    Google Scholar 
+Santos, A. et al. Machine learning applied to remote sensing in the context of intertidal zone mapping: A literature review. Geomatica 77, 100080 (2025).
+Article 
+                    Google Scholar 
+Amindin, A. et al. Leveraging GEE and machine learning algorithm in dynamic modeling of eco-environmental quality. Environmental and Sustainability Indicators 27, 100818 (2025).
+Article 
+                    Google Scholar 
+Masoud, A. GEE-HydroMonitor: A Google Earth Engine software for multi-sensor hydrometric monitoring of surface water reservoirs. Environmental Modelling & Software 195, 106761 (2026).
+Article 
+                    Google Scholar 
+Sharma, S. et al. in Google Earth Engine and Artificial Intelligence for Earth Observation, 19–34 (2025).
+Yang, Z., Zhou, K. & Niu, Y. Spatial distribution and environmental attributes dataset of China’s large-scale data centers in 2024. Science Data Bank https://doi.org/10.57760/sciencedb.32970 (2025).
+Article 
+                    Google Scholar 
+Yang, Z., Zhou, K. & Niu, Y. Spatial distribution and environmental attributes dataset of China’s large-scale data centers in 2024. github https://github.com/ziweiyang1206/data-center-classification.git (2025).
+European Space Agency. https://www.esa.int/.
+NASA. https://www.nasa.gov/.
+Download references
+Acknowledgements
+This work is partially supported by the National Natural Science Foundation of China (Nos. 72242103 and 72271071).
+Author information
+Authors and Affiliations
+School of Management, Hefei University of Technology, Hefei, 230009, China
+Ziwei Yang, Kaile Zhou & Yue Niu
+Anhui Provincial Key Laboratory of Philosophy and Social Sciences for Smart Management of Energy & Environment and Green & Low Carbon Development, Hefei University of Technology, Hefei, 230009, China
+Ziwei Yang, Kaile Zhou & Yue Niu
+Key Laboratory of Process Optimization and Intelligent Decision-making, Ministry of Education, Hefei University of Technology, Hefei, 230009, China
+Ziwei Yang, Kaile Zhou & Yue Niu
+Authors
+Ziwei Yang
+View author publications
+Search author on:PubMed Google Scholar
+Kaile Zhou
+View author publications
+Search author on:PubMed Google Scholar
+Yue Niu
+View author publications
+Search author on:PubMed Google Scholar
+Contributions
+Ziwei Yang and Kaile Zhou conceived and designed this study. Ziwei Yang designed the collection and processing of the data, as well as wrote the manuscript. Kaile Zhou led the project, collected and assembled the data, revised the manuscript, as well as supervised the research effort. Yue Niu provided support for data processing and revised the manuscript.
+Corresponding author
+Correspondence to
+                Kaile Zhou.
+Ethics declarations
+Competing interests
+Kaile Zhou is an Editorial Board Member for Scientific Data, handling manuscripts for the journal and advising on its policy and operations, but did not manage any component of this review.
+Additional information
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+Rights and permissions
+Open Access  This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+Reprints and permissions
+About this article
+Cite this article
+Yang, Z., Zhou, K. & Niu, Y. Spatial distribution and environmental attributes dataset of China’s large-scale data centers in 2024.
+                    Sci Data 13, 1249 (2026). https://doi.org/10.1038/s41597-026-07548-x
+Download citation
+Received: 08 December 2025
+Accepted: 27 May 2026
+Published: 01 June 2026
+Version of record: 31 August 2026
+DOI: https://doi.org/10.1038/s41597-026-07548-x
+Share this article
+Anyone you share the following link with will be able to read this content:Get shareable link
+Sorry, a shareable link is not currently available for this article.
+Copy shareable link to clipboard
+                            Provided by the Springer Nature SharedIt content-sharing initiative
+                Download PDF
+Advertisement
+Explore content
+                                    Research articles
+                                    News & Comment
+                                    Collections
+                            Follow us on X
+                            Sign up for alerts
+                                RSS feed
+About the journal
+                                    Aims and scope
+                                    Journal Metrics
+                                    Editors
+                                    Policies
+                                    Open Access Fees and Funding
+                                    Calls for Papers
+                                    Contact
+Publish with us
+                                    Submission Guidelines
+                                    Language editing services
+                                Open access funding
+                                Submit manuscript
+Search
+            Search articles by subject, keyword or author
+                        Show results from
+                                    All journals
+                                    This journal
+                        Search
+                Advanced search
+Quick links
+Explore articles by subject
+Find a job
+Guide to authors
+Editorial policies
+                        Scientific Data
+                    (Sci Data)
+            ISSN 2052-4463 (online)
+nature.com footer links
+About Nature Portfolio
+About us
+Press releases
+Press office
+Contact us
+Discover content
+Journals A-Z
+Articles by subject
+protocols.io
+Nature Index
+Publishing policies
+Nature portfolio policies
+Open access
+Author & Researcher services
+Reprints & permissions
+Research data
+Language editing
+Scientific editing
+Nature Masterclasses
+Research Solutions
+Libraries & institutions
+Librarian service & tools
+Librarian portal
+Open research
+Recommend to library
+Advertising & partnerships
+Advertising
+Partnerships & Services
+Media kits
+Branded
+                        content
+Professional development
+Nature Awards
+Nature Careers
+Nature 
+                        Conferences
+Regional websites
+Nature Africa
+Nature China
+Nature India
+Nature Japan
+Nature Middle East
+Privacy
+                Policy
+Use
+                of cookies
+                Your privacy choices/Manage cookies
+Legal
+                notice
+Accessibility
+                statement
+Terms & Conditions
+Your US state privacy rights
+© 2026 Springer Nature Limited
+            Close banner
+        Close
+Sign up for the Nature Briefing newsletter — what matters in science, free to your inbox daily.
+                        Email address
+                            Sign up
+                            I agree my information will be processed in accordance with the Nature and Springer Nature Limited Privacy Policy.
+            Close banner
+        Close
+            Get the most important science stories of the day, free in your inbox.
+            Sign up for Nature Briefing

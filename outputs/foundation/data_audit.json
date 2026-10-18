@@ -1,0 +1,792 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "energy_share_sum_2015",
+      "actual": 100.0,
+      "expected": 100,
+      "tolerance": 0.21,
+      "passed": true
+    },
+    {
+      "name": "energy_share_sum_2016",
+      "actual": 100.0,
+      "expected": 100,
+      "tolerance": 0.21,
+      "passed": true
+    },
+    {
+      "name": "energy_share_sum_2017",
+      "actual": 100.0,
+      "expected": 100,
+      "tolerance": 0.21,
+      "passed": true
+    },
+    {
+      "name": "energy_share_sum_2018",
+      "actual": 100.0,
+      "expected": 100,
+      "tolerance": 0.21,
+      "passed": true
+    },
+    {
+      "name": "energy_share_sum_2019",
+      "actual": 99.9,
+      "expected": 100,
+      "tolerance": 0.21,
+      "passed": true
+    },
+    {
+      "name": "energy_share_sum_2020",
+      "actual": 100.0,
+      "expected": 100,
+      "tolerance": 0.21,
+      "passed": true
+    },
+    {
+      "name": "energy_share_sum_2021",
+      "actual": 100.0,
+      "expected": 100,
+      "tolerance": 0.21,
+      "passed": true
+    },
+    {
+      "name": "energy_share_sum_2022",
+      "actual": 100.0,
+      "expected": 100,
+      "tolerance": 0.21,
+      "passed": true
+    },
+    {
+      "name": "energy_share_sum_2023",
+      "actual": 100.0,
+      "expected": 100,
+      "tolerance": 0.21,
+      "passed": true
+    },
+    {
+      "name": "energy_share_sum_2024",
+      "actual": 100.0,
+      "expected": 100,
+      "tolerance": 0.21,
+      "passed": true
+    },
+    {
+      "name": "capacity_components_2015",
+      "actual": 152527,
+      "expected": 152527,
+      "tolerance": 4.0,
+      "passed": true
+    },
+    {
+      "name": "capacity_components_2016",
+      "actual": 165050,
+      "expected": 165051,
+      "tolerance": 4.0,
+      "passed": true
+    },
+    {
+      "name": "capacity_components_2017",
+      "actual": 177710,
+      "expected": 177708,
+      "tolerance": 4.0,
+      "passed": true
+    },
+    {
+      "name": "capacity_components_2018",
+      "actual": 189998,
+      "expected": 189997,
+      "tolerance": 4.0,
+      "passed": true
+    },
+    {
+      "name": "capacity_components_2019",
+      "actual": 200984,
+      "expected": 200985,
+      "tolerance": 4.0,
+      "passed": true
+    },
+    {
+      "name": "capacity_components_2020",
+      "actual": 220503,
+      "expected": 220504,
+      "tolerance": 4.0,
+      "passed": true
+    },
+    {
+      "name": "capacity_components_2021",
+      "actual": 237689,
+      "expected": 237689,
+      "tolerance": 4.0,
+      "passed": true
+    },
+    {
+      "name": "capacity_components_2022",
+      "actual": 256317,
+      "expected": 256317,
+      "tolerance": 4.0,
+      "passed": true
+    },
+    {
+      "name": "capacity_components_2023",
+      "actual": 292224,
+      "expected": 292224,
+      "tolerance": 4.0,
+      "passed": true
+    },
+    {
+      "name": "capacity_components_2024",
+      "actual": 334922,
+      "expected": 334922,
+      "tolerance": 4.0,
+      "passed": true
+    },
+    {
+      "name": "generation_not_overallocated_2015",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0.6,
+      "passed": true
+    },
+    {
+      "name": "generation_not_overallocated_2016",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0.6,
+      "passed": true
+    },
+    {
+      "name": "generation_not_overallocated_2017",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0.6,
+      "passed": true
+    },
+    {
+      "name": "generation_not_overallocated_2018",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0.6,
+      "passed": true
+    },
+    {
+      "name": "generation_not_overallocated_2019",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0.6,
+      "passed": true
+    },
+    {
+      "name": "generation_not_overallocated_2020",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0.6,
+      "passed": true
+    },
+    {
+      "name": "generation_not_overallocated_2021",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0.6,
+      "passed": true
+    },
+    {
+      "name": "generation_not_overallocated_2022",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0.6,
+      "passed": true
+    },
+    {
+      "name": "generation_not_overallocated_2023",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0.6,
+      "passed": true
+    },
+    {
+      "name": "generation_not_overallocated_2024",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0.6,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_supply_2015",
+      "actual": 397074,
+      "expected": 397073,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_difference_2015",
+      "actual": -2760,
+      "expected": -2760,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_consumption_components_2015",
+      "actual": 399834,
+      "expected": 399834,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_supply_2016",
+      "actual": 378494,
+      "expected": 378494,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_difference_2016",
+      "actual": -10326,
+      "expected": -10326,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_consumption_components_2016",
+      "actual": 388821,
+      "expected": 388820,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_supply_2017",
+      "actual": 383480,
+      "expected": 383479,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_difference_2017",
+      "actual": -7923,
+      "expected": -7924,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_consumption_components_2017",
+      "actual": 391403,
+      "expected": 391403,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_supply_2018",
+      "actual": 394848,
+      "expected": 394848,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_difference_2018",
+      "actual": -2604,
+      "expected": -2604,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_consumption_components_2018",
+      "actual": 397452,
+      "expected": 397452,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_supply_2019",
+      "actual": 405537,
+      "expected": 405537,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_difference_2019",
+      "actual": 3622,
+      "expected": 3623,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_consumption_components_2019",
+      "actual": 401914,
+      "expected": 401915,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_supply_2020",
+      "actual": 406008,
+      "expected": 406008,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_difference_2020",
+      "actual": 5709,
+      "expected": 5709,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_supply_2021",
+      "actual": 440618,
+      "expected": 440618,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_difference_2021",
+      "actual": 11042,
+      "expected": 11043,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_consumption_components_2021",
+      "actual": 429575,
+      "expected": 429576,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_supply_2022",
+      "actual": 461443,
+      "expected": 461441,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_difference_2022",
+      "actual": 16487,
+      "expected": 16487,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_supply_2023",
+      "actual": 490645,
+      "expected": 490646,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "coal_balance_2015_2023_difference_2023",
+      "actual": 19890,
+      "expected": 19890,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "petroleum_balance_selected_years_supply_2015",
+      "actual": 55688,
+      "expected": 55689,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "petroleum_balance_selected_years_difference_2015",
+      "actual": -272,
+      "expected": -272,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "petroleum_balance_selected_years_supply_2020",
+      "actual": 67554,
+      "expected": 67554,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "petroleum_balance_selected_years_difference_2020",
+      "actual": 2185,
+      "expected": 2185,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "petroleum_balance_selected_years_supply_2021",
+      "actual": 69048,
+      "expected": 69048,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "petroleum_balance_selected_years_difference_2021",
+      "actual": 655,
+      "expected": 655,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "petroleum_balance_selected_years_supply_2022",
+      "actual": 70810,
+      "expected": 70810,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "petroleum_balance_selected_years_difference_2022",
+      "actual": 1489,
+      "expected": 1489,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "petroleum_balance_selected_years_supply_2023",
+      "actual": 77027,
+      "expected": 77028,
+      "tolerance": 2.1,
+      "passed": true
+    },
+    {
+      "name": "petroleum_balance_selected_years_difference_2023",
+      "actual": 1890,
+      "expected": 1890,
+      "tolerance": 2.1,
+      "passed": true
+    }
+  ],
+  "warnings": [
+    {
+      "code": "UNALLOCATED_GENERATION",
+      "year": 2015,
+      "residual_100m_kwh": 435,
+      "message": "Missing solar remains null; residual is not assigned to solar"
+    },
+    {
+      "code": "UNALLOCATED_GENERATION",
+      "year": 2016,
+      "residual_100m_kwh": 617,
+      "message": "Missing solar remains null; residual is not assigned to solar"
+    },
+    {
+      "code": "UNALLOCATED_GENERATION",
+      "year": 2017,
+      "residual_100m_kwh": 1066,
+      "message": "Missing solar remains null; residual is not assigned to solar"
+    },
+    {
+      "code": "UNALLOCATED_GENERATION",
+      "year": 2018,
+      "residual_100m_kwh": 1776,
+      "message": "Missing solar remains null; residual is not assigned to solar"
+    },
+    {
+      "code": "UNALLOCATED_GENERATION",
+      "year": 2019,
+      "residual_100m_kwh": 2244,
+      "message": "Missing solar remains null; residual is not assigned to solar"
+    },
+    {
+      "code": "UNALLOCATED_GENERATION",
+      "year": 2020,
+      "residual_100m_kwh": 2609,
+      "message": "Missing solar remains null; residual is not assigned to solar"
+    },
+    {
+      "code": "UNALLOCATED_GENERATION",
+      "year": 2021,
+      "residual_100m_kwh": 4158,
+      "message": "Missing solar remains null; residual is not assigned to solar"
+    },
+    {
+      "code": "UNALLOCATED_GENERATION",
+      "year": 2022,
+      "residual_100m_kwh": 4272,
+      "message": "Missing solar remains null; residual is not assigned to solar"
+    },
+    {
+      "code": "UNALLOCATED_GENERATION",
+      "year": 2023,
+      "residual_100m_kwh": 5843,
+      "message": "Missing solar remains null; residual is not assigned to solar"
+    },
+    {
+      "code": "INCOMPLETE_OR_MIXED_VINTAGE",
+      "table": "coal_balance_2015_2023",
+      "message": "mixed_vintages_scope_break_do_not_calibrate"
+    },
+    {
+      "code": "INCOMPLETE_OR_MIXED_VINTAGE",
+      "table": "petroleum_balance_selected_years",
+      "message": "partial_coverage_mixed_vintages_pending_alignment"
+    },
+    {
+      "code": "INCOMPLETE_OR_MIXED_VINTAGE",
+      "table": "power_generation_2015_2024",
+      "message": "mixed_yearbook_vintages_pending_alignment"
+    },
+    {
+      "code": "YEARBOOK_SNAPSHOTS_MISSING",
+      "message": "Yearbook images are not archived; scoped official-page captures are reviewed separately in evidence_reviews.json"
+    },
+    {
+      "code": "GDP_CHAIN_APPROXIMATION",
+      "message": "Real GDP index chains growth rates rounded to 0.1 percentage point"
+    },
+    {
+      "code": "NO_NATIONAL_CO2_FORECAST",
+      "message": "Fuel combustion, process emissions and removals remain incomplete"
+    }
+  ],
+  "tables": {
+    "coal_balance_2015_2023": {
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "missing_years_2015_2024": [
+        2024
+      ],
+      "measurements": 87,
+      "missing_cells": [
+        {
+          "year": 2020,
+          "column": "washing_loss"
+        },
+        {
+          "year": 2022,
+          "column": "washing_loss"
+        },
+        {
+          "year": 2023,
+          "column": "washing_loss"
+        }
+      ],
+      "status": "mixed_vintages_scope_break_do_not_calibrate"
+    },
+    "demand_energy_total_2015_2024": {
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_years_2015_2024": [],
+      "measurements": 10,
+      "missing_cells": [],
+      "status": "reviewed_official_image_text_excerpt_scoped"
+    },
+    "demand_real_gdp_growth_2015_2024": {
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_years_2015_2024": [],
+      "measurements": 10,
+      "missing_cells": [],
+      "status": "reviewed_official_image_text_excerpt_scoped"
+    },
+    "energy_consumption_2015_2024": {
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_years_2015_2024": [],
+      "measurements": 50,
+      "missing_cells": [],
+      "status": "official_table_manually_rechecked_pending_independent_source_crosscheck"
+    },
+    "fuel_production_2023_2024": {
+      "years": [
+        2023,
+        2024
+      ],
+      "missing_years_2015_2024": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "measurements": 6,
+      "missing_cells": [],
+      "status": "official_table_manual_transcription_pending_independent_crosscheck"
+    },
+    "macro_growth_2015_2024": {
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_years_2015_2024": [],
+      "measurements": 30,
+      "missing_cells": [],
+      "status": "official_table_manual_transcription_pending_independent_crosscheck"
+    },
+    "petroleum_balance_selected_years": {
+      "years": [
+        2015,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "missing_years_2015_2024": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2024
+      ],
+      "measurements": 45,
+      "missing_cells": [],
+      "status": "partial_coverage_mixed_vintages_pending_alignment"
+    },
+    "power_capacity_2015_2024": {
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_years_2015_2024": [],
+      "measurements": 70,
+      "missing_cells": [],
+      "status": "official_table_manual_transcription_pending_independent_crosscheck"
+    },
+    "power_generation_2015_2024": {
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_years_2015_2024": [],
+      "measurements": 51,
+      "missing_cells": [
+        {
+          "year": 2015,
+          "column": "solar"
+        },
+        {
+          "year": 2016,
+          "column": "solar"
+        },
+        {
+          "year": 2017,
+          "column": "solar"
+        },
+        {
+          "year": 2018,
+          "column": "solar"
+        },
+        {
+          "year": 2019,
+          "column": "solar"
+        },
+        {
+          "year": 2020,
+          "column": "solar"
+        },
+        {
+          "year": 2021,
+          "column": "solar"
+        },
+        {
+          "year": 2022,
+          "column": "solar"
+        },
+        {
+          "year": 2023,
+          "column": "solar"
+        }
+      ],
+      "status": "mixed_yearbook_vintages_pending_alignment"
+    },
+    "power_official_release_2024": {
+      "years": [
+        2024
+      ],
+      "missing_years_2015_2024": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "measurements": 10,
+      "missing_cells": [],
+      "status": "reviewed_official_page_capture_single_release"
+    }
+  },
+  "observation_file_sha256": {
+    "anchors_2025.json": "ce1e1e77cce93ee853f112f560de607fd74b88be93388547a21f1bc50e7cb6bb",
+    "coal_balance_2015_2023.json": "847d28b3884bf1f95930a413a501c8d58ab8d11537be88bdda8a9342a31a8c74",
+    "demand_energy_total_2015_2024.json": "909be60ca5dd53e79059df6eb087db132b34ca1f831728efe2debb20a02e80f0",
+    "demand_real_gdp_growth_2015_2024.json": "3769c34c8f38f39dd456665758da7f892dd11cf1eb90e0603f45254fecdbc6e1",
+    "electricity_demand_official_2024.json": "145522816e8d23c8f96356875d3886186cf0f04ba2724f82b3f554f4c5a26f34",
+    "energy_consumption_2015_2024.json": "fc2e26b41d3f3e54751e097f6969494884c4e69378efef894b9a72583166f126",
+    "energy_official_communique_2024.json": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+    "fuel_production_2023_2024.json": "f756a0a232a08c5b34d4d5302ffde1e0b455a62de0aab39a102a6839867c1606",
+    "gas_apparent_consumption_2024.json": "a0a0febf71f955b657bad404d66700db7804a056c36a5b3c2f01b4eb4ef7019a",
+    "gas_official_report_2024.json": "20a0a46a2113440e2cf65d9395ff4c4377587cd83124e9f92c0f266af2fadc9b",
+    "macro_growth_2015_2024.json": "c8039a79be2f80fc18e42d2a5fcc1ea7e87939f5b9a67cb70e771baafd51ca14",
+    "petroleum_balance_selected_years.json": "f498bf491177655cc3f2e0aa2565988f8bd2a16526fb0700c094ca16b49b5b65",
+    "power_capacity_2015_2024.json": "c2e25b7bcac1b38967526f00253e8807c27b9351af56a5d69263c23be82c3f27",
+    "power_generation_2015_2024.json": "a6aae99a8d04304f29ccb291cabb6dab06ac208493cb498cb1fc149223738e11",
+    "power_official_release_2024.json": "c4ad62a266a5136d9d8a76dc795bfd2140c90f16e26007a5e672a22207a3b90c",
+    "qinshan_asset_permit_case.json": "49377e3598b1f91f9fa226551e92ec06b860da3a9bf21f7f918e8993e0ee56e6",
+    "renewable_operation_official_2024.json": "f59303c667f0529820da3ecd3bb5386445eb5a248051325681641626aacfcb55"
+  },
+  "sources_sha256": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f"
+}

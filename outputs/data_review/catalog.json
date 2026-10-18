@@ -1,0 +1,361 @@
+{
+  "generated_at": "2026-10-18T00:15:41+08:00",
+  "formal_input_check_passed": true,
+  "errors": [],
+  "datasets": [
+    {
+      "path": "data/observations/anchors_2025.json",
+      "sha256": "ce1e1e77cce93ee853f112f560de607fd74b88be93388547a21f1bc50e7cb6bb",
+      "measurements": 20,
+      "years": [
+        2025
+      ],
+      "source_ids": [
+        "S02",
+        "S04"
+      ],
+      "admission": "candidate_not_admitted",
+      "review_id": null,
+      "restriction": "仅探索；未获正式证据准入",
+      "evidence_paths": []
+    },
+    {
+      "path": "data/observations/coal_balance_2015_2023.json",
+      "sha256": "847d28b3884bf1f95930a413a501c8d58ab8d11537be88bdda8a9342a31a8c74",
+      "measurements": 87,
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "source_ids": [
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "admission": "candidate_not_admitted",
+      "review_id": null,
+      "restriction": "仅探索；未获正式证据准入",
+      "evidence_paths": []
+    },
+    {
+      "path": "data/observations/demand_energy_total_2015_2024.json",
+      "sha256": "909be60ca5dd53e79059df6eb087db132b34ca1f831728efe2debb20a02e80f0",
+      "measurements": 10,
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "source_ids": [
+        "S01"
+      ],
+      "admission": "reviewed_scoped_subset",
+      "review_id": "R-S01-DEMAND-20261017",
+      "restriction": "仅同版发布序列的总能源条件回算及四种统计基线；不批准原整表结构，不作部门燃烧、全国ABM、CO2或跨版因果结论。原图/截图未本地归档，证据为明示人工文字摘录。",
+      "evidence_paths": [
+        "data/raw/official/S01_demand_excerpt_20261017.txt"
+      ]
+    },
+    {
+      "path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+      "sha256": "3769c34c8f38f39dd456665758da7f892dd11cf1eb90e0603f45254fecdbc6e1",
+      "measurements": 10,
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "source_ids": [
+        "S06"
+      ],
+      "admission": "reviewed_scoped_subset",
+      "review_id": "R-S06-GDP-20261017",
+      "restriction": "仅近似实际GDP链接指数与已实现GDP条件回算；原宏观整表不准入，不能当不变价GDP绝对额或盲测。原图/截图未本地归档，证据为明示人工文字摘录。",
+      "evidence_paths": [
+        "data/raw/official/S06_gdp_excerpt_20261017.txt"
+      ]
+    },
+    {
+      "path": "data/observations/electricity_demand_official_2024.json",
+      "sha256": "145522816e8d23c8f96356875d3886186cf0f04ba2724f82b3f554f4c5a26f34",
+      "measurements": 11,
+      "years": [
+        2024
+      ],
+      "source_ids": [
+        "S24"
+      ],
+      "admission": "reviewed_scoped_subset",
+      "review_id": "R-S24-20261017",
+      "restriction": "仅2024年度四类用电规模与结构锚点、同比参考；无历史行为校准或逐时负荷；规模以上工业发电量不能当作全国总发电量求供需缺口。",
+      "evidence_paths": [
+        "data/raw/official/S24_page_capture.txt"
+      ]
+    },
+    {
+      "path": "data/observations/energy_consumption_2015_2024.json",
+      "sha256": "fc2e26b41d3f3e54751e097f6969494884c4e69378efef894b9a72583166f126",
+      "measurements": 50,
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "source_ids": [
+        "S01"
+      ],
+      "admission": "candidate_not_admitted",
+      "review_id": null,
+      "restriction": "仅探索；未获正式证据准入",
+      "evidence_paths": []
+    },
+    {
+      "path": "data/observations/energy_official_communique_2024.json",
+      "sha256": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+      "measurements": 33,
+      "years": [
+        2024
+      ],
+      "source_ids": [
+        "S13"
+      ],
+      "admission": "reviewed_scoped_subset",
+      "review_id": "R-S13-20261017",
+      "restriction": "仅独立2024公报横截面与口径分析；尚未完成洗选损耗及GDP历史修订桥接，不用于十年连续校准或全国预测。",
+      "evidence_paths": [
+        "data/raw/official/S13_selected_capture.txt"
+      ]
+    },
+    {
+      "path": "data/observations/fuel_production_2023_2024.json",
+      "sha256": "f756a0a232a08c5b34d4d5302ffde1e0b455a62de0aab39a102a6839867c1606",
+      "measurements": 6,
+      "years": [
+        2023,
+        2024
+      ],
+      "source_ids": [
+        "S16"
+      ],
+      "admission": "candidate_not_admitted",
+      "review_id": null,
+      "restriction": "仅探索；未获正式证据准入",
+      "evidence_paths": []
+    },
+    {
+      "path": "data/observations/gas_apparent_consumption_2024.json",
+      "sha256": "a0a0febf71f955b657bad404d66700db7804a056c36a5b3c2f01b4eb4ef7019a",
+      "measurements": 2,
+      "years": [
+        2024
+      ],
+      "source_ids": [
+        "S23"
+      ],
+      "admission": "reviewed_scoped_subset",
+      "review_id": "R-S23-20261017",
+      "restriction": "仅2024快报表观消费独立横截面和与报告消费的口径诊断；不替换消费总量或与S22部门份额混算，不用于未桥接历史校准。",
+      "evidence_paths": [
+        "data/raw/official/S23_page_capture.txt"
+      ]
+    },
+    {
+      "path": "data/observations/gas_official_report_2024.json",
+      "sha256": "20a0a46a2113440e2cf65d9395ff4c4377587cd83124e9f92c0f266af2fadc9b",
+      "measurements": 20,
+      "years": [
+        2024
+      ],
+      "source_ids": [
+        "S22"
+      ],
+      "admission": "reviewed_scoped_subset",
+      "review_id": "R-S22-20261017",
+      "restriction": "官方发布行业报告的2024国内横截面、天然气用途/进口结构及核算接口；不采用国际商业数据及2025预测，不与快报表观消费相乘推部门绝对量，不用于未桥接历史校准。",
+      "evidence_paths": [
+        "data/raw/official/S22_selected_capture.txt"
+      ]
+    },
+    {
+      "path": "data/observations/macro_growth_2015_2024.json",
+      "sha256": "c8039a79be2f80fc18e42d2a5fcc1ea7e87939f5b9a67cb70e771baafd51ca14",
+      "measurements": 30,
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "source_ids": [
+        "S06"
+      ],
+      "admission": "candidate_not_admitted",
+      "review_id": null,
+      "restriction": "仅探索；未获正式证据准入",
+      "evidence_paths": []
+    },
+    {
+      "path": "data/observations/petroleum_balance_selected_years.json",
+      "sha256": "f498bf491177655cc3f2e0aa2565988f8bd2a16526fb0700c094ca16b49b5b65",
+      "measurements": 45,
+      "years": [
+        2015,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "source_ids": [
+        "S14",
+        "S15"
+      ],
+      "admission": "candidate_not_admitted",
+      "review_id": null,
+      "restriction": "仅探索；未获正式证据准入",
+      "evidence_paths": []
+    },
+    {
+      "path": "data/observations/power_capacity_2015_2024.json",
+      "sha256": "c2e25b7bcac1b38967526f00253e8807c27b9351af56a5d69263c23be82c3f27",
+      "measurements": 70,
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "source_ids": [
+        "S05"
+      ],
+      "admission": "candidate_not_admitted",
+      "review_id": null,
+      "restriction": "仅探索；未获正式证据准入",
+      "evidence_paths": []
+    },
+    {
+      "path": "data/observations/power_generation_2015_2024.json",
+      "sha256": "a6aae99a8d04304f29ccb291cabb6dab06ac208493cb498cb1fc149223738e11",
+      "measurements": 51,
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "source_ids": [
+        "S07",
+        "S08",
+        "S09",
+        "S13"
+      ],
+      "admission": "candidate_not_admitted",
+      "review_id": null,
+      "restriction": "仅探索；未获正式证据准入",
+      "evidence_paths": []
+    },
+    {
+      "path": "data/observations/power_official_release_2024.json",
+      "sha256": "c4ad62a266a5136d9d8a76dc795bfd2140c90f16e26007a5e672a22207a3b90c",
+      "measurements": 10,
+      "years": [
+        2024
+      ],
+      "source_ids": [
+        "S17"
+      ],
+      "admission": "reviewed_scoped_subset",
+      "review_id": "R-S17-20261016",
+      "restriction": "仅独立2024发布版本横截面；与年鉴存在差异，禁止未桥接拼接历史校准。",
+      "evidence_paths": [
+        "data/raw/official/S17_page_capture.txt"
+      ]
+    },
+    {
+      "path": "data/observations/qinshan_asset_permit_case.json",
+      "sha256": "49377e3598b1f91f9fa226551e92ec06b860da3a9bf21f7f918e8993e0ee56e6",
+      "measurements": 1,
+      "years": [
+        2021
+      ],
+      "source_ids": [
+        "S26",
+        "S27",
+        "S28"
+      ],
+      "admission": "reviewed_scoped_subset",
+      "review_id": "R-QINSHAN-ASSETS-20261017",
+      "restriction": "仅秦山7台机组许可文件回放与附件3条厂级记录身份映射；不核实精确装机/实际退役/发电或全国初始化；生成日为回放信息时点约定",
+      "evidence_paths": [
+        "data/raw/official/S26_qinshan_permits_2017_capture.txt",
+        "data/raw/official/S27_qinshan_extension_2021_capture.txt",
+        "data/raw/official/S28_qinshan_design_life_capture.txt"
+      ]
+    },
+    {
+      "path": "data/observations/renewable_operation_official_2024.json",
+      "sha256": "f59303c667f0529820da3ecd3bb5386445eb5a248051325681641626aacfcb55",
+      "measurements": 15,
+      "years": [
+        2024
+      ],
+      "source_ids": [
+        "S25"
+      ],
+      "admission": "reviewed_scoped_subset",
+      "review_id": "R-S25-20261017",
+      "restriction": "仅2024技术参考、利用率及版本范围诊断；抽蓄能量未知、生物质排放未知，禁止混版计算容量因子、完整全国初态或未经桥接的历史校准。",
+      "evidence_paths": [
+        "data/raw/official/S25_selected_capture.txt"
+      ]
+    }
+  ],
+  "total_measurements": 471,
+  "scoped_reviewed_measurements": 112,
+  "note": "数值单元计数，跨文件可能重复，不是独立样本数。准入限登记用途，不代表全国模型数据齐备。"
+}

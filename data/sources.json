@@ -1,0 +1,306 @@
+{
+  "schema_version": "0.1",
+  "accessed_date": "2026-10-17",
+  "sources": [
+    {
+      "source_id": "S01",
+      "publisher": "国家统计局",
+      "title": "中国统计年鉴2025，表9-2 能源消费总量及构成",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-02.jpg",
+      "catalog_url": "https://www.stats.gov.cn/sj/ndsj/2025/left.htm",
+      "coverage_used": "2015-2024",
+      "verification": "原表图片已查看；人工转录，待第二来源交叉复核",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S02",
+      "publisher": "国家统计局",
+      "title": "中华人民共和国2025年国民经济和社会发展统计公报",
+      "url": "https://www.stats.gov.cn/sj/zxfb/202602/t20260228_1962662.html",
+      "alternate_url": "https://www.stats.gov.cn/zwfwck/sjfb/202602/t20260228_1962662.html",
+      "publication_date": "2026-02-28",
+      "coverage_used": "2025",
+      "verification": "已查看正文、表4、装机段落及注释；本轮在正式发布路径核实能源消费绝对量，旧备用路径的提取内容不完整",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S03",
+      "publisher": "国家能源局",
+      "title": "发展规划司工作进展",
+      "url": "https://www.nea.gov.cn/sjzz/ghs/index.htm",
+      "coverage_used": null,
+      "verification": "候选索引；用于后续定位全年电力数据，尚未录入数值或核实具体报告",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S04",
+      "publisher": "国家统计局",
+      "title": "能源转型跨越发展 绿色低碳成效显著——“十四五”经济社会发展成就系列报告之十四",
+      "url": "https://www.stats.gov.cn/sj/sjjd/202606/t20260604_1963892.html",
+      "publication_date": "2026-06-05",
+      "coverage_used": "2025生产总量及消费结构",
+      "verification": "官方检索返回摘要和正文片段已核实消费总量及结构；直接打开正文超时，全文脚注待核对",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S05",
+      "publisher": "国家统计局；原表资料来源为中国电力企业联合会",
+      "title": "中国统计年鉴2025，表9-15 发电装机容量",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-15.jpg",
+      "coverage_used": "2015-2024",
+      "verification": "已查看官方表格图片，人工转录；独立来源交叉复核待完成",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S06",
+      "publisher": "国家统计局",
+      "title": "中国统计年鉴2025，表9-8 能源消费弹性系数",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-08.jpg",
+      "coverage_used": "2015-2024",
+      "verification": "已查看官方表格图片，录入实际GDP及能源、电力消费增长率；未使用现价GDP计算强度",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S07",
+      "publisher": "国家统计局",
+      "title": "中国统计年鉴2025，表9-6 电力平衡表",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-06.jpg",
+      "coverage_used": "2015、2020、2022、2023",
+      "verification": "已查看官方表格图片，录入生产量及列出的技术分项；太阳能未单列",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S08",
+      "publisher": "国家统计局",
+      "title": "中国统计年鉴2024，表9-6 电力平衡表",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2024/html/C09-06.jpg",
+      "coverage_used": "2021",
+      "verification": "年鉴表格人工转录；与2025版序列衔接待完成",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S09",
+      "publisher": "国家统计局",
+      "title": "中国统计年鉴2021，表9-6 电力平衡表",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2021/html/C09-06.jpg",
+      "coverage_used": "2016-2019",
+      "verification": "年鉴表格人工转录；与2025版序列衔接待完成",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S10",
+      "publisher": "国家统计局",
+      "title": "中国统计年鉴2025，表9-5 煤炭平衡表",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-05.jpg",
+      "coverage_used": "2015、2020、2022、2023",
+      "verification": "已查看官方表格图片及口径调整说明；新版部分年份洗选损耗空白",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S11",
+      "publisher": "国家统计局",
+      "title": "中国统计年鉴2024，表9-5 煤炭平衡表",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2024/html/C09-05.jpg",
+      "coverage_used": "2021；2020仅用于识别修订",
+      "verification": "已查看官方表格图片；与2025版存在历史修订，禁止无条件拼接校准",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S12",
+      "publisher": "国家统计局",
+      "title": "中国统计年鉴2021，表9-5 煤炭平衡表",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2021/html/C09-05.jpg",
+      "coverage_used": "2016-2019",
+      "verification": "已查看官方表格图片；较老版本，保留每年来源",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S13",
+      "publisher": "国家统计局",
+      "title": "中华人民共和国2024年国民经济和社会发展统计公报",
+      "url": "https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202502/t20250228_1958817.html",
+      "publication_date": "2025-02-28",
+      "coverage_used": "2024独立公报版本；GDP、能源生产/消费、发电、能源进口和碳市场；须读相关脚注",
+      "verification": "2026-10-17直接打开正文，逐值复核选定字段及注1、2、21、25、26、87、88、89；未桥接旧年鉴",
+      "local_original_snapshot": null,
+      "local_page_capture": "data/raw/official/S13_selected_capture.txt",
+      "capture_limit": "仅使用段落、表4、表12能源行及相关脚注的可见文本摘录；不是全文HTML或图表图片"
+    },
+    {
+      "source_id": "S14",
+      "publisher": "国家统计局",
+      "title": "中国统计年鉴2025，表9-4 石油平衡表",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-04.jpg",
+      "coverage_used": "2015、2020、2022、2023",
+      "verification": "年鉴表格人工转录；终端、转换及贸易口径保留",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S15",
+      "publisher": "国家统计局",
+      "title": "中国统计年鉴2024，表9-4 石油平衡表",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2024/html/C09-04.jpg",
+      "coverage_used": "2021",
+      "verification": "年鉴表格人工转录；与2025版衔接待完成",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S16",
+      "publisher": "国家统计局",
+      "title": "中国统计年鉴2025，表9-17 主要能源产品产量",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-17.jpg",
+      "coverage_used": "2023-2024",
+      "verification": "年鉴表格人工转录；仅录入原煤、原油、天然气",
+      "local_original_snapshot": null
+    },
+    {
+      "source_id": "S17",
+      "publisher": "国家能源局",
+      "title": "国家能源局发布2024年全国电力工业统计数据",
+      "url": "https://www.nea.gov.cn/20250121/097bfd7c1cd3498897639857d86d5dac/c.html",
+      "publication_date": "2025-01-21",
+      "coverage_used": "2024年全国装机、线损、利用小时与投资；独立发布版本",
+      "verification": "已打开官方正文并留存完整可见文本；按注明字段范围核对，不是搜索摘要",
+      "local_original_snapshot": null,
+      "local_page_capture": "data/raw/official/S17_page_capture.txt",
+      "capture_limit": "网页文本提取，非原始HTML；图片不在本次提取范围，不引用其内容"
+    },
+    {
+      "source_id": "S18",
+      "publisher": "国家能源局",
+      "title": "黑龙江荒沟抽水蓄能电站通过核准",
+      "url": "https://zfxxgk.nea.gov.cn/auto87/201208/t20120828_1504.htm",
+      "publication_date": "2012-08-28",
+      "coverage_used": "仅荒沟项目所属省份及核准容量；不代表2024/2025在运容量",
+      "verification": "已打开官方正文并留存完整可见文本；按注明字段范围核对，不是搜索摘要",
+      "local_original_snapshot": null,
+      "local_page_capture": "data/raw/official/S18_page_capture.txt",
+      "capture_limit": "网页文本提取，非原始HTML；图片不在本次提取范围，不引用其内容"
+    },
+    {
+      "source_id": "S19",
+      "publisher": "国家能源局",
+      "title": "国家能源局综合司关于同意潘家口下水库等36座水电站大坝安全注册登记的复函",
+      "url": "https://zfxxgk.nea.gov.cn/2020-06/30/c_139200181.htm",
+      "publication_date": "2020-06-30",
+      "coverage_used": "仅潘家口抽水蓄能下库所在省份",
+      "verification": "已打开官方正文并留存完整可见文本；按注明字段范围核对，不是搜索摘要",
+      "local_original_snapshot": null,
+      "local_page_capture": "data/raw/official/S19_page_capture.txt",
+      "capture_limit": "网页文本提取，非原始HTML；图片不在本次提取范围，不引用其内容"
+    },
+    {
+      "source_id": "S20",
+      "publisher": "国家能源局",
+      "title": "关于政协第十四届全国委员会第一次会议第01459号提案答复的函",
+      "url": "https://zfxxgk.nea.gov.cn/2023-08/16/c_1310740540.htm",
+      "publication_date": "2023-08-16",
+      "coverage_used": "仅张河湾项目所属省份，不抽取文中其他数字",
+      "verification": "已打开官方正文并留存完整可见文本；按注明字段范围核对，不是搜索摘要",
+      "local_original_snapshot": null,
+      "local_page_capture": "data/raw/official/S20_page_capture.txt",
+      "capture_limit": "网页文本提取，非原始HTML；图片不在本次提取范围，不引用其内容"
+    },
+    {
+      "source_id": "S21",
+      "publisher": "国家能源局",
+      "title": "三峡水电工程全部建成",
+      "url": "https://www.nea.gov.cn/2012-11/05/c_131951482.htm",
+      "publication_date": "2012-11-05",
+      "coverage_used": "三峡项目2012年建成总装机及机组构成；不代表新年度发电量",
+      "verification": "已打开官方正文并留存完整可见文本；按注明字段范围核对，不是搜索摘要",
+      "local_original_snapshot": null,
+      "local_page_capture": "data/raw/official/S21_page_capture.txt",
+      "capture_limit": "网页文本提取，非原始HTML；图片不在本次提取范围，不引用其内容"
+    },
+    {
+      "source_id": "S22",
+      "publisher": "国家能源局官网公开发布；《中国天然气发展报告（2025）》编委会编制",
+      "title": "中国天然气发展报告（2025）",
+      "url": "https://www.nea.gov.cn/20250829/a4e2deb9b6444df1a191b9d60c111ffd/20250829a4e2deb9b6444df1a191b9d60c111ffd_43ab87a785d1b64d49b9210dbc15d3781e.pdf",
+      "publication_date": "2025-08-29",
+      "landing_url": "https://www.nea.gov.cn/20250829/a4e2deb9b6444df1a191b9d60c111ffd/c.html",
+      "coverage_used": "2024国内天然气消费结构、产量及进口体积、来源集中度和新增储气能力；不采用2025展望",
+      "verification": "官方发布页与PDF正文已打开，PDF第3、6、10—13页已视觉查看；所用20值逐项复核",
+      "local_original_snapshot": null,
+      "local_page_capture": "data/raw/official/S22_selected_capture.txt",
+      "capture_limit": "PDF页面文本摘录，原件下载TLS失败；不是本地完整PDF或本地截图，数据含被官方报告采用的行业统计"
+    },
+    {
+      "source_id": "S23",
+      "publisher": "国家发展和改革委员会运行局",
+      "title": "2024年12月份全国天然气运行快报",
+      "url": "https://www.ndrc.gov.cn/fggz/jjyxtj/202501/t20250123_1395858.html",
+      "publication_date": "2025-01-23",
+      "coverage_used": "2024全年表观消费量及同比两项；单月数据不转录",
+      "verification": "直接打开官方页核对全年句、快报身份、日期及来源",
+      "local_original_snapshot": null,
+      "local_page_capture": "data/raw/official/S23_page_capture.txt",
+      "capture_limit": "官方可见网页文本，非原始HTML；未提供表观消费与报告消费口径的桥接"
+    },
+    {
+      "source_id": "S24",
+      "publisher": "国家能源局",
+      "title": "2024年全社会用电量同比增长6.8%",
+      "url": "https://www.nea.gov.cn/20250120/4f7f249bac714e7693adecac996d742f/c.html",
+      "publication_date": "2025-01-20",
+      "coverage_used": "2024全国年度用电总量、四类需求及同比、规模以上工业发电量，共11值",
+      "verification": "2026-10-17直接打开官方正文，逐值复核全部11值及产业/居民/规模以上边界",
+      "local_original_snapshot": null,
+      "local_page_capture": "data/raw/official/S24_page_capture.txt",
+      "capture_limit": "相关完整统计正文及元数据可见文本；非原始HTML，页面没有小时负荷或行为参数"
+    },
+    {
+      "source_id": "S25",
+      "publisher": "国家能源局",
+      "title": "2024年可再生能源并网运行情况",
+      "url": "https://www.nea.gov.cn/20250221/e10f363cabe3458aaf78ba4558970054/c.html",
+      "publication_date": "2025-01-27",
+      "coverage_used": "2024可再生能源年末容量与年度发电、水电/抽蓄/风电/太阳能/光伏/生物质及利用率，15值",
+      "verification": "2026-10-17直接重读完整统计正文，逐值复核15值；保留太阳能概述与光伏专段及其他发布版本的差异",
+      "local_original_snapshot": null,
+      "local_page_capture": "data/raw/official/S25_selected_capture.txt",
+      "capture_limit": "使用段落的字段化网页文本摘录；非完整原始HTML或截图，发布日期取页面标示而不按URL路径推断"
+    },
+    {
+      "source_id": "S26",
+      "publisher": "国家核安全局（生态环境部门户公开文件）",
+      "title": "关于批准秦山核电基地7台核电机组运行许可证续证申请的通知",
+      "url": "https://www.mee.gov.cn/gkml/sthjbgw/haq/201712/t20171222_428467.htm",
+      "document_date": "2017-12-20",
+      "generated_date": "2017-12-20",
+      "document_number": "国核安发〔2017〕324号",
+      "coverage_used": "秦山基地7台机组的许可截止日期及身份；不是装机或退役统计",
+      "local_page_capture": "data/raw/official/S26_qinshan_permits_2017_capture.txt",
+      "verification": "2026-10-17直接打开并另次重开复读全部所用正文与元数据；限定资产案例",
+      "local_original_snapshot": null,
+      "capture_limit": "明确标注的网页文字摘录；未取得原始HTML或许可附件PDF，不证明完整当前许可状态"
+    },
+    {
+      "source_id": "S27",
+      "publisher": "国家核安全局（生态环境部门户公开文件）",
+      "title": "关于批准秦山核电厂1号机组运行许可证有效期限延续的通知",
+      "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk09/202109/t20210909_913463.html",
+      "document_date": "2021-09-03",
+      "generated_date": "2021-09-06",
+      "document_number": "国核安发〔2021〕198号",
+      "coverage_used": "秦山1号许可有效期延续至2041-07-30；不等于未来实际连续发电",
+      "local_page_capture": "data/raw/official/S27_qinshan_extension_2021_capture.txt",
+      "verification": "2026-10-17直接打开并另次重开复读全部所用正文与元数据；限定资产案例",
+      "local_original_snapshot": null,
+      "capture_limit": "明确标注的网页文字摘录；未取得原始HTML或许可附件PDF，不证明完整当前许可状态"
+    },
+    {
+      "source_id": "S28",
+      "publisher": "国家能源局浙江监管办公室",
+      "title": "浙江能源监管办对全国首台核电机组延长服役期工作开展指导服务",
+      "url": "https://zjb.nea.gov.cn/dtyw/xkgsgg/202309/t20230914_210277.html",
+      "publication_date": "2021-06-07",
+      "coverage_used": "秦山1号首次并网日、30年初始设计寿命及原服役期限；当时仍在评估",
+      "local_page_capture": "data/raw/official/S28_qinshan_design_life_capture.txt",
+      "verification": "2026-10-17直接打开并另次重开复读全部所用正文与元数据；限定资产案例",
+      "local_original_snapshot": null,
+      "capture_limit": "明确标注的网页文字摘录；未取得原始HTML或许可附件PDF，不证明完整当前许可状态"
+    }
+  ]
+}

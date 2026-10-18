@@ -1,0 +1,24 @@
+{
+  "recipe": "international",
+  "status": "passed",
+  "comparisons": [
+    {
+      "path": "data/processed/lb/international/china_destination_route_flows_2020_1H2025.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/international/eia_security_quarterly_2025_2026.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/international/route_crude_origin_destination_2020_1H2025.csv",
+      "byte_equal": true,
+      "table_equal": true
+    }
+  ],
+  "expected_outputs_absent_before_execution": true,
+  "scope": "Offline reproduction of saved extraction recipes; not independent source verification or national simulation."
+}
+

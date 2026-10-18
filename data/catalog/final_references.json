@@ -1,0 +1,592 @@
+{
+  "Q": {
+    "original": "D:/CSF2026/sanzu/2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+    "path": "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+    "exists": true
+  },
+  "Y": {
+    "original": "D:/CSF2026/sanzu/A题_yx/分析整理/A题内容分析与数据准备清单.md",
+    "path": "docs/design/A题内容分析与数据准备清单.md",
+    "exists": true
+  },
+  "YS": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/catalog/source_inventory.csv",
+    "path": "data/catalog/source_inventory.csv",
+    "exists": true
+  },
+  "YD": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/catalog/dataset_inventory.csv",
+    "path": "data/catalog/dataset_inventory.csv",
+    "exists": true
+  },
+  "MREADME": {
+    "original": "D:/CSF2026/sanzu/A题mmj/README.md",
+    "path": "docs/history/mmj/README.md",
+    "exists": true
+  },
+  "M2": {
+    "original": "D:/CSF2026/sanzu/A题mmj/docs/02_model_design.md",
+    "path": "docs/02_model_design.md",
+    "exists": true
+  },
+  "M3": {
+    "original": "D:/CSF2026/sanzu/A题mmj/docs/03_experiment_design.md",
+    "path": "docs/03_experiment_design.md",
+    "exists": true
+  },
+  "M8": {
+    "original": "D:/CSF2026/sanzu/A题mmj/docs/08_statistical_boundaries.md",
+    "path": "docs/08_statistical_boundaries.md",
+    "exists": true
+  },
+  "M9": {
+    "original": "D:/CSF2026/sanzu/A题mmj/docs/09_agent_prototype.md",
+    "path": "docs/09_agent_prototype.md",
+    "exists": true
+  },
+  "M10": {
+    "original": "D:/CSF2026/sanzu/A题mmj/docs/10_operation_windows.md",
+    "path": "docs/10_operation_windows.md",
+    "exists": true
+  },
+  "M11": {
+    "original": "D:/CSF2026/sanzu/A题mmj/docs/11_calibration_input_contract.md",
+    "path": "docs/11_calibration_input_contract.md",
+    "exists": true
+  },
+  "M12": {
+    "original": "D:/CSF2026/sanzu/A题mmj/docs/12_workbench.md",
+    "path": "docs/12_workbench.md",
+    "exists": true
+  },
+  "M14": {
+    "original": "D:/CSF2026/sanzu/A题mmj/docs/14_goal_progress_review.md",
+    "path": "docs/14_goal_progress_review.md",
+    "exists": true
+  },
+  "M15": {
+    "original": "D:/CSF2026/sanzu/A题mmj/docs/15_demand_hindcast_execution.md",
+    "path": "docs/15_demand_hindcast_execution.md",
+    "exists": true
+  },
+  "M16": {
+    "original": "D:/CSF2026/sanzu/A题mmj/docs/16_asset_lifecycle_case.md",
+    "path": "docs/16_asset_lifecycle_case.md",
+    "exists": true
+  },
+  "MATT": {
+    "original": "D:/CSF2026/sanzu/A题mmj/outputs/attachments/report.md",
+    "path": "outputs/attachments/report.md",
+    "exists": true
+  },
+  "M4D": {
+    "original": "D:/CSF2026/sanzu/A题mmj/outputs/current_assessment/four_dimensions_2024_partial.md",
+    "path": "outputs/current_assessment/four_dimensions_2024_partial.md",
+    "exists": true
+  },
+  "MRUN": {
+    "original": "D:/CSF2026/sanzu/A题mmj/outputs/calibration/demand_3312e2a52e0430a7/report.md",
+    "path": "outputs/calibration/demand_3312e2a52e0430a7/report.md",
+    "exists": true
+  },
+  "MS": {
+    "original": "D:/CSF2026/sanzu/A题mmj/data/sources.json",
+    "path": "data/sources.json",
+    "exists": true
+  },
+  "MR": {
+    "original": "D:/CSF2026/sanzu/A题mmj/data/evidence_reviews.json",
+    "path": "data/evidence_reviews.json",
+    "exists": true
+  },
+  "L1": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题总体研究路线_整合版.md",
+    "path": "docs/history/lb/A题总体研究路线_整合版.md",
+    "exists": true
+  },
+  "L2": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/02_数据口径与缺口.md",
+    "path": "docs/sources/lb/base/02_数据口径与缺口.md",
+    "exists": true
+  },
+  "L3": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/03_Mesa建模参数资料索引.md",
+    "path": "docs/sources/lb/base/03_Mesa建模参数资料索引.md",
+    "exists": true
+  },
+  "LS": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/资料来源目录.csv",
+    "path": "data/catalog/lb/base/资料来源目录.csv",
+    "exists": true
+  },
+  "LS2": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/补充收集_20261017/资料来源目录.csv",
+    "path": "data/catalog/lb/base/补充收集_20261017/资料来源目录.csv",
+    "exists": true
+  },
+  "LS3": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/资料来源目录.csv",
+    "path": "data/catalog/lb/base/专项补查_20261017/资料来源目录.csv",
+    "exists": true
+  },
+  "LS4": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/替代与扩展_20261017/alternatives/sources.json",
+    "path": "data/catalog/lb/trade_alternatives/sources.json",
+    "exists": true
+  },
+  "LS5": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/ai_trade/sources.json",
+    "path": "data/catalog/lb/ai_trade/sources.json",
+    "exists": true
+  },
+  "LS6": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/household_employment/sources_household_employment.json",
+    "path": "data/catalog/lb/household/sources_household_employment.json",
+    "exists": true
+  },
+  "LS7": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/替代与扩展_20261017/employment/sources_employment.json",
+    "path": "data/catalog/lb/employment/sources_employment.json",
+    "exists": true
+  },
+  "LMAP": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/补充收集_20261017/01_情景与资料映射.md",
+    "path": "docs/sources/lb/base/补充收集_20261017/01_情景与资料映射.md",
+    "exists": true
+  },
+  "LGAP": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/补充收集_20261017/02_口径问题与未解决缺口.md",
+    "path": "docs/sources/lb/base/补充收集_20261017/02_口径问题与未解决缺口.md",
+    "exists": true
+  },
+  "LUP": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/替代与扩展_20261017/00_本轮结果.md",
+    "path": "docs/sources/lb/base/专项补查_20261017/替代与扩展_20261017/00_本轮结果.md",
+    "exists": true
+  },
+  "LAI": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/ai_trade/README.md",
+    "path": "docs/sources/lb/ai_trade/README.md",
+    "exists": true
+  },
+  "LHH": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/household_employment/00_阅读入口.md",
+    "path": "docs/sources/lb/household/00_阅读入口.md",
+    "exists": true
+  },
+  "D01": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/nbs_energy_annual.csv",
+    "path": "data/processed/nbs_energy_annual.csv",
+    "exists": true
+  },
+  "D02": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/nbs_capacity_annual.csv",
+    "path": "data/processed/nbs_capacity_annual.csv",
+    "exists": true
+  },
+  "D03": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/nbs_products_annual.csv",
+    "path": "data/processed/nbs_products_annual.csv",
+    "exists": true
+  },
+  "D04": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/nbs_balance_checkpoints.csv",
+    "path": "data/processed/nbs_balance_checkpoints.csv",
+    "exists": true
+  },
+  "D05": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/nbs_sector_use_2023.csv",
+    "path": "data/processed/nbs_sector_use_2023.csv",
+    "exists": true
+  },
+  "D06": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/nbs_conversion_efficiency.csv",
+    "path": "data/processed/nbs_conversion_efficiency.csv",
+    "exists": true
+  },
+  "D07": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/nbs_province_demand.csv",
+    "path": "data/processed/nbs_province_demand.csv",
+    "exists": true
+  },
+  "D08": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/china_macro_annual.csv",
+    "path": "data/processed/china_macro_annual.csv",
+    "exists": true
+  },
+  "D09": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/china_energy_research_annual.csv",
+    "path": "data/processed/china_energy_research_annual.csv",
+    "exists": true
+  },
+  "D10": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/china_co2_gcb_annual.csv",
+    "path": "data/processed/china_co2_gcb_annual.csv",
+    "exists": true
+  },
+  "D11": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/nea_renewables_2024_2025.csv",
+    "path": "data/processed/nea_renewables_2024_2025.csv",
+    "exists": true
+  },
+  "D11B": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/nea_electricity_2025.csv",
+    "path": "data/processed/nea_electricity_2025.csv",
+    "exists": true
+  },
+  "D11C": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/nbs_latest_2025.csv",
+    "path": "data/processed/nbs_latest_2025.csv",
+    "exists": true
+  },
+  "D12": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/province_load_2018_MWh.csv",
+    "path": "data/processed/province_load_2018_MWh.csv",
+    "exists": true
+  },
+  "D12B": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/province_column_mapping.csv",
+    "path": "data/processed/province_column_mapping.csv",
+    "exists": true
+  },
+  "D12C": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/province_load_2018_summary.csv",
+    "path": "data/processed/province_load_2018_summary.csv",
+    "exists": true
+  },
+  "D13": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/project_timing_examples.csv",
+    "path": "data/processed/project_timing_examples.csv",
+    "exists": true
+  },
+  "D14": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/transmission_lines_candidate.csv",
+    "path": "data/processed/transmission_lines_candidate.csv",
+    "exists": true
+  },
+  "D15": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/reservoir_attributes_candidate.csv",
+    "path": "data/processed/reservoir_attributes_candidate.csv",
+    "exists": true
+  },
+  "D16": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/china_power_plants_wri_snapshot.csv",
+    "path": "data/processed/china_power_plants_wri_snapshot.csv",
+    "exists": true
+  },
+  "D17": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/fuel_storage_hydrogen_snapshots.csv",
+    "path": "data/processed/fuel_storage_hydrogen_snapshots.csv",
+    "exists": true
+  },
+  "D18": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/technology_accounting_parameters.csv",
+    "path": "data/processed/technology_accounting_parameters.csv",
+    "exists": true
+  },
+  "D19": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/electricity_co2_factors_2023.csv",
+    "path": "data/processed/electricity_co2_factors_2023.csv",
+    "exists": true
+  },
+  "D20": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/替代与扩展_20261017/alternatives/data/pipeline_gas_china_2024.csv",
+    "path": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+    "exists": true
+  },
+  "D20B": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/替代与扩展_20261017/alternatives/data/lng_china_2024.csv",
+    "path": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+    "exists": true
+  },
+  "D20C": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/替代与扩展_20261017/alternatives/data/coal_china_2024_EJ.csv",
+    "path": "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv",
+    "exists": true
+  },
+  "D20D": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/替代与扩展_20261017/alternatives/data/coal_origins_2023_2025_CCTD.csv",
+    "path": "data/processed/lb/trade_alternatives/coal_origins_2023_2025_CCTD.csv",
+    "exists": true
+  },
+  "D21": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/ai_trade/derived/china_lng_origin_2025.csv",
+    "path": "data/processed/lb/ai_trade/china_lng_origin_2025.csv",
+    "exists": true
+  },
+  "D21B": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/ai_trade/derived/china_crude_origin_2025.csv",
+    "path": "data/processed/lb/ai_trade/china_crude_origin_2025.csv",
+    "exists": true
+  },
+  "D22": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/commodity_price_references.csv",
+    "path": "data/processed/commodity_price_references.csv",
+    "exists": true
+  },
+  "D22B": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/commodity_price_version_comparison.csv",
+    "path": "data/processed/commodity_price_version_comparison.csv",
+    "exists": true
+  },
+  "D23": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/cea_market_annual.csv",
+    "path": "data/processed/cea_market_annual.csv",
+    "exists": true
+  },
+  "D24": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/nbs/consumption_2005_2024.csv",
+    "path": "data/processed/lb/base/nbs/consumption_2005_2024.csv",
+    "exists": true
+  },
+  "D24B": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/nbs/production_2005_2024.csv",
+    "path": "data/processed/lb/base/nbs/production_2005_2024.csv",
+    "exists": true
+  },
+  "D24C": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/nbs/capacity_2005_2024.csv",
+    "path": "data/processed/lb/base/nbs/capacity_2005_2024.csv",
+    "exists": true
+  },
+  "D24D": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/nbs/real_gdp_growth_2005_2024.csv",
+    "path": "data/processed/lb/base/nbs/real_gdp_growth_2005_2024.csv",
+    "exists": true
+  },
+  "D25": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/irena/china_capacity_2016_2025.csv",
+    "path": "data/processed/lb/base/irena/china_capacity_2016_2025.csv",
+    "exists": true
+  },
+  "D25B": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/owid/china_energy_2000_2025_available.csv",
+    "path": "data/processed/lb/base/owid/china_energy_2000_2025_available.csv",
+    "exists": true
+  },
+  "D25C": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/owid/china_co2_2000_2025_available.csv",
+    "path": "data/processed/lb/base/owid/china_co2_2000_2025_available.csv",
+    "exists": true
+  },
+  "D26": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/emissions/carbonmonitor_province_sector_annual_2019_2025.csv",
+    "path": "data/processed/lb/base/emissions/carbonmonitor_province_sector_annual_2019_2025.csv",
+    "exists": true
+  },
+  "D26B": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/emissions/china_grid_factors_2023.csv",
+    "path": "data/processed/lb/base/emissions/china_grid_factors_2023.csv",
+    "exists": true
+  },
+  "D27": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/prices/worldbank_energy_annual_2000_latest.csv",
+    "path": "data/processed/lb/base/prices/worldbank_energy_annual_2000_latest.csv",
+    "exists": true
+  },
+  "D27B": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/prices/worldbank_energy_monthly_2000_latest.csv",
+    "path": "data/processed/lb/base/prices/worldbank_energy_monthly_2000_latest.csv",
+    "exists": true
+  },
+  "D27C": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/data/quality/worldbank_annual_monthly_check.csv",
+    "path": "data/processed/lb/base/quality/worldbank_annual_monthly_check.csv",
+    "exists": true
+  },
+  "D28": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/补充收集_20261017/international/data/china_destination_route_flows_2020_1H2025.csv",
+    "path": "data/processed/lb/international/china_destination_route_flows_2020_1H2025.csv",
+    "exists": true
+  },
+  "D28B": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/补充收集_20261017/international/data/route_crude_origin_destination_2020_1H2025.csv",
+    "path": "data/processed/lb/international/route_crude_origin_destination_2020_1H2025.csv",
+    "exists": true
+  },
+  "D28C": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/补充收集_20261017/international/data/eia_security_quarterly_2025_2026.csv",
+    "path": "data/processed/lb/international/eia_security_quarterly_2025_2026.csv",
+    "exists": true
+  },
+  "D29": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/ai_trade/derived/compute_electricity_anchors.csv",
+    "path": "data/processed/lb/ai_trade/compute_electricity_anchors.csv",
+    "exists": true
+  },
+  "D30": {
+    "original": "D:/CSF2026/sanzu/A题mmj/data/observations/demand_energy_total_2015_2024.json",
+    "path": "data/observations/demand_energy_total_2015_2024.json",
+    "exists": true
+  },
+  "D31": {
+    "original": "D:/CSF2026/sanzu/A题mmj/data/observations/demand_real_gdp_growth_2015_2024.json",
+    "path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+    "exists": true
+  },
+  "D32": {
+    "original": "D:/CSF2026/sanzu/A题mmj/data/observations/qinshan_asset_permit_case.json",
+    "path": "data/observations/qinshan_asset_permit_case.json",
+    "exists": true
+  },
+  "D33": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/household_employment/data/household_energy_median_si_table2.csv",
+    "path": "data/processed/lb/household/household_energy_median_si_table2.csv",
+    "exists": true
+  },
+  "D33B": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/household_employment/data/household_energy_burden_fig5.csv",
+    "path": "data/processed/lb/household/household_energy_burden_fig5.csv",
+    "exists": true
+  },
+  "D34": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/专项补查_20261017/替代与扩展_20261017/employment/煤炭采洗就业_2023年末_分省扩展.csv",
+    "path": "data/processed/lb/employment/煤炭采洗就业_2023年末_分省扩展.csv",
+    "exists": true
+  },
+  "D35": {
+    "original": "D:/CSF2026/sanzu/A题mmj/outputs/current_assessment/four_dimensions_2024.json",
+    "path": "outputs/current_assessment/four_dimensions_2024.json",
+    "exists": true
+  },
+  "D36": {
+    "original": "D:/CSF2026/sanzu/A题_yx/data/processed/policy_target_reference.csv",
+    "path": "data/processed/policy_target_reference.csv",
+    "exists": true
+  },
+  "R01": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/reports/irena_cost_2024_full.pdf",
+    "path": "data/raw/batch3_scenarios/irena_power_costs_2024.pdf",
+    "exists": true
+  },
+  "R02": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/reports/irena_cost_2025_summary.pdf",
+    "path": "data/raw/lb/base/reports/irena_cost_2025_summary.pdf",
+    "exists": true
+  },
+  "R03": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/reports/iea_oecd_generation_cost_2020.pdf",
+    "path": "data/raw/lb/base/reports/iea_oecd_generation_cost_2020.pdf",
+    "exists": true
+  },
+  "R04": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/reports/storage_2025.pdf",
+    "path": "data/raw/lb/base/reports/storage_2025.pdf",
+    "exists": true
+  },
+  "R05": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/reports/hydrogen_2025.pdf",
+    "path": "data/raw/batch3_scenarios/nea_hydrogen_2025.pdf",
+    "exists": true
+  },
+  "R06": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/reports/iea_hydrogen_ccus_china_2022.pdf",
+    "path": "data/raw/lb/base/reports/iea_hydrogen_ccus_china_2022.pdf",
+    "exists": true
+  },
+  "R07": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/reports/ipcc_stationary_combustion.pdf",
+    "path": "data/raw/batch3_scenarios/ipcc_2006_stationary_combustion.pdf",
+    "exists": true
+  },
+  "R08": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/reports/china_btr1_2024.pdf",
+    "path": "data/raw/lb/base/reports/china_btr1_2024.pdf",
+    "exists": true
+  },
+  "R09": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/补充收集_20261017/international/raw/cn_ets_allocation_2026.pdf",
+    "path": "data/raw/lb/international/cn_ets_allocation_2026.pdf",
+    "exists": true
+  },
+  "R10": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/policies/renewable_price_136_2025.html",
+    "path": "data/raw/lb/base/policies/renewable_price_136_2025.html",
+    "exists": true
+  },
+  "R11": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/policies/capacity_price_2026.html",
+    "path": "data/raw/lb/base/policies/capacity_price_2026.html",
+    "exists": true
+  },
+  "R12": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/reports/power_market_2025.pdf",
+    "path": "data/raw/lb/base/reports/power_market_2025.pdf",
+    "exists": true
+  },
+  "R13": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/补充收集_20261017/international/raw/cn_demand_response.pdf",
+    "path": "data/raw/lb/international/cn_demand_response.pdf",
+    "exists": true
+  },
+  "R14": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/补充收集_20261017/international/raw/cn_storage_action.pdf",
+    "path": "data/raw/lb/international/cn_storage_action.pdf",
+    "exists": true
+  },
+  "R15": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/reports/climate_2025.pdf",
+    "path": "data/raw/lb/base/reports/climate_2025.pdf",
+    "exists": true
+  },
+  "R16": {
+    "original": "D:/CSF2026/sanzu/A题lb/A题完整资料包/A题资料库/raw/reports/power_reliability_2024.pdf",
+    "path": "data/raw/lb/base/reports/power_reliability_2024.pdf",
+    "exists": true
+  },
+  "CODE1": {
+    "original": "D:/CSF2026/sanzu/A题mmj/src/energy_model/accounting.py",
+    "path": "src/energy_model/accounting.py",
+    "exists": true
+  },
+  "CODE2": {
+    "original": "D:/CSF2026/sanzu/A题mmj/src/energy_model/fuel_ledger.py",
+    "path": "src/energy_model/fuel_ledger.py",
+    "exists": true
+  },
+  "CODE3": {
+    "original": "D:/CSF2026/sanzu/A题mmj/src/energy_model/agents.py",
+    "path": "src/energy_model/agents.py",
+    "exists": true
+  },
+  "CODE4": {
+    "original": "D:/CSF2026/sanzu/A题mmj/src/energy_model/asset_lifecycle.py",
+    "path": "src/energy_model/asset_lifecycle.py",
+    "exists": true
+  },
+  "CODE5": {
+    "original": "D:/CSF2026/sanzu/A题mmj/src/energy_model/operations.py",
+    "path": "src/energy_model/operations.py",
+    "exists": true
+  },
+  "CODE6": {
+    "original": "D:/CSF2026/sanzu/A题mmj/src/energy_model/baselines.py",
+    "path": "src/energy_model/baselines.py",
+    "exists": true
+  },
+  "SCRIPT1": {
+    "original": "D:/CSF2026/sanzu/A题mmj/scripts/build_four_dimension_assessment.py",
+    "path": "scripts/build_four_dimension_assessment.py",
+    "exists": true
+  },
+  "SCRIPT2": {
+    "original": "D:/CSF2026/sanzu/A题mmj/scripts/run_demand_hindcast.py",
+    "path": "scripts/run_demand_hindcast.py",
+    "exists": true
+  },
+  "RY": {
+    "original": "D:/CSF2026/sanzu/文档对比报告/finalyx.md",
+    "path": "docs/history/comparison/final_yx.md",
+    "exists": true
+  },
+  "RM": {
+    "original": "D:/CSF2026/sanzu/文档对比报告/finalmmj.md",
+    "path": "docs/history/comparison/final_mmj.md",
+    "exists": true
+  },
+  "RL": {
+    "original": "D:/CSF2026/sanzu/文档对比报告/两份方案评估与融合建议lb.pdf",
+    "path": "docs/history/comparison/final_lb.pdf",
+    "exists": true
+  }
+}

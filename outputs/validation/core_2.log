@@ -1,0 +1,26 @@
+已生成 outputs/workflow/；提示词阶段 W2。
+结构检查通过。正式输入检查：通过。
+{"year": 2024, "wind_solar_capacity_share_pct": 42.027462058997436, "hydro_nuclear_wind_solar_capacity_share_pct": 56.86282707503389, "unallocated_capacity_10k_kw": 5}
+{"year": 2024, "status": "partial_q1_single_release_not_calibrated_forecast", "wind_solar_generation_share_pct": 18.202655330488714}
+{"year": 2024, "ledger_status": "incomplete", "pipeline_import_share_pct": 41.82718767198679}
+{
+  "status": "partial_four_dimension_synthesis",
+  "metrics": 17,
+  "gas_concentration_bounds": {
+    "hhi_lower_bound_10000": 1321.542491887751,
+    "hhi_upper_bound_10000": 6957.857500055278,
+    "largest_origin_share_lower_pct": 16.257567418822234,
+    "largest_origin_share_upper_pct": 81.28783709411117,
+    "country_hhi_point": null,
+    "interpretation": "公布舍入值下的保守算术界；不是点估计、置信区间或安全分级"
+  }
+}
+{"status": "scoped_annual_reference_inputs", "demand_twh": 9852.1, "closure_residual_twh": 0.0, "technology_fields": 15}
+{
+  "run_id": "3312e2a52e0430a7",
+  "result": "D:\\仿真建模资料\\2026年仿真建模挑战赛赛题\\A题\\outputs\\calibration\\demand_3312e2a52e0430a7\\result.json"
+}
+{"run_id": "8daa8f844e19a278", "unit_count": 7, "permit_event_count": 8, "blocked_for": ["precise_operating_capacity_initialization", "commercial_commissioning_and_retirement", "dispatch", "economic_life_extension_decision", "national_abm_calibration"]}
+{"total_measurements": 471, "scoped_reviewed_measurements": 112, "formal_input_check_passed": true}
+{"complete_rows_and_cells_single_source_tables": 3, "tables_missing_years": 3, "tables_with_mixed_sources": 3}
+

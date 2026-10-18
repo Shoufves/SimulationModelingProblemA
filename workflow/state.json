@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "updated_on": "2026-10-17",
+  "current_stage": "W2",
+  "completion_policy": "阶段完成需实质验收；文件存在只作结构检查，脚本不会自动完成阶段。依赖约束正式验收，允许提前开展独立准备工作。",
+  "stages": [
+    {
+      "id": "W0",
+      "title": "题目对齐及工作流",
+      "status": "done",
+      "depends_on": [],
+      "prompt": "prompts/01_alignment.md",
+      "evidence": [
+        "WORKFLOW.md",
+        "docs/06_alignment_review.md",
+        "workflow/requirements.json",
+        "scripts/workflow_status.py",
+        "tests/test_workflow.py"
+      ],
+      "acceptance": "目标覆盖、提示词、状态和证据检查工具齐全且验证通过。"
+    },
+    {
+      "id": "W1",
+      "title": "题给附件清洗与使用",
+      "status": "in_progress",
+      "depends_on": [
+        "W0"
+      ],
+      "prompt": "prompts/02_attachments.md",
+      "evidence": [
+        "scripts/build_attachments.py",
+        "data/processed/attachment_assets.json",
+        "data/attachment_reviews.json",
+        "outputs/attachments/report.md",
+        "docs/16_asset_lifecycle_case.md",
+        "outputs/asset_cases/index.md",
+        "outputs/data_review/review_assets_20261017.md"
+      ],
+      "acceptance": "四份附件标准表、原行定位、核查标记及用途映射齐全。"
+    },
+    {
+      "id": "W2",
+      "title": "官方数据补齐与核验",
+      "status": "in_progress",
+      "depends_on": [
+        "W0"
+      ],
+      "prompt": "prompts/03_official_data.md",
+      "evidence": [
+        "data/raw/official/S17_page_capture.txt",
+        "data/raw/official/S13_selected_capture.txt",
+        "data/raw/official/S22_selected_capture.txt",
+        "data/raw/official/S23_page_capture.txt",
+        "data/raw/official/S24_page_capture.txt",
+        "data/raw/official/S25_selected_capture.txt",
+        "data/raw/official/S01_demand_excerpt_20261017.txt",
+        "data/raw/official/S06_gdp_excerpt_20261017.txt",
+        "data/evidence_reviews.json",
+        "workflow/model_inputs.json",
+        "docs/08_statistical_boundaries.md",
+        "outputs/data_review/catalog.md",
+        "data/raw/official/S26_qinshan_permits_2017_capture.txt",
+        "data/raw/official/S27_qinshan_extension_2021_capture.txt",
+        "data/raw/official/S28_qinshan_design_life_capture.txt"
+      ],
+      "acceptance": "最低可用正式子集证据通过；核算边界与关键缺口有处置说明。"
+    },
+    {
+      "id": "W3",
+      "title": "现状定量评价",
+      "status": "in_progress",
+      "depends_on": [
+        "W1",
+        "W2"
+      ],
+      "prompt": "prompts/04_current_assessment.md",
+      "evidence": [
+        "outputs/current_assessment/electricity_2024_partial.md",
+        "outputs/current_assessment/energy_2024_partial.md",
+        "outputs/current_assessment/gas_2024_partial.md",
+        "outputs/current_assessment/four_dimensions_2024_partial.md",
+        "outputs/current_assessment/four_dimensions_2024.json",
+        "outputs/current_assessment/electricity_inputs_2024_partial.md",
+        "outputs/current_assessment/electricity_inputs_2024.json"
+      ],
+      "acceptance": "完成供给保障、低碳、经济性、协调性及综合结论。"
+    },
+    {
+      "id": "W4",
+      "title": "多智能体实现",
+      "status": "in_progress",
+      "depends_on": [
+        "W1",
+        "W2"
+      ],
+      "prompt": "prompts/05_agent_model.md",
+      "evidence": [
+        "docs/09_agent_prototype.md",
+        "examples/synthetic_agents.json",
+        "src/energy_model/agents.py",
+        "scripts/run_agent_prototype.py",
+        "tests/test_agents.py",
+        "outputs/prototype/report.md",
+        "outputs/data_review/history_readiness.md",
+        "docs/10_operation_windows.md",
+        "src/energy_model/operations.py",
+        "examples/synthetic_operation_windows.json",
+        "scripts/run_operation_windows.py",
+        "tests/test_operations.py",
+        "outputs/prototype/operations/report.md",
+        "docs/11_calibration_input_contract.md",
+        "docs/12_workbench.md",
+        "apps/workbench.py",
+        "src/energy_model/workbench.py",
+        "run_workbench.ps1",
+        "tests/test_workbench.py",
+        "tests/ui/test_workbench_app.py",
+        "outputs/data_review/review_workbench_20261017.md",
+        "docs/16_asset_lifecycle_case.md",
+        "src/energy_model/asset_lifecycle.py",
+        "scripts/run_asset_lifecycle_case.py",
+        "tests/test_asset_lifecycle.py",
+        "outputs/asset_cases/qinshan_8daa8f844e19a278/result.json",
+        "outputs/data_review/review_assets_20261017.md"
+      ],
+      "acceptance": "可运行主体决策、交互和约束验证闭环。",
+      "progress_note": "独立真实许可事件模块已连接附件3条厂记录与7台机组，尚未连接年度调度或自主经济决策；全国初态、成本和主体校准未验收。"
+    },
+    {
+      "id": "W5",
+      "title": "历史校准与验证",
+      "status": "in_progress",
+      "depends_on": [
+        "W4"
+      ],
+      "prompt": "prompts/06_calibration.md",
+      "evidence": [
+        "outputs/calibration/demand_94d020b761970170/result.json",
+        "outputs/calibration/demand_94d020b761970170/report.md",
+        "outputs/data_review/review_demand_minimal_20261017.md",
+        "outputs/calibration/demand_3312e2a52e0430a7/result.json",
+        "outputs/calibration/demand_3312e2a52e0430a7/report.md"
+      ],
+      "progress_note": "已完成限定真实总能源需求统计基线条件回算；全国ABM、多指标行为校准和机制对照仍未完成，W4依赖未验收，不宣称W5完成。",
+      "acceptance": "输入证据检查通过，多指标校准、历史检验与机制对照完成。"
+    },
+    {
+      "id": "W6",
+      "title": "基准及对比情景",
+      "status": "pending",
+      "depends_on": [
+        "W5"
+      ],
+      "prompt": "prompts/07_scenarios.md",
+      "evidence": [],
+      "acceptance": "全部2030/2060指标及至少三种对比情景、灵敏度和区间齐全。"
+    },
+    {
+      "id": "W7",
+      "title": "能源安全与优化",
+      "status": "pending",
+      "depends_on": [
+        "W6"
+      ],
+      "prompt": "prompts/08_security_optimization.md",
+      "evidence": [],
+      "acceptance": "安全框架、压力实验和约束下建议有结果支撑。"
+    },
+    {
+      "id": "W8",
+      "title": "论文视频复现包",
+      "status": "pending",
+      "depends_on": [
+        "W3",
+        "W7"
+      ],
+      "prompt": "prompts/09_deliverables.md",
+      "evidence": [],
+      "acceptance": "论文、实际<=180秒视频、源代码和原始资料及说明完成。"
+    },
+    {
+      "id": "W9",
+      "title": "最终审查",
+      "status": "pending",
+      "depends_on": [
+        "W8"
+      ],
+      "prompt": "prompts/10_final_review.md",
+      "evidence": [],
+      "acceptance": "所有必需要求均实质验收，提交材料检查通过。"
+    }
+  ]
+}

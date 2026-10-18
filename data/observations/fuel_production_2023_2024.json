@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1",
+  "source_id": "S16",
+  "locator": "表9-17，原煤、原油、天然气三行",
+  "region": "中国，全国",
+  "status": "official_table_manual_transcription_pending_independent_crosscheck",
+  "scope": "实物产量；原煤包括无烟煤、烟煤、褐煤，不包括石煤；原油包括天然原油和人造原油",
+  "columns": ["year", "raw_coal", "crude_oil", "natural_gas"],
+  "units": {"raw_coal": "亿吨", "crude_oil": "万吨", "natural_gas": "亿立方米"},
+  "rows": [
+    [2023, 47.23, 20902.61, 2324.30],
+    [2024, 47.81, 21289.09, 2464.51]
+  ],
+  "notes": [
+    "仅覆盖两年，尚未补齐十年供给序列。",
+    "原煤产量与平衡表的原煤生产量存在口径和修订差异，保留差异，不强制一致。",
+    "这些数据不提供热值，不能直接按固定一吨原煤等于一吨标准煤换算。"
+  ]
+}

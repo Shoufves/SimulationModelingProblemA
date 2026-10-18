@@ -1,0 +1,304 @@
+{
+  "date": "2026-10-17",
+  "records": 41,
+  "saved": 37,
+  "failed": 4,
+  "bytes": 46715011,
+  "checks": [
+    {
+      "id": "EIA_HORMUZ_2025",
+      "file": "international/raw/eia_hormuz_2025.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "EU_CBAM",
+      "file": "international/raw/eu_cbam.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "CN_DSM",
+      "file": "international/raw/cn_demand_response.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 12
+    },
+    {
+      "id": "US_LNG_STUDY",
+      "file": "international/raw/us_lng_study_response.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 55
+    },
+    {
+      "id": "US_LNG_SNAPSHOT",
+      "file": "international/raw/us_lng_snapshot_202512.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 2
+    },
+    {
+      "id": "EIA_LNG_2026",
+      "file": "international/raw/eia_lng_2026.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "IEA_REVIEW_2026",
+      "file": "international/raw/iea_review_2026.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 48
+    },
+    {
+      "id": "MOFCOM_CBAM",
+      "file": "international/raw/mofcom_cbam.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 33
+    },
+    {
+      "id": "EU_GAS_COMMISSION",
+      "file": "international/raw/eu_gas_commission.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "CN_STORAGE_ACTION",
+      "file": "international/raw/cn_storage_action.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 7
+    },
+    {
+      "id": "CN_ETS_ALLOCATION",
+      "file": "international/raw/cn_ets_allocation_2026.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 27
+    },
+    {
+      "id": "CN_ETS_ALLOCATION_NOTICE",
+      "file": "international/raw/cn_ets_notice.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "EIA_CHOKEPOINTS_2026",
+      "file": "international/raw/eia_chokepoints_2026.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "EIA_FIGURE_3",
+      "file": "international/raw/eia_chokepoints_F3.xlsx",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "sheets": [
+        "CrudeByOrigin_F3",
+        "CrudeByDestination_F3"
+      ]
+    },
+    {
+      "id": "EIA_FIGURE_5",
+      "file": "international/raw/eia_chokepoints_F5.xlsx",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "sheets": [
+        "CrudeByOrigin_F5",
+        "CrudeByDestination_F5"
+      ]
+    },
+    {
+      "id": "EIA_FIGURE_7",
+      "file": "international/raw/eia_chokepoints_F7.xlsx",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "sheets": [
+        "CrudeByOrigin_F7",
+        "CrudeByDestination_F7"
+      ]
+    },
+    {
+      "id": "EIA_FIGURE_9",
+      "file": "international/raw/eia_chokepoints_F9.xlsx",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "sheets": [
+        "CrudeByOrigin_F9",
+        "CrudeByDestination_F9"
+      ]
+    },
+    {
+      "id": "EIA_FIGURE_11",
+      "file": "international/raw/eia_chokepoints_F11.xlsx",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "sheets": [
+        "CrudeByOrigin_F11",
+        "CrudeByDestination_F11"
+      ]
+    },
+    {
+      "id": "EIA_FIGURE_14",
+      "file": "international/raw/eia_chokepoints_F14.xlsx",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "sheets": [
+        "CrudeByOrigin_F14",
+        "CrudeByDestination_F14"
+      ]
+    },
+    {
+      "id": "EIA_STEO_OCT2026_PAGE",
+      "file": "international/raw/eia_steo_oct2026.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "EIA_STEO_OCT2026_PDF",
+      "file": "international/raw/eia_steo_oct2026.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 60
+    },
+    {
+      "id": "EIA_STEO_OCT2026_DATA",
+      "file": "international/raw/eia_steo_oct2026.xlsx",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "sheets": [
+        "Dates",
+        "Contents",
+        "1tab",
+        "2tab",
+        "3atab",
+        "3btab",
+        "3ctab",
+        "3dtab",
+        "3etab",
+        "4atab",
+        "4btab",
+        "4ctab",
+        "4dtab",
+        "5atab",
+        "5btab",
+        "6tab",
+        "7atab",
+        "7btab",
+        "7ctab",
+        "7d(1)tab",
+        "7d(2)tab",
+        "7etab",
+        "8tab",
+        "9atab",
+        "9btab",
+        "9ctab",
+        "10atab",
+        "10btab"
+      ]
+    },
+    {
+      "id": "EIA_SECURITY_AUG2026",
+      "file": "international/raw/eia_security_aug2026.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "CN_DC_POLICY_2024",
+      "file": "ai_social/originals/cn_dc_green_plan_2024.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 7
+    },
+    {
+      "id": "CN_DC_POLICY_NOTICE",
+      "file": "ai_social/originals/cn_dc_green_notice_2024.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "CN_DC_2025_OBSERVATION",
+      "file": "ai_social/originals/ndrc_dc_2025_observation.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "CAICT_DC_DEFINITION",
+      "file": "ai_social/originals/caict_digital_infrastructure_2024.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 66
+    },
+    {
+      "id": "IEA_ENERGY_AI_2025",
+      "file": "ai_social/originals/iea_energy_ai_2025.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 304
+    },
+    {
+      "id": "IEA_ENERGY_AI_2026",
+      "file": "ai_social/originals/iea_key_questions_energy_ai_2026.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 138
+    },
+    {
+      "id": "NBS_HOUSEHOLD_2024",
+      "file": "ai_social/originals/nbs_household_2024.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "NBS_HOUSEHOLD_2025",
+      "file": "ai_social/originals/nbs_household_2025.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "NBS_QUINTILES_2024",
+      "file": "ai_social/originals/nbs_bulletin_2024.html",
+      "bytes_ok": true,
+      "sha256_ok": true
+    },
+    {
+      "id": "NBS_QUINTILES_2025",
+      "file": "ai_social/originals/nbs_bulletin_2025_newspaper.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 1
+    },
+    {
+      "id": "WB_CHINA_CCDR",
+      "file": "ai_social/originals/wb_china_ccdr_2022.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 125
+    },
+    {
+      "id": "WB_SHANXI_PID_2019",
+      "file": "ai_social/originals/wb_shanxi_pid_2019.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 16
+    },
+    {
+      "id": "WB_COAL_CLOSURE_2018",
+      "file": "ai_social/originals/wb_managing_coal_closure_2018.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 33
+    },
+    {
+      "id": "ILO_CHINA_RESTRUCTURING",
+      "file": "ai_social/originals/ilo_china_restructuring_2016.pdf",
+      "bytes_ok": true,
+      "sha256_ok": true,
+      "pdf_pages": 76
+    }
+  ],
+  "integrity_failures": [],
+  "duplicate_existing": []
+}

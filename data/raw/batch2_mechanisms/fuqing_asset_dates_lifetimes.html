@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../../../images/base_1.css" type="text/css" rel="stylesheet" />
+<link href="../../../images/er.css" type="text/css" rel="stylesheet" />
+<title>福清核电</title>
+<script src="../../../images/jquery-1_1.11.0.min.js" /></script>
+<script src="../../../images/index_1.js" /></script>
+<script>
+$(function(){
+	$('.m1').click(function(){
+		$('.ximain').css('font-size','18px');
+		return false;
+	})
+	$('.m2').click(function(){
+		$('.ximain').css('font-size','16px');
+		return false;
+	})
+	$('.m3').click(function(){
+		$('.ximain').css('font-size','14px');
+		return false;
+	})
+})
+</script>
+<style>
+  .ximain{width:810px;font-size:16px;}
+  .ximain p{text-indent:0em;}
+  .ximain img{display: inline-block;}
+</style>
+</head>
+<body>
+<script>
+function HTMLEncode(html) {
+     var temp = document.createElement("div");
+     (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
+     var output = temp.innerHTML;
+     temp = null;
+     return output;
+}
+function HTMLDecode(text) {
+     var temp = document.createElement("div");
+     temp.innerHTML = text;
+     var output = temp.innerText || temp.textContent;
+     temp = null;
+     return output;
+}
+function checkForm(){
+	$("#searchword").val($("#searchword").val().replace(/[\-\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\;\"\L\<\>\?]/g, ''));
+		$("#searchword").val($("#searchword").val().replace(/script/ig,''));
+		$("#searchword").val($("#searchword").val().replace(/iframe/ig,''));
+		$("#searchword").val($("#searchword").val().replace(/update/ig,''));
+		$("#searchword").val($("#searchword").val().replace(/alert/ig,''));	
+		$("#searchword").val(HTMLEncode($("#searchword").val()))
+	if($("#searchword").val()==""){
+		alert("请输入检索词");
+		return false;
+	}
+}
+</script>
+<div class='top1026'>
+	<div class='top1026_m'>
+		<form class='search' action='../../../jiansuo/' target='_blank' onSubmit="return checkForm();">
+			<input name='searchword' id="searchword" type='text' class='sear_inp' value='' autocomplete="off" />
+			<input type='submit' class='sear_sub' value='搜索' />
+			<div class='clear'></div>
+		</form>
+		<div class='top1_right_'>
+			<!--<a href="https://email.mee.gov.cn" target="_blank" ><img src="../../../images/xinxiang.png" /></a>-->
+			<form name="login" method="post" action="http://mail.ero.mee.gov.cn" target="_blank">
+<!--
+				<input name="F_email" type='text' class='user' value='' />
+				<input name="F_password" type='text' class='pass' value='' />
+				<input name="F_domain" type="hidden" class="box" id="input" value="ero.mee.gov.cn" size="16" />
+				<a href='#' class='wangji'></a>
+-->
+				<input type='submit' class='login' value='邮箱' style="cursor:pointer;" />
+				<div class='clear'></div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class='top'>
+	<div class='top1'>
+		<div class='top1_left' style="margin-top:40px;"><a href='../../../'><img src='../../../images/logo.png' /></a></div>
+		<div class='clear'></div>
+		<div class='nav' style="margin-top:50px;">
+			<ul>
+				<li class='ali'><a href='../../../' class='a n1'>首 页</a></li>
+				<li><a href='../../../dwgk/'  class='a n2'>单位概况</a>
+								</li>
+				<li><a href='../../../dtxx/'  class='a n3'>动态信息</a>
+								</li>
+				<li><a href='../../../fgbz/'  class='a n4'>法律法规</a>
+									</li>
+				<li><a href='../../../ywzq/'  class='a n5'>业务专区</a>
+								</li>
+				<li><a href='../../'  class='a n6'>公众宣传</a>
+									</li>
+				<li><a href='../../../dzjs/'  class='a n7'>党政建设</a>
+									</li>
+				<li style='margin-right:0px;width:89px; display:none;'><a href='../../../ztzl/' target="_blank" class='a n8'>专题专栏</a>
+								</li>
+                                <li><a href='../../../hdjl/'  class='a n18'>互动交流</a>
+				<div class='clear'></div>
+			</ul>
+		</div>
+	</div>
+</div>
+<style>
+.nav li{padding:0 19px;}
+.nav li a.n18{background:url(http://xndc.mee.gov.cn/images/n01_.png) no-repeat left center;}
+.nav li:hover a.n18 {
+    background: url(http://xndc.mee.gov.cn/images/n01.png) no-repeat left center;
+}
+</style>
+<div class='main'>
+	<div class='xi_main_t'>
+		<span class='right'>您当前的位置：<a href="../../../" target="_blank" title="首页" class="CurrChnlCls">首页</a>><a href="../../" target="_blank" title="公众宣传" class="CurrChnlCls">公众宣传</a>><a href="../" target="_blank" title="华东地区核设施分布图" class="CurrChnlCls">华东地区核设施分布图</a></span>
+	</div>
+	<div class='xi_main_t1'></div>
+	<div class='xi_main_t2'>
+		<h2 style="line-height:50px;padding-bottom:30px;">福清核电</h2>
+		<p class='tit'><span>发布日期：2015-12-29</span>
+                    <!--<span>访问次数：34</span>-->
+                    <span>信息来源：</span><span>字号：【<a href='#' class='m1'>   大</a><a href='#' class='m2'>   中</a><a href='#' class='m3'>   小</a>】</span></p>
+		<div class='ximain'>
+			<p><div class=TRS_Editor><div class="wz" style="font-size: 12px; text-decoration: none; font-family: 宋体, Helvetica, Arial, sans-serif; font-variant: normal; white-space: normal; word-spacing: 0px; text-transform: none; font-weight: 400; color: rgb(0,0,0); padding-bottom: 0px; font-style: normal; text-align: left; padding-top: 0px; padding-left: 0px; orphans: 2; margin: 0px; letter-spacing: normal; padding-right: 0px; text-indent: 0px; -webkit-text-stroke-width: 0px">
+<div class="TRS_Editor" style="padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; padding-right: 0px"><font style="line-height: 100%">
+<p class="MsoNormal" style="text-indent:32.1500pt;mso-char-indent-count:2.0000;"><b><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;mso-ansi-font-weight:bold;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">地址：</font></span></b><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">福建省福州福清市三山镇</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:32.1500pt;mso-char-indent-count:2.0000;"><b><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;mso-ansi-font-weight:bold;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">规模及现状：</font></span></b><b><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;mso-ansi-font-weight:bold;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="text-indent:32.0000pt;mso-char-indent-count:2.0000;"><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">福清核电共有</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;">6</span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">台运行核电机组，</font><font face="仿宋">1、2、3、4号机组采用二代改进型压水堆核电技术，设计寿命</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;">40</span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">年，单机发电功率</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;">108.9</span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">万千瓦；</font><font face="仿宋">5、6号机组是我国自主知识产权三代核电“华龙一号”全球首堆项目，设计寿命6</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;">0</span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">年，单机发电功率</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;">116.1</span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">万千瓦；</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:32.0000pt;mso-char-indent-count:2.0000;"><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">1号、2号、3号、4号、5号、6号机组分别于2008年11月21日、2009年6月17日、2010年12月31日、2012年11月17日、2015年5月7日、2015年12月22日开工建设，于2014年11月22日、2015年10月16日、201</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;">6</span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">年</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;">10</span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">月</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;">24</span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">日、</font><font face="仿宋">201</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;">7</span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">年</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;">9</span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><font face="仿宋">月</font><font face="仿宋">17日、2021年1月30日、2022年3月25日正式投入商业运行。</font></span><span style="mso-spacerun:'yes';font-family:仿宋;mso-bidi-font-family:'Times New Roman';&#10;font-size:16.0000pt;mso-font-kerning:1.0000pt;"><o:p></o:p></span></p>
+</font></div>
+</div></div></p>
+		</div>
+		<div class='ximain'>
+			<a href='' target="_blank">
+</a>
+		</div>
+	</div>
+	<div class='xi_main_t3'></div>
+</div>
+<style>
+.fixed .n3{width:29px;}
+.footer .select{margin-left:30px;}
+.select_h .select_ {height: 158px;overflow-y: auto;}
+#_ideConac {
+position: absolute;
+    left: 180px;
+    top: -85px;
+}
+#_span_jiucuo {
+position: absolute;
+    right: 150px;
+    top: -70px;
+}
+.footer p a:hover{
+	color: #2c658d;
+}
+</style>
+
+<script>
+$(function(){
+$('.footer .select_ a').click(function(){
+		var href=$(this).attr('href');
+		window.open(href);
+		$('.footer .select').removeClass('select_h');
+	})
+})
+</script>
+<div class='foot'>
+	<div class='footer'>
+		<div class="select" style='margin-left:0px;'>
+			环保系统
+			<div class="select_">
+                            
+				<a href="http://www.mee.gov.cn/">中华人民共和国生态环境部</a>
+		            
+				<a href="https://sthj.sh.gov.cn/">上海市生态环境局</a>
+		            
+				<a href="http://sthjt.jiangsu.gov.cn/">江苏省生态环境厅</a>
+		            
+				<a href="http://sthjt.zj.gov.cn/">浙江省生态环境厅</a>
+		            
+				<a href="http://sthjt.fujian.gov.cn/">福建省生态环境厅</a>
+		            
+				<a href="http://sthjt.jiangxi.gov.cn/">江西省生态环境厅</a>
+		            
+				<a href="https://sthjt.ah.gov.cn/">安徽省生态环境厅</a>
+		            
+				<a href="http://www.sdein.gov.cn/">山东省生态环境厅</a>
+		            
+			</div>
+		</div>
+		<div class="select">
+			核安全系统
+			<div class="select_">
+			    
+				<a href="http://nnsa.mee.gov.cn/">国家核安全局</a>
+		            
+				<a href="http://nro.mee.gov.cn/">生态环境部华北核与辐射安全监督站</a>
+		            
+				<a href="http://nro.mee.gov.cn/">生态环境部华南核与辐射安全监督站</a>
+		            
+				<a href="http://nro.mee.gov.cn/">生态环境部西南核与辐射安全监督站</a>
+		            
+				<a href="http://nro.mee.gov.cn/">生态环境部西北核与辐射安全监督站</a>
+		            
+				<a href="http://nro.mee.gov.cn/">生态环境部东北核与辐射安全监督站</a>
+		            
+				<a href="http://www.chinansc.cn/">生态环境部核与辐射安全中心</a>
+		            
+				<a href="http://nro.mee.gov.cn/">生态环境部国家海洋环境监测中心</a>
+		            
+				<a href="http://nro.mee.gov.cn/">生态环境部辐射环境监测技术中心</a>
+		            
+			</div>
+		</div>
+		<div class="select">
+			相关企业单位
+			<div class="select_">
+			    
+				<a href="http://www.cnnc.com.cn/">中国核工业集团公司</a>
+		            
+				<a href="http://www.cgnpc.com.cn/">中国广核集团有限公司</a>
+		            
+				<a href="http://www.spic.com.cn/">国家电力投资集团公司</a>
+		            
+				<a href="http://www.cnnp.com.cn/">中国核能电力股份有限公司</a>
+		            
+				<a href="http://www.sdnpc.com/">山东核电有限公司</a>
+		            
+				<a href="http://www.ndnp.com.cn/">福建宁德核电有限公司</a>
+		            
+			</div>
+		</div>
+		<div class='clear'></div>
+		<p class='mart30'>生态环境部华东核与辐射安全监督站      <a href='../../../lxwm/201511/t20151111_316832.html'style="color:#000">联系我们</a></p>
+		<p>通讯地址:上海市徐汇区漕宝路103号6号楼 邮编:200233 </p>
+		<p> ICP备案编号：京ICP备05009132号</p>
+		<p> 网站标识码: bm17000017</p>
+<p style="position: relative;"><span id="_ideConac"><img id="imgConac" src="/images/blue.png" data-bd-imgshare-binded="1" vspace="0" hspace="0" border="0" /></span><script id="_jiucuo_" sitecode='bm17000017' src='/images/jiucuo.js'></script></p>
+	</div>
+</div>
+<div class='fixed'>
+        <a href='http://www.mee.gov.cn' class='n1'>&nbsp&nbsp生态环境部</a>
+	<a href='http://nnsa.mee.gov.cn/' class='n2'>国家核安全局</a>
+	<a href='#' class='n3'>回到顶部</a>
+</div>
+<!--访问统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1af67b9195eba6f1c6619a2348b8a451";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

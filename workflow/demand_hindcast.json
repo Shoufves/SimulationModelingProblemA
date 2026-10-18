@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.1",
+  "scope": "总能源消费条件回算；复用已有四种统计基线，不等于全国ABM校准",
+  "energy_dataset": "data/observations/demand_energy_total_2015_2024.json",
+  "macro_dataset": "data/observations/demand_real_gdp_growth_2015_2024.json",
+  "required_source_ids": {"energy_dataset": "S01", "macro_dataset": "S06"},
+  "input_review_note": "2026-10-17改用同版、同数值的两个最小10值子集；审查见outputs/data_review/review_demand_minimal_20261017.md。原整表不自动准入，训练/评估设计与算法不变。",
+  "train_years": [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+  "evaluation_years": [2022, 2023, 2024],
+  "methods": ["constant_intensity", "energy_time_trend", "gdp_elasticity", "intensity_time_trend"],
+  "parameter_rule": "仅用训练期最小二乘斜率，锚定2021观测；不搜索参数、不按留出结果选择模型、不截断斜率",
+  "selection_rule": "四种方法全部报告；不指定事后最优方法",
+  "target": "total_energy_consumption",
+  "unit": "Mtce",
+  "exogenous": "同版实际GDP增长率链接指数2015=100；评估期使用已实现GDP",
+  "evaluation_status": "2022—2024已接触的留出评估；不是盲测",
+  "excluded": ["2025候选锚点", "部门替代", "全国CO2", "2030/2060外推", "政策因果效果"],
+  "limitation": "方案在已有探索性结果被查看后登记；用途是固定后续执行与追溯，不能声称前瞻预注册"
+}

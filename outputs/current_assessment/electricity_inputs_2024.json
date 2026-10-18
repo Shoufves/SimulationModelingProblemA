@@ -1,0 +1,710 @@
+{
+  "year": 2024,
+  "status": "scoped_annual_reference_inputs",
+  "demand": {
+    "total": {
+      "value": 9852.1,
+      "unit": "TWh",
+      "raw_value": 98521,
+      "raw_unit": "亿千瓦时",
+      "formula": "原值 × 0.1",
+      "input_ref": {
+        "dataset_path": "data/observations/electricity_demand_official_2024.json",
+        "source_id": "S24",
+        "field": "electricity_consumption_total",
+        "locator": "官方正文L10，2024全社会句"
+      },
+      "scope": "全社会全年用电量，不是终端有用能服务"
+    },
+    "sectors": [
+      {
+        "sector": "primary_industry",
+        "consumption": {
+          "value": 135.70000000000002,
+          "unit": "TWh",
+          "raw_value": 1357,
+          "raw_unit": "亿千瓦时",
+          "formula": "原值 × 0.1",
+          "input_ref": {
+            "dataset_path": "data/observations/electricity_demand_official_2024.json",
+            "source_id": "S24",
+            "field": "primary_industry_consumption",
+            "locator": "L10，第一产业句"
+          },
+          "scope": "第一产业全年用电量"
+        },
+        "share_pct": 1.377371321850164,
+        "share_formula": "该类同版年度用电量 / 同版全社会年度用电量 × 100",
+        "growth": {
+          "value": 6.3,
+          "unit": "%",
+          "raw_value": 6.3,
+          "raw_unit": "%",
+          "formula": "原值 × 1",
+          "input_ref": {
+            "dataset_path": "data/observations/electricity_demand_official_2024.json",
+            "source_id": "S24",
+            "field": "primary_industry_growth_pct",
+            "locator": "L10，第一产业句"
+          },
+          "scope": "第一产业用电同比"
+        }
+      },
+      {
+        "sector": "secondary_industry",
+        "consumption": {
+          "value": 6387.400000000001,
+          "unit": "TWh",
+          "raw_value": 63874,
+          "raw_unit": "亿千瓦时",
+          "formula": "原值 × 0.1",
+          "input_ref": {
+            "dataset_path": "data/observations/electricity_demand_official_2024.json",
+            "source_id": "S24",
+            "field": "secondary_industry_consumption",
+            "locator": "L10，第二产业句"
+          },
+          "scope": "第二产业全年用电；不等于纯制造业"
+        },
+        "share_pct": 64.83287826960749,
+        "share_formula": "该类同版年度用电量 / 同版全社会年度用电量 × 100",
+        "growth": {
+          "value": 5.1,
+          "unit": "%",
+          "raw_value": 5.1,
+          "raw_unit": "%",
+          "formula": "原值 × 1",
+          "input_ref": {
+            "dataset_path": "data/observations/electricity_demand_official_2024.json",
+            "source_id": "S24",
+            "field": "secondary_industry_growth_pct",
+            "locator": "L10，第二产业句"
+          },
+          "scope": "第二产业用电同比"
+        }
+      },
+      {
+        "sector": "tertiary_industry",
+        "consumption": {
+          "value": 1834.8000000000002,
+          "unit": "TWh",
+          "raw_value": 18348,
+          "raw_unit": "亿千瓦时",
+          "formula": "原值 × 0.1",
+          "input_ref": {
+            "dataset_path": "data/observations/electricity_demand_official_2024.json",
+            "source_id": "S24",
+            "field": "tertiary_industry_consumption",
+            "locator": "L10，第三产业句"
+          },
+          "scope": "第三产业全年用电"
+        },
+        "share_pct": 18.623440687772153,
+        "share_formula": "该类同版年度用电量 / 同版全社会年度用电量 × 100",
+        "growth": {
+          "value": 9.9,
+          "unit": "%",
+          "raw_value": 9.9,
+          "raw_unit": "%",
+          "formula": "原值 × 1",
+          "input_ref": {
+            "dataset_path": "data/observations/electricity_demand_official_2024.json",
+            "source_id": "S24",
+            "field": "tertiary_industry_growth_pct",
+            "locator": "L10，第三产业句"
+          },
+          "scope": "第三产业用电同比"
+        }
+      },
+      {
+        "sector": "household",
+        "consumption": {
+          "value": 1494.2,
+          "unit": "TWh",
+          "raw_value": 14942,
+          "raw_unit": "亿千瓦时",
+          "formula": "原值 × 0.1",
+          "input_ref": {
+            "dataset_path": "data/observations/electricity_demand_official_2024.json",
+            "source_id": "S24",
+            "field": "household_consumption",
+            "locator": "L10，城乡居民句"
+          },
+          "scope": "城乡居民生活全年用电；不是全部建筑用电"
+        },
+        "share_pct": 15.16630972077019,
+        "share_formula": "该类同版年度用电量 / 同版全社会年度用电量 × 100",
+        "growth": {
+          "value": 10.6,
+          "unit": "%",
+          "raw_value": 10.6,
+          "raw_unit": "%",
+          "formula": "原值 × 1",
+          "input_ref": {
+            "dataset_path": "data/observations/electricity_demand_official_2024.json",
+            "source_id": "S24",
+            "field": "household_growth_pct",
+            "locator": "L10，城乡居民句"
+          },
+          "scope": "城乡居民生活用电同比"
+        }
+      }
+    ],
+    "growth": {
+      "value": 6.8,
+      "unit": "%",
+      "raw_value": 6.8,
+      "raw_unit": "%",
+      "formula": "原值 × 1",
+      "input_ref": {
+        "dataset_path": "data/observations/electricity_demand_official_2024.json",
+        "source_id": "S24",
+        "field": "electricity_consumption_growth_pct",
+        "locator": "L10，2024全社会句"
+      },
+      "scope": "全社会用电同比"
+    },
+    "closure_residual_twh": 0.0
+  },
+  "separate_industrial_generation_reference": {
+    "value": 9418.1,
+    "unit": "TWh",
+    "raw_value": 94181,
+    "raw_unit": "亿千瓦时",
+    "formula": "原值 × 0.1",
+    "input_ref": {
+      "dataset_path": "data/observations/electricity_demand_official_2024.json",
+      "source_id": "S24",
+      "field": "generation_industrial_above_designated_size",
+      "locator": "L10，规模以上工业句"
+    },
+    "scope": "规模以上工业发电量；不是全国全口径或第二产业用电量"
+  },
+  "renewable_reference": {
+    "renewable_capacity_total": {
+      "value": 1889.0,
+      "unit": "GW",
+      "raw_value": 18.89,
+      "raw_unit": "亿千瓦",
+      "formula": "原值 × 100",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "renewable_capacity_total",
+        "locator": "L10 总述年末容量"
+      },
+      "scope": "可再生能源发电装机，不含核电；不等于非化石全部装机"
+    },
+    "renewable_generation_total": {
+      "value": 3460.0,
+      "unit": "TWh",
+      "raw_value": 3.46,
+      "raw_unit": "万亿千瓦时",
+      "formula": "原值 × 1000",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "renewable_generation_total",
+        "locator": "L11 总述年度发电"
+      },
+      "scope": "可再生能源年度发电，公布值精度较粗"
+    },
+    "hydro_capacity_total": {
+      "value": 436.00000000000006,
+      "unit": "GW",
+      "raw_value": 4.36,
+      "raw_unit": "亿千瓦",
+      "formula": "原值 × 100",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "hydro_capacity_total",
+        "locator": "L13 （一）水电累计装机"
+      },
+      "scope": "总水电包含常规与抽蓄，不能再加一次抽蓄"
+    },
+    "conventional_hydro_capacity": {
+      "value": 377.0,
+      "unit": "GW",
+      "raw_value": 3.77,
+      "raw_unit": "亿千瓦",
+      "formula": "原值 × 100",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "conventional_hydro_capacity",
+        "locator": "L13 （一）常规水电"
+      },
+      "scope": "常规水电年末容量，保留公布精度"
+    },
+    "pumped_storage_capacity": {
+      "value": 58.69,
+      "unit": "GW",
+      "raw_value": 5869,
+      "raw_unit": "万千瓦",
+      "formula": "原值 × 0.01",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "pumped_storage_capacity",
+        "locator": "L13 （一）抽水蓄能"
+      },
+      "scope": "年末抽蓄功率，不是能量容量或有效可用容量"
+    },
+    "hydro_generation": {
+      "value": 1423.9,
+      "unit": "TWh",
+      "raw_value": 14239,
+      "raw_unit": "亿千瓦时",
+      "formula": "原值 × 0.1",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "hydro_generation",
+        "locator": "L15 （一）全年发电"
+      },
+      "scope": "本发布版本水电发电；抽蓄电量分项未知"
+    },
+    "wind_capacity": {
+      "value": 521.0,
+      "unit": "GW",
+      "raw_value": 5.21,
+      "raw_unit": "亿千瓦",
+      "formula": "原值 × 100",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "wind_capacity",
+        "locator": "L18 （二）风电累计并网"
+      },
+      "scope": "年末风电累计并网容量"
+    },
+    "wind_generation": {
+      "value": 991.6,
+      "unit": "TWh",
+      "raw_value": 9916,
+      "raw_unit": "亿千瓦时",
+      "formula": "原值 × 0.1",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "wind_generation",
+        "locator": "L20 （二）全年风电"
+      },
+      "scope": "本发布版本全年风电发电量"
+    },
+    "wind_utilization_pct": {
+      "value": 95.9,
+      "unit": "%",
+      "raw_value": 95.9,
+      "raw_unit": "%",
+      "formula": "原值 × 1",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "wind_utilization_pct",
+        "locator": "L20 （二）平均利用率"
+      },
+      "scope": "原文全国风电平均利用率，不是容量因子"
+    },
+    "solar_capacity_summary": {
+      "value": 886.9999999999999,
+      "unit": "GW",
+      "raw_value": 8.87,
+      "raw_unit": "亿千瓦",
+      "formula": "原值 × 100",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "solar_capacity_summary",
+        "locator": "L10 总述太阳能发电装机"
+      },
+      "scope": "太阳能总述指标；与光伏专段不自动认定同一技术边界"
+    },
+    "pv_capacity_detailed": {
+      "value": 886.0,
+      "unit": "GW",
+      "raw_value": 8.86,
+      "raw_unit": "亿千瓦",
+      "formula": "原值 × 100",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "pv_capacity_detailed",
+        "locator": "L24 （三）光伏装机"
+      },
+      "scope": "光伏专段年末装机；保留与总述太阳能的表述差异"
+    },
+    "pv_generation": {
+      "value": 834.1,
+      "unit": "TWh",
+      "raw_value": 8341,
+      "raw_unit": "亿千瓦时",
+      "formula": "原值 × 0.1",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "pv_generation",
+        "locator": "L26 （三）全年光伏"
+      },
+      "scope": "本发布版本光伏发电量；不能直接覆盖S13太阳能发电"
+    },
+    "pv_utilization_pct": {
+      "value": 96.8,
+      "unit": "%",
+      "raw_value": 96.8,
+      "raw_unit": "%",
+      "formula": "原值 × 1",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "pv_utilization_pct",
+        "locator": "L26 （三）光伏利用率"
+      },
+      "scope": "原文全国光伏发电利用率，不是容量因子"
+    },
+    "biomass_capacity": {
+      "value": 45.99,
+      "unit": "GW",
+      "raw_value": 4599,
+      "raw_unit": "万千瓦",
+      "formula": "原值 × 0.01",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "biomass_capacity",
+        "locator": "L28 （四）生物质年末装机"
+      },
+      "scope": "生物质发电装机；与其他表火电分类可能交叉，不另加到全国总量"
+    },
+    "biomass_generation": {
+      "value": 208.3,
+      "unit": "TWh",
+      "raw_value": 2083,
+      "raw_unit": "亿千瓦时",
+      "formula": "原值 × 0.1",
+      "input_ref": {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "source_id": "S25",
+        "field": "biomass_generation",
+        "locator": "L28 （四）生物质全年发电"
+      },
+      "scope": "生物质发电量；不等于零碳发电量"
+    }
+  },
+  "version_comparisons": [
+    {
+      "label": "水电",
+      "unit": "GW",
+      "left": {
+        "source_id": "S17",
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "field": "hydro",
+        "value": 435.95
+      },
+      "right": {
+        "value": 436.00000000000006,
+        "unit": "GW",
+        "raw_value": 4.36,
+        "raw_unit": "亿千瓦",
+        "formula": "原值 × 100",
+        "input_ref": {
+          "dataset_path": "data/observations/renewable_operation_official_2024.json",
+          "source_id": "S25",
+          "field": "hydro_capacity_total",
+          "locator": "L13 （一）水电累计装机"
+        },
+        "scope": "总水电包含常规与抽蓄，不能再加一次抽蓄"
+      },
+      "right_minus_left": 0.05000000000006821,
+      "compatibility": "release_bridge_pending"
+    },
+    {
+      "label": "风电",
+      "unit": "GW",
+      "left": {
+        "source_id": "S17",
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "field": "wind",
+        "value": 520.68
+      },
+      "right": {
+        "value": 521.0,
+        "unit": "GW",
+        "raw_value": 5.21,
+        "raw_unit": "亿千瓦",
+        "formula": "原值 × 100",
+        "input_ref": {
+          "dataset_path": "data/observations/renewable_operation_official_2024.json",
+          "source_id": "S25",
+          "field": "wind_capacity",
+          "locator": "L18 （二）风电累计并网"
+        },
+        "scope": "年末风电累计并网容量"
+      },
+      "right_minus_left": 0.32000000000005,
+      "compatibility": "release_bridge_pending"
+    },
+    {
+      "label": "太阳能总述",
+      "unit": "GW",
+      "left": {
+        "source_id": "S17",
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "field": "solar",
+        "value": 886.66
+      },
+      "right": {
+        "value": 886.9999999999999,
+        "unit": "GW",
+        "raw_value": 8.87,
+        "raw_unit": "亿千瓦",
+        "formula": "原值 × 100",
+        "input_ref": {
+          "dataset_path": "data/observations/renewable_operation_official_2024.json",
+          "source_id": "S25",
+          "field": "solar_capacity_summary",
+          "locator": "L10 总述太阳能发电装机"
+        },
+        "scope": "太阳能总述指标；与光伏专段不自动认定同一技术边界"
+      },
+      "right_minus_left": 0.33999999999991815,
+      "compatibility": "release_bridge_pending"
+    },
+    {
+      "label": "太阳能/光伏专段",
+      "unit": "GW",
+      "left": {
+        "source_id": "S17",
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "field": "solar",
+        "value": 886.66
+      },
+      "right": {
+        "value": 886.0,
+        "unit": "GW",
+        "raw_value": 8.86,
+        "raw_unit": "亿千瓦",
+        "formula": "原值 × 100",
+        "input_ref": {
+          "dataset_path": "data/observations/renewable_operation_official_2024.json",
+          "source_id": "S25",
+          "field": "pv_capacity_detailed",
+          "locator": "L24 （三）光伏装机"
+        },
+        "scope": "光伏专段年末装机；保留与总述太阳能的表述差异"
+      },
+      "right_minus_left": -0.6599999999999682,
+      "compatibility": "category_bridge_pending"
+    },
+    {
+      "label": "水电发电",
+      "unit": "TWh",
+      "left": {
+        "source_id": "S13",
+        "dataset_path": "data/observations/energy_official_communique_2024.json",
+        "field": "generation_hydro",
+        "value": 1425.68
+      },
+      "right": {
+        "value": 1423.9,
+        "unit": "TWh",
+        "raw_value": 14239,
+        "raw_unit": "亿千瓦时",
+        "formula": "原值 × 0.1",
+        "input_ref": {
+          "dataset_path": "data/observations/renewable_operation_official_2024.json",
+          "source_id": "S25",
+          "field": "hydro_generation",
+          "locator": "L15 （一）全年发电"
+        },
+        "scope": "本发布版本水电发电；抽蓄电量分项未知"
+      },
+      "right_minus_left": -1.7799999999999727,
+      "compatibility": "release_bridge_pending"
+    },
+    {
+      "label": "风电发电",
+      "unit": "TWh",
+      "left": {
+        "source_id": "S13",
+        "dataset_path": "data/observations/energy_official_communique_2024.json",
+        "field": "generation_wind",
+        "value": 997.04
+      },
+      "right": {
+        "value": 991.6,
+        "unit": "TWh",
+        "raw_value": 9916,
+        "raw_unit": "亿千瓦时",
+        "formula": "原值 × 0.1",
+        "input_ref": {
+          "dataset_path": "data/observations/renewable_operation_official_2024.json",
+          "source_id": "S25",
+          "field": "wind_generation",
+          "locator": "L20 （二）全年风电"
+        },
+        "scope": "本发布版本全年风电发电量"
+      },
+      "right_minus_left": -5.439999999999941,
+      "compatibility": "release_bridge_pending"
+    },
+    {
+      "label": "太阳能/光伏发电",
+      "unit": "TWh",
+      "left": {
+        "source_id": "S13",
+        "dataset_path": "data/observations/energy_official_communique_2024.json",
+        "field": "generation_solar",
+        "value": 839.04
+      },
+      "right": {
+        "value": 834.1,
+        "unit": "TWh",
+        "raw_value": 8341,
+        "raw_unit": "亿千瓦时",
+        "formula": "原值 × 0.1",
+        "input_ref": {
+          "dataset_path": "data/observations/renewable_operation_official_2024.json",
+          "source_id": "S25",
+          "field": "pv_generation",
+          "locator": "L26 （三）全年光伏"
+        },
+        "scope": "本发布版本光伏发电量；不能直接覆盖S13太阳能发电"
+      },
+      "right_minus_left": -4.939999999999941,
+      "compatibility": "category_bridge_pending"
+    }
+  ],
+  "demand_growth_comparison": {
+    "s24_pct": 6.8,
+    "s13_pct": 6.8,
+    "interpretation": "相同字段一致不证明其他统计范围和历史序列一致"
+  },
+  "unknowns": {
+    "hourly_load_mw": null,
+    "pumped_storage_energy_gwh": null,
+    "pumped_storage_duration_h": null,
+    "biomass_co2_factor": null,
+    "biomass_emissions": null,
+    "capacity_factors": null,
+    "curtailed_energy_twh": null,
+    "national_supply_demand_gap_twh": null
+  },
+  "ready_for": [
+    "2024四类年度用电规模与份额参考",
+    "独立版本技术容量和发电描述",
+    "抽蓄功率、生物质技术规模参考",
+    "风光利用率观测及版本诊断"
+  ],
+  "blocked_for": [
+    "逐时负荷及缺供评价",
+    "全国资产与部门设备完整初始化",
+    "抽蓄能量与连续运行参数",
+    "生物质排放核算",
+    "2015—2024历史拟合及行为识别",
+    "2030/2060预测"
+  ],
+  "rules": [
+    "规模以上工业发电量不与全社会用电量相减求缺供。",
+    "利用率不是容量因子；年末装机不充当全年平均装机。",
+    "水电含抽蓄，不再重复加抽蓄；不跨精度强配平。",
+    "生物质不默认零排放，不加回S17全国总量或从S13火电擅自拆出。",
+    "太阳能总述和光伏专段分列；版本差额不归为光热或统计修订。",
+    "第二产业不等于制造业，居民生活不等于全部建筑；年度份额不冒充小时曲线。"
+  ],
+  "provenance": {
+    "accepted_bindings": [
+      {
+        "dataset_path": "data/observations/electricity_demand_official_2024.json",
+        "review_id": "R-S24-20261017",
+        "source_ids": [
+          "S24"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "review_id": "R-S25-20261017",
+        "source_ids": [
+          "S25"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/energy_official_communique_2024.json",
+        "review_id": "R-S13-20261017",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "review_id": "R-S17-20261016",
+        "source_ids": [
+          "S17"
+        ]
+      }
+    ],
+    "evidence_files": [
+      {
+        "source_id": "S17",
+        "path": "data/raw/official/S17_page_capture.txt",
+        "sha256": "160fd1ffe6021dcc42484216a8fbea09ad9108bcea66f137dc41f0a3fdab3163",
+        "official_url": "https://www.nea.gov.cn/20250121/097bfd7c1cd3498897639857d86d5dac/c.html",
+        "capture_kind": "official_page_capture",
+        "locator": "全部26行可见文本，表格L14—L23，脚注L25，统计时点L10",
+        "captured_on": "2026-10-16",
+        "scope_and_units": "2024全国；容量年末万千瓦；线损%；6000千瓦及以上电厂利用小时；投资亿元",
+        "revision_note": "与S05年鉴既有转录不同，两个版本分开保存；不跨版本校准",
+        "extraction_method": "直接open官方页面的全文文本留存；人工逐行录入全年累计列并重开原页核对"
+      },
+      {
+        "source_id": "S13",
+        "path": "data/raw/official/S13_selected_capture.txt",
+        "sha256": "fdcf2c563d51bdfe1135b2f2a3e88d87d2ada2c66acfaa6e075cf8fa15f88e98",
+        "official_url": "https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202502/t20250228_1958817.html",
+        "capture_kind": "official_page_capture",
+        "locator": "一L32、109；三L189及表4能源行L193—203；表12能源进口行L419—422；十二L611；注1、2、21、25、26、87、88、89",
+        "captured_on": "2026-10-17",
+        "scope_and_units": "2024全国不含港澳台初步数；GDP现价亿元、增长不变价；产量/进口保留吨与立方米单位；能耗亿吨标煤；发电亿千瓦时；碳配额亿吨及亿元",
+        "revision_note": "注25明确煤炭洗选固废调整及可比增速；注2明确GDP历史修订；各自独立公报版本，不桥接旧年鉴",
+        "extraction_method": "直接open官方页面，分段读取正文、表头和脚注；人工留存所用段落摘录，不声称保存全文HTML或图表图片"
+      },
+      {
+        "source_id": "S24",
+        "path": "data/raw/official/S24_page_capture.txt",
+        "sha256": "e07931550e610bab31ea3d82934c22fa4e60637f477ad30783726a75a8c8fb9a",
+        "official_url": "https://www.nea.gov.cn/20250120/4f7f249bac714e7693adecac996d742f/c.html",
+        "capture_kind": "official_page_capture",
+        "locator": "正文L10完整统计段，标题L4、日期与来源L6、引言L8",
+        "captured_on": "2026-10-17",
+        "scope_and_units": "2024全国全年；总量及四类用电量、规模以上工业发电量单位亿千瓦时，同比%",
+        "revision_note": "总用电同比与S13相同、两需求分项与S25相同；不据一致字段认定全表范围一致",
+        "extraction_method": "直接open官方网页，完整相关统计正文及元数据文本留存，再次重开逐值核对；非原HTML、非截图、非搜索摘要"
+      },
+      {
+        "source_id": "S25",
+        "path": "data/raw/official/S25_selected_capture.txt",
+        "sha256": "5092f8d6083287214961de9c402abc8c9a77aee318c9b22a78b55f078ecba679",
+        "official_url": "https://www.nea.gov.cn/20250221/e10f363cabe3458aaf78ba4558970054/c.html",
+        "capture_kind": "official_page_capture",
+        "locator": "总述L10/11；水电L13/15、风电L18/20、光伏L24/26、生物质L28；日期L6",
+        "captured_on": "2026-10-17",
+        "scope_and_units": "2024全国，容量年末亿千瓦/万千瓦；年度发电万亿千瓦时/亿千瓦时；利用率%",
+        "revision_note": "页面日期2025-01-27；太阳能8.87与光伏8.86分列；S13/S17不同值和范围各自保留，差异原因未确定",
+        "extraction_method": "直接open官方网页完整统计正文后逐值字段化留存并重读核对；非完整HTML或截图；不把利用率转成容量因子"
+      }
+    ],
+    "sha256": {
+      "data/evidence_reviews.json": "6043473c2192dc4c91d47c521bea5adb15b0b07197ad6c421b9216a6f207f376",
+      "data/observations/electricity_demand_official_2024.json": "145522816e8d23c8f96356875d3886186cf0f04ba2724f82b3f554f4c5a26f34",
+      "data/observations/energy_official_communique_2024.json": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+      "data/observations/power_official_release_2024.json": "c4ad62a266a5136d9d8a76dc795bfd2140c90f16e26007a5e672a22207a3b90c",
+      "data/observations/renewable_operation_official_2024.json": "f59303c667f0529820da3ecd3bb5386445eb5a248051325681641626aacfcb55",
+      "data/sources.json": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f",
+      "scripts/build_electricity_inputs.py": "cc57344dbdd50e64239fed3fca14e4c47a543466cede4df08de570aa020182f1",
+      "scripts/build_gas_assessment.py": "bd29420692622f30d0066b6840053126e59a0b0e686ca08741c59f393eeb602f",
+      "scripts/workflow_status.py": "0a948df02f7a11e2f8f7afef0be49c1eeac44a9e9371bf2a3fc4300ed7046e9e",
+      "workflow/model_inputs.json": "adcdca7ed33dc4048761a220c7a00b6585733117321ed1ce8571dd521c0520b0"
+    }
+  }
+}

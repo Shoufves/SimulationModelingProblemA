@@ -1,0 +1,578 @@
+{
+  "scope": "总能源消费条件回算；复用已有四种统计基线，不等于全国ABM校准",
+  "evaluation_status": "2022—2024已接触的留出评估；不是盲测",
+  "configuration": {
+    "schema_version": "1.1",
+    "scope": "总能源消费条件回算；复用已有四种统计基线，不等于全国ABM校准",
+    "energy_dataset": "data/observations/demand_energy_total_2015_2024.json",
+    "macro_dataset": "data/observations/demand_real_gdp_growth_2015_2024.json",
+    "required_source_ids": {
+      "energy_dataset": "S01",
+      "macro_dataset": "S06"
+    },
+    "input_review_note": "2026-10-17改用同版、同数值的两个最小10值子集；审查见outputs/data_review/review_demand_minimal_20261017.md。原整表不自动准入，训练/评估设计与算法不变。",
+    "train_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "evaluation_years": [
+      2022,
+      2023,
+      2024
+    ],
+    "methods": [
+      "constant_intensity",
+      "energy_time_trend",
+      "gdp_elasticity",
+      "intensity_time_trend"
+    ],
+    "parameter_rule": "仅用训练期最小二乘斜率，锚定2021观测；不搜索参数、不按留出结果选择模型、不截断斜率",
+    "selection_rule": "四种方法全部报告；不指定事后最优方法",
+    "target": "total_energy_consumption",
+    "unit": "Mtce",
+    "exogenous": "同版实际GDP增长率链接指数2015=100；评估期使用已实现GDP",
+    "evaluation_status": "2022—2024已接触的留出评估；不是盲测",
+    "excluded": [
+      "2025候选锚点",
+      "部门替代",
+      "全国CO2",
+      "2030/2060外推",
+      "政策因果效果"
+    ],
+    "limitation": "方案在已有探索性结果被查看后登记；用途是固定后续执行与追溯，不能声称前瞻预注册"
+  },
+  "historical_indices": [
+    {
+      "year": 2015,
+      "energy_mtce": 4341.13,
+      "energy_index_2015": 100.0,
+      "real_gdp_index_2015": 100.0,
+      "energy_intensity_index_2015": 100.0,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2016,
+      "energy_mtce": 4414.92,
+      "energy_index_2015": 101.6997878432574,
+      "real_gdp_index_2015": 106.80000000000001,
+      "energy_intensity_index_2015": 95.22452045248819,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2017,
+      "energy_mtce": 4558.27,
+      "energy_index_2015": 105.00192346232433,
+      "real_gdp_index_2015": 114.1692,
+      "energy_intensity_index_2015": 91.97044690014849,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2018,
+      "energy_mtce": 4719.25,
+      "energy_index_2015": 108.71017453980876,
+      "real_gdp_index_2015": 121.9327056,
+      "energy_intensity_index_2015": 89.15587824027482,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2019,
+      "energy_mtce": 4855.84,
+      "energy_index_2015": 111.8565903347746,
+      "real_gdp_index_2015": 129.3706006416,
+      "energy_intensity_index_2015": 86.46214037813344,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2020,
+      "energy_mtce": 4965.14,
+      "energy_index_2015": 114.37436796410152,
+      "real_gdp_index_2015": 132.3461244563568,
+      "energy_intensity_index_2015": 86.42064014637486,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2021,
+      "energy_mtce": 5250.27,
+      "energy_index_2015": 120.94247350344264,
+      "real_gdp_index_2015": 143.72789115960347,
+      "energy_intensity_index_2015": 84.1468364474515,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2022,
+      "energy_mtce": 5412.74,
+      "energy_index_2015": 124.68504744156475,
+      "real_gdp_index_2015": 148.18345578555116,
+      "energy_intensity_index_2015": 84.14235366599024,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2023,
+      "energy_mtce": 5713.27,
+      "energy_index_2015": 131.6078993257516,
+      "real_gdp_index_2015": 156.18536239797092,
+      "energy_intensity_index_2015": 84.26391391941436,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2024,
+      "energy_mtce": 5960.0,
+      "energy_index_2015": 137.2914425506723,
+      "real_gdp_index_2015": 163.99463051786947,
+      "energy_intensity_index_2015": 83.71703519629108,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    }
+  ],
+  "fitted": {
+    "train_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "anchor_year": 2021,
+    "anchor_energy_mtce": 5250.27,
+    "anchor_real_gdp_index": 143.72789115960347,
+    "energy_log_trend": 0.031020605817092445,
+    "gdp_elasticity": 0.5249945959566769,
+    "intensity_log_trend": -0.027628682833990417,
+    "method": "Fit slopes on training only; anchor all paths at final training observation"
+  },
+  "training_rows": [
+    {
+      "year": 2015,
+      "actual_energy_mtce": 4341.13,
+      "predictions_mtce": {
+        "constant_intensity": 3652.923561071252,
+        "energy_time_trend": 4358.621636451075,
+        "gdp_elasticity": 4339.837181093761,
+        "intensity_time_trend": 4311.560569301245
+      },
+      "errors": {
+        "constant_intensity": {
+          "signed_mtce": -688.206438928748,
+          "absolute_mtce": 688.206438928748,
+          "absolute_pct": 15.853163552548482
+        },
+        "energy_time_trend": {
+          "signed_mtce": 17.491636451074555,
+          "absolute_mtce": 17.491636451074555,
+          "absolute_pct": 0.4029281880771724
+        },
+        "gdp_elasticity": {
+          "signed_mtce": -1.2928189062395177,
+          "absolute_mtce": 1.2928189062395177,
+          "absolute_pct": 0.029780700099732504
+        },
+        "intensity_time_trend": {
+          "signed_mtce": -29.56943069875524,
+          "absolute_mtce": 29.56943069875524,
+          "absolute_pct": 0.6811459389319195
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "actual_energy_mtce": 4414.92,
+      "predictions_mtce": {
+        "constant_intensity": 3901.3223632240974,
+        "energy_time_trend": 4495.947676646436,
+        "gdp_elasticity": 4492.345910425616,
+        "intensity_time_trend": 4479.265030733803
+      },
+      "errors": {
+        "constant_intensity": {
+          "signed_mtce": -513.5976367759026,
+          "absolute_mtce": 513.5976367759026,
+          "absolute_pct": 11.633226350101534
+        },
+        "energy_time_trend": {
+          "signed_mtce": 81.0276766464358,
+          "absolute_mtce": 81.0276766464358,
+          "absolute_pct": 1.8353147202313018
+        },
+        "gdp_elasticity": {
+          "signed_mtce": 77.42591042561617,
+          "absolute_mtce": 77.42591042561617,
+          "absolute_pct": 1.7537330331153491
+        },
+        "intensity_time_trend": {
+          "signed_mtce": 64.34503073380256,
+          "absolute_mtce": 64.34503073380256,
+          "absolute_pct": 1.4574449986365
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "actual_energy_mtce": 4558.27,
+      "predictions_mtce": {
+        "constant_intensity": 4170.51360628656,
+        "energy_time_trend": 4637.60041525444,
+        "gdp_elasticity": 4652.499425439889,
+        "intensity_time_trend": 4657.849805562208
+      },
+      "errors": {
+        "constant_intensity": {
+          "signed_mtce": -387.75639371344005,
+          "absolute_mtce": 387.75639371344005,
+          "absolute_pct": 8.5066569929697
+        },
+        "energy_time_trend": {
+          "signed_mtce": 79.33041525443969,
+          "absolute_mtce": 79.33041525443969,
+          "absolute_pct": 1.7403623579656247
+        },
+        "gdp_elasticity": {
+          "signed_mtce": 94.22942543988847,
+          "absolute_mtce": 94.22942543988847,
+          "absolute_pct": 2.067219042309658
+        },
+        "intensity_time_trend": {
+          "signed_mtce": 99.57980556220718,
+          "absolute_mtce": 99.57980556220718,
+          "absolute_pct": 2.1845964710780006
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "actual_energy_mtce": 4719.25,
+      "predictions_mtce": {
+        "constant_intensity": 4454.108531514046,
+        "energy_time_trend": 4783.716172517971,
+        "gdp_elasticity": 4815.995599601011,
+        "intensity_time_trend": 4839.023693884075
+      },
+      "errors": {
+        "constant_intensity": {
+          "signed_mtce": -265.14146848595374,
+          "absolute_mtce": 265.14146848595374,
+          "absolute_pct": 5.618296731174524
+        },
+        "energy_time_trend": {
+          "signed_mtce": 64.46617251797124,
+          "absolute_mtce": 64.46617251797124,
+          "absolute_pct": 1.366025798971685
+        },
+        "gdp_elasticity": {
+          "signed_mtce": 96.74559960101124,
+          "absolute_mtce": 96.74559960101124,
+          "absolute_pct": 2.0500206516080146
+        },
+        "intensity_time_trend": {
+          "signed_mtce": 119.77369388407533,
+          "absolute_mtce": 119.77369388407533,
+          "absolute_pct": 2.5379815412210696
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "actual_energy_mtce": 4855.84,
+      "predictions_mtce": {
+        "constant_intensity": 4725.8091519364025,
+        "energy_time_trend": 4934.435563688914,
+        "gdp_elasticity": 4968.056416898925,
+        "intensity_time_trend": 4994.2945007766775
+      },
+      "errors": {
+        "constant_intensity": {
+          "signed_mtce": -130.03084806359766,
+          "absolute_mtce": 130.03084806359766,
+          "absolute_pct": 2.6778239823305063
+        },
+        "energy_time_trend": {
+          "signed_mtce": 78.5955636889139,
+          "absolute_mtce": 78.5955636889139,
+          "absolute_pct": 1.6185781180787235
+        },
+        "gdp_elasticity": {
+          "signed_mtce": 112.21641689892476,
+          "absolute_mtce": 112.21641689892476,
+          "absolute_pct": 2.310957875443276
+        },
+        "intensity_time_trend": {
+          "signed_mtce": 138.45450077667738,
+          "absolute_mtce": 138.45450077667738,
+          "absolute_pct": 2.851298658454096
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "actual_energy_mtce": 4965.14,
+      "predictions_mtce": {
+        "constant_intensity": 4834.50276243094,
+        "energy_time_trend": 5089.9036343499665,
+        "gdp_elasticity": 5027.721042588796,
+        "intensity_time_trend": 4969.936011991267
+      },
+      "errors": {
+        "constant_intensity": {
+          "signed_mtce": -130.63723756906074,
+          "absolute_mtce": 130.63723756906074,
+          "absolute_pct": 2.631088701810236
+        },
+        "energy_time_trend": {
+          "signed_mtce": 124.7636343499662,
+          "absolute_mtce": 124.7636343499662,
+          "absolute_pct": 2.5127918719304225
+        },
+        "gdp_elasticity": {
+          "signed_mtce": 62.58104258879575,
+          "absolute_mtce": 62.58104258879575,
+          "absolute_pct": 1.2604084192751008
+        },
+        "intensity_time_trend": {
+          "signed_mtce": 4.796011991266823,
+          "absolute_mtce": 4.796011991266823,
+          "absolute_pct": 0.0965936910392622
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "actual_energy_mtce": 5250.27,
+      "predictions_mtce": {
+        "constant_intensity": 5250.27,
+        "energy_time_trend": 5250.27,
+        "gdp_elasticity": 5250.27,
+        "intensity_time_trend": 5250.27
+      },
+      "errors": {
+        "constant_intensity": {
+          "signed_mtce": 0.0,
+          "absolute_mtce": 0.0,
+          "absolute_pct": 0.0
+        },
+        "energy_time_trend": {
+          "signed_mtce": 0.0,
+          "absolute_mtce": 0.0,
+          "absolute_pct": 0.0
+        },
+        "gdp_elasticity": {
+          "signed_mtce": 0.0,
+          "absolute_mtce": 0.0,
+          "absolute_pct": 0.0
+        },
+        "intensity_time_trend": {
+          "signed_mtce": 0.0,
+          "absolute_mtce": 0.0,
+          "absolute_pct": 0.0
+        }
+      }
+    }
+  ],
+  "evaluation": {
+    "evaluation": "Conditional hindcast using observed holdout GDP; not a GDP forecast",
+    "rows": [
+      {
+        "year": 2022,
+        "actual_energy_mtce": 5412.74,
+        "predictions_mtce": {
+          "constant_intensity": 5413.02837,
+          "energy_time_trend": 5415.68899003731,
+          "gdp_elasticity": 5335.097560761839,
+          "intensity_time_trend": 5265.520631400843
+        },
+        "errors": {
+          "constant_intensity": {
+            "signed_mtce": 0.2883700000002136,
+            "absolute_mtce": 0.2883700000002136,
+            "absolute_pct": 0.005327615957910663
+          },
+          "energy_time_trend": {
+            "signed_mtce": 2.948990037310068,
+            "absolute_mtce": 2.948990037310068,
+            "absolute_pct": 0.05448238853723009
+          },
+          "gdp_elasticity": {
+            "signed_mtce": -77.64243923816048,
+            "absolute_mtce": 77.64243923816048,
+            "absolute_pct": 1.4344387359851107
+          },
+          "intensity_time_trend": {
+            "signed_mtce": -147.21936859915695,
+            "absolute_mtce": 147.21936859915695,
+            "absolute_pct": 2.719867730560806
+          }
+        }
+      },
+      {
+        "year": 2023,
+        "actual_energy_mtce": 5713.27,
+        "predictions_mtce": {
+          "constant_intensity": 5705.33190198,
+          "energy_time_trend": 5586.319796279304,
+          "gdp_elasticity": 5484.456078907497,
+          "intensity_time_trend": 5398.622310522301
+        },
+        "errors": {
+          "constant_intensity": {
+            "signed_mtce": -7.938098020000325,
+            "absolute_mtce": 7.938098020000325,
+            "absolute_pct": 0.13894141218602174
+          },
+          "energy_time_trend": {
+            "signed_mtce": -126.95020372069666,
+            "absolute_mtce": 126.95020372069666,
+            "absolute_pct": 2.2220235297946123
+          },
+          "gdp_elasticity": {
+            "signed_mtce": -228.81392109250373,
+            "absolute_mtce": 228.81392109250373,
+            "absolute_pct": 4.004955499958933
+          },
+          "intensity_time_trend": {
+            "signed_mtce": -314.6476894776997,
+            "absolute_mtce": 314.6476894776997,
+            "absolute_pct": 5.507313490832741
+          }
+        }
+      },
+      {
+        "year": 2024,
+        "actual_energy_mtce": 5960.0,
+        "predictions_mtce": {
+          "constant_intensity": 5990.598497079,
+          "energy_time_trend": 5762.326626161567,
+          "gdp_elasticity": 5626.752730795234,
+          "intensity_time_trend": 5514.082501484444
+        },
+        "errors": {
+          "constant_intensity": {
+            "signed_mtce": 30.59849707899957,
+            "absolute_mtce": 30.59849707899957,
+            "absolute_pct": 0.5133976019966371
+          },
+          "energy_time_trend": {
+            "signed_mtce": -197.67337383843278,
+            "absolute_mtce": 197.67337383843278,
+            "absolute_pct": 3.316667346282429
+          },
+          "gdp_elasticity": {
+            "signed_mtce": -333.24726920476587,
+            "absolute_mtce": 333.24726920476587,
+            "absolute_pct": 5.591397134308152
+          },
+          "intensity_time_trend": {
+            "signed_mtce": -445.91749851555596,
+            "absolute_mtce": 445.91749851555596,
+            "absolute_pct": 7.481837223415369
+          }
+        }
+      }
+    ],
+    "metrics": {
+      "constant_intensity": {
+        "mape_pct": 0.2192222100468565,
+        "rmse_mtce": 18.25161710575786,
+        "mean_signed_error_mtce": 7.649589686333154
+      },
+      "energy_time_trend": {
+        "mape_pct": 1.8643910882047572,
+        "rmse_mtce": 135.64637050266074,
+        "mean_signed_error_mtce": -107.22486250727313
+      },
+      "gdp_elasticity": {
+        "mape_pct": 3.676930456750732,
+        "rmse_mtce": 237.65374061787995,
+        "mean_signed_error_mtce": -213.23454317847668
+      },
+      "intensity_time_trend": {
+        "mape_pct": 5.236339481602972,
+        "rmse_mtce": 326.35314536391417,
+        "mean_signed_error_mtce": -302.59485219747086
+      }
+    }
+  },
+  "limitations": [
+    "方案在已有探索性结果被查看后登记；用途是固定后续执行与追溯，不能声称前瞻预注册",
+    "同版实际GDP增长率链接指数2015=100；评估期使用已实现GDP",
+    "增长率仅一位小数，GDP为近似链接指数；不同口径能耗增长率不强制配平。",
+    "仅统计总量映射，无新增主体机制；不支持政策因果、全国排放或远期预测。"
+  ],
+  "provenance": {
+    "bindings": [
+      {
+        "dataset_path": "data/observations/demand_energy_total_2015_2024.json",
+        "review_id": "R-S01-DEMAND-20261017",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+        "review_id": "R-S06-GDP-20261017",
+        "source_ids": [
+          "S06"
+        ]
+      }
+    ],
+    "sha256": {
+      "data/evidence_reviews.json": "60e03b57f956d03d934cadc6e1678cd1fb4328d9c3961ce48e32adcd330fbbdb",
+      "data/observations/demand_energy_total_2015_2024.json": "909be60ca5dd53e79059df6eb087db132b34ca1f831728efe2debb20a02e80f0",
+      "data/observations/demand_real_gdp_growth_2015_2024.json": "3769c34c8f38f39dd456665758da7f892dd11cf1eb90e0603f45254fecdbc6e1",
+      "data/raw/official/S01_demand_excerpt_20261017.txt": "bdae0182ff96a1153755073b5840526887b0f358c81a65714999f7f4de77a08c",
+      "data/raw/official/S06_gdp_excerpt_20261017.txt": "b4b45dbb0ea15c11660536efd8b800bab94cda3970734a3c56945acabfd0fba7",
+      "data/sources.json": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+      "scripts/build_foundation.py": "0b0ceb85d13d38528ffd01ac5c3085eedd7f8aa014f776bdc0b82e472ff23b89",
+      "scripts/run_demand_hindcast.py": "f65586501bc8e8af1a3c691a6a53f836293e14b9e7db8bf95e33620eba9db5f8",
+      "scripts/workflow_status.py": "0a948df02f7a11e2f8f7afef0be49c1eeac44a9e9371bf2a3fc4300ed7046e9e",
+      "src/energy_model/baselines.py": "2ca809cffbc0cef9afd7623ccb8276ab5e3f39a3dd4cda3292059928ea474ada",
+      "workflow/demand_hindcast.json": "7f94bc1c6eb20f58d7a6a94363bff3c77fe809afeb395bea898bd6714de9e6c7",
+      "workflow/model_inputs.json": "5063b16fe3e36e1ac46c6b91bab7b6cc19842181b4246c3e818d878694eea498",
+      "workflow/official_data_policy.md": "2877a973872c9cebdff84f6c06c280d80180089f9a3ebc173fb320a457c55922"
+    }
+  },
+  "run_id": "94d020b761970170"
+}

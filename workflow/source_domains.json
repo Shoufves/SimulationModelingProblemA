@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "scope": "网上观测事实；域名通过仅为必要条件，不能代替内容与适用性复核。政府间机构方法、企业项目证据应独立登记和审查，当前检查器不会自动纳入全国观测输入。",
+  "domains": [
+    {
+      "domain": "stats.gov.cn",
+      "publisher": "国家统计局"
+    },
+    {
+      "domain": "nea.gov.cn",
+      "publisher": "国家能源局"
+    },
+    {
+      "domain": "customs.gov.cn",
+      "publisher": "海关总署"
+    },
+    {
+      "domain": "mee.gov.cn",
+      "publisher": "生态环境部"
+    },
+    {
+      "domain": "ndrc.gov.cn",
+      "publisher": "国家发展和改革委员会"
+    },
+    {
+      "domain": "www.gov.cn",
+      "publisher": "中国政府网"
+    },
+    {
+      "domain": "mwr.gov.cn",
+      "publisher": "水利部"
+    },
+    {
+      "domain": "cma.gov.cn",
+      "publisher": "中国气象局"
+    },
+    {
+      "domain": "mnr.gov.cn",
+      "publisher": "自然资源部"
+    }
+  ],
+  "extension_policy": "新增域名前实际确认主管部门身份、保存核验依据、更新本规则；禁止通配整个gov.cn或字符串包含匹配。"
+}

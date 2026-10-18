@@ -1,0 +1,24 @@
+{
+  "recipe": "ai_trade",
+  "status": "passed",
+  "comparisons": [
+    {
+      "path": "data/processed/lb/ai_trade/china_crude_origin_2025.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/ai_trade/china_lng_origin_2025.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/ai_trade/compute_electricity_anchors.csv",
+      "byte_equal": true,
+      "table_equal": true
+    }
+  ],
+  "expected_outputs_absent_before_execution": true,
+  "scope": "Offline reproduction of saved extraction recipes; not independent source verification or national simulation."
+}
+

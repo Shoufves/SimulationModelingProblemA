@@ -1,0 +1,38 @@
+[
+  {
+    "command": [
+      "run.py",
+      "attachments"
+    ],
+    "returncode": 0,
+    "seconds": 0.9997254999907454,
+    "log": "core_1.log"
+  },
+  {
+    "command": [
+      "run.py",
+      "verify"
+    ],
+    "returncode": 0,
+    "seconds": 1.5588401999993948,
+    "log": "core_2.log"
+  },
+  {
+    "command": [
+      "run.py",
+      "prototype"
+    ],
+    "returncode": 0,
+    "seconds": 0.44249600000330247,
+    "log": "core_3.log"
+  },
+  {
+    "command": [
+      "run.py",
+      "baseline"
+    ],
+    "returncode": 0,
+    "seconds": 0.29648720000113826,
+    "log": "core_4.log"
+  }
+]

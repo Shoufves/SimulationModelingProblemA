@@ -1,0 +1,5285 @@
+{
+  "schema_version": "1.0",
+  "mode": "synthetic",
+  "kind": "agents",
+  "warning": "完全合成的机制验证案例；数值和步号不对应中国观测、年份、2030/2060预测或正式情景。",
+  "run_id": "c4ed1bae8985",
+  "created_at": "2026-10-17T18:37:30+08:00",
+  "parameters": {
+    "carbon_multiplier": 0.0,
+    "renewable_capex_multiplier": 1.0,
+    "import_capacity_multiplier": 1.0,
+    "grid_capacity_multiplier": 1.0
+  },
+  "configuration": {
+    "schema_version": "1.0",
+    "mode": "synthetic",
+    "warning": "完全合成的机制验证案例；数值和步号不对应中国观测、年份、2030/2060预测或正式情景。",
+    "parameter_groups": {
+      "run": {
+        "purpose": "验证多步反馈",
+        "basis": "synthetic_assumption",
+        "unit": "抽象步及CU/EU",
+        "sensitivity": "另试步数和初始价格"
+      },
+      "policy": {
+        "purpose": "外生碳成本刺激",
+        "basis": "synthetic_assumption",
+        "unit": "CU/抽象排放",
+        "sensitivity": "未来路径扰动检验无前视"
+      },
+      "fuels": {
+        "purpose": "检验燃料能力、进口和报价反馈",
+        "basis": "synthetic_assumption",
+        "unit": "EU/步、CU/EU、抽象排放/EU",
+        "sensitivity": "能力下降、进口受限、价格上调"
+      },
+      "generation": {
+        "purpose": "检验调度、投资与建设滞后",
+        "basis": "synthetic_assumption",
+        "unit": "抽象容量、EU、CU、步",
+        "sensitivity": "成本、工期、预算和预期销售下限"
+      },
+      "demand": {
+        "purpose": "检验有用服务与设备替代",
+        "basis": "synthetic_assumption",
+        "unit": "SU、SU/EU、CU及份额",
+        "sensitivity": "效率、替代速度、预算和回收步数"
+      },
+      "grid": {
+        "purpose": "检验输送约束与网损",
+        "basis": "synthetic_assumption",
+        "unit": "EU/步、CU/EU及效率",
+        "sensitivity": "网络上限下降及损耗变化"
+      }
+    },
+    "run": {
+      "steps": 8,
+      "initial_electricity_price": 2.0
+    },
+    "policy": {
+      "carbon_price_by_step": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "fuels": {
+      "coal": {
+        "domestic_limit": 180,
+        "import_limit": 30.0,
+        "base_price": 1.0,
+        "scarcity_markup": 0.3,
+        "emission_factor": 1.0
+      },
+      "oil": {
+        "domestic_limit": 35,
+        "import_limit": 65.0,
+        "base_price": 2.0,
+        "scarcity_markup": 0.5,
+        "emission_factor": 0.8
+      },
+      "gas": {
+        "domestic_limit": 90,
+        "import_limit": 60.0,
+        "base_price": 1.5,
+        "scarcity_markup": 0.4,
+        "emission_factor": 0.5
+      }
+    },
+    "generation": {
+      "coal": {
+        "fuel": "coal",
+        "initial_capacity": 16,
+        "initial_retirement_step": 7,
+        "energy_per_capacity": 1,
+        "efficiency": 0.4,
+        "variable_cost": 0.2,
+        "capex": 22,
+        "lead_steps": 2,
+        "life_steps": 12,
+        "budget": 55,
+        "max_build_per_step": 3,
+        "expected_sales_floor": 0.4,
+        "discount_rate": 0.05
+      },
+      "gas": {
+        "fuel": "gas",
+        "initial_capacity": 8,
+        "initial_retirement_step": 12,
+        "energy_per_capacity": 1,
+        "efficiency": 0.6,
+        "variable_cost": 0.3,
+        "capex": 18,
+        "lead_steps": 1,
+        "life_steps": 10,
+        "budget": 45,
+        "max_build_per_step": 3,
+        "expected_sales_floor": 0.4,
+        "discount_rate": 0.05
+      },
+      "renewable": {
+        "fuel": null,
+        "initial_capacity": 14,
+        "initial_retirement_step": 15,
+        "energy_per_capacity": 1,
+        "efficiency": 1.0,
+        "variable_cost": 0.1,
+        "capex": 16.0,
+        "lead_steps": 2,
+        "life_steps": 15,
+        "budget": 80,
+        "max_build_per_step": 5,
+        "expected_sales_floor": 0.4,
+        "discount_rate": 0.05
+      }
+    },
+    "demand": {
+      "industry": {
+        "fuel": "gas",
+        "service": 70,
+        "growth": 0.02,
+        "electric_share": 0.15,
+        "fuel_efficiency": 0.75,
+        "electric_efficiency": 1.8,
+        "replacement_limit": 0.12,
+        "switch_cost_per_share": 35,
+        "budget": 4,
+        "payback_steps": 3
+      },
+      "transport": {
+        "fuel": "oil",
+        "service": 45,
+        "growth": 0.015,
+        "electric_share": 0.1,
+        "fuel_efficiency": 0.6,
+        "electric_efficiency": 2.5,
+        "replacement_limit": 0.1,
+        "switch_cost_per_share": 30,
+        "budget": 3,
+        "payback_steps": 3
+      }
+    },
+    "grid": {
+      "delivery_efficiency": 0.95,
+      "generation_transfer_limit": 100.0,
+      "scarcity_price": 25
+    }
+  },
+  "configuration_sha256": "1c97911c2370fb0dc5bdac782f2661af8ca152c28284390c4e0fb8ecf5a2fba2",
+  "source_configuration_path": "examples/synthetic_agents.json",
+  "source_configuration_sha256": "d2d82f284a392f989ba939027d302308f24441500604e957f0d4931f4b54b97f",
+  "implementation_sha256": {
+    "src/energy_model/workbench.py": "c7a1b64fd6a27b7fd086de7111d8e968146d8af378586ebfebebe01fdd10f5b8",
+    "src/energy_model/agents.py": "e1179e8dfcd14e0abf10c653b637c46f8c69eb33c10ac2b09819b85327b38855",
+    "src/energy_model/accounting.py": "5f1d7ad24fb2ae71daa1afad29763ac860b164e01d099bb9e881ebb70a28bcdd",
+    "src/energy_model/operations.py": "a2b3bc73b384b5fb0f39e0bd036666ddd3295d7acd30f99e4dacc7b85dc37f8e"
+  },
+  "cases": {
+    "full_feedback": {
+      "mode": "synthetic",
+      "warning": "完全合成的机制验证案例；数值和步号不对应中国观测、年份、2030/2060预测或正式情景。",
+      "mechanisms": {
+        "substitution": true,
+        "investment": true
+      },
+      "rows": [
+        {
+          "step": 1,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.5,
+            "oil": 2.0
+          },
+          "electricity_price_delivered": 0.10526315789473685,
+          "generation_price": 0.1,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "renewable": 8.035087719298245
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 2.8,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 79.33333333333333,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 79.33333333333333,
+              "direct_served": 79.33333333333333,
+              "generation_input": 0.0,
+              "total_burned": 79.33333333333333,
+              "emissions": 39.666666666666664
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 32.5,
+              "supply_limit": 100.0,
+              "direct_requested": 67.5,
+              "direct_served": 67.5,
+              "generation_input": 0.0,
+              "total_burned": 67.5,
+              "emissions": 54.0
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 70.0,
+              "electric_share": 0.15,
+              "electricity": 5.833333333333333,
+              "direct_fuel": 79.33333333333333,
+              "fuel": "gas",
+              "direct_fuel_served": 79.33333333333333,
+              "electricity_served": 5.833333333333332,
+              "service_served": 70.0,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 45.0,
+              "electric_share": 0.1,
+              "electricity": 1.8,
+              "direct_fuel": 67.5,
+              "fuel": "oil",
+              "direct_fuel_served": 67.5,
+              "electricity_served": 1.7999999999999998,
+              "service_served": 45.0,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 7.633333333333333,
+          "electricity_served": 7.633333333333332,
+          "unserved_electricity": 8.881784197001252e-16,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.40175438596491286,
+          "thermal_conversion_loss": 0.0,
+          "energy_related_synthetic_emissions": 93.66666666666666,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 1,
+              "information_cutoff_step": 1,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 1,
+              "information_cutoff_step": 1,
+              "previous_use": 0.0,
+              "previous_limit": 150.0,
+              "price": 1.5,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 1,
+              "information_cutoff_step": 1,
+              "previous_use": 0.0,
+              "previous_limit": 100.0,
+              "price": 2.0,
+              "capacity": 100.0
+            },
+            {
+              "step": 1,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 1,
+              "effective_step": 2,
+              "electric_share_before": 0.15,
+              "electric_share_next": 0.2642857142857143,
+              "share_change": 0.1142857142857143,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 0.058479532163742694,
+              "fuel_cost_per_service": 2.0,
+              "saving_per_full_share_per_step": 135.906432748538,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 1,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 1,
+              "effective_step": 2,
+              "electric_share_before": 0.1,
+              "electric_share_next": 0.2,
+              "share_change": 0.1,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 0.04210526315789474,
+              "fuel_cost_per_service": 3.3333333333333335,
+              "saving_per_full_share_per_step": 148.10526315789474,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 1,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 1,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -30.778839716101682,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 1,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 1,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.8,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -26.339473723519603,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 1,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 1,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 0.5739348370927317,
+              "npv_per_capacity_unit": -16.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.8173333333333332,
+            "oil": 2.675
+          },
+          "electricity_price_delivered": 2.842105263157895,
+          "generation_price": 2.7,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.8814035087719319,
+            "gas": 0.0,
+            "renewable": 14
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 3.328888888888889,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 2.2035087719298296,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 2.2035087719298296,
+              "total_burned": 2.2035087719298296,
+              "emissions": 2.2035087719298296
+            },
+            "gas": {
+              "domestic_production": 70.04,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 70.04,
+              "direct_served": 70.04,
+              "generation_input": 0.0,
+              "total_burned": 70.04,
+              "emissions": 35.02
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 25.9,
+              "supply_limit": 100.0,
+              "direct_requested": 60.9,
+              "direct_served": 60.9,
+              "generation_input": 0.0,
+              "total_burned": 60.9,
+              "emissions": 48.72
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 71.4,
+              "electric_share": 0.2642857142857143,
+              "electricity": 10.483333333333334,
+              "direct_fuel": 70.04,
+              "fuel": "gas",
+              "direct_fuel_served": 70.04,
+              "electricity_served": 10.483333333333334,
+              "service_served": 71.4,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 45.675,
+              "electric_share": 0.2,
+              "electricity": 3.654,
+              "direct_fuel": 60.9,
+              "fuel": "oil",
+              "direct_fuel_served": 60.9,
+              "electricity_served": 3.654,
+              "service_served": 45.675,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 14.137333333333334,
+          "electricity_served": 14.137333333333334,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.7440701754385977,
+          "thermal_conversion_loss": 1.3221052631578978,
+          "energy_related_synthetic_emissions": 85.94350877192983,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 2,
+              "information_cutoff_step": 2,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 2,
+              "information_cutoff_step": 2,
+              "previous_use": 79.33333333333333,
+              "previous_limit": 150.0,
+              "price": 1.8173333333333332,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 2,
+              "information_cutoff_step": 2,
+              "previous_use": 67.5,
+              "previous_limit": 100.0,
+              "price": 2.675,
+              "capacity": 100.0
+            },
+            {
+              "step": 2,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 2,
+              "effective_step": 3,
+              "electric_share_before": 0.2642857142857143,
+              "electric_share_next": 0.37857142857142856,
+              "share_change": 0.11428571428571427,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 1.5789473684210529,
+              "fuel_cost_per_service": 2.423111111111111,
+              "saving_per_full_share_per_step": 60.27329122807016,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 2,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 2,
+              "effective_step": 3,
+              "electric_share_before": 0.2,
+              "electric_share_next": 0.30000000000000004,
+              "share_change": 0.10000000000000003,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 1.136842105263158,
+              "fuel_cost_per_service": 4.458333333333333,
+              "saving_per_full_share_per_step": 151.70911184210524,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 2,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 2,
+              "observed_generation_price": 2.7,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -22.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 2,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 2,
+              "observed_generation_price": 2.7,
+              "observed_variable_cost": 3.328888888888889,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -19.942445319963824,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 2,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 2,
+              "observed_generation_price": 2.7,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 9.702010380256723,
+              "capacity_ordered": 5.0,
+              "investment": 80.0,
+              "budget": 80,
+              "online_step": 4,
+              "reason": "positive_npv"
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0031478696741856,
+            "gas": 1.7801600000000002,
+            "oil": 2.609
+          },
+          "electricity_price_delivered": 2.850389130721541,
+          "generation_price": 2.707869674185464,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14.0
+          },
+          "generation": {
+            "coal": 7.979173684210526,
+            "gas": 0.0,
+            "renewable": 14.0
+          },
+          "generation_variable_cost": {
+            "coal": 2.707869674185464,
+            "gas": 3.2669333333333337,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 19.947934210526313,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 19.947934210526313,
+              "total_burned": 19.947934210526313,
+              "emissions": 19.947934210526313
+            },
+            "gas": {
+              "domestic_production": 60.3432,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 60.3432,
+              "direct_served": 60.3432,
+              "generation_input": 0.0,
+              "total_burned": 60.3432,
+              "emissions": 30.1716
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 19.086812499999986,
+              "supply_limit": 100.0,
+              "direct_requested": 54.086812499999986,
+              "direct_served": 54.086812499999986,
+              "generation_input": 0.0,
+              "total_burned": 54.086812499999986,
+              "emissions": 43.26944999999999
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 72.828,
+              "electric_share": 0.37857142857142856,
+              "electricity": 15.316999999999998,
+              "direct_fuel": 60.3432,
+              "fuel": "gas",
+              "direct_fuel_served": 60.3432,
+              "electricity_served": 15.316999999999998,
+              "service_served": 72.828,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 46.36012499999999,
+              "electric_share": 0.30000000000000004,
+              "electricity": 5.563215,
+              "direct_fuel": 54.086812499999986,
+              "fuel": "oil",
+              "direct_fuel_served": 54.086812499999986,
+              "electricity_served": 5.563215,
+              "service_served": 46.36012499999999,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 20.880215,
+          "electricity_served": 20.880215,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 1.0989586842105261,
+          "thermal_conversion_loss": 11.968760526315787,
+          "energy_related_synthetic_emissions": 93.3889842105263,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 3,
+              "information_cutoff_step": 3,
+              "previous_use": 2.2035087719298296,
+              "previous_limit": 210.0,
+              "price": 1.0031478696741856,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 3,
+              "information_cutoff_step": 3,
+              "previous_use": 70.04,
+              "previous_limit": 150.0,
+              "price": 1.7801600000000002,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 3,
+              "information_cutoff_step": 3,
+              "previous_use": 60.9,
+              "previous_limit": 100.0,
+              "price": 2.609,
+              "capacity": 100.0
+            },
+            {
+              "step": 3,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 3,
+              "effective_step": 4,
+              "electric_share_before": 0.37857142857142856,
+              "electric_share_next": 0.4928571428571428,
+              "share_change": 0.11428571428571427,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 1.5835495170675227,
+              "fuel_cost_per_service": 2.373546666666667,
+              "saving_per_full_share_per_step": 57.533912411006476,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 3,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 3,
+              "effective_step": 4,
+              "electric_share_before": 0.30000000000000004,
+              "electric_share_next": 0.4,
+              "share_change": 0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 1.1401556522886165,
+              "fuel_cost_per_service": 4.348333333333334,
+              "saving_per_full_share_per_step": 148.7315183154432,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 3,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 3,
+              "observed_generation_price": 2.707869674185464,
+              "observed_variable_cost": 2.707869674185464,
+              "expected_sales_fraction": 0.49869835526315787,
+              "npv_per_capacity_unit": -22.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 3,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 3,
+              "observed_generation_price": 2.707869674185464,
+              "observed_variable_cost": 3.2669333333333337,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -19.726776553791993,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 3,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 3,
+              "observed_generation_price": 2.707869674185464,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 9.779805167796734,
+              "capacity_ordered": 5.0,
+              "investment": 80.0,
+              "budget": 80,
+              "online_step": 5,
+              "reason": "positive_npv"
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0284970488721805,
+            "gas": 1.7413728000000002,
+            "oil": 2.540868125
+          },
+          "electricity_price_delivered": 2.917097497032054,
+          "generation_price": 2.771242622180451,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 19.0
+          },
+          "generation": {
+            "coal": 10.335478210526315,
+            "gas": 0.0,
+            "renewable": 19.0
+          },
+          "generation_variable_cost": {
+            "coal": 2.771242622180451,
+            "gas": 3.2022880000000002,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 25.838695526315785,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 25.838695526315785,
+              "total_burned": 25.838695526315785,
+              "emissions": 25.838695526315785
+            },
+            "gas": {
+              "domestic_production": 50.230512000000004,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 50.230512000000004,
+              "direct_served": 50.230512000000004,
+              "generation_input": 0.0,
+              "total_burned": 50.230512000000004,
+              "emissions": 25.115256000000002
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 12.055526874999984,
+              "supply_limit": 100.0,
+              "direct_requested": 47.055526874999984,
+              "direct_served": 47.055526874999984,
+              "generation_input": 0.0,
+              "total_burned": 47.055526874999984,
+              "emissions": 37.644421499999986
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 74.28456000000001,
+              "electric_share": 0.4928571428571428,
+              "electricity": 20.33982,
+              "direct_fuel": 50.230512000000004,
+              "fuel": "gas",
+              "direct_fuel_served": 50.230512000000004,
+              "electricity_served": 20.33982,
+              "service_served": 74.28456,
+              "unserved_service": 1.4210854715202004e-14
+            },
+            "transport": {
+              "service": 47.055526874999984,
+              "electric_share": 0.4,
+              "electricity": 7.528884299999997,
+              "direct_fuel": 47.055526874999984,
+              "fuel": "oil",
+              "direct_fuel_served": 47.055526874999984,
+              "electricity_served": 7.528884299999997,
+              "service_served": 47.055526874999984,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 27.868704299999997,
+          "electricity_served": 27.868704299999997,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 1.4667739105263173,
+          "thermal_conversion_loss": 15.50321731578947,
+          "energy_related_synthetic_emissions": 88.59837302631578,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 4,
+              "information_cutoff_step": 4,
+              "previous_use": 19.947934210526313,
+              "previous_limit": 210.0,
+              "price": 1.0284970488721805,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 4,
+              "information_cutoff_step": 4,
+              "previous_use": 60.3432,
+              "previous_limit": 150.0,
+              "price": 1.7413728000000002,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 4,
+              "information_cutoff_step": 4,
+              "previous_use": 54.086812499999986,
+              "previous_limit": 100.0,
+              "price": 2.540868125,
+              "capacity": 100.0
+            },
+            {
+              "step": 4,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 4,
+              "effective_step": 5,
+              "electric_share_before": 0.4928571428571428,
+              "electric_share_next": 0.6071428571428571,
+              "share_change": 0.11428571428571427,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 1.6206097205733632,
+              "fuel_cost_per_service": 2.3218304,
+              "saving_per_full_share_per_step": 52.08986963410879,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 4,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 4,
+              "effective_step": 5,
+              "electric_share_before": 0.4,
+              "electric_share_next": 0.5,
+              "share_change": 0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 1.1668389988128216,
+              "fuel_cost_per_service": 4.2347802083333335,
+              "saving_per_full_share_per_step": 144.3635900355124,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 4,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 4,
+              "observed_generation_price": 2.771242622180451,
+              "observed_variable_cost": 2.771242622180451,
+              "expected_sales_fraction": 0.6459673881578947,
+              "npv_per_capacity_unit": -22.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 4,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 4,
+              "observed_generation_price": 2.771242622180451,
+              "observed_variable_cost": 3.2022880000000002,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -19.33136725998915,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 4,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 4,
+              "observed_generation_price": 2.771242622180451,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 10.406271385948514,
+              "capacity_ordered": 5.0,
+              "investment": 80.0,
+              "budget": 80,
+              "online_step": 6,
+              "reason": "positive_npv"
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.036912422180451,
+            "gas": 1.7009220479999998,
+            "oil": 2.47055526875
+          },
+          "electricity_price_delivered": 2.939243216264345,
+          "generation_price": 2.7922810554511277,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 24.0
+          },
+          "generation": {
+            "coal": 12.957576795394736,
+            "gas": 0.0,
+            "renewable": 24.0
+          },
+          "generation_variable_cost": {
+            "coal": 2.7922810554511277,
+            "gas": 3.13487008,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 32.39394198848684,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 32.39394198848684,
+              "total_burned": 32.39394198848684,
+              "emissions": 32.39394198848684
+            },
+            "gas": {
+              "domestic_production": 39.689179200000005,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 39.689179200000005,
+              "direct_served": 39.689179200000005,
+              "generation_input": 0.0,
+              "total_burned": 39.689179200000005,
+              "emissions": 19.844589600000003
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 4.801133148437486,
+              "supply_limit": 100.0,
+              "direct_requested": 39.801133148437486,
+              "direct_served": 39.801133148437486,
+              "generation_input": 0.0,
+              "total_burned": 39.801133148437486,
+              "emissions": 31.84090651874999
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 75.7702512,
+              "electric_share": 0.6071428571428571,
+              "electricity": 25.557426,
+              "direct_fuel": 39.689179200000005,
+              "fuel": "gas",
+              "direct_fuel_served": 39.689179200000005,
+              "electricity_served": 25.557426,
+              "service_served": 75.7702512,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 47.761359778124984,
+              "electric_share": 0.5,
+              "electricity": 9.552271955624997,
+              "direct_fuel": 39.801133148437486,
+              "fuel": "oil",
+              "direct_fuel_served": 39.801133148437486,
+              "electricity_served": 9.552271955624997,
+              "service_served": 47.761359778124984,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 35.109697955624995,
+          "electricity_served": 35.109697955624995,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 1.8478788397697414,
+          "thermal_conversion_loss": 19.4363651930921,
+          "energy_related_synthetic_emissions": 84.07943810723683,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 5,
+              "information_cutoff_step": 5,
+              "previous_use": 25.838695526315785,
+              "previous_limit": 210.0,
+              "price": 1.036912422180451,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 5,
+              "information_cutoff_step": 5,
+              "previous_use": 50.230512000000004,
+              "previous_limit": 150.0,
+              "price": 1.7009220479999998,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 5,
+              "information_cutoff_step": 5,
+              "previous_use": 47.055526874999984,
+              "previous_limit": 100.0,
+              "price": 2.47055526875,
+              "capacity": 100.0
+            },
+            {
+              "step": 5,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 5,
+              "effective_step": 6,
+              "electric_share_before": 0.6071428571428571,
+              "electric_share_next": 0.7214285714285714,
+              "share_change": 0.11428571428571432,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 1.6329128979246361,
+              "fuel_cost_per_service": 2.267896064,
+              "saving_per_full_share_per_step": 48.112834001301636,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 5,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 5,
+              "effective_step": 6,
+              "electric_share_before": 0.5,
+              "electric_share_next": 0.6,
+              "share_change": 0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 1.175697286505738,
+              "fuel_cost_per_service": 4.117592114583334,
+              "saving_per_full_share_per_step": 140.50889731321922,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 5,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 5,
+              "observed_generation_price": 2.7922810554511277,
+              "observed_variable_cost": 2.7922810554511277,
+              "expected_sales_fraction": 0.809848549712171,
+              "npv_per_capacity_unit": -22.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 5,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 5,
+              "observed_generation_price": 2.7922810554511277,
+              "observed_variable_cost": 3.13487008,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -19.058152654885752,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 5,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 5,
+              "observed_generation_price": 2.7922810554511277,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 10.614244474528231,
+              "capacity_ordered": 5.0,
+              "investment": 80.0,
+              "budget": 80,
+              "online_step": 7,
+              "reason": "positive_npv"
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0462770599835527,
+            "gas": 1.6587567168000001,
+            "oil": 2.398011331484375
+          },
+          "electricity_price_delivered": 2.963886999956718,
+          "generation_price": 2.8156926499588817,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 29.0
+          },
+          "generation": {
+            "coal": 15.852913214685522,
+            "gas": 0.0,
+            "renewable": 29.0
+          },
+          "generation_variable_cost": {
+            "coal": 2.8156926499588817,
+            "gas": 3.064594528,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 39.6322830367138,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 39.6322830367138,
+              "total_burned": 39.6322830367138,
+              "emissions": 39.6322830367138
+            },
+            "gas": {
+              "domestic_production": 28.706100883200005,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 28.706100883200005,
+              "direct_served": 28.706100883200005,
+              "generation_input": 0.0,
+              "total_burned": 28.706100883200005,
+              "emissions": 14.353050441600002
+            },
+            "oil": {
+              "domestic_production": 32.31852011653124,
+              "imports": 0.0,
+              "supply_limit": 100.0,
+              "direct_requested": 32.31852011653124,
+              "direct_served": 32.31852011653124,
+              "generation_input": 0.0,
+              "total_burned": 32.31852011653124,
+              "emissions": 25.854816093224994
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 77.28565622400001,
+              "electric_share": 0.7214285714285714,
+              "electricity": 30.975600312,
+              "direct_fuel": 28.706100883200005,
+              "fuel": "gas",
+              "direct_fuel_served": 28.706100883200005,
+              "electricity_served": 30.975600312,
+              "service_served": 77.28565622400001,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 48.477780174796855,
+              "electric_share": 0.6,
+              "electricity": 11.634667241951245,
+              "direct_fuel": 32.31852011653124,
+              "fuel": "oil",
+              "direct_fuel_served": 32.31852011653124,
+              "electricity_served": 11.634667241951245,
+              "service_served": 48.47778017479686,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 42.610267553951246,
+          "electricity_served": 42.610267553951246,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 2.2426456607342757,
+          "thermal_conversion_loss": 23.77936982202828,
+          "energy_related_synthetic_emissions": 79.8401495715388,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 6,
+              "information_cutoff_step": 6,
+              "previous_use": 32.39394198848684,
+              "previous_limit": 210.0,
+              "price": 1.0462770599835527,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 6,
+              "information_cutoff_step": 6,
+              "previous_use": 39.689179200000005,
+              "previous_limit": 150.0,
+              "price": 1.6587567168000001,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 6,
+              "information_cutoff_step": 6,
+              "previous_use": 39.801133148437486,
+              "previous_limit": 100.0,
+              "price": 2.398011331484375,
+              "capacity": 100.0
+            },
+            {
+              "step": 6,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 6,
+              "effective_step": 7,
+              "electric_share_before": 0.7214285714285714,
+              "electric_share_next": 0.8357142857142857,
+              "share_change": 0.11428571428571432,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 1.6466038888648433,
+              "fuel_cost_per_service": 2.2116756224,
+              "saving_per_full_share_per_step": 43.67193973989786,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 6,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 6,
+              "effective_step": 7,
+              "electric_share_before": 0.6,
+              "electric_share_next": 0.7,
+              "share_change": 0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 1.1855547999826872,
+              "fuel_cost_per_service": 3.9966855524739584,
+              "saving_per_full_share_per_step": 136.27737866188312,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 6,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 6,
+              "observed_generation_price": 2.8156926499588817,
+              "observed_variable_cost": 2.8156926499588817,
+              "expected_sales_fraction": 0.9908070759178451,
+              "npv_per_capacity_unit": -22.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 6,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 6,
+              "observed_generation_price": 2.8156926499588817,
+              "observed_variable_cost": 3.064594528,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -18.768781730243923,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 6,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 6,
+              "observed_generation_price": 2.8156926499588817,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 10.845677184165407,
+              "capacity_ordered": 5.0,
+              "investment": 80.0,
+              "budget": 80,
+              "online_step": 8,
+              "reason": "positive_npv"
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0566175471953054,
+            "gas": 1.6148244035327999,
+            "oil": 2.3231852011653125
+          },
+          "electricity_price_delivered": 26.315789473684212,
+          "generation_price": 25,
+          "capacity_at_start": {
+            "coal": 0.0,
+            "gas": 8,
+            "renewable": 34.0
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 8,
+            "renewable": 34.0
+          },
+          "generation_variable_cost": {
+            "coal": 2.8415438679882636,
+            "gas": 2.991374005888,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 30.601157095381332,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 17.267823762048,
+              "direct_served": 17.267823762048,
+              "generation_input": 13.333333333333334,
+              "total_burned": 30.601157095381332,
+              "emissions": 15.300578547690666
+            },
+            "oil": {
+              "domestic_production": 24.602473438709403,
+              "imports": 0.0,
+              "supply_limit": 100.0,
+              "direct_requested": 24.602473438709403,
+              "direct_served": 24.602473438709403,
+              "generation_input": 0.0,
+              "total_burned": 24.602473438709403,
+              "emissions": 19.681978750967524
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 78.83136934848001,
+              "electric_share": 0.8357142857142857,
+              "electricity": 36.600278626080005,
+              "direct_fuel": 17.267823762048,
+              "fuel": "gas",
+              "direct_fuel_served": 17.267823762048,
+              "electricity_served": 28.988067497069125,
+              "service_served": 65.12938931626043,
+              "unserved_service": 13.70198003221958
+            },
+            "transport": {
+              "service": 49.2049468774188,
+              "electric_share": 0.7,
+              "electricity": 13.777385125677261,
+              "direct_fuel": 24.602473438709403,
+              "fuel": "oil",
+              "direct_fuel_served": 24.602473438709403,
+              "electricity_served": 10.911932502930876,
+              "service_served": 42.041315320552826,
+              "unserved_service": 7.1636315568659725
+            }
+          },
+          "electricity_requested": 50.37766375175727,
+          "electricity_served": 39.9,
+          "unserved_electricity": 10.47766375175727,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 2.1000000000000014,
+          "thermal_conversion_loss": 5.333333333333334,
+          "energy_related_synthetic_emissions": 34.98255729865819,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 7,
+              "information_cutoff_step": 7,
+              "previous_use": 39.6322830367138,
+              "previous_limit": 210.0,
+              "price": 1.0566175471953054,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 7,
+              "information_cutoff_step": 7,
+              "previous_use": 28.706100883200005,
+              "previous_limit": 150.0,
+              "price": 1.6148244035327999,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 7,
+              "information_cutoff_step": 7,
+              "previous_use": 32.31852011653124,
+              "previous_limit": 100.0,
+              "price": 2.3231852011653125,
+              "capacity": 100.0
+            },
+            {
+              "step": 7,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 7,
+              "effective_step": 8,
+              "electric_share_before": 0.8357142857142857,
+              "electric_share_next": 0.7214285714285714,
+              "share_change": -0.11428571428571432,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 14.619883040935672,
+              "fuel_cost_per_service": 2.1530992047104,
+              "saving_per_full_share_per_step": 982.773641181135,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 7,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 7,
+              "effective_step": 8,
+              "electric_share_before": 0.7,
+              "electric_share_next": 0.6,
+              "share_change": -0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 10.526315789473685,
+              "fuel_cost_per_service": 3.871975335275521,
+              "saving_per_full_share_per_step": 327.42646855307953,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 7,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 7,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 2.8415438679882636,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": 52.817513361231335,
+              "capacity_ordered": 2.5,
+              "investment": 55.0,
+              "budget": 55,
+              "online_step": 9,
+              "reason": "positive_npv"
+            },
+            {
+              "step": 7,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 7,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 2.991374005888,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 151.94477608209957,
+              "capacity_ordered": 2.5,
+              "investment": 45.0,
+              "budget": 45,
+              "online_step": 8,
+              "reason": "positive_npv"
+            },
+            {
+              "step": 7,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 7,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 230.14617633399703,
+              "capacity_ordered": 5.0,
+              "investment": 80.0,
+              "budget": 80,
+              "online_step": 9,
+              "reason": "positive_npv"
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.6224046283815252,
+            "oil": 2.246024734387094
+          },
+          "electricity_price_delivered": 3.162113383125483,
+          "generation_price": 3.0040077139692087,
+          "capacity_at_start": {
+            "coal": 0.0,
+            "gas": 10.5,
+            "renewable": 39.0
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 7.540357498888447,
+            "renewable": 39.0
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 3.0040077139692087,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 42.43308985702869,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 29.86582735888128,
+              "direct_served": 29.86582735888128,
+              "generation_input": 12.567262498147413,
+              "total_burned": 42.43308985702869,
+              "emissions": 21.216544928514345
+            },
+            "oil": {
+              "domestic_production": 33.29534738705339,
+              "imports": 0.0,
+              "supply_limit": 100.0,
+              "direct_requested": 33.29534738705339,
+              "direct_served": 33.29534738705339,
+              "generation_input": 0.0,
+              "total_burned": 33.29534738705339,
+              "emissions": 26.636277909642715
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 80.4079967354496,
+              "electric_share": 0.7214285714285714,
+              "electricity": 32.2270145646048,
+              "direct_fuel": 29.86582735888128,
+              "fuel": "gas",
+              "direct_fuel_served": 29.86582735888128,
+              "electricity_served": 32.2270145646048,
+              "service_served": 80.4079967354496,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 49.94302108058008,
+              "electric_share": 0.6,
+              "electricity": 11.986325059339219,
+              "direct_fuel": 33.29534738705339,
+              "fuel": "oil",
+              "direct_fuel_served": 33.29534738705339,
+              "electricity_served": 11.986325059339219,
+              "service_served": 49.94302108058008,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 44.21333962394402,
+          "electricity_served": 44.21333962394402,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 2.327017874944424,
+          "thermal_conversion_loss": 5.026904999258965,
+          "energy_related_synthetic_emissions": 47.85282283815706,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 8,
+              "information_cutoff_step": 8,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 8,
+              "information_cutoff_step": 8,
+              "previous_use": 30.601157095381332,
+              "previous_limit": 150.0,
+              "price": 1.6224046283815252,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 8,
+              "information_cutoff_step": 8,
+              "previous_use": 24.602473438709403,
+              "previous_limit": 100.0,
+              "price": 2.246024734387094,
+              "capacity": 100.0
+            },
+            {
+              "step": 8,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 8,
+              "effective_step": 9,
+              "electric_share_before": 0.7214285714285714,
+              "electric_share_next": 0.8357142857142857,
+              "share_change": 0.11428571428571432,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 1.756729657291935,
+              "fuel_cost_per_service": 2.163206171175367,
+              "saving_per_full_share_per_step": 32.68396220137593,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 8,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 8,
+              "effective_step": 9,
+              "electric_share_before": 0.6,
+              "electric_share_next": 0.7,
+              "share_change": 0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 1.2648453532501933,
+              "fuel_cost_per_service": 3.7433745573118236,
+              "saving_per_full_share_per_step": 123.78523628728337,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 8,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 8,
+              "observed_generation_price": 3.0040077139692087,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -20.973525002540704,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 8,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 8,
+              "observed_generation_price": 3.0040077139692087,
+              "observed_variable_cost": 3.0040077139692087,
+              "expected_sales_fraction": 0.7181292856084236,
+              "npv_per_capacity_unit": -18.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 8,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 8,
+              "observed_generation_price": 3.0040077139692087,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 12.707244772608533,
+              "capacity_ordered": 5.0,
+              "investment": 80.0,
+              "budget": 80,
+              "online_step": 10,
+              "reason": "positive_npv"
+            }
+          ]
+        }
+      ],
+      "final_projects": {
+        "coal": [
+          {
+            "capacity_units": 16,
+            "online_step": 0,
+            "retirement_step": 7
+          },
+          {
+            "capacity_units": 2.5,
+            "online_step": 9,
+            "retirement_step": 21
+          }
+        ],
+        "gas": [
+          {
+            "capacity_units": 8,
+            "online_step": 0,
+            "retirement_step": 12
+          },
+          {
+            "capacity_units": 2.5,
+            "online_step": 8,
+            "retirement_step": 18
+          }
+        ],
+        "renewable": [
+          {
+            "capacity_units": 14,
+            "online_step": 0,
+            "retirement_step": 15
+          },
+          {
+            "capacity_units": 5.0,
+            "online_step": 4,
+            "retirement_step": 19
+          },
+          {
+            "capacity_units": 5.0,
+            "online_step": 5,
+            "retirement_step": 20
+          },
+          {
+            "capacity_units": 5.0,
+            "online_step": 6,
+            "retirement_step": 21
+          },
+          {
+            "capacity_units": 5.0,
+            "online_step": 7,
+            "retirement_step": 22
+          },
+          {
+            "capacity_units": 5.0,
+            "online_step": 8,
+            "retirement_step": 23
+          },
+          {
+            "capacity_units": 5.0,
+            "online_step": 9,
+            "retirement_step": 24
+          },
+          {
+            "capacity_units": 5.0,
+            "online_step": 10,
+            "retirement_step": 25
+          }
+        ]
+      },
+      "national_forecast": null,
+      "national_co2_total": null
+    },
+    "frozen_equipment": {
+      "mode": "synthetic",
+      "warning": "完全合成的机制验证案例；数值和步号不对应中国观测、年份、2030/2060预测或正式情景。",
+      "mechanisms": {
+        "substitution": false,
+        "investment": true
+      },
+      "rows": [
+        {
+          "step": 1,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.5,
+            "oil": 2.0
+          },
+          "electricity_price_delivered": 0.10526315789473685,
+          "generation_price": 0.1,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "renewable": 8.035087719298245
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 2.8,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 79.33333333333333,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 79.33333333333333,
+              "direct_served": 79.33333333333333,
+              "generation_input": 0.0,
+              "total_burned": 79.33333333333333,
+              "emissions": 39.666666666666664
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 32.5,
+              "supply_limit": 100.0,
+              "direct_requested": 67.5,
+              "direct_served": 67.5,
+              "generation_input": 0.0,
+              "total_burned": 67.5,
+              "emissions": 54.0
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 70.0,
+              "electric_share": 0.15,
+              "electricity": 5.833333333333333,
+              "direct_fuel": 79.33333333333333,
+              "fuel": "gas",
+              "direct_fuel_served": 79.33333333333333,
+              "electricity_served": 5.833333333333332,
+              "service_served": 70.0,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 45.0,
+              "electric_share": 0.1,
+              "electricity": 1.8,
+              "direct_fuel": 67.5,
+              "fuel": "oil",
+              "direct_fuel_served": 67.5,
+              "electricity_served": 1.7999999999999998,
+              "service_served": 45.0,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 7.633333333333333,
+          "electricity_served": 7.633333333333332,
+          "unserved_electricity": 8.881784197001252e-16,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.40175438596491286,
+          "thermal_conversion_loss": 0.0,
+          "energy_related_synthetic_emissions": 93.66666666666666,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 1,
+              "information_cutoff_step": 1,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 1,
+              "information_cutoff_step": 1,
+              "previous_use": 0.0,
+              "previous_limit": 150.0,
+              "price": 1.5,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 1,
+              "information_cutoff_step": 1,
+              "previous_use": 0.0,
+              "previous_limit": 100.0,
+              "price": 2.0,
+              "capacity": 100.0
+            },
+            {
+              "step": 1,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 1,
+              "effective_step": 2,
+              "electric_share_before": 0.15,
+              "electric_share_next": 0.15,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 4,
+              "electric_cost_per_service": 0.058479532163742694,
+              "fuel_cost_per_service": 2.0,
+              "saving_per_full_share_per_step": 135.906432748538,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 1,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 1,
+              "effective_step": 2,
+              "electric_share_before": 0.1,
+              "electric_share_next": 0.1,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 3,
+              "electric_cost_per_service": 0.04210526315789474,
+              "fuel_cost_per_service": 3.3333333333333335,
+              "saving_per_full_share_per_step": 148.10526315789474,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 1,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 1,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -30.778839716101682,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 1,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 1,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.8,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -26.339473723519603,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 1,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 1,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 0.5739348370927317,
+              "npv_per_capacity_unit": -16.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.8173333333333332,
+            "oil": 2.675
+          },
+          "electricity_price_delivered": 0.10526315789473685,
+          "generation_price": 0.1,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "renewable": 8.186315789473685
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 3.328888888888889,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 80.92,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 80.92,
+              "direct_served": 80.92,
+              "generation_input": 0.0,
+              "total_burned": 80.92,
+              "emissions": 40.46
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 33.5125,
+              "supply_limit": 100.0,
+              "direct_requested": 68.5125,
+              "direct_served": 68.5125,
+              "generation_input": 0.0,
+              "total_burned": 68.5125,
+              "emissions": 54.81
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 71.4,
+              "electric_share": 0.15,
+              "electricity": 5.95,
+              "direct_fuel": 80.92,
+              "fuel": "gas",
+              "direct_fuel_served": 80.92,
+              "electricity_served": 5.95,
+              "service_served": 71.4,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 45.675,
+              "electric_share": 0.1,
+              "electricity": 1.827,
+              "direct_fuel": 68.5125,
+              "fuel": "oil",
+              "direct_fuel_served": 68.5125,
+              "electricity_served": 1.827,
+              "service_served": 45.675000000000004,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 7.777,
+          "electricity_served": 7.777,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.40931578947368497,
+          "thermal_conversion_loss": 0.0,
+          "energy_related_synthetic_emissions": 95.27000000000001,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 2,
+              "information_cutoff_step": 2,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 2,
+              "information_cutoff_step": 2,
+              "previous_use": 79.33333333333333,
+              "previous_limit": 150.0,
+              "price": 1.8173333333333332,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 2,
+              "information_cutoff_step": 2,
+              "previous_use": 67.5,
+              "previous_limit": 100.0,
+              "price": 2.675,
+              "capacity": 100.0
+            },
+            {
+              "step": 2,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 2,
+              "effective_step": 3,
+              "electric_share_before": 0.15,
+              "electric_share_next": 0.15,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 4,
+              "electric_cost_per_service": 0.058479532163742694,
+              "fuel_cost_per_service": 2.423111111111111,
+              "saving_per_full_share_per_step": 168.83469473684212,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 2,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 2,
+              "effective_step": 3,
+              "electric_share_before": 0.1,
+              "electric_share_next": 0.1,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 3,
+              "electric_cost_per_service": 0.04210526315789474,
+              "fuel_cost_per_service": 4.458333333333333,
+              "saving_per_full_share_per_step": 201.71121710526313,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 2,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 2,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -30.778839716101682,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 2,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 2,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 3.328888888888889,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -27.973049646316035,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 2,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 2,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 0.5847368421052632,
+              "npv_per_capacity_unit": -16.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.8236800000000002,
+            "oil": 2.685125
+          },
+          "electricity_price_delivered": 0.10526315789473685,
+          "generation_price": 0.1,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "renewable": 8.340426315789474
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 3.339466666666667,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 82.53840000000001,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 82.53840000000001,
+              "direct_served": 82.53840000000001,
+              "generation_input": 0.0,
+              "total_burned": 82.53840000000001,
+              "emissions": 41.269200000000005
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 34.54018749999999,
+              "supply_limit": 100.0,
+              "direct_requested": 69.54018749999999,
+              "direct_served": 69.54018749999999,
+              "generation_input": 0.0,
+              "total_burned": 69.54018749999999,
+              "emissions": 55.632149999999996
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 72.828,
+              "electric_share": 0.15,
+              "electricity": 6.069,
+              "direct_fuel": 82.53840000000001,
+              "fuel": "gas",
+              "direct_fuel_served": 82.53840000000001,
+              "electricity_served": 6.069000000000002,
+              "service_served": 72.828,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 46.36012499999999,
+              "electric_share": 0.1,
+              "electricity": 1.8544049999999994,
+              "direct_fuel": 69.54018749999999,
+              "fuel": "oil",
+              "direct_fuel_served": 69.54018749999999,
+              "electricity_served": 1.8544049999999999,
+              "service_served": 46.36012499999999,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 7.923404999999999,
+          "electricity_served": 7.923405,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.41702131578947377,
+          "thermal_conversion_loss": 0.0,
+          "energy_related_synthetic_emissions": 96.90135000000001,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 1.7763568394002505e-15
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 3,
+              "information_cutoff_step": 3,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 3,
+              "information_cutoff_step": 3,
+              "previous_use": 80.92,
+              "previous_limit": 150.0,
+              "price": 1.8236800000000002,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 3,
+              "information_cutoff_step": 3,
+              "previous_use": 68.5125,
+              "previous_limit": 100.0,
+              "price": 2.685125,
+              "capacity": 100.0
+            },
+            {
+              "step": 3,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 3,
+              "effective_step": 4,
+              "electric_share_before": 0.15,
+              "electric_share_next": 0.15,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 4,
+              "electric_cost_per_service": 0.058479532163742694,
+              "fuel_cost_per_service": 2.4315733333333336,
+              "saving_per_full_share_per_step": 172.827675351579,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 3,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 3,
+              "effective_step": 4,
+              "electric_share_before": 0.1,
+              "electric_share_next": 0.1,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 3,
+              "electric_cost_per_service": 0.04210526315789474,
+              "fuel_cost_per_service": 4.475208333333334,
+              "saving_per_full_share_per_step": 205.51921247121706,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 3,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 3,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -30.778839716101682,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 3,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 3,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 3.339466666666667,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -28.005721164771966,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 3,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 3,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 0.5957447368421053,
+              "npv_per_capacity_unit": -16.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.8301536,
+            "oil": 2.695401875
+          },
+          "electricity_price_delivered": 0.10526315789473685,
+          "generation_price": 0.1,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "renewable": 8.497474815789474
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 3.350256,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 84.18916800000001,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 84.18916800000001,
+              "direct_served": 84.18916800000001,
+              "generation_input": 0.0,
+              "total_burned": 84.18916800000001,
+              "emissions": 42.094584000000005
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 35.58329031249998,
+              "supply_limit": 100.0,
+              "direct_requested": 70.58329031249998,
+              "direct_served": 70.58329031249998,
+              "generation_input": 0.0,
+              "total_burned": 70.58329031249998,
+              "emissions": 56.46663224999999
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 74.28456000000001,
+              "electric_share": 0.15,
+              "electricity": 6.19038,
+              "direct_fuel": 84.18916800000001,
+              "fuel": "gas",
+              "direct_fuel_served": 84.18916800000001,
+              "electricity_served": 6.19038,
+              "service_served": 74.28456000000001,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 47.055526874999984,
+              "electric_share": 0.1,
+              "electricity": 1.8822210749999992,
+              "direct_fuel": 70.58329031249998,
+              "fuel": "oil",
+              "direct_fuel_served": 70.58329031249998,
+              "electricity_served": 1.8822210749999992,
+              "service_served": 47.055526874999984,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 8.072601075,
+          "electricity_served": 8.072601075,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.42487374078947404,
+          "thermal_conversion_loss": 0.0,
+          "energy_related_synthetic_emissions": 98.56121625,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 4,
+              "information_cutoff_step": 4,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 4,
+              "information_cutoff_step": 4,
+              "previous_use": 82.53840000000001,
+              "previous_limit": 150.0,
+              "price": 1.8301536,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 4,
+              "information_cutoff_step": 4,
+              "previous_use": 69.54018749999999,
+              "previous_limit": 100.0,
+              "price": 2.695401875,
+              "capacity": 100.0
+            },
+            {
+              "step": 4,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 4,
+              "effective_step": 5,
+              "electric_share_before": 0.15,
+              "electric_share_next": 0.15,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 4,
+              "electric_cost_per_service": 0.058479532163742694,
+              "fuel_cost_per_service": 2.4402048,
+              "saving_per_full_share_per_step": 176.92541356209858,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 4,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 4,
+              "effective_step": 5,
+              "electric_share_before": 0.1,
+              "electric_share_next": 0.1,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 3,
+              "electric_cost_per_service": 0.04210526315789474,
+              "fuel_cost_per_service": 4.492336458333334,
+              "saving_per_full_share_per_step": 209.40797360454116,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 4,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 4,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -30.778839716101682,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 4,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 4,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 3.350256,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -28.03904611359701,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 4,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 4,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 0.6069624868421053,
+              "npv_per_capacity_unit": -16.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.836756672,
+            "oil": 2.7058329031249997
+          },
+          "electricity_price_delivered": 0.10526315789473685,
+          "generation_price": 0.1,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "renewable": 8.657517885394736
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 3.36126112,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 85.87295136,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 85.87295136,
+              "direct_served": 85.87295136,
+              "generation_input": 0.0,
+              "total_burned": 85.87295136,
+              "emissions": 42.93647568
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 36.64203966718749,
+              "supply_limit": 100.0,
+              "direct_requested": 71.64203966718749,
+              "direct_served": 71.64203966718749,
+              "generation_input": 0.0,
+              "total_burned": 71.64203966718749,
+              "emissions": 57.31363173374999
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 75.7702512,
+              "electric_share": 0.15,
+              "electricity": 6.3141876,
+              "direct_fuel": 85.87295136,
+              "fuel": "gas",
+              "direct_fuel_served": 85.87295136,
+              "electricity_served": 6.3141876,
+              "service_served": 75.7702512,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 47.761359778124984,
+              "electric_share": 0.1,
+              "electricity": 1.9104543911249994,
+              "direct_fuel": 71.64203966718749,
+              "fuel": "oil",
+              "direct_fuel_served": 71.64203966718749,
+              "electricity_served": 1.9104543911249994,
+              "service_served": 47.76135977812499,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 8.224641991124999,
+          "electricity_served": 8.224641991124999,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.4328758942697366,
+          "thermal_conversion_loss": 0.0,
+          "energy_related_synthetic_emissions": 100.25010741374999,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 5,
+              "information_cutoff_step": 5,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 5,
+              "information_cutoff_step": 5,
+              "previous_use": 84.18916800000001,
+              "previous_limit": 150.0,
+              "price": 1.836756672,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 5,
+              "information_cutoff_step": 5,
+              "previous_use": 70.58329031249998,
+              "previous_limit": 100.0,
+              "price": 2.7058329031249997,
+              "capacity": 100.0
+            },
+            {
+              "step": 5,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 5,
+              "effective_step": 6,
+              "electric_share_before": 0.15,
+              "electric_share_next": 0.15,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 4,
+              "electric_cost_per_service": 0.058479532163742694,
+              "fuel_cost_per_service": 2.449008896,
+              "saving_per_full_share_per_step": 181.13101039884944,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 5,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 5,
+              "effective_step": 6,
+              "electric_share_before": 0.1,
+              "electric_share_next": 0.1,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 3,
+              "electric_cost_per_service": 0.04210526315789474,
+              "fuel_cost_per_service": 4.509721505208333,
+              "saving_per_full_share_per_step": 213.37942668716568,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 5,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 5,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -30.778839716101682,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 5,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 5,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 3.36126112,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -28.07303756139856,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 5,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 5,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 0.6183941346710525,
+              "npv_per_capacity_unit": -16.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.8434918054399998,
+            "oil": 2.7164203966718747
+          },
+          "electricity_price_delivered": 0.10526315789473685,
+          "generation_price": 0.1,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "renewable": 8.820613219991447
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 3.3724863424,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 87.59041038720001,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 87.59041038720001,
+              "direct_served": 87.59041038720001,
+              "generation_input": 0.0,
+              "total_burned": 87.59041038720001,
+              "emissions": 43.795205193600005
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 37.716670262195294,
+              "supply_limit": 100.0,
+              "direct_requested": 72.7166702621953,
+              "direct_served": 72.7166702621953,
+              "generation_input": 0.0,
+              "total_burned": 72.7166702621953,
+              "emissions": 58.173336209756236
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 77.28565622400001,
+              "electric_share": 0.15,
+              "electricity": 6.440471352,
+              "direct_fuel": 87.59041038720001,
+              "fuel": "gas",
+              "direct_fuel_served": 87.59041038720001,
+              "electricity_served": 6.440471352,
+              "service_served": 77.28565622400001,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 48.477780174796855,
+              "electric_share": 0.1,
+              "electricity": 1.9391112069918743,
+              "direct_fuel": 72.7166702621953,
+              "fuel": "oil",
+              "direct_fuel_served": 72.7166702621953,
+              "electricity_served": 1.9391112069918743,
+              "service_served": 48.477780174796855,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 8.379582558991874,
+          "electricity_served": 8.379582558991874,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.4410306609995729,
+          "thermal_conversion_loss": 0.0,
+          "energy_related_synthetic_emissions": 101.96854140335624,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 6,
+              "information_cutoff_step": 6,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 6,
+              "information_cutoff_step": 6,
+              "previous_use": 85.87295136,
+              "previous_limit": 150.0,
+              "price": 1.8434918054399998,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 6,
+              "information_cutoff_step": 6,
+              "previous_use": 71.64203966718749,
+              "previous_limit": 100.0,
+              "price": 2.7164203966718747,
+              "capacity": 100.0
+            },
+            {
+              "step": 6,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 6,
+              "effective_step": 7,
+              "electric_share_before": 0.15,
+              "electric_share_next": 0.15,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 4,
+              "electric_cost_per_service": 0.058479532163742694,
+              "fuel_cost_per_service": 2.45798907392,
+              "saving_per_full_share_per_step": 185.4476695503819,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 6,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 6,
+              "effective_step": 7,
+              "electric_share_before": 0.1,
+              "electric_share_next": 0.1,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 3,
+              "electric_cost_per_service": 0.04210526315789474,
+              "fuel_cost_per_service": 4.527367327786458,
+              "saving_per_full_share_per_step": 217.43554839541898,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 6,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 6,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -30.778839716101682,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 6,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 6,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 3.3724863424,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -28.10770883815614,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 6,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 6,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 0.6300438014279605,
+              "npv_per_capacity_unit": -16.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.8503616415488,
+            "oil": 2.727166702621953
+          },
+          "electricity_price_delivered": 0.10526315789473685,
+          "generation_price": 0.1,
+          "capacity_at_start": {
+            "coal": 0.0,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "renewable": 8.986819635933424
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 3.383936069248,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 89.34221859494401,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 89.34221859494401,
+              "direct_served": 89.34221859494401,
+              "generation_input": 0.0,
+              "total_burned": 89.34221859494401,
+              "emissions": 44.67110929747201
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 38.8074203161282,
+              "supply_limit": 100.0,
+              "direct_requested": 73.8074203161282,
+              "direct_served": 73.8074203161282,
+              "generation_input": 0.0,
+              "total_burned": 73.8074203161282,
+              "emissions": 59.045936252902564
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 78.83136934848001,
+              "electric_share": 0.15,
+              "electricity": 6.56928077904,
+              "direct_fuel": 89.34221859494401,
+              "fuel": "gas",
+              "direct_fuel_served": 89.34221859494401,
+              "electricity_served": 6.56928077904,
+              "service_served": 78.83136934848001,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 49.2049468774188,
+              "electric_share": 0.1,
+              "electricity": 1.968197875096752,
+              "direct_fuel": 73.8074203161282,
+              "fuel": "oil",
+              "direct_fuel_served": 73.8074203161282,
+              "electricity_served": 1.968197875096752,
+              "service_served": 49.2049468774188,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 8.537478654136752,
+          "electricity_served": 8.537478654136752,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.4493409817966718,
+          "thermal_conversion_loss": 0.0,
+          "energy_related_synthetic_emissions": 103.71704555037456,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 7,
+              "information_cutoff_step": 7,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 7,
+              "information_cutoff_step": 7,
+              "previous_use": 87.59041038720001,
+              "previous_limit": 150.0,
+              "price": 1.8503616415488,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 7,
+              "information_cutoff_step": 7,
+              "previous_use": 72.7166702621953,
+              "previous_limit": 100.0,
+              "price": 2.727166702621953,
+              "capacity": 100.0
+            },
+            {
+              "step": 7,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 7,
+              "effective_step": 8,
+              "electric_share_before": 0.15,
+              "electric_share_next": 0.15,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 4,
+              "electric_cost_per_service": 0.058479532163742694,
+              "fuel_cost_per_service": 2.4671488553984,
+              "saving_per_full_share_per_step": 189.87870105826465,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 7,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 7,
+              "effective_step": 8,
+              "electric_share_before": 0.1,
+              "electric_share_next": 0.1,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 3,
+              "electric_cost_per_service": 0.04210526315789474,
+              "fuel_cost_per_service": 4.545277837703256,
+              "saving_per_full_share_per_step": 221.5783673103537,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 7,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 7,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -30.778839716101682,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 7,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 7,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 3.383936069248,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -28.14307354044887,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 7,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 7,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 0.6419156882809588,
+              "npv_per_capacity_unit": -16.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.857368874379776,
+            "oil": 2.738074203161282
+          },
+          "electricity_price_delivered": 0.10526315789473685,
+          "generation_price": 0.1,
+          "capacity_at_start": {
+            "coal": 0.0,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "renewable": 9.156197092467371
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 3.39561479063296,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 90,
+              "imports": 1.1290629668428807,
+              "supply_limit": 150.0,
+              "direct_requested": 91.12906296684288,
+              "direct_served": 91.12906296684288,
+              "generation_input": 0.0,
+              "total_burned": 91.12906296684288,
+              "emissions": 45.56453148342144
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 39.91453162087012,
+              "supply_limit": 100.0,
+              "direct_requested": 74.91453162087012,
+              "direct_served": 74.91453162087012,
+              "generation_input": 0.0,
+              "total_burned": 74.91453162087012,
+              "emissions": 59.9316252966961
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 80.4079967354496,
+              "electric_share": 0.15,
+              "electricity": 6.7006663946208,
+              "direct_fuel": 91.12906296684288,
+              "fuel": "gas",
+              "direct_fuel_served": 91.12906296684288,
+              "electricity_served": 6.7006663946208,
+              "service_served": 80.4079967354496,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 49.94302108058008,
+              "electric_share": 0.1,
+              "electricity": 1.9977208432232032,
+              "direct_fuel": 74.91453162087012,
+              "fuel": "oil",
+              "direct_fuel_served": 74.91453162087012,
+              "electricity_served": 1.9977208432232032,
+              "service_served": 49.94302108058008,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 8.698387237844003,
+          "electricity_served": 8.698387237844003,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.45780985462336865,
+          "thermal_conversion_loss": 0.0,
+          "energy_related_synthetic_emissions": 105.49615678011753,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 8,
+              "information_cutoff_step": 8,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 8,
+              "information_cutoff_step": 8,
+              "previous_use": 89.34221859494401,
+              "previous_limit": 150.0,
+              "price": 1.857368874379776,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 8,
+              "information_cutoff_step": 8,
+              "previous_use": 73.8074203161282,
+              "previous_limit": 100.0,
+              "price": 2.738074203161282,
+              "capacity": 100.0
+            },
+            {
+              "step": 8,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 8,
+              "effective_step": 9,
+              "electric_share_before": 0.15,
+              "electric_share_next": 0.15,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 4,
+              "electric_cost_per_service": 0.058479532163742694,
+              "fuel_cost_per_service": 2.476491832506368,
+              "saving_per_full_share_per_step": 194.42752515222682,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 8,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 8,
+              "effective_step": 9,
+              "electric_share_before": 0.1,
+              "electric_share_next": 0.1,
+              "share_change": 0.0,
+              "investment": 0.0,
+              "budget": 3,
+              "electric_cost_per_service": 0.04210526315789474,
+              "fuel_cost_per_service": 4.563457005268804,
+              "saving_per_full_share_per_step": 225.8099653689626,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 8,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 8,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -30.778839716101682,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 8,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 8,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 3.39561479063296,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -28.179145536787455,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            },
+            {
+              "step": 8,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 8,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 0.6540140780333836,
+              "npv_per_capacity_unit": -16.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "nonpositive_npv"
+            }
+          ]
+        }
+      ],
+      "final_projects": {
+        "coal": [
+          {
+            "capacity_units": 16,
+            "online_step": 0,
+            "retirement_step": 7
+          }
+        ],
+        "gas": [
+          {
+            "capacity_units": 8,
+            "online_step": 0,
+            "retirement_step": 12
+          }
+        ],
+        "renewable": [
+          {
+            "capacity_units": 14,
+            "online_step": 0,
+            "retirement_step": 15
+          }
+        ]
+      },
+      "national_forecast": null,
+      "national_co2_total": null
+    },
+    "frozen_generation_investment": {
+      "mode": "synthetic",
+      "warning": "完全合成的机制验证案例；数值和步号不对应中国观测、年份、2030/2060预测或正式情景。",
+      "mechanisms": {
+        "substitution": true,
+        "investment": false
+      },
+      "rows": [
+        {
+          "step": 1,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.5,
+            "oil": 2.0
+          },
+          "electricity_price_delivered": 0.10526315789473685,
+          "generation_price": 0.1,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "renewable": 8.035087719298245
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 2.8,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 79.33333333333333,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 79.33333333333333,
+              "direct_served": 79.33333333333333,
+              "generation_input": 0.0,
+              "total_burned": 79.33333333333333,
+              "emissions": 39.666666666666664
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 32.5,
+              "supply_limit": 100.0,
+              "direct_requested": 67.5,
+              "direct_served": 67.5,
+              "generation_input": 0.0,
+              "total_burned": 67.5,
+              "emissions": 54.0
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 70.0,
+              "electric_share": 0.15,
+              "electricity": 5.833333333333333,
+              "direct_fuel": 79.33333333333333,
+              "fuel": "gas",
+              "direct_fuel_served": 79.33333333333333,
+              "electricity_served": 5.833333333333332,
+              "service_served": 70.0,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 45.0,
+              "electric_share": 0.1,
+              "electricity": 1.8,
+              "direct_fuel": 67.5,
+              "fuel": "oil",
+              "direct_fuel_served": 67.5,
+              "electricity_served": 1.7999999999999998,
+              "service_served": 45.0,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 7.633333333333333,
+          "electricity_served": 7.633333333333332,
+          "unserved_electricity": 8.881784197001252e-16,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.40175438596491286,
+          "thermal_conversion_loss": 0.0,
+          "energy_related_synthetic_emissions": 93.66666666666666,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 1,
+              "information_cutoff_step": 1,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 1,
+              "information_cutoff_step": 1,
+              "previous_use": 0.0,
+              "previous_limit": 150.0,
+              "price": 1.5,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 1,
+              "information_cutoff_step": 1,
+              "previous_use": 0.0,
+              "previous_limit": 100.0,
+              "price": 2.0,
+              "capacity": 100.0
+            },
+            {
+              "step": 1,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 1,
+              "effective_step": 2,
+              "electric_share_before": 0.15,
+              "electric_share_next": 0.2642857142857143,
+              "share_change": 0.1142857142857143,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 0.058479532163742694,
+              "fuel_cost_per_service": 2.0,
+              "saving_per_full_share_per_step": 135.906432748538,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 1,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 1,
+              "effective_step": 2,
+              "electric_share_before": 0.1,
+              "electric_share_next": 0.2,
+              "share_change": 0.1,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 0.04210526315789474,
+              "fuel_cost_per_service": 3.3333333333333335,
+              "saving_per_full_share_per_step": 148.10526315789474,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 1,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 1,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -30.778839716101682,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 1,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 1,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 2.8,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -26.339473723519603,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 1,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 1,
+              "observed_generation_price": 0.1,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 0.5739348370927317,
+              "npv_per_capacity_unit": -16.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.8173333333333332,
+            "oil": 2.675
+          },
+          "electricity_price_delivered": 2.842105263157895,
+          "generation_price": 2.7,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.8814035087719319,
+            "gas": 0.0,
+            "renewable": 14
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 3.328888888888889,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 2.2035087719298296,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 2.2035087719298296,
+              "total_burned": 2.2035087719298296,
+              "emissions": 2.2035087719298296
+            },
+            "gas": {
+              "domestic_production": 70.04,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 70.04,
+              "direct_served": 70.04,
+              "generation_input": 0.0,
+              "total_burned": 70.04,
+              "emissions": 35.02
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 25.9,
+              "supply_limit": 100.0,
+              "direct_requested": 60.9,
+              "direct_served": 60.9,
+              "generation_input": 0.0,
+              "total_burned": 60.9,
+              "emissions": 48.72
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 71.4,
+              "electric_share": 0.2642857142857143,
+              "electricity": 10.483333333333334,
+              "direct_fuel": 70.04,
+              "fuel": "gas",
+              "direct_fuel_served": 70.04,
+              "electricity_served": 10.483333333333334,
+              "service_served": 71.4,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 45.675,
+              "electric_share": 0.2,
+              "electricity": 3.654,
+              "direct_fuel": 60.9,
+              "fuel": "oil",
+              "direct_fuel_served": 60.9,
+              "electricity_served": 3.654,
+              "service_served": 45.675,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 14.137333333333334,
+          "electricity_served": 14.137333333333334,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 0.7440701754385977,
+          "thermal_conversion_loss": 1.3221052631578978,
+          "energy_related_synthetic_emissions": 85.94350877192983,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 2,
+              "information_cutoff_step": 2,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 2,
+              "information_cutoff_step": 2,
+              "previous_use": 79.33333333333333,
+              "previous_limit": 150.0,
+              "price": 1.8173333333333332,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 2,
+              "information_cutoff_step": 2,
+              "previous_use": 67.5,
+              "previous_limit": 100.0,
+              "price": 2.675,
+              "capacity": 100.0
+            },
+            {
+              "step": 2,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 2,
+              "effective_step": 3,
+              "electric_share_before": 0.2642857142857143,
+              "electric_share_next": 0.37857142857142856,
+              "share_change": 0.11428571428571427,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 1.5789473684210529,
+              "fuel_cost_per_service": 2.423111111111111,
+              "saving_per_full_share_per_step": 60.27329122807016,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 2,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 2,
+              "effective_step": 3,
+              "electric_share_before": 0.2,
+              "electric_share_next": 0.30000000000000004,
+              "share_change": 0.10000000000000003,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 1.136842105263158,
+              "fuel_cost_per_service": 4.458333333333333,
+              "saving_per_full_share_per_step": 151.70911184210524,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 2,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 2,
+              "observed_generation_price": 2.7,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -22.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 2,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 2,
+              "observed_generation_price": 2.7,
+              "observed_variable_cost": 3.328888888888889,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -19.942445319963824,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 2,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 2,
+              "observed_generation_price": 2.7,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 9.702010380256723,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0031478696741856,
+            "gas": 1.7801600000000002,
+            "oil": 2.609
+          },
+          "electricity_price_delivered": 2.850389130721541,
+          "generation_price": 2.707869674185464,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 7.979173684210526,
+            "gas": 0.0,
+            "renewable": 14
+          },
+          "generation_variable_cost": {
+            "coal": 2.707869674185464,
+            "gas": 3.2669333333333337,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 19.947934210526313,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 19.947934210526313,
+              "total_burned": 19.947934210526313,
+              "emissions": 19.947934210526313
+            },
+            "gas": {
+              "domestic_production": 60.3432,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 60.3432,
+              "direct_served": 60.3432,
+              "generation_input": 0.0,
+              "total_burned": 60.3432,
+              "emissions": 30.1716
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 19.086812499999986,
+              "supply_limit": 100.0,
+              "direct_requested": 54.086812499999986,
+              "direct_served": 54.086812499999986,
+              "generation_input": 0.0,
+              "total_burned": 54.086812499999986,
+              "emissions": 43.26944999999999
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 72.828,
+              "electric_share": 0.37857142857142856,
+              "electricity": 15.316999999999998,
+              "direct_fuel": 60.3432,
+              "fuel": "gas",
+              "direct_fuel_served": 60.3432,
+              "electricity_served": 15.316999999999998,
+              "service_served": 72.828,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 46.36012499999999,
+              "electric_share": 0.30000000000000004,
+              "electricity": 5.563215,
+              "direct_fuel": 54.086812499999986,
+              "fuel": "oil",
+              "direct_fuel_served": 54.086812499999986,
+              "electricity_served": 5.563215,
+              "service_served": 46.36012499999999,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 20.880215,
+          "electricity_served": 20.880215,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 1.0989586842105261,
+          "thermal_conversion_loss": 11.968760526315787,
+          "energy_related_synthetic_emissions": 93.3889842105263,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 3,
+              "information_cutoff_step": 3,
+              "previous_use": 2.2035087719298296,
+              "previous_limit": 210.0,
+              "price": 1.0031478696741856,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 3,
+              "information_cutoff_step": 3,
+              "previous_use": 70.04,
+              "previous_limit": 150.0,
+              "price": 1.7801600000000002,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 3,
+              "information_cutoff_step": 3,
+              "previous_use": 60.9,
+              "previous_limit": 100.0,
+              "price": 2.609,
+              "capacity": 100.0
+            },
+            {
+              "step": 3,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 3,
+              "effective_step": 4,
+              "electric_share_before": 0.37857142857142856,
+              "electric_share_next": 0.4928571428571428,
+              "share_change": 0.11428571428571427,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 1.5835495170675227,
+              "fuel_cost_per_service": 2.373546666666667,
+              "saving_per_full_share_per_step": 57.533912411006476,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 3,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 3,
+              "effective_step": 4,
+              "electric_share_before": 0.30000000000000004,
+              "electric_share_next": 0.4,
+              "share_change": 0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 1.1401556522886165,
+              "fuel_cost_per_service": 4.348333333333334,
+              "saving_per_full_share_per_step": 148.7315183154432,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 3,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 3,
+              "observed_generation_price": 2.707869674185464,
+              "observed_variable_cost": 2.707869674185464,
+              "expected_sales_fraction": 0.49869835526315787,
+              "npv_per_capacity_unit": -22.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 3,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 3,
+              "observed_generation_price": 2.707869674185464,
+              "observed_variable_cost": 3.2669333333333337,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -19.726776553791993,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 3,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 3,
+              "observed_generation_price": 2.707869674185464,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 9.779805167796734,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0284970488721805,
+            "gas": 1.7413728000000002,
+            "oil": 2.540868125
+          },
+          "electricity_price_delivered": 2.917097497032054,
+          "generation_price": 2.771242622180451,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 15.335478210526315,
+            "gas": 0.0,
+            "renewable": 14
+          },
+          "generation_variable_cost": {
+            "coal": 2.771242622180451,
+            "gas": 3.2022880000000002,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 38.33869552631578,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 38.33869552631578,
+              "total_burned": 38.33869552631578,
+              "emissions": 38.33869552631578
+            },
+            "gas": {
+              "domestic_production": 50.230512000000004,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 50.230512000000004,
+              "direct_served": 50.230512000000004,
+              "generation_input": 0.0,
+              "total_burned": 50.230512000000004,
+              "emissions": 25.115256000000002
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 12.055526874999984,
+              "supply_limit": 100.0,
+              "direct_requested": 47.055526874999984,
+              "direct_served": 47.055526874999984,
+              "generation_input": 0.0,
+              "total_burned": 47.055526874999984,
+              "emissions": 37.644421499999986
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 74.28456000000001,
+              "electric_share": 0.4928571428571428,
+              "electricity": 20.33982,
+              "direct_fuel": 50.230512000000004,
+              "fuel": "gas",
+              "direct_fuel_served": 50.230512000000004,
+              "electricity_served": 20.33982,
+              "service_served": 74.28456,
+              "unserved_service": 1.4210854715202004e-14
+            },
+            "transport": {
+              "service": 47.055526874999984,
+              "electric_share": 0.4,
+              "electricity": 7.528884299999997,
+              "direct_fuel": 47.055526874999984,
+              "fuel": "oil",
+              "direct_fuel_served": 47.055526874999984,
+              "electricity_served": 7.528884299999997,
+              "service_served": 47.055526874999984,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 27.868704299999997,
+          "electricity_served": 27.868704299999997,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 1.4667739105263173,
+          "thermal_conversion_loss": 23.003217315789467,
+          "energy_related_synthetic_emissions": 101.09837302631577,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 4,
+              "information_cutoff_step": 4,
+              "previous_use": 19.947934210526313,
+              "previous_limit": 210.0,
+              "price": 1.0284970488721805,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 4,
+              "information_cutoff_step": 4,
+              "previous_use": 60.3432,
+              "previous_limit": 150.0,
+              "price": 1.7413728000000002,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 4,
+              "information_cutoff_step": 4,
+              "previous_use": 54.086812499999986,
+              "previous_limit": 100.0,
+              "price": 2.540868125,
+              "capacity": 100.0
+            },
+            {
+              "step": 4,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 4,
+              "effective_step": 5,
+              "electric_share_before": 0.4928571428571428,
+              "electric_share_next": 0.6071428571428571,
+              "share_change": 0.11428571428571427,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 1.6206097205733632,
+              "fuel_cost_per_service": 2.3218304,
+              "saving_per_full_share_per_step": 52.08986963410879,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 4,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 4,
+              "effective_step": 5,
+              "electric_share_before": 0.4,
+              "electric_share_next": 0.5,
+              "share_change": 0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 1.1668389988128216,
+              "fuel_cost_per_service": 4.2347802083333335,
+              "saving_per_full_share_per_step": 144.3635900355124,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 4,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 4,
+              "observed_generation_price": 2.771242622180451,
+              "observed_variable_cost": 2.771242622180451,
+              "expected_sales_fraction": 0.9584673881578947,
+              "npv_per_capacity_unit": -22.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 4,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 4,
+              "observed_generation_price": 2.771242622180451,
+              "observed_variable_cost": 3.2022880000000002,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": -19.33136725998915,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 4,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 4,
+              "observed_generation_price": 2.771242622180451,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 10.406271385948514,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.054769565037594,
+            "gas": 1.7009220479999998,
+            "oil": 2.47055526875
+          },
+          "electricity_price_delivered": 3.299863242105263,
+          "generation_price": 3.13487008,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 16,
+            "gas": 6.957576795394736,
+            "renewable": 14
+          },
+          "generation_variable_cost": {
+            "coal": 2.836923912593985,
+            "gas": 3.13487008,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 40.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 40.0,
+              "total_burned": 40.0,
+              "emissions": 40.0
+            },
+            "gas": {
+              "domestic_production": 51.2851405256579,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 39.689179200000005,
+              "direct_served": 39.689179200000005,
+              "generation_input": 11.595961325657894,
+              "total_burned": 51.2851405256579,
+              "emissions": 25.64257026282895
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 4.801133148437486,
+              "supply_limit": 100.0,
+              "direct_requested": 39.801133148437486,
+              "direct_served": 39.801133148437486,
+              "generation_input": 0.0,
+              "total_burned": 39.801133148437486,
+              "emissions": 31.84090651874999
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 75.7702512,
+              "electric_share": 0.6071428571428571,
+              "electricity": 25.557426,
+              "direct_fuel": 39.689179200000005,
+              "fuel": "gas",
+              "direct_fuel_served": 39.689179200000005,
+              "electricity_served": 25.557426,
+              "service_served": 75.7702512,
+              "unserved_service": 0.0
+            },
+            "transport": {
+              "service": 47.761359778124984,
+              "electric_share": 0.5,
+              "electricity": 9.552271955624997,
+              "direct_fuel": 39.801133148437486,
+              "fuel": "oil",
+              "direct_fuel_served": 39.801133148437486,
+              "electricity_served": 9.552271955624997,
+              "service_served": 47.761359778124984,
+              "unserved_service": 0.0
+            }
+          },
+          "electricity_requested": 35.109697955624995,
+          "electricity_served": 35.109697955624995,
+          "unserved_electricity": 0.0,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 1.8478788397697414,
+          "thermal_conversion_loss": 28.63838453026316,
+          "energy_related_synthetic_emissions": 97.48347678157894,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 5,
+              "information_cutoff_step": 5,
+              "previous_use": 38.33869552631578,
+              "previous_limit": 210.0,
+              "price": 1.054769565037594,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 5,
+              "information_cutoff_step": 5,
+              "previous_use": 50.230512000000004,
+              "previous_limit": 150.0,
+              "price": 1.7009220479999998,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 5,
+              "information_cutoff_step": 5,
+              "previous_use": 47.055526874999984,
+              "previous_limit": 100.0,
+              "price": 2.47055526875,
+              "capacity": 100.0
+            },
+            {
+              "step": 5,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 5,
+              "effective_step": 6,
+              "electric_share_before": 0.6071428571428571,
+              "electric_share_next": 0.7214285714285714,
+              "share_change": 0.11428571428571432,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 1.8332573567251462,
+              "fuel_cost_per_service": 2.267896064,
+              "saving_per_full_share_per_step": 32.93268403145893,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 5,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 5,
+              "effective_step": 6,
+              "electric_share_before": 0.5,
+              "electric_share_next": 0.6,
+              "share_change": 0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 1.3199452968421053,
+              "fuel_cost_per_service": 4.117592114583334,
+              "saving_per_full_share_per_step": 133.61941619426528,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 5,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 5,
+              "observed_generation_price": 3.13487008,
+              "observed_variable_cost": 2.836923912593985,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": -19.484979184919034,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 5,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 5,
+              "observed_generation_price": 3.13487008,
+              "observed_variable_cost": 3.13487008,
+              "expected_sales_fraction": 0.869697099424342,
+              "npv_per_capacity_unit": -18.0,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 5,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 5,
+              "observed_generation_price": 3.13487008,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 14.000870114957898,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0571428571428572,
+            "gas": 1.7051405621026314,
+            "oil": 2.398011331484375
+          },
+          "electricity_price_delivered": 26.315789473684212,
+          "generation_price": 25,
+          "capacity_at_start": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 16,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation_variable_cost": {
+            "coal": 2.842857142857143,
+            "gas": 3.141900936837719,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 40.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 40.0,
+              "total_burned": 40.0,
+              "emissions": 40.0
+            },
+            "gas": {
+              "domestic_production": 42.03943421653334,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 28.706100883200005,
+              "direct_served": 28.706100883200005,
+              "generation_input": 13.333333333333334,
+              "total_burned": 42.03943421653334,
+              "emissions": 21.01971710826667
+            },
+            "oil": {
+              "domestic_production": 32.31852011653124,
+              "imports": 0.0,
+              "supply_limit": 100.0,
+              "direct_requested": 32.31852011653124,
+              "direct_served": 32.31852011653124,
+              "generation_input": 0.0,
+              "total_burned": 32.31852011653124,
+              "emissions": 25.854816093224994
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 77.28565622400001,
+              "electric_share": 0.7214285714285714,
+              "electricity": 30.975600312,
+              "direct_fuel": 28.706100883200005,
+              "fuel": "gas",
+              "direct_fuel_served": 28.706100883200005,
+              "electricity_served": 26.24295118183335,
+              "service_served": 68.76688778970004,
+              "unserved_service": 8.518768434299972
+            },
+            "transport": {
+              "service": 48.477780174796855,
+              "electric_share": 0.6,
+              "electricity": 11.634667241951245,
+              "direct_fuel": 32.31852011653124,
+              "fuel": "oil",
+              "direct_fuel_served": 32.31852011653124,
+              "electricity_served": 9.857048818166653,
+              "service_served": 44.03373411533538,
+              "unserved_service": 4.444046059461478
+            }
+          },
+          "electricity_requested": 42.610267553951246,
+          "electricity_served": 36.1,
+          "unserved_electricity": 6.510267553951245,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 1.8999999999999986,
+          "thermal_conversion_loss": 29.333333333333336,
+          "energy_related_synthetic_emissions": 86.87453320149166,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 6,
+              "information_cutoff_step": 6,
+              "previous_use": 40.0,
+              "previous_limit": 210.0,
+              "price": 1.0571428571428572,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 6,
+              "information_cutoff_step": 6,
+              "previous_use": 51.2851405256579,
+              "previous_limit": 150.0,
+              "price": 1.7051405621026314,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 6,
+              "information_cutoff_step": 6,
+              "previous_use": 39.801133148437486,
+              "previous_limit": 100.0,
+              "price": 2.398011331484375,
+              "capacity": 100.0
+            },
+            {
+              "step": 6,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 6,
+              "effective_step": 7,
+              "electric_share_before": 0.7214285714285714,
+              "electric_share_next": 0.6071428571428571,
+              "share_change": -0.11428571428571432,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 14.619883040935672,
+              "fuel_cost_per_service": 2.2735207494701752,
+              "saving_per_full_share_per_step": 954.1967116751593,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 6,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 6,
+              "effective_step": 7,
+              "electric_share_before": 0.6,
+              "electric_share_next": 0.5,
+              "share_change": -0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 10.526315789473685,
+              "fuel_cost_per_service": 3.9966855524739584,
+              "saving_per_full_share_per_step": 316.54197925197946,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 6,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 6,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 2.842857142857143,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 165.0326977977158,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 6,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 6,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 3.141900936837719,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 150.78244702160214,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 6,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 6,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 230.14617633399703,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0571428571428572,
+            "gas": 1.6681577368661333,
+            "oil": 2.3231852011653125
+          },
+          "electricity_price_delivered": 26.315789473684212,
+          "generation_price": 25,
+          "capacity_at_start": {
+            "coal": 0.0,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation_variable_cost": {
+            "coal": 2.842857142857143,
+            "gas": 3.080262894776889,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 54.62595537301335,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 41.29262203968001,
+              "direct_served": 41.29262203968001,
+              "generation_input": 13.333333333333334,
+              "total_burned": 54.62595537301335,
+              "emissions": 27.312977686506674
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 6.004122397849002,
+              "supply_limit": 100.0,
+              "direct_requested": 41.004122397849,
+              "direct_served": 41.004122397849,
+              "generation_input": 0.0,
+              "total_burned": 41.004122397849,
+              "emissions": 32.803297918279206
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 78.83136934848001,
+              "electric_share": 0.6071428571428571,
+              "electricity": 26.589946010400002,
+              "direct_fuel": 41.29262203968001,
+              "fuel": "gas",
+              "direct_fuel_served": 41.29262203968001,
+              "electricity_served": 15.254339910050563,
+              "service_served": 58.427278367851024,
+              "unserved_service": 20.404090980628986
+            },
+            "transport": {
+              "service": 49.2049468774188,
+              "electric_share": 0.5,
+              "electricity": 9.84098937548376,
+              "direct_fuel": 41.004122397849,
+              "fuel": "oil",
+              "direct_fuel_served": 41.004122397849,
+              "electricity_served": 5.645660089949435,
+              "service_served": 38.716623663582986,
+              "unserved_service": 10.488323213835812
+            }
+          },
+          "electricity_requested": 36.430935385883764,
+          "electricity_served": 20.9,
+          "unserved_electricity": 15.530935385883765,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 1.1000000000000014,
+          "thermal_conversion_loss": 5.333333333333334,
+          "energy_related_synthetic_emissions": 60.11627560478588,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 7,
+              "information_cutoff_step": 7,
+              "previous_use": 40.0,
+              "previous_limit": 210.0,
+              "price": 1.0571428571428572,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 7,
+              "information_cutoff_step": 7,
+              "previous_use": 42.03943421653334,
+              "previous_limit": 150.0,
+              "price": 1.6681577368661333,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 7,
+              "information_cutoff_step": 7,
+              "previous_use": 32.31852011653124,
+              "previous_limit": 100.0,
+              "price": 2.3231852011653125,
+              "capacity": 100.0
+            },
+            {
+              "step": 7,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 7,
+              "effective_step": 8,
+              "electric_share_before": 0.6071428571428571,
+              "electric_share_next": 0.4928571428571428,
+              "share_change": -0.11428571428571427,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 14.619883040935672,
+              "fuel_cost_per_service": 2.224210315821511,
+              "saving_per_full_share_per_step": 977.1678549163543,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 7,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 7,
+              "effective_step": 8,
+              "electric_share_before": 0.5,
+              "electric_share_next": 0.4,
+              "share_change": -0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 10.526315789473685,
+              "fuel_cost_per_service": 3.871975335275521,
+              "saving_per_full_share_per_step": 327.42646855307953,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 7,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 7,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 2.842857142857143,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": 52.81307911908631,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 7,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 7,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 3.080262894776889,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 151.2583996439498,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 7,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 7,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 230.14617633399703,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "carbon_price": 0.0,
+          "event_revealed": {},
+          "fuel_prices_before_carbon": {
+            "coal": 1.0,
+            "gas": 1.7185038214920534,
+            "oil": 2.41004122397849
+          },
+          "electricity_price_delivered": 26.315789473684212,
+          "generation_price": 25,
+          "capacity_at_start": {
+            "coal": 0.0,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation": {
+            "coal": 0.0,
+            "gas": 8,
+            "renewable": 14
+          },
+          "generation_variable_cost": {
+            "coal": 2.7,
+            "gas": 3.164173035820089,
+            "renewable": 0.1
+          },
+          "fuel_flows": {
+            "coal": {
+              "domestic_production": 0.0,
+              "imports": 0.0,
+              "supply_limit": 210.0,
+              "direct_requested": 0,
+              "direct_served": 0,
+              "generation_input": 0.0,
+              "total_burned": 0.0,
+              "emissions": 0.0
+            },
+            "gas": {
+              "domestic_production": 67.70445493539926,
+              "imports": 0.0,
+              "supply_limit": 150.0,
+              "direct_requested": 54.37112160206592,
+              "direct_served": 54.37112160206592,
+              "generation_input": 13.333333333333334,
+              "total_burned": 67.70445493539926,
+              "emissions": 33.85222746769963
+            },
+            "oil": {
+              "domestic_production": 35,
+              "imports": 14.943021080580081,
+              "supply_limit": 100.0,
+              "direct_requested": 49.94302108058008,
+              "direct_served": 49.94302108058008,
+              "generation_input": 0.0,
+              "total_burned": 49.94302108058008,
+              "emissions": 39.954416864464065
+            }
+          },
+          "services": {
+            "industry": {
+              "service": 80.4079967354496,
+              "electric_share": 0.4928571428571428,
+              "electricity": 22.016475296611198,
+              "direct_fuel": 54.37112160206592,
+              "fuel": "gas",
+              "direct_fuel_served": 54.37112160206592,
+              "electricity_served": 15.3343831013961,
+              "service_served": 68.38023078406242,
+              "unserved_service": 12.027765951387181
+            },
+            "transport": {
+              "service": 49.94302108058008,
+              "electric_share": 0.4,
+              "electricity": 7.990883372892813,
+              "direct_fuel": 49.94302108058008,
+              "fuel": "oil",
+              "direct_fuel_served": 49.94302108058008,
+              "electricity_served": 5.565616898603901,
+              "service_served": 43.8798548948578,
+              "unserved_service": 6.063166185722281
+            }
+          },
+          "electricity_requested": 30.00735866950401,
+          "electricity_served": 20.9,
+          "unserved_electricity": 9.107358669504013,
+          "grid_transfer_limit": 100.0,
+          "grid_loss": 1.1000000000000014,
+          "thermal_conversion_loss": 5.333333333333334,
+          "energy_related_synthetic_emissions": 73.8066443321637,
+          "balance_residuals": {
+            "coal": 0.0,
+            "gas": 0.0,
+            "oil": 0.0,
+            "electricity": 0.0
+          },
+          "decisions": [
+            {
+              "actor": "coal_supplier",
+              "kind": "fuel_offer",
+              "step": 8,
+              "information_cutoff_step": 8,
+              "previous_use": 0.0,
+              "previous_limit": 210.0,
+              "price": 1.0,
+              "capacity": 210.0
+            },
+            {
+              "actor": "gas_supplier",
+              "kind": "fuel_offer",
+              "step": 8,
+              "information_cutoff_step": 8,
+              "previous_use": 54.62595537301335,
+              "previous_limit": 150.0,
+              "price": 1.7185038214920534,
+              "capacity": 150.0
+            },
+            {
+              "actor": "oil_supplier",
+              "kind": "fuel_offer",
+              "step": 8,
+              "information_cutoff_step": 8,
+              "previous_use": 41.004122397849,
+              "previous_limit": 100.0,
+              "price": 2.41004122397849,
+              "capacity": 100.0
+            },
+            {
+              "step": 8,
+              "actor": "industry",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 8,
+              "effective_step": 9,
+              "electric_share_before": 0.4928571428571428,
+              "electric_share_next": 0.37857142857142856,
+              "share_change": -0.11428571428571427,
+              "investment": 4.0,
+              "budget": 4,
+              "electric_cost_per_service": 14.619883040935672,
+              "fuel_cost_per_service": 2.291338428656071,
+              "saving_per_full_share_per_step": 991.3135749370228,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 8,
+              "actor": "transport",
+              "kind": "equipment_substitution",
+              "information_cutoff_step": 8,
+              "effective_step": 9,
+              "electric_share_before": 0.4,
+              "electric_share_next": 0.30000000000000004,
+              "share_change": -0.09999999999999998,
+              "investment": 3.0,
+              "budget": 3,
+              "electric_cost_per_service": 10.526315789473685,
+              "fuel_cost_per_service": 4.016735373297483,
+              "saving_per_full_share_per_step": 325.1081119508193,
+              "reason": "payback_passed"
+            },
+            {
+              "step": 8,
+              "actor": "coal",
+              "kind": "generation_investment",
+              "information_cutoff_step": 8,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 2.7,
+              "expected_sales_fraction": 0.4,
+              "npv_per_capacity_unit": 53.29543294964135,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 55,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 8,
+              "actor": "gas",
+              "kind": "generation_investment",
+              "information_cutoff_step": 8,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 3.164173035820089,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 150.6104677769437,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 45,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            },
+            {
+              "step": 8,
+              "actor": "renewable",
+              "kind": "generation_investment",
+              "information_cutoff_step": 8,
+              "observed_generation_price": 25,
+              "observed_variable_cost": 0.1,
+              "expected_sales_fraction": 1.0,
+              "npv_per_capacity_unit": 230.14617633399703,
+              "capacity_ordered": 0.0,
+              "investment": 0.0,
+              "budget": 80,
+              "online_step": null,
+              "reason": "mechanism_disabled"
+            }
+          ]
+        }
+      ],
+      "final_projects": {
+        "coal": [
+          {
+            "capacity_units": 16,
+            "online_step": 0,
+            "retirement_step": 7
+          }
+        ],
+        "gas": [
+          {
+            "capacity_units": 8,
+            "online_step": 0,
+            "retirement_step": 12
+          }
+        ],
+        "renewable": [
+          {
+            "capacity_units": 14,
+            "online_step": 0,
+            "retirement_step": 15
+          }
+        ]
+      },
+      "national_forecast": null,
+      "national_co2_total": null
+    }
+  },
+  "summaries": {
+    "full_feedback": {
+      "unserved_service_su": 20.865611589085567,
+      "synthetic_emissions": 608.3525004910294,
+      "equipment_investment_cu": 56.0,
+      "generation_investment_cu": 660.0,
+      "max_abs_balance_residual_eu": 0.0,
+      "pending_capacity_units": 12.5
+    },
+    "frozen_equipment": {
+      "unserved_service_su": 0.0,
+      "synthetic_emissions": 795.831084064265,
+      "equipment_investment_cu": 0.0,
+      "generation_investment_cu": 0.0,
+      "max_abs_balance_residual_eu": 1.7763568394002505e-15,
+      "pending_capacity_units": 0
+    },
+    "frozen_generation_investment": {
+      "unserved_service_su": 61.946160825335724,
+      "synthetic_emissions": 692.3784625954587,
+      "equipment_investment_cu": 56.0,
+      "generation_investment_cu": 0.0,
+      "max_abs_balance_residual_eu": 0.0,
+      "pending_capacity_units": 0
+    }
+  },
+  "validation_status": "synthetic_mechanisms_only",
+  "national_forecast": null,
+  "historical_calibration": null,
+  "annual_reliability": null
+}

@@ -1,0 +1,175 @@
+{
+  "method": "Manually transcribed after viewing archived original table images; raw units retained; checked again against images and arithmetic checks.",
+  "energy_annual": {
+    "columns": ["year", "production_10ktce", "production_coal_pct", "production_oil_pct", "production_gas_pct", "production_primary_electricity_other_pct", "consumption_10ktce", "consumption_coal_pct", "consumption_oil_pct", "consumption_gas_pct", "consumption_primary_electricity_other_pct"],
+    "source_ids": ["NBS_2025_C09-01", "NBS_2025_C09-02"],
+    "rows": [
+      [2005,229037,77.4,11.3,2.9,8.4,261369,72.4,17.8,2.4,7.4],
+      [2014,362212,73.5,8.3,4.7,13.5,428334,65.8,17.3,5.6,11.3],
+      [2015,362193,72.2,8.5,4.8,14.5,434113,63.8,18.4,5.8,12.0],
+      [2016,345954,69.8,8.3,5.2,16.7,441492,62.2,18.7,6.1,13.0],
+      [2017,358867,69.6,7.6,5.4,17.4,455827,60.6,18.9,6.9,13.6],
+      [2018,378859,69.2,7.2,5.4,18.2,471925,59.0,18.9,7.6,14.5],
+      [2019,392606,68.1,7.0,5.7,19.2,485584,57.5,19.0,8.0,15.4],
+      [2020,402671,67.1,6.9,6.1,19.9,496514,56.7,18.9,8.4,16.0],
+      [2021,422789,66.3,6.7,6.2,20.8,525027,55.7,18.8,8.8,16.7],
+      [2022,459507,66.9,6.4,6.0,20.8,541274,55.6,18.4,8.4,17.6],
+      [2023,475979,66.1,6.3,6.1,21.5,571327,54.8,18.8,8.5,17.9],
+      [2024,498000,63.9,6.1,6.2,23.8,596000,53.2,18.2,8.8,19.8]
+    ],
+    "boundary_note": "Official primary electricity and other energy category; do not relabel as non-fossil or mix with OWID substitution accounting without reconciliation. Electricity coal-equivalent factors vary by year."
+  },
+  "capacity_annual": {
+    "columns": ["year", "total_10kW", "thermal_10kW", "hydro_10kW", "nuclear_10kW", "wind_10kW", "solar_10kW", "other_10kW"],
+    "source_ids": ["NBS_2025_C09-15"],
+    "rows": [
+      [2005,51718,39138,11739,696,106,null,null],
+      [2014,137887,93232,30486,2008,9657,2486,19],
+      [2015,152527,100554,31954,2717,13075,4218,9],
+      [2016,165051,106094,33207,3364,14747,7631,7],
+      [2017,177708,110495,34359,3582,16325,12942,7],
+      [2018,189997,114408,35259,4466,18427,17433,5],
+      [2019,200985,118957,35804,4874,20915,20429,5],
+      [2020,220504,124960,37028,4989,28165,25356,5],
+      [2021,237689,129739,39094,5326,32871,30654,5],
+      [2022,256317,133527,41396,5557,36564,39268,5],
+      [2023,292224,139099,42237,5691,44144,61048,5],
+      [2024,334922,144462,43552,6083,52078,88742,5]
+    ],
+    "boundary_note": "Year-end installed capacity; thermal is not coal alone; hydro is not assumed to exclude pumped storage."
+  },
+  "products_annual": {
+    "columns": ["year", "raw_coal_100Mt", "natural_gas_100Mm3", "coke_10kt", "generation_100GWh", "hydro_generation_100GWh"],
+    "source_ids": ["NBS_2025_C09-19"],
+    "rows": [
+      [2005,23.65,493.20,26511.70,25002.60,3970.17],
+      [2014,38.74,1301.57,47980.86,57944.57,10728.82],
+      [2015,37.47,1346.10,44822.54,58145.73,11302.70],
+      [2016,34.11,1368.65,44911.48,61331.60,11840.48],
+      [2017,35.24,1480.35,43142.55,66044.47,11978.65],
+      [2018,36.98,1601.59,44834.20,71661.33,12317.87],
+      [2019,38.46,1753.62,47126.16,75034.28,13044.38],
+      [2020,39.02,1924.95,47116.12,77790.60,13552.09],
+      [2021,41.26,2075.84,46445.78,85342.48,13389.99],
+      [2022,45.59,2201.10,47343.64,88487.12,13521.95],
+      [2023,47.23,2324.30,49260.00,94564.42,12858.48],
+      [2024,47.81,2464.51,48927.25,100868.81,14256.82]
+    ],
+    "boundary_note": "100GWh denotes 亿千瓦时; it equals 0.1 TWh. National historical rows only; provincial rows not included in this transcription."
+  },
+  "balance_checkpoints": {
+    "years": [2015,2020,2022,2023],
+    "tables": {
+      "NBS_2025_C09-03": {
+        "unit": "10ktce",
+        "rows": {
+          "available_supply": [431636,502854,553787,586847],
+          "primary_production": [362193,402671,459507,475979],
+          "imports": [77695,124805,120236,145253],
+          "exports": [9785,12838,12197,13625],
+          "inventory_opening_minus_closing": [1532,-11784,-13759,-20760],
+          "consumption": [434113,496514,541274,571327],
+          "final_consumption": [420110,490903,535683,567248],
+          "conversion_losses": [18770,18472,20303,20682],
+          "recovered_energy_deducted": [14492,23037,24255,26285],
+          "losses": [9724,10175,9543,9682],
+          "balance_difference": [-2477,6341,12513,15519]
+        }
+      },
+      "NBS_2025_C09-04": {
+        "unit": "10kt",
+        "rows": {
+          "available_supply": [55688,67554,70810,77027],
+          "production_crude_oil": [21456,19477,20472,20903],
+          "imports_oil_products_inclusive": [39749,61272,58701,66812],
+          "exports_oil_products_inclusive": [5128,7551,6704,7563],
+          "inventory_opening_minus_closing": [-388,-5644,-1659,-3124],
+          "consumption": [55960,65369,69321,75137],
+          "final_consumption": [52946,62085,67198,72915],
+          "transformation_input": [2927,3266,2099,2205],
+          "power_generation_input": [266,322,242,248],
+          "heat_input": [493,678,698,774],
+          "losses": [88,18,24,17],
+          "balance_difference": [-272,2185,1489,1890]
+        }
+      },
+      "NBS_2025_C09-05": {
+        "unit": "10kt",
+        "rows": {
+          "available_supply": [397074,406008,461443,490645],
+          "production_raw_coal": [374654,378826,440419,454124],
+          "imports": [20406,30361,29370,47481],
+          "exports": [534,319,401,447],
+          "inventory_opening_minus_closing": [2547,-2860,-7947,-10512],
+          "consumption": [399834,400299,444956,470755],
+          "final_consumption": [112975,76316,75879,78988],
+          "transformation_input": [267061,323983,369077,391767],
+          "power_generation_input": [179568,213722,239566,254209],
+          "heat_input": [24115,37696,51268,54776],
+          "balance_difference": [-2760,5709,16487,19890]
+        }
+      },
+      "NBS_2025_C09-06": {
+        "unit": "100GWh",
+        "rows": {
+          "available_supply": [58021,77620,88358,94394],
+          "production": [58146,77791,88487,94564],
+          "imports": [62,48,71,50],
+          "exports": [187,218,201,221],
+          "consumption": [58020,77620,88358,94393],
+          "final_consumption": [55032,74387,85295,91329],
+          "transmission_distribution_losses": [2988,3233,3063,3064]
+        }
+      }
+    },
+    "boundary_note": "Selected years, not a continuous annual panel. Oil imports include oil products and international bunkering per original notes. Preserve residuals; do not force closure. Coal balance production differs from product-output table and is not silently replaced."
+  },
+  "sector_use_2023": {
+    "columns": ["sector", "total_10ktce", "coal_10kt", "coke_10kt", "crude_oil_10kt", "gasoline_10kt", "kerosene_10kt", "diesel_10kt", "fuel_oil_10kt", "natural_gas_100Mm3", "electricity_100GWh"],
+    "source_ids": ["NBS_2025_C09-09"],
+    "rows": [
+      ["total",571327,470755,46949,75759,14313,3698,18765,7465,4006,94393],
+      ["agriculture_forestry_fishery",10442,1240,1,null,307,13,1775,1,2,1944],
+      ["industry_including_transformation",380260,461390,46945,75759,391,8,2184,5365,2881,60630],
+      ["manufacturing_subtotal",325660,178320,46621,75068,358,7,1520,5358,1896,47091],
+      ["electricity_heat_gas_water_subtotal",39447,274628,130,0,21,0,67,4,750,10703],
+      ["electricity_heat_subsector",34967,271689,130,0,17,0,65,4,708,9702],
+      ["construction",8106,249,3,null,518,24,735,57,8,1053],
+      ["transport_storage_post",46909,84,null,1,5958,3482,12134,2020,358,2331],
+      ["wholesale_retail_hotels_restaurants",17546,1350,null,null,350,16,235,15,80,4744],
+      ["other",37419,2087,null,null,2547,155,1012,6,65,9621],
+      ["households",70644,4355,null,null,4242,2,689,null,612,14070]
+    ],
+    "boundary_note": "Nested subtotals must not be summed together. Industry includes energy transformation; these are not all final-service fuel inputs. Blank source cells remain null, not zero."
+  },
+  "province_demand": {
+    "years": [2015,2020,2023,2024],
+    "unit": "100GWh",
+    "source_ids": ["NBS_2025_C09-14"],
+    "rows": [
+      ["北京",953,1140,1358,1389],["天津",801,875,1051,1085],
+      ["河北",3176,3934,4757,4987],["山西",1737,2342,2885,2972],
+      ["内蒙古",2543,3900,4823,5193],["辽宁",1985,2423,2663,2734],
+      ["吉林",652,805,928,950],["黑龙江",869,1014,1184,1208],
+      ["上海",1406,1576,1849,1984],["江苏",5115,6374,7833,8487],
+      ["浙江",3554,4830,6192,6780],["安徽",1640,2428,3214,3598],
+      ["福建",1852,2483,3090,3331],["江西",1087,1627,2026,2180],
+      ["山东",5117,6940,7966,8320],["河南",2880,3392,4090,4320],
+      ["湖北",1665,2144,2706,2944],["湖南",1448,1929,2277,2374],
+      ["广东",5311,6926,8502,9121],["广西",1334,2029,2448,2563],
+      ["海南",272,363,482,519],["重庆",875,1186,1453,1612],
+      ["四川",1992,2865,3711,4018],["贵州",1174,1586,1782,1902],
+      ["云南",1439,2025,2512,2792],["西藏",41,82,135,154],
+      ["陕西",1222,1741,2450,2600],["甘肃",1099,1376,1645,1746],
+      ["青海",658,742,1018,1054],["宁夏",878,1038,1387,1390],
+      ["新疆",2160,3099,3821,4233]
+    ]
+  },
+  "electricity_2025": {
+    "source_ids": ["NEA_ELECTRICITY_2025_TABLE"],
+    "year": 2025,
+    "capacity_10kW": {"total":389134,"hydro":44802,"thermal":153904,"nuclear":6248,"wind":64001,"solar":120173},
+    "line_loss_pct": 4.23,
+    "average_utilization_hours_plants_6000kW_plus": 3119
+  }
+}

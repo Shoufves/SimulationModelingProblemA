@@ -1,0 +1,36 @@
+{
+  "recipe": "trade",
+  "status": "passed",
+  "comparisons": [
+    {
+      "path": "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/trade_alternatives/coal_origins_2023_2025_CCTD.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+      "byte_equal": true,
+      "table_equal": true
+    }
+  ],
+  "execution": [
+    {
+      "script": "专项补查_20261017/替代与扩展_20261017/alternatives/extract_and_verify.py",
+      "returncode": 0,
+      "stdout": "[\n  {\n    \"table\": \"pipeline_gas_china_2024.csv\",\n    \"rows\": 22,\n    \"sum\": 71.2777959216855,\n    \"total\": 71.2777959216855,\n    \"passed\": true\n  },\n  {\n    \"table\": \"lng_china_2024.csv\",\n    \"rows\": 23,\n    \"sum\": 105.1885969641741,\n    \"total\": 105.18859696417408,\n    \"passed\": true\n  },\n  {\n    \"table\": \"coal_china_2024_EJ.csv\",\n    \"rows\": 15,\n    \"passed\": true\n  },\n  {\n    \"table\": \"coal_origins_2023_2025_CCTD.csv\",\n    \"rows\": 27,\n    \"method\": \"transcribed from verified source PNG\"\n  }\n]\n",
+      "stderr": ""
+    }
+  ],
+  "expected_outputs_absent_before_execution": true,
+  "scope": "Offline reproduction of saved extraction recipes; not independent source verification or national simulation."
+}

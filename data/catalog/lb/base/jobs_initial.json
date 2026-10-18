@@ -1,0 +1,9 @@
+[
+ {"id":"NBS_YEARBOOK_2025_INDEX","title":"中国统计年鉴2025目录","agency":"国家统计局","category":"历史统计","coverage":"2024及历史年份","url":"https://www.stats.gov.cn/sj/ndsj/2025/left.htm","file":"raw/nbs/yearbook2025_index.html","notes":"年鉴版本与统计年份不同"},
+ {"id":"NBS_2025_BULLETIN","title":"2025年国民经济和社会发展统计公报","agency":"国家统计局","category":"历史统计","coverage":"2025","url":"https://www.stats.gov.cn/sj/zxfbjd/202602/t20260228_1962662.html","file":"raw/nbs/2025_statistical_bulletin.html","notes":"2026-02-28发布；初步统计与后续年鉴可能修订"},
+ {"id":"OWID_ENERGY_README","title":"OWID能源数据定义及来源","agency":"Our World in Data","category":"辅助数据说明","coverage":"多年份","url":"https://raw.githubusercontent.com/owid/energy-data/master/README.md","file":"raw/owid/energy_README.md","notes":"二级汇编，仅作交叉核验与补缺；须保留上游来源"},
+ {"id":"OWID_ENERGY","title":"OWID世界能源年度数据库","agency":"Our World in Data","category":"辅助历史数据","coverage":"下载版本全历史，处理时截断至2025","url":"https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv","file":"raw/owid/owid-energy-data.csv","notes":"全球原表，后续提取China；不与中国标准煤口径直接拼接"},
+ {"id":"OWID_ENERGY_CODEBOOK","title":"OWID能源数据字典","agency":"Our World in Data","category":"数据字典","coverage":"对应下载版本","url":"https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-codebook.csv","file":"raw/owid/owid-energy-codebook.csv"},
+ {"id":"OWID_CO2","title":"OWID二氧化碳年度数据库","agency":"Our World in Data","category":"辅助排放数据","coverage":"下载版本全历史，处理时截断至2025","url":"https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv","file":"raw/owid/owid-co2-data.csv","notes":"含水泥等排放口径；能源燃烧与全国排放必须区分"},
+ {"id":"OWID_CO2_CODEBOOK","title":"OWID碳排放数据字典","agency":"Our World in Data","category":"数据字典","coverage":"对应下载版本","url":"https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-codebook.csv","file":"raw/owid/owid-co2-codebook.csv"}
+]

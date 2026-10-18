@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "scope": "documented_permit_case",
+  "status": "reviewed_scoped_case_not_national_initialization",
+  "source_ids": ["S26", "S27", "S28"],
+  "year": 2021,
+  "observations": [
+    {"indicator": "qinshan_1_initial_design_life", "value": 30, "unit": "year", "source_id": "S28", "locator": "正文L34"}
+  ],
+  "knowledge_rule": "document_generated_date_replay_convention_not_verified_publication",
+  "units": [
+    {"unit_id": "QINSHAN-1", "plant": "秦山核电厂", "unit": "1号机组", "attachment_record_id": "ATT4-NUCLEAR-R0002", "capacity_mw": null, "commercial_online_date": null},
+    {"unit_id": "QINSHAN-II-1", "plant": "秦山第二核电厂", "unit": "1号机组", "attachment_record_id": "ATT4-NUCLEAR-R0004", "capacity_mw": null, "commercial_online_date": null},
+    {"unit_id": "QINSHAN-II-2", "plant": "秦山第二核电厂", "unit": "2号机组", "attachment_record_id": "ATT4-NUCLEAR-R0004", "capacity_mw": null, "commercial_online_date": null},
+    {"unit_id": "QINSHAN-II-3", "plant": "秦山第二核电厂", "unit": "3号机组", "attachment_record_id": "ATT4-NUCLEAR-R0004", "capacity_mw": null, "commercial_online_date": null},
+    {"unit_id": "QINSHAN-II-4", "plant": "秦山第二核电厂", "unit": "4号机组", "attachment_record_id": "ATT4-NUCLEAR-R0004", "capacity_mw": null, "commercial_online_date": null},
+    {"unit_id": "QINSHAN-III-1", "plant": "秦山第三核电厂", "unit": "1号机组", "attachment_record_id": "ATT4-NUCLEAR-R0006", "capacity_mw": null, "commercial_online_date": null},
+    {"unit_id": "QINSHAN-III-2", "plant": "秦山第三核电厂", "unit": "2号机组", "attachment_record_id": "ATT4-NUCLEAR-R0006", "capacity_mw": null, "commercial_online_date": null}
+  ],
+  "attachment_bindings": [
+    {"record_id": "ATT4-NUCLEAR-R0002", "expected_name": "秦山核电厂", "unit_ids": ["QINSHAN-1"]},
+    {"record_id": "ATT4-NUCLEAR-R0004", "expected_name": "秦山第二核电厂", "unit_ids": ["QINSHAN-II-1", "QINSHAN-II-2", "QINSHAN-II-3", "QINSHAN-II-4"]},
+    {"record_id": "ATT4-NUCLEAR-R0006", "expected_name": "秦山第三核电", "unit_ids": ["QINSHAN-III-1", "QINSHAN-III-2"]}
+  ],
+  "permit_events": [
+    {"event_id": "PERMIT-2017-Q1", "unit_id": "QINSHAN-1", "source_id": "S26", "document_date": "2017-12-20", "known_from": "2017-12-20", "valid_until": "2021-07-30", "kind": "permit_record"},
+    {"event_id": "PERMIT-2017-QII1", "unit_id": "QINSHAN-II-1", "source_id": "S26", "document_date": "2017-12-20", "known_from": "2017-12-20", "valid_until": "2041-10-08", "kind": "permit_record"},
+    {"event_id": "PERMIT-2017-QII2", "unit_id": "QINSHAN-II-2", "source_id": "S26", "document_date": "2017-12-20", "known_from": "2017-12-20", "valid_until": "2044-01-28", "kind": "permit_record"},
+    {"event_id": "PERMIT-2017-QII3", "unit_id": "QINSHAN-II-3", "source_id": "S26", "document_date": "2017-12-20", "known_from": "2017-12-20", "valid_until": "2050-05-29", "kind": "permit_record"},
+    {"event_id": "PERMIT-2017-QII4", "unit_id": "QINSHAN-II-4", "source_id": "S26", "document_date": "2017-12-20", "known_from": "2017-12-20", "valid_until": "2051-10-19", "kind": "permit_record"},
+    {"event_id": "PERMIT-2017-QIII1", "unit_id": "QINSHAN-III-1", "source_id": "S26", "document_date": "2017-12-20", "known_from": "2017-12-20", "valid_until": "2042-07-17", "kind": "permit_record"},
+    {"event_id": "PERMIT-2017-QIII2", "unit_id": "QINSHAN-III-2", "source_id": "S26", "document_date": "2017-12-20", "known_from": "2017-12-20", "valid_until": "2043-03-15", "kind": "permit_record"},
+    {"event_id": "EXTENSION-2021-Q1", "unit_id": "QINSHAN-1", "source_id": "S27", "document_date": "2021-09-03", "known_from": "2021-09-06", "valid_until": "2041-07-30", "kind": "permit_extension"}
+  ],
+  "lifecycle_facts": [
+    {"unit_id": "QINSHAN-1", "source_id": "S28", "known_from": "2021-06-07", "first_grid_date": "1991-12-15", "design_reference_end": "2021-12-15", "design_life_indicator": "qinshan_1_initial_design_life"}
+  ],
+  "limitations": [
+    "7台机组只对应附件4中3条厂级记录，不是3台机组或全国完整清单；别名映射只限这些明确列名。",
+    "精确装机及商业投运时间未核实；附件330/2620/1456的单位和时间未据本文解决，不分摊到机组。",
+    "许可截止、设计寿命和实际退役分开；未取得实际退役、每日运行状态、延寿成本或自主投资决策输入。",
+    "文件生成日仅为回放信息时点约定；不是已核实的公众首次获知时间。",
+    "2021-07-31至新事件可见前的状态保持待核查，不补造停机、退役或行政法律结论。"
+  ]
+}

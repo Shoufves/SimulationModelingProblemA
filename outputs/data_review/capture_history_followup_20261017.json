@@ -1,0 +1,29 @@
+{
+  "recorded_on": "2026-10-17",
+  "purpose": "历史消费与宏观表的后续取证；本记录不是官方原件或正式证据准入",
+  "attempts": [
+    {
+      "source_ids": ["S01", "S06"],
+      "method": "直接通过网页检索服务open国家统计局已登记年鉴图片",
+      "result": "返回原图展示；未取得本地可归档原图副本",
+      "admission_changed": false
+    },
+    {
+      "source_ids": ["S01"],
+      "official_url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-02.jpg",
+      "method": "系统curl默认网络配置，指定TLS最大版本1.2；经权限流程执行",
+      "result": "curl退出码28，Connection timed out after 22859 milliseconds",
+      "temporary_destination": "tmp/S01_tls12.jpg",
+      "successful_official_capture": false
+    },
+    {
+      "source_ids": [],
+      "official_url": "https://data.stats.gov.cn/easyquery.htm",
+      "method": "网页检索服务尝试国家数据QueryData年度查询，2015—2024，A0701",
+      "result": "带参数查询URL不可通过该工具访问；未获得JSON数据",
+      "successful_official_capture": false,
+      "note": "查询指标尚未完成代码/口径审查；未登记新来源、未替换现有年鉴版本"
+    }
+  ],
+  "conclusion": "原图可在线展示不等于本地归档或已完成准入。未新增官方观测或证据审查；后续阶段评价只用原有已准入子集。"
+}

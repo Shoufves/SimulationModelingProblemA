@@ -1,0 +1,109 @@
+{
+  "recipe": "national",
+  "status": "passed",
+  "comparisons": [
+    {
+      "path": "data/processed/lb/base/emissions/carbonmonitor_province_sector_annual_2019_2025.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/emissions/china_grid_factors_2023.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/irena/china_capacity_2016_2025.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/nbs/bulletin2025_source_table_03.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/nbs/bulletin2025_source_table_04.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/nbs/bulletin2025_source_table_12.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/nbs/capacity_2005_2024.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/nbs/consumption_2005_2024.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/nbs/production_2005_2024.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/nbs/real_gdp_growth_2005_2024.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/owid/china_co2_2000_2025_available.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/owid/china_energy_2000_2025_available.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/owid/co2_codebook.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/owid/energy_codebook.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/prices/worldbank_energy_annual_2000_latest.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/prices/worldbank_energy_monthly_2000_latest.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/quality/irena_component_checks.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/quality/nbs_transcription_checks.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/quality/owid_field_coverage.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/base/quality/worldbank_annual_monthly_check.csv",
+      "byte_equal": true,
+      "table_equal": true
+    }
+  ],
+  "expected_outputs_absent_before_execution": true,
+  "scope": "Offline reproduction of saved extraction recipes; not independent source verification or national simulation."
+}
+

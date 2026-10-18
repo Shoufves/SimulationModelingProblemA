@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "mode": "synthetic",
+  "warning": "全部为合成的连续小时窗口；MW/MWh仅为程序单位，不对应中国观测、真实项目、年度可靠性或全国正式情景。",
+  "parameter_groups": {
+    "generation": {"basis": "synthetic_assumption", "purpose": "区分水核风光煤气及可用出力", "unit": "MW、CU/MWh及效率", "sensitivity": "容量与可用比例"},
+    "fuels": {"basis": "synthetic_assumption", "purpose": "约束火电燃料与燃烧排放", "unit": "MW燃料、CU/MWh燃料、合成排放/MWh燃料", "sensitivity": "燃料供给、价格和效率"},
+    "storage": {"basis": "synthetic_assumption", "purpose": "检验跨时段储存与损耗", "unit": "MWh、MW、效率和CU/MWh放电", "sensitivity": "功率、容量、效率和初始库存"},
+    "grid": {"basis": "synthetic_assumption", "purpose": "检验发电侧送出瓶颈", "unit": "MW及送达效率", "sensitivity": "送出上限和损耗"},
+    "windows": {"basis": "synthetic_assumption", "purpose": "检验波动、持续低出力及线路受限", "unit": "h、MW及可用比例", "sensitivity": "时长、时序、负荷及冲击"},
+    "policy": {"basis": "synthetic_assumption", "purpose": "检验含碳煤气排序", "unit": "CU/合成排放单位", "sensitivity": "当期碳价"}
+  },
+  "generation": {
+    "hydro": {"fuel": null, "capacity_mw": 5, "efficiency": 1, "variable_cost": 0.03},
+    "nuclear": {"fuel": null, "capacity_mw": 5, "efficiency": 1, "variable_cost": 0.02},
+    "wind": {"fuel": null, "capacity_mw": 10, "efficiency": 1, "variable_cost": 0.01},
+    "solar": {"fuel": null, "capacity_mw": 50, "efficiency": 1, "variable_cost": 0},
+    "coal": {"fuel": "coal", "capacity_mw": 8, "efficiency": 0.4, "variable_cost": 0.2},
+    "gas": {"fuel": "gas", "capacity_mw": 8, "efficiency": 0.6, "variable_cost": 0.3}
+  },
+  "fuels": {
+    "coal": {"supply_limit_mw_fuel": 20, "price": 1, "emission_factor": 1},
+    "gas": {"supply_limit_mw_fuel": 14, "price": 1.5, "emission_factor": 0.5}
+  },
+  "storage": {
+    "capacity_mwh": 40,
+    "initial_energy_mwh": 0,
+    "charge_limit_mw": 20,
+    "discharge_limit_mw": 12,
+    "charge_efficiency": 0.9,
+    "discharge_efficiency": 0.9,
+    "discharge_variable_cost": 0.02
+  },
+  "grid": {"transfer_limit_mw": 60, "delivery_efficiency": 0.95},
+  "policy": {"carbon_price": 1},
+  "windows": {
+    "normal_variability": {
+      "description": "先有光伏剩余，后有低出力缺口；合成窗口",
+      "steps": [
+        {"duration_hours": 2, "demand_mw": 30, "availability": {"hydro": 1, "nuclear": 1, "wind": 0.5, "solar": 1, "coal": 1, "gas": 1}},
+        {"duration_hours": 1, "demand_mw": 30, "availability": {"hydro": 1, "nuclear": 1, "wind": 0.2, "solar": 0.2, "coal": 1, "gas": 1}},
+        {"duration_hours": 2, "demand_mw": 35, "availability": {"hydro": 1, "nuclear": 1, "wind": 0.1, "solar": 0, "coal": 1, "gas": 1}}
+      ]
+    },
+    "persistent_low_wind_solar": {
+      "description": "没有前期富余能量，储能不能凭空供电；合成窗口",
+      "steps": [
+        {"duration_hours": 2, "demand_mw": 35, "availability": {"hydro": 1, "nuclear": 1, "wind": 0.05, "solar": 0, "coal": 1, "gas": 1}},
+        {"duration_hours": 2, "demand_mw": 35, "availability": {"hydro": 1, "nuclear": 1, "wind": 0.05, "solar": 0, "coal": 1, "gas": 1}},
+        {"duration_hours": 2, "demand_mw": 35, "availability": {"hydro": 1, "nuclear": 1, "wind": 0.05, "solar": 0, "coal": 1, "gas": 1}}
+      ]
+    },
+    "grid_bottleneck": {
+      "description": "储能在发电侧，不能绕开送出限制；合成窗口",
+      "steps": [
+        {"duration_hours": 2, "demand_mw": 30, "availability": {"hydro": 1, "nuclear": 1, "wind": 0.5, "solar": 1, "coal": 1, "gas": 1}},
+        {"duration_hours": 2, "demand_mw": 35, "grid_capacity_multiplier": 0.2, "availability": {"hydro": 1, "nuclear": 1, "wind": 0.1, "solar": 0, "coal": 1, "gas": 1}},
+        {"duration_hours": 1, "demand_mw": 35, "grid_capacity_multiplier": 0.2, "availability": {"hydro": 1, "nuclear": 1, "wind": 0.1, "solar": 0, "coal": 1, "gas": 1}}
+      ]
+    }
+  }
+}

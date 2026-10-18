@@ -1,0 +1,29 @@
+{
+  "recipe": "trade",
+  "status": "passed",
+  "comparisons": [
+    {
+      "path": "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/trade_alternatives/coal_origins_2023_2025_CCTD.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+      "byte_equal": true,
+      "table_equal": true
+    }
+  ],
+  "expected_outputs_absent_before_execution": true,
+  "scope": "Offline reproduction of saved extraction recipes; not independent source verification or national simulation."
+}
+

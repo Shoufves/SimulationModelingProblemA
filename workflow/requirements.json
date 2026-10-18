@@ -1,0 +1,379 @@
+{
+  "schema_version": "1.0",
+  "reviewed_on": "2026-10-17",
+  "authority": {
+    "problem": "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+    "user_requirement": "网上收集的数据必须以有说服力的官方数据为准",
+    "note": "本文件为执行映射；原始题目与正式赛事规范优先。"
+  },
+  "historical_span": {
+    "requirement_level": "recommended",
+    "years": 10,
+    "initial_window": "2015-2024",
+    "additional_year": "2025单独核验，版本和可比性通过后使用"
+  },
+  "scoring": {
+    "paper": {
+      "total": 70,
+      "understanding": 10,
+      "agent_model": 20,
+      "data_and_validation": 10,
+      "experiments": 20,
+      "optimization": 5,
+      "writing": 5
+    },
+    "video": {
+      "total": 30,
+      "completeness": 10,
+      "demonstration_and_results": 8,
+      "presentation": 7,
+      "creativity": 5
+    }
+  },
+  "requirements": [
+    {
+      "id": "Q1-DATA",
+      "section": "问题一",
+      "intent": "产能/产量、消费及占比、地域、进出口和价格；覆盖主要能源",
+      "status": "partial",
+      "stages": [
+        "W1",
+        "W2",
+        "W3"
+      ],
+      "progress_evidence": [
+        "docs/01_data_requirements.md",
+        "docs/04_attachment_audit.md",
+        "outputs/current_assessment/electricity_2024_partial.md",
+        "outputs/current_assessment/energy_2024_partial.md"
+      ],
+      "acceptance": "主要能源逐类有数据、统计边界和缺口；建议不少于十年，新兴能源不足时如实解释。"
+    },
+    {
+      "id": "Q1-SECURITY",
+      "section": "问题一",
+      "intent": "供给保障定量评价",
+      "status": "partial",
+      "stages": [
+        "W3"
+      ],
+      "progress_evidence": [
+        "outputs/current_assessment/gas_2024_partial.md"
+      ],
+      "acceptance": "指标、公式、原值、结果和解释可复算。"
+    },
+    {
+      "id": "Q1-CARBON",
+      "section": "问题一",
+      "intent": "清洁低碳定量评价",
+      "status": "partial",
+      "stages": [
+        "W3"
+      ],
+      "progress_evidence": [
+        "outputs/current_assessment/energy_2024_partial.md",
+        "docs/08_statistical_boundaries.md"
+      ],
+      "acceptance": "区分能耗结构、排放及碳强度，边界一致。"
+    },
+    {
+      "id": "Q1-ECONOMICS",
+      "section": "问题一",
+      "intent": "经济性定量评价",
+      "status": "partial",
+      "stages": [
+        "W3"
+      ],
+      "progress_evidence": [
+        "outputs/current_assessment/energy_2024_partial.md"
+      ],
+      "acceptance": "价格和成本基年、单位、适用范围明确，研究假设与观测分开。"
+    },
+    {
+      "id": "Q1-COORDINATION",
+      "section": "问题一",
+      "intent": "协调性定量评价",
+      "status": "partial",
+      "stages": [
+        "W3"
+      ],
+      "progress_evidence": [
+        "outputs/current_assessment/four_dimensions_2024_partial.md",
+        "outputs/current_assessment/four_dimensions_2024.json"
+      ],
+      "acceptance": "跨能源互补及转换储能指标有依据，避免重复计算。"
+    },
+    {
+      "id": "Q1-FINDINGS",
+      "section": "问题一",
+      "intent": "总结优势、短板和协同潜力",
+      "status": "partial",
+      "stages": [
+        "W3"
+      ],
+      "progress_evidence": [
+        "outputs/current_assessment/four_dimensions_2024_partial.md",
+        "outputs/current_assessment/four_dimensions_2024.json"
+      ],
+      "acceptance": "结论由四维评价支持，联系主体机制与后续情景。"
+    },
+    {
+      "id": "Q2-AGENTS",
+      "section": "问题二",
+      "intent": "构建供给、输配、需求及政策市场的多智能体系统",
+      "status": "partial",
+      "stages": [
+        "W4"
+      ],
+      "progress_evidence": [
+        "docs/02_model_design.md",
+        "src/energy_model/accounting.py",
+        "src/energy_model/fuel_ledger.py",
+        "docs/08_statistical_boundaries.md",
+        "src/energy_model/agents.py",
+        "outputs/prototype/report.md",
+        "docs/09_agent_prototype.md",
+        "src/energy_model/operations.py",
+        "outputs/prototype/operations/report.md",
+        "docs/10_operation_windows.md",
+        "docs/12_workbench.md",
+        "apps/workbench.py",
+        "docs/16_asset_lifecycle_case.md",
+        "outputs/asset_cases/index.md"
+      ],
+      "acceptance": "主体具有状态、决策、信息约束和交互反馈，运行日志可追踪；统计基线不算主体模型。"
+    },
+    {
+      "id": "Q2-VALIDATION",
+      "section": "问题二",
+      "intent": "历史校准与验证",
+      "status": "partial",
+      "stages": [
+        "W5"
+      ],
+      "progress_evidence": [
+        "outputs/foundation/report.md",
+        "outputs/calibration/demand_94d020b761970170/report.md",
+        "outputs/calibration/demand_94d020b761970170/result.json",
+        "outputs/data_review/review_demand_minimal_20261017.md",
+        "outputs/calibration/demand_3312e2a52e0430a7/result.json"
+      ],
+      "acceptance": "明确校准/验证划分、多指标误差、基线对比和机制对照，已查看结果不能称盲测。"
+    },
+    {
+      "id": "Q2-ENERGY",
+      "section": "问题二",
+      "intent": "基准情景2030和2060能源消费总量及非化石占比",
+      "status": "not_started",
+      "stages": [
+        "W6"
+      ],
+      "progress_evidence": [],
+      "acceptance": "逐年路径与两个目标年的总量、结构、单位及情景依据齐全。"
+    },
+    {
+      "id": "Q2-PEAK",
+      "section": "问题二",
+      "intent": "CO2总量、达峰时间和峰值水平",
+      "status": "not_started",
+      "stages": [
+        "W6"
+      ],
+      "progress_evidence": [],
+      "acceptance": "排放边界完整；模拟期未达峰须如实报告；不得用观测前年份冒充预测。"
+    },
+    {
+      "id": "Q2-INTENSITY",
+      "section": "问题二",
+      "intent": "能源强度和碳排放强度降幅",
+      "status": "not_started",
+      "stages": [
+        "W6"
+      ],
+      "progress_evidence": [],
+      "acceptance": "相对于明确基年，GDP采用一致不变价口径，计算可复核。"
+    },
+    {
+      "id": "Q2-NEUTRALITY",
+      "section": "问题二",
+      "intent": "2060碳中和率和剩余排放",
+      "status": "not_started",
+      "stages": [
+        "W6"
+      ],
+      "progress_evidence": [],
+      "acceptance": "给出公式和边界；燃烧、工业过程、捕集、移除分别核算；未知量不能默认为零。"
+    },
+    {
+      "id": "Q2-SENSITIVITY",
+      "section": "问题二",
+      "intent": "GDP、技术成本、碳价等灵敏度与稳健性",
+      "status": "not_started",
+      "stages": [
+        "W5",
+        "W6"
+      ],
+      "progress_evidence": [],
+      "acceptance": "参数来源、范围、单因素及组合扰动、区间和失败条件可复现。"
+    },
+    {
+      "id": "Q3-SCENARIOS",
+      "section": "问题三",
+      "intent": "基准加至少三种不同对比情景",
+      "status": "partial",
+      "stages": [
+        "W6"
+      ],
+      "progress_evidence": [
+        "docs/03_experiment_design.md"
+      ],
+      "acceptance": "至少四套已运行结果，初态与统计口径可比，情景参数差异明确。"
+    },
+    {
+      "id": "Q3-SECURITY",
+      "section": "问题三",
+      "intent": "建立能源安全评价框架并评价情景",
+      "status": "not_started",
+      "stages": [
+        "W7"
+      ],
+      "progress_evidence": [],
+      "acceptance": "安全指标、扰动设定与代价有据，比较正常与受扰状态。"
+    },
+    {
+      "id": "Q3-OPTIMIZATION",
+      "section": "问题三",
+      "intent": "提出可实施的优化路径及政策建议",
+      "status": "partial",
+      "stages": [
+        "W7"
+      ],
+      "progress_evidence": [
+        "docs/03_experiment_design.md"
+      ],
+      "acceptance": "建议关联实验结果、成本约束、实施时序、稳健性和失效条件。"
+    },
+    {
+      "id": "DATA-ATTACHMENTS",
+      "section": "数据",
+      "intent": "四份题给Excel实际使用及局限说明",
+      "status": "partial",
+      "stages": [
+        "W1"
+      ],
+      "progress_evidence": [
+        "docs/04_attachment_audit.md",
+        "outputs/attachments/report.md",
+        "data/processed/attachment_assets.json",
+        "docs/16_asset_lifecycle_case.md",
+        "outputs/asset_cases/index.md"
+      ],
+      "acceptance": "保留文件/工作表/行号；标准表、异常标记、用途映射齐全，不将样本外推全国。"
+    },
+    {
+      "id": "DATA-OFFICIAL",
+      "section": "用户要求",
+      "intent": "网上观测事实以可复核的官方原始数据为准",
+      "status": "partial",
+      "stages": [
+        "W2"
+      ],
+      "progress_evidence": [
+        "data/sources.json",
+        "workflow/official_data_policy.md",
+        "data/evidence_reviews.json",
+        "data/raw/official/S17_page_capture.txt",
+        "data/raw/official/S13_selected_capture.txt",
+        "data/raw/official/S22_selected_capture.txt",
+        "data/raw/official/S23_page_capture.txt",
+        "data/raw/official/S01_demand_excerpt_20261017.txt",
+        "data/raw/official/S06_gdp_excerpt_20261017.txt",
+        "outputs/data_review/review_assets_20261017.md"
+      ],
+      "acceptance": "正式子集有原文证据、定位、单位范围版本和实质复核记录；搜索摘要不得准入。"
+    },
+    {
+      "id": "DATA-PROCESSING",
+      "section": "提交要求",
+      "intent": "原始数据及处理说明",
+      "status": "partial",
+      "stages": [
+        "W1",
+        "W2",
+        "W8"
+      ],
+      "progress_evidence": [
+        "scripts/build_foundation.py",
+        "docs/07_attachment_data_dictionary.md",
+        "scripts/build_attachments.py",
+        "docs/16_asset_lifecycle_case.md",
+        "outputs/asset_cases/index.md"
+      ],
+      "acceptance": "原件、处理过程、缺项、修订衔接、派生公式和数据字典可追溯。"
+    },
+    {
+      "id": "SCOPE-NATIONAL",
+      "section": "研究边界",
+      "intent": "多种能源融合及全国双碳目标",
+      "status": "partial",
+      "stages": [
+        "W2",
+        "W4",
+        "W6"
+      ],
+      "progress_evidence": [
+        "docs/02_model_design.md"
+      ],
+      "acceptance": "覆盖煤油气、水核风光、生物质及氢；转换/储存与一次能源分开，不能用电力代替全国能源。"
+    },
+    {
+      "id": "DEL-PAPER",
+      "section": "提交要求",
+      "intent": "完整论文及正式格式",
+      "status": "not_started",
+      "stages": [
+        "W8"
+      ],
+      "progress_evidence": [],
+      "acceptance": "逐问回应，引用和图表可复算；取得正式格式规范后核查。"
+    },
+    {
+      "id": "DEL-VIDEO",
+      "section": "提交要求",
+      "intent": "三分钟以内的实际视频",
+      "status": "not_started",
+      "stages": [
+        "W8"
+      ],
+      "progress_evidence": [],
+      "acceptance": "实际视频文件存在且时长<=180秒，展示内容与真实模型和结果一致。"
+    },
+    {
+      "id": "DEL-CODE",
+      "section": "提交要求",
+      "intent": "源程序及运行说明",
+      "status": "partial",
+      "stages": [
+        "W8"
+      ],
+      "progress_evidence": [
+        "run_analysis.ps1",
+        "README.md",
+        "run_workbench.ps1",
+        "docs/12_workbench.md"
+      ],
+      "acceptance": "从原始/核验输入可复现最终结果，依赖版本、运行命令和随机种子齐全。"
+    },
+    {
+      "id": "DEL-FINAL",
+      "section": "提交要求",
+      "intent": "提交前逐条对照验收",
+      "status": "not_started",
+      "stages": [
+        "W9"
+      ],
+      "progress_evidence": [],
+      "acceptance": "需求、数据、模型、论文、视频及复现材料逐项核销，未完成项不得隐藏。"
+    }
+  ]
+}

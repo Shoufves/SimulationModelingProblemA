@@ -1,0 +1,105 @@
+[PDF page 1]
+Hourly electric power load and transmission data at
+the provincial level in China
+Haochi Wu1 and Xiaoming Kan 2
+1Zhejiang University , China. Email: wuhaochi@zju.cn
+2Chalmers University of T echnology , Sweden. Email: kanx@chalmers.se
+ABSTRACT
+This dataset offers hourly electric power load data for all 31 provinces in mainland China. Moreover, it incorporates information
+about the primary transmission grids connecting provinces, including both HVDC and HVAC lines.
+Contents
+1 Hourly electric power load for 31 provinces in China 2
+1.1 Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+2 Main Transmission lines 4
+2.1 Data description . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+References 4
+
+[PDF page 2]
+1 Hourly electric power load for 31 provinces in China
+We provide annual electricity demand data for 31 provinces in mainland China, encompassing hourly load values for each
+province in the year 2018 (Appendix 1). Please see Appendix 2 for the examples of seven provinces (BJ, SX, JS, ZJ, JX, GD,
+and CQ, see Figure 1 for the abbreviation of each province in China). It includes time slice from 00:00 01 Jan to 23:00 31 Dec
+in 2018, all in UTC+8 time.
+1.1 Method
+Our initial step involves the retrieval of raw data from the National Development and Reform Commission1. This data source
+provides us with the highest and lowest electricity demand for each day, along with representative daily load profiles for both
+regular workdays and typical holidays. This is the content of China’s provincial power grids in 20182–6. These data points
+manifest in the form of load curves for each province throughout the year 2018.
+Subsequently, we engage in a process of data replication wherein we meticulously trace each pixel of the load curve7. This
+meticulous replication enables us to create electricity demand data that closely mirrors the original load curve.
+The next phase pertains to the derivation of hourly load curves for workdays. To achieve this, we proportionately adjust the
+typical daily load profile for a workday to align with the highest and lowest electricity demand recorded on that particular day8.
+A comparable methodology is employed to derive hourly load curves for holidays. Please see below for the formula used to
+derive the hourly load curves for the workdays.
+DPr,d(h) =
+
+
+
+(DLr,max(d) − DLr,min(d)) ·
+
+T Pr,workday (h)− min
+h∈ΦH
+T Pr,workday (h)
+
+max
+h∈ΦH
+T Pr,workday (h)− min
+h∈ΦH
+T Pr,workday (h) + DLr,min(d) d ∈ workday
+(DLr,max(d) − DLr,min(d)) ·
+
+T Pr,holiday (h)− min
+h∈ΦH
+T Pr,holiday (h)
+
+max
+h∈ΦH
+T Pr,holiday (h)− min
+h∈ΦH
+T Pr,holiday (h) + DLr,min(d) d ∈ holiday
+for∀r ∈ ΦR, ∀d ∈ ΦD, ∀h ∈ ΦH
+where DPr,d(h) signifies the power load at hour h on a workday in province r, while T Pr,workday (h) and T Pr,holiday (h)
+represents the power load at hour h in province r according to the typical workday or holiday curve; DLr,max(d) and DLr,min(d)
+stand for the highest and lowest daily power loads of province r on day d, respectively; ΦR, ΦD, and ΦH denote the sets of
+regions encompassing the 31 provinces in China, the days forming the 365-day set in 2018, and the hours composing a day’s
+24-hour set, respectively.
+2/5
+
+[PDF page 3]
+In summary, our methodology involves sourcing, replication, scaling, and adjustment to produce hourly load curves for
+both workdays and holidays, based on the provided data from the National Development and Reform Commission.
+Figure 1. Abbreviation of provinces in mainland China.
+3/5
+
+[PDF page 4]
+2 Main Transmission lines
+2.1 Data description
+We also provide the data of major inter-provincial transmission connections, classified as HV AC and HVDC (see Appendix 3).
+The data were collected and updated to 2022 from multiple sources, including National Energy Administration9 and China
+Electricity Enterprise Federation10, 11. For those who are interested in the details of the major regional grids and the connections
+between provinces, please see Appendix 4.
+References
+1. National Development and Reform Commission. Notice on the Signing of Medium and Long-Term Electricity Contracts
+for the Year 2020 (NDRC Document No. 1982 [2019] - National Development and Reform Commission). https://www.
+ndrc.gov.cn/xxgk/zcfb/tz/201912/t20191230_1216857.html.
+2. China Southern Power Grid. http://eng.csg.cn/About_us.
+3. Ministry of Water Resources of the People’s Republic of China. China Water Conservancy Statistical Yearbook 2021
+(China Water Conservancy and Hydropower Press, 2021).
+4. Development, N. & Commission, R. Notice of the national development and reform commission on reducing general
+industrial and commercial electricity prices (2019)842. https://www.ndrc.gov.cn/xxgk/zcfb/tz/201905/t20190515_962447.
+html.
+5. Development, N. & Commission, R. Provincial power grid transmission and distribution price table (2020). https:
+//www.ndrc.gov.cn/xxgk/zcfb/ghxwj/202009/t20200930_1243682.html.
+6. State Grid Corporation of China (SGCC). http://www.sgcc.com.cn/ywlm/index.shtml.
+7. Rohatgi, A. WebPlotDigitizer (2022). https://github.com/ankitrohatgi/WebPlotDigitizer.
+8. Li, B. et al. Modeling the impact of EVs in the Chinese power system: Pathways for implementing emissions reduction
+commitments in the power and transportation sectors. Energy Policy 149, 111962, DOI: 10.1016/j.enpol.2020.111962
+(2021).
+9. China National Bureau of Statistics. National Bureau of Statistics of China. China Energy Statistical Yearbook 2018 (China
+Statistics Press, Beijing, 2019).
+4/5
+
+[PDF page 5]
+10. China Electricity Council. Annual Development Report of China’s Power Industry.
+11. China Electricity Council. China Electric Power Yearbook (China Electric Power Press, 2020).
+5/5

@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "status": "partial_verified_subset",
+  "note": "仅登记实际使用且已核验的网上观测数据子集；题给原件另由provided_inputs.json固定，清洗/使用由W1验收。本检查不等于模型数据覆盖完整。",
+  "inputs": [
+    {
+      "dataset_path": "data/observations/demand_energy_total_2015_2024.json",
+      "review_id": "R-S01-DEMAND-20261017",
+      "purpose": "2015—2024同版发布总能源消费序列的四种固定统计基线回算；不扩大到原整表结构、部门、排放或全国ABM"
+    },
+    {
+      "dataset_path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+      "review_id": "R-S06-GDP-20261017",
+      "purpose": "同版实际GDP增速近似链接与给定已实现GDP的需求回算；不作精确GDP金额或前瞻GDP预测，不批准原宏观整表"
+    },
+    {
+      "dataset_path": "data/observations/power_official_release_2024.json",
+      "review_id": "R-S17-20261016",
+      "purpose": "问题一2024电力横截面初评及发布版本比较；不用于未桥接的十年校准或全国双碳预测"
+    },
+    {
+      "dataset_path": "data/observations/energy_official_communique_2024.json",
+      "review_id": "R-S13-20261017",
+      "purpose": "问题一2024多能源独立公报横截面、发电结构、进口单位价值及统计口径约束；不用于未经桥接的十年校准和全国双碳预测"
+    },
+    {
+      "dataset_path": "data/observations/gas_official_report_2024.json",
+      "review_id": "R-S22-20261017",
+      "purpose": "问题一天然气用途/进口结构与来源集中性、W4燃料接口准备；报告采用行业统计，仅注明范围，禁止跨口径部门绝对量和未经桥接的历史校准"
+    },
+    {
+      "dataset_path": "data/observations/gas_apparent_consumption_2024.json",
+      "review_id": "R-S23-20261017",
+      "purpose": "2024快报表观消费独立分析及与报告口径诊断；不充当完整燃料平衡和模型终端需求"
+    },
+    {
+      "dataset_path": "data/observations/electricity_demand_official_2024.json",
+      "review_id": "R-S24-20261017",
+      "purpose": "2024全国年度四类用电量锚点、需求结构和同比参考；不充当逐时负荷、历史拟合或全国模型完整初始化"
+    },
+    {
+      "dataset_path": "data/observations/renewable_operation_official_2024.json",
+      "review_id": "R-S25-20261017",
+      "purpose": "2024独立可再生能源技术规模与利用率参考、抽蓄功率和生物质观测、版本范围诊断；不混版、不补缺失能量或排放，不作完整供给初始化"
+    },
+    {
+      "dataset_path": "data/observations/qinshan_asset_permit_case.json",
+      "review_id": "R-QINSHAN-ASSETS-20261017",
+      "purpose": "仅秦山7台机组许可文件回放与附件3条厂级记录身份映射；不核实精确装机/实际退役/发电或全国初始化；生成日为回放信息时点约定"
+    }
+  ],
+  "scenario_assumptions": []
+}

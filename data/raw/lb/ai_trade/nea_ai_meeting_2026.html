@@ -1,0 +1,139 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta name="source" content="新华网"> <meta name="publishdate" content="2026-05-27"> <meta name="contentid" content="20260527ad612fe227504da0bdaafe63f7433b9f"> <meta name="subject" content=""> <meta name="catalogs" content="01009005000"> <meta name="author" content=""> <meta name="publishedtype" content="1"> <meta name="filetype" content="0"> <meta name="pagetype" content="1"> <meta name="templateId" content="b5427b58c834414690d6e6f7dca0826e"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta name="SiteName" content="国家能源局"> <meta name="SiteDomain" content="www.nea.gov.cn"> <meta name="SiteIDCode" content="bm62000002号"> <div data="datasource:20260527ad612fe227504da0bdaafe63f7433b9f" datatype="content"><meta name="ArticleTitle" content="国家能源局召开全国“人工智能+”能源现场推进会"></div> <div data="datasource:20260527ad612fe227504da0bdaafe63f7433b9f" datatype="content"><meta name="PubDate" content="2026-05-27 16:50:31"></div> <div data="datasource:20260527ad612fe227504da0bdaafe63f7433b9f" datatype="content"><meta name="ContentSource" content="国家能源局"></div> <meta name="description" content="国家能源网"> <meta name="keywords" content="国家能源网"> <title data="datasource:20260527ad612fe227504da0bdaafe63f7433b9f" datatype="content">
+            国家能源局召开全国“人工智能+”能源现场推进会---国家能源局
+        </title> <link href="http://www.nea.gov.cn/static/default/css/public/master_nyj_v1.0.css" rel="stylesheet" type="text/css"> <link href="http://www.nea.gov.cn/static/default/css/article.css" rel="stylesheet" type="text/css"> <link href="http://www.nea.gov.cn/2015nyj/xinban/topbase.css" rel="stylesheet"> <link href="http://www.nea.gov.cn/detail/css/cb_videoPlayer.css" rel="stylesheet"> <script src="http://www.nea.gov.cn/static/default/js/public/jquery-1.9.1.min.js" type="text/javascript"></script> <script language="javascript">
+        $(document).ready(function () {
+
+            var lefttmp = new Image();
+            lefttmp.src = "http://www.xinhuanet.com/photo/static/arr_left.cur";
+            var righttmp = new Image();
+            righttmp.src = "http://www.xinhuanet.com/photo/static/arr_right.cur";
+            leng = $("a", $("#div_currpage")).length;
+
+            if (leng != 0)
+            //curr里有a标签==稿件不止一页
+            {
+
+                //看一共有多少个a标签
+                leng = leng - 1;
+                var nextLin = $("a", $("#div_currpage"))[leng].href; //对于多页的情况，取得下一页的地址
+                var oneword = location.href + "#";
+                if (nextLin == oneword) {
+                    leng = leng - 1;
+                    nextLin = $("a", $("#div_currpage"))[leng].href;
+                }
+                var currurl = location
+                    .href; //当前页链接地址<meta http-equiv="expires" content="Sunday 26 October 2011 01:00 GMT" /> 
+
+                var underpd = currurl.substring(currurl.indexOf("c_") + 2, currurl.indexOf(".htm"));
+                if (underpd.indexOf("_") == -1) {
+
+                    prevLink = location.href; //如果是文章首页，则左键仍是替换到本页面
+                    nextLink = $("a", $("#div_currpage"))[0].href; //下一页的赋值
+                    setTimeout("window.opener=null;window.location.href='" + nextLink + "'", 60000); //30秒跳转到下一页
+                } else
+                //是末页，http://news.xinhuanet.com/photo/2011-08/06/c_121822530.htm
+                {
+                    //当前页分页号判断
+                    var currnum = currurl.indexOf(".htm"); //链接中第一次出现.htm的位置
+                    var underlineindex = currurl.lastIndexOf("_") + 1; //下划线甄别标识，第一页则不是下划线
+                    //下一页的分页号
+                    var nextnum = nextLin.indexOf(".htm"); //链接中第一次出现.htm的位置
+                    var underlinenext = nextLin.lastIndexOf("_") + 1; //下划线甄别标识，第一页则不是下划线
+                    var undernum = nextLin.substr(nextLin.indexOf("c_")).split("_").length - 1;
+
+                    var temp = currurl.substring(underlineindex, currnum); //当前页的分页号
+                    var nexttemp = nextLin.substring(underlinenext, nextnum); //最后a标签的分页号
+                    var boolx = parseInt(temp, 10) > parseInt(nexttemp, 10);
+
+                    if ((boolx) || (undernum == 1)) //末页
+
+                    {
+
+                        if ($("img", $("a", $("#content"))).length == 0) //没有带链接的图片
+
+                        {
+                            prevLink = nextLin;
+                            if (undernum == 1) {
+                                nextLink = nextLin;
+                            } else {
+                                nextLink = prevLink.substr(0, (prevLink.lastIndexOf("_"))) + ".htm";
+                            }
+                            setTimeout("window.opener=null;window.location.href='" + nextLink + "'",
+                                60000); //30秒跳转到下一页
+                        } else //末页正文图片有链接
+                        {
+                            prevLink = nextLin;
+                            nextLink = $("a", $("#content"))[0].href; //把正文第一个带链接的链接地址赋给下一页
+                        }
+
+                    } else //不是末页
+                    {
+
+                        prevLink = $("a", $("#div_currpage"))[0].href; //把正文第一个带链接的链接地址赋给下一页
+                        nextLink = nextLin; //把正文最后一个带链接的链接地址赋给下一页
+                    }
+
+                }
+            } else
+            //只有一页
+            {
+                prevLink = location.href;
+                nextLink = location.href;
+            }
+
+            document.onkeydown = pageEvent;
+
+            function pageEvent(evt) {
+                evt = evt || window.event;
+                var key = evt.which || evt.keyCode;
+                if (key == 37) location = prevLink;
+                if (key == 39) location = nextLink;
+            };
+
+            var lefturl = prevLink;
+            var righturl = nextLink;
+            var imgurl = righturl;
+
+            $("#content img").each(function () {
+                var width = $(this).width();
+                var thisImage = $(this);
+                //alert("01");
+                $(thisImage)[0].onmousemove = function () {
+
+                    if (event.offsetX < width / 2) {
+
+                        this.style.cursor = 'url(' + lefttmp.src + '),auto';
+                        imgurl = lefturl;
+                    } else {
+
+                        this.style.cursor = 'url(' + righttmp.src + '),auto';
+                        imgurl = righturl;
+                    }
+
+                }
+
+                $(thisImage)[0].onmouseup = function () {
+                    top.location = imgurl;
+
+                }
+            });
+
+        });
+    </script></head> <body><script src="http://www.nea.gov.cn/2015nyj/xinban/topnav.js" type="text/javascript"></script> <div class="main-colum"><div class="now-site">您当前位置：<a href="http://www.nea.gov.cn/" target="_blank">首页</a> &gt; 正文</div> <div class="channel-page"><div class="article-title" data="datasource:20260527ad612fe227504da0bdaafe63f7433b9f" datatype="content"><div class="hr_10"></div> <div class="titles">
+                        国家能源局召开全国“人工智能+”能源现场推进会
+                    </div> <div class="hr_10"></div> <span class="times">
+                        发布时间：2026-05-27
+                    </span> <span class="author">
+                        来源：国家能源局
+                    </span> <span class="switchsize"><b class="bigger">大</b><b class="medium">中</b><b class="smaller">小</b></span> <div class="arrow"></div></div> <div class="article-box"><div class="hr_10"></div> <div class="hr_10"></div> <div class="hr_10"></div> <div id="detail" data="datasource:20260527ad612fe227504da0bdaafe63f7433b9f" datatype="content"><div class="article-content"><span id="detailContent"><p>&emsp;&emsp;5月26日，国家能源局在深圳召开全国“人工智能+”能源现场推进会。国家能源局党组书记、局长王宏志出席会议并讲话，广东省委常委、常务副省长张虎，深圳市委副书记、市长覃伟中致辞，国家能源局党组成员、副局长宋宏坤主持会议。</p><p><img style="display: block; margin-left: auto; margin-right: auto;" src="20260527ad612fe227504da0bdaafe63f7433b9f_20260527eec0835e3697409181dbaa4c69d54f6e.jpg" width="808" height="429" data-material-id="26052700704843" data-name="20260527eec0835e3697409181dbaa4c69d54f6e.jpg"></p><p>&emsp;&emsp;会上，国家能源局解读部署《关于促进人工智能与能源双向赋能的行动方案》《全面提升供电质量服务新质生产力发展专项行动方案（2026—2028年）》，发布《中国“人工智能+”能源发展报告2026》和51个“人工智能+”能源高价值场景，25家能源企业签署《开放能源领域人工智能应用高价值场景倡议书》。与会代表还现场参观了南方电网深圳供电局、中国海油和华为公司关于人工智能与能源融合发展的创新实践。</p><p>&emsp;&emsp;会议强调，人工智能是建设能源强国、发展能源新质生产力的重要引擎，要深入贯彻落实党中央、国务院重大决策部署，抢抓全球人工智能发展战略机遇，持续深化能源应用场景开放，着力突破关键核心技术，促进算力电力高效协同，积极营造生态共建、资源共享、价值共创、未来共赢的良好氛围，推动形成人工智能和能源双向赋能、融合发展新格局。</p><p>&emsp;&emsp;国家能源局总工程师刘德顺，国家发展改革委、国家数据局、中国科学院和国家能源局有关司局负责同志，各省（区、市）、新疆生产建设兵团能源行业主管部门，有关能源企业、人工智能企业以及行业机构负责同志参加会议。</p></span></div></div> <div class="back-top"></div> <div class="hr_10"></div> <div class="hr_10"></div> <div class="hr_10"></div></div> <div class="article-other"><div class="hr_10"></div> <div class="hr_10"></div> <div class="clear"></div></div> <div class="hr_10"></div> <div class="hr_10"></div> <div class="hr_10"></div></div></div> <script src="http://www.nea.gov.cn/2015nyj/xinban/bottom.js" type="text/javascript"></script> <script src="http://www.nea.gov.cn/static/default/js/public/article-font.js" type="text/javascript"></script> <script src="http://www.nea.gov.cn/detail/js/pager.js"></script> <script src="http://www.nea.gov.cn/detail/js/cb-video.js"></script> <script>
+        $(function () {
+            /* 分页调用 */
+            parsePagingFun({
+                // preText: 'prev',//上一页
+                // nextText: 'next',//下一页
+                id: 'detailContent', //正文分页id
+                num: 8 //显示页码数个数
+            })
+
+        })
+    </script><script src="//imgs.news.cn/webdig/xinhua_webdig.js" language="javascript" type="text/javascript" async></script></body></html>

@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-18T00:15:41+08:00",
+  "ready_for": [
+    "四种总量需求基线的条件回算"
+  ],
+  "blocked_for": [],
+  "accepted_bindings": [
+    {
+      "dataset_path": "data/observations/demand_energy_total_2015_2024.json",
+      "review_id": "R-S01-DEMAND-20261017",
+      "source_ids": [
+        "S01"
+      ]
+    },
+    {
+      "dataset_path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+      "review_id": "R-S06-GDP-20261017",
+      "source_ids": [
+        "S06"
+      ]
+    }
+  ],
+  "not_covered": [
+    "全国ABM校准",
+    "部门需求替代",
+    "CO2与中和率",
+    "正式情景"
+  ],
+  "formal_check_limitation": "仅检查已登记子集的证据结构和文件一致性；不自动验证原文真伪、转录正确性、数据覆盖完整性、情景参数或模型有效性。未准入不等于原数值错误。"
+}

@@ -1,0 +1,272 @@
+[
+  {
+    "id": "EIA_HORMUZ_2025",
+    "title": "霍尔木兹海峡能源运输与中国进口暴露",
+    "agency": "EIA",
+    "publication_date": "2025-06-16",
+    "coverage": "2024/2025",
+    "url": "https://www.eia.gov/todayinenergy/detail.php?id=65504",
+    "file": "raw/eia_hormuz_2025.html",
+    "notes": "S2/S5；海峡贸易份额不等于中国进口损失比例"
+  },
+  {
+    "id": "IEA_MIDEAST",
+    "title": "中东与全球能源市场专题",
+    "agency": "IEA",
+    "publication_date": "动态网页",
+    "coverage": "2026动态",
+    "url": "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+    "file": "raw/iea_mideast.html",
+    "notes": "S0初始条件/S2；动态内容保存快照，不作为事件概率"
+  },
+  {
+    "id": "EU_RUSSIAN_GAS",
+    "title": "逐步禁止俄罗斯天然气进口决定",
+    "agency": "欧盟理事会",
+    "publication_date": "2026-01-26",
+    "coverage": "2026起实施安排",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/01/26/russian-gas-imports-council-gives-final-greenlight-to-a-stepwise-ban/",
+    "file": "raw/eu_russian_gas.html",
+    "notes": "S0/S2；欧洲采购变化渠道，不直接当中国进口量变化"
+  },
+  {
+    "id": "EU_CBAM",
+    "title": "碳边境调节机制正式阶段",
+    "agency": "欧盟委员会",
+    "publication_date": "动态网页",
+    "coverage": "2026起",
+    "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "file": "raw/eu_cbam.html",
+    "notes": "S0/S1；行业适用范围、嵌入排放、碳价机制"
+  },
+  {
+    "id": "CN_DSM",
+    "title": "电力需求侧管理办法2023年版",
+    "agency": "国家发展改革委等",
+    "publication_date": "2023-09-27",
+    "coverage": "政策目标与机制",
+    "url": "https://www.ndrc.gov.cn/xxgk/zcfb/ghxwj/202309/P020230927316131533276.pdf",
+    "file": "raw/cn_demand_response.pdf",
+    "notes": "S0/S6；政策目标不是已实现需求响应能力"
+  },
+  {
+    "id": "US_LNG_STUDY",
+    "title": "2024年LNG出口研究意见答复最终版",
+    "agency": "美国能源部",
+    "publication_date": "2025-05-19",
+    "coverage": "研究情景",
+    "url": "https://www.energy.gov/sites/default/files/2025-05/2024%20LNG%20Export%20Study_Response%20to%20Comments_Final_05.19.2025.pdf",
+    "file": "raw/us_lng_study_response.pdf",
+    "notes": "S2国际供应；美国研究参数不直接移植中国"
+  },
+  {
+    "id": "US_LNG_SNAPSHOT",
+    "title": "LNG出口快照2025年12月",
+    "agency": "美国能源部",
+    "publication_date": "2025-12",
+    "coverage": "截至文中月份",
+    "url": "https://www.energy.gov/sites/default/files/2025-12/LNG%20Snapshot%20Dec%2031%202025_0.pdf",
+    "file": "raw/us_lng_snapshot_202512.pdf",
+    "notes": "S0/S2供应能力与去向"
+  },
+  {
+    "id": "EIA_LNG_2026",
+    "title": "美国LNG出口增长展望",
+    "agency": "EIA",
+    "publication_date": "2026-04-16",
+    "coverage": "2025实际与2026/2027预测",
+    "url": "https://www.eia.gov/todayinenergy/detail.php?id=67484",
+    "file": "raw/eia_lng_2026.html",
+    "notes": "必须区分实际和预测；不是截至十月最新预测"
+  },
+  {
+    "id": "IEA_REVIEW_2026",
+    "title": "全球能源回顾2026",
+    "agency": "IEA",
+    "publication_date": "2026-04-20",
+    "coverage": "2025",
+    "url": "https://iea.blob.core.windows.net/assets/df903e1c-49c6-4757-8cbf-6fbcfe7611a0/GlobalEnergyReview2026.pdf",
+    "file": "raw/iea_review_2026.pdf",
+    "notes": "S0全球能源与排放背景；中国数据核对国家统计口径"
+  },
+  {
+    "id": "MOFCOM_CBAM",
+    "title": "欧盟CBAM知识问答第一期",
+    "agency": "商务部外贸发展事务局（商务部网站托管）",
+    "publication_date": "2026-07（按PDF封面）",
+    "coverage": "2026实施解释",
+    "url": "https://wms.mofcom.gov.cn/cms_files/filemanager/271034535/attach/202511/a141613b8cf8439eb41ba1430a4a94c4.pdf",
+    "file": "raw/mofcom_cbam.pdf",
+    "notes": "中文操作解释；后续变更以欧盟正式文本为准；URL目录202511与正文2026年7月不一致，以正文版本标记"
+  },
+  {
+    "id": "EU_GAS_COMMISSION",
+    "title": "REPowerEU俄罗斯能源进口退出安排",
+    "agency": "欧盟委员会能源总司",
+    "publication_date": "动态网页",
+    "coverage": "2026规则及后续实施",
+    "url": "https://energy.ec.europa.eu/strategy/repowereu-phase-out-russian-energy-imports_en",
+    "file": "raw/eu_gas_commission.html",
+    "notes": "欧盟理事会原页403的官方替代；核验生效和阶段安排"
+  },
+  {
+    "id": "CN_STORAGE_ACTION",
+    "title": "新型储能规模化建设专项行动方案2025—2027",
+    "agency": "国家发展改革委、国家能源局",
+    "publication_date": "2025-09-12公开",
+    "coverage": "2025—2027政策目标",
+    "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202509/P020250912338143145278.pdf",
+    "file": "raw/cn_storage_action.pdf",
+    "notes": "S0/S3/S6；目标值不可冒充实绩"
+  },
+  {
+    "id": "CN_ETS_ALLOCATION",
+    "title": "2025、2026年度发电及2026年度钢铁水泥铝冶炼配额方案",
+    "agency": "生态环境部",
+    "publication_date": "2026-09-03公开",
+    "coverage": "2025/2026履约年度",
+    "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk03/202609/W020260903551498752549.pdf",
+    "file": "raw/cn_ets_allocation_2026.pdf",
+    "notes": "S0/S1；行业基准值及配额分配机制"
+  },
+  {
+    "id": "CN_ETS_ALLOCATION_NOTICE",
+    "title": "碳市场2025/2026配额方案通知",
+    "agency": "生态环境部",
+    "publication_date": "2026-09-03公开",
+    "coverage": "2025/2026",
+    "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk03/202609/t20260903_1165029.html",
+    "file": "raw/cn_ets_notice.html",
+    "notes": "配额方案的通知、日期与附件核对"
+  },
+  {
+    "id": "EIA_CHOKEPOINTS_2026",
+    "title": "世界石油运输咽喉2026更新",
+    "agency": "EIA",
+    "publication_date": "2026-03-03",
+    "coverage": "2020—2025上半年；巴拿马部分为财政年",
+    "url": "https://www.eia.gov/international/analysis/special-topics/World_Oil_Transit_Chokepoints",
+    "file": "raw/eia_chokepoints_2026.html",
+    "notes": "全球通道流量非中国进口量；页面可能依赖动态加载，下载后核查正文；HTML仅壳页面，正文已在Chrome阅读；定量使用同页官方XLSX附件"
+  },
+  {
+    "id": "IEA_OCT2026",
+    "title": "2026年10月石油市场报告公开页面",
+    "agency": "IEA",
+    "publication_date": "2026-10-14",
+    "coverage": "短期市场与预测",
+    "url": "https://www.iea.org/reports/oil-market-report-october-2026",
+    "file": "raw/iea_oil_oct2026.html",
+    "notes": "仅公开页面；不下载付费全文"
+  },
+  {
+    "id": "UNCTAD_MARITIME_2025",
+    "title": "海运回顾2025",
+    "agency": "UNCTAD",
+    "publication_date": "2025",
+    "coverage": "航运历史与2025展望",
+    "url": "https://unctad.org/system/files/official-document/rmt2025_en.pdf",
+    "file": "raw/unctad_maritime_2025.pdf",
+    "notes": "航程绕行、运输约束、费用；不直接转换成中国能源价格"
+  },
+  {
+    "id": "EIA_FIGURE_3",
+    "title": "EIA运输流量原始图表：马六甲",
+    "agency": "EIA",
+    "publication_date": "2026-03-03",
+    "coverage": "2020—2025上半年，详见工作簿",
+    "url": "https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/excel/Chokepoints_FY2026_F3.xlsx",
+    "file": "raw/eia_chokepoints_F3.xlsx",
+    "notes": "全球来源/去向流量；1H25不是全年；保留单位和国家分类"
+  },
+  {
+    "id": "EIA_FIGURE_5",
+    "title": "EIA运输流量原始图表：霍尔木兹",
+    "agency": "EIA",
+    "publication_date": "2026-03-03",
+    "coverage": "2020—2025上半年，详见工作簿",
+    "url": "https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/excel/Chokepoints_FY2026_F5.xlsx",
+    "file": "raw/eia_chokepoints_F5.xlsx",
+    "notes": "全球来源/去向流量；1H25不是全年；保留单位和国家分类"
+  },
+  {
+    "id": "EIA_FIGURE_7",
+    "title": "EIA运输流量原始图表：苏伊士与SUMED",
+    "agency": "EIA",
+    "publication_date": "2026-03-03",
+    "coverage": "2020—2025上半年，详见工作簿",
+    "url": "https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/excel/Chokepoints_FY2026_F7.xlsx",
+    "file": "raw/eia_chokepoints_F7.xlsx",
+    "notes": "全球来源/去向流量；1H25不是全年；保留单位和国家分类"
+  },
+  {
+    "id": "EIA_FIGURE_9",
+    "title": "EIA运输流量原始图表：丹麦海峡",
+    "agency": "EIA",
+    "publication_date": "2026-03-03",
+    "coverage": "2020—2025上半年，详见工作簿",
+    "url": "https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/excel/Chokepoints_FY2026_F9.xlsx",
+    "file": "raw/eia_chokepoints_F9.xlsx",
+    "notes": "全球来源/去向流量；1H25不是全年；保留单位和国家分类"
+  },
+  {
+    "id": "EIA_FIGURE_11",
+    "title": "EIA运输流量原始图表：达达尼尔",
+    "agency": "EIA",
+    "publication_date": "2026-03-03",
+    "coverage": "2020—2025上半年，详见工作簿",
+    "url": "https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/excel/Chokepoints_FY2026_F11.xlsx",
+    "file": "raw/eia_chokepoints_F11.xlsx",
+    "notes": "全球来源/去向流量；1H25不是全年；保留单位和国家分类"
+  },
+  {
+    "id": "EIA_FIGURE_14",
+    "title": "EIA运输流量原始图表：好望角",
+    "agency": "EIA",
+    "publication_date": "2026-03-03",
+    "coverage": "2020—2025上半年，详见工作簿",
+    "url": "https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/excel/Chokepoints_FY2026_F14.xlsx",
+    "file": "raw/eia_chokepoints_F14.xlsx",
+    "notes": "全球来源/去向流量；1H25不是全年；保留单位和国家分类"
+  },
+  {
+    "id": "EIA_STEO_OCT2026_PAGE",
+    "title": "短期能源展望2026年10月首页快照",
+    "agency": "EIA",
+    "publication_date": "2026-10-06",
+    "coverage": "输入截至2026-10-01；预测至2027",
+    "url": "https://www.eia.gov/outlooks/steo/",
+    "file": "raw/eia_steo_oct2026.html",
+    "notes": "动态URL冻结下载版本；未来预测不可作为实绩，未纳入10月1日之后事件"
+  },
+  {
+    "id": "EIA_STEO_OCT2026_PDF",
+    "title": "短期能源展望2026年10月全文",
+    "agency": "EIA",
+    "publication_date": "2026-10-06",
+    "coverage": "历史与预测至2027",
+    "url": "https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf",
+    "file": "raw/eia_steo_oct2026.pdf",
+    "notes": "须核对PDF月份；长期2060不可线性延伸短期预测"
+  },
+  {
+    "id": "EIA_STEO_OCT2026_DATA",
+    "title": "短期能源展望2026年10月全表",
+    "agency": "EIA",
+    "publication_date": "2026-10-06",
+    "coverage": "月季年实际/估计/预测混合",
+    "url": "https://www.eia.gov/outlooks/steo/xls/STEO_m.xlsx",
+    "file": "raw/eia_steo_oct2026.xlsx",
+    "notes": "保留工作簿表头与预测分界；不是全观测数据"
+  },
+  {
+    "id": "EIA_SECURITY_AUG2026",
+    "title": "全球能源安全数据2026年8月",
+    "agency": "EIA",
+    "publication_date": "2026-08-12",
+    "coverage": "库存2025Q4—2026Q2；通道2025Q1—2026Q2",
+    "url": "https://www.eia.gov/outlooks/steo/report/energysecurity/article.php",
+    "file": "raw/eia_security_aug2026.html",
+    "notes": "含EIA第三方估计中国库存，不是中国官方公布；通道不同表可能有差异需记录"
+  }
+]

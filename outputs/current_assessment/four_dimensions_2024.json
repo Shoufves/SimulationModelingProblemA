@@ -1,0 +1,494 @@
+{
+  "year": 2024,
+  "status": "partial_four_dimension_synthesis",
+  "metrics": [
+    {
+      "indicator_id": "gas_named_origins_share",
+      "dimension": "供给保障",
+      "label": "天然气五主要来源合计占进口",
+      "value": 81.28783709411117,
+      "unit": "%",
+      "formula": "1477/1817×100",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/gas_official_report_2024.json",
+          "source_id": "S22",
+          "fields": [
+            "five_main_origins_imports",
+            "gas_imports"
+          ]
+        }
+      ],
+      "interpretation": "仅描述已列五来源合计；不把五来源假设为均分。"
+    },
+    {
+      "indicator_id": "gas_hhi_lower",
+      "dimension": "供给保障",
+      "label": "天然气来源HHI保守下界",
+      "value": 1321.542491887751,
+      "unit": "0—10000尺度",
+      "formula": "10000×(五来源合计/总进口)^2/5",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/gas_official_report_2024.json",
+          "source_id": "S22",
+          "fields": [
+            "five_main_origins_imports",
+            "gas_imports"
+          ]
+        }
+      ],
+      "interpretation": "由柯西不等式得到；余下来源贡献非负。不是精确HHI。"
+    },
+    {
+      "indicator_id": "gas_hhi_upper",
+      "dimension": "供给保障",
+      "label": "天然气来源HHI保守上界",
+      "value": 6957.857500055278,
+      "unit": "0—10000尺度",
+      "formula": "10000×[s^2+(1-s)^2]，s=五来源合计/总进口",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/gas_official_report_2024.json",
+          "source_id": "S22",
+          "fields": [
+            "five_main_origins_imports",
+            "gas_imports"
+          ]
+        }
+      ],
+      "interpretation": "允许两组内部任意集中，且不假设五来源为完整排名；可能不可取到。"
+    },
+    {
+      "indicator_id": "gas_lng_import_share",
+      "dimension": "供给保障",
+      "label": "LNG占天然气进口",
+      "value": 58.172812328013215,
+      "unit": "%",
+      "formula": "1057/1817×100",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/gas_official_report_2024.json",
+          "source_id": "S22",
+          "fields": [
+            "lng_imports",
+            "gas_imports"
+          ]
+        }
+      ],
+      "interpretation": "运输路径结构；不是价格风险、进口依赖率或失供率。"
+    },
+    {
+      "indicator_id": "coal_energy_share",
+      "dimension": "清洁低碳",
+      "label": "煤炭能源消费占比",
+      "value": 53.2,
+      "unit": "%",
+      "formula": "官方直接观测",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/energy_official_communique_2024.json",
+          "source_id": "S13",
+          "fields": [
+            "coal_consumption_share_pct"
+          ]
+        }
+      ],
+      "interpretation": "能源消费结构；不能由此直接计算全国CO2。"
+    },
+    {
+      "indicator_id": "wind_solar_generation_share",
+      "dimension": "清洁低碳",
+      "label": "风光发电占比",
+      "value": 18.202655330488714,
+      "unit": "%",
+      "formula": "(风电发电量+太阳能发电量)/同表总发电量×100",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/energy_official_communique_2024.json",
+          "source_id": "S13",
+          "fields": [
+            "generation_wind",
+            "generation_solar",
+            "generation_total"
+          ]
+        }
+      ],
+      "interpretation": "发电结构；不能替代非化石一次能源消费占比。"
+    },
+    {
+      "indicator_id": "thermal_generation_share",
+      "dimension": "清洁低碳",
+      "label": "火电发电占比",
+      "value": 63.19357422711482,
+      "unit": "%",
+      "formula": "火电发电量/同表总发电量×100",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/energy_official_communique_2024.json",
+          "source_id": "S13",
+          "fields": [
+            "generation_thermal",
+            "generation_total"
+          ]
+        }
+      ],
+      "interpretation": "火电包含生物质及余热等，不能全部解释为煤电或化石发电。"
+    },
+    {
+      "indicator_id": "co2_intensity_change",
+      "dimension": "清洁低碳",
+      "label": "官方CO2强度同比",
+      "value": -3.4,
+      "unit": "%",
+      "formula": "官方直接观测",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/energy_official_communique_2024.json",
+          "source_id": "S13",
+          "fields": [
+            "co2_intensity_growth_pct"
+          ]
+        }
+      ],
+      "interpretation": "单位GDP口径；不是全国排放总量同比。"
+    },
+    {
+      "indicator_id": "selected_import_value",
+      "dimension": "经济性",
+      "label": "四类商品进口金额小计",
+      "value": 33533,
+      "unit": "亿元",
+      "formula": "煤及褐煤、原油、成品油、天然气进口金额相加",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/energy_official_communique_2024.json",
+          "source_id": "S13",
+          "fields": [
+            "coal_lignite_import_value",
+            "crude_oil_import_value",
+            "petroleum_products_import_value",
+            "natural_gas_import_value"
+          ]
+        }
+      ],
+      "interpretation": "同表所选四类商品的毛进口金额；不是全部能源进口额或全系统成本。"
+    },
+    {
+      "indicator_id": "coal_lignite_import_bill_share",
+      "dimension": "经济性",
+      "label": "煤及褐煤占四类进口金额小计",
+      "value": 11.04881758267975,
+      "unit": "%",
+      "formula": "该商品进口金额/四类商品进口金额小计×100",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/energy_official_communique_2024.json",
+          "source_id": "S13",
+          "fields": [
+            "coal_lignite_import_value",
+            "crude_oil_import_value",
+            "petroleum_products_import_value",
+            "natural_gas_import_value"
+          ]
+        }
+      ],
+      "interpretation": "金额结构；不代表实物能源占比或边际成本。"
+    },
+    {
+      "indicator_id": "crude_oil_import_bill_share",
+      "dimension": "经济性",
+      "label": "原油占四类进口金额小计",
+      "value": 68.91122178152864,
+      "unit": "%",
+      "formula": "该商品进口金额/四类商品进口金额小计×100",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/energy_official_communique_2024.json",
+          "source_id": "S13",
+          "fields": [
+            "coal_lignite_import_value",
+            "crude_oil_import_value",
+            "petroleum_products_import_value",
+            "natural_gas_import_value"
+          ]
+        }
+      ],
+      "interpretation": "金额结构；不代表实物能源占比或边际成本。"
+    },
+    {
+      "indicator_id": "petroleum_products_import_bill_share",
+      "dimension": "经济性",
+      "label": "成品油占四类进口金额小计",
+      "value": 6.211791369695524,
+      "unit": "%",
+      "formula": "该商品进口金额/四类商品进口金额小计×100",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/energy_official_communique_2024.json",
+          "source_id": "S13",
+          "fields": [
+            "coal_lignite_import_value",
+            "crude_oil_import_value",
+            "petroleum_products_import_value",
+            "natural_gas_import_value"
+          ]
+        }
+      ],
+      "interpretation": "金额结构；不代表实物能源占比或边际成本。"
+    },
+    {
+      "indicator_id": "natural_gas_import_bill_share",
+      "dimension": "经济性",
+      "label": "天然气占四类进口金额小计",
+      "value": 13.828169266096085,
+      "unit": "%",
+      "formula": "该商品进口金额/四类商品进口金额小计×100",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/energy_official_communique_2024.json",
+          "source_id": "S13",
+          "fields": [
+            "coal_lignite_import_value",
+            "crude_oil_import_value",
+            "petroleum_products_import_value",
+            "natural_gas_import_value"
+          ]
+        }
+      ],
+      "interpretation": "金额结构；不代表实物能源占比或边际成本。"
+    },
+    {
+      "indicator_id": "grid_investment_share",
+      "dimension": "经济性",
+      "label": "电网占电源加电网报告投资",
+      "value": 34.23185143500282,
+      "unit": "%",
+      "formula": "电网投资/(电源工程投资+电网投资)×100",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/power_official_release_2024.json",
+          "source_id": "S17",
+          "fields": [
+            "grid_investment_100m_yuan",
+            "power_project_investment_100m_yuan"
+          ]
+        }
+      ],
+      "interpretation": "两项报告口径建设投入结构；不是最优投资比例或全行业成本。"
+    },
+    {
+      "indicator_id": "electricity_energy_growth_gap",
+      "dimension": "协调性",
+      "label": "电力与总能源消费增速差",
+      "value": 2.5,
+      "unit": "个百分点",
+      "formula": "电力消费同比-总能源消费同比",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/energy_official_communique_2024.json",
+          "source_id": "S13",
+          "fields": [
+            "electricity_consumption_growth_pct",
+            "total_energy_consumption_growth_pct"
+          ]
+        }
+      ],
+      "interpretation": "同公报需求增长差，仅提示电力需求约束需单列；不是电气化率变化或协同效率。"
+    },
+    {
+      "indicator_id": "gas_power_use_share",
+      "dimension": "协调性",
+      "label": "天然气报告中发电用气占比",
+      "value": 18,
+      "unit": "%",
+      "formula": "官方直接观测",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/gas_official_report_2024.json",
+          "source_id": "S22",
+          "fields": [
+            "power_consumption_share_pct"
+          ]
+        }
+      ],
+      "interpretation": "识别气—电转换接口；缺同边界绝对用气和效率，不能算气电转换效率。"
+    },
+    {
+      "indicator_id": "line_loss",
+      "dimension": "协调性",
+      "label": "全国线路损失率",
+      "value": 4.37,
+      "unit": "%",
+      "formula": "官方直接观测",
+      "input_refs": [
+        {
+          "dataset_path": "data/observations/power_official_release_2024.json",
+          "source_id": "S17",
+          "fields": [
+            "line_loss_pct"
+          ]
+        }
+      ],
+      "interpretation": "输配环节观测；缺范围匹配的送入电量，不换算损失电量。"
+    }
+  ],
+  "gas_concentration_bounds": {
+    "hhi_lower_bound_10000": 1321.542491887751,
+    "hhi_upper_bound_10000": 6957.857500055278,
+    "largest_origin_share_lower_pct": 16.257567418822234,
+    "largest_origin_share_upper_pct": 81.28783709411117,
+    "country_hhi_point": null,
+    "interpretation": "公布舍入值下的保守算术界；不是点估计、置信区间或安全分级"
+  },
+  "findings": [
+    {
+      "claim": "风光在发电结构中已有可观测贡献；煤炭消费和火电仍须分别建模。",
+      "metric_ids": [
+        "wind_solar_generation_share",
+        "coal_energy_share",
+        "thermal_generation_share"
+      ],
+      "model_action": "分别校准一次能源与发电结构，禁止以风光年末容量推算减排。",
+      "limit": "不能由结构描述量化全国减排潜力。"
+    },
+    {
+      "claim": "已知五来源合计不足以识别精确进口集中度；合计占比较高不等于国家份额已知。",
+      "metric_ids": [
+        "gas_named_origins_share",
+        "gas_hhi_lower",
+        "gas_hhi_upper",
+        "gas_lng_import_share"
+      ],
+      "model_action": "优先补各来源与路径交叉分项；供应中断机制须报告结构不确定性。",
+      "limit": "不能把五国均分或把年度进口量当作中断期可交付量。"
+    },
+    {
+      "claim": "四类商品进口金额的主要构成可量化，建设投资结构也有独立观测。",
+      "metric_ids": [
+        "selected_import_value",
+        "crude_oil_import_bill_share",
+        "grid_investment_share"
+      ],
+      "model_action": "分别建立燃料采购和资本投资账本，补价格、寿命与效率后再比较政策成本。",
+      "limit": "不能据金额结构认定某技术更经济或认定投资失衡。"
+    },
+    {
+      "claim": "电力需求增长与一次能源需求增长需分别描述，天然气发电用途提供转换接口。",
+      "metric_ids": [
+        "electricity_energy_growth_gap",
+        "gas_power_use_share",
+        "line_loss"
+      ],
+      "model_action": "年度需求与运行层保留气电转换、输配损耗和电力负荷约束。",
+      "limit": "协同潜力是待检验机制；本轮未证明协调改善或安全收益。"
+    }
+  ],
+  "missing_by_dimension": {
+    "供给保障": [
+      "峰值负荷和有效供给",
+      "各来源进口分项",
+      "工作气与可交付库存",
+      "完整净进口和燃料平衡",
+      "实际失供量"
+    ],
+    "清洁低碳": [
+      "统一口径非化石一次能源消费",
+      "燃烧/过程活动量及因子",
+      "全国CO2绝对量"
+    ],
+    "经济性": [
+      "技术全寿命成本",
+      "统一价格基年",
+      "终端价格与部门负担",
+      "收益和边际成本"
+    ],
+    "协调性": [
+      "气电投入产出及转换效率",
+      "储能功率/能量及运行",
+      "弃能、响应和跨区互济"
+    ]
+  },
+  "composite_score": null,
+  "national_co2_total": null,
+  "net_import_dependency_pct": null,
+  "gas_to_power_efficiency": null,
+  "adequacy_margin": null,
+  "scope_note": "三个限定用途发布版本并列分析；跨版本不构造容量因子、能量平衡或全国得分。",
+  "provenance": {
+    "accepted_bindings": [
+      {
+        "dataset_path": "data/observations/energy_official_communique_2024.json",
+        "review_id": "R-S13-20261017",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "review_id": "R-S17-20261016",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_official_report_2024.json",
+        "review_id": "R-S22-20261017",
+        "source_ids": [
+          "S22"
+        ]
+      }
+    ],
+    "evidence_files": [
+      {
+        "source_id": "S17",
+        "path": "data/raw/official/S17_page_capture.txt",
+        "sha256": "160fd1ffe6021dcc42484216a8fbea09ad9108bcea66f137dc41f0a3fdab3163",
+        "official_url": "https://www.nea.gov.cn/20250121/097bfd7c1cd3498897639857d86d5dac/c.html",
+        "capture_kind": "official_page_capture",
+        "locator": "全部26行可见文本，表格L14—L23，脚注L25，统计时点L10",
+        "captured_on": "2026-10-16",
+        "scope_and_units": "2024全国；容量年末万千瓦；线损%；6000千瓦及以上电厂利用小时；投资亿元",
+        "revision_note": "与S05年鉴既有转录不同，两个版本分开保存；不跨版本校准",
+        "extraction_method": "直接open官方页面的全文文本留存；人工逐行录入全年累计列并重开原页核对"
+      },
+      {
+        "source_id": "S13",
+        "path": "data/raw/official/S13_selected_capture.txt",
+        "sha256": "fdcf2c563d51bdfe1135b2f2a3e88d87d2ada2c66acfaa6e075cf8fa15f88e98",
+        "official_url": "https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202502/t20250228_1958817.html",
+        "capture_kind": "official_page_capture",
+        "locator": "一L32、109；三L189及表4能源行L193—203；表12能源进口行L419—422；十二L611；注1、2、21、25、26、87、88、89",
+        "captured_on": "2026-10-17",
+        "scope_and_units": "2024全国不含港澳台初步数；GDP现价亿元、增长不变价；产量/进口保留吨与立方米单位；能耗亿吨标煤；发电亿千瓦时；碳配额亿吨及亿元",
+        "revision_note": "注25明确煤炭洗选固废调整及可比增速；注2明确GDP历史修订；各自独立公报版本，不桥接旧年鉴",
+        "extraction_method": "直接open官方页面，分段读取正文、表头和脚注；人工留存所用段落摘录，不声称保存全文HTML或图表图片"
+      },
+      {
+        "source_id": "S22",
+        "path": "data/raw/official/S22_selected_capture.txt",
+        "sha256": "afcf51682efef9290ff94f79fec05c647f1c22fe0181d434ea078b2ef8f85547",
+        "official_url": "https://www.nea.gov.cn/20250829/a4e2deb9b6444df1a191b9d60c111ffd/20250829a4e2deb9b6444df1a191b9d60c111ffd_43ab87a785d1b64d49b9210dbc15d3781e.pdf",
+        "capture_kind": "official_page_capture",
+        "locator": "PDF第3页编委会、第6页来源脚注、第10—13页国内天然气1—4项；对应印刷页5—8",
+        "captured_on": "2026-10-17",
+        "scope_and_units": "2024全国天然气；报告体积亿立方米、结构及增速%；进口体积直接取报告，不自行质量换算；新增储气为增量",
+        "revision_note": "报告消费增长7.3%与S23表观消费8%未桥接；气产量2465与S13的2464.5保留各自精度；标准温压不明，不完成供需平衡",
+        "extraction_method": "直接读取官方PDF页面文本并用所用6页截图视觉复核，留存页面摘录及发布页元数据；原PDF下载TLS失败，未取得本地二进制或本地截图"
+      }
+    ],
+    "sha256": {
+      "data/evidence_reviews.json": "6043473c2192dc4c91d47c521bea5adb15b0b07197ad6c421b9216a6f207f376",
+      "data/observations/energy_official_communique_2024.json": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+      "data/observations/gas_official_report_2024.json": "20a0a46a2113440e2cf65d9395ff4c4377587cd83124e9f92c0f266af2fadc9b",
+      "data/observations/power_official_release_2024.json": "c4ad62a266a5136d9d8a76dc795bfd2140c90f16e26007a5e672a22207a3b90c",
+      "data/sources.json": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f",
+      "scripts/build_energy_assessment.py": "03a567bccec295955dfd5bc321a541deba7f540d16d1b22c60ce9e4cea0e9af6",
+      "scripts/build_four_dimension_assessment.py": "e3aea75ceece602cc911572961a11185548bace6150e1c03a9d1ca4950f06ffa",
+      "scripts/build_gas_assessment.py": "bd29420692622f30d0066b6840053126e59a0b0e686ca08741c59f393eeb602f",
+      "scripts/build_verified_assessment.py": "62d642ad2727cfb0169cc6e986c289f3e7b9179be711cb62ec48c8c9f3221db1",
+      "scripts/workflow_status.py": "0a948df02f7a11e2f8f7afef0be49c1eeac44a9e9371bf2a3fc4300ed7046e9e",
+      "workflow/model_inputs.json": "adcdca7ed33dc4048761a220c7a00b6585733117321ed1ce8571dd521c0520b0"
+    }
+  }
+}

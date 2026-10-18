@@ -1,0 +1,2013 @@
+[PDF page 1]
+GCB2025v15 
+1 
+ 
+The Global Carbon Project’s 
+fossil CO2 emissions dataset: 
+2025 release  
+ 
+ 
+ 
+Robbie M. Andrew and Glen P. Peters 
+CICERO Center for International Climate Research 
+Oslo, Norway 
+[internal version GCB2025v15] 
+
+[PDF page 2]
+GCB2025v15 
+1 
+ 
+Contents 
+1. Introduction 3 
+2. Methods 4 
+2.1. Nomenclature 5 
+2.2. Refinements 5 
+2.2.1. Annex-1 parties to the UNFCCC 6 
+2.2.2. Norway 7 
+2.2.3. China’s emissions from lime production 8 
+2.2.4. Indonesia 10 
+2.2.5. United Kingdom 11 
+2.2.6. Netherlands 12 
+2.2.7. Iceland 12 
+2.2.8. Liechtenstein 13 
+2.2.9. Thailand 14 
+2.2.10. United States of America 14 
+2.2.11. India 15 
+2.2.12. South Korea 16 
+2.2.13. Greenland 17 
+2.2.14. Brazil 18 
+2.2.15. Taiwan 18 
+2.2.16. Germany 19 
+2.2.17. Australia 19 
+2.2.18. France 20 
+2.2.19. Finland 21 
+2.2.20. Sweden 21 
+2.2.21. DR Congo 21 
+2.2.22. New Caledonia 22 
+2.2.23. Latin America 22 
+2.2.24. Cement process emissions 23 
+2.2.25. International transportation (bunkers) 24 
+2.2.26. Other corrections to CDIAC-FF’s data 25 
+2.2.27. Emissions from international transport since 2020 25 
+2.2.28. Flaring 26 
+2.2.29. Extrapolation in final years 26 
+2.3. Per capita series 27 
+2.4. Continuous country definitions 27 
+2.5. Source documentation 28 
+3. Revisions over time 28 
+4. Further Research 29 
+4.1. Extrapolation in final years 29 
+4.2. Clear geographies 29 
+4.3. Other issues 30 
+5. FAQ 31 
+5.1. Kuwaiti oil fires 31 
+5.2. Aruba 31 
+5.3. Singapore 31 
+5.4. Luxembourg 33 
+
+[PDF page 3]
+GCB2025v15 
+2 
+ 
+5.5. Nigeria 33 
+6. Conclusions 33 
+7. Acknowledgements 34 
+8. References 34 
+Appendix: Change Log 42 
+ 
+  
+
+[PDF page 4]
+GCB2025v15 
+3 
+ 
+The Global Carbon Project’s fossil CO2 emissions dataset: 
+2025 release (update 1) 
+[internal version GCB2025v15] 
+Robbie Andrew and Glen P. Peters 
+CICERO Center for International Climate Research 
+Oslo, Norway 
+22 October 2025 
+ 
+Abstract 
+The Global Carbon Project has been publishing estimates of global and national fossil CO2 
+emissions since 2001. In the first instance these were simple republications of data from another 
+source, but over subsequent years refinements have been made in response to feedback and 
+identification of inaccuracies. In this article we describe the history of this process leading up to the 
+methodology used in the 2025 release of the GCP’s fossil CO2 emissions dataset, with subsequent 
+updates. 
+1. Introduction 
+The Global Carbon Project was established in 2001 and is currently one of 20 Global Research 
+Projects under Future Earth. Its goal is “to develop a complete picture of the global carbon cycle, 
+including both its biophysical and human dimensions together with the interactions and feedbacks 
+between them” (GCP, no date). 
+The purpose of the GCP’s fossil CO2 emissions dataset has always been as one component of the 
+Global Carbon Budget, the balance of source and sink components of carbon dioxide. In the early 
+years of the GCP the fossil CO2 emissions dataset was taken directly from CDIAC, the Carbon 
+Dioxide Information Analysis Center of the Oak Ridge National Laboratory (e.g., Raupach et al., 
+2007). The production of this dataset has since shifted to Appalachian State University and been 
+renamed CDIAC-FF (Gilfillan and Marland, 2021). CDIAC had been producing estimates of global 
+and national fossil CO2 emissions since 1999, although the history of the project goes back to 1973 
+with the work of Keeling (1973) and Rotty (1973) (see Andrew (2020a) for further details of this 
+history). CDIAC’s emissions estimates have a long-standing presence in the scientific community as 
+well as covering all countries and extending back to 1751 in the early industrial period, and were 
+divided into emissions from solid, liquid, and gaseous fuels as well as venting/flaring and cement 
+production. Some aspects of the methodology used by CDIAC were incorporated into the Tier 1 
+approach in the first IPCC Guidelines (Haukås et al., 1997). CDIAC applied standard factors to 
+apparent consumption1 of energy derived from UN energy data, including flared natural gas, and 
+extended these a further two years using growth rates derived from BP’s Statistical Review of World 
+Energy. Process emissions from cement production were derived from cement production statistics 
+from the United States Geological Survey. CDIAC therefore provides a solid foundation of global and 
+national fossil CO2 emissions. However, over the years as queries have come to the GCP asking for 
+ 
+1 Apparent consumption is derived from data on production, exports, imports, and stock changes. It 
+contrasts to observed consumption, collated from alternative sources such as industry reporting of direct 
+consumption or sales to consumers. The Reference Approach to calculating emissions uses apparent 
+consumption of energy products, while the Sectoral Approach uses alternative approaches. 
+
+[PDF page 5]
+GCB2025v15 
+4 
+ 
+explanations of deviations from officially estimated emissions or unusual trends, the GCP’s fossil CO2 
+emissions dataset has been refined in a gradual process of improvement. 
+This report is largely devoted to a more detailed description of the methods used to assemble the 
+latest version of GCP’s fossil CO2 emissions dataset. 
+2. Methods 
+The GCP’s fossil CO2 emissions dataset begins with CDIAC-FF (updated from Hefner and 
+Marland, 2023), extended by 2–3 years using energy growth rates derived from data published by the 
+Energy Institute (EI; formerly published by BP) (Myhre et al., 2009; Energy Institute, various years), 
+depending on the availability of CDIAC-FF. 
+CDIAC-FF uses UN energy data with disaggregated energy types, and after calculating emissions 
+from these, aggregates to a reduced number of categories: solid, liquid, and gaseous fossil fuels, as 
+well as gas flaring and cement process emissions. Note that these allocations are made on the basis of 
+the primary fossil fuel category: e.g., natural gas liquids, some of which are in fact gaseous at standard 
+temperature and pressure, are allocated to the liquid category; and gases made from coal are allocated 
+to the solid category. Emissions from combustion of international bunker fuels are also allocated to 
+each country based on sales by the country, but these are excluded from national totals, following 
+standard international reporting practice. For GCB version 2025v15 we use a pre-release of CDIAC-
+FF 2025 (pers. comm., Michael Erb, 19 August 2025). 
+The Statistical Review of World Energy is released in June or July every year, being the first 
+freely available global update of energy statistics up to the previous year. This dataset was published 
+by BP for many years, until the Energy Institute took over in 2023 (Energy Institute, 2023). Since the 
+UN data used by CDIAC-FF lag by two years, the Statistical Review has proved useful in extending 
+the emissions series (Myhre et al., 2009; Friedlingstein et al., 2020). While EI’s data cover global 
+energy consumption, detail is only provided for the most significant countries, with the remaining 
+countries in each geographic area grouped (e.g., ‘Other South America’). To use growth rates derived 
+from the EI data to extend emissions estimates, it is therefore necessary to apply the growth rate from 
+each of these groups to all countries falling within the group for which data are not explicitly provided, 
+and this introduces some additional uncertainty. 
+For a growing number of countries, and also for international bunkers, we have been introducing 
+more specific data sources, gradually (but only slightly) reducing our reliance on the Statistical 
+Review in particular situations where we believe that use of more direct data sources is warranted. For 
+example, we now use JODI data for emissions from natural gas consumption in final years for many 
+countries. The ‘Refinements’ section of this report lists many other examples. 
+Our philosophy in the Global Carbon Budget is to obtain the best possible estimate of fossil CO2 
+emissions globally, and we therefore take the position that accuracy is more important than use of the 
+same method across all countries, with the obvious condition that both double counting and 
+undercounting of emissions are avoided. 
+Sometimes an argument is made in public discourse and presentation of collated datasets for 
+consistency of data sources and methods as being the best approach when assembling estimates of 
+emissions. Certainly, a strong case can be made that consistent system boundaries should be used 
+when comparing between countries: that the same categories of emissions source are included 
+(Andrew, 2020a). Comparing emissions estimates for two countries when one countries’ estimate 
+includes emissions sources such as non-energy uses of fossil fuels and carbonate decomposition, while 
+
+[PDF page 6]
+GCB2025v15 
+5 
+ 
+the other countries’ estimate does not is clearly not going to result in a useful comparison. However, 
+when two different methods are used to calculate the same thing, this does not necessarily constitute 
+an ‘apples with oranges’ comparison. Clearly using data from only one source is convenient and 
+reduces effort, a strong argument in its favour. But the other, sometimes unspoken argument might be 
+that the ‘inconsistencies’ introduced by using more than one data source will lead to errors. It is this 
+point that we disagree with. 
+2.1. Nomenclature 
+Until 2017, GCP referred to the fossil CO2 emissions as emissions from “fossil fuels and 
+industry”, where industry specifically meant process emissions from cement production, using the 
+shorthand “EFF”. However, this term has generated considerable confusion among users who often 
+assumed that ‘industry’ had its normal meaning of those sectors of the economy not involved in 
+agriculture or services, and the question “what about transport emissions?” was not uncommon. This 
+confusion partly stems from a more common division of total emissions into different sectors (power, 
+transport, residential, etc.), in contrast to CDIAC-FF’s approach of fuel categories. In fact, most 
+energy data have lower uncertainty when expressed in fuel terms than in terms of which sectors use 
+the energy, which is often further derived from the fuel-level energy data using additional 
+approximations. That said, CDIAC-FF’s choice to divide into fuel categories rather than sectors arose 
+simply from the availability of data in the early years: UN data provided little information about 
+sectoral energy consumption. To avoid this area of confusion, the GCP began in its 2018 release to use 
+the term “fossil CO2”, with the definition “emissions of CO2 from oxidation of fossil fuels and 
+decomposition of fossil carbonates” (Andrew, 2020a; Le Quéré et al., 2018). We use the term 
+‘oxidation’ as it covers both combustion of fossil fuels and other chemical processes that lead to 
+oxidation of the carbon (i.e. conversion to CO2) in those fuels. Some datasets exclude all emissions 
+from decomposition of carbonates (e.g., IEA, EIA), so the term “fossil-fuel emissions” is still valid, 
+but its use should be limited to datasets that do not include other emissions sources. 
+2.2. Refinements 
+Over the years refinements have been made to the methods, particularly in response to official 
+queries as to why GCP’s estimates differ from official estimates made in the most recent years, to 
+which the answer was always simply that GCP’s approach was approximate and aimed at using 
+consistent methods for all countries (an aim now relaxed). Further refinements are a result of the 
+identification of inaccurate emissions, for example the cement-process emissions.  
+CDIAC-FF’s data extended by growth rates derived from EI energy data effectively forms the 
+starting point of GCP’s dataset. Upon this foundation, we overwrite the emissions for reasons that fall 
+into four main categories. 
+The first is where official estimates are available from developed countries. Here we assume that 
+these are of higher quality because of the use of significantly more detailed data and information and 
+the expertise developed over many years combined with external auditing via the UNFCCC. 
+The second case is where estimates from CDIAC-FF are in clear disagreement with those from 
+other sources, including the IEA, which uses more detailed energy data and undertakes significantly 
+more cross-checks than CDIAC-FF does. 
+The third is where final-year data are available that provide higher quality estimates than by using 
+growth rates derived from EI. 
+
+[PDF page 7]
+GCB2025v15 
+6 
+ 
+The fourth is where CDIAC-FF’s data contain implausible values (e.g., negatives) or rates of 
+change (e.g., sudden, unexplainable discontinuities), or where checking against sources used by 
+CDIAC-FF shows evidence of transcription errors. 
+The following sections describe specific cases where estimates from the underlying CDIAC-BP 
+foundation are overwritten. 
+2.2.1. Annex-1 parties to the UNFCCC 
+Countries listed in Annex 1 of the UNFCCC are required to report detailed national greenhouse 
+gas inventories (NGHGIs) annually to the UNFCCC in a standardised Excel format known as the 
+Common Reporting Format. Andrew (2020a) summarises the history of this reporting requirement. 
+With experience built up over many years of reporting and auditing, significantly greater detail, access 
+to a wide range of source data, and use of multiple cross-validating methods, it is expected that these 
+reports are significantly more accurate than the use of apparent consumption and globally constant 
+emission factors, as with CDIAC-FF. These reports are disaggregated according to the IPCC ‘sector’ 
+framework, which we then map to the components used by CDIAC-FF: solid, liquid, and gaseous 
+fossil fuels, cement production, flaring, and bunkers. We add an ‘other’ category for fossil CO2 
+emissions that do not fall into CDIAC-FF’s categories, namely decomposition of carbonates in IPCC 
+sector 2 (industrial processes and product use) apart from those in cement production (2A). 
+Most emissions can be mapped directly to CDIAC-FF’s categories, but some in IPCC sector 2 
+(Industrial Processes and Product Use) are not detailed by the type of fuel that the fossil carbon 
+originated in. We use a mapping method to estimate the share of fossil emissions in these smaller 
+categories that came from each category of fossil fuel. Fossil-fuel emissions in the metals industry are 
+assumed to come from solid fossil fuels, emissions in ammonia and urea production are assumed to 
+derive entirely from gaseous fossil fuels, while emissions in the solvent, waste incineration and other 
+combustion sectors are assumed to be entirely derived from liquid fuels. Emissions in the chemical 
+industry and from fossil-fuel oxidation in other industrial processes are assumed equally divided 
+between the three fuel types. Reported values are always used for national total emissions, and sums 
+over categories always equal national totals, thus our assumptions only effect the distribution between 
+the solid, liquid, and gaseous fuel categories. 
+The first deadline each year for submission of inventories to the UNFCCC by Annex 1 countries 
+is 15 April, but revisions are made as required through the year. However, 2024 has been an unusual 
+year in this process, with the planned transition from “CRF” (Common Reporting Format) files to 
+“CRT” (Common Reporting Table) tables towards the start of more regular and detailed reporting by 
+non-Annex 1 countries. Delays in the availability of the new CRT reporting software have meant that 
+most Annex 1 countries have not submitted data to the UNFCCC at time of writing: only the data 
+tables for Australia, Malta, and Monaco are published on the UNFCCC’s website. Luckily, many 
+European countries are required to submit their inventories to the European Commission, and these are 
+still in CRF format as of 2024. In addition, a number of countries have published on their own 
+government websites, again in CRF format. 
+Three countries submit full reports for more than one territory: Denmark, France, and the UK. 
+• For Denmark we use the ‘DNM’ reporting, which excludes Greenland and the Faroe Islands. 
+The Executive Summary in Denmark’s National Inventory Report refers only to emissions in 
+Denmark (DNM) (DCE, 2021). 
+• For France we use the ‘FRK’ reporting, which includes only French overseas territories that 
+are part of the EU. The French government’s website on its national low-carbon strategy 
+
+[PDF page 8]
+GCB2025v15 
+7 
+ 
+presents numbers that are consistent with FRK reporting, not FRA reporting (the latter is 
+France’s ‘Convention’ definition, and includes all overseas territories) (MTE, 2021). 
+However, see also the later section 2.2.18 for further discussion on France. 
+• For the United Kingdom we use the ‘GBK’ reporting. While the UK’s National Inventory 
+Report clearly states that “The UK Government Carbon Budgets apply to the UK only, and 
+exclude all emissions from the UK’s Crown Dependencies and Overseas Territories” (p. 35, 
+BEIS, 2021), the UK does not submit data to the UNFCCC based on this geographical 
+definition, and the GBK geography is closest. 
+Many European countries are also required to report inventories to the European Commission, 
+with the first deadline being 15 January each year (EEA, 2023; European Commission, 2020). Some 
+of these countries make their submissions openly accessible, and these therefore represent official 
+estimates updated to an additional year, three months before most countries UNFCCC submissions are 
+available. 
+2.2.2. Norway 
+It has long been known in Norway that the reference approach (RA) using apparent consumption 
+of energy products gives poor estimates for Norway’s fossil-energy CO2 emissions. Already over 20 
+years ago Norway’s National Inventory Reports (NIRs) were highlighting this issue (SFT, 2002). A 
+special report commissioned from the Norwegian Statistical Office on the subject demonstrated that 
+the most significant reasons for the divergence between estimates using the reference approach and the 
+sectoral approach were (Rypdal, 2001): 
+• Large crude oil and natural gas production and export  
+• Carbon content of exported crude oil is not monitored  
+• Large amounts of fossil energy used as feedstocks and reducing agents.  
+Later NIRs continued to put the problem down to uncertainties in production and export 
+quantities along with large non-energy use of various fossil energies, with the 2010 report, for 
+example, concluding “The end-user statistics used in the SA [sectoral approach] are considered 
+reliable” and “These factors make the use of the RA inappropriate for Norway” (Klif, 2010, p. 129). 
+Since at least 2014, the NIRs of Annex I parties have been reviewed annually by an expert review 
+team (ERT; UNFCCC, no date), and Norway has reported every year in its NIR that the ERT has 
+expressed concern about the magnitude of the difference between the RA and the SA (e.g., 
+Miljødirektoratet, 2021). 
+Much of this deviation is a result of small errors that are amplified for a country that produces 
+significant oil and gas but exports most of it: the error in the difference of production and exports is 
+much higher in a relative sense than the error in either term alone. Norway serves here as an indication 
+that the general use of the reference approach for any country with high exports of fossil fuels 
+compared to consumption might lead to problems, and that official statistical effort is focussed more 
+on energy used within the territory than energy sent out of it. 
+Since CDIAC-FF uses apparent consumption, equivalent to what the IPCC call the reference 
+approach, CDIAC-FF’s estimates for Norway show the expected considerable deviation from 
+Norway’s official estimates.  
+Since the GCP already uses official Norwegian estimates from 1990, derived from the national 
+inventory reporting, it is emissions before 1990 that remain affected by this issue. We have therefore 
+chosen to replace emissions before 1990 with estimates derived from official Norwegian sources 
+(SSB, 2021, 2015, 2012). These series begin in 1973, which is when oil production began in Norway: 
+
+[PDF page 9]
+GCB2025v15 
+8 
+ 
+at that time CDIAC-FF’s estimates match Norway’s own, and the problem with the apparent 
+consumption approach only becomes significant as oil (and natural gas) production grew in 
+subsequent years; CDIAC-FF’s estimates before 1973 are therefore expected to be robust. Norway’s 
+official estimates from 1973 provide total fossil CO2 emissions and disaggregation by sector. We use 
+this sectoral information to map approximately to CDIAC-FF’s components for continuity of the 
+series. 
+ 
+Figure 1: Comparison of estimated fossil CO2 emissions for Norway from CDIAC-FF and GCP (this work). 
+2.2.3. China’s emissions from lime production 
+While we use CDIAC-FF’s estimates for China, temporally extended using data from BP for 
+energy, these omit emissions from China’s production of lime, which are significant, reported as being 
+about 170 Mt CO2 in 2018 by Cui et al. (2019). As with cement production, lime production involves 
+the decomposition of carbonates, principally limestone. Official estimates of lime production are 
+available in Chinese-language publications that are not readily available outside of China, so we 
+collate a time series of estimates from various secondary sources (Shan et al., 2016; Liu and Wang, 
+1994; Cui et al., 2019) as well as data provided by Jos Olivier (pers. comm., June 2019), shown in 
+Figure 2. More recently, Bing et al. (2023) have produced a new series using several multilinear 
+regressions, resulting in much higher production before 1990, and this series is under consideration. 
+Olivier’s data looks here like a complete series from 1960, but in fact is based on interpolation of 
+few data points using proxies. The first data point directly sourced from elsewhere is for 1994 from 
+China’s first National Communication. From 1980 to 1993 this data point is extrapolated based on 
+China’s crude steel production, and from 1960 to 1979 the series is further extrapolated using the trend 
+from about 35 other countries, mostly developed. It is difficult to know how reasonable these methods 
+are, but there is divergence in the late 1980s from the data presented by Liu and Wang (1994). The 
+earlier data presented by Liu and Wang (1994) are spurious since they state that the discontinuity in 
+their reported numbers is due to incomplete coverage in the earlier part of the series. 
+Some interpolation is required over the years between the first National Communication and the 
+earliest data from Shan et al. (2016). While Olivier’s assumption of constant production over this 
+                                
+ 
+  
+  
+  
+  
+  
+     
+          
+           
+                             
+
+[PDF page 10]
+GCB2025v15 
+9 
+ 
+period perhaps reflects the principle of Occam’s Razor (simplest assumption that fits the available 
+information), given the economic downturn in China in late 1990s (Keidel, 2007), it’s perhaps more 
+reasonable to assume that production continued to increase somewhat after 1994, before declining 
+again during the economic downturn. 
+In recent years the USGS have been assuming in the absence of data that lime used in steel 
+production is one-third of the total (pers. comm., USGS, May 2021), and the USGS estimates are 
+therefore assumed to be of lower quality than those from Chinese sources using data from industry 
+bodies. The divergence between the figure quoted for lime production in 2005 in China’s second 
+National Communication and those reported by Cui et al. (2019), Shan et al. (2016), and Olivier 
+(2007) is not yet explained. China has not officially reported either lime production or emissions from 
+lime production since the second National Communication, although it is included in aggregated totals 
+in later communications to the UNFCCC. 
+The drop in the data reported by Liu and Wang (1994) between 1988 and 1990 is described as a 
+result of an economic slowdown that was followed by an ‘astonishing’ recovery in 1991 and 1992. 
+This dip in lime production therefore should be retained in the final series. 
+ 
+Figure 2: China’s production of lime as reported by a range of sources. There is a gap in the data from Liu & Wang (purple 
+line). 
+From these activity data we apply the emission factor used by Shan et al. (2016) (0.683 kg CO2 / 
+kg lime; sourced from the NDRC) for fossil CO2 emissions from the decomposition of carbonates in 
+the production of lime and arrive at the estimates shown in Figure 3. Uncertainty remains very high for 
+estimates before 1988, and no estimates are available before 1960. 
+ 
+                            
+ 
+  
+   
+   
+   
+   
+   
+                              
+                   
+         
+               
+               
+              
+            
+               
+      
+
+[PDF page 11]
+GCB2025v15 
+10 
+ 
+ 
+Figure 3: Estimated CO2 emissions from China’s lime production. No data are available before 1960. 
+2.2.4. Indonesia 
+CDIAC-FF’s estimates for emissions from Indonesia’s coal consumption exhibit significant 
+interannual variation that is at odds with Indonesia’s communications to the UNFCCC and estimates 
+by both the IEA and BP. We presume this is a result of the apparent consumption approach amplifying 
+reporting errors, and we therefore replace CDIAC-FF’s coal emissions for Indonesia with our own 
+estimates based on coal consumption data in energy units officially reported by the country (MEER, 
+various years). 
+ 
+Figure 4: Comparison of Indonesia’s CO2 emissions from solid fuels reported to the UNFCCCC (“BUR2”), as estimated by 
+IEA, and as estimated in GCB before and after using data directly from Indonesia. 
+                            
+ 
+  
+  
+  
+  
+   
+   
+   
+   
+      
+           
+                                          
+                            
+ 
+  
+   
+   
+   
+   
+   
+      
+                                                       
+                                            
+    
+        
+        
+        
+                                  
+                                           
+
+[PDF page 12]
+GCB2025v15 
+11 
+ 
+2.2.5. United Kingdom 
+Latest years 
+For the UK we extend emissions estimates officially reported to the UNFCCC with preliminary 
+estimates made by the UK Department for Business, Energy & Industrial Strategy (BEIS, various 
+years). Since BEIS’ estimates cover a slightly smaller territory than those of the UNFCCC submission, 
+we scale up a small amount to match the official UNFCCC estimates in overlapping years. This 
+extension is only for the final year in the dataset. 
+Early coal 
+The UK is the earliest territory with emissions in the dataset, but in the earliest period the original 
+data were provided as averages of five-year periods. CDIAC-FF’s implementation of this is simply to 
+assign the same emissions to each year within each period, resulting in spikes in the derived first 
+difference (rate of change). We return to the original coal production and trade data and set up a 
+constrained optimisation problem that meets the constraints of the available data, while specifically 
+avoiding artificial step changes in data by minimising the second difference of the signal. Effectively, 
+we ensure that all information is used, while assuming step changes every five years are highly 
+unlikely. The differences from the original series are minor, but this method avoids the discontinuities 
+(Figure 5). 
+ 
+Figure 5: Coal production in the United Kingdom, showing the new series in red derived from available information. Pollard 
+refers to Pollard (1980), while EL91 refers to Etemad and Luciani (1991). 
+Early oil 
+The UK’s emissions from oil in CDIAC-FF’s dataset show a marked step up in 1950, suggesting 
+a data issue, since this is the point of transition between its two main data sources. Investigation of the 
+original data source for oil trade (Mitchell, 1993) used by Andres et al. (1999) reveals a transcription 
+error. Import data through 1919 represent the sum of crude oil and oil products, while from 2020 
+onwards these are separated into two columns, and it appears only crude oil imports were used, with 
+product imports omitted. We use the original data to estimate these emissions, resulting in higher 
+estimates in the period 1920-1949 (Figure 6). 
+
+
+[PDF page 13]
+GCB2025v15 
+12 
+ 
+ 
+Figure 6: Emissions from oil consumption in the United Kingdom 1900-1960, showing the very low emissions reported by 
+CDIAC-FF between 1920 and 1949 along with the new estimates derived from the original sources. 
+2.2.6. Netherlands 
+The Netherlands recently began publishing quarterly estimates of territorial emissions (Andrew, 
+2021; CBS, 2020). We have used published total CO2 emissions for the four years available, 2019–
+2023. 
+2.2.7. Iceland 
+CDIAC-FF’s data for Iceland start in 1950, but the Icelandic statistics office publishes energy 
+data starting in 1940 (Statistics Iceland, Various years-b). We use this to extend emissions estimates 
+back another ten years (Figure 7). Note also that CDIAC-FF’s estimates post 1990 differ significantly 
+from those reported officially. This is believed to be mostly because Iceland imports significant 
+quantities of carbon anodes for its aluminium industry, and these non-energy imports of goods derived 
+from fossil fuels and oxidised as non-energy use are not captured by energy trade statistics. 
+Further, Iceland publishes low-lag monthly emissions estimates (Statistics Iceland, various years-
+a). These are estimated to align with national accounts data (i.e. based on the residency principle), but 
+bridging ‘sectors’ are available to convert to territorial accounts. This provides a much better estimate 
+of Iceland’s emissions in the final year after official reporting to the UNFCCC, since Energy Institute 
+data include bunker fuels, which are substantial for Iceland. Unfortunately, at time of writing, this 
+monthly series had not been updated since September 2023, and data for the year 2023 are therefore 
+not available. With Iceland’s official territorial series running now through 2022, most of the 
+pandemic and post-pandemic period is covered by official data, and extrapolating using the EI energy 
+data is less of an issue. 
+                            
+ 
+ 
+  
+  
+  
+  
+  
+  
+     
+     
+          
+                                                             
+   
+              
+
+[PDF page 14]
+GCB2025v15 
+13 
+ 
+ 
+Figure 7: Comparison of Iceland’s CO2 emissions in CDIAC-FF and GCB (this work). 
+2.2.8. Liechtenstein 
+CDIAC-FF’s data for Liechtenstein start in 1990, but the Liechtenstein statistics office publishes 
+energy data starting in 1959 (Amt für Statistik, 2023). We use this to extend emissions estimates back 
+another 31 years (Figure 8). However, the data are incomplete: while petrol is reported from 1959, 
+diesel and heating oil data are absent before 1964, resulting in an artificial step in 1964. 
+Note also that official emissions statistics starting in 1990 are significantly higher than those 
+estimated by CDIAC-FF using the Reference Approach. 
+ 
+Figure 8: Comparison of Liechtenstein’s CO2 emissions in CDIAC-FF and GCB (this work). 
+                                    
+ 
+   
+   
+   
+   
+   
+   
+   
+      
+          
+           
+                              
+                                
+ 
+    
+    
+    
+    
+       
+          
+           
+                                    
+
+[PDF page 15]
+GCB2025v15 
+14 
+ 
+2.2.9. Thailand 
+Thailand publishes monthly energy data and energy emissions with a lag of about six weeks 
+(MoE, various years). The country’s fourth biennial update report (BUR) states that the (more 
+approximate) Reference Approach gives substantially higher emissions than the (more accurate) 
+Sectoral Approach because of errors in the energy data for non-energy use of oil and production of 
+synthetic fuels (MNRE, 2022). The emissions reported by the Ministry of Energy also match well the 
+emissions reported in the fourth (most recent) BUR. Given that CDIAC-FF’s approach is very similar 
+to the reference approach, and that CDIAC-FF’s emissions estimates for Thailand are higher than 
+official estimates (Figure 9), particularly for oil, we choose to use the official estimates. We add 
+emissions from use of urea using consumption data from the International Fertilizer Association (IFA, 
+various years), and also emissions from cement production and flaring as for other countries, such that 
+total emissions for Thailand in GCB are somewhat higher than those published by the Ministry of 
+Energy. 
+ 
+Figure 9: Thailand’s emissions of CO2 from fossil fuels, showing data from Thailand’s Ministry of Energy, the IEA, and the 
+previous (internal) edition of the GCB fossil CO2 dataset. 
+2.2.10. United States of America 
+The Energy Information Administration (EIA) of the USA provides estimates of US CO2 
+emissions from energy sources starting in 1973, and we use these semi-official estimates in preference 
+to those from CDIAC-FF in this period (EIA, various years). However, we use these data to alter the 
+shares of coal, oil, and gas emissions in the total, without changing the total, so that we retain total 
+emissions from the official reporting to the UNFCCC from 1990. The changes from 1990 are minor 
+and reflect small errors in the assumptions in our mapping of IPCC emissions categories to fuel types. 
+We further add emissions from US lime production before 1990, not included in CDIAC-FF’s 
+data. Lime production data from 1904 are taken from USGS (2017) and the constant emission factor 
+of 0.75 tonnes CO2 per tonne lime used in the US NGHGI is applied, with an assumed capture of 2.2% 
+based on the reported capture for 1990 (EPA, 2021). This addition before 1990 reduces the ‘other’ 
+emissions category discontinuity in 1990 somewhat, but not entirely. 
+                                    
+ 
+  
+  
+  
+  
+   
+   
+   
+    
+   
+   
+                                                       
+                                            
+                                                       
+                                            
+
+[PDF page 16]
+GCB2025v15 
+15 
+ 
+ 
+Figure 10: US fossil CO2 emissions from CDIAC-FF and GCB (this work). 
+2.2.11. India 
+Andrew (2020b) introduced a new method for estimating fossil CO2 emissions in India using 
+monthly activity data (Andrew, 2025a), and annual estimates derived from these were first 
+incorporated into the GCP’s fossil CO2 dataset in 2020. Importantly, other datasets – including IEA, 
+CDIAC-FF and BP – report emissions and energy for India’s fiscal year, which ends in March, rather 
+than the standard calendar year used for almost all other countries. The use of a monthly emissions 
+dataset allows GCP to remove this source of error without resorting to simplistic weighting of fiscal 
+year emissions. Further, Andrew (2020b) showed that the use of more detailed data produced slightly 
+different  trends (Figure 11). Use of this monthly dataset also means that the approximate approach 
+using BP’s energy data can be bypassed, since monthly estimates are available with a lag of only 2–3 
+months. 
+                            
+ 
+    
+    
+    
+    
+    
+       
+          
+           
+                          
+
+[PDF page 17]
+GCB2025v15 
+16 
+ 
+ 
+Figure 11: India’s fossil CO2 emissions from CDIAC-FF and GCB (this work), the latter updated from Andrew (2020b). 
+2.2.12. South Korea 
+While the Republic of Korea is not an Annex 1 party, it does publish a detailed national 
+greenhouse gas inventory, following IPCC’s guidelines (Ministry of Environment, 2021). Total fossil 
+CO2 emissions and CO2 emissions from cement production over 1990–2019 are drawn from this 
+series. However, the breakdown by fuel type used by the GCB is not provided in the inventory, so we 
+derive these using detailed energy data from KEEI (2022) and apply the energy contents and emission 
+factors used in the NGHGI to obtain annual fossil CO2 emissions by fuel type through 2020. The sum 
+of these is very close to the total in the NGHGI for fuel emissions, and we scale the bottom-up 
+estimates the small amount necessary such that the sum equals the official total. This provides 
+estimates for the period 1981–2021. 
+                                    
+ 
+   
+    
+    
+       
+     
+      
+       
+                                    
+                            
+
+[PDF page 18]
+GCB2025v15 
+17 
+ 
+ 
+Figure 12: South Korea’s fossil CO2 emissions from CDIAC-FF and GCB (this work), the latter taken directly from official 
+reporting for 1990–2018 and derived from detailed energy data 1981–2020. 
+2.2.13. Greenland 
+Denmark reports Greenland’s emissions as part of Denmark’s national greenhouse gas inventory 
+in tables in Chapter 11 of the 2023 edition of this report (DCE, 2023). These have been assembled and 
+we use the total fossil CO2 emissions for 1990–2021 (Figure 13) and scale components to match the 
+new totals. 
+ 
+Figure 13: Greenland’s fossil CO2 emissions from CDIAC-FF and GCB (this work), the latter taken directly from official 
+reporting. 
+                                    
+ 
+   
+   
+   
+   
+   
+   
+      
+          
+           
+                                        
+                                    
+ 
+   
+   
+   
+   
+   
+   
+   
+      
+          
+           
+                                
+
+[PDF page 19]
+GCB2025v15 
+18 
+ 
+2.2.14. Brazil 
+Brazil has been publishing detailed inventories for some years, and we use the inventory 1990–
+2016 from its fourth biennial update report (MFA and MSTI, 2020), which show somewhat higher 
+emissions that those in CDIAC-FF. 
+ 
+Figure 14: Comparison of Brazil’s fossil CO2 emissions in CDIAC-FF and GCB (this work), the latter taken directly from 
+official reporting. 
+2.2.15. Taiwan 
+Taiwan is not a member of the United Nations and therefore does not report emissions to the 
+UNFCCC. However, the country does publish detailed estimates of its emissions from 1990 to n-2, 
+and we use these (EPA, 2024) (Figure 15). Taiwan also publishes detailed monthly energy and other 
+activity data, and we use these to improve estimates in the period 1982-1989 and year n-1. Official 
+energy and emissions reporting by the People’s Republic of China does not include Taiwan. 
+                                    
+ 
+   
+   
+   
+   
+   
+      
+          
+           
+                             
+
+[PDF page 20]
+GCB2025v15 
+19 
+ 
+ 
+Figure 15: Taiwan’s fossil CO2 emissions from CDIAC-FF and GCB (this work), the latter directly from official reporting. 
+2.2.16. Germany 
+For Germany’s emissions in the final year, we use the total reported by the Federal Environment 
+Ministry (UBA, 2024), and scale the components the small amount necessary to match the total. 
+2.2.17. Australia 
+In 2020, BP’s estimate for Australia's natural gas consumption in 2019 was very poor, and we 
+chose to use data directly from Australia in preference (Friedlingstein et al., 2020), and we continue 
+this. Australia reports to the UNFCCC for its fiscal year, July-June, rather than the internationally 
+normal calendar year (DISER, 2021). For the period 1990–2023 we therefore use calendar-year fossil 
+CO2 emissions estimates derived from Australia's quarterly updates of its NGHGI (DISER, various 
+years). 
+Neither trade data nor production prior to 1950 for oil and oil product were reported by the 
+sources used by CDIAC-FF, such that CDIAC-FF reports emissions of zero in the liquid fuels 
+category before 1950 (as do all other datasets currently). We make use of a new dataset of Australia’s 
+trade oil products in the period 1903–1960 compiled from official reports by Andrew (2023). Given 
+that there was no commercial crude oil production until the 1960s, use of trade data is sufficient to 
+estimate consumption and therefore emissions, on the assumption that stock changes were minimal at 
+that time. 
+CDIAC-FF’s emissions from solid fuels in Australia show a marked discontinuity at 1990. 
+Investigation shows that this is also present in the UN energy data, which show a sharp drop in coal 
+consumption in the power sector. Other data sources show no such discontinuity, and it is likely that 
+Australia has at some point submitted revised energy data to the UN, but only from 1990, such that the 
+unrevised data before 1990 remain. We now use official Australian data on both hard and brown coal 
+consumption starting in 1960 (DCCEEW, various years), with time-variant energy contents and IPCC 
+default emission factors to estimate a time-series of emissions from coal for the period 1960-1989. To 
+ensure continuity and allow for differences between the IPCC default emission factors and those used 
+                                    
+ 
+  
+   
+   
+   
+   
+      
+             
+           
+           
+                             
+
+[PDF page 21]
+GCB2025v15 
+20 
+ 
+in Australia, we scale the estimates such that in 1990 they match those derived from the UNFCCC 
+submission. 
+CDIAC-FF’s estimates of Australia’s emissions from solid fuels begin in 1860, but Australia was 
+consuming coal well before that. We supplement CDIAC-FF’s estimates using coal production data 
+obtained from Mohr et al. (2015), which match exactly the sources used by CDIAC-FF for the period 
+1881-1915. For consistency, we estimate emissions directly from the coal production data and scale to 
+match CDIAC-FF’s estimate of emissions in 1900, which is equivalent to deriving an implied 
+emission factor. The overwritten period spans 1805–1899. 
+ 
+Figure 16: Australia’s fossil CO2 emissions from CDIAC-FF and GCB (this work). 
+2.2.18. France 
+France's official inventory submission to the UNFCCC is prepared by CITEPA, and while the 
+UNFCCC only requires estimates starting in 1990, CITEPA publishes on its own website an inventory 
+for Metropolitan France, starting in 1960, and France according to the Kyoto Protocol (KP) 
+boundaries, starting in 1990 (CITEPA, various years). 
+Metropolitan France is effectively France geographically within Europe, which includes Corsica, 
+but excludes both EU overseas territories (Guadeloupe, Martinique, Réunion, Guyana, Mayotte, Saint-
+Martin) and non-EU overseas territories (New Caledonia, Saint-Pierre et Miquelon, Wallis and 
+Futuna, Saint Barthélemy, French Polynesia, and the French Antarctic territory). The KP boundaries 
+for France include the EU overseas territories but not the non-EU overseas territories. 
+Monaco's energy data have long been reported in combination with those of France to the UN and 
+other international organisations, and for this reason the emissions estimated for France by CDIAC-FF 
+include Monaco. However, CITEPA’s territorial definitions, which are very clear, do not include 
+Monaco. Monaco reports separately to the UNFCCC as an Annex-1 party, but these data begin only in 
+1990, meaning that no estimates are available before 1990. Therefore, we maintain the traditional 
+grouping of combining Monaco and France. While no estimates are available before 1990, we add 
+Monaco’s official emissions estimates from their NGHGI to France’s from 1990. These amount to 
+only 0.1% of France’s total fossil CO2 emissions. 
+                                    
+ 
+  
+   
+   
+   
+      
+     
+      
+                                    
+                                
+
+[PDF page 22]
+GCB2025v15 
+21 
+ 
+In international energy reporting prior to 2011, France included New Caledonia, French 
+Polynesia, Saint Barthélemy, Saint Martin, Saint Pierre and Miquelon, and Wallis and Futuna (IEA, 
+2019). CDIAC-FF’s emissions estimates for these territories therefore disappear from 2011 onwards. 
+For Guadeloupe, Martinique, Réunion, Guyana, and Mayotte after 2010 we use the difference 
+between the totals in CITEPA’s two territorial definitions (i.e., KP less Metropolitan France) 
+combined with the shares in 2010 in CDIAC-FF’s data, resulting in approximate estimates beyond 
+2010 for these territories. 
+NOTE: In this 2024 release, the French overseas territories are not represented correctly. France 
+no longer reports these territories separately to the UN, and CDIAC-FF therefore reports their 
+emissions as zero and includes them in with France. We will be investigating solutions to this issue for 
+the next release. 
+ 
+Figure 17: Comparison of France’s fossil CO2 emissions reported by CDIAC-FF and GCB (this work). 
+2.2.19. Finland 
+Finland’s statistics office publishes preliminary estimates of the previous year’s territorial 
+emissions (Statistics Finland, various years), and we have used these to extend the emissions officially 
+reported to the UNFCCC/EC. 
+2.2.20. Sweden 
+Sweden’s statistics office (SCB) publishes preliminary estimates of the previous year’s territorial 
+emissions (Statistics Sweden, 2023), and we have used these to extend the emissions officially 
+reported to the UNFCCC/EC. Final estimates from SCB are usually not available until December. 
+2.2.21. DR Congo 
+In CDIAC-FF’s estimates, emissions from coal in the DR Congo drop to zero in 1991. Neither the 
+UN nor IEA energy data have any coal data after 1990. The EIA does have data, although much lower 
+than before 1990 (EIA, no date). The explanation is that there was considerable upheaval in the 
+country late in 1991, which lasted for several years (Wikipedia, 2023). It appears this has set industry 
+and mining back in the country. There are no coal-fired power stations in the country, according to 
+                                
+ 
+   
+   
+   
+   
+      
+          
+           
+                             
+
+[PDF page 23]
+GCB2025v15 
+22 
+ 
+Global Energy Monitor (2023), and the steel mill is still largely dormant. We now use the coal-energy 
+data from the EIA post 1990 to estimate emissions, but they remain much lower than they were in the 
+1980s. 
+2.2.22. New Caledonia 
+New Caledonia publishes annual energy consumption data with a relatively low lag (DIMENC, 
+various years). These agree well with CDIAC-FF’s estimates, but the final two years diverge from 
+estimates derived using the energy growth rates provided by EI for the entire region to which New 
+Caledonia is allocated (Figure 18). 
+ 
+Figure 18: Comparison of New Caledonia’s fossil CO2 emissions reported in GCB 2022 and GCB 2023.  
+2.2.23. Latin America 
+CDIAC-FF’s estimates for years prior to 1950 come directly from Andres et al. (1999), who in 
+turn used production data from Etemad and Luciani (1991) and trade data from Mitchell (1993). 
+However, for Latin America, those sources only provided production data for Argentina, Brazil, Chile, 
+Colombia, Mexico, Peru and Venezuela, and trade data for Argentina and Brazil. CDIAC-FF thereby 
+lacks estimates for most countries in Latin America prior to 1950, and for some countries the lack of 
+trade data is significant, given the high reliance on imported coal (Yáñez et al., 2013). 
+Given these gaps, we make use of the data collated by Yáñez et al. (2013) on annual apparent 
+consumption of coal by 20 Latin American countries from 1841. While records of coal trade are not 
+available for most of the countries in the region, Yáñez et al. (2013) argue that the great majority of 
+imported coal came from Britain, Germany, and the US, and that detailed records are available of 
+exports by destination from three countries. Given that exports from Latin American countries (apart 
+from bunker sales) were very low, using any production combined with imports in most cases gives 
+reasonable estimates of apparent consumption. Where export data are available these were also 
+included. Note that the consumption estimates explicitly do not subtract sales of bunker fuels, which is 
+currently consistent with the rest of the GCB dataset prior to 1950. 
+ 
+                            
+ 
+   
+   
+   
+   
+   
+   
+      
+     
+      
+       
+                                  
+                                    
+
+[PDF page 24]
+GCB2025v15 
+23 
+ 
+While Yáñez et al. (2013) provide estimates through the year 2000, we overwrite CDIAC-FF’s 
+estimates only through 1940 (Argentina and Brazil), 1950 (Bolivia, Chile, Colombia, Cuba, 
+Dominican Republic, Guatemala, Haiti, Honduras, Nicaragua, Panama, Peru, Uruguay, and 
+Venezuela), and 1960 (Ecuador, El Salvador, and Paraguay). These end-years have been chosen based 
+on the matches between series as well as the presence/absence of estimates in CDIAC-FF in the 1950s. 
+For consistency, we apply the same emission factors used by Andres et al. (1999) for hard coal to 
+the apparent consumption in tonnes. 
+During our analysis we noticed that CDIAC-FF’s estimates have apparently omitted information 
+provided by Etemad and Luciani (1991) on coal production in Brazil before 1940 and Colombia 
+before 1950. 
+ 
+Figure 19: Comparing CO2 emissions from consumption of coal for Latin American countries as estimated from (Yáñez et 
+al., 2013) (red) compared with the previous version of the GCB (blue), and emissions estimated for coal production only 
+from (Etemad and Luciani, 1991) where available. Note: while this figure is far too small to see clearly at print scale, the on-
+screen version permits full zooming into details in your PDF reader. 
+2.2.24. Singapore 
+Singapore is a small nation with an outsized petroleum industry, based entirely on imported fuel. 
+It has significant refining capacity and is the largest bunkering port in the world for maritime traffic. 
+These factors mean that the usual small errors in reporting can lead to very large errors when 
+calculating differences (e.g. imports minus exports), and using UN’s energy data leads to incorrect 
+estimates of emissions from liquid fossil fuels. Despite having identified errors in the data reported to 
+the UN by Singapore, not all issues have yet been resolved. In the meantime, we use an interim 
+solution based on the observation that UN energy data for natural gas and solid fuels match 
+Singapore’s official data well, suggesting that only the estimates for liquid fuels need to be corrected. 
+We do this by using Singapore’s official total CO2 estimates and deriving liquid fuel emissions as the 
+                   
+ 
+ 
+ 
+ 
+ 
+  
+     
+        
+            
+                      
+                                 
+                   
+ 
+    
+    
+    
+    
+    
+       
+            
+                               
+                   
+ 
+  
+  
+  
+  
+  
+     
+        
+            
+                      
+                              
+                   
+ 
+ 
+  
+  
+     
+        
+            
+                      
+                             
+                   
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+     
+        
+            
+                      
+                                
+                   
+ 
+    
+    
+    
+    
+    
+       
+            
+                                  
+                   
+ 
+   
+   
+   
+   
+   
+   
+   
+      
+        
+            
+                            
+                   
+ 
+    
+    
+    
+    
+    
+       
+            
+                               
+                   
+ 
+     
+     
+     
+     
+     
+     
+        
+        
+            
+                                   
+                   
+ 
+   
+   
+   
+   
+   
+      
+        
+            
+                                 
+                   
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+       
+        
+            
+                             
+                   
+ 
+    
+    
+    
+    
+    
+    
+    
+       
+        
+            
+                                
+                   
+ 
+ 
+  
+  
+  
+  
+     
+        
+            
+                      
+                              
+                   
+ 
+     
+     
+     
+     
+     
+        
+            
+                                 
+                   
+ 
+    
+    
+    
+    
+    
+       
+        
+            
+                              
+                   
+ 
+     
+     
+     
+        
+            
+                                
+                   
+ 
+   
+   
+   
+      
+        
+            
+                      
+                            
+                   
+ 
+   
+   
+   
+   
+   
+   
+   
+      
+        
+            
+                                          
+                   
+ 
+   
+   
+   
+   
+   
+      
+        
+            
+                               
+                   
+ 
+   
+   
+   
+   
+   
+   
+   
+      
+        
+            
+                      
+                                 
+
+[PDF page 25]
+GCB2025v15 
+24 
+ 
+residual (Figure 20). Since Singapore only publishes these emissions estimates from 2000, our series is 
+only modified from that year. We will continue to look closely at the data to find better ways to 
+improve estimates of Singapore’s emissions. 
+ 
+Figure 20: Comparison of Singapore’s emissions by category between two versions showing the update to liquid-fuel 
+emissions from 2000. 
+2.2.25. Japan 
+As with most other Annex-1 countries, Japan reports annual emissions with a lag of about 16 
+months, such that 2023 emissions were first reported in early 2025. We make use of monthly, official 
+energy and other activity data to replicate Japan’s annual Reference-Approach emissions estimates, 
+which are in most years very close to their Sectoral-Approach emissions estimates. This allows us to 
+generate a robust estimate of 2024 emissions by category, which we include in this version. More 
+documentation of this work is forthcoming. 
+2.2.26. Cement process emissions 
+Given the demonstrated problems with CDIAC-FF’s long-standing method for estimating 
+emissions from cement production (e.g., Ke et al., 2013), we use an annual update of the estimates 
+produced by Andrew (2019), the most recent edition updated by Andrew (2025b). This latest update 
+includes estimates of emissions from cement production reported by non-Annex 1 countries in their 
+first Biennial Transparency Reports to the UNFCCC. The 2018 release of the Global Carbon Budget 
+(Le Quéré et al., 2018) was the first to replace CDIAC-FF’s cement estimates with those of Andrew 
+(2018). In its 2020 release CDIAC-FF revised its approach, making use of additional data sources 
+from 1990 (Gilfillan and Marland, 2021). 
+2.2.27. International transportation (bunkers) 
+CDIAC-FF provides emissions from bunker fuels allocated to each country, but excluded from 
+country totals, per convention. We use the energy data from the UN to derive separately emissions 
+from international aviation (our code XIA) and international shipping (code XIS), and also break these 
+down by fuel category in the case of shipping. While almost all shipping since 1950 has been fuelled 
+by oil products, in the 1950s there was still some coal used, and in recent years the use of natural gas 
+has begun. 
+                        
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+                                    
+                  
+                   
+                
+                  
+                   
+                
+
+[PDF page 26]
+GCB2025v15 
+25 
+ 
+2.2.28. Other corrections to CDIAC-FF’s data 
+Following Andrew (2020a), the GCP makes corrections to emissions in the Soviet Union in the 
+1940s and Curacao in the 1930s and 1940s. Cumulatively these corrections amount to over 1.4 Gt CO2 
+(Friedlingstein et al., 2020). 
+CDIAC-FF’s estimates prior to 1950 are taken from Andres et al. (1999), who in turn used energy 
+production data from Etemad and Luciani (1991). The earliest energy data reported by Etemad and 
+Luciani (1991) is for the UK, but there is a minor error in that the original source, Pollard (1980), 
+reports ‘quinquennial’ average coal production in Great Britain, but the first period is actually six 
+years, 1750-1755. This is misreported by Etemad and Luciani (1991) as 1751–1755, which propagated 
+via Andres et al. (1999) to CDIAC-FF’s estimates for many years. The GCP corrects this minor error, 
+resulting in a dataset beginning in 1750 rather than 1751. 
+The GCP’s dataset also addresses all negative emissions in CDIAC-FF’s data. These negative 
+values arise because of CDIAC-FF’s apparent consumption approach and errors in the data, such that, 
+for example, exports can be greater than the sum of production, imports, and drawdowns from stocks. 
+The largest of these negatives are quite early in the series, 1950 and earlier, when the energy data are 
+of lower quality. For example, Iran’s emissions in 1950 are calculated to be negative, but this appears 
+to be because 1950 calendar-year production and crude oil export data are combined with Iranian year 
+(year ended March 1950) data on exports of petroleum products at a time of high volatility. Further, 
+the shifting territorial boundaries in the early 20th century, particularly in Europe, mean that data on 
+production sometimes do not align with data on trade.  
+CDIAC-FF’s data show a single year of non-zero oil emissions in Puerto Rico in 1920, the 
+amount of which is about 0.1% of US oil emissions in that year. Looking at the original sources, this 
+appears to have been a transcription error, so we have forced this data point to zero. 
+There is a very large spike in Venezuela’s emissions in 1946 in CDIAC-FF, jumping by a factor 
+of more than 4 in that single year. This estimate do reflect the data provided by the original sources, 
+but the exports reported by Mitchell appear to be incorrectly low. Baptista (1997) gives exports that 
+are much higher in 1946. It seems very clear that the data point in Mitchell is incorrect, but precisely 
+what the true apparent consumption should be is unclear, so here we take a linear interpolation for 
+1946. 
+2.2.29. Emissions from international transport since 2020 
+Because of the exceptional circumstances since 2020 with the global pandemic, use of oil for 
+international transportation (both aviation and shipping) has been affected differently to use for 
+domestic transportation. This category, known as emissions from bunker fuels, is generally not well 
+known in the final year or two of the dataset and has therefore historically been extrapolated from the 
+final reported data year. However, since 2020 this extrapolation is likely to be erroneous, and an 
+alternative approach has been introduced. 
+The OECD began publishing estimates of emissions from international aviation in 2022 (Clarke 
+et al., 2022). Since these are not entirely consistent with the previous series from CDIAC-FF, we use 
+growth rates from the OECD data to extrapolate CDIAC-FF’s estimates as a first approximation. 
+For international shipping, we make use of preliminary results from the STEAM model of the 
+Finnish Meteorological Institute (FMI), which is the most sophisticated most of shipping emissions 
+derived from AIS (automatic identification system) data (Majamäki et al., 2025). Again, because these 
+are not entirely consistent with the previous series from CDIAC-FF, we use growth rates to 
+extrapolate. 
+
+[PDF page 27]
+GCB2025v15 
+26 
+ 
+Given that making these changes to international shipping changes the global total oil, we 
+maintain expected global total oil emissions in final years by constraining the growth rates to those 
+derived from EIA data (EIA, various years). To meet this global constraint, we make a small 
+adjustment to domestic emissions from oil in those countries for which we have relied on EI/BP 
+growth rates (i.e., those for which we do not have more reliable data sources). 
+2.2.30. Flaring 
+For CO2 emissions from flared natural gas GCP starts CDIAC-FF, which derives its estimates 
+from national reporting to the UN. However, CDIAC-FF’s “flaring” also includes vented CO2 and 
+vented CH4. As described above, we overwrite data for some countries with official estimates. 
+Estimates derived using newer, independent, satellite-based methods show some deviation at global 
+level (Figure 21) and particularly at national level. We use data from the Global Gas Flaring 
+Reduction Partnership (GGFR, various years; Elvidge et al., 2009) for non-Annex I countries from 
+1994 in this edition of the GCB, and will investigate further whether the GGFR data suggest that any 
+Annex I countries’ reporting may be incorrect. The GGFR data are available for 1994-2010 and 2012-
+2023, with the year 2011 being filled with simple linear interpolation. The use of GGFR data means 
+that vented CO2 is omitted, which we will have to investigate further. For example, in the case of New 
+Zealand, officially reported fugitive CO2 emissions are higher than those from GGFR, presumably 
+because the official numbers include vented CO2. 
+There remain significant discontinuities in important countries due to poor data coverage, and we 
+will continue to investigate solutions to these. Examples include zero emissions in the UK in 1988-
+1989, China in 1985-93, Nigeria 1989-1993, and substantial jumps in 1990 where Annex-1 countries 
+start their reporting to the UNFCCC. Further, no data on flaring exist before 1950. 
+ 
+ 
+Figure 21: Comparison of estimates of annual global CO2 emissions from flared natural gas from different sources. 
+2.2.31. Extrapolation in final years 
+Our extrapolation of observations to the final years (Y-1 for Annex 1 countries and both Y-2 and 
+Y-1 for others) is largely based on energy growth rates derived from BP (now Energy Institute) data. 
+                        
+ 
+   
+   
+   
+   
+      
+     
+        
+   
+    
+  
+    
+                                            
+                                                             
+                                                                                                     
+
+
+[PDF page 28]
+GCB2025v15 
+27 
+ 
+However, BP’s oil data include supply to international bunkers, and particularly in 2020, when 
+international transport was affected quite differently to other uses of oil, this potentially gives biased 
+estimates (e.g., see section 2.2.7 on Iceland). Further, BP provides country-level data only for larger 
+countries, with many being grouped into ‘rest-of’ regions, the growth rates for which are applied by 
+GCP to all countries within the respective groups.  
+The Joint Organisation Data Initiative (JODI) dataset collates monthly, high-level data for oil and 
+natural gas for a large number of countries (JODI, no date). The oil dataset makes no distinction of 
+biofuels, making it unsuitable for many countries for estimating fossil CO2 emissions, but might be 
+useful for some countries with known low penetration of biofuels. However, information from this 
+dataset could be used for countries that fall into BP’s ‘rest-of’ regions, rather than using the same 
+growth rates for all countries within the region. The use of JODI gas data was introduced in our 2023 
+release, providing both (1) earlier inclusion of final-year estimates than EI’s dataset provides, and (2) 
+any subsequent revisions, since EI’s data is only published annually. 
+The UN energy dataset used by CDIAC-FF includes later data for developed countries. CDIAC-
+FF only uses the data through the final year in common across all countries, which means it excludes 
+this extra year of data for the developed countries. We have now implemented a method where we 
+estimate emissions from the UN energy data directly, and when our estimates compare very closely 
+with those reported by CDIAC-FF in previous years, we add the additional year to GCB instead of 
+using EI data for that year. For example, in 2023 UN energy data ran through 2021 for developed 
+countries and 2020 for all others, so that CDIAC-FF 2023 edition only ran through 2020. We then 
+could add 2021 data for those countries where UN included these. 
+2.3. Per capita series 
+There is frequent demand for data on emissions per capita, partly reflecting the effort required to 
+align emissions data with population data. The GCP uses UN data available from 1950 (UN, various 
+years), and Maddison (2010) before that. The only exceptions to this currently are Finland, Iceland, 
+Sweden, the Netherlands, and Norway, where official population estimates are used from 1750, Spain 
+from 1850, and the United States from 1900. UN population data for the most recent 1–2 years of the 
+dataset are projections rather than observations, but indeed even recent ‘observations’ have often been 
+interpolated by the UN from infrequent censuses. Users of the per capita data series should note that 
+smaller countries with lower quality data can be highlighted when looking at per capita emissions, and 
+caution should always be used when interpreting the emissions trajectories of such countries. 
+2.4. Continuous country definitions 
+While CDIAC-FF’s emissions estimates from 1950 directly reflect the country boundaries of the 
+underlying reporting by the UN, the GCP chooses to maintain unbroken time series for countries that 
+currently exist. For example, there was no nation Russia for many decades of the 20th Century, but we 
+disaggregate this out of the Soviet Union’s emissions estimates given the clear utility of having long 
+continuous data series.  
+In general, our approach is very simple, with the shares of emissions in each category in the first 
+year after new countries split out of larger ones used for all years before the split. For example, Czech 
+emissions from solid fuels were 81% of the total of Czech and Slovak emissions from solid fuels in 
+1992, so that we derive Czech emissions from solid fuels in 1991 as 81% of the Czechoslovakian 
+value.  
+The transition period between the Soviet Union and the new countries that were formerly Soviet 
+states was dramatic, with very significant shifts in the economies and emissions before and after the 
+
+[PDF page 29]
+GCB2025v15 
+28 
+ 
+dissolution of the Soviet Union at the end of 1991, and effects varied across countries. It is therefore 
+important to represent this transition well. BP’s Statistical Review of World Energy (BP, 2021) has 
+data for former Soviet states from 1985, based on the limited available pre-dissolution data by republic 
+(pers. comm., BP, April 2019). We disaggregate years before 1985 using the shares in 1985. 
+Despite these efforts to disaggregate these countries carefully, emissions estimates before 1992 
+necessarily have higher uncertainty, and before 1985 must be considered tentative. 
+Countries that are disaggregated are: Czechoslovakia, USSR, Yugoslavia, East and West 
+Pakistan, Rhodesia-Nyasaland, United Korea, Federation of Malaya-Singapore, Sudan, Netherland 
+Antilles, French Equatorial Africa, and French West Africa. 
+Also for reasons of continuity, we aggregate countries that are now united: East and West 
+Germany are combined into Germany for a continuous series; Zanzibar and Tanganyika are combined 
+into Tanzania; North and South Yemen are combined into Yemen; North and South Vietnam are 
+combined into Vietnam; Peninsular Malaysia, Sabah, and Sarawak are combined into Malaysia. 
+Note that Western Sahara’s energy data are reported by Morocco, and its emissions are included 
+in Morocco’s data in GCB. Similarly, Monaco’s emissions are included in France’s data, and The 
+Holy See (Vatican City) are included in Italy. 
+2.5. Source documentation 
+We continue to improve the tracking of sources in each data point through the entire workflow. 
+Internally this is stored as binary values to allow compact storage of multiple tags per data cell, while 
+for publication this information is translated to text in the same file format as the data file. 
+3. Revisions over time 
+The refinements introduced to the methodology over time have obviously led to changes in the 
+level of emissions (Figure 22). This section briefly summarises some of the major changes seen 
+between versions of the dataset. 
+The 2016 version (green line, with data ending in 2015) stands out with higher emissions through 
+the mid-2000s. At the time this version was constructed China had released the results of its third 
+Economic Census (3EC), which showed significantly higher coal consumption than previous releases. 
+Analysis of CDIAC-FF’s estimates showed that the 3EC results had only propagated through the UN 
+energy data CDIAC-FF used from 2010 onwards, but Korsbakken et al. (2016) showed that China had 
+revised its coal consumption upwards from 2000, and BP’s data for China’s coal reflected this, 
+showing higher consumption from about 2000. Based on this we chose for the 2016 version of GCB to 
+overwrite emissions for China for all three fuel categories using energy data reported by BP. The 
+following year, with the 2017 version, CDIAC-FF’s emissions estimates showed revisions for 
+emissions from coal in China up across all years since 2000, so we switched back again to CDIAC-FF 
+as our data source. 
+In its 2018 edition, the GCP replaced CDIAC-FF’s estimates of cement process emissions with 
+those of Andrew (2018), leading to a reduction in global emissions of about 0.5 Gt in recent years. 
+In the 2019 edition GCP recalculated global emissions as the sum of national emissions and 
+international bunkers. This resulted in an increase in global emissions before 2012 and a decline after 
+2012 compared to the global emissions reported by CDIAC-FF. 
+
+[PDF page 30]
+GCB2025v15 
+29 
+ 
+In the 2021 edition, the addition of emissions from lime production in China added about 170 Mt 
+CO2 in recent years.  
+In the 2022 edition, CDIAC-FF’s upwards revision of China’s emissions from coal during 1999-
+2003 added 200–280 Mt CO2 per year in that period.  
+In the 2023 edition there are many changes, the largest of which are in 2020-21 because of the 
+replacement of 2020 estimates from approximate energy growth rates with estimates from CDIAC-FF. 
+In the 2024 edition there are again many changes, but no single source stands out in the most 
+recent decades. 
+The 2025 edition shows significant changes only in 2022 and 2023, which were the years updated 
+using the EI energy data in the previous edition. 
+ 
+Figure 22: Comparison of global fossil CO2 emissions from different versions of the GCB dataset. The final data point of 
+each version is always the year before the version number, e.g., the 2025 edition has data through the year 2024 (Y-1). 
+4. Further Research 
+4.1. Extrapolation in final years 
+For countries that report to Eurostat, CICERO’s other work towards generating monthly 
+emissions estimates from Eurostat’s energy data (Andrew, 2021) could be used to provide estimates of 
+emissions in Y-1 that respect the definition of territorial emissions, excluding bunker fuels. This is a 
+work in progress, as the underlying data from Eurostat are of highly variable quality. 
+4.2. Clear geographies 
+Historically GCP’s fossil CO2 dataset has provided no additional information about the 
+geographies of countries included beyond a name and a three-letter ISO code. Given that these are 
+imprecise, and that the exact geographies differ between data sources used, more careful tracking of 
+geographies is something we intend to look at in future. This would require clear definitions of 
+geographies for data from each source dataset and tracking via the source information. It may 
+                            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                                                                 
+
+[PDF page 31]
+GCB2025v15 
+30 
+ 
+transpire, for example, that cement emissions for one country have a different geographical boundary 
+to the energy emissions for the same country, because of the different data sources used. Most 
+important, however, is to address the lack of clarity about what a name like ‘France’ means (see 
+section 2.2.18), whether it includes Monaco, French territories within Europe, overseas territories and 
+regions, or indeed French territory in Antarctica. It is expected that this will be demanding work. It is 
+also possible that country definitions overlap, and this is indeed the case currently with Ukraine and 
+Russia, both of which officially report emissions in Crimea. 
+4.3. Other issues 
+Because the main energy source underlying the CDIAC-FF emissions is the UN’s energy 
+database which starts in 1950 and the data sources for years before 1950 do not report sales to 
+international bunkers, there is a jump in bunker emissions from zero in 1949 to a positive value in 
+1950. While at the global level this amounts to about 2% “mis-allocated” (not missing) emissions, for 
+some countries the effect is much larger. For its size, Trinidad and Tobago was a significant producer 
+of crude oil and products, and a large share of non-exported products were sold as international bunker 
+fuels. Because no data for bunkers are available before 1950, this leads to an inflated estimate of 
+territorial consumption in those years. 
+ 
+Figure 23: Emissions from oil consumption in Trinidad and Tobago, showing a large discontinuity at 1950 because of a lack 
+of data on sales to bunkers before 1950. 
+In the early 19th century, energy data for some European countries (e.g., Belgium) is available 
+only for specific years, resulting in spikes in the emissions dataset where emissions are only non-zero 
+for a single year with zero either side. This leads to interpretation issues when rates of change are 
+calculated. 
+As mentioned earlier, estimates of emissions from flaring are unsatisfactory before the satellite 
+period. 
+                        
+ 
+   
+    
+    
+    
+    
+    
+                                                            
+
+[PDF page 32]
+GCB2025v15 
+31 
+ 
+5. FAQ 
+Some questions are received more frequently than others, so we will collect responses to some of 
+these here, developing this over time. 
+5.1. Kuwaiti oil fires 
+In the dataset there is one region that does not represent a territory, and that is “Kuwaiti oil fires”. 
+This represents the emissions from the >650 oil wells that were set alight by Iraqi troops as they 
+retreated from Kuwait in 1991. The emissions from combustion of both oil and natural gas were 
+estimated by CDIAC-FF to be 477 Mt CO2 (Andres et al., 1994). This region has non-zero emissions 
+only in the year 1991. 
+5.2. Aruba 
+Aruba is a country within the Kingdom of the Netherlands located in the Caribbean. The territory 
+has an unusual emissions history because of the presence of a single oil refinery that, when running, 
+substantially increases the island’s emissions (Figure 24). In 2012, this refinery was mothballed, 
+leading to a sharp decline in the island’s emissions (McCarthy, 2016). 
+ 
+Figure 24: Emissions in Aruba, a Caribbean island, exhibiting an unusual trend. 
+5.3. Bahamas 
+Bahamas is a country in the Caribbean, and similarly to Aruba a large refinery operated in the 
+Bahamas during the 1970s, resulting in substantially higher emissions during this period (Figure 25)(A 
+Barrel Full, no date). 
+                                
+ 
+   
+    
+    
+    
+    
+                                      
+
+[PDF page 33]
+GCB2025v15 
+32 
+ 
+ 
+Figure 25: Emissions in the Bahamas, a Caribbean nation, exhibiting an unusual trend. 
+5.4. Singapore 
+Singapore is a small country that sells a very large amount of fuel for international shipping and 
+aviation. By convention, emissions from combustion of these bunker fuels, the vast majority of which 
+does not occur in any national territory, are excluded from national emissions accounts. However, 
+some energy and emissions datasets include emissions from bunker fuels in national totals, assigned to 
+the country that sells them. For the case of Singapore this leads to very different emissions estimates 
+between datasets (Figure 26). 
+ 
+Figure 26: Singapore’s CO2 emissions as reported by several different agencies, demonstrating the very different trend when 
+international bunkers are included. 
+                                
+ 
+    
+    
+    
+    
+                                            
+                                    
+ 
+  
+   
+   
+   
+                                                            
+   
+   
+   
+   
+  
+            
+               
+              
+
+[PDF page 34]
+GCB2025v15 
+33 
+ 
+But further than that, the estimates of Singapore’s emissions from oil are highly volatile in 
+CDIAC-FF, and therefore in GCB, because of noise in the data and the use of the reference approach. 
+5.5. Luxembourg 
+Luxembourg is a very small country that employs a significant number of people from 
+neighbouring countries, and many people commute into the country for work. One indicator of this is 
+that about “70% of the climate emissions from fuel sales come from motor vehicles registered abroad” 
+(Government of Luxembourg, 2020, p.62). Those who commute into Luxembourg for work are much 
+more likely to purchase fuel in Luxembourg than in their home country because fuel taxes have long 
+been lower in Luxembourg (IEA, 2020). This then skews statistics, because much of the fuel 
+purchased in Luxembourg is used outside of the country, and trade statistics do not capture these 
+movements. Given that the Reference Approach (RA) relies on trade statistics, emissions datasets that 
+use the RA will produce incorrect estimates of Luxembourg’s territorial emissions. 
+5.6. Nigeria 
+Nigeria’s oil consumption is highly uncertain. Very high subsidies on fuel have led to significant 
+undocumented smuggling across its border to neighbouring countries. Government agencies appear to 
+have highly conflicting ideas of how much is consumed within Nigeria, and probably none of these 
+account for black market losses (e.g., Akintayo, 2022). These subsidies were removed suddenly in 
+2023, which will lead to reduced domestic consumption, reduced smuggling, and possibly more 
+accurate estimates in future. 
+5.7. Jump in International Bunkers in 1987 
+The UN energy data for international aviation bunker fuels exhibit a large discontinuity in 1986-
+1987. This is because of issues with data for the Soviet Union. The UN data are missing Soviet bunker 
+fuels entirely before 1970, while 1971-1975 only provides maritime bunkers, and in the period 1976-
+1986 there are no data at all. From 1992 it provides bunker fuels for Soviet member states separately.  
+6. Conclusions 
+The Global Carbon Project’s fossil CO2 emissions dataset has undergone a number of important 
+changes over the years, and while some aspects of these changes have been reported in the annual 
+publication of the Global Carbon Budget, detail there has necessarily been at a low level. Further, 
+there were significant changes particularly in the 2021 edition, with more use of independent data 
+from countries’ own reporting rather than from the country>UN>CDIAC-FF route as well as 
+somewhat reduced reliance on BP’s data in the final year. 
+While global emissions of fossil CO2 are relatively well characterised, particularly in relation to 
+other greenhouse gases, the work in improving the accuracy and traceability of global fossil CO2 
+estimates is ongoing, and there is considerable scope for further improvement. The relatively new use 
+of independent approaches such as use of proxy activity data (Liu et al., 2020; Le Quéré et al., 2020) 
+and detection of activity levels in satellite imagery (Climate TRACE, 2021) are exciting, but require a 
+substantial investment of effort in verification and reduction in the number of assumptions required. 
+Capacity of governments around the world to estimate national emissions with reasonable levels 
+of accuracy is growing and will continue to grow, but there will always be a need for independent 
+estimates, estimates of older emissions that may not be relevant for international treaties but are vital 
+inputs to climate science, and global collation of available data. This work will continue. 
+
+[PDF page 35]
+GCB2025v15 
+34 
+ 
+7. Acknowledgements 
+This work is partially funded by the Norwegian Environment Agency, together with European 
+Commission Horizon 2020 projects VERIFY (grant no. 776810), 4C (grant no. 821003), and CoCO2 
+(grant no. 958927). 
+8. References 
+A Barrel Full: Bahamas Oil Refining Company, no date. http://abarrelfull.wikidot.com/bahamas-oil-
+refining-company (Last access: 17 October 2024). 
+Akintayo, O.: Bag of controversies: Mystery of Nigeria’s daily petrol consumption, Punch 5 December 
+2022 https://punchng.com/bag-of-controversies-mystery-of-nigerias-daily-petrol-consumption/ (Last 
+access: 27 October 2023). 
+Amt für Statistik: Statistisches Jahrbuch Liechtensteins 2023, 2023. 
+https://www.statistikportal.li/de/uebergreifendes-indikatoren/statistisches-jahrbuch (Last access: 27 
+October 2023). 
+Andres, R. J., Marland, G., Boden, T., and Bischof, S.: Carbon Dioxide Emissions from Fossil Fuel 
+Consumption and Cement Manufacture, 1751-1991; and an Estimate of Their Isotopic Composition 
+and Latitudinal Distribution, Snowmass Global Change Institute conference on the global carbon 
+cycle, Snowmass, CO, 19-30 Jul 1993, 1994.access:  
+Andres, R. J., Fielding, D. J., Marland, G., Boden, T. A., Kumar, N., and Kearney, A. T.: Carbon dioxide 
+emissions from fossil-fuel use, 1751–1950, Tellus B, 51 (4), 759–765, DOI: 
+10.3402/tellusb.v51i4.16483, 1999. 
+Andrew, R.: Global CO2 emissions from cement production, 1928–2017, Earth System Science Data, 
+10, 2213-2239, DOI: 10.5194/essd-10-2213-2018, 2018. 
+Andrew, R.: A comparison of estimates of global carbon dioxide emissions from fossil carbon sources, 
+Earth System Science Data, 12, pp 1437–1465, DOI: 10.5194/essd-12-1437-2020, 2020a. 
+Andrew, R.: Towards near real-time, monthly fossil CO2 emissions estimates for the European Union 
+with current-year projections, Atmospheric Pollution Research, DOI: 10.1016/j.apr.2021.101229, 
+2021. 
+Andrew, R.: Indian energy and emissions data, 2025a. https://robbieandrew.github.io/india/ (Last 
+access: 21 October 2025). 
+Andrew, R.: Global CO2 emissions from cement production, DOI: 10.5281/zenodo.17287474, 2025b. 
+https://zenodo.org/records/17287474 (Last access: 7 October 2025). 
+Andrew, R. M.: Global CO2 emissions from cement production, 1928–2018, Earth System Science 
+Data, 11, 1675–1710, DOI: 10.5194/essd-11-1675-2019, 2019. 
+Andrew, R. M.: Timely estimates of India’s annual and monthly fossil CO2 emissions, Earth System 
+Science Data, 12 (4), 2411–2421, DOI: 10.5194/essd-12-2411-2020, 2020b. 
+Andrew, R. M.: Early Australian petroleum trade data, 1903-1960 [Data set], DOI: 
+10.5281/zenodo.7769134, 2023. https://doi.org/10.5281/zenodo.7769134 (Last access: 25 March 
+2023). 
+
+[PDF page 36]
+GCB2025v15 
+35 
+ 
+Baptista, A.: Bases cuantitativas de la economía venezolana, 1830-1995, Fundación Polar, 1997. 
+https://bibliofep.fundacionempresaspolar.org/media/1378171/09-baseseconomia_libro.pdf (Last 
+access: 26 January 2024). 
+BEIS: UK Greenhouse Gas Inventory, 1990 to 2019, Department for Business, Energy & Industrial 
+Strategy, 2021. https://unfccc.int/ghg-inventories-annex-i-parties/2021 (Last access: 16 June 2021). 
+BEIS: UK territorial greenhouse gas emissions national statistics, Department for Business, Energy & 
+Industrial Strategy, various years. https://www.gov.uk/government/collections/uk-territorial-
+greenhouse-gas-emissions-national-statistics (Last access: 16 August 2023). 
+Bing, L., Ma, M., Liu, L., Wang, J., Niu, L., and Xi, F.: An investigation of the global uptake of CO2 by 
+lime from 1930 to 2020, Earth Syst. Sci. Data, 15 (6), 2431-2444, DOI: 10.5194/essd-15-2431-2023, 
+2023. 
+BP: BP Statistical Review of World Energy 2021, 2021. 
+https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-
+energy.html (Last access: 8 July 2021). 
+CBS: Maand- en kwartaalraming broeikasgasemissies conform IPCC (Monthly and quarterly estimate 
+of greenhouse gas emissions in accordance with IPCC), Statistics Netherlands, The Hague, (in Dutch), 
+2020. https://www.cbs.nl/nl-nl/maatwerk/2020/37/maand-en-kwartaalraming-broeikasgasemissies-
+conform-ipcc (Last access: 19 January 2021). 
+CITEPA: Secten – le rapport de référence sur les émissions de gaz à effet de serre et de polluants 
+atmosphériques en France, various years. https://www.citepa.org/fr/secten/ (Last access: 9 May 
+2022). 
+Clarke, D., Flachenecker, F., Guidetti, E., and Pionnier, P.-A.: CO2 Emissions from air transport: A near-
+real-time global database for policy analysis, Organization for Economic Co-operation and 
+Development, Paris, OECD Statistics Working Papers 2022/04, 2022. 
+https://dx.doi.org/10.1787/ecc9f16b-en (Last access: February 2023). 
+Climate TRACE, 2021. https://www.climatetrace.org/ (Last access: 16 September 2021). 
+Cui, D., Deng, Z., and Liu, Z.: China’s non-fossil fuel CO2 emissions from industrial processes, Applied 
+Energy, 254, 113537, DOI: https://doi.org/10.1016/j.apenergy.2019.113537, 2019. 
+DCCEEW: Australian Energy Update, Department of Climate Change, Energy, the Environment and 
+Water, various years. 
+https://www.energy.gov.au/publications?title=energy%20update&sort_by=field_date_value (Last 
+access: 16 August 2023). 
+DCE: Denmark’s National Inventory Report 2021, Danish Centre for Environment and Energy, Aarhus, 
+2021. https://unfccc.int/ghg-inventories-annex-i-parties/2021 (Last access: 16 June 2021). 
+DCE: Denmark’s National Inventory Report 2023, Danish Centre for Environment and Energy, Aarhus, 
+2023. https://unfccc.int/ghg-inventories-annex-i-parties/2023 (Last access: 16 August 2023). 
+DIMENC: l'Observatoire de l'Energie en Nouvelle-Calédonie, Direction de l'Industrie, des Mines et de 
+l'Energie, various years. https://observatoire-energie.gouv.nc/public/home/ (Last access: 31 October 
+2023). 
+
+[PDF page 37]
+GCB2025v15 
+36 
+ 
+DISER: National Inventory Report 2019: The Australian Government Submission to the United 
+Nations Framework Convention on Climate Change, Department of Industry, Science, Energy and 
+Resources, 2021. www.unfccc.int (Last access: 13 September 2021). 
+DISER: National Greenhouse Gas Inventory: Quarterly updates, Australian Government: Department 
+of Industry, Science, Energy and Resources, various years. https://www.industry.gov.au/data-and-
+publications/national-greenhouse-gas-inventory-quarterly-updates (Last access: 21 January 2021). 
+EEA: EIONET: Central Data Repository, European Environment Agency, 2023. 
+https://cdr.eionet.europa.eu/ (Last access: 2 March 2023). 
+EIA: International Energy Statistics, Energy Information Administration, no date. 
+https://www.eia.gov/beta/international/data/browser/ (Last access: 31 August 2019). 
+EIA: Short-Term Energy Outlook, U.S. Energy Information Administration, various years. 
+https://www.eia.gov/outlooks/steo/ (Last access: October 2023). 
+Elvidge, C. D., Ziskin, D., Baugh, K. E., Tuttle, B. T., Ghosh, T., Pack, D. W., Erwin, E. H., and Zhizhin, M.: 
+A Fifteen Year Record of Global Natural Gas Flaring Derived from Satellite Data, Energies, 2 (3), 595-
+622, 2009. 
+Energy Institute: Statistical Review of World Energy, 2023. https://www.energyinst.org/statistical-
+review (Last access: 26 June 2023). 
+Energy Institute: Statistical Review of World Energy, various years. 
+https://www.energyinst.org/statistical-review (Last access: 26 June 2023). 
+EPA: Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990–2019, U.S. Environmental 
+Protection Agency, Washington, DC, 2021. https://www.epa.gov/ghgemissions/inventory-us-
+greenhouse-gas-emissions-and-sinks (Last access: 11 June 2021). 
+EPA: Republic of China National Greenhouse Gas Inventory Report 2024, Taiwan Environmental 
+Protection Administration, 2024. https://www.cca.gov.tw/information-service/publications/national-
+ghg-inventory-report/12003.html (Last access: 26 June 2024). 
+Etemad, B., and Luciani, J.: World Energy Production 1800-1985, Librairie Droz, ISBN 2600560076, 
+1991. 
+European Commission: Commission Implementing Regulation (EU) 2020/1208, 2020. https://eur-
+lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32020R1208 (Last access: 28 March 2023). 
+Friedlingstein, P., O’Sullivan, M., Jones, M. W., Andrew, R. M., Hauck, J., Olsen, A., Peters, G. P., 
+Peters, W., Pongratz, J., Sitch, S., Quéré, C. L., Canadell, J. G., Ciais, P., Jackson, R. B., Alin, S., Aragão, 
+L. E. O. C., Arneth, A., Arora, V., Bates, N. R., Becker, M., Benoit-Cattin, A., Bittig, H. C., Bopp, L., 
+Bultan, S., Chandra, N., Chevallier, F., Chini, L. P., Evans, W., Florentie, L., Forster, P. M., Gasser, T., 
+Gehlen, M., Gilfillan, D., Gkritzalis, T., Gregor, L., Gruber, N., Harris, I., Hartung, K., Haverd, a., 
+Houghton, R. A., Ilyina, T., Jain, A. K., Joetzjer, E., Kadono, K., Kato, E., Kitidis, V., Korsbakken, J. I., 
+Landschützer, P., Lefèvre, N., Lenton, A., Lienert, S., Liu, Z., Lombardozzi, D., Marland, G., Metzl, N., 
+Munro, D. R., Nabel, J. E. M. S., Nakaoka, S.-I., Niwa, Y., O’Brien, K., Ono, T., Palmer, P. I., Pierrot, D., 
+Poulter, B., Resplandy, L., Robertson, E., Rödenbeck, C., Schwinger, J., Séférian, R., Skjelvan, I., Smith, 
+A. J. P., Sutton, A. J., Tanhua, T., Tans, P. P., Tian, H., Tilbrook, B., Werf, G. v. d., Vuichard, N., Walker, 
+A. P., Wanninkhof, R., Watson, A. J., Willis, D., Wiltshire, A. J., Yuan, W., Yue, X., and Zaehle, S.: Global 
+
+[PDF page 38]
+GCB2025v15 
+37 
+ 
+Carbon Budget 2020, Earth System Science Data, 12, 3269–3340, DOI: 10.5194/essd-12-3269-2020, 
+2020. 
+GCP: About GCP, Global Carbon Project, no date. 
+https://www.globalcarbonproject.org/about/index.htm (Last access: 23 September 2021). 
+GGFR: Global Gas Flaring Data, Global Gas Flaring Reduction Partnership, World Bank, Payne 
+Institute, and Colorado School of Mines, various years. 
+https://www.worldbank.org/en/programs/gasflaringreduction/global-flaring-data (Last access: 13 
+September 2022). 
+Gilfillan, D., and Marland, G.: CDIAC-FF: global and national CO2 emissions from fossil fuel 
+combustion and cement manufacture: 1751–2017, Earth Syst. Sci. Data, 13 (4), 1667-1680, DOI: 
+10.5194/essd-13-1667-2021, 2021. 
+Global Energy Monitor: Global Coal Plant Tracker, 2023. 
+https://globalenergymonitor.org/projects/global-coal-plant-tracker/ (Last access: 28 March 2023). 
+Government of Luxembourg: Luxembourg’s Integrated National Energy And Climate Plan For 2021-
+2030, 2020. https://commission.europa.eu/energy-climate-change-environment/implementation-
+eu-countries/energy-and-climate-governance-and-reporting/national-energy-and-climate-plans_en 
+(Last access: October 2023). 
+Haukås, H. T., Jaques, A., Neitzert, F., Rosland, A., Rypdal, K., and Weidemann, F.: Chapter 2: 
+Industrial Processes, in: Revised 1996 IPCC Guidelines for National Greenhouse Gas Inventories:  
+Reference Manual, edited by: Houghton, J. T., Meira  Filho, L. G., Lim, B., Tréanton, K., Mamaty, I., 
+Bonduki, Y., Griggs, D. J., and Callander, B. A., IPCC/OECD/IEA, Paris, 1997. http://www.ipcc-
+nggip.iges.or.jp/public/gl/invs1.html (Last access: 27 October 2014). 
+Hefner, M., and Marland, G.: Global, Regional, and National Fossil-Fuel CO2 Emissions: 1751-2020 
+CDIAC-FF, Research Institute for Environment, Energy, and Economics, Appalachian State University, 
+2023. https://energy.appstate.edu/research/work-areas/cdiac-appstate (Last access:  
+IEA: World Energy Balances 2019 Edition: Database Documentation, International Energy Agency, 
+Paris, 2019. www.iea.org (Last access: 29 August 2019). 
+IEA: Luxembourg 2020: Energy Policy Review, International Energy Agency, Paris, 2020. 
+https://www.iea.org/reports/luxembourg-2020 (Last access: October 2023). 
+IFA: Consumption, International Fertilizer Association, various years. 
+https://www.ifastat.org/databases/plant-nutrition (Last access: 18 August 2023). 
+JODI: JODI website, Joint Organisations Data Initiative, no date. https://www.jodidata.org/ (Last 
+access: 24 January 2024). 
+Ke, J., McNeil, M., Price, L., Khanna, N. Z., and Zhou, N.: Estimation of CO2 emissions from China’s 
+cement production: Methodologies and uncertainties, Energy Policy, 57 (0), 172-181, DOI: 
+http://dx.doi.org/10.1016/j.enpol.2013.01.028, 2013. 
+KEEI: Korea Energy Statistical Information System, Korea Energy Economics Institute, Seoul, 2022. 
+http://www.kesis.net/main/mainEng.jsp (Last access: 15 October 2022). 
+
+[PDF page 39]
+GCB2025v15 
+38 
+ 
+Keeling, C. D.: Industrial production of carbon dioxide from fossil fuels and limestone, Tellus, 25 (2), 
+174-198, DOI: 10.3402/tellusa.v25i2.9652, 1973. 
+Keidel, A.: China’s Economic Fluctuations and Their Implications for Its Rural Economy, Carnegie 
+Endowment for International Peace, Washington, D.C., 2007.access:  
+Klif: National Inventory Report 2010 - Norway, Klima- og forurensningsdirektoratet, Oslo, TA 
+2639/2010, 2010. www.unfccc.int (Last access: 9 September 2021). 
+Korsbakken, J. I., Peters, G. P., and Andrew, R. M.: Uncertainties around reductions in China's coal 
+use and CO2 emissions, Nature Climate Change, 6, 687–690, DOI: 10.1038/nclimate2963, 2016. 
+Le Quéré, C., Andrew, R. M., Friedlingstein, P., Sitch, S., Hauck, J., Pongratz, J., Pickers, P., 
+Korsbakken, J. I., Peters, G. P., Canadell, J. G., Arneth, A., Arora, V. K., Barbero, L., Bastos, A., Bopp, L., 
+Chevallier, F., Chini, L. P., Ciais, P., Doney, S. C., Gkritzalis, T., Goll, D. S., Harris, I., Haverd, V., 
+Hoffman, F. M., Hoppema, M., Houghton, R. A., Ilyina, T., Jain, A. K., Johannesen, T., Jones, C. D., 
+Kato, E., Keeling, R. F., Goldewijk, K. K., Landschützer, P., Lefèvre, N., Lienert, S., Lombardozzi, D., 
+Metzl, N., Munro, D. R., Nabel, J. E. M. S., Nakaoka, S. I., Neill, C., Olsen, A., Ono, T., Patra, P., 
+Peregon, A., Peters, W., Peylin, P., Pfeil, B., Pierrot, D., Poulter, B., Rehder, G., Resplandy, L., 
+Robertson, E., Rocher, M., Rödenbeck, C., Schuster, U., Schwinger, J., Séférian, R., Skjelvan, I., 
+Steinhoff, T., Sutton, A., Tans, P. P., Tian, H., Tilbrook, B., Tubiello, F. N., van der Laan-Luijkx, I. T., van 
+der Werf, G. R., Viovy, N., Walker, A. P., Wiltshire, A. J., Wright, R., and Zaehle, S.: Global Carbon 
+Budget 2018, Earth System Science Data, 10, 2141-2194, DOI: 10.5194/essd-10-2141-2018, 2018. 
+Le Quéré, C., Jackson, R. B., Jones, M. W., Smith, A. J. P., Abernethy, S., Andrew, R. M., De-Gol, A. J., 
+Willis, D. R., Shan, Y., Canadell, J. G., Friedlingstein, P., Creutzig, F., and Peters, G. P.: Temporary 
+reduction in daily global CO2 emissions during the COVID-19 forced confinement, Nature Climate 
+Change, DOI: 10.1038/s41558-020-0797-x, 2020. 
+Liu, F., and Wang, S.: The Building Materials Industry in China: An Overview, Lawrence Berkeley 
+Laboratory, University of California, DOI: 10.2172/94549, 1994. https://doi.org/10.2172/94549 (Last 
+access: 11 May 2021). 
+Liu, Z., Ciais, P., Deng, Z., Davis, S. J., Zheng, B., Wang, Y., Cui, D., Zhu, B., Dou, X., and Ke, P.: Carbon 
+Monitor, a near-real-time daily dataset of global CO 2 emission from fossil fuel and cement 
+production, Scientific data, 7 (1), 1-12, 2020. 
+Maddison, A.: Historical Statistics of the World Economy:  1-2008 AD, 2010. 
+http://www.ggdc.net/maddison/oriindex.htm (Last access: 9 March 2021). 
+Majamäki, E., Johansson, L., Grönholm, T., and Jalkanen, J.-P.: Improving the global prediction of 
+shipping emissions by modelling the effects of ambient conditions, Science of The Total Environment, 
+997, 180126, DOI: https://doi.org/10.1016/j.scitotenv.2025.180126, 2025. 
+McCarthy, J.: Citgo To Pour Up To $600 Million Into Refurbishing Mothballed Aruba Oil Refinery, 
+Virgin Islands Free Press 23 June 2016 
+https://web.archive.org/web/20211013155312/https://vifreepress.com/2016/06/citgo-pour-600-
+million-refurbishing-mothballed-aruba-oil-refinery/ (Last access: October 2023). 
+MEER: Handbook Of Energy & Economic Statistics of Indonesia, Ministry of Energy and Mineral 
+Resources, Republic of Indonesia, various years. https://www.esdm.go.id/en/publication/handbook-
+of-energy-economic-statistics-of-indonesia-heesi (Last access: 10 May 2022). 
+
+[PDF page 40]
+GCB2025v15 
+39 
+ 
+MFA, and MSTI: Fourth Biennial Update Report of Brazil to the United Nations Framework 
+Convention on Climate Change, Ministry of Foreign Affairs and Ministry of Science, Technology and 
+Innovations, 2020. www.unfccc.int (Last access: 25 June 2021). 
+Miljødirektoratet: Greenhouse Gas Emissions 1990–2019, National Inventory Report, The Norwegian 
+Environment Agency, Oslo, M-2013/2021, 2021. https://www.miljodirektoratet.no/ (Last access: 9 
+September 2021). 
+Ministry of Environment: 2021 National Greenhouse Gas Inventory Report of Korea, Greenhouse Gas 
+Inventory and Research Center, 2021. http://www.gir.go.kr/eng/ (Last access: 11 January 2022). 
+Mitchell, B. R.: International Historical Statistics : The Americas : 1750-1988, Stockton Press, New 
+York, ISBN 978-1-349-13073-3, 1993. 
+MNRE: Thailand's Fourth Biennial Update Report, Ministry of Natural Resources and Environment, 
+2022.access:  
+MoE: Energy Statistics, Energy Policy and Planning Office of the Thai Ministry of Energy, various 
+years. https://www.eppo.go.th/index.php/en/en-energystatistics/summary-statistic (Last access: 19 
+August 2023). 
+Mohr, S. H., Wang, J., Ellem, G., Ward, J., and Giurco, D.: Projection of world fossil fuels by country, 
+Fuel, 141, 120-135, DOI: http://dx.doi.org/10.1016/j.fuel.2014.10.030, 2015. 
+MTE: Stratégie Nationale Bas-Carbone (SNBC), Ministère de la Transition écologique, 2021. 
+https://www.ecologie.gouv.fr/strategie-nationale-bas-carbone-snbc (Last access: 24 September 
+2021). 
+Myhre, G., Alterskjær, K., and Lowe, D.: A fast method for updating global fossil fuel carbon dioxide 
+emissions, Environmental Research Letters, 4 (3), 034012, DOI: 10.1088/1748-9326/4/3/034012, 
+2009. 
+Pollard, S.: A New Estimate of British Coal Production, 1750–1850, The Economic History Review, 33 
+(2), 212-235, DOI: 10.2307/2595840, 1980. 
+Raupach, M. R., Marland, G., Ciais, P., Le Quéré, C., Canadell, J. G., Klepper, G., and Field, C. B.: Global 
+and regional drivers of accelerating CO2 emissions, Proceedings of the National Academy of Sciences, 
+104 (24), 10288–10293, DOI: 10.1073/pnas.0700609104, 2007. 
+Rotty, R. M.: Commentary on and extension of calculative procedure for CO2 production, Tellus, 25 
+(5), 508-517, DOI: doi:10.1111/j.2153-3490.1973.tb00635.x, 1973. 
+Rypdal, K.: CO2 emission estimates for Norway: Methodological difficulties, Statistisk sentralbyrå, 
+Oslo, Documents 2001/14, 2001. https://www.ssb.no/en/natur-og-miljo/artikler-og-
+publikasjoner/co2-emission-estimates-for-norway (Last access: 23 September 2021). 
+SFT: National Inventory Report 2002: Norway, Statens forurensningstilsyn, Oslo, TA-1886/2002, ISBN 
+82-7655-455-5, 2002. https://www.miljodirektoratet.no/ (Last access: 9 September 2021). 
+Shan, Y., Liu, Z., and Guan, D.: CO2 emissions from China’s lime industry, Applied Energy, 166, 245-
+252, DOI: https://doi.org/10.1016/j.apenergy.2015.04.091, 2016. 
+
+[PDF page 41]
+GCB2025v15 
+40 
+ 
+SSB: Table 09261: Greenhouse gases, acidifying gases etc., by source and pollutant (closed series) 
+1973 - 2008, Statistics Norway, 2012. https://www.ssb.no/en/statbank/table/09261/ (Last access: 3 
+September 2019). 
+SSB: Table 10800: Greenhouse gases, by source, energy product and pollutant (closed series) 1980 - 
+2012, Statistics Norway, 2015. https://www.ssb.no/en/statbank/table/10800/ (Last access: 3 
+September 2019). 
+SSB: Table 08940: Greenhouse gases, by source, energy product and pollutant 1990 - 2020, Statistics 
+Norway, Oslo, 2021. https://www.ssb.no/en/statbank/table/08940/ (Last access: 30 June 2021). 
+Statistics Finland: 138v - Greenhouse gas emissions in Finland, various years. 
+https://pxweb2.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__khki/statfin_khki_pxt_138v.px/ (Last 
+access:  
+Statistics Iceland: Losun gróðurhúsalofttegunda frá hagkerfi Íslands, bráðabirgðartölur, various years-
+a. 
+https://px.hagstofa.is/pxen/pxweb/en/Umhverfi/Umhverfi__2_losunlofttegunda__2_losunlofttegun
+da_aea/UMH31109.px (Last access: 4 November 2023). 
+Statistics Iceland: Gross energy consumption by source 1940-2020, Various years-b. 
+https://px.hagstofa.is/pxen/pxweb/en/Umhverfi/Umhverfi__4_orkumal__2_framleidslaognotkun/ID
+N02102.px/ (Last access: 27 October 2023). 
+Statistics Sweden: Total emissions and removals of greenhouse gases by greenhouse gas and sector. 
+Year 1990 - 2021, 2023. 
+https://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__MI__MI0107/TotaltUtslappN/ (Last 
+access: 28 March 2023). 
+UBA: Klimaemissionen sinken 2023 um 10,1 Prozent – größter Rückgang seit 1990, Umwelt 
+Bundesamt, 2024. https://www.umweltbundesamt.de/presse/pressemitteilungen/klimaemissionen-
+sinken-2023-um-101-prozent (Last access: 20 March 2024). 
+UN: World Population Prospects, United Nations, Department of Economic and Social Affairs, 
+Population Division, various years. https://population.un.org/wpp/ (Last access: 8 September 2021). 
+UNFCCC: Review Process, United Nations Framework Convention on Climate Change, no date. 
+https://unfccc.int/process-and-meetings/transparency-and-reporting/reporting-and-review-under-
+the-convention/greenhouse-gas-inventories-annex-i-parties/review-process (Last access: 9 
+September 2021). 
+USGS: Lime statistics, in: Historical statistics for mineral and material commodities in the United 
+States: U.S. Geological Survey Data Series 140, edited by: Kelly, T. D., and Matos, G. R., U.S. 
+Geological Survey, 2017. https://minerals.usgs.gov/minerals/pubs/historical-statistics (Last access: 
+26 March 2021). 
+Wikipedia: 1991 Zaire unrest, 2023. 
+https://en.wikipedia.org/w/index.php?title=1991_Zaire_unrest&oldid=1142445029 (Last access: 28 
+March 2023). 
+Yáñez, C., Rubio Varas, M. d. M., Jofré González, J., and Carreras Marín, A.: El consumo aparente de 
+carbón mineral en América Latina, 1841-2000. Una historia de progreso y frustración, Revista de 
+Historia Industrial, 53 (3), 25-77, 2013. 
+
+[PDF page 42]
+GCB2025v15 
+41 
+ 
+ 
+  
+
+[PDF page 43]
+GCB2025v15 
+42 
+ 
+Appendix: Change Log 
+2021v34, published 14 October 2021 
+• Modified method of extrapolation using BP energy data for oil emissions to recognise that 
+BP’s national oil data include sales to international bunker. This correction allowed the 
+maintenance of the global total change in oil emissions in 2020 to match the global total 
+change in oil consumption in energy terms reported by BP (see section 2.2.29). 
+• Added data from CBS for the Netherlands (see section 2.2.6). 
+2022v27, published 17 October 2022 
+• For non-Annex 1 countries, we have used satellite-derived estimates of flaring reported by the 
+World Bank’s Global Gas Flaring Reporting (GGFR) Partnership starting from 2012. The use 
+of these data for Annex 1 countries is still being considered. 
+• New estimates of Chinese coal consumption 1907–1949 based on information from historian 
+Tim Wright. 
+• Added preliminary estimates from Statistics Finland for the year following the final year of 
+their most recent submission to the UNFCCC. 
+• Adjustments to international bunker emissions based on additional data from Marine 
+Benchmark and the EIA. 
+• CDIAC’s 2022 pre-release had negative emissions for UAE and Oman in 2019, a result of 
+incorrect energy reporting by these two countries, so we have replaced from 2017 using 
+growth rates from BP’s energy data. 
+• CDIAC’s 2022 pre-release had a doubling of Colombia’s emissions from natural gas, which is 
+inconsistent with other sources, so we have replaced with CDIAC’s 2021 release, which does 
+not exhibit the same errors. 
+2023v28, published 2 November 2023 
+• Added additional country disaggregations for French Equatorial Africa and French West 
+Africa before 1960 
+• Used EIA data for DR Congo coal after 1990 
+• New series for early UK coal 
+• New series for Australian coal before 1990, coal 1960-1989, oil before 1960 
+• Replaced use of BP/EI data with extensions using UN energy data and JODI natural gas data 
+for final years, where available 
+• Specific estimate for Ukraine in 2022 
+• Use of official low-lag estimates for Thailand 
+• Estimation from Iceland’s energy data 1940-1949 
+• Estimation from Liechtenstein’s energy data 1959-1989 
+• Addition of earlier satellite-derived flaring estimates 
+• New methods for international bunkers in final years 
+2023v36, published 21 November 2023 
+• New data for New Caledonia 
+• New data for Iceland’s final year 
+• Split of international bunkers by aviation and shipping 
+• Norway updated from official 2023 release 
+
+[PDF page 44]
+GCB2025v15 
+43 
+ 
+2023v43, published 24 January 2024 
+• New coal emissions for 20 Latin American countries estimated from data collated by Yáñez et 
+al. (2013) 
+• Further work identifying true zeros and true NaNs (=NODATA) 
+• Clear indication of source as CDIAC (Andres et al. 2011) before 1950 where appropriate 
+• Various updates to countries for which low-lag data are available 
+• Corrected errors: 
+o Some data were incorrectly processed in per capita series  
+o Some sources were incorrect for disaggregated countries 
+2024v17, published 23 October 2024 
+• New oil emissions for the United Kingdom, 1920-1949 
+• Aggregated series for various small Caribbean nations that split/merged during 1950s-1970s. 
+Affects Leeward Islands, Antigua & Barbuda, St. Kitts-Nevis-Anguilla, and St. Kitts-Nevis. 
+• Aggregated Ryukyu Islands into Japan and “Former Panama Canal Zone” into Panama. 
+• New oil emissions for Singapore from 2000 
+2025v15, published 22 October 2025 
+• New estimates for Taiwan 1982-1989, and in final year of dataset 
+• New estimate for Japan in final year of dataset 
+ 

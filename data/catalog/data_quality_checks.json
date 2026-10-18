@@ -1,0 +1,1764 @@
+{
+  "core_national_common_window": [
+    2014,
+    2024
+  ],
+  "core_window_year_count": 11,
+  "candidate_national_baseline": 2024,
+  "detailed_energy_balance_checkpoint": 2023,
+  "latest_partial_crosscheck": 2025,
+  "candidate_calibration_years": [
+    2014,
+    2020
+  ],
+  "candidate_holdout_years": [
+    2021,
+    2024
+  ],
+  "split_is_design_not_validation_result": true,
+  "not_in_common_window_claim": [
+    "continuous sector/provincial fuel balances",
+    "clean-version delivered fuel price and enterprise tariffs",
+    "same-year measured wind/solar/hydro/load event series",
+    "complete project financial/approval/construction queues",
+    "independent net-carbon-sink/removal pathway"
+  ],
+  "source_file_count": 62,
+  "failed_download_count": 7,
+  "processed_dataset_count": 27,
+  "registered_source_count": 69,
+  "acquired_sources_by_batch": {
+    "1": 35,
+    "2": 21,
+    "3": 6
+  },
+  "assumption_support_count": 12,
+  "gap_decision_count": 16,
+  "warning_count": 1,
+  "checks": [
+    {
+      "check": "nbs_production_shares_rounding",
+      "passed": true,
+      "severity": "error",
+      "detail": "max difference from 100%: 0.100 percentage points"
+    },
+    {
+      "check": "nbs_consumption_shares_rounding",
+      "passed": true,
+      "severity": "error",
+      "detail": "max difference from 100%: 0.100 percentage points"
+    },
+    {
+      "check": "nbs_capacity_components_rounding",
+      "passed": true,
+      "severity": "error",
+      "detail": "Maximum rounding residual: 2.0 x10^4 kW"
+    },
+    {
+      "check": "province_demand_31_regions",
+      "passed": true,
+      "severity": "error",
+      "detail": "31 provinces"
+    },
+    {
+      "check": "NBS_2025_C09-03_published_balance_difference",
+      "passed": true,
+      "severity": "error",
+      "detail": "max source-rounding discrepancy=1; statistical residual preserved"
+    },
+    {
+      "check": "NBS_2025_C09-04_published_balance_difference",
+      "passed": true,
+      "severity": "error",
+      "detail": "max source-rounding discrepancy=0; statistical residual preserved"
+    },
+    {
+      "check": "NBS_2025_C09-05_published_balance_difference",
+      "passed": true,
+      "severity": "error",
+      "detail": "max source-rounding discrepancy=0; statistical residual preserved"
+    },
+    {
+      "check": "gcb_component_sum",
+      "passed": true,
+      "severity": "error",
+      "detail": "Maximum component residual=0.00000100 MtCO2"
+    },
+    {
+      "check": "nbs_2025_token_GDP_current",
+      "passed": true,
+      "severity": "error",
+      "detail": "section I, GDP"
+    },
+    {
+      "check": "nbs_2025_token_GDP_real_growth",
+      "passed": true,
+      "severity": "error",
+      "detail": "section I, real GDP growth"
+    },
+    {
+      "check": "nbs_2025_token_year_end_population",
+      "passed": true,
+      "severity": "error",
+      "detail": "section I, population"
+    },
+    {
+      "check": "nbs_2025_token_exchange_rate",
+      "passed": true,
+      "severity": "error",
+      "detail": "section I, exchange rate"
+    },
+    {
+      "check": "nbs_2025_token_primary_energy_production",
+      "passed": true,
+      "severity": "error",
+      "detail": "section III"
+    },
+    {
+      "check": "nbs_2025_token_primary_energy_consumption",
+      "passed": true,
+      "severity": "error",
+      "detail": "section XII"
+    },
+    {
+      "check": "nbs_2025_token_coal_consumption_share",
+      "passed": true,
+      "severity": "error",
+      "detail": "section XII"
+    },
+    {
+      "check": "nbs_2025_token_clean_energy_consumption_share_including_gas",
+      "passed": true,
+      "severity": "error",
+      "detail": "section XII"
+    },
+    {
+      "check": "nbs_2025_token_NEV_production",
+      "passed": true,
+      "severity": "error",
+      "detail": "section I/III"
+    },
+    {
+      "check": "nbs_2025_token_NEV_stock",
+      "passed": true,
+      "severity": "error",
+      "detail": "section I"
+    },
+    {
+      "check": "fx_2025_cross_source_agreement",
+      "passed": false,
+      "severity": "warning",
+      "detail": "WDI=7.18984737402171; NBS=7.1429 CNY/USD. Keep versions separate; no price conversion pending definition/version check."
+    },
+    {
+      "check": "renewables_2024_conventional_hydro_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "3.77亿千瓦"
+    },
+    {
+      "check": "renewables_2024_pumped_hydro_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "5869万千瓦"
+    },
+    {
+      "check": "renewables_2024_wind_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "5.21亿千瓦"
+    },
+    {
+      "check": "renewables_2024_offshore_wind_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "4127万千瓦"
+    },
+    {
+      "check": "renewables_2024_solar_PV_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "8.86亿千瓦"
+    },
+    {
+      "check": "renewables_2024_biomass_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "4599万千瓦"
+    },
+    {
+      "check": "renewables_2024_hydro_generation",
+      "passed": true,
+      "severity": "error",
+      "detail": "14239亿千瓦时"
+    },
+    {
+      "check": "renewables_2024_wind_generation",
+      "passed": true,
+      "severity": "error",
+      "detail": "9916亿千瓦时"
+    },
+    {
+      "check": "renewables_2024_solar_PV_generation",
+      "passed": true,
+      "severity": "error",
+      "detail": "8341亿千瓦时"
+    },
+    {
+      "check": "renewables_2024_biomass_generation",
+      "passed": true,
+      "severity": "error",
+      "detail": "2083亿千瓦时"
+    },
+    {
+      "check": "renewables_2024_wind_energy_utilization_rate",
+      "passed": true,
+      "severity": "error",
+      "detail": "95.9%"
+    },
+    {
+      "check": "renewables_2024_solar_PV_energy_utilization_rate",
+      "passed": true,
+      "severity": "error",
+      "detail": "96.8%"
+    },
+    {
+      "check": "renewables_2025_conventional_hydro_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "3.8亿千瓦"
+    },
+    {
+      "check": "renewables_2025_pumped_hydro_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "6594万千瓦"
+    },
+    {
+      "check": "renewables_2025_wind_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "6.4亿千瓦"
+    },
+    {
+      "check": "renewables_2025_offshore_wind_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "0.47亿千瓦"
+    },
+    {
+      "check": "renewables_2025_solar_PV_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "12亿千瓦"
+    },
+    {
+      "check": "renewables_2025_biomass_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "4743万千瓦"
+    },
+    {
+      "check": "renewables_2025_CSP_capacity",
+      "passed": true,
+      "severity": "error",
+      "detail": "182万千瓦"
+    },
+    {
+      "check": "renewables_2025_hydro_generation",
+      "passed": true,
+      "severity": "error",
+      "detail": "1.46万亿千瓦时"
+    },
+    {
+      "check": "renewables_2025_wind_generation",
+      "passed": true,
+      "severity": "error",
+      "detail": "1.13万亿千瓦时"
+    },
+    {
+      "check": "renewables_2025_solar_PV_generation",
+      "passed": true,
+      "severity": "error",
+      "detail": "1.17万亿千瓦时"
+    },
+    {
+      "check": "renewables_2025_biomass_generation",
+      "passed": true,
+      "severity": "error",
+      "detail": "2247亿千瓦时"
+    },
+    {
+      "check": "renewables_2025_CSP_generation",
+      "passed": true,
+      "severity": "error",
+      "detail": "16亿千瓦时"
+    },
+    {
+      "check": "renewables_2025_wind_energy_utilization_rate",
+      "passed": true,
+      "severity": "error",
+      "detail": "94%"
+    },
+    {
+      "check": "renewables_2025_solar_PV_energy_utilization_rate",
+      "passed": true,
+      "severity": "error",
+      "detail": "95%"
+    },
+    {
+      "check": "CEA_ANNUAL_2024_volume_in_source",
+      "passed": true,
+      "severity": "error",
+      "detail": "annual total"
+    },
+    {
+      "check": "CEA_ANNUAL_2024_amount_in_source",
+      "passed": true,
+      "severity": "error",
+      "detail": "annual total"
+    },
+    {
+      "check": "CEA_ANNUAL_2025_volume_in_source",
+      "passed": true,
+      "severity": "error",
+      "detail": "Dec monthly bulletin; Jan-Dec annual cumulative"
+    },
+    {
+      "check": "CEA_ANNUAL_2025_amount_in_source",
+      "passed": true,
+      "severity": "error",
+      "detail": "Dec monthly bulletin; Jan-Dec annual cumulative"
+    },
+    {
+      "check": "load_8760_by_31",
+      "passed": true,
+      "severity": "error",
+      "detail": "(8760, 32)"
+    },
+    {
+      "check": "load_hours_contiguous",
+      "passed": true,
+      "severity": "error",
+      "detail": "Hourly index 1..8760"
+    },
+    {
+      "check": "load_nonnegative_complete",
+      "passed": true,
+      "severity": "error",
+      "detail": "Minimum hourly energy=451.864591"
+    },
+    {
+      "check": "raw_load_duplicate_header_detected",
+      "passed": true,
+      "severity": "error",
+      "detail": "Duplicate HB retained in raw; canonical output first HE, second HB"
+    },
+    {
+      "check": "load_total_source_rounding",
+      "passed": true,
+      "severity": "error",
+      "detail": "Load sum=6900.1000 TWh; not forced to match separate annual statistics"
+    },
+    {
+      "check": "plant_commissioning_missing_preserved",
+      "passed": true,
+      "severity": "error",
+      "detail": "3149 missing dates, not filled with zero"
+    },
+    {
+      "check": "source_ids_unique",
+      "passed": true,
+      "severity": "error",
+      "detail": "Source identifiers must be unique"
+    },
+    {
+      "check": "processed_all_registered",
+      "passed": true,
+      "severity": "error",
+      "detail": "Every processed CSV is covered by dataset_inventory.csv"
+    },
+    {
+      "check": "shape_nbs_energy_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(120, 9)"
+    },
+    {
+      "check": "lineage_nbs_energy_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['NBS_2025_C09-01', 'NBS_2025_C09-02']"
+    },
+    {
+      "check": "long_table_fields_nbs_energy_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_nbs_energy_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_nbs_energy_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_nbs_energy_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_nbs_capacity_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(82, 9)"
+    },
+    {
+      "check": "lineage_nbs_capacity_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['NBS_2025_C09-15']"
+    },
+    {
+      "check": "long_table_fields_nbs_capacity_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_nbs_capacity_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_nbs_capacity_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_nbs_capacity_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_nbs_products_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(60, 9)"
+    },
+    {
+      "check": "lineage_nbs_products_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['NBS_2025_C09-19']"
+    },
+    {
+      "check": "long_table_fields_nbs_products_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_nbs_products_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_nbs_products_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_nbs_products_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_nbs_sector_use_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(100, 9)"
+    },
+    {
+      "check": "lineage_nbs_sector_use_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['NBS_2025_C09-09']"
+    },
+    {
+      "check": "long_table_fields_nbs_sector_use_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_nbs_sector_use_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_nbs_sector_use_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_nbs_sector_use_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_nbs_balance_checkpoints.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(164, 9)"
+    },
+    {
+      "check": "lineage_nbs_balance_checkpoints.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['NBS_2025_C09-03', 'NBS_2025_C09-04', 'NBS_2025_C09-05', 'NBS_2025_C09-06']"
+    },
+    {
+      "check": "long_table_fields_nbs_balance_checkpoints.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_nbs_balance_checkpoints.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_nbs_balance_checkpoints.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_nbs_balance_checkpoints.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_nbs_province_demand.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(124, 9)"
+    },
+    {
+      "check": "lineage_nbs_province_demand.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['NBS_2025_C09-14']"
+    },
+    {
+      "check": "long_table_fields_nbs_province_demand.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_nbs_province_demand.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_nbs_province_demand.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_nbs_province_demand.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_nea_electricity_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(8, 9)"
+    },
+    {
+      "check": "lineage_nea_electricity_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['NEA_ELECTRICITY_2025_TABLE']"
+    },
+    {
+      "check": "long_table_fields_nea_electricity_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_nea_electricity_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_nea_electricity_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_nea_electricity_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_china_energy_research_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(413, 9)"
+    },
+    {
+      "check": "lineage_china_energy_research_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['OWID_ENERGY_CHINA_ARCHIVE', 'OWID_ENERGY_CODEBOOK']"
+    },
+    {
+      "check": "long_table_fields_china_energy_research_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_china_energy_research_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_china_energy_research_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_china_energy_research_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_china_macro_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(126, 9)"
+    },
+    {
+      "check": "lineage_china_macro_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['WDI_CHINA_MACRO', 'WDI_GDP_DEFINITION']"
+    },
+    {
+      "check": "long_table_fields_china_macro_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_china_macro_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_china_macro_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_china_macro_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_china_co2_gcb_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(140, 9)"
+    },
+    {
+      "check": "lineage_china_co2_gcb_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['GCB_GCB2025v15_MtCO2_flat', 'GCB_GCB2025v15_MtCO2_flat_metadata', 'GCB_GCB2025v15_sources_flat', 'GCB_GCP_fossilCO2_2025v15']"
+    },
+    {
+      "check": "long_table_fields_china_co2_gcb_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_china_co2_gcb_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_china_co2_gcb_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_china_co2_gcb_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_nbs_latest_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(10, 9)"
+    },
+    {
+      "check": "lineage_nbs_latest_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['NBS_COMMUNIQUE_2025']"
+    },
+    {
+      "check": "long_table_fields_nbs_latest_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_nbs_latest_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_nbs_latest_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_nbs_latest_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_nbs_conversion_efficiency.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(44, 9)"
+    },
+    {
+      "check": "lineage_nbs_conversion_efficiency.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['NBS_2025_C09-10']"
+    },
+    {
+      "check": "long_table_fields_nbs_conversion_efficiency.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_nbs_conversion_efficiency.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_nbs_conversion_efficiency.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_nbs_conversion_efficiency.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_nea_renewables_2024_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(26, 9)"
+    },
+    {
+      "check": "lineage_nea_renewables_2024_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['NEA_RENEWABLE_2024', 'NEA_RENEWABLE_2025']"
+    },
+    {
+      "check": "long_table_fields_nea_renewables_2024_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_nea_renewables_2024_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_nea_renewables_2024_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_nea_renewables_2024_2025.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_commodity_price_references.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(222, 9)"
+    },
+    {
+      "check": "lineage_commodity_price_references.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['WB_PINK_SHEET_ANNUAL', 'WB_PINK_SHEET_STABLE']"
+    },
+    {
+      "check": "long_table_fields_commodity_price_references.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_commodity_price_references.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_commodity_price_references.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_commodity_price_references.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_commodity_price_version_comparison.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(96, 5)"
+    },
+    {
+      "check": "lineage_commodity_price_version_comparison.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['WB_PINK_SHEET_ANNUAL', 'WB_PINK_SHEET_STABLE']"
+    },
+    {
+      "check": "shape_cea_market_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(6, 9)"
+    },
+    {
+      "check": "lineage_cea_market_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['CEA_ANNUAL_2024', 'CEA_ANNUAL_2025']"
+    },
+    {
+      "check": "long_table_fields_cea_market_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_cea_market_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_cea_market_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_cea_market_annual.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_province_column_mapping.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(31, 6)"
+    },
+    {
+      "check": "lineage_province_column_mapping.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['ZENODO_LOAD_FILE_1', 'ZENODO_LOAD_FILE_4']"
+    },
+    {
+      "check": "shape_province_load_2018_MWh.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(8760, 33)"
+    },
+    {
+      "check": "lineage_province_load_2018_MWh.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['ZENODO_LOAD_FILE_1', 'ZENODO_LOAD_FILE_2', 'ZENODO_LOAD_FILE_4']"
+    },
+    {
+      "check": "shape_province_load_2018_summary.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(31, 7)"
+    },
+    {
+      "check": "lineage_province_load_2018_summary.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['ZENODO_LOAD_FILE_1']"
+    },
+    {
+      "check": "shape_transmission_lines_candidate.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(73, 9)"
+    },
+    {
+      "check": "lineage_transmission_lines_candidate.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['ZENODO_LOAD_FILE_2', 'ZENODO_LOAD_FILE_4', 'ZENODO_LOAD_FILE_5']"
+    },
+    {
+      "check": "shape_china_power_plants_wri_snapshot.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(4235, 37)"
+    },
+    {
+      "check": "lineage_china_power_plants_wri_snapshot.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['WRI_POWER_PLANTS', 'WRI_POWER_PLANTS_DEFINITIONS']"
+    },
+    {
+      "check": "shape_reservoir_attributes_candidate.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(43, 29)"
+    },
+    {
+      "check": "lineage_reservoir_attributes_candidate.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['HYDRO_DAILY_METADATA', 'HYDRO_RESERVOIR_ATTRIBUTES']"
+    },
+    {
+      "check": "shape_project_timing_examples.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(7, 10)"
+    },
+    {
+      "check": "lineage_project_timing_examples.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['MEE_FUQING_ASSETS', 'NEA_FUQING_PROJECT', 'PROJECT_BAIHETAN']"
+    },
+    {
+      "check": "shape_technology_accounting_parameters.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(25, 9)"
+    },
+    {
+      "check": "lineage_technology_accounting_parameters.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['IPCC_ENERGY_STATIONARY', 'IRENA_COST_2024_PDF', 'NEA_MARKET_ELECTRICITY_2022']"
+    },
+    {
+      "check": "long_table_fields_technology_accounting_parameters.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_technology_accounting_parameters.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_technology_accounting_parameters.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_technology_accounting_parameters.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_fuel_storage_hydrogen_snapshots.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(26, 9)"
+    },
+    {
+      "check": "lineage_fuel_storage_hydrogen_snapshots.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['NDRC_GAS_APPARENT_2024', 'NEA_HYDROGEN_2025', 'NEA_NATURAL_GAS_2025', 'NEA_STORAGE_2025']"
+    },
+    {
+      "check": "long_table_fields_fuel_storage_hydrogen_snapshots.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_fuel_storage_hydrogen_snapshots.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_fuel_storage_hydrogen_snapshots.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_fuel_storage_hydrogen_snapshots.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_electricity_co2_factors_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(38, 9)"
+    },
+    {
+      "check": "lineage_electricity_co2_factors_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['MEE_ELECTRICITY_CO2_2023']"
+    },
+    {
+      "check": "long_table_fields_electricity_co2_factors_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_electricity_co2_factors_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_electricity_co2_factors_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_electricity_co2_factors_2023.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "shape_policy_target_reference.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "(10, 9)"
+    },
+    {
+      "check": "lineage_policy_target_reference.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "['POLICY_CARBON_2021', 'POLICY_CARBON_2026', 'POLICY_NDC_2035']"
+    },
+    {
+      "check": "long_table_fields_policy_target_reference.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Long rows must have numeric value, unit, source and boundary"
+    },
+    {
+      "check": "numeric_finite_policy_target_reference.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "No fabricated NaN/Inf numeric observations"
+    },
+    {
+      "check": "unique_key_policy_target_reference.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "Same year/region/variable/source cannot be counted twice"
+    },
+    {
+      "check": "row_sources_policy_target_reference.csv",
+      "passed": true,
+      "severity": "error",
+      "detail": "[]"
+    },
+    {
+      "check": "assumptions_support_complete",
+      "passed": true,
+      "severity": "error",
+      "detail": "A01-A10 and H01/H02"
+    },
+    {
+      "check": "support_evidence_A01",
+      "passed": true,
+      "severity": "error",
+      "detail": "['nbs_province_demand.csv', 'china_power_plants_wri_snapshot.csv', 'transmission_lines_candidate.csv']"
+    },
+    {
+      "check": "support_evidence_A02",
+      "passed": true,
+      "severity": "error",
+      "detail": "['province_load_2018_MWh.csv', 'reservoir_attributes_candidate.csv', 'fuel_storage_hydrogen_snapshots.csv']"
+    },
+    {
+      "check": "support_evidence_A03",
+      "passed": true,
+      "severity": "error",
+      "detail": "['china_power_plants_wri_snapshot.csv', 'project_timing_examples.csv']"
+    },
+    {
+      "check": "support_evidence_A04",
+      "passed": true,
+      "severity": "error",
+      "detail": "['china_macro_annual.csv', 'nbs_sector_use_2023.csv', 'nbs_latest_2025.csv']"
+    },
+    {
+      "check": "support_evidence_A05",
+      "passed": true,
+      "severity": "error",
+      "detail": "['commodity_price_references.csv', 'cea_market_annual.csv', 'policy_target_reference.csv']"
+    },
+    {
+      "check": "support_evidence_A06",
+      "passed": true,
+      "severity": "error",
+      "detail": "['nbs_balance_checkpoints.csv', 'fuel_storage_hydrogen_snapshots.csv', 'transmission_lines_candidate.csv']"
+    },
+    {
+      "check": "support_evidence_A07",
+      "passed": true,
+      "severity": "error",
+      "detail": "['china_co2_gcb_annual.csv', 'policy_target_reference.csv']"
+    },
+    {
+      "check": "support_evidence_A08",
+      "passed": true,
+      "severity": "error",
+      "detail": "['nbs_energy_annual.csv', 'nbs_capacity_annual.csv', 'china_macro_annual.csv', 'china_co2_gcb_annual.csv']"
+    },
+    {
+      "check": "support_evidence_A09",
+      "passed": true,
+      "severity": "error",
+      "detail": "['technology_accounting_parameters.csv', 'commodity_price_references.csv', 'cea_market_annual.csv']"
+    },
+    {
+      "check": "support_evidence_A10",
+      "passed": true,
+      "severity": "error",
+      "detail": "['nbs_energy_annual.csv', 'nbs_balance_checkpoints.csv', 'nea_renewables_2024_2025.csv', 'fuel_storage_hydrogen_snapshots.csv']"
+    },
+    {
+      "check": "support_evidence_H01",
+      "passed": true,
+      "severity": "error",
+      "detail": "['project_timing_examples.csv', 'nbs_capacity_annual.csv', 'nea_renewables_2024_2025.csv']"
+    },
+    {
+      "check": "support_evidence_H02",
+      "passed": true,
+      "severity": "error",
+      "detail": "['fuel_storage_hydrogen_snapshots.csv', 'nbs_sector_use_2023.csv', 'province_load_2018_MWh.csv']"
+    },
+    {
+      "check": "support_evidence_G01",
+      "passed": true,
+      "severity": "error",
+      "detail": "['nbs_sector_use_2023.csv', 'nbs_balance_checkpoints.csv', 'nbs_province_demand.csv']"
+    },
+    {
+      "check": "support_evidence_G02",
+      "passed": true,
+      "severity": "error",
+      "detail": "['commodity_price_references.csv', 'commodity_price_version_comparison.csv', 'china_macro_annual.csv', 'nbs_latest_2025.csv']"
+    },
+    {
+      "check": "support_evidence_G03",
+      "passed": true,
+      "severity": "error",
+      "detail": "['cea_market_annual.csv', 'policy_target_reference.csv']"
+    },
+    {
+      "check": "support_evidence_G04",
+      "passed": true,
+      "severity": "error",
+      "detail": "['province_load_2018_MWh.csv', 'reservoir_attributes_candidate.csv']"
+    },
+    {
+      "check": "support_evidence_G05",
+      "passed": true,
+      "severity": "error",
+      "detail": "['transmission_lines_candidate.csv', 'province_column_mapping.csv']"
+    },
+    {
+      "check": "support_evidence_G06",
+      "passed": true,
+      "severity": "error",
+      "detail": "['fuel_storage_hydrogen_snapshots.csv', 'nbs_balance_checkpoints.csv']"
+    },
+    {
+      "check": "support_evidence_G07",
+      "passed": true,
+      "severity": "error",
+      "detail": "['china_macro_annual.csv', 'nbs_sector_use_2023.csv', 'nbs_latest_2025.csv']"
+    },
+    {
+      "check": "support_evidence_G08",
+      "passed": true,
+      "severity": "error",
+      "detail": "['project_timing_examples.csv', 'china_power_plants_wri_snapshot.csv']"
+    },
+    {
+      "check": "support_evidence_G09",
+      "passed": true,
+      "severity": "error",
+      "detail": "['technology_accounting_parameters.csv', 'nbs_conversion_efficiency.csv', 'fuel_storage_hydrogen_snapshots.csv']"
+    },
+    {
+      "check": "support_evidence_G10",
+      "passed": true,
+      "severity": "error",
+      "detail": "['technology_accounting_parameters.csv', 'electricity_co2_factors_2023.csv']"
+    },
+    {
+      "check": "support_evidence_G11",
+      "passed": true,
+      "severity": "error",
+      "detail": "['fuel_storage_hydrogen_snapshots.csv', 'nea_renewables_2024_2025.csv', 'technology_accounting_parameters.csv']"
+    },
+    {
+      "check": "support_evidence_G12",
+      "passed": true,
+      "severity": "error",
+      "detail": "['china_co2_gcb_annual.csv', 'policy_target_reference.csv']"
+    },
+    {
+      "check": "support_evidence_G13",
+      "passed": true,
+      "severity": "error",
+      "detail": "['policy_target_reference.csv', 'china_macro_annual.csv']"
+    },
+    {
+      "check": "support_evidence_G14",
+      "passed": true,
+      "severity": "error",
+      "detail": "['china_energy_research_annual.csv', 'china_co2_gcb_annual.csv', 'china_macro_annual.csv']"
+    },
+    {
+      "check": "support_evidence_G15",
+      "passed": true,
+      "severity": "error",
+      "detail": "['nbs_products_annual.csv', 'nbs_balance_checkpoints.csv', 'nbs_conversion_efficiency.csv', 'nea_renewables_2024_2025.csv']"
+    },
+    {
+      "check": "support_evidence_G16",
+      "passed": true,
+      "severity": "error",
+      "detail": "['nbs_capacity_annual.csv', 'nbs_province_demand.csv', 'nea_renewables_2024_2025.csv', 'fuel_storage_hydrogen_snapshots.csv']"
+    },
+    {
+      "check": "all_gaps_have_disposition",
+      "passed": true,
+      "severity": "error",
+      "detail": "16 gap decisions"
+    },
+    {
+      "check": "raw_hash_NBS_YEARBOOK_2025_INDEX",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_yearbook_2025_index.html"
+    },
+    {
+      "check": "raw_hash_NBS_COMMUNIQUE_2025",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_communique_2025.html"
+    },
+    {
+      "check": "raw_hash_NEA_ELECTRICITY_2025",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nea_electricity_2025.html"
+    },
+    {
+      "check": "raw_hash_CEADS_NATIONAL_INDEX",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/ceads_national_index.html"
+    },
+    {
+      "check": "raw_hash_OWID_ENERGY_CHINA_ARCHIVE",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/owid_energy_data.csv"
+    },
+    {
+      "check": "raw_hash_OWID_ENERGY_CODEBOOK",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/owid_energy_codebook.csv"
+    },
+    {
+      "check": "raw_hash_NBS_YEARBOOK_2025_CONTENTS",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_yearbook_2025_contents.html"
+    },
+    {
+      "check": "raw_hash_NEA_ELECTRICITY_2025_TABLE",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nea_electricity_2025_table.png"
+    },
+    {
+      "check": "raw_hash_NEA_RENEWABLE_2024",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nea_renewable_2024.html"
+    },
+    {
+      "check": "raw_hash_NEA_RENEWABLE_2025",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nea_renewable_2025.html"
+    },
+    {
+      "check": "raw_hash_WDI_CHINA_MACRO",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/wdi_china_macro_2005_2025.json"
+    },
+    {
+      "check": "raw_hash_GCB_2025_INDEX",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/gcb_2025_index.html"
+    },
+    {
+      "check": "raw_hash_ZENODO_PROVINCE_LOAD_INDEX",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/zenodo_province_load_metadata.json"
+    },
+    {
+      "check": "raw_hash_NEA_PROVINCE_RENEWABLE_2024_INDEX",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/nea_province_renewable_2024_index.html"
+    },
+    {
+      "check": "raw_hash_MEE_ELECTRICITY_CO2_2023",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/mee_electricity_co2_factors_2023.pdf"
+    },
+    {
+      "check": "raw_hash_IRENA_COST_2024_INDEX",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch3_scenarios/irena_cost_2024_index.html"
+    },
+    {
+      "check": "raw_hash_IPCC_ENERGY_STATIONARY",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch3_scenarios/ipcc_2006_stationary_combustion.pdf"
+    },
+    {
+      "check": "raw_hash_POLICY_CARBON_2021",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch3_scenarios/policy_carbon_2021.html"
+    },
+    {
+      "check": "raw_hash_POLICY_CARBON_2026",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch3_scenarios/policy_carbon_2026.html"
+    },
+    {
+      "check": "raw_hash_POLICY_NDC_2035",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch3_scenarios/policy_ndc_2035.html"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-01",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_2025_C09-01.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-02",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_2025_C09-02.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-03",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_2025_C09-03.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-04",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_2025_C09-04.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-05",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_2025_C09-05.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-06",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_2025_C09-06.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-09",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_2025_C09-09.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-10",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_2025_C09-10.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-14",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/nbs_2025_C09-14.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-15",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_2025_C09-15.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-17",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_2025_C09-17.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_C09-19",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/nbs_2025_C09-19.jpg"
+    },
+    {
+      "check": "raw_hash_NBS_2025_zb09",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_2025_zb09.pdf"
+    },
+    {
+      "check": "raw_hash_ZENODO_LOAD_FILE_1",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/zenodo_Appendix_1_Hourly_electric_power_load_final.csv"
+    },
+    {
+      "check": "raw_hash_ZENODO_LOAD_FILE_2",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/zenodo_Hourly_electric_power_load_and_transmission_data_at_the_provincial_level_in_China.pdf"
+    },
+    {
+      "check": "raw_hash_ZENODO_LOAD_FILE_4",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/zenodo_Appendix_3_Transmission_lines_between_provinces.xlsx"
+    },
+    {
+      "check": "raw_hash_ZENODO_LOAD_FILE_5",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/zenodo_Appendix_4_Details_of_transmission_lines.pdf"
+    },
+    {
+      "check": "raw_hash_GCB_NATIONAL_METADATA",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/gcb_national_metadata.json"
+    },
+    {
+      "check": "raw_hash_ZENODO_HYDRO_WIND_SOLAR_METADATA",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/zenodo_hydro_wind_solar_metadata.json"
+    },
+    {
+      "check": "raw_hash_IRENA_COST_2024_PDF",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch3_scenarios/irena_power_costs_2024.pdf"
+    },
+    {
+      "check": "raw_hash_NEA_STORAGE_2025",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/nea_storage_2025.html"
+    },
+    {
+      "check": "raw_hash_CEADS_PUBLIC_SITE_JS",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/ceads_public_download_ui.js"
+    },
+    {
+      "check": "raw_hash_WB_PINK_SHEET_ANNUAL",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/wb_commodity_prices_annual.xlsx"
+    },
+    {
+      "check": "raw_hash_CEA_ANNUAL_2024",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/cea_annual_2024.html"
+    },
+    {
+      "check": "raw_hash_CEA_ANNUAL_2025",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/cea_annual_2025.html"
+    },
+    {
+      "check": "raw_hash_NEA_NATURAL_GAS_2025",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/nea_natural_gas_2025.pdf"
+    },
+    {
+      "check": "raw_hash_NEA_HYDROGEN_2025",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch3_scenarios/nea_hydrogen_2025.pdf"
+    },
+    {
+      "check": "raw_hash_PROJECT_BAIHETAN",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/project_baihetan.html"
+    },
+    {
+      "check": "raw_hash_WDI_GDP_DEFINITION",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/wdi_gdp_definition.json"
+    },
+    {
+      "check": "raw_hash_GCB_GCB2025v15_MtCO2_flat_metadata",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/GCB2025v15_MtCO2_flat_metadata.json"
+    },
+    {
+      "check": "raw_hash_GCB_GCB2025v15_sources_flat",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/GCB2025v15_sources_flat.csv"
+    },
+    {
+      "check": "raw_hash_GCB_GCB2025v15_MtCO2_flat",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/GCB2025v15_MtCO2_flat.csv"
+    },
+    {
+      "check": "raw_hash_GCB_GCP_fossilCO2_2025v15",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/GCP_fossilCO2_2025v15.pdf"
+    },
+    {
+      "check": "raw_hash_NEA_PROVINCE_RENEWABLE_2024_DOC",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/nea_province_renewable_2024.doc"
+    },
+    {
+      "check": "raw_hash_WRI_POWER_PLANTS",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/wri_global_power_plant_database.csv"
+    },
+    {
+      "check": "raw_hash_WRI_POWER_PLANTS_DEFINITIONS",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/wri_power_plant_definitions.txt"
+    },
+    {
+      "check": "raw_hash_HYDRO_DAILY_METADATA",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/hydro_daily_metadata.json"
+    },
+    {
+      "check": "raw_hash_NEA_FUQING_PROJECT",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/project_fuqing_5.html"
+    },
+    {
+      "check": "raw_hash_MEE_FUQING_ASSETS",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/fuqing_asset_dates_lifetimes.html"
+    },
+    {
+      "check": "raw_hash_NBS_ENERGY_TRADE_2024",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_energy_trade_2024.html"
+    },
+    {
+      "check": "raw_hash_NDRC_GAS_APPARENT_2024",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/ndrc_gas_apparent_2024.html"
+    },
+    {
+      "check": "raw_hash_NEA_MARKET_ELECTRICITY_2022",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/nea_market_electricity_2022.html"
+    },
+    {
+      "check": "raw_hash_EI_DOWNLOAD_INDEX",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/ei_download_index.html"
+    },
+    {
+      "check": "raw_hash_WB_PINK_SHEET_STABLE",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/wb_commodity_prices_stable.xlsx"
+    },
+    {
+      "check": "raw_hash_HYDRO_RESERVOIR_ATTRIBUTES",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch2_mechanisms/hydro_reservoir_attributes.csv"
+    },
+    {
+      "check": "raw_hash_NBS_ENERGY_API_TREE",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/nbs_energy_api_tree.json"
+    },
+    {
+      "check": "raw_hash_EI_2025_ARCHIVE",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/ei_statistical_review_2025.xlsx"
+    },
+    {
+      "check": "raw_hash_WB_PINK_SHEET_2025",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/wb_commodity_prices_2025_endpoint.xlsx"
+    },
+    {
+      "check": "raw_hash_WB_PINK_SHEET_2021",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw/batch1_national/wb_commodity_prices_2021_endpoint.xlsx"
+    },
+    {
+      "check": "core_annual_common_window",
+      "passed": true,
+      "severity": "error",
+      "detail": "[2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]"
+    }
+  ],
+  "error_count": 0,
+  "no_model_calibration_simulation_or_optimization_performed": true
+}

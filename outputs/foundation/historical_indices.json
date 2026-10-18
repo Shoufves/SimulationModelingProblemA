@@ -1,0 +1,141 @@
+{
+  "status": "derived_indices_not_official_constant_price_GDP",
+  "rows": [
+    {
+      "year": 2015,
+      "energy_mtce": 4341.13,
+      "energy_index_2015": 100.0,
+      "real_gdp_index_2015": 100.0,
+      "energy_intensity_index_2015": 100.0,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2016,
+      "energy_mtce": 4414.92,
+      "energy_index_2015": 101.6997878432574,
+      "real_gdp_index_2015": 106.80000000000001,
+      "energy_intensity_index_2015": 95.22452045248819,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2017,
+      "energy_mtce": 4558.27,
+      "energy_index_2015": 105.00192346232433,
+      "real_gdp_index_2015": 114.1692,
+      "energy_intensity_index_2015": 91.97044690014849,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2018,
+      "energy_mtce": 4719.25,
+      "energy_index_2015": 108.71017453980876,
+      "real_gdp_index_2015": 121.9327056,
+      "energy_intensity_index_2015": 89.15587824027482,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2019,
+      "energy_mtce": 4855.84,
+      "energy_index_2015": 111.8565903347746,
+      "real_gdp_index_2015": 129.3706006416,
+      "energy_intensity_index_2015": 86.46214037813344,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2020,
+      "energy_mtce": 4965.14,
+      "energy_index_2015": 114.37436796410152,
+      "real_gdp_index_2015": 132.3461244563568,
+      "energy_intensity_index_2015": 86.42064014637486,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2021,
+      "energy_mtce": 5250.27,
+      "energy_index_2015": 120.94247350344264,
+      "real_gdp_index_2015": 143.72789115960347,
+      "energy_intensity_index_2015": 84.1468364474515,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2022,
+      "energy_mtce": 5412.74,
+      "energy_index_2015": 124.68504744156475,
+      "real_gdp_index_2015": 148.18345578555116,
+      "energy_intensity_index_2015": 84.14235366599024,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2023,
+      "energy_mtce": 5713.27,
+      "energy_index_2015": 131.6078993257516,
+      "real_gdp_index_2015": 156.18536239797092,
+      "energy_intensity_index_2015": 84.26391391941436,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2024,
+      "energy_mtce": 5960.0,
+      "energy_index_2015": 137.2914425506723,
+      "real_gdp_index_2015": 163.99463051786947,
+      "energy_intensity_index_2015": 83.71703519629108,
+      "source_ids": [
+        "S01",
+        "S06"
+      ],
+      "derivation": "energy: 10000 tce * 0.01; GDP: chained real growth; intensity: E_index/GDP_index*100"
+    },
+    {
+      "year": 2025,
+      "energy_mtce": 6170.0,
+      "energy_index_2015": 142.12889270765908,
+      "real_gdp_index_2015": 172.19436204376294,
+      "energy_intensity_index_2015": 82.53980619385042,
+      "source_ids": [
+        "S02",
+        "S02"
+      ],
+      "derivation": "Separate 2025 communique check; 100 million tce * 100; no refitting"
+    }
+  ],
+  "notes": [
+    "Intensity covers total energy/GDP, not the official adjusted energy-intensity target.",
+    "2025 preliminary observations are a separately labeled check, not a revised historical yearbook row."
+  ]
+}

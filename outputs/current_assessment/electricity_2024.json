@@ -1,0 +1,76 @@
+{
+  "year": 2024,
+  "capacity_gw": {
+    "total": 3348.62,
+    "hydro": 435.95,
+    "thermal": 1444.45,
+    "nuclear": 60.83,
+    "wind": 520.68,
+    "solar": 886.66
+  },
+  "capacity_share_pct": {
+    "hydro": 13.018795802449965,
+    "thermal": 43.13567977256302,
+    "nuclear": 1.8165692135864924,
+    "wind": 15.549091864708448,
+    "solar": 26.478370194288992
+  },
+  "wind_solar_capacity_share_pct": 42.027462058997436,
+  "hydro_nuclear_wind_solar_capacity_share_pct": 56.86282707503389,
+  "unallocated_capacity_10k_kw": 5,
+  "line_loss_pct": 4.37,
+  "utilization_hours_plants_ge_6000kw": 3442,
+  "power_project_investment_100m_yuan": 11687,
+  "grid_investment_100m_yuan": 6083,
+  "combined_reported_investment_100m_yuan": 17770,
+  "scope": "单一2024官方发布版本，仅电力横截面，不代表完整能源系统评价",
+  "formulas": {
+    "capacity_gw": "容量(万千瓦)/100",
+    "share_pct": "分项容量/全国容量*100",
+    "residual": "总容量-原表所列五类容量之和"
+  },
+  "input_sha256": "c4ad62a266a5136d9d8a76dc795bfd2140c90f16e26007a5e672a22207a3b90c",
+  "version_comparison": {
+    "status": "candidate_file_comparison_only",
+    "note": "S05年鉴转录尚未通过证据准入；差异可能涉及修订、口径或转录，不能自动判为统计修订。",
+    "candidate_sha256": "c2e25b7bcac1b38967526f00253e8807c27b9351af56a5d69263c23be82c3f27",
+    "rows": [
+      {
+        "indicator": "total",
+        "official_release_10k_kw": 334862,
+        "yearbook_candidate_10k_kw": 334922,
+        "candidate_minus_release_10k_kw": 60
+      },
+      {
+        "indicator": "hydro",
+        "official_release_10k_kw": 43595,
+        "yearbook_candidate_10k_kw": 43552,
+        "candidate_minus_release_10k_kw": -43
+      },
+      {
+        "indicator": "thermal",
+        "official_release_10k_kw": 144445,
+        "yearbook_candidate_10k_kw": 144462,
+        "candidate_minus_release_10k_kw": 17
+      },
+      {
+        "indicator": "nuclear",
+        "official_release_10k_kw": 6083,
+        "yearbook_candidate_10k_kw": 6083,
+        "candidate_minus_release_10k_kw": 0
+      },
+      {
+        "indicator": "wind",
+        "official_release_10k_kw": 52068,
+        "yearbook_candidate_10k_kw": 52078,
+        "candidate_minus_release_10k_kw": 10
+      },
+      {
+        "indicator": "solar",
+        "official_release_10k_kw": 88666,
+        "yearbook_candidate_10k_kw": 88742,
+        "candidate_minus_release_10k_kw": 76
+      }
+    ]
+  }
+}

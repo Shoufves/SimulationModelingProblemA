@@ -1,0 +1,46 @@
+[
+  {
+    "command": [
+      "run.py",
+      "reproduce-lb",
+      "--recipe",
+      "trade"
+    ],
+    "returncode": 0,
+    "seconds": 26.081817499987665,
+    "log": "lb_1.log"
+  },
+  {
+    "command": [
+      "run.py",
+      "reproduce-lb",
+      "--recipe",
+      "international"
+    ],
+    "returncode": 0,
+    "seconds": 0.9415232000028482,
+    "log": "lb_2.log"
+  },
+  {
+    "command": [
+      "run.py",
+      "reproduce-lb",
+      "--recipe",
+      "ai_trade"
+    ],
+    "returncode": 0,
+    "seconds": 0.3973286999971606,
+    "log": "lb_3.log"
+  },
+  {
+    "command": [
+      "run.py",
+      "reproduce-lb",
+      "--recipe",
+      "national"
+    ],
+    "returncode": 0,
+    "seconds": 12.172365499995067,
+    "log": "lb_4.log"
+  }
+]

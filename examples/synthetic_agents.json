@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "mode": "synthetic",
+  "warning": "完全合成的机制验证案例；数值和步号不对应中国观测、年份、2030/2060预测或正式情景。",
+  "parameter_groups": {
+    "run": {"purpose": "验证多步反馈", "basis": "synthetic_assumption", "unit": "抽象步及CU/EU", "sensitivity": "另试步数和初始价格"},
+    "policy": {"purpose": "外生碳成本刺激", "basis": "synthetic_assumption", "unit": "CU/抽象排放", "sensitivity": "未来路径扰动检验无前视"},
+    "fuels": {"purpose": "检验燃料能力、进口和报价反馈", "basis": "synthetic_assumption", "unit": "EU/步、CU/EU、抽象排放/EU", "sensitivity": "能力下降、进口受限、价格上调"},
+    "generation": {"purpose": "检验调度、投资与建设滞后", "basis": "synthetic_assumption", "unit": "抽象容量、EU、CU、步", "sensitivity": "成本、工期、预算和预期销售下限"},
+    "demand": {"purpose": "检验有用服务与设备替代", "basis": "synthetic_assumption", "unit": "SU、SU/EU、CU及份额", "sensitivity": "效率、替代速度、预算和回收步数"},
+    "grid": {"purpose": "检验输送约束与网损", "basis": "synthetic_assumption", "unit": "EU/步、CU/EU及效率", "sensitivity": "网络上限下降及损耗变化"}
+  },
+  "run": {"steps": 8, "initial_electricity_price": 2.0},
+  "policy": {"carbon_price_by_step": [0, 1, 2, 3, 4, 5, 5, 5]},
+  "fuels": {
+    "coal": {"domestic_limit": 180, "import_limit": 30, "base_price": 1.0, "scarcity_markup": 0.3, "emission_factor": 1.0},
+    "oil": {"domestic_limit": 35, "import_limit": 65, "base_price": 2.0, "scarcity_markup": 0.5, "emission_factor": 0.8},
+    "gas": {"domestic_limit": 90, "import_limit": 60, "base_price": 1.5, "scarcity_markup": 0.4, "emission_factor": 0.5}
+  },
+  "generation": {
+    "coal": {"fuel": "coal", "initial_capacity": 16, "initial_retirement_step": 7, "energy_per_capacity": 1, "efficiency": 0.4, "variable_cost": 0.2, "capex": 22, "lead_steps": 2, "life_steps": 12, "budget": 55, "max_build_per_step": 3, "expected_sales_floor": 0.4, "discount_rate": 0.05},
+    "gas": {"fuel": "gas", "initial_capacity": 8, "initial_retirement_step": 12, "energy_per_capacity": 1, "efficiency": 0.6, "variable_cost": 0.3, "capex": 18, "lead_steps": 1, "life_steps": 10, "budget": 45, "max_build_per_step": 3, "expected_sales_floor": 0.4, "discount_rate": 0.05},
+    "renewable": {"fuel": null, "initial_capacity": 14, "initial_retirement_step": 15, "energy_per_capacity": 1, "efficiency": 1.0, "variable_cost": 0.1, "capex": 16, "lead_steps": 2, "life_steps": 15, "budget": 80, "max_build_per_step": 5, "expected_sales_floor": 0.4, "discount_rate": 0.05}
+  },
+  "demand": {
+    "industry": {"fuel": "gas", "service": 70, "growth": 0.02, "electric_share": 0.15, "fuel_efficiency": 0.75, "electric_efficiency": 1.8, "replacement_limit": 0.12, "switch_cost_per_share": 35, "budget": 4, "payback_steps": 3},
+    "transport": {"fuel": "oil", "service": 45, "growth": 0.015, "electric_share": 0.1, "fuel_efficiency": 0.6, "electric_efficiency": 2.5, "replacement_limit": 0.1, "switch_cost_per_share": 30, "budget": 3, "payback_steps": 3}
+  },
+  "grid": {"delivery_efficiency": 0.95, "generation_transfer_limit": 100, "scarcity_price": 25}
+}

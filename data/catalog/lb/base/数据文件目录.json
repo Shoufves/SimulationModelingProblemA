@@ -1,0 +1,149 @@
+[
+  {
+    "file": "data/nbs/consumption_2005_2024.csv",
+    "rows": 20,
+    "columns": 7,
+    "source": "NBS_2025_C09-02",
+    "note": "Visually transcribed; total 10,000 tonnes standard coal; shares percent; original primary electricity and other category preserved"
+  },
+  {
+    "file": "data/nbs/production_2005_2024.csv",
+    "rows": 20,
+    "columns": 7,
+    "source": "NBS_2025_C09-01",
+    "note": "Visually transcribed; total 10,000 tonnes standard coal; shares percent; original primary electricity and other category preserved"
+  },
+  {
+    "file": "data/nbs/capacity_2005_2024.csv",
+    "rows": 20,
+    "columns": 9,
+    "source": "NBS_2025_C09-15",
+    "note": "Thermal includes coal/gas/oil/biomass; solar not identical to PV; blanks are missing, not zero"
+  },
+  {
+    "file": "data/owid/china_energy_2000_2025_available.csv",
+    "rows": 26,
+    "columns": 130,
+    "source": "OWID_ENERGY",
+    "note": "Original field names/units. 2025 may be partial or absent. See coverage and codebook. Not national standard-coal accounting."
+  },
+  {
+    "file": "data/owid/energy_codebook.csv",
+    "rows": 130,
+    "columns": 5,
+    "source": "OWID_ENERGY_CODEBOOK",
+    "note": "Includes upstream sources, descriptions and units"
+  },
+  {
+    "file": "data/owid/china_co2_2000_2025_available.csv",
+    "rows": 25,
+    "columns": 79,
+    "source": "OWID_CO2",
+    "note": "Original field names/units. 2025 may be partial or absent. See coverage and codebook. Not national standard-coal accounting."
+  },
+  {
+    "file": "data/owid/co2_codebook.csv",
+    "rows": 79,
+    "columns": 5,
+    "source": "OWID_CO2_CODEBOOK",
+    "note": "Includes upstream sources, descriptions and units"
+  },
+  {
+    "file": "data/quality/owid_field_coverage.csv",
+    "rows": 209,
+    "columns": 7,
+    "source": "OWID_ENERGY;OWID_CO2",
+    "note": ""
+  },
+  {
+    "file": "data/prices/worldbank_energy_annual_2000_latest.csv",
+    "rows": 260,
+    "columns": 8,
+    "source": "WB_PRICE_ANNUAL",
+    "note": "Nominal USD prices. Downloaded workbook includes comparison/mismatch sheets; extracted source cells preserved and annual/monthly checks provided. Do not treat this as China domestic price."
+  },
+  {
+    "file": "data/prices/worldbank_energy_monthly_2000_latest.csv",
+    "rows": 3210,
+    "columns": 8,
+    "source": "WB_PRICE_MONTHLY",
+    "note": "Nominal USD prices. Downloaded workbook includes comparison/mismatch sheets; extracted source cells preserved and annual/monthly checks provided. Do not treat this as China domestic price."
+  },
+  {
+    "file": "data/quality/worldbank_annual_monthly_check.csv",
+    "rows": 260,
+    "columns": 6,
+    "source": "WB_PRICE_ANNUAL;WB_PRICE_MONTHLY",
+    "note": "Simple monthly means are a consistency diagnostic, not proof of correct annual weighting"
+  },
+  {
+    "file": "data/nbs/bulletin2025_source_table_03.csv",
+    "rows": 30,
+    "columns": 4,
+    "source": "NBS_2025_BULLETIN_ALTERNATE",
+    "note": "Source table extraction; original merged headers/footnotes must be checked in archived HTML"
+  },
+  {
+    "file": "data/nbs/bulletin2025_source_table_04.csv",
+    "rows": 10,
+    "columns": 4,
+    "source": "NBS_2025_BULLETIN_ALTERNATE",
+    "note": "Source table extraction; original merged headers/footnotes must be checked in archived HTML"
+  },
+  {
+    "file": "data/nbs/bulletin2025_source_table_12.csv",
+    "rows": 14,
+    "columns": 6,
+    "source": "NBS_2025_BULLETIN_ALTERNATE",
+    "note": "Source table extraction; original merged headers/footnotes must be checked in archived HTML"
+  },
+  {
+    "file": "raw/carbonmonitor/CM_China_v1.csv",
+    "rows": 363165,
+    "columns": 4,
+    "source": "FIGSHARE_FILE_55875995",
+    "note": "Original near-real-time estimates; preserve source time/province/sector/unit. Do not equate with annual inventory."
+  },
+  {
+    "file": "data/quality/nbs_transcription_checks.csv",
+    "rows": 56,
+    "columns": 4,
+    "source": "NBS_2025_C09-01;NBS_2025_C09-02;NBS_2025_C09-15",
+    "note": ""
+  },
+  {
+    "file": "data/irena/china_capacity_2016_2025.csv",
+    "rows": 150,
+    "columns": 8,
+    "source": "IRENA_CAPACITY_2026",
+    "note": "PDF-position extraction. IRENA definitions differ from Chinese official biomass/waste accounting; hydro includes pumped storage but renewable_total excludes pure pumped storage. Original flags retained."
+  },
+  {
+    "file": "data/quality/irena_component_checks.csv",
+    "rows": 30,
+    "columns": 4,
+    "source": "IRENA_CAPACITY_2026",
+    "note": "Identity checks detect column misalignment; original rounding allowed up to 1 MW"
+  },
+  {
+    "file": "data/emissions/china_grid_factors_2023.csv",
+    "rows": 40,
+    "columns": 7,
+    "source": "CHINA_GRID_EF_2023",
+    "note": "Electricity indirect-emission factors. Do not add indirect electricity emissions to producer combustion emissions in a national total. Missing provinces are not zero."
+  },
+  {
+    "file": "data/nbs/real_gdp_growth_2005_2024.csv",
+    "rows": 20,
+    "columns": 5,
+    "source": "NBS_2025_C03-04",
+    "note": "Visually transcribed latest historical revision in 2025 yearbook. Do not use GNI column. Rates can chain a constant-price GDP index; they are not current-price RMB levels."
+  },
+  {
+    "file": "data/emissions/carbonmonitor_province_sector_annual_2019_2025.csv",
+    "rows": 1085,
+    "columns": 8,
+    "source": "FIGSHARE_FILE_55875995",
+    "note": "Sum of original daily estimates. Use only complete_year for annual comparison. Sectors are reported separately; inspect definitions before totaling."
+  }
+]

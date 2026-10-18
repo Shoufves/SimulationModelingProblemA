@@ -1,0 +1,45 @@
+{
+  "audited_at": "2026-10-18T00:21:21+08:00",
+  "source_files": 62,
+  "registered_sources": 69,
+  "failed_retrieval_ids": [
+    "IRENA_COST_2024_INDEX",
+    "CEADS_PUBLIC_SITE_JS",
+    "EI_DOWNLOAD_INDEX",
+    "NBS_ENERGY_API_TREE",
+    "EI_2025_ARCHIVE",
+    "WB_PINK_SHEET_2025",
+    "WB_PINK_SHEET_2021"
+  ],
+  "processed_tables": 27,
+  "national_common_window": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "candidate_national_baseline": 2024,
+  "detailed_balance_checkpoint": 2023,
+  "latest_partial_crosscheck": 2025,
+  "support_records": 12,
+  "decided_gaps": 16,
+  "error_count": 0,
+  "unresolved_quality_warnings": [
+    {
+      "check": "fx_2025_cross_source_agreement",
+      "passed": false,
+      "severity": "warning",
+      "detail": "WDI=7.18984737402171; NBS=7.1429 CNY/USD. Keep versions separate; no price conversion pending definition/version check."
+    }
+  ],
+  "acceptance_scope": "First-round data preparation; does not assert model readiness, independent validation, or complete data.",
+  "model_not_executed": true
+}
+

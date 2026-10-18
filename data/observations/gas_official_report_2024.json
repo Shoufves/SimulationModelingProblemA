@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "source_id": "S22",
+  "year": 2024,
+  "region": "中国，全国",
+  "status": "reviewed_official_pdf_pages_scoped",
+  "scope": "2025-08-29能源局公开发布的编委会报告之2024国内天然气字段；不与发改委表观消费口径自动合并",
+  "observations": [
+    {"indicator_id": "gas_consumption_growth_pct", "value": 7.3, "unit": "%", "locator": "PDF第10页/印刷页5，第1项", "scope": "报告天然气消费同比，非快报表观消费同比"},
+    {"indicator_id": "gas_share_primary_energy_pct", "value": 8.8, "unit": "%", "locator": "PDF第10页/印刷页5，第1项", "scope": "天然气占一次能源消费总量"},
+    {"indicator_id": "city_gas_consumption_share_pct", "value": 34, "unit": "%", "locator": "PDF第10页/印刷页5，第1项", "scope": "城市燃气大类，包含居民、采暖、公福商业及交通等，不等于纯居民"},
+    {"indicator_id": "industrial_fuel_consumption_share_pct", "value": 41, "unit": "%", "locator": "PDF第10页/印刷页5，第1项", "scope": "工业燃料用气"},
+    {"indicator_id": "power_consumption_share_pct", "value": 18, "unit": "%", "locator": "PDF第11页/印刷页6，第1项续段", "scope": "发电用气，是转换投入，不是终端电力消费"},
+    {"indicator_id": "chemical_fertilizer_consumption_share_pct", "value": 7, "unit": "%", "locator": "PDF第11页/印刷页6，第1项续段", "scope": "化工化肥大类，不能等同纯原料/非燃烧用气"},
+    {"indicator_id": "gas_production", "value": 2465, "unit": "亿立方米", "locator": "PDF第11页/印刷页6，第2项", "scope": "报告全国天然气产量；与公报2464.5保留各自发布精度"},
+    {"indicator_id": "gas_production_growth_pct", "value": 6.0, "unit": "%", "locator": "PDF第11页/印刷页6，第2项", "scope": "报告产量同比"},
+    {"indicator_id": "unconventional_production_share_pct", "value": 44.5, "unit": "%", "locator": "PDF第11页/印刷页6，第2项", "scope": "非常规天然气占总产量；不由页岩气与煤层气两项凑全"},
+    {"indicator_id": "shale_gas_production", "value": 257, "unit": "亿立方米", "locator": "PDF第12页/印刷页7，第2项续段", "scope": "页岩气产量"},
+    {"indicator_id": "coalbed_methane_production", "value": 138, "unit": "亿立方米", "locator": "PDF第12页/印刷页7，第2项续段", "scope": "煤层气产量"},
+    {"indicator_id": "gas_imports", "value": 1817, "unit": "亿立方米", "locator": "PDF第12页/印刷页7，第3项", "scope": "报告进口体积；标准温压及质量换算参数未在此段明确"},
+    {"indicator_id": "gas_imports_growth_pct", "value": 9.9, "unit": "%", "locator": "PDF第12页/印刷页7，第3项", "scope": "进口同比"},
+    {"indicator_id": "pipeline_imports", "value": 760, "unit": "亿立方米", "locator": "PDF第12页/印刷页7，第3项", "scope": "管道天然气进口"},
+    {"indicator_id": "lng_imports", "value": 1057, "unit": "亿立方米", "locator": "PDF第12页/印刷页7，第3项", "scope": "LNG进口，报告已用气体体积表达，不自行由吨换算"},
+    {"indicator_id": "five_main_origins_imports", "value": 1477, "unit": "亿立方米", "locator": "PDF第12页/印刷页7，第3项", "scope": "俄罗斯、澳大利亚、土库曼斯坦、卡塔尔、马来西亚合计；不提供各国份额"},
+    {"indicator_id": "five_main_origins_reported_share_pct", "value": 81, "unit": "%", "locator": "PDF第12页/印刷页7，第3项", "scope": "报告给出的五来源占比，保留整数舍入"},
+    {"indicator_id": "lng_spot_imports", "value": 133, "unit": "亿立方米", "locator": "PDF第12页/印刷页7，第3项", "scope": "LNG现货进口量"},
+    {"indicator_id": "lng_spot_reported_share_pct", "value": 12.6, "unit": "%", "locator": "PDF第12页/印刷页7，第3项", "scope": "LNG现货占LNG进口总量，不是占全部天然气进口"},
+    {"indicator_id": "added_storage_capacity", "value": 80, "unit": "亿立方米", "locator": "PDF第12—13页/印刷页7—8，第4项衔接", "scope": "全年新增储气能力；不是年末总能力、库存或当天可提取气量"}
+  ],
+  "notes": [
+    "20项2024国内观测，经官方PDF正文及相关页面截图核对；本地留存仅文本摘录，原二进制下载失败。",
+    "能源局官方发布页确认主办单位及日期；报告编委会课题组包含中国石油国家高端智库研究中心等，指导与编制身份分开。",
+    "印刷页1脚注：中国数据主要来自自然资源部、国家统计局、海关总署及行业统计；不将全部数值宣称为统计局原始采集。",
+    "报告2025年展望、国际商业数据、未量化地区区间和管道下界均未录入。",
+    "部门份额合计100%不证明可与S23表观消费绝对量相乘；缺共同边界及标准体积状态。",
+    "不能由国内产量加进口减表观消费的差额直接补出口或库存。"
+  ]
+}

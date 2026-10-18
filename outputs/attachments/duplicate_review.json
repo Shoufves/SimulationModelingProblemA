@@ -1,0 +1,184 @@
+{
+  "groups": [
+    {
+      "group_id": "ATT1-THERMAL-R0354-DUP",
+      "name": "金山电厂",
+      "kind": "same_name_conflicting_fields",
+      "records": [
+        {
+          "record_id": "ATT1-THERMAL-R0354",
+          "row": 354,
+          "capacity_raw": 600,
+          "location": "土默特左"
+        },
+        {
+          "record_id": "ATT1-THERMAL-R0389",
+          "row": 389,
+          "capacity_raw": 660,
+          "location": "土默特左"
+        }
+      ],
+      "decision": "retain_all_pending_project_or_unit_identity_review"
+    },
+    {
+      "group_id": "ATT1-THERMAL-R0438-DUP",
+      "name": "唐山北郊电厂",
+      "kind": "same_name_same_capacity_location",
+      "records": [
+        {
+          "record_id": "ATT1-THERMAL-R0438",
+          "row": 438,
+          "capacity_raw": 700,
+          "location": "唐山"
+        },
+        {
+          "record_id": "ATT1-THERMAL-R0441",
+          "row": 441,
+          "capacity_raw": 700,
+          "location": "唐山"
+        }
+      ],
+      "decision": "retain_all_pending_project_or_unit_identity_review"
+    },
+    {
+      "group_id": "ATT1-THERMAL-R0439-DUP",
+      "name": "滦河电厂",
+      "kind": "same_name_same_capacity_location",
+      "records": [
+        {
+          "record_id": "ATT1-THERMAL-R0439",
+          "row": 439,
+          "capacity_raw": 660,
+          "location": "滦河"
+        },
+        {
+          "record_id": "ATT1-THERMAL-R0442",
+          "row": 442,
+          "capacity_raw": 660,
+          "location": "滦河"
+        }
+      ],
+      "decision": "retain_all_pending_project_or_unit_identity_review"
+    },
+    {
+      "group_id": "ATT1-THERMAL-R0453-DUP",
+      "name": "中电神头电厂",
+      "kind": "same_name_same_capacity_location",
+      "records": [
+        {
+          "record_id": "ATT1-THERMAL-R0453",
+          "row": 453,
+          "capacity_raw": 1200,
+          "location": "朔州市"
+        },
+        {
+          "record_id": "ATT1-THERMAL-R0472",
+          "row": 472,
+          "capacity_raw": 1200,
+          "location": "朔州市"
+        }
+      ],
+      "decision": "retain_all_pending_project_or_unit_identity_review"
+    },
+    {
+      "group_id": "ATT2-HYDRO-R0050-DUP",
+      "name": "鲁布革水电站",
+      "kind": "same_name_same_capacity_location",
+      "records": [
+        {
+          "record_id": "ATT2-HYDRO-R0050",
+          "row": 50,
+          "capacity_raw": 600,
+          "location": "罗平县"
+        },
+        {
+          "record_id": "ATT2-HYDRO-R0080",
+          "row": 80,
+          "capacity_raw": 600,
+          "location": "罗平县"
+        }
+      ],
+      "decision": "retain_all_pending_project_or_unit_identity_review"
+    },
+    {
+      "group_id": "ATT2-HYDRO-R0081-DUP",
+      "name": "天生桥一级水电站",
+      "kind": "same_name_conflicting_fields",
+      "records": [
+        {
+          "record_id": "ATT2-HYDRO-R0081",
+          "row": 81,
+          "capacity_raw": 1200,
+          "location": "安龙县"
+        },
+        {
+          "record_id": "ATT2-HYDRO-R0093",
+          "row": 93,
+          "capacity_raw": 1200,
+          "location": "隆林各族自治县"
+        }
+      ],
+      "decision": "retain_all_pending_project_or_unit_identity_review"
+    },
+    {
+      "group_id": "ATT2-HYDRO-R0082-DUP",
+      "name": "天生桥二级水电站",
+      "kind": "same_name_conflicting_fields",
+      "records": [
+        {
+          "record_id": "ATT2-HYDRO-R0082",
+          "row": 82,
+          "capacity_raw": 1320,
+          "location": "安龙县"
+        },
+        {
+          "record_id": "ATT2-HYDRO-R0092",
+          "row": 92,
+          "capacity_raw": 1320,
+          "location": "隆林各族自治县"
+        }
+      ],
+      "decision": "retain_all_pending_project_or_unit_identity_review"
+    },
+    {
+      "group_id": "ATT2-HYDRO-R0083-DUP",
+      "name": "平班水电站",
+      "kind": "same_name_conflicting_fields",
+      "records": [
+        {
+          "record_id": "ATT2-HYDRO-R0083",
+          "row": 83,
+          "capacity_raw": 405,
+          "location": "安龙县"
+        },
+        {
+          "record_id": "ATT2-HYDRO-R0099",
+          "row": 99,
+          "capacity_raw": 405,
+          "location": "隆林各族自治县"
+        }
+      ],
+      "decision": "retain_all_pending_project_or_unit_identity_review"
+    },
+    {
+      "group_id": "ATT2-HYDRO-R0127-DUP",
+      "name": "天桥水电站",
+      "kind": "same_name_conflicting_fields",
+      "records": [
+        {
+          "record_id": "ATT2-HYDRO-R0127",
+          "row": 127,
+          "capacity_raw": 128,
+          "location": "集安市"
+        },
+        {
+          "record_id": "ATT2-HYDRO-R0193",
+          "row": 193,
+          "capacity_raw": 128,
+          "location": "保德县"
+        }
+      ],
+      "decision": "retain_all_pending_project_or_unit_identity_review"
+    }
+  ]
+}

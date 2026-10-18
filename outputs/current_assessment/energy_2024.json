@@ -1,0 +1,84 @@
+{
+  "year": 2024,
+  "status": "partial_q1_single_release_not_calibrated_forecast",
+  "source_ids": [
+    "S13"
+  ],
+  "total_energy_consumption_100m_tce": 59.6,
+  "primary_energy_production_100m_tce": 49.8,
+  "coal_consumption_share_pct": 53.2,
+  "clean_energy_consumption_share_including_gas_pct": 28.6,
+  "generation_100m_kwh": {
+    "total": 100868.8,
+    "thermal": 63742.6,
+    "hydro": 14256.8,
+    "nuclear": 4508.5,
+    "wind": 9970.4,
+    "solar": 8390.4
+  },
+  "generation_share_pct": {
+    "thermal": 63.19357422711482,
+    "hydro": 14.134003775201052,
+    "nuclear": 4.469667528512286,
+    "wind": 9.884523261900608,
+    "solar": 8.318132068588106
+  },
+  "wind_solar_generation_share_pct": 18.202655330488714,
+  "hydro_nuclear_wind_solar_generation_share_pct": 36.80632663420205,
+  "generation_rounding_residual_100m_kwh": 0.10000000000582077,
+  "imports": [
+    {
+      "commodity": "coal_lignite",
+      "label": "煤及褐煤",
+      "quantity_10k_t": 54270,
+      "value_100m_yuan": 3705,
+      "import_unit_value_yuan_per_t": 682.6976229961303
+    },
+    {
+      "commodity": "crude_oil",
+      "label": "原油",
+      "quantity_10k_t": 55342,
+      "value_100m_yuan": 23108,
+      "import_unit_value_yuan_per_t": 4175.490585811861
+    },
+    {
+      "commodity": "petroleum_products",
+      "label": "成品油",
+      "quantity_10k_t": 4823,
+      "value_100m_yuan": 2083,
+      "import_unit_value_yuan_per_t": 4318.8886585113005
+    },
+    {
+      "commodity": "natural_gas",
+      "label": "天然气",
+      "quantity_10k_t": 13169,
+      "value_100m_yuan": 4637,
+      "import_unit_value_yuan_per_t": 3521.148150960589
+    }
+  ],
+  "reported_adjusted_energy_intensity_growth_pct": -3.8,
+  "illustrative_total_energy_per_real_gdp_growth_pct": -0.6666666666666821,
+  "reported_co2_intensity_growth_pct": -3.4,
+  "carbon_allowance_turnover_ratio_yuan_per_tco2e": 95.82010582010582,
+  "nonfossil_primary_energy_share_pct": null,
+  "net_import_dependency_pct": null,
+  "national_co2_total": null,
+  "formulas": {
+    "generation_share": "分项年度发电量/同表发电总量*100",
+    "import_unit_value": "进口金额(亿元)/进口质量(万吨)*10000",
+    "carbon_turnover_ratio": "成交额(亿元)/成交量(亿吨)",
+    "illustrative_total_intensity_change": "(1+总能耗同比)/(1+实际GDP同比)-1；只用已舍入公布增速"
+  },
+  "boundaries": [
+    "清洁能源消费28.6%含天然气，不是非化石能源消费占比。",
+    "火电含生物质等，不能把火电全部计为煤电或化石发电。",
+    "国内气产量是亿立方米，进口是万吨；无官方换算参数时不计算天然气进口依赖。",
+    "进口单位价值由年度商品组合计算，不能替代现货价格或生产成本。",
+    "成交额/成交量是派生年度交易比值，不是期末碳价，也不是未来碳价政策。",
+    "总能耗/实际GDP示例与扣除原料和非化石用能的官方强度指标边界不同。",
+    "碳强度降幅不是排放总量降幅；缺绝对基准，不能据此给出全国CO2吨数。",
+    "所有公报值为初步数；与年鉴的历史修订桥接仍待完成。"
+  ],
+  "input_sha256": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+  "source_registry_sha256": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f"
+}

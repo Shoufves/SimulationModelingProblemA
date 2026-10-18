@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "source_id": "S25",
+  "year": 2024,
+  "region": "中国，全国",
+  "status": "reviewed_official_page_capture_single_release",
+  "scope": "国家能源局页面标示2025-01-27发布；年末技术容量、全年发电和利用率，保留太阳能/光伏字面范围差异",
+  "observations": [
+    {"indicator_id": "renewable_capacity_total", "value": 18.89, "unit": "亿千瓦", "locator": "L10 总述年末容量", "scope": "可再生能源发电装机，不含核电；不等于非化石全部装机"},
+    {"indicator_id": "renewable_generation_total", "value": 3.46, "unit": "万亿千瓦时", "locator": "L11 总述年度发电", "scope": "可再生能源年度发电，公布值精度较粗"},
+    {"indicator_id": "hydro_capacity_total", "value": 4.36, "unit": "亿千瓦", "locator": "L13 （一）水电累计装机", "scope": "总水电包含常规与抽蓄，不能再加一次抽蓄"},
+    {"indicator_id": "conventional_hydro_capacity", "value": 3.77, "unit": "亿千瓦", "locator": "L13 （一）常规水电", "scope": "常规水电年末容量，保留公布精度"},
+    {"indicator_id": "pumped_storage_capacity", "value": 5869, "unit": "万千瓦", "locator": "L13 （一）抽水蓄能", "scope": "年末抽蓄功率，不是能量容量或有效可用容量"},
+    {"indicator_id": "hydro_generation", "value": 14239, "unit": "亿千瓦时", "locator": "L15 （一）全年发电", "scope": "本发布版本水电发电；抽蓄电量分项未知"},
+    {"indicator_id": "wind_capacity", "value": 5.21, "unit": "亿千瓦", "locator": "L18 （二）风电累计并网", "scope": "年末风电累计并网容量"},
+    {"indicator_id": "wind_generation", "value": 9916, "unit": "亿千瓦时", "locator": "L20 （二）全年风电", "scope": "本发布版本全年风电发电量"},
+    {"indicator_id": "wind_utilization_pct", "value": 95.9, "unit": "%", "locator": "L20 （二）平均利用率", "scope": "原文全国风电平均利用率，不是容量因子"},
+    {"indicator_id": "solar_capacity_summary", "value": 8.87, "unit": "亿千瓦", "locator": "L10 总述太阳能发电装机", "scope": "太阳能总述指标；与光伏专段不自动认定同一技术边界"},
+    {"indicator_id": "pv_capacity_detailed", "value": 8.86, "unit": "亿千瓦", "locator": "L24 （三）光伏装机", "scope": "光伏专段年末装机；保留与总述太阳能的表述差异"},
+    {"indicator_id": "pv_generation", "value": 8341, "unit": "亿千瓦时", "locator": "L26 （三）全年光伏", "scope": "本发布版本光伏发电量；不能直接覆盖S13太阳能发电"},
+    {"indicator_id": "pv_utilization_pct", "value": 96.8, "unit": "%", "locator": "L26 （三）光伏利用率", "scope": "原文全国光伏发电利用率，不是容量因子"},
+    {"indicator_id": "biomass_capacity", "value": 4599, "unit": "万千瓦", "locator": "L28 （四）生物质年末装机", "scope": "生物质发电装机；与其他表火电分类可能交叉，不另加到全国总量"},
+    {"indicator_id": "biomass_generation", "value": 2083, "unit": "亿千瓦时", "locator": "L28 （四）生物质全年发电", "scope": "生物质发电量；不等于零碳发电量"}
+  ],
+  "notes": [
+    "15项数字逐值复核；新增量、增长率及未采用总述舍入数字不计入本子集。",
+    "太阳能总述8.87亿千瓦与光伏专段8.86亿千瓦分列，不用差额补光热。",
+    "S13与S25水电/风电、太阳能/光伏发电量不同，尚未确定范围或修订原因；分别保留，不混成校准目标。",
+    "不以年末容量计算全年容量因子，不以利用率反推弃电量，不给缺少时长的抽蓄MWh。",
+    "仅2024技术参考、口径比较及协调性观测；不完成全国供给初始化、全国排放核算或十年校准。"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "recipe": "international",
+  "status": "passed",
+  "comparisons": [
+    {
+      "path": "data/processed/lb/international/china_destination_route_flows_2020_1H2025.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/international/eia_security_quarterly_2025_2026.csv",
+      "byte_equal": true,
+      "table_equal": true
+    },
+    {
+      "path": "data/processed/lb/international/route_crude_origin_destination_2020_1H2025.csv",
+      "byte_equal": true,
+      "table_equal": true
+    }
+  ],
+  "execution": [
+    {
+      "script": "补充收集_20261017/international/prepare_scenario_data.py",
+      "returncode": 0,
+      "stdout": "{\"route_rows\": 636, \"china_rows\": 36, \"security_rows\": 279, \"security_tables\": 10, \"malacca_review\": [{\"table\": 2, \"caption\": \"Table 2. Volume of crude oil and petroleum liquids transported through world chokepoints and the Cape of Good Hope, 1Q25–2Q26\", \"series\": \"Strait of Malacca\", \"period\": \"4Q25\", \"value\": 24.9, \"raw_value\": \"24.9\", \"unit\": \"million barrels per day\", \"source_id\": \"EIA_SECURITY_AUG2026\", \"source_row\": 3, \"data_type\": \"EIA_estimate\", \"note\": \"Third-party estimates, not China official inventories; dash retained as missing.\"}, {\"table\": 3, \"caption\": \"Table 3. Volume of crude oil, condensate, petroleum products, and liquefied natural gas transported through the Strait of Malacca, 1Q25–2Q26\", \"series\": \"Total oil flows through the Strait of Malacca\", \"period\": \"4Q25\", \"value\": 24.0, \"raw_value\": \"24.0\", \"unit\": \"million barrels per day\", \"source_id\": \"EIA_SECURITY_AUG2026\", \"source_row\": 3, \"data_type\": \"EIA_estimate\", \"note\": \"Third-party estimates, not China official inventories; dash retained as missing.\"}]}\n",
+      "stderr": ""
+    }
+  ],
+  "expected_outputs_absent_before_execution": true,
+  "scope": "Offline reproduction of saved extraction recipes; not independent source verification or national simulation."
+}

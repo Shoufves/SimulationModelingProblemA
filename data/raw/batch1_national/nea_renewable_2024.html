@@ -1,0 +1,139 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta name="source" content="新华网"> <meta name="publishdate" content="2025-01-27"> <meta name="contentid" content="20250221e10f363cabe3458aaf78ba4558970054"> <meta name="subject" content=""> <meta name="catalogs" content="01009005000"> <meta name="author" content=""> <meta name="publishedtype" content="1"> <meta name="filetype" content="0"> <meta name="pagetype" content="1"> <meta name="templateId" content="b5427b58c834414690d6e6f7dca0826e"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta name="SiteName" content="国家能源局"> <meta name="SiteDomain" content="www.nea.gov.cn"> <meta name="SiteIDCode" content="bm62000002号"> <div data="datasource:20250221e10f363cabe3458aaf78ba4558970054" datatype="content"><meta name="ArticleTitle" content="2024年可再生能源并网运行情况"></div> <div data="datasource:20250221e10f363cabe3458aaf78ba4558970054" datatype="content"><meta name="PubDate" content="2025-01-27 00:00:00"></div> <div data="datasource:20250221e10f363cabe3458aaf78ba4558970054" datatype="content"><meta name="ContentSource" content="国家能源局"></div> <meta name="description" content="国家能源网"> <meta name="keywords" content="国家能源网"> <title data="datasource:20250221e10f363cabe3458aaf78ba4558970054" datatype="content">
+            2024年可再生能源并网运行情况---国家能源局
+        </title> <link href="http://www.nea.gov.cn/static/default/css/public/master_nyj_v1.0.css" rel="stylesheet" type="text/css"> <link href="http://www.nea.gov.cn/static/default/css/article.css" rel="stylesheet" type="text/css"> <link href="http://www.nea.gov.cn/2015nyj/xinban/topbase.css" rel="stylesheet"> <link href="http://www.nea.gov.cn/detail/css/cb_videoPlayer.css" rel="stylesheet"> <script src="http://www.nea.gov.cn/static/default/js/public/jquery-1.9.1.min.js" type="text/javascript"></script> <script language="javascript">
+        $(document).ready(function () {
+
+            var lefttmp = new Image();
+            lefttmp.src = "http://www.xinhuanet.com/photo/static/arr_left.cur";
+            var righttmp = new Image();
+            righttmp.src = "http://www.xinhuanet.com/photo/static/arr_right.cur";
+            leng = $("a", $("#div_currpage")).length;
+
+            if (leng != 0)
+            //curr里有a标签==稿件不止一页
+            {
+
+                //看一共有多少个a标签
+                leng = leng - 1;
+                var nextLin = $("a", $("#div_currpage"))[leng].href; //对于多页的情况，取得下一页的地址
+                var oneword = location.href + "#";
+                if (nextLin == oneword) {
+                    leng = leng - 1;
+                    nextLin = $("a", $("#div_currpage"))[leng].href;
+                }
+                var currurl = location
+                    .href; //当前页链接地址<meta http-equiv="expires" content="Sunday 26 October 2011 01:00 GMT" /> 
+
+                var underpd = currurl.substring(currurl.indexOf("c_") + 2, currurl.indexOf(".htm"));
+                if (underpd.indexOf("_") == -1) {
+
+                    prevLink = location.href; //如果是文章首页，则左键仍是替换到本页面
+                    nextLink = $("a", $("#div_currpage"))[0].href; //下一页的赋值
+                    setTimeout("window.opener=null;window.location.href='" + nextLink + "'", 60000); //30秒跳转到下一页
+                } else
+                //是末页，http://news.xinhuanet.com/photo/2011-08/06/c_121822530.htm
+                {
+                    //当前页分页号判断
+                    var currnum = currurl.indexOf(".htm"); //链接中第一次出现.htm的位置
+                    var underlineindex = currurl.lastIndexOf("_") + 1; //下划线甄别标识，第一页则不是下划线
+                    //下一页的分页号
+                    var nextnum = nextLin.indexOf(".htm"); //链接中第一次出现.htm的位置
+                    var underlinenext = nextLin.lastIndexOf("_") + 1; //下划线甄别标识，第一页则不是下划线
+                    var undernum = nextLin.substr(nextLin.indexOf("c_")).split("_").length - 1;
+
+                    var temp = currurl.substring(underlineindex, currnum); //当前页的分页号
+                    var nexttemp = nextLin.substring(underlinenext, nextnum); //最后a标签的分页号
+                    var boolx = parseInt(temp, 10) > parseInt(nexttemp, 10);
+
+                    if ((boolx) || (undernum == 1)) //末页
+
+                    {
+
+                        if ($("img", $("a", $("#content"))).length == 0) //没有带链接的图片
+
+                        {
+                            prevLink = nextLin;
+                            if (undernum == 1) {
+                                nextLink = nextLin;
+                            } else {
+                                nextLink = prevLink.substr(0, (prevLink.lastIndexOf("_"))) + ".htm";
+                            }
+                            setTimeout("window.opener=null;window.location.href='" + nextLink + "'",
+                                60000); //30秒跳转到下一页
+                        } else //末页正文图片有链接
+                        {
+                            prevLink = nextLin;
+                            nextLink = $("a", $("#content"))[0].href; //把正文第一个带链接的链接地址赋给下一页
+                        }
+
+                    } else //不是末页
+                    {
+
+                        prevLink = $("a", $("#div_currpage"))[0].href; //把正文第一个带链接的链接地址赋给下一页
+                        nextLink = nextLin; //把正文最后一个带链接的链接地址赋给下一页
+                    }
+
+                }
+            } else
+            //只有一页
+            {
+                prevLink = location.href;
+                nextLink = location.href;
+            }
+
+            document.onkeydown = pageEvent;
+
+            function pageEvent(evt) {
+                evt = evt || window.event;
+                var key = evt.which || evt.keyCode;
+                if (key == 37) location = prevLink;
+                if (key == 39) location = nextLink;
+            };
+
+            var lefturl = prevLink;
+            var righturl = nextLink;
+            var imgurl = righturl;
+
+            $("#content img").each(function () {
+                var width = $(this).width();
+                var thisImage = $(this);
+                //alert("01");
+                $(thisImage)[0].onmousemove = function () {
+
+                    if (event.offsetX < width / 2) {
+
+                        this.style.cursor = 'url(' + lefttmp.src + '),auto';
+                        imgurl = lefturl;
+                    } else {
+
+                        this.style.cursor = 'url(' + righttmp.src + '),auto';
+                        imgurl = righturl;
+                    }
+
+                }
+
+                $(thisImage)[0].onmouseup = function () {
+                    top.location = imgurl;
+
+                }
+            });
+
+        });
+    </script></head> <body><script src="http://www.nea.gov.cn/2015nyj/xinban/topnav.js" type="text/javascript"></script> <div class="main-colum"><div class="now-site">您当前位置：<a href="http://www.nea.gov.cn/" target="_blank">首页</a> &gt; 正文</div> <div class="channel-page"><div class="article-title" data="datasource:20250221e10f363cabe3458aaf78ba4558970054" datatype="content"><div class="hr_10"></div> <div class="titles">
+                        2024年可再生能源并网运行情况
+                    </div> <div class="hr_10"></div> <span class="times">
+                        发布时间：2025-01-27
+                    </span> <span class="author">
+                        来源：国家能源局
+                    </span> <span class="switchsize"><b class="bigger">大</b><b class="medium">中</b><b class="smaller">小</b></span> <div class="arrow"></div></div> <div class="article-box"><div class="hr_10"></div> <div class="hr_10"></div> <div class="hr_10"></div> <div id="detail" data="datasource:20250221e10f363cabe3458aaf78ba4558970054" datatype="content"><div class="article-content"><span id="detailContent"><p style="text-indent: 2em;">2024年，国家能源局以习近平新时代中国特色社会主义思想为指导，深入学习贯彻党的二十大和二十届二中、三中全会精神，完整准确全面贯彻新发展理念，以碳达峰碳中和工作为引领，统筹能源安全和低碳发展，加快规划建设新型能源体系，稳妥推进能源绿色低碳转型，全力推动可再生能源发展再上新台阶。</p><p style="text-indent: 2em;">可再生能源装机规模不断实现新突破。2024年，全国可再生能源发电新增装机3.73亿千瓦，同比增长23%，占电力新增装机的86%。其中，水电新增1378万千瓦，风电新增7982万千瓦，太阳能发电新增2.78亿千瓦，生物质发电新增185万千瓦。截至2024年底，全国可再生能源装机达到18.89亿千瓦，同比增长25%，约占我国总装机的56%，其中，水电装机4.36亿千瓦，风电装机5.21亿千瓦，太阳能发电装机8.87亿千瓦，生物质发电装机0.46亿千瓦。</p><p style="text-indent: 2em;">可再生能源发电量稳步提升。2024年，全国可再生能源发电量达3.46万亿千瓦时，同比增加19%，约占全部发电量的35%；其中，风电太阳能发电量合计达1.83万亿千瓦时，同比增长27%，与同期第三产业用电量（18348亿千瓦时）基本持平，远超同期城乡居民生活用电量（14942亿千瓦时）。2024年全国可再生能源发电量较去年同期增加5419亿千瓦时，约占全社会新增用电量的86%。</p><p style="text-indent: 2em;">（一）水电建设和运行情况。2024年，全国新增水电装机容量1378万千瓦，其中常规水电625万千瓦，抽水蓄能753万千瓦。截至2024年12月，全国水电累计装机容量达4.36亿千瓦，其中常规水电3.77亿千瓦，抽水蓄能5869万千瓦。</p><p style="text-indent: 2em;">2024年，全国水电发电量14239亿千瓦时，全国规模以上水电平均利用小时数为3349小时。</p><p style="text-indent: 2em;">（二）风电建设和运行情况。2024年，全国风电新增装机容量7982万千瓦，同比增长6%，其中陆上风电7579万千瓦，海上风电404万千瓦。从新增装机分布看，“三北”地区占全国新增装机的75%。</p><p style="text-indent: 2em;">截至2024年12月，全国风电累计并网容量达到5.21亿千瓦，同比增长18%，其中陆上风电4.8亿千瓦，海上风电4127万千瓦。</p><p style="text-indent: 2em;">2024年，全国风电发电量9916亿千瓦时，同比增长16%；全国风电平均利用率95.9%。</p><p style="text-indent: 2em;">（三）光伏发电建设和运行情况。2024年，全国光伏新增装机2.78亿千瓦，同比增长28%，其中集中式光伏1.59亿千瓦，分布式光伏1.18亿千瓦。</p><p style="text-indent: 2em;">截至2024年12月，全国光伏发电装机容量达到8.86亿千瓦，同比增长45%，其中集中式光伏5.11亿千瓦，分布式光伏3.75亿千瓦。</p><p style="text-indent: 2em;">2024年，全国光伏发电量8341亿千瓦时，同比增长44%；全国光伏发电利用率96.8%。</p><p style="text-indent: 2em;">（四）生物质发电建设和运行情况。2024年，全国生物质发电新增装机185万千瓦。截至2024年12月，全国生物质发电装机容量达到4599万千瓦，同比增长4%。生物质发电量2083亿千瓦时，同比增长5%。</p></span></div></div> <div class="back-top"></div> <div class="hr_10"></div> <div class="hr_10"></div> <div class="hr_10"></div></div> <div class="article-other"><div class="hr_10"></div> <div class="hr_10"></div> <div class="clear"></div></div> <div class="hr_10"></div> <div class="hr_10"></div> <div class="hr_10"></div></div></div> <script src="http://www.nea.gov.cn/2015nyj/xinban/bottom.js" type="text/javascript"></script> <script src="http://www.nea.gov.cn/static/default/js/public/article-font.js" type="text/javascript"></script> <script src="http://www.nea.gov.cn/detail/js/pager.js"></script> <script src="http://www.nea.gov.cn/detail/js/cb-video.js"></script> <script>
+        $(function () {
+            /* 分页调用 */
+            parsePagingFun({
+                // preText: 'prev',//上一页
+                // nextText: 'next',//下一页
+                id: 'detailContent', //正文分页id
+                num: 8 //显示页码数个数
+            })
+
+        })
+    </script><script src="//imgs.news.cn/webdig/xinhua_webdig.js" language="javascript" type="text/javascript" async></script></body></html>

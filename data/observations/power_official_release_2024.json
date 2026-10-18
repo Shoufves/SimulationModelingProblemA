@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "source_id": "S17",
+  "locator": "官方正文表格L14—L23及L25脚注；存量时点见L10",
+  "region": "中国，全国",
+  "status": "reviewed_official_page_capture_single_release",
+  "scope": "2025-01-21发布的2024年统计数据，装机为2024年末，利用小时限6000千瓦及以上电厂；独立版本，暂不拼入年鉴校准序列",
+  "columns": [
+    "year",
+    "total",
+    "hydro",
+    "thermal",
+    "nuclear",
+    "wind",
+    "solar",
+    "line_loss_pct",
+    "utilization_hours_plants_ge_6000kw",
+    "power_project_investment_100m_yuan",
+    "grid_investment_100m_yuan"
+  ],
+  "rows": [
+    [
+      2024,
+      334862,
+      43595,
+      144445,
+      6083,
+      52068,
+      88666,
+      4.37,
+      3442,
+      11687,
+      6083
+    ]
+  ],
+  "units": {
+    "total": "万千瓦",
+    "hydro": "万千瓦",
+    "thermal": "万千瓦",
+    "nuclear": "万千瓦",
+    "wind": "万千瓦",
+    "solar": "万千瓦",
+    "line_loss_pct": "%",
+    "utilization_hours_plants_ge_6000kw": "小时",
+    "power_project_investment_100m_yuan": "亿元",
+    "grid_investment_100m_yuan": "亿元"
+  },
+  "notes": [
+    "仅录入全年累计列；同比列中*为绝对变化、▲为百分点，本子集不转录同比列。",
+    "总量与所列五种分项和差5万千瓦，不强行配平或分配到某技术。",
+    "与现有2025年鉴转录的2024年容量存在差异；保留各自版本，不据单年公报改写年鉴。",
+    "投资完成额不能直接作为度电成本或单位造价；装机结构不能替代非化石一次能源消费占比。",
+    "本数据可用于明确版本的2024电力横截面评价；不足以支持全国能源碳中和预测。"
+  ]
+}

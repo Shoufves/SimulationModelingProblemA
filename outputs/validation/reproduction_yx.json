@@ -1,0 +1,18 @@
+[
+  {
+    "command": [
+      "scripts/prepare_external_data.py"
+    ],
+    "returncode": 0,
+    "seconds": 2.742900199998985,
+    "log": "yx_1.log"
+  },
+  {
+    "command": [
+      "scripts/audit_data_package.py"
+    ],
+    "returncode": 0,
+    "seconds": 1.174997499998426,
+    "log": "yx_2.log"
+  }
+]

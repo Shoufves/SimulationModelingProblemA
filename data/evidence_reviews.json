@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0",
+  "note": "仅下列记录完成注明范围的实质复核；S01/S06仅两个10值需求子集准入，原历史整表和其他候选不自动批准。",
+  "reviews": [
+    {
+      "review_id": "R-QINSHAN-ASSETS-20261017",
+      "dataset_path": "data/observations/qinshan_asset_permit_case.json",
+      "dataset_sha256": "49377e3598b1f91f9fa226551e92ec06b860da3a9bf21f7f918e8993e0ee56e6",
+      "source_registry_sha256": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f",
+      "source_records_sha256": {
+        "S26": "6c52178d8cef95e08f42dbd9d5ab3ff5425f942519ee8a1ea5fde9429f533447",
+        "S27": "60851103ae7b1e1ae10420da6e4034abd6fa40d6490b44e02ced5a2a73f62c13",
+        "S28": "ec7ea5e335ec453078f1db7fc324c198f3fd2097caa4b1030ab04aacb6526ef4"
+      },
+      "status": "reviewed",
+      "reviewer": "Codex：原页直接读取后另次重开，逐项复读七台机组、八个许可期限事件、设计寿命及并网日；不读取许可附件PDF",
+      "checked_on": "2026-10-17",
+      "original_values_checked": true,
+      "units_period_scope_checked": true,
+      "revision_compatibility_checked": true,
+      "usage_restriction": "仅秦山7台机组许可文件回放与附件3条厂级记录身份映射；不核实精确装机/实际退役/发电或全国初始化；生成日为回放信息时点约定",
+      "audit": "outputs/data_review/review_assets_20261017.md",
+      "evidence_files": [
+        {
+          "source_id": "S26",
+          "path": "data/raw/official/S26_qinshan_permits_2017_capture.txt",
+          "sha256": "f5812462da06dce6271ef885017f62fad0bb6feaf569cc7acc7ec72f0d5bdbad",
+          "official_url": "https://www.mee.gov.cn/gkml/sthjbgw/haq/201712/t20171222_428467.htm",
+          "capture_kind": "official_page_capture",
+          "locator": "正文L4—48，七台机组名称和对应期限逐项复读",
+          "captured_on": "2026-10-17",
+          "scope_and_units": "秦山基地7台机组的许可截止日期及身份；不是装机或退役统计",
+          "revision_note": "按事件保留2017旧期限和2021更新，不回写旧状态；设计寿命、许可截止与实际退役分开。",
+          "extraction_method": "直接打开官方正文并另次重开人工字段摘录；非搜索摘要、完整HTML、许可附件PDF或截图"
+        },
+        {
+          "source_id": "S27",
+          "path": "data/raw/official/S27_qinshan_extension_2021_capture.txt",
+          "sha256": "6de93b6cf6a764f3ab1a86a75220062e6869b0836e9f765dd0761c0ded66187b",
+          "official_url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk09/202109/t20210909_913463.html",
+          "capture_kind": "official_page_capture",
+          "locator": "正文L4—40，生成日/落款/有效期及可调整条款",
+          "captured_on": "2026-10-17",
+          "scope_and_units": "秦山1号许可有效期延续至2041-07-30；不等于未来实际连续发电",
+          "revision_note": "按事件保留2017旧期限和2021更新，不回写旧状态；设计寿命、许可截止与实际退役分开。",
+          "extraction_method": "直接打开官方正文并另次重开人工字段摘录；非搜索摘要、完整HTML、许可附件PDF或截图"
+        },
+        {
+          "source_id": "S28",
+          "path": "data/raw/official/S28_qinshan_design_life_capture.txt",
+          "sha256": "cc6bbf21c20636fa131a2e3105bf9222aec3e64e6eb77d6000d385fdb224780d",
+          "official_url": "https://zjb.nea.gov.cn/dtyw/xkgsgg/202309/t20230914_210277.html",
+          "capture_kind": "official_page_capture",
+          "locator": "正文L15—36，页面2021-06-07时间及并网/设计寿命/准备状态",
+          "captured_on": "2026-10-17",
+          "scope_and_units": "秦山1号首次并网日、30年初始设计寿命及原服役期限；当时仍在评估",
+          "revision_note": "按事件保留2017旧期限和2021更新，不回写旧状态；设计寿命、许可截止与实际退役分开。",
+          "extraction_method": "直接打开官方正文并另次重开人工字段摘录；非搜索摘要、完整HTML、许可附件PDF或截图"
+        }
+      ]
+    },
+    {
+      "review_id": "R-S01-DEMAND-20261017",
+      "dataset_path": "data/observations/demand_energy_total_2015_2024.json",
+      "dataset_sha256": "909be60ca5dd53e79059df6eb087db132b34ca1f831728efe2debb20a02e80f0",
+      "source_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+      "source_records_sha256": {
+        "S01": "fe8ee0d7c5ef41432a74638ef88be0f4dde60f55909052aac37958f177484662"
+      },
+      "status": "reviewed",
+      "reviewer": "Codex：直接查看国家统计局原图，经年鉴目录链接及再次直接重开核对2015—2024总量10值，并读取同版能源及编者说明",
+      "checked_on": "2026-10-17",
+      "original_values_checked": true,
+      "units_period_scope_checked": true,
+      "revision_compatibility_checked": true,
+      "usage_restriction": "仅同版发布序列的总能源条件回算及四种统计基线；不批准原整表结构，不作部门燃烧、全国ABM、CO2或跨版因果结论。原图/截图未本地归档，证据为明示人工文字摘录。",
+      "policy_basis": "workflow/official_data_policy.md，2026-10-17图片摘录补充",
+      "audit": "outputs/data_review/review_demand_minimal_20261017.md",
+      "evidence_files": [
+        {
+          "source_id": "S01",
+          "path": "data/raw/official/S01_demand_excerpt_20261017.txt",
+          "sha256": "bdae0182ff96a1153755073b5840526887b0f358c81a65714999f7f4de77a08c",
+          "official_url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-02.jpg",
+          "capture_kind": "official_page_capture",
+          "locator": "表9-2，2015—2024十行，仅能源消费总量列、表头及原单位；同版note.htm、sm09.htm相关说明另页留存",
+          "captured_on": "2026-10-17",
+          "scope_and_units": "2015—2024全国全社会，万吨标准煤；只取总量，不采用结构、部门或转换量",
+          "revision_note": "采用2025年鉴发布历史值，不混旧版或逐年初步公报；保留修订及方法变化风险，不构造调整系数",
+          "extraction_method": "检索工具直接显示官方原图后人工逐行摘录，再经目录链接与直接重开复读核对；下载TLS失败，原图与截图均未本地归档，非搜索摘要或重构图片"
+        }
+      ]
+    },
+    {
+      "review_id": "R-S06-GDP-20261017",
+      "dataset_path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+      "dataset_sha256": "3769c34c8f38f39dd456665758da7f892dd11cf1eb90e0603f45254fecdbc6e1",
+      "source_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+      "source_records_sha256": {
+        "S06": "9dbe26808055465900b43318ba01b4ff27179cd065d13076d7c73f1509fd6b28"
+      },
+      "status": "reviewed",
+      "reviewer": "Codex：直接查看国家统计局原图，经目录链接及直接重开核对GDP同比10值，另读同版sm09、sm03和编者说明的可比价格与修订解释",
+      "checked_on": "2026-10-17",
+      "original_values_checked": true,
+      "units_period_scope_checked": true,
+      "revision_compatibility_checked": true,
+      "usage_restriction": "仅近似实际GDP链接指数与已实现GDP条件回算；原宏观整表不准入，不能当不变价GDP绝对额或盲测。原图/截图未本地归档，证据为明示人工文字摘录。",
+      "policy_basis": "workflow/official_data_policy.md，2026-10-17图片摘录补充",
+      "audit": "outputs/data_review/review_demand_minimal_20261017.md",
+      "evidence_files": [
+        {
+          "source_id": "S06",
+          "path": "data/raw/official/S06_gdp_excerpt_20261017.txt",
+          "sha256": "b4b45dbb0ea15c11660536efd8b800bab94cda3970734a3c56945acabfd0fba7",
+          "official_url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-08.jpg",
+          "capture_kind": "official_page_capture",
+          "locator": "表9-8，2015—2024十行，仅国内生产总值同比列；sm09第四项第5条及sm03 GDP修订/价格说明、note.htm相关说明",
+          "captured_on": "2026-10-17",
+          "scope_and_units": "2015—2024全国，可比价格GDP同比%；一位小数，2015基期链接从2016开始",
+          "revision_note": "2025年鉴公布修订后序列；不拼旧版GDP，链接指数非官方绝对额；评估用已实现GDP且留出已接触",
+          "extraction_method": "检索工具直接显示原图并另次重开，人工按GDP列摘录并逐值复读，同版章节正文另读留存；无原图/截图本地文件，非搜索摘要或重构图片"
+        }
+      ]
+    },
+    {
+      "review_id": "R-S17-20261016",
+      "dataset_path": "data/observations/power_official_release_2024.json",
+      "dataset_sha256": "c4ad62a266a5136d9d8a76dc795bfd2140c90f16e26007a5e672a22207a3b90c",
+      "source_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+      "status": "reviewed",
+      "reviewer": "Codex：逐值读取官方表格；2026-10-17再次直接打开原页核对10值与脚注",
+      "checked_on": "2026-10-17",
+      "registry_rechecks": [
+        {
+          "checked_on": "2026-10-17",
+          "previous_registry_sha256": "55fbb291fc0243b96f79bff059ae92b330f1ae1420905140a5cbf3e68a9b4ebf",
+          "reason": "新增S24/S25后直接重开S17，逐项复核10值、表头及脚注；数据与证据哈希一致，维持独立版本用途。",
+          "audit": "outputs/data_review/review_electricity_inputs_20261017.md"
+        },
+        {
+          "checked_on": "2026-10-17",
+          "previous_registry_sha256": "2f979cb045e593c3e8e111422ba286c3eb41aea5e32ee4dc541c23aa02d290e6",
+          "reason": "仅追加S22和S23；S17来源、10值和证据哈希未变，直接重开原页复读全部值及脚注后保留原用途。",
+          "audit": "outputs/data_review/review_gas_20261017.md"
+        }
+      ],
+      "registry_recheck": {
+        "previous_registry_sha256": "14707243b42180a2bb6c1ef84a26c805cca802d781a614febf1c673016065f68",
+        "reason": "来源登记仅更新全局访问日期及S13的证据范围；S17来源记录、数据和留存文件未改变。已重开S17原页逐值复读，不因更新哈希自动批准其他候选。",
+        "audit": "outputs/data_review/review_20261017.md"
+      },
+      "original_values_checked": true,
+      "units_period_scope_checked": true,
+      "revision_compatibility_checked": true,
+      "usage_restriction": "仅独立2024发布版本横截面；与年鉴存在差异，禁止未桥接拼接历史校准。",
+      "evidence_files": [
+        {
+          "source_id": "S17",
+          "path": "data/raw/official/S17_page_capture.txt",
+          "sha256": "160fd1ffe6021dcc42484216a8fbea09ad9108bcea66f137dc41f0a3fdab3163",
+          "official_url": "https://www.nea.gov.cn/20250121/097bfd7c1cd3498897639857d86d5dac/c.html",
+          "capture_kind": "official_page_capture",
+          "locator": "全部26行可见文本，表格L14—L23，脚注L25，统计时点L10",
+          "captured_on": "2026-10-16",
+          "scope_and_units": "2024全国；容量年末万千瓦；线损%；6000千瓦及以上电厂利用小时；投资亿元",
+          "revision_note": "与S05年鉴既有转录不同，两个版本分开保存；不跨版本校准",
+          "extraction_method": "直接open官方页面的全文文本留存；人工逐行录入全年累计列并重开原页核对"
+        }
+      ],
+      "source_records_sha256": {
+        "S17": "5574a8a5400df2e4184bf631b567fbf325bf1264de6f34c532c0bfdee259038a"
+      },
+      "source_hash_migration": {
+        "on": "2026-10-17",
+        "prior_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+        "reason": "新增S26-S28前，原全目录审查已通过。将原引用记录固定为同值规范哈希；保留原目录审查时版本、审核日期、数据和证据哈希。不声称本轮重新外部取证。",
+        "audit": "outputs/data_review/review_assets_20261017.md"
+      }
+    },
+    {
+      "review_id": "R-S13-20261017",
+      "dataset_path": "data/observations/energy_official_communique_2024.json",
+      "dataset_sha256": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+      "source_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+      "status": "reviewed",
+      "reviewer": "Codex：直接打开国家统计局公报，分段读取正文及使用脚注，再次定位能源表行核对33值",
+      "registry_rechecks": [
+        {
+          "checked_on": "2026-10-17",
+          "previous_registry_sha256": "55fbb291fc0243b96f79bff059ae92b330f1ae1420905140a5cbf3e68a9b4ebf",
+          "reason": "新增S24/S25后重读已留存公报摘录的全部33值、单位及注1/2/21/25/26/87/88/89，与数据逐项核对且原有数据及证据哈希一致。本次原站重开超时，复核依据为此前直接原页留存，不声称新增外部验证；维持原用途。",
+          "audit": "outputs/data_review/review_electricity_inputs_20261017.md"
+        },
+        {
+          "checked_on": "2026-10-17",
+          "previous_registry_sha256": "2f979cb045e593c3e8e111422ba286c3eb41aea5e32ee4dc541c23aa02d290e6",
+          "reason": "仅追加S22和S23；S13来源、33值和证据哈希未变，重读正文、能源表行和相关注释后维持独立公报用途。",
+          "audit": "outputs/data_review/review_gas_20261017.md"
+        }
+      ],
+      "checked_on": "2026-10-17",
+      "original_values_checked": true,
+      "units_period_scope_checked": true,
+      "revision_compatibility_checked": true,
+      "usage_restriction": "仅独立2024公报横截面与口径分析；尚未完成洗选损耗及GDP历史修订桥接，不用于十年连续校准或全国预测。",
+      "evidence_files": [
+        {
+          "source_id": "S13",
+          "path": "data/raw/official/S13_selected_capture.txt",
+          "sha256": "fdcf2c563d51bdfe1135b2f2a3e88d87d2ada2c66acfaa6e075cf8fa15f88e98",
+          "official_url": "https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202502/t20250228_1958817.html",
+          "capture_kind": "official_page_capture",
+          "locator": "一L32、109；三L189及表4能源行L193—203；表12能源进口行L419—422；十二L611；注1、2、21、25、26、87、88、89",
+          "captured_on": "2026-10-17",
+          "scope_and_units": "2024全国不含港澳台初步数；GDP现价亿元、增长不变价；产量/进口保留吨与立方米单位；能耗亿吨标煤；发电亿千瓦时；碳配额亿吨及亿元",
+          "revision_note": "注25明确煤炭洗选固废调整及可比增速；注2明确GDP历史修订；各自独立公报版本，不桥接旧年鉴",
+          "extraction_method": "直接open官方页面，分段读取正文、表头和脚注；人工留存所用段落摘录，不声称保存全文HTML或图表图片"
+        }
+      ],
+      "source_records_sha256": {
+        "S13": "7c5d3ea2d6b8fa6d5051d11e738f7953add917deb36916679949d3665fbeb438"
+      },
+      "source_hash_migration": {
+        "on": "2026-10-17",
+        "prior_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+        "reason": "新增S26-S28前，原全目录审查已通过。将原引用记录固定为同值规范哈希；保留原目录审查时版本、审核日期、数据和证据哈希。不声称本轮重新外部取证。",
+        "audit": "outputs/data_review/review_assets_20261017.md"
+      }
+    },
+    {
+      "review_id": "R-S22-20261017",
+      "dataset_path": "data/observations/gas_official_report_2024.json",
+      "dataset_sha256": "20a0a46a2113440e2cf65d9395ff4c4377587cd83124e9f92c0f266af2fadc9b",
+      "source_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+      "registry_rechecks": [
+        {
+          "checked_on": "2026-10-17",
+          "previous_registry_sha256": "55fbb291fc0243b96f79bff059ae92b330f1ae1420905140a5cbf3e68a9b4ebf",
+          "reason": "直接重开官方PDF，重新视觉查看第3/6/10/11/12/13页，复核20值、编委会及中国数据来源脚注；原有数据及证据哈希一致，用途不变。",
+          "audit": "outputs/data_review/review_electricity_inputs_20261017.md"
+        }
+      ],
+      "status": "reviewed",
+      "reviewer": "Codex：直接打开官方PDF并对相关页面截图复核20值，核对官方发布页及编委会、指导单位和数据来源脚注",
+      "checked_on": "2026-10-17",
+      "original_values_checked": true,
+      "units_period_scope_checked": true,
+      "revision_compatibility_checked": true,
+      "usage_restriction": "官方发布行业报告的2024国内横截面、天然气用途/进口结构及核算接口；不采用国际商业数据及2025预测，不与快报表观消费相乘推部门绝对量，不用于未桥接历史校准。",
+      "evidence_files": [
+        {
+          "source_id": "S22",
+          "path": "data/raw/official/S22_selected_capture.txt",
+          "sha256": "afcf51682efef9290ff94f79fec05c647f1c22fe0181d434ea078b2ef8f85547",
+          "official_url": "https://www.nea.gov.cn/20250829/a4e2deb9b6444df1a191b9d60c111ffd/20250829a4e2deb9b6444df1a191b9d60c111ffd_43ab87a785d1b64d49b9210dbc15d3781e.pdf",
+          "capture_kind": "official_page_capture",
+          "locator": "PDF第3页编委会、第6页来源脚注、第10—13页国内天然气1—4项；对应印刷页5—8",
+          "captured_on": "2026-10-17",
+          "scope_and_units": "2024全国天然气；报告体积亿立方米、结构及增速%；进口体积直接取报告，不自行质量换算；新增储气为增量",
+          "revision_note": "报告消费增长7.3%与S23表观消费8%未桥接；气产量2465与S13的2464.5保留各自精度；标准温压不明，不完成供需平衡",
+          "extraction_method": "直接读取官方PDF页面文本并用所用6页截图视觉复核，留存页面摘录及发布页元数据；原PDF下载TLS失败，未取得本地二进制或本地截图"
+        }
+      ],
+      "source_records_sha256": {
+        "S22": "d74ca5748b5451eacd2e68dd45449c2709a39f002abe4ee97470a904081d8727"
+      },
+      "source_hash_migration": {
+        "on": "2026-10-17",
+        "prior_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+        "reason": "新增S26-S28前，原全目录审查已通过。将原引用记录固定为同值规范哈希；保留原目录审查时版本、审核日期、数据和证据哈希。不声称本轮重新外部取证。",
+        "audit": "outputs/data_review/review_assets_20261017.md"
+      }
+    },
+    {
+      "review_id": "R-S23-20261017",
+      "dataset_path": "data/observations/gas_apparent_consumption_2024.json",
+      "dataset_sha256": "a0a0febf71f955b657bad404d66700db7804a056c36a5b3c2f01b4eb4ef7019a",
+      "source_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+      "registry_rechecks": [
+        {
+          "checked_on": "2026-10-17",
+          "previous_registry_sha256": "55fbb291fc0243b96f79bff059ae92b330f1ae1420905140a5cbf3e68a9b4ebf",
+          "reason": "直接重开发改委快报，复核全年4260.5/8与单月378.4/0.5的区分；原有数据及证据哈希一致，用途不变。",
+          "audit": "outputs/data_review/review_electricity_inputs_20261017.md"
+        }
+      ],
+      "status": "reviewed",
+      "reviewer": "Codex：直接打开发改委快报，逐值复核全年句2值及单月/全年区分、来源与日期",
+      "checked_on": "2026-10-17",
+      "original_values_checked": true,
+      "units_period_scope_checked": true,
+      "revision_compatibility_checked": true,
+      "usage_restriction": "仅2024快报表观消费独立横截面和与报告消费的口径诊断；不替换消费总量或与S22部门份额混算，不用于未桥接历史校准。",
+      "evidence_files": [
+        {
+          "source_id": "S23",
+          "path": "data/raw/official/S23_page_capture.txt",
+          "sha256": "373780cebe97d7c4deb67c84023d9ef5ced18efb86541d5a4fd8bf9b175b2802",
+          "official_url": "https://www.ndrc.gov.cn/fggz/jjyxtj/202501/t20250123_1395858.html",
+          "capture_kind": "official_page_capture",
+          "locator": "官方正文L12的2024全年句；L2、4、6标题日期来源，L10单月句",
+          "captured_on": "2026-10-17",
+          "scope_and_units": "2024全年全国天然气表观消费4260.5亿立方米、同比8%，快报统计",
+          "revision_note": "非最终平衡表；与S22报告消费增速7.3%口径未桥接，保留二者，不自动归因于修订",
+          "extraction_method": "直接open官方网页，人工留存完整相关正文和元数据，非搜索摘要及原HTML"
+        }
+      ],
+      "source_records_sha256": {
+        "S23": "2d4bea98c7ddc34e7d8883191f5736c74a614452ce65eff913bedfa61be251a8"
+      },
+      "source_hash_migration": {
+        "on": "2026-10-17",
+        "prior_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+        "reason": "新增S26-S28前，原全目录审查已通过。将原引用记录固定为同值规范哈希；保留原目录审查时版本、审核日期、数据和证据哈希。不声称本轮重新外部取证。",
+        "audit": "outputs/data_review/review_assets_20261017.md"
+      }
+    },
+    {
+      "review_id": "R-S24-20261017",
+      "dataset_path": "data/observations/electricity_demand_official_2024.json",
+      "dataset_sha256": "145522816e8d23c8f96356875d3886186cf0f04ba2724f82b3f554f4c5a26f34",
+      "source_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+      "status": "reviewed",
+      "reviewer": "Codex：直接打开并重读完整统计正文，逐项核对11值、产业及居民分类与规模以上工业发电边界",
+      "checked_on": "2026-10-17",
+      "original_values_checked": true,
+      "units_period_scope_checked": true,
+      "revision_compatibility_checked": true,
+      "usage_restriction": "仅2024年度四类用电规模与结构锚点、同比参考；无历史行为校准或逐时负荷；规模以上工业发电量不能当作全国总发电量求供需缺口。",
+      "evidence_files": [
+        {
+          "source_id": "S24",
+          "path": "data/raw/official/S24_page_capture.txt",
+          "sha256": "e07931550e610bab31ea3d82934c22fa4e60637f477ad30783726a75a8c8fb9a",
+          "official_url": "https://www.nea.gov.cn/20250120/4f7f249bac714e7693adecac996d742f/c.html",
+          "capture_kind": "official_page_capture",
+          "locator": "正文L10完整统计段，标题L4、日期与来源L6、引言L8",
+          "captured_on": "2026-10-17",
+          "scope_and_units": "2024全国全年；总量及四类用电量、规模以上工业发电量单位亿千瓦时，同比%",
+          "revision_note": "总用电同比与S13相同、两需求分项与S25相同；不据一致字段认定全表范围一致",
+          "extraction_method": "直接open官方网页，完整相关统计正文及元数据文本留存，再次重开逐值核对；非原HTML、非截图、非搜索摘要"
+        }
+      ],
+      "source_records_sha256": {
+        "S24": "a4f06cbfe114774392da73f8202b6d8a922398374c076521950fac46131a0c9e"
+      },
+      "source_hash_migration": {
+        "on": "2026-10-17",
+        "prior_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+        "reason": "新增S26-S28前，原全目录审查已通过。将原引用记录固定为同值规范哈希；保留原目录审查时版本、审核日期、数据和证据哈希。不声称本轮重新外部取证。",
+        "audit": "outputs/data_review/review_assets_20261017.md"
+      }
+    },
+    {
+      "review_id": "R-S25-20261017",
+      "dataset_path": "data/observations/renewable_operation_official_2024.json",
+      "dataset_sha256": "f59303c667f0529820da3ecd3bb5386445eb5a248051325681641626aacfcb55",
+      "source_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+      "status": "reviewed",
+      "reviewer": "Codex：直接打开并重读全部统计正文，逐项核对15值、年末/全年、单位、太阳能/光伏分类和页面日期",
+      "checked_on": "2026-10-17",
+      "original_values_checked": true,
+      "units_period_scope_checked": true,
+      "revision_compatibility_checked": true,
+      "usage_restriction": "仅2024技术参考、利用率及版本范围诊断；抽蓄能量未知、生物质排放未知，禁止混版计算容量因子、完整全国初态或未经桥接的历史校准。",
+      "evidence_files": [
+        {
+          "source_id": "S25",
+          "path": "data/raw/official/S25_selected_capture.txt",
+          "sha256": "5092f8d6083287214961de9c402abc8c9a77aee318c9b22a78b55f078ecba679",
+          "official_url": "https://www.nea.gov.cn/20250221/e10f363cabe3458aaf78ba4558970054/c.html",
+          "capture_kind": "official_page_capture",
+          "locator": "总述L10/11；水电L13/15、风电L18/20、光伏L24/26、生物质L28；日期L6",
+          "captured_on": "2026-10-17",
+          "scope_and_units": "2024全国，容量年末亿千瓦/万千瓦；年度发电万亿千瓦时/亿千瓦时；利用率%",
+          "revision_note": "页面日期2025-01-27；太阳能8.87与光伏8.86分列；S13/S17不同值和范围各自保留，差异原因未确定",
+          "extraction_method": "直接open官方网页完整统计正文后逐值字段化留存并重读核对；非完整HTML或截图；不把利用率转成容量因子"
+        }
+      ],
+      "source_records_sha256": {
+        "S25": "6e91026f8a7ecce3ba53bca640a0634c837912e92c1be584c14551129bf9d298"
+      },
+      "source_hash_migration": {
+        "on": "2026-10-17",
+        "prior_registry_sha256": "2fb4d7f76c63e2cbde2a91eec27af2f330f9efd6993da7c65abe4c459175be30",
+        "reason": "新增S26-S28前，原全目录审查已通过。将原引用记录固定为同值规范哈希；保留原目录审查时版本、审核日期、数据和证据哈希。不声称本轮重新外部取证。",
+        "audit": "outputs/data_review/review_assets_20261017.md"
+      }
+    }
+  ]
+}

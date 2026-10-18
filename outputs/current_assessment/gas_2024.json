@@ -1,0 +1,81 @@
+{
+  "year": 2024,
+  "status": "partial_gas_profile_and_boundary_diagnostics",
+  "source_ids": [
+    "S22",
+    "S23"
+  ],
+  "gas_production_100m_m3": 2465,
+  "gas_imports_100m_m3": 1817,
+  "pipeline_imports_100m_m3": 760,
+  "lng_imports_100m_m3": 1057,
+  "pipeline_import_share_pct": 41.82718767198679,
+  "lng_import_share_pct": 58.172812328013215,
+  "import_split_residual_100m_m3": 0,
+  "five_main_origins_share_derived_pct": 81.28783709411117,
+  "five_main_origins_share_reported_pct": 81,
+  "lng_spot_share_derived_pct": 12.582781456953644,
+  "lng_spot_share_reported_pct": 12.6,
+  "sector_share_pct": {
+    "city_gas": 34,
+    "industrial_fuel": 41,
+    "power": 18,
+    "chemical_fertilizer": 7
+  },
+  "sector_share_sum_pct": 100,
+  "sector_absolute_volume_100m_m3": null,
+  "gas_apparent_consumption_100m_m3": 4260.5,
+  "gas_consumption_growth_report_pct": 7.3,
+  "gas_apparent_consumption_growth_quick_pct": 8.0,
+  "growth_scope_gap_percentage_points": 0.7000000000000002,
+  "cross_release_arithmetic_gap": {
+    "value_100m_m3": 21.5,
+    "formula": "S22产量 + S22进口 - S23表观消费",
+    "status": "arithmetic_diagnostic_only_not_a_closed_balance",
+    "meaning": "跨发布算术差；不能归为出口、库存、损耗或统计差，也不能作为调参目标"
+  },
+  "added_storage_capacity_100m_m3": 80,
+  "total_storage_capacity_100m_m3": null,
+  "storage_cover_days": null,
+  "country_hhi": null,
+  "net_import_dependency_pct": null,
+  "fuel_ledger": {
+    "year": 2024,
+    "carrier": "natural_gas",
+    "unit": "亿立方米",
+    "missing_terms": [
+      "exports",
+      "domestic_use_excluding_losses",
+      "net_stock_addition",
+      "losses",
+      "statistical_difference"
+    ],
+    "boundary_issues": [
+      "quantity_reference_state_missing",
+      "source_scope_not_bridged"
+    ],
+    "residual": null,
+    "closed": null,
+    "status": "incomplete"
+  },
+  "formulas": {
+    "route_share_pct": "同报告进口分项/同报告进口总量*100",
+    "five_named_origins_share_pct": "报告列示五主要来源合计/总进口*100；未证明完整国家排名",
+    "lng_spot_share_pct": "LNG现货进口/LNG进口*100"
+  },
+  "limitations": [
+    "报告消费和快报表观消费口径未桥接；部门份额不乘快报总量。",
+    "城市燃气不是纯居民用气，化工化肥不是纯原料用气。",
+    "发电用气属于转换投入，不与终端电力消费重复相加。",
+    "进口体积采用官方报告已公布体积，不自行由质量换算；标准温压仍未明确。",
+    "只给五来源合计，不计算缺各国份额的HHI。",
+    "新增储气能力不是总能力或库存，不计算覆盖天数。",
+    "缺出口、库存、损耗、统计差和同边界国内用量，不给正式燃料平衡或依赖率。",
+    "官方发布编委会报告采用部分行业统计，来源身份及用途限制单独登记。"
+  ],
+  "input_sha256": {
+    "data/observations/gas_official_report_2024.json": "20a0a46a2113440e2cf65d9395ff4c4377587cd83124e9f92c0f266af2fadc9b",
+    "data/observations/gas_apparent_consumption_2024.json": "a0a0febf71f955b657bad404d66700db7804a056c36a5b3c2f01b4eb4ef7019a"
+  },
+  "source_registry_sha256": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f"
+}

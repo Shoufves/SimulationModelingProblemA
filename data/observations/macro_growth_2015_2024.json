@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "source_id": "S06",
+  "locator": "表9-8，2015—2024行",
+  "region": "中国，全国",
+  "status": "official_table_manual_transcription_pending_independent_crosscheck",
+  "unit": "%",
+  "scope": "同版年鉴的实际GDP与能源、电力消费同比增长率；不是现价GDP增速",
+  "columns": ["year", "real_gdp_growth_pct", "energy_consumption_growth_pct", "electricity_consumption_growth_pct"],
+  "rows": [
+    [2015, 7.0, 1.3, 0.3],
+    [2016, 6.8, 1.7, 5.5],
+    [2017, 6.9, 3.2, 7.7],
+    [2018, 6.8, 3.5, 8.5],
+    [2019, 6.1, 2.9, 4.7],
+    [2020, 2.3, 2.3, 3.7],
+    [2021, 8.6, 5.7, 9.8],
+    [2022, 3.1, 3.1, 3.7],
+    [2023, 5.4, 5.6, 6.8],
+    [2024, 5.0, 4.3, 6.8]
+  ],
+  "notes": [
+    "GDP实际指数由增长率逐年链接至2015=100；2015本身的增速不参与以2015为基期的链接。",
+    "增长率只保留一位小数，链接指数为近似派生量，不是官方不变价GDP绝对量。",
+    "同比增长率可能按可比口径计算，不应强制与跨年绝对量相除所得增速完全一致。"
+  ]
+}

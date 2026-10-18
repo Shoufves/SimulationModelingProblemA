@@ -1,0 +1,681 @@
+{
+  "checked_at": "2026-10-17T20:36:57+08:00",
+  "scope": "Existing output independent arithmetic and file consistency; not a fresh official-original verification or ABM validation",
+  "result_path": "outputs/calibration/demand_94d020b761970170/result.json",
+  "result_sha256": "b70574e9941f2d3d2a2deea04e125b54c8b340435d1a2bbcb3e1eb5e32fcb225",
+  "run_id": "94d020b761970170",
+  "passed": true,
+  "checks": [
+    {
+      "name": "provenance:data/evidence_reviews.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:data/observations/demand_energy_total_2015_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:data/observations/demand_real_gdp_growth_2015_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:data/raw/official/S01_demand_excerpt_20261017.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:data/raw/official/S06_gdp_excerpt_20261017.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:data/sources.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:scripts/build_foundation.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:scripts/run_demand_hindcast.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:scripts/workflow_status.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:src/energy_model/baselines.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:workflow/demand_hindcast.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:workflow/model_inputs.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provenance:workflow/official_data_policy.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "run_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_unit:2015",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gdp_chain:2015",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_unit:2016",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gdp_chain:2016",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_unit:2017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gdp_chain:2017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_unit:2018",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gdp_chain:2018",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_unit:2019",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gdp_chain:2019",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_unit:2020",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gdp_chain:2020",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_unit:2021",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gdp_chain:2021",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_unit:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gdp_chain:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_unit:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gdp_chain:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "energy_unit:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gdp_chain:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "candidate_subset_equality:data/observations/energy_consumption_2015_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "candidate_subset_equality:data/observations/macro_growth_2015_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "frozen_intensity:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "holdout_observation:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "frozen_intensity:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "holdout_observation:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "frozen_intensity:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "holdout_observation:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:constant_intensity:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:constant_intensity:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:constant_intensity:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:constant_intensity:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:constant_intensity:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:constant_intensity:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:constant_intensity:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:constant_intensity:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:constant_intensity:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:constant_intensity:mape_pct",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:constant_intensity:rmse_mtce",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:constant_intensity:mean_signed_error_mtce",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:energy_time_trend:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:energy_time_trend:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:energy_time_trend:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:energy_time_trend:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:energy_time_trend:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:energy_time_trend:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:energy_time_trend:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:energy_time_trend:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:energy_time_trend:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:energy_time_trend:mape_pct",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:energy_time_trend:rmse_mtce",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:energy_time_trend:mean_signed_error_mtce",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:gdp_elasticity:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:gdp_elasticity:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:gdp_elasticity:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:gdp_elasticity:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:gdp_elasticity:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:gdp_elasticity:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:gdp_elasticity:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:gdp_elasticity:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:gdp_elasticity:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:gdp_elasticity:mape_pct",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:gdp_elasticity:rmse_mtce",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:gdp_elasticity:mean_signed_error_mtce",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:intensity_time_trend:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:intensity_time_trend:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:intensity_time_trend:2022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:intensity_time_trend:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:intensity_time_trend:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:intensity_time_trend:2023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_error:intensity_time_trend:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absolute_error:intensity_time_trend:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "percentage_error:intensity_time_trend:2024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:intensity_time_trend:mape_pct",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:intensity_time_trend:rmse_mtce",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric:intensity_time_trend:mean_signed_error_mtce",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provided_original:2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provided_original:附件1.xlsx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provided_original:附件2.xlsx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provided_original:附件3.xlsx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "provided_original:附件4.xlsx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:anchors_2025.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:coal_balance_2015_2023.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:energy_consumption_2015_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:energy_official_communique_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:fuel_production_2023_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:gas_apparent_consumption_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:gas_official_report_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:macro_growth_2015_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:petroleum_balance_selected_years.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:power_capacity_2015_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:power_generation_2015_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "previous_inventory:power_official_release_2024.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_dataset:R-S01-DEMAND-20261017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_evidence:data/raw/official/S01_demand_excerpt_20261017.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_dataset:R-S06-GDP-20261017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_evidence:data/raw/official/S06_gdp_excerpt_20261017.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_dataset:R-S17-20261016",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_evidence:data/raw/official/S17_page_capture.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_dataset:R-S13-20261017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_evidence:data/raw/official/S13_selected_capture.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_dataset:R-S22-20261017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_evidence:data/raw/official/S22_selected_capture.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_dataset:R-S23-20261017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_evidence:data/raw/official/S23_page_capture.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_dataset:R-S24-20261017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_evidence:data/raw/official/S24_page_capture.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_dataset:R-S25-20261017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_evidence:data/raw/official/S25_selected_capture.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage_counts",
+      "passed": true,
+      "detail": {
+        "done": 1,
+        "in_progress": 5,
+        "pending": 4
+      }
+    },
+    {
+      "name": "requirement_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "observation_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "measurement_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "formal_dataset_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_measurement_count",
+      "passed": true,
+      "detail": 111
+    }
+  ],
+  "independent_frozen_intensity_rows": [
+    {
+      "year": 2022,
+      "actual_energy_mtce": 5412.74,
+      "frozen_intensity_mtce": 5413.02837
+    },
+    {
+      "year": 2023,
+      "actual_energy_mtce": 5713.27,
+      "frozen_intensity_mtce": 5705.33190198
+    },
+    {
+      "year": 2024,
+      "actual_energy_mtce": 5960.0,
+      "frozen_intensity_mtce": 5990.5984970790005
+    }
+  ],
+  "limitations": [
+    "Online official images were read in the documented prior review; this script checks local consistency only.",
+    "Original image binaries and screenshots remain unarchived.",
+    "Existing candidate inventory is compared with its previous recorded hashes; no independent statistical samples are added."
+  ]
+}

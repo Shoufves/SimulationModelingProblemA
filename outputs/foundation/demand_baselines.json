@@ -1,0 +1,120 @@
+{
+  "evaluation": "Conditional hindcast using observed holdout GDP; not a GDP forecast",
+  "rows": [
+    {
+      "year": 2022,
+      "actual_energy_mtce": 5412.74,
+      "predictions_mtce": {
+        "constant_intensity": 5413.02837,
+        "energy_time_trend": 5415.68899003731,
+        "gdp_elasticity": 5335.097560761839,
+        "intensity_time_trend": 5265.520631400843
+      }
+    },
+    {
+      "year": 2023,
+      "actual_energy_mtce": 5713.27,
+      "predictions_mtce": {
+        "constant_intensity": 5705.33190198,
+        "energy_time_trend": 5586.319796279304,
+        "gdp_elasticity": 5484.456078907497,
+        "intensity_time_trend": 5398.622310522301
+      }
+    },
+    {
+      "year": 2024,
+      "actual_energy_mtce": 5960.0,
+      "predictions_mtce": {
+        "constant_intensity": 5990.598497079,
+        "energy_time_trend": 5762.326626161567,
+        "gdp_elasticity": 5626.752730795234,
+        "intensity_time_trend": 5514.082501484444
+      }
+    }
+  ],
+  "metrics": {
+    "constant_intensity": {
+      "mape_pct": 0.2192222100468565,
+      "rmse_mtce": 18.25161710575786,
+      "mean_signed_error_mtce": 7.649589686333154
+    },
+    "energy_time_trend": {
+      "mape_pct": 1.8643910882047572,
+      "rmse_mtce": 135.64637050266074,
+      "mean_signed_error_mtce": -107.22486250727313
+    },
+    "gdp_elasticity": {
+      "mape_pct": 3.676930456750732,
+      "rmse_mtce": 237.65374061787995,
+      "mean_signed_error_mtce": -213.23454317847668
+    },
+    "intensity_time_trend": {
+      "mape_pct": 5.236339481602972,
+      "rmse_mtce": 326.35314536391417,
+      "mean_signed_error_mtce": -302.59485219747086
+    }
+  },
+  "fitted": {
+    "train_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "anchor_year": 2021,
+    "anchor_energy_mtce": 5250.27,
+    "anchor_real_gdp_index": 143.72789115960347,
+    "energy_log_trend": 0.031020605817092445,
+    "gdp_elasticity": 0.5249945959566769,
+    "intensity_log_trend": -0.027628682833990417,
+    "method": "Fit slopes on training only; anchor all paths at final training observation"
+  },
+  "holdout_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "independent_check_years": [
+    2025
+  ],
+  "independent_check": {
+    "evaluation": "Conditional hindcast using observed holdout GDP; not a GDP forecast",
+    "rows": [
+      {
+        "year": 2025,
+        "actual_energy_mtce": 6170.0,
+        "predictions_mtce": {
+          "constant_intensity": 6290.128421932949,
+          "energy_time_trend": 5943.87886076374,
+          "gdp_elasticity": 5772.741332595075,
+          "intensity_time_trend": 5632.012036462566
+        }
+      }
+    ],
+    "metrics": {
+      "constant_intensity": {
+        "mape_pct": 1.9469760442941506,
+        "rmse_mtce": 120.1284219329491,
+        "mean_signed_error_mtce": 120.1284219329491
+      },
+      "energy_time_trend": {
+        "mape_pct": 3.6648482858389015,
+        "rmse_mtce": 226.1211392362602,
+        "mean_signed_error_mtce": -226.1211392362602
+      },
+      "gdp_elasticity": {
+        "mape_pct": 6.438552145946925,
+        "rmse_mtce": 397.2586674049253,
+        "mean_signed_error_mtce": -397.2586674049253
+      },
+      "intensity_time_trend": {
+        "mape_pct": 8.71941594063912,
+        "rmse_mtce": 537.9879635374336,
+        "mean_signed_error_mtce": -537.9879635374336
+      }
+    }
+  }
+}

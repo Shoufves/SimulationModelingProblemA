@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "checked_on": "2026-10-16",
+  "note": "逐字段核查记录；官方资料只支持注明的项目、日期及字段。未审核全部项目或当前运行状态。原始附件不改写。",
+  "reviews": [
+    {
+      "record_id": "ATT2-PUMP-R0008",
+      "expected_name": "荒沟抽水蓄能电站",
+      "source_id": "S18",
+      "evidence_path": "data/raw/official/S18_page_capture.txt",
+      "locator": "公开事项名称及正文L7",
+      "original_province": "辽宁省",
+      "verified_province": "黑龙江省",
+      "capacity_reference": {
+        "value_mw": 1200,
+        "reference_date": "2012-08-28",
+        "status": "approved_project_capacity",
+        "note": "2012年核准4×30万千瓦；不能据此断言2024/2025在运容量"
+      },
+      "coordinate_action": "quarantine",
+      "reason": "官方项目名称和核准文件确认黑龙江；原省份辽宁冲突，原坐标不得用于区域定位。",
+      "evidence_sha256": "1b03f5460faa2530b06a2d7c6ec72071d3e4678f2dc439d8fb669b67fe9fe16c"
+    },
+    {
+      "record_id": "ATT2-PUMP-R0028",
+      "expected_name": "张河湾抽水蓄能电站",
+      "source_id": "S20",
+      "evidence_path": "data/raw/official/S20_page_capture.txt",
+      "locator": "一（四）关于推动储能建设",
+      "original_province": "山西省",
+      "verified_province": "河北省",
+      "coordinate_action": "retain_unverified",
+      "reason": "能源局正式提案答复明确河北丰宁、张河湾；仅修正省份，不推断坐标或精确投运年份。",
+      "evidence_sha256": "576bd86c7803de6e561e024fb3ac54ff4c9e3b21985188726e3ffb9d14d83937"
+    },
+    {
+      "record_id": "ATT2-PUMP-R0029",
+      "expected_name": "潘家口抽水蓄能电站",
+      "source_id": "S19",
+      "evidence_path": "data/raw/official/S19_page_capture.txt",
+      "locator": "正文第三项，河北潘家口抽水蓄能下库",
+      "original_province": "山西省",
+      "verified_province": "河北省",
+      "coordinate_action": "quarantine",
+      "reason": "能源局大坝注册复函明确河北；原省份冲突，原坐标暂隔离。",
+      "evidence_sha256": "4579d88bf2079aa594e95d06df4908b68b18442ebb91d333b6b49ad68273bdb6"
+    },
+    {
+      "record_id": "ATT2-HYDRO-R0172",
+      "expected_name": "三峡水利枢纽",
+      "source_id": "S21",
+      "evidence_path": "data/raw/official/S21_page_capture.txt",
+      "locator": "正文L6，机组构成及总装机",
+      "capacity_reference": {
+        "value_mw": 22500,
+        "reference_date": "2012-11-05",
+        "status": "completed_project_capacity",
+        "note": "26×70+6×70+2×5=2250万千瓦；与附件22500一致，只核实此项目容量量级和单位解释"
+      },
+      "coordinate_action": "retain_unverified",
+      "reason": "能源局建成公告支持三峡22500MW的项目级容量解释，不将该单位证据推广到整张水电表。",
+      "evidence_sha256": "1deb516df2c1d3ef53fb99ebfd80cbbbbea4e2fe8c32863d765f72cb8b95f091"
+    }
+  ]
+}

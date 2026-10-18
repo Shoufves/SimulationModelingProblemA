@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "source_id": "S23",
+  "year": 2024,
+  "region": "中国，全国",
+  "status": "reviewed_official_quick_release_single_year",
+  "scope": "发改委运行局2025-01-23快报的2024全年表观消费，非终端消费或能源平衡最终数",
+  "observations": [
+    {"indicator_id": "gas_apparent_consumption", "value": 4260.5, "unit": "亿立方米", "locator": "官方正文L12，全年句", "scope": "全年表观消费量，快报统计；不含定义桥接"},
+    {"indicator_id": "gas_apparent_consumption_growth_pct", "value": 8.0, "unit": "%", "locator": "官方正文L12，全年句", "scope": "表观消费同比，不替换S13/S22消费同比7.3%"}
+  ],
+  "notes": [
+    "页面单月378.4及同比0.5%不作为本全年子集观测。",
+    "仅快报独立横截面及边界比较；出口、库存、损耗、标准体积和历史修订桥接均未给。",
+    "不得与S22部门份额相乘生成声称官方公布的部门绝对量。"
+  ]
+}

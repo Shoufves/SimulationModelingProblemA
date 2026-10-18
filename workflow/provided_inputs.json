@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "inputs": [
+    {
+      "path": "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+      "sha256": "A892165C851DA77C916D6F2DD7A9CF7062C1E37698A88641B3A3105BEF90C963",
+      "role": "题目和验收依据",
+      "restriction": "正式赛事补充规范仍需获取"
+    },
+    {
+      "path": "附件1.xlsx",
+      "sha256": "4CD3F519F72D18869D33713FC9DD2EC7A3BA83D5178EE6D4170D37ADF45EA1CD",
+      "role": "火电资产清单及案例",
+      "restriction": "单位、年份、燃料和状态需核实；同名不直接合并；不是全国完整总体"
+    },
+    {
+      "path": "附件2.xlsx",
+      "sha256": "7A35204BE5DB7E8CBFDDF77A8A36604FAFA87DABBF80C69C752B8B8F0D97A330",
+      "role": "常规水电与抽蓄资产及协同案例",
+      "restriction": "常规水电与抽蓄分开，功率与能量容量分开，储存不能重复计为一次能源"
+    },
+    {
+      "path": "附件3.xlsx",
+      "sha256": "DF616D471BD31FE865AD9D509EA3FC1FA68D8BD172AF7C10BB15FFBA7A74987E",
+      "role": "风电项目案例及地域信息",
+      "restriction": "16条具名记录不能外推全国"
+    },
+    {
+      "path": "附件4.xlsx",
+      "sha256": "A7945CE8D6C279ECB695C3E56B7D331C1D3F098A282B59A8D1826A69B8736EAF",
+      "role": "核电资产惯性及地域案例",
+      "restriction": "17条具名记录；工作表空白行不是项目；投运/规划及机组范围需核实"
+    }
+  ]
+}

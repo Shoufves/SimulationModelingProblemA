@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "source_id": "S24",
+  "year": 2024,
+  "region": "中国，全国",
+  "status": "reviewed_official_page_capture_single_release",
+  "scope": "国家能源局2025-01-20发布的2024全年用电量及产业分类；规模以上工业发电量单列",
+  "observations": [
+    {"indicator_id": "electricity_consumption_total", "value": 98521, "unit": "亿千瓦时", "locator": "官方正文L10，2024全社会句", "scope": "全社会全年用电量，不是终端有用能服务"},
+    {"indicator_id": "electricity_consumption_growth_pct", "value": 6.8, "unit": "%", "locator": "L10，2024全社会句", "scope": "全社会用电同比"},
+    {"indicator_id": "generation_industrial_above_designated_size", "value": 94181, "unit": "亿千瓦时", "locator": "L10，规模以上工业句", "scope": "规模以上工业发电量；不是全国全口径或第二产业用电量"},
+    {"indicator_id": "primary_industry_consumption", "value": 1357, "unit": "亿千瓦时", "locator": "L10，第一产业句", "scope": "第一产业全年用电量"},
+    {"indicator_id": "primary_industry_growth_pct", "value": 6.3, "unit": "%", "locator": "L10，第一产业句", "scope": "第一产业用电同比"},
+    {"indicator_id": "secondary_industry_consumption", "value": 63874, "unit": "亿千瓦时", "locator": "L10，第二产业句", "scope": "第二产业全年用电；不等于纯制造业"},
+    {"indicator_id": "secondary_industry_growth_pct", "value": 5.1, "unit": "%", "locator": "L10，第二产业句", "scope": "第二产业用电同比"},
+    {"indicator_id": "tertiary_industry_consumption", "value": 18348, "unit": "亿千瓦时", "locator": "L10，第三产业句", "scope": "第三产业全年用电"},
+    {"indicator_id": "tertiary_industry_growth_pct", "value": 9.9, "unit": "%", "locator": "L10，第三产业句", "scope": "第三产业用电同比"},
+    {"indicator_id": "household_consumption", "value": 14942, "unit": "亿千瓦时", "locator": "L10，城乡居民句", "scope": "城乡居民生活全年用电；不是全部建筑用电"},
+    {"indicator_id": "household_growth_pct", "value": 10.6, "unit": "%", "locator": "L10，城乡居民句", "scope": "城乡居民生活用电同比"}
+  ],
+  "notes": [
+    "11值逐项重读官方正文；四个用电分类合计等于公布总量，未据此扩展统计边界。",
+    "同比与S13一致，两个需求分项与S25一致；不能据一致项推断发电版本相同。",
+    "只准入2024需求规模和分类参考；无小时曲线、需求弹性或设备替代，不代表全国模型初始化完成。",
+    "规模以上工业发电量保留原分类，不能拿它与全社会用电量求差后宣称缺供。"
+  ]
+}

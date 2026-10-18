@@ -1,0 +1,1883 @@
+{
+  "audited_at": "2026-10-18T00:21:21+08:00",
+  "source_files": 62,
+  "registered_sources": 69,
+  "failed_retrieval_ids": [
+    "IRENA_COST_2024_INDEX",
+    "CEADS_PUBLIC_SITE_JS",
+    "EI_DOWNLOAD_INDEX",
+    "NBS_ENERGY_API_TREE",
+    "EI_2025_ARCHIVE",
+    "WB_PINK_SHEET_2025",
+    "WB_PINK_SHEET_2021"
+  ],
+  "processed_tables": 27,
+  "national_common_window": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "candidate_national_baseline": 2024,
+  "detailed_balance_checkpoint": 2023,
+  "latest_partial_crosscheck": 2025,
+  "support_records": 12,
+  "decided_gaps": 16,
+  "checks": [
+    {
+      "check": "unique_source_ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "unique_source_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_YEARBOOK_2025_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_YEARBOOK_2025_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_YEARBOOK_2025_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_YEARBOOK_2025_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_COMMUNIQUE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_COMMUNIQUE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_COMMUNIQUE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_COMMUNIQUE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NEA_ELECTRICITY_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NEA_ELECTRICITY_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NEA_ELECTRICITY_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NEA_ELECTRICITY_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_CEADS_NATIONAL_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_CEADS_NATIONAL_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_CEADS_NATIONAL_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_CEADS_NATIONAL_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_OWID_ENERGY_CHINA_ARCHIVE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_OWID_ENERGY_CHINA_ARCHIVE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_OWID_ENERGY_CHINA_ARCHIVE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_OWID_ENERGY_CHINA_ARCHIVE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_OWID_ENERGY_CODEBOOK",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_OWID_ENERGY_CODEBOOK",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_OWID_ENERGY_CODEBOOK",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_OWID_ENERGY_CODEBOOK",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_YEARBOOK_2025_CONTENTS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_YEARBOOK_2025_CONTENTS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_YEARBOOK_2025_CONTENTS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_YEARBOOK_2025_CONTENTS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NEA_ELECTRICITY_2025_TABLE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NEA_ELECTRICITY_2025_TABLE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NEA_ELECTRICITY_2025_TABLE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NEA_ELECTRICITY_2025_TABLE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NEA_RENEWABLE_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NEA_RENEWABLE_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NEA_RENEWABLE_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NEA_RENEWABLE_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NEA_RENEWABLE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NEA_RENEWABLE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NEA_RENEWABLE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NEA_RENEWABLE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_WDI_CHINA_MACRO",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_WDI_CHINA_MACRO",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_WDI_CHINA_MACRO",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_WDI_CHINA_MACRO",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_GCB_2025_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_GCB_2025_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_GCB_2025_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_GCB_2025_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_ZENODO_PROVINCE_LOAD_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_ZENODO_PROVINCE_LOAD_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_ZENODO_PROVINCE_LOAD_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_ZENODO_PROVINCE_LOAD_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NEA_PROVINCE_RENEWABLE_2024_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NEA_PROVINCE_RENEWABLE_2024_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NEA_PROVINCE_RENEWABLE_2024_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NEA_PROVINCE_RENEWABLE_2024_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_MEE_ELECTRICITY_CO2_2023",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_MEE_ELECTRICITY_CO2_2023",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_MEE_ELECTRICITY_CO2_2023",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_MEE_ELECTRICITY_CO2_2023",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_MEE_ELECTRICITY_CO2_2023",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_IRENA_COST_2024_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_IRENA_COST_2024_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failed_retrieval_explained_IRENA_COST_2024_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_IPCC_ENERGY_STATIONARY",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_IPCC_ENERGY_STATIONARY",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_IPCC_ENERGY_STATIONARY",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_IPCC_ENERGY_STATIONARY",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_IPCC_ENERGY_STATIONARY",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_POLICY_CARBON_2021",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_POLICY_CARBON_2021",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_POLICY_CARBON_2021",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_POLICY_CARBON_2021",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_POLICY_CARBON_2026",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_POLICY_CARBON_2026",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_POLICY_CARBON_2026",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_POLICY_CARBON_2026",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_POLICY_NDC_2035",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_POLICY_NDC_2035",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_POLICY_NDC_2035",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_POLICY_NDC_2035",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_C09-19",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_C09-19",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_C09-19",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_C09-19",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_2025_zb09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_2025_zb09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_2025_zb09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_2025_zb09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_NBS_2025_zb09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_ZENODO_LOAD_FILE_1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_ZENODO_LOAD_FILE_1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_ZENODO_LOAD_FILE_1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_ZENODO_LOAD_FILE_1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_ZENODO_LOAD_FILE_2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_ZENODO_LOAD_FILE_2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_ZENODO_LOAD_FILE_2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_ZENODO_LOAD_FILE_2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_ZENODO_LOAD_FILE_2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_ZENODO_LOAD_FILE_4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_ZENODO_LOAD_FILE_4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_ZENODO_LOAD_FILE_4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_ZENODO_LOAD_FILE_4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_ZENODO_LOAD_FILE_4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_ZENODO_LOAD_FILE_5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_ZENODO_LOAD_FILE_5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_ZENODO_LOAD_FILE_5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_ZENODO_LOAD_FILE_5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_ZENODO_LOAD_FILE_5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_GCB_NATIONAL_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_GCB_NATIONAL_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_GCB_NATIONAL_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_GCB_NATIONAL_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_ZENODO_HYDRO_WIND_SOLAR_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_ZENODO_HYDRO_WIND_SOLAR_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_ZENODO_HYDRO_WIND_SOLAR_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_ZENODO_HYDRO_WIND_SOLAR_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_IRENA_COST_2024_PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_IRENA_COST_2024_PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_IRENA_COST_2024_PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_IRENA_COST_2024_PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_IRENA_COST_2024_PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NEA_STORAGE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NEA_STORAGE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NEA_STORAGE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NEA_STORAGE_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_CEADS_PUBLIC_SITE_JS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_CEADS_PUBLIC_SITE_JS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failed_retrieval_explained_CEADS_PUBLIC_SITE_JS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_WB_PINK_SHEET_ANNUAL",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_WB_PINK_SHEET_ANNUAL",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_WB_PINK_SHEET_ANNUAL",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_WB_PINK_SHEET_ANNUAL",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_WB_PINK_SHEET_ANNUAL",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_CEA_ANNUAL_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_CEA_ANNUAL_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_CEA_ANNUAL_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_CEA_ANNUAL_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_CEA_ANNUAL_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_CEA_ANNUAL_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_CEA_ANNUAL_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_CEA_ANNUAL_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NEA_NATURAL_GAS_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NEA_NATURAL_GAS_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NEA_NATURAL_GAS_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NEA_NATURAL_GAS_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_NEA_NATURAL_GAS_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NEA_HYDROGEN_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NEA_HYDROGEN_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NEA_HYDROGEN_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NEA_HYDROGEN_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_NEA_HYDROGEN_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_PROJECT_BAIHETAN",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_PROJECT_BAIHETAN",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_PROJECT_BAIHETAN",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_PROJECT_BAIHETAN",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_WDI_GDP_DEFINITION",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_WDI_GDP_DEFINITION",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_WDI_GDP_DEFINITION",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_WDI_GDP_DEFINITION",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_GCB_GCB2025v15_MtCO2_flat_metadata",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_GCB_GCB2025v15_MtCO2_flat_metadata",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_GCB_GCB2025v15_MtCO2_flat_metadata",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_GCB_GCB2025v15_MtCO2_flat_metadata",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_GCB_GCB2025v15_sources_flat",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_GCB_GCB2025v15_sources_flat",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_GCB_GCB2025v15_sources_flat",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_GCB_GCB2025v15_sources_flat",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_GCB_GCB2025v15_MtCO2_flat",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_GCB_GCB2025v15_MtCO2_flat",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_GCB_GCB2025v15_MtCO2_flat",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_GCB_GCB2025v15_MtCO2_flat",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_GCB_GCP_fossilCO2_2025v15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_GCB_GCP_fossilCO2_2025v15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_GCB_GCP_fossilCO2_2025v15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_GCB_GCP_fossilCO2_2025v15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_GCB_GCP_fossilCO2_2025v15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NEA_PROVINCE_RENEWABLE_2024_DOC",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NEA_PROVINCE_RENEWABLE_2024_DOC",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NEA_PROVINCE_RENEWABLE_2024_DOC",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NEA_PROVINCE_RENEWABLE_2024_DOC",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_WRI_POWER_PLANTS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_WRI_POWER_PLANTS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_WRI_POWER_PLANTS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_WRI_POWER_PLANTS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_WRI_POWER_PLANTS_DEFINITIONS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_WRI_POWER_PLANTS_DEFINITIONS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_WRI_POWER_PLANTS_DEFINITIONS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_WRI_POWER_PLANTS_DEFINITIONS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_HYDRO_DAILY_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_HYDRO_DAILY_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_HYDRO_DAILY_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_HYDRO_DAILY_METADATA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NEA_FUQING_PROJECT",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NEA_FUQING_PROJECT",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NEA_FUQING_PROJECT",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NEA_FUQING_PROJECT",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_MEE_FUQING_ASSETS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_MEE_FUQING_ASSETS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_MEE_FUQING_ASSETS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_MEE_FUQING_ASSETS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_ENERGY_TRADE_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_ENERGY_TRADE_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NBS_ENERGY_TRADE_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NBS_ENERGY_TRADE_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NDRC_GAS_APPARENT_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NDRC_GAS_APPARENT_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NDRC_GAS_APPARENT_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NDRC_GAS_APPARENT_2024",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NEA_MARKET_ELECTRICITY_2022",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NEA_MARKET_ELECTRICITY_2022",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_NEA_MARKET_ELECTRICITY_2022",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_NEA_MARKET_ELECTRICITY_2022",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_EI_DOWNLOAD_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_EI_DOWNLOAD_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failed_retrieval_explained_EI_DOWNLOAD_INDEX",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_WB_PINK_SHEET_STABLE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_WB_PINK_SHEET_STABLE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_WB_PINK_SHEET_STABLE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_WB_PINK_SHEET_STABLE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_signature_WB_PINK_SHEET_STABLE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_HYDRO_RESERVOIR_ATTRIBUTES",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_HYDRO_RESERVOIR_ATTRIBUTES",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw_digest_and_size_HYDRO_RESERVOIR_ATTRIBUTES",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "retrieval_timestamp_HYDRO_RESERVOIR_ATTRIBUTES",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_NBS_ENERGY_API_TREE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_NBS_ENERGY_API_TREE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failed_retrieval_explained_NBS_ENERGY_API_TREE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_EI_2025_ARCHIVE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_EI_2025_ARCHIVE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failed_retrieval_explained_EI_2025_ARCHIVE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_WB_PINK_SHEET_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_WB_PINK_SHEET_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failed_retrieval_explained_WB_PINK_SHEET_2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contained_WB_PINK_SHEET_2021",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "manifest_WB_PINK_SHEET_2021",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "failed_retrieval_explained_WB_PINK_SHEET_2021",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all_yx_raw_files_registered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all_processed_files_registered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_nbs_energy_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_nbs_energy_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_nbs_capacity_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_nbs_capacity_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_nbs_products_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_nbs_products_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_nbs_sector_use_2023.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_nbs_sector_use_2023.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_nbs_balance_checkpoints.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_nbs_balance_checkpoints.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_nbs_province_demand.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_nbs_province_demand.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_nea_electricity_2025.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_nea_electricity_2025.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_china_energy_research_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_china_energy_research_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_china_macro_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_china_macro_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_china_co2_gcb_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_china_co2_gcb_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_nbs_latest_2025.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_nbs_latest_2025.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_nbs_conversion_efficiency.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_nbs_conversion_efficiency.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_nea_renewables_2024_2025.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_nea_renewables_2024_2025.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_commodity_price_references.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_commodity_price_references.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_commodity_price_version_comparison.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_commodity_price_version_comparison.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_cea_market_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_cea_market_annual.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_province_column_mapping.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_province_column_mapping.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_province_load_2018_MWh.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_province_load_2018_MWh.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_province_load_2018_summary.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_province_load_2018_summary.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_transmission_lines_candidate.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_transmission_lines_candidate.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_china_power_plants_wri_snapshot.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_china_power_plants_wri_snapshot.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_reservoir_attributes_candidate.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_reservoir_attributes_candidate.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_project_timing_examples.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_project_timing_examples.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_technology_accounting_parameters.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_technology_accounting_parameters.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_fuel_storage_hydrogen_snapshots.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_fuel_storage_hydrogen_snapshots.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_electricity_co2_factors_2023.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_electricity_co2_factors_2023.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_shape_policy_target_reference.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "processed_source_scope_policy_target_reference.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "candidate_prices_quarantined",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "candidate_transmission_quarantined",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hourly_shape_and_unique_time",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "national_common_window",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "twelve_support_records",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sixteen_decided_gaps",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "preparation_error_count_zero",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "catalog_counts_match",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "purpose_scripts_are_centralized",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "master_document_round_and_scope",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "error_count": 0,
+  "unresolved_quality_warnings": [
+    {
+      "check": "fx_2025_cross_source_agreement",
+      "passed": false,
+      "severity": "warning",
+      "detail": "WDI=7.18984737402171; NBS=7.1429 CNY/USD. Keep versions separate; no price conversion pending definition/version check."
+    }
+  ],
+  "sha256": {
+    "raw/batch1_national/nbs_yearbook_2025_index.html": "58ddf282fad933b7db093d10eb7c8baf1e6165772cf2553cc4362dfa23f3b377",
+    "raw/batch1_national/nbs_communique_2025.html": "f506d4632a3275247c28bcd311a876cf1c03e0663c4898da75dff7210a3df3e5",
+    "raw/batch1_national/nea_electricity_2025.html": "59cf855315b4150bde55dadb4586732985e9521def3c3c2182f8ad15c22f5eea",
+    "raw/batch1_national/ceads_national_index.html": "45448e63bedcca8f916d8e1cb52e9dc48d26e411441f5f9744ebe52942224920",
+    "raw/batch1_national/owid_energy_data.csv": "266f2e2baad7975351bc9bb4aa061d22b1da9fe4c47d51d2ac6071e01e171f76",
+    "raw/batch1_national/owid_energy_codebook.csv": "3cc9b7db0d921496e2988568ce3aee5ed41f50431dd234a0663b5f0a4b2e32bb",
+    "raw/batch1_national/nbs_yearbook_2025_contents.html": "235dfc3fbea4fd4041ffdc9b648510618d92728491fde078f5a308bcafb97cd0",
+    "raw/batch1_national/nea_electricity_2025_table.png": "a1dc2ff09094a09e988ba1696ed753f2aaf52bf1e04fc934f98997f1d7b9646e",
+    "raw/batch1_national/nea_renewable_2024.html": "13fabe3f96b292ab2aab7ab2332541d8839fe21e1f144b2f56184f65fbe552cd",
+    "raw/batch1_national/nea_renewable_2025.html": "14eaf89261b0b02e6543c7406e1e8d5106ebad819921f7aea9204e8f8a30c6a6",
+    "raw/batch1_national/wdi_china_macro_2005_2025.json": "8ee1bc173ee4bda7975a045b791c8b3f6af3ee8d0f9995ce52d23f896d0a3200",
+    "raw/batch1_national/gcb_2025_index.html": "e7102ffbfe997f6b67068dcea16e6e8ae0f610400a3ecf5445026152038da533",
+    "raw/batch2_mechanisms/zenodo_province_load_metadata.json": "869c6f3f9e1457bf952916aadb8355279932dd4af1609832bbba0febeb22e457",
+    "raw/batch2_mechanisms/nea_province_renewable_2024_index.html": "02f691c0fbc533d7d4947690bcf9ecc5c873c3ccda2fba95cb9f72cc8f3ec448",
+    "raw/batch2_mechanisms/mee_electricity_co2_factors_2023.pdf": "d43b60a3eaad9f3fe59ca37c204d3d0e1b6ea52742a092f0d856971a3f018e5a",
+    "raw/batch3_scenarios/ipcc_2006_stationary_combustion.pdf": "a25d9f96d7672df391b328de79d4cfd812c07fe79d5cf4a30d23d82d8f02985b",
+    "raw/batch3_scenarios/policy_carbon_2021.html": "e55cb582d619200931087b3b957beb20f795d5ce38caa79ee4f724fa3027bde6",
+    "raw/batch3_scenarios/policy_carbon_2026.html": "4255be5af1310a854134f52b7ac03ceca142f08b675c6fcefb2a9570653ff83f",
+    "raw/batch3_scenarios/policy_ndc_2035.html": "efa3d8e156b22b7c81cf96d53d46f2250ee147a13635904a3907e27ef7bac3de",
+    "raw/batch1_national/nbs_2025_C09-01.jpg": "cc7d20189a1782dd3e6327e173a0871ab0ffdcc2304e8a521e9a885cdf5b4ae3",
+    "raw/batch1_national/nbs_2025_C09-02.jpg": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+    "raw/batch1_national/nbs_2025_C09-03.jpg": "7b64dcf6845ab84955be19ed60cc68c00764f75ba623f4e623c18deb3018022d",
+    "raw/batch1_national/nbs_2025_C09-04.jpg": "04879f1944b4f45aaddcd17c6f8e4f9d7d576f9ab85f04ba1049dcbd73f7b6b5",
+    "raw/batch1_national/nbs_2025_C09-05.jpg": "2d29ed89b2cbe42a1adefe75ad63621b42617184b0f094d19def390694dbe988",
+    "raw/batch1_national/nbs_2025_C09-06.jpg": "8d415663790fc15d22add695af264dab44f847009367891b7613b629e94d02b3",
+    "raw/batch1_national/nbs_2025_C09-09.jpg": "d04b212523a31b7252345d5c0b27bd259d71501fe27c3449e37d48b816de90bf",
+    "raw/batch1_national/nbs_2025_C09-10.jpg": "6b0e1d48b112381ef4bea1dff07373c9eae8e406d2361cc35d5d75d0efbe659f",
+    "raw/batch2_mechanisms/nbs_2025_C09-14.jpg": "792f54dc21b686356d6e4ea6d49277155a2fef3799b9b1622094548599e488d9",
+    "raw/batch1_national/nbs_2025_C09-15.jpg": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+    "raw/batch1_national/nbs_2025_C09-17.jpg": "71386813ab665998cd3c34dd23314cde0b624156ce318987b9601b8ffaf000c6",
+    "raw/batch2_mechanisms/nbs_2025_C09-19.jpg": "7b1d1c5d526905e4611c80f9fd97b637de3b62385218733aa20b55599b0f4d75",
+    "raw/batch1_national/nbs_2025_zb09.pdf": "6a23052db55621053eb977e2f16631b6b665129ce6e03d7ed63ff98b132ebb89",
+    "raw/batch2_mechanisms/zenodo_Appendix_1_Hourly_electric_power_load_final.csv": "d8f5c26f3d8b4f639c64ecebf732ff360a303780252a8f498956833c9b4d6059",
+    "raw/batch2_mechanisms/zenodo_Hourly_electric_power_load_and_transmission_data_at_the_provincial_level_in_China.pdf": "7835090053fbcfec8f63729e46e5f32dc2e46d3b1cc151896422029a5ae56db9",
+    "raw/batch2_mechanisms/zenodo_Appendix_3_Transmission_lines_between_provinces.xlsx": "14a775bca2f252c793cc1cfe7f67e57512af50527d4d6a1cdb4a7b0a5838d519",
+    "raw/batch2_mechanisms/zenodo_Appendix_4_Details_of_transmission_lines.pdf": "839d8ecf74bd35ed92a0ceb7f76be2a0871784f187f92f15e48170e07717ce46",
+    "raw/batch1_national/gcb_national_metadata.json": "1d302dfbf1c07da8c4af72ba634249319db4795b91b27874df5156837293525f",
+    "raw/batch2_mechanisms/zenodo_hydro_wind_solar_metadata.json": "14961b61e63768d5f332db1bca611efb75b8b557215a2dbc1e4cd7cf71019981",
+    "raw/batch3_scenarios/irena_power_costs_2024.pdf": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+    "raw/batch2_mechanisms/nea_storage_2025.html": "739bb225cb040415095b6d3e1de0c81f75ec32541e0613c823d849d190c44453",
+    "raw/batch1_national/wb_commodity_prices_annual.xlsx": "d07bcb67ac39ceba4ef46a36e9d252f89d52c590ce6c05b23acb023d845e3a8b",
+    "raw/batch1_national/cea_annual_2024.html": "dd6c20574dc60a45ee7d779c0ab0ef549c2ab8a799062a1187505acb28f4d334",
+    "raw/batch1_national/cea_annual_2025.html": "3f404020f45f673d1a65468641a92492c884e265e33b8b4fa6c89e61c4620b5a",
+    "raw/batch2_mechanisms/nea_natural_gas_2025.pdf": "6e46cb5edb3bec945c45871750b7c35b267341fbce37745200414993106fea5d",
+    "raw/batch3_scenarios/nea_hydrogen_2025.pdf": "0c88c1a6255f778277d008cb641cee9c71fab1936786a010e692d536142eb6ed",
+    "raw/batch2_mechanisms/project_baihetan.html": "d77c9e696c4072343ef6c33edd4249d454aec05f38d0b74117d35e2bbb68802b",
+    "raw/batch1_national/wdi_gdp_definition.json": "70eaa4a629f8784882e750473324d826b8bdf201b2f625848721290454de256a",
+    "raw/batch1_national/GCB2025v15_MtCO2_flat_metadata.json": "b41c76163ac6258fee7203c417a0def6b2e7300dc59943de654b913e824f3cd4",
+    "raw/batch1_national/GCB2025v15_sources_flat.csv": "763e4d05be15f2403f3a11a83edb12974e16e5d7b588c8027e44e44d05812b13",
+    "raw/batch1_national/GCB2025v15_MtCO2_flat.csv": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+    "raw/batch1_national/GCP_fossilCO2_2025v15.pdf": "3476f67ddb0dd46208b61c791312d53ea10174ac52f9ed40a42ae2a5036783f3",
+    "raw/batch2_mechanisms/nea_province_renewable_2024.doc": "b2c460a50a2bcd379b1a8c18b0b4c992fffff047dc8c5bb775aa7845ccd62449",
+    "raw/batch2_mechanisms/wri_global_power_plant_database.csv": "4b1f93e0fd93664f18684d9b05d0a52ed9658c6a8cf0d21ff2520791379ba7fc",
+    "raw/batch2_mechanisms/wri_power_plant_definitions.txt": "9d2661ad16d7abde0e2cf64aa78034824e6249357c977109eb84bf16cc65f1b9",
+    "raw/batch2_mechanisms/hydro_daily_metadata.json": "cb5987912e5615a33c12ea9820cfb56bbd20231c8e7a49821c80bb8597c9c290",
+    "raw/batch2_mechanisms/project_fuqing_5.html": "7e929eb306eb41df03ccde3a51a323bad066f70ff4ecf3af9e57f568ac9158fa",
+    "raw/batch2_mechanisms/fuqing_asset_dates_lifetimes.html": "f5eb2e599883d646a05a4788ae277a0acfae2306c1ef2aabd2dd3b366f519194",
+    "raw/batch1_national/nbs_energy_trade_2024.html": "f8161614a48edfeb7645c6b29dcf1fb83acf5164613a9855fd4343932beae508",
+    "raw/batch1_national/ndrc_gas_apparent_2024.html": "a55466c36ff019534d5e36615377bb3779f344c516242dc17a20d04b7d026330",
+    "raw/batch2_mechanisms/nea_market_electricity_2022.html": "7f568a2c7cbf3b2871c7b17cbfebc6576d5e97e5405b2a21cd0ac1e69ce6c096",
+    "raw/batch1_national/wb_commodity_prices_stable.xlsx": "f25870f3ce992bf6caa6b7159ae3722c9411ab66108cef47aea2e4451a21961a",
+    "raw/batch2_mechanisms/hydro_reservoir_attributes.csv": "dae5126eb859ffcb83a3fa4c5a8a63a82906f2e515137b86d7fe3e1c9ff0ef1f",
+    "processed/nbs_energy_annual.csv": "ed48b8ad76a2198f323f0cd25e0f58da8686eee805701a5fb281935f3a5c8187",
+    "processed/nbs_capacity_annual.csv": "e9f6a3c631bbf1e582054feb2f9a310fcec4b110f49338f0c19f865d801edbef",
+    "processed/nbs_products_annual.csv": "6fb964607aa68d86f9297a039aeb472c7860324ec21e67da11dbcd7bd8f92642",
+    "processed/nbs_sector_use_2023.csv": "2ac1f2fc7dd3f77ed25c46956c0f29be744a3b24d9737fe49c15ec565dfefc9b",
+    "processed/nbs_balance_checkpoints.csv": "8121d87c60acf5f8c457245f7d1d512f69b4c652dea717a5f823aae3192a3193",
+    "processed/nbs_province_demand.csv": "2ed23bee6511030b5b3b8b60c8aa63e1ea65e7bbd967c5958bc6307f7a228e91",
+    "processed/nea_electricity_2025.csv": "eef4ff15fe0b77c37e5dabfabfff5939b72427477877c50cf636f983b278d707",
+    "processed/china_energy_research_annual.csv": "ab1c42a9df72db6bcf7f7a73a849ac2e60eb14895517c661c0d0a4b203f8f4c5",
+    "processed/china_macro_annual.csv": "5b033c6e8593031ff5c223dda4f2e7de42a2d9b77030bed85018f82c5969b1d8",
+    "processed/china_co2_gcb_annual.csv": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
+    "processed/nbs_latest_2025.csv": "d69acf4421c12d47ecd969090c3a9f9bcd510fbc4716dd1b3fce90838f4de2ef",
+    "processed/nbs_conversion_efficiency.csv": "7a43657dd0e0731f428ece5c4a5b9960b6017c0dc50c953bb9fb7056f03fb290",
+    "processed/nea_renewables_2024_2025.csv": "6726f62a9d125862768b9f7e0b6dedffa170def5497e9b8247e1a35eac076db6",
+    "processed/commodity_price_references.csv": "c123f4ffffd9ccea2320ef951fc05d166696f6196aea1cb3ac31ec4e9586aa2d",
+    "processed/commodity_price_version_comparison.csv": "dced003ad74050637b27033f8e728a219fc3d2b4234088ea0dc33fe8c380b12d",
+    "processed/cea_market_annual.csv": "fbc8ce418c2457ae124123d3614fe2c2b58f34054c12833e489aab07fbf275fd",
+    "processed/province_column_mapping.csv": "6efda94609097d95088fbf6ae5a26fcec582fef133fdfe064c998ae7bfa9a492",
+    "processed/province_load_2018_MWh.csv": "b87064393836906c5dde37551561216b57a7e4788d73aeb4881a9c607a49b558",
+    "processed/province_load_2018_summary.csv": "b0647c53f7875a9673ed7a24a3f9080dd5047193541a5b250cc32ce57de85a0e",
+    "processed/transmission_lines_candidate.csv": "ef36bdb18a2161303183edc34eacdabcf6a608a897f2505939e8c1a529881100",
+    "processed/china_power_plants_wri_snapshot.csv": "f36db4424663cf0b312ebb32d4f8219f4a7b4b816e3da279b758a78106b359c2",
+    "processed/reservoir_attributes_candidate.csv": "1fab7896ede43926071bc0528dddfe0577dd43cee13db0ad58a678194c9a5c5f",
+    "processed/project_timing_examples.csv": "e84a9c321a84b510179f349d49c582bc6f9e265a41e2960d7d03179b55c0d4a7",
+    "processed/technology_accounting_parameters.csv": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
+    "processed/fuel_storage_hydrogen_snapshots.csv": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
+    "processed/electricity_co2_factors_2023.csv": "69689c85d2036b05f491941d46c7f62662784c2e26f541d278399a574644f670",
+    "processed/policy_target_reference.csv": "c29fba83db1cd477f279a10cc58338f923b51a4e711a48cb9b93bdae20ee39f9",
+    "docs\\design\\A题内容分析与数据准备清单.md": "134e76d0b9317c9bbbe0a2571ec7eb08c9c12246fdb6d5a214c2c2fcb529c275"
+  },
+  "acceptance_scope": "First-round data preparation; does not assert model readiness, independent validation, or complete data.",
+  "model_not_executed": true
+}

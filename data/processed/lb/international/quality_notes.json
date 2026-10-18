@@ -1,0 +1,40 @@
+{
+  "route_rows": 636,
+  "china_route_rows": 36,
+  "security_rows": 279,
+  "malacca_4Q25_cross_table_review": [
+    {
+      "table": 2,
+      "caption": "Table 2. Volume of crude oil and petroleum liquids transported through world chokepoints and the Cape of Good Hope, 1Q25–2Q26",
+      "series": "Strait of Malacca",
+      "period": "4Q25",
+      "value": 24.9,
+      "raw_value": "24.9",
+      "unit": "million barrels per day",
+      "source_id": "EIA_SECURITY_AUG2026",
+      "source_row": 3,
+      "data_type": "EIA_estimate",
+      "note": "Third-party estimates, not China official inventories; dash retained as missing."
+    },
+    {
+      "table": 3,
+      "caption": "Table 3. Volume of crude oil, condensate, petroleum products, and liquefied natural gas transported through the Strait of Malacca, 1Q25–2Q26",
+      "series": "Total oil flows through the Strait of Malacca",
+      "period": "4Q25",
+      "value": 24.0,
+      "raw_value": "24.0",
+      "unit": "million barrels per day",
+      "source_id": "EIA_SECURITY_AUG2026",
+      "source_row": 3,
+      "data_type": "EIA_estimate",
+      "note": "Third-party estimates, not China official inventories; dash retained as missing."
+    }
+  ],
+  "warnings": [
+    "Same cargo may cross Hormuz and Malacca; avoid double-counting.",
+    "Origin and destination marginal tables are not a bilateral origin-destination matrix.",
+    "EIA China destination definition needs cross-check with China mainland customs.",
+    "EIA strategic inventory estimates do not establish officially usable reserve volumes.",
+    "STEO workbook is raw reference: forecasts, estimates and placeholder zeros require field-level verification."
+  ]
+}
