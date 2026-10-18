@@ -1,6 +1,6 @@
 # 运行与复现
 
-当前 Q1 采用 lb 主线与 mmj 增量整合，详见[整合说明](solutions/p1-yx-integration.md)。`python -B -X utf8 run.py q1` 默认写入 `outputs/q1/p1_yx/`，保留 lb 原候选产物。完整交付核验仍运行 `python -B -X utf8 scripts/review_q1_delivery.py`，本次证据写入 `outputs/q1_review/lb_mmj_integration/`；其中两次 Q1 分别写入 `p1_yx`、`yx_reproduction`。显式重建 `scripts/prepare_q1_review.py` 会重新核对 mmj 已用 IRENA 原文再重建六条成本参数，并拒绝未经重新审查的 lb 原输入变化。
+当前 Q1 已通过整合 PR #6 合入 main，详见[轮次日志](ROUND_LOG.md)及[整合说明](solutions/p1-yx-integration.md)。`python -B -X utf8 run.py q1` 默认写入 `outputs/q1/p1_yx/`，保留 lb 原候选产物。完整交付核验仍运行 `python -B -X utf8 scripts/review_q1_delivery.py`，本次证据写入 `outputs/q1_review/lb_mmj_integration/`；其中两次 Q1 分别写入 `p1_yx`、`yx_reproduction`。显式重建 `scripts/prepare_q1_review.py` 会重新核对 mmj 已用 IRENA 原文再重建六条成本参数，并拒绝未经重新审查的 lb 原输入变化。
 
 在A题目录执行。Python 3.11及以上；本轮使用本机捆绑Python 3.12.14。核心模型和测试主要使用标准库；附件需要openpyxl，yx/lb离线提取需要pandas/numpy/lxml/pypdf/pdfplumber。
 
@@ -41,7 +41,7 @@ Python3.11及以上；初次安装`python -m pip install -r requirements-q1.txt`
 
 本工程按原字节检查输入与代码，克隆时使用`git clone --config core.autocrlf=false <仓库地址>`，已有目录按协作规程§6.4关闭本地自动换行转换。遇到指纹不符时检查签出与文件变动，不重新生成指纹来绕过。`scripts/review_q1_delivery.py`允许共同base之后的提交及独立评审的detached HEAD，不要求当前HEAD仍等于起跑线。
 
-`docs/solutions/p1-yx-integration.md`为当前入口，记录两份已通过本地技术复审的候选采用关系；本次完整整合PR须由mmj、lb对同一最终提交正式评审。原lb报告与产物作为历史交付保留。
+`docs/solutions/p1-yx-integration.md`记录两份候选采用关系与提交前历史；当前合并状态和评审授权见`docs/ROUND_LOG.md`。原lb报告与产物作为历史交付保留。P2任务见`docs/rounds/P2_Q2.md`；其中`run.py q2`是待新增接口，当前命令清单不支持，不能把准备文档示例当作可执行结果。
 
 ## 可选界面
 

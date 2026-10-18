@@ -1,0 +1,204 @@
+{
+  "recorded_at": "2026-10-18T22:41:39.157118+08:00",
+  "scope": "Q1 closeout: prior actual execution evidence; no new science run implied by this receipt",
+  "issue": 1,
+  "integration_pr": 6,
+  "common_base": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+  "final_reviewed_head": "da8a98383eff5a4767ceea20d913d4e5d4c9c487",
+  "squash_merge": "804ec15ee43874303986a7ad91b2cde05c65b124",
+  "merged_at": "2026-10-18T22:23:48+08:00",
+  "adoption": {
+    "lb_pr": 5,
+    "lb_head": "353cca7c63b64454210163645b10f9c97b9f21b8",
+    "mmj_pr": 4,
+    "mmj_head": "baf197574357b573eecfd13d6dedda18573a2b8a",
+    "rule": "lb main Q1 implementation plus selected mmj cost and evidence-use improvements"
+  },
+  "authorization": {
+    "actor": "Shoufves",
+    "instruction": "我们三个人都同意可以合并了，帮我把这版合并一下到main好吗？",
+    "formal_reviews_at_merge": [],
+    "exception": "Explicit user-confirmed team agreement for PR6 only; no impersonated approvals; future two-member review remains required"
+  },
+  "final_head_actual_validation": {
+    "started_at": "2026-10-18T21:11:49.228005+08:00",
+    "finished_at": "2026-10-18T21:12:06.432459+08:00",
+    "tests": {
+      "tests": 182,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "seconds": 2.079261700011557,
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "audit_checks": 14,
+    "delivery_checks": 31,
+    "integration_checks": 23,
+    "original_formal_subsets": 9
+  },
+  "merged_main_actual_validation": {
+    "passed": true,
+    "head": "804ec15ee43874303986a7ad91b2cde05c65b124",
+    "started_at": "2026-10-18T22:25:59.446690+08:00",
+    "commands": [
+      {
+        "args": [
+          "run.py",
+          "test"
+        ],
+        "returncode": 0
+      },
+      {
+        "args": [
+          "run.py",
+          "audit"
+        ],
+        "returncode": 0
+      },
+      {
+        "args": [
+          "scripts/scan_google_keys.py"
+        ],
+        "returncode": 0
+      },
+      {
+        "args": [
+          "run.py",
+          "q1",
+          "--output-dir",
+          "outputs/q1/main_merge_verify_804ec15"
+        ],
+        "returncode": 0
+      }
+    ],
+    "tests": {
+      "tests": 182,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "seconds": 1.870581700000912,
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "audit_checks": 14,
+    "original_formal_subsets": 9,
+    "counts": {
+      "history": 2176,
+      "indicators": 212,
+      "regions": 31
+    },
+    "compared": [
+      {
+        "file": "cost_sensitivity.svg",
+        "matches_committed_science": true,
+        "sha256": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6"
+      },
+      {
+        "file": "coverage.csv",
+        "matches_committed_science": true,
+        "sha256": "39afebba91a3a4335b09cce4ffb282bf9fa5241c84fd6a3de656ff837917796a"
+      },
+      {
+        "file": "demand_trends.svg",
+        "matches_committed_science": true,
+        "sha256": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406"
+      },
+      {
+        "file": "energy_assessment.csv",
+        "matches_committed_science": true,
+        "sha256": "c0d33c6daabeb73699d1a3a18762b3047d5d668fa4a52688489150daab6e27dd"
+      },
+      {
+        "file": "energy_roles.csv",
+        "matches_committed_science": true,
+        "sha256": "7dfebae87f6f211afdb3bf9bb07d4a371feae05a196bd3370e6e2fa26c8fc9ba"
+      },
+      {
+        "file": "gaps_and_conflicts.csv",
+        "matches_committed_science": true,
+        "sha256": "46e4da700806daed8dfaecca0265adb22a431367dd304a9430f8f4f028feecf3"
+      },
+      {
+        "file": "history.csv",
+        "matches_committed_science": true,
+        "sha256": "9f142b8a22f6703adf3e56cba40a200c1c4523c386f0fa41d73e0d7be824b59c"
+      },
+      {
+        "file": "import_origins.csv",
+        "matches_committed_science": true,
+        "sha256": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469"
+      },
+      {
+        "file": "indicators.csv",
+        "matches_committed_science": true,
+        "sha256": "e5f28dbc98632bc7bf81835843ed103dea4f0ec250731c66ebf7ca7b82165564"
+      },
+      {
+        "file": "model_handoff.csv",
+        "matches_committed_science": true,
+        "sha256": "763e59930721e8b1b665a0e7648c8fa1975516edcb2803844f91a3250d488541"
+      },
+      {
+        "file": "price_trends.svg",
+        "matches_committed_science": true,
+        "sha256": "5fb4a559ebd17aa763b3ef11eccbe730bdb628323492bf43f4bee5d63a0a7408"
+      },
+      {
+        "file": "regional_comparison.csv",
+        "matches_committed_science": true,
+        "sha256": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51"
+      },
+      {
+        "file": "regional_shares.svg",
+        "matches_committed_science": true,
+        "sha256": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396"
+      },
+      {
+        "file": "renewable_regions.csv",
+        "matches_committed_science": true,
+        "sha256": "467362307a9a9a14563380200bc0d2310fdcc54a3d43ae77310a95dd13f669c8"
+      },
+      {
+        "file": "report.md",
+        "matches_committed_science": true,
+        "sha256": "76391387299f31573ab85330e5c69ac961c8084c3c52f14c8e1ef466098a44ce"
+      },
+      {
+        "file": "static_balance.json",
+        "matches_committed_science": true,
+        "sha256": "30a66292a4b577478c0f84f68dae004646dbbbc428a5ace8c95f3e2779ce7624"
+      },
+      {
+        "file": "synergy_assessment.csv",
+        "matches_committed_science": true,
+        "sha256": "9acb3c05e82900862fe84cd6ef8388edc1e1738034a6caaca3227d9afdd433b7"
+      },
+      {
+        "file": "technology_region_capacities.csv",
+        "matches_committed_science": true,
+        "sha256": "3469a8fdbb7c12ef98c19bb8eae1c27e30e54fd5c9d19f60ef629431d7f429a4"
+      }
+    ],
+    "finished_at": "2026-10-18T22:26:09.249559+08:00"
+  },
+  "delivery_counts": {
+    "history": 2176,
+    "indicators": 212,
+    "provinces": 31,
+    "energy_assessments": 36,
+    "synergies": 8,
+    "candidate_handoff": 471
+  },
+  "deferred_nonblocking": {
+    "priority": "P3",
+    "item": "Provincial share denominator lineage",
+    "finding": "Values correct; row references omit other provinces in the existing 31-province denominator",
+    "followup": "Preserve denominator definition; add full lineage and cross-province perturbation verification"
+  },
+  "protected_boundaries": [
+    "Q1 descriptive acceptance does not admit national Q2 initialization/calibration inputs",
+    "National annual/operations coupling, historical calibration and 2030/2060 prediction remain unimplemented",
+    "Candidate branches and historical evidence retained"
+  ]
+}
