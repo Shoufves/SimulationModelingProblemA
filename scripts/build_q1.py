@@ -5,7 +5,11 @@ import argparse, csv, hashlib, importlib.metadata, json, math, os, platform, shu
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'src'))
-from energy_model.q1 import finite, ratio, compound_index, spatial_difference, annual_log_volatility, concentration
+from energy_model.q1 import finite, ratio, compound_index, spatial_difference, segmented_price_volatility, concentration
+
+CODE_PATHS=['run.py','scripts/build_q1.py','src/energy_model/q1.py','scripts/prepare_q1_review.py',
+            'scripts/plot_q1.py','scripts/q1_additional_analysis.py','scripts/extract_q1_additions.py',
+            'scripts/extract_q1_revision.py','scripts/review_q1_delivery.py','requirements-q1.txt']
 
 
 def sha(path):
@@ -81,6 +85,9 @@ def load_history(config):
                        boundary=r.get('boundary',spec['review']),
                        observation_role='separate_release_or_compilation' if group in ('official2024','research','irena_capacity') else 'selected_source_record',
                        independence='Do not count same-upstream releases/compilations as independent validation')
+            for field in ('publication_year','precision_role','definition_segment','annual_definition_status',
+                          'definition_switch','definition_locator','definition_note'):
+                entry[field]=r.get(field,'')
             r=dict(r,_id=rid,_source=sk,_value=value,year=year)
             data[group].append(r);history.append(entry)
     return data,history
@@ -122,6 +129,11 @@ def calculate(data):
             formula=formula,input_refs=';'.join(r['_id'] for r in refs),effective_years=str(year),status=status,boundary=boundary))
         return value
     def get(group,var,year,unit=None,**kw): return one(data,group,var,year,unit,**kw)
+    for r in data['reviewed2024']:
+        if r['precision_role']=='crosscheck_only':continue
+        ident=r['variable']+('_'+r['region'] if r['region']!='China' else '')
+        add(ident,'低碳' if 'nonfossil' in ident else '协调',r['year'],r['_value'],r['unit'],
+            'published scoped value; source unit conversion only',[r],status=r['status'],boundary=r['boundary'])
     growth={r['year']:r['_value'] for r in select(data,'national','real_gdp_growth_pct',family='gdp_growth')}
     gdp=compound_index(growth)
     ebase=get('national','consumption_10ktce',2015,'10^4 tce')
@@ -248,13 +260,16 @@ def calculate(data):
     for var in sorted({r['variable'] for r in data['prices']}):
         rs=select(data,'prices',var); window=[r for r in rs if 2015<=r['year']<=2024]
         if len({r['year'] for r in window})!=len(window) or len({r['unit'] for r in window})!=1: raise ValueError('Price series mismatch')
-        v=annual_log_volatility({r['year']:r['_value'] for r in window})
-        add('price_log_volatility_'+var,'经济','2015–2024',v['value'],'log-return SD','sample_SD(log(P_t/P_t-1)); adjacent observed annual pairs only',window,
-            'lower_variability',status='partial_window' if v['missing_years'] else 'calculated',boundary=json.dumps(v,ensure_ascii=False))
-        indicators[-1]['effective_years']=';'.join(map(str,v['observed_years']))
-        if v['missing_years']:
-            gaps.append(dict(item=var,years='2015–2024',status='partial_window',reason='正式月报欧洲气价2024年度单元格与同表季度值不相容，排除；缺年 '+','.join(map(str,v['missing_years'])),
-                             impact=f"使用{v['n_returns']}个相邻年度变化；2024另列NEA TTF截面，不拼接",action='保留异常原件及版本核查记录'))
+        for v in segmented_price_volatility(window):
+            segment=v['definition_segment'];refs=[r for r in window if r['definition_segment']==segment]
+            add('price_log_volatility_'+var+'__'+segment,'经济','2015–2024',v['value'],'log-return SD',
+                'sample_SD(log(P_t/P_t-1)); adjacent homogeneous annual pairs within one definition segment',refs,
+                'lower_variability',status='insufficient_returns' if v['value'] is None else 'within_definition_segment',boundary=json.dumps(v,ensure_ascii=False))
+            indicators[-1]['effective_years']=';'.join(map(str,v['observed_years']))
+        if var in ('Coal, Australian','Natural gas, Europe'):
+            gaps.append(dict(item=var,years='2015–2024',status='definition_break',
+                reason=('2015混合边境/现货与TTF定义；2024年度2.00与季度不相容而排除' if var=='Natural gas, Europe' else '2022年2月现货改期货，2022混合年度；2023–2024仅1个年度变化不足估计样本SD'),
+                impact='保留观测，分段报告有效年度对；不报告全十年同口径波动',action='后续仅凭有明确统一回溯定义的原件扩展可比窗口'))
     return indicators,balances,regions,origins,gaps
 
 
@@ -282,7 +297,7 @@ ROLES=[
  ('光伏','新增低碳电量来源','项目电量成本低与持续服务能力是不同问题','national;renewables;costs','日内出力、储能、接网','太阳能与光伏口径分开；完整同服务储能配套成本缺失'),
  ('生物质','燃料型可再生电热来源','受原料收集和可持续供给上限约束','renewables;irena_capacity;research','原料预算、转换效率、碳账','不默认燃烧排放为零；OWID生物质与其他可再生不可相加'),
  ('氢能','二次载能体和工业原料','总产量中煤/气路线占比高，电解不等于绿氢','snapshots','制氢—储运—用氢链','制氢产能不等于产量；缺效率和绿电额外性，不重复计入一次能源'),
- ('储能','跨时段转移电能','功率、能量、时长和库存连续性均需约束','renewables;snapshots','连续SOC、充放功率、建设队列','2025新型储能更新不回填2024；抽蓄不与新储能无据叠加能量'),
+ ('储能','跨时段转移电能','2024新储能73.76GW/168.2GWh，公布时长2.3h；名牌规模不等于运行能力','renewables;snapshots;reviewed2024','连续SOC、充放功率、建设队列','同源正文168GWh仅精度核对；2025更新不回填2024；SOC、效率与可用率仍缺'),
  ('输送','连接发电地区与负荷地区','31省份额差异提示跨区协调需求','province;region_generation','跨区流量、容量、损耗','候选线路未准入；发用差额不是实测潮流或最大输电能力'),
  ('CCUS','难替代燃烧/过程的减排配套候选','需同时计捕集率、能耗、运输和永久封存','carbon','捕集净减排与资源消耗','本轮无可用全国同年量化初态；不得无限免费捕集或将捕集量当永久净移除')]
 
@@ -290,7 +305,8 @@ ROLES=[
 def handoff(history,indicators):
     role_rows=[]; hands=[]
     for name,role,weak,groups,target,limit in ROLES:
-        refs=[r['record_id'] for r in history if r['dataset'] in groups.split(';') and r['year']==2024]
+        refs=[r['record_id'] for r in history if r['dataset'] in groups.split(';') and r['year']==2024
+              and r.get('precision_role')!='crosscheck_only' and (r['dataset']!='reviewed2024' or r['energy']==name)]
         role_rows.append(dict(energy=name,role=role,diagnosis=weak,evidence_datasets=groups,evidence_refs=';'.join(refs),model_location=target,limitation=limit))
         hands.append(dict(record_kind='energy_interface',energy=name,model_location=target,year=2024,candidate_refs=';'.join(refs),
             candidate_status='scoped_descriptive_candidate' if name!='CCUS' else 'blocked_no_capture_input',
@@ -298,7 +314,8 @@ def handoff(history,indicators):
             constraint_or_gap=limit,formal_initialization='blocked pending same-year assets, stocks, efficiencies and use-specific admission'))
     for r in history:
         primary=(r['dataset']=='national' and 'gdp_growth_table_3_4' not in r['qualifier'] and 2015<=r['year']<=2024)
-        snapshot=(r['dataset'] in ('products','renewables','snapshots','regional_resources') and r['year']==2024)
+        snapshot=(r['dataset'] in ('products','renewables','snapshots','regional_resources','reviewed2024') and r['year']==2024
+                  and r.get('precision_role')!='crosscheck_only')
         carbon=(r['dataset']=='carbon' and r['variable']=='Total' and 2015<=r['year']<=2024)
         if not (primary or snapshot or carbon):continue
         hands.append(dict(record_kind='numeric_observation_candidate',energy=r['energy'],model_location='state_or_calibration_target',year=r['year'],
@@ -317,7 +334,7 @@ def render_report(out,data,history,inds,balances,regions,origins,gaps,assessment
     def ind(key,year=2024):return next(r['value'] for r in inds if r['indicator_id']==key and r['year']==year)
     def val(group,var,year):return one(data,group,var,year)['_value']
     text=['# 问题一：我国多能源发展现状评估（p1/lb）','',
-          '研究日期：2026-10-18。共同起点：`7a65d068d19eea2f7dd8161a618a3ad8d66f98b8`。本报告已完成问题一三个子问题的本地研究交付，细项缺口及逐项判断见[最终核对](../../../docs/solutions/p1-lb-final-acceptance.md)。未完成三人评审或合并，不代表所有数据字段无缺失。',
+          '研究日期：2026-10-18。共同起点：`7a65d068d19eea2f7dd8161a618a3ad8d66f98b8`。本报告是问题一三个子问题的修订候选，按独立评审修正C1/C2/L2/L3，等待独立复审与新增用途共同确认；此前完成判断已撤回。见[评审修订记录](../../../docs/solutions/p1-lb-review-response.md)。',
           '', '## 1. 主要判断', '',
           f"2015—2024年能源消费由{ind('energy_total',2015):.4f}增至{ind('energy_total'):.2f}亿吨标准煤（增长{(ind('energy_total')/ind('energy_total',2015)-1)*100:.2f}%）。煤炭份额由{ind('coal_share',2015):.1f}%降至{ind('coal_share'):.1f}%，但同表推导的煤炭标准煤消费量由{ind('coal_allocated_tce',2015):.4f}增至{ind('coal_allocated_tce'):.4f}亿吨。结构转型与绝对需求增长并存，不能只凭份额下降判断煤炭需求已见顶。", '',
           f"2023年同表净进口/消费：石油{ind('oil_net_import_ratio',2023):.2f}%、煤炭{ind('coal_net_import_ratio',2023):.2f}%。石油包括油品等原表边界，不能改称原油依存度。天然气进口中LNG占{ind('gas_imports_LNG_share'):.2f}%；全年分项用途说明工业与气电应共用气源约束，但不足以计算中断损失。", '',
@@ -338,7 +355,7 @@ def render_report(out,data,history,inds,balances,regions,origins,gaps,assessment
             ('products','raw_coal_100Mt','原煤产品产量',1,'亿吨'),('products','natural_gas_100Mm3','天然气产量',1,'亿立方米'),
             ('products','generation_100GWh','总发电量',10,'TWh')]:
         text.append(f"|{label}|{val(group,v,2015)/scale:.3f}|{val(group,v,2024)/scale:.3f}|{unit}|")
-    text+=['','一次电力及其他能源一栏保留原名，不直接改成非化石；天然气不算非化石。装机、发电和一次能源消费三种份额分别报告。火电还包含生物质、垃圾和余热等，不能全部当化石发电。','',
+    text+=['','2035年国家自主贡献报告（2025发布，物理p5/印刷p3）直接给出2024年非化石能源占一次能源消费比重19.8%，状态为初步测算。本次独立登记该发布口径；其他年份未取得同版点值。统计局“一次电力及其他”保留原名，即使数值相同也不合并。天然气不算非化石。装机、发电和一次能源消费份额分别报告。火电含生物质、垃圾和余热等，不全部当化石发电。','',
            '|补充技术证据|2015|2024|单位/边界|','|---|---:|---:|---|']
     for v,label in [('coal_electricity','煤电'),('gas_electricity','气电'),('oil_electricity','油电'),('hydro_electricity','水电'),('nuclear_electricity','核电'),('wind_electricity','风电'),('solar_electricity','太阳能发电'),('biofuel_electricity','生物质发电')]:
         text.append(f"|{label}|{val('research',v,2015):.2f}|{val('research',v,2024):.2f}|TWh，OWID上游研究汇编，单独口径|")
@@ -365,8 +382,9 @@ def render_report(out,data,history,inds,balances,regions,origins,gaps,assessment
     text+=['','|国际年均价格序列|年度对数变化标准差|有效收益率数|','|---|---:|---:|']
     for r in inds:
         if r['indicator_id'].startswith('price_log_volatility_'):
-            metadata=json.loads(r['boundary']);text.append(f"|{r['indicator_id'].replace('price_log_volatility_','')}|{r['value']:.4f}|{metadata['n_returns']}|")
-    text+=['','默认窗口2015—2024。五条序列覆盖10年、9个相邻年度变化；欧洲天然气2024月报年度值内部不相容而排除，采用2015—2023的8个相邻年度变化。原争议工作簿继续隔离；新增采用正式PDF月报，发布版本和舍入差异保留。年度基准能描述近年的年度波动，但不等于中国交付价，也不能据此证明冲击因果或估计短期尾部风险。','',
+            metadata=json.loads(r['boundary']);value=f"{r['value']:.4f}" if r['value'] is not None else '不足2个变化，不计算'
+            text.append(f"|{r['indicator_id'].replace('price_log_volatility_','')} ({r['effective_years']})|{value}|{metadata['n_returns']}|")
+    text+=['','观察窗口2015—2024，原始年值覆盖不等于同口径可比覆盖。澳煤2015—2021为Newcastle 6000 kcal/kg现货，6个有效变化；2022年2月更换期货，混合年度2022保留但不参与收益率；2023—2024期货仅1个变化，不计算样本标准差。欧洲气价2015年4月改TTF，混合年度2015不参与收益率；TTF 2016—2023共7个变化；2024年度2.00与季度不相容另行排除。另四条序列各9个变化。各段有效相邻对逐项保存在指标boundary中，禁止跨段合成全窗口SD。原争议工作簿继续隔离，版本和舍入差异保留。国际年均基准不是中国交付价，不识别短期尾部或冲击因果。','',
            '## 6. 区域协调与调节','','|产品|2024年产量前三省|占同表全国产量|','|---|---|---:|']
     for var,label in [('raw_coal_100Mt','原煤'),('natural_gas_100Mm3','天然气'),('hydro_generation_100GWh','水电')]:
         rs=select(data,'regional_resources',var,2024)
@@ -381,7 +399,7 @@ def render_report(out,data,history,inds,balances,regions,origins,gaps,assessment
     for r in inds:
         if r['dimension']=='协调' and ('utilization' in r['indicator_id'] or 'storage' in r['indicator_id'] or 'pumped' in r['indicator_id']):
             text.append(f"|{r['indicator_id']}|{r['year']}|{r['value']}|{r['unit']}|")
-    text+=['','利用率反映电量利用，不是机组容量因子。储能装机需功率/能量成对入模，2025更新不能回填2024；年均时长不能保证任意连续极端时段服务。输电候选数据未解除隔离。', '',
+    text+=['','2025发布的新型储能报告实际描述2024年：全国73.76GW，图1能量168.2GWh，正文约168GWh仅作同源精度核对，不相加或平均；公布时长2.3h。图1的2021—2024历史与图2六大区域功率份额一并保留，地区量属于全国子集。华北22.24GW/49.42GWh，西北18.71GW/52.01GWh。SOC、效率、逐时可用率仍缺，名牌容量和公布时长不保证极端时段服务。2025运行更新仍单独展示。利用率不是容量因子；输电候选数据未解除隔离。', '',
            '## 7. 九类能源与配套的模型位置','','|能源|角色|短板及下一步|','|---|---|---|']
     for name,role,weak,groups,target,limit in ROLES:text.append(f'|{name}|{role}|{weak}；后续接入{target}；{limit}|')
     text+=['','## 8. 静态核对与交接','','|2023账本|单位|供给算术差|用量算术差|公布供给−消费|公布平衡差|','|---|---|---:|---:|---:|---:|']
@@ -418,9 +436,12 @@ def run(output_dir):
         if not manifest.is_file() or json.loads(manifest.read_text(encoding='utf-8')).get('owner')!='p1/lb':
             raise ValueError('Refusing to overwrite unowned result directory')
     config_path=ROOT/'workflow/q1_inputs.json'
-    stage=out.parent/('.q1-stage-'+uuid.uuid4().hex); backup=None
+    run_id=uuid.uuid4().hex
+    attempt=out.parent/(out.name+'.latest-attempt.json')
+    stage=out.parent/('.q1-stage-'+run_id); backup=None
     stage.mkdir(parents=True)
     try:
+        dump(attempt,dict(run_id=run_id,status='running',output_valid_for_this_attempt=False))
         config=json.loads(config_path.read_text(encoding='utf-8')); preflight(config)
         data,history=load_history(config)
         inds,balances,regions,origins,gaps=calculate(data)
@@ -441,7 +462,8 @@ def run(output_dir):
             ('biomass_nonpower','生物天然气有行业估计；完整供热与液体燃料表未取得，公开报道供热单位可疑而排除','不把生物质发电代表所有生物质用途'),
             ('nuclear_publication_scope','核电地区并网容量总6088.094与年鉴6083万kW不同','发布口径/容量取值未完全桥接，各自展示不拼接'),
             ('cost_reference_periods','水电2018—2024样本、生物质2000—2024样本、煤气核旧投影与2024风光成本时期不同','分表比较，不生成跨年份跨服务全能源成本排行榜'),
-            ('nonfossil_primary_share','一次电力及其他不直接等同非化石','保留原栏名；不拿发电份额替代'),
+            ('nonfossil_primary_share_history','已提取NDC独立发布2024初步测算19.8%；同版其他年份仍缺','不把NBS一次电力及其他合并为该序列；不以发电份额替代'),
+            ('storage_operating_state','已补2024新型储能功率/能量与公布时长；SOC、效率和逐时可用率未齐','仅作名牌规模候选，不能初始化可调运行能力'),
             ('hourly_reliability','同期时序、输送和提取上限未齐','不输出停电概率'),
             ('hydrogen_history','产量路线主要为2024截面；电解非全绿氢','不编造十年历史')]:
             gaps.append(dict(item=item,years='scope dependent',status='gap_or_boundary_conflict',reason=reason,impact=impact,action='保留空缺，后续用途核验'))
@@ -455,13 +477,12 @@ def run(output_dir):
         from plot_q1 import build as plot
         plot(stage,inds,regions,data['prices'])
         render_report(stage,data,history,inds,balances,regions,origins,gaps,assessment,synergies)
-        code_paths=['run.py','scripts/build_q1.py','src/energy_model/q1.py','scripts/prepare_q1_review.py','scripts/plot_q1.py','scripts/q1_additional_analysis.py','scripts/extract_q1_additions.py','requirements-q1.txt']
-        record=dict(owner='p1/lb',status='success',scientific_scope='Q1 scoped assessment; no national ABM or external acceptance',
+        record=dict(owner='p1/lb',status='success',run_id=run_id,scientific_scope='Q1 scoped assessment; no national ABM or external acceptance',
                     command=['python','-B','-X','utf8','run.py','q1','--output-dir',Path(output_dir).as_posix()],
                     python=sys.version,platform=platform.platform(),dependencies={'runtime':'Python >=3.11','reportlab':importlib.metadata.version('reportlab')},
                     git_sha=git('rev-parse','HEAD'),git_dirty=bool(git('status','--porcelain')),git_status=git('status','--porcelain'),
                     base_sha=config['base_sha'],config_path='workflow/q1_inputs.json',config_sha256=sha(config_path),
-                    code_hashes={p:sha(ROOT/p) for p in code_paths},inputs=config['inputs'],sources=config['sources'],
+                    code_hashes={p:sha(ROOT/p) for p in CODE_PATHS},inputs=config['inputs'],sources=config['sources'],
                     config=config['decisions'],counts=dict(history=len(history),indicators=len(inds),regions=len(regions)),
                     outputs={p.name:sha(p) for p in sorted(stage.iterdir())})
         dump(stage/'run_manifest.json',record)
@@ -472,12 +493,16 @@ def run(output_dir):
             if backup:backup.rename(out)
             raise
         if backup:shutil.rmtree(backup)
+        dump(attempt,dict(run_id=run_id,status='success',output_valid_for_this_attempt=True,
+                          manifest_sha256=sha(out/'run_manifest.json')))
         print(json.dumps(dict(status='success',output=str(out),counts=record['counts']),ensure_ascii=False))
         return 0
     except Exception as exc:
         # Failure evidence is separate; a previous successful result is never relabelled as this failed attempt.
         failure=out.parent/(out.name+'.failed-attempt.json')
-        dump(failure,dict(status='failed',output_valid_for_this_attempt=False,error=str(exc),command_output=output_dir))
+        failure_record=dict(run_id=run_id,status='failed',output_valid_for_this_attempt=False,error=str(exc),command_output=output_dir)
+        dump(failure,failure_record)
+        dump(attempt,failure_record)
         print(f'Q1 FAILED: {exc}',file=sys.stderr)
         return 1
     finally:

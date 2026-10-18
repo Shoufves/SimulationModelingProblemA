@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "compared_files": 18,
+  "excluded": "run_manifest.json: output command and run metadata intentionally differ",
+  "checks": [
+    {
+      "file": "cost_sensitivity.svg",
+      "match": true,
+      "sha256": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6"
+    },
+    {
+      "file": "coverage.csv",
+      "match": true,
+      "sha256": "ac1016499f1602b25810582c567bd711934a484fcd5bd307cb484e861274ed50"
+    },
+    {
+      "file": "demand_trends.svg",
+      "match": true,
+      "sha256": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406"
+    },
+    {
+      "file": "energy_assessment.csv",
+      "match": true,
+      "sha256": "c0d33c6daabeb73699d1a3a18762b3047d5d668fa4a52688489150daab6e27dd"
+    },
+    {
+      "file": "energy_roles.csv",
+      "match": true,
+      "sha256": "7dfebae87f6f211afdb3bf9bb07d4a371feae05a196bd3370e6e2fa26c8fc9ba"
+    },
+    {
+      "file": "gaps_and_conflicts.csv",
+      "match": true,
+      "sha256": "46e4da700806daed8dfaecca0265adb22a431367dd304a9430f8f4f028feecf3"
+    },
+    {
+      "file": "history.csv",
+      "match": true,
+      "sha256": "ea4150794b076f4c15bce0b6a65b5fd0dcbd26403c09d53465445f7927a41036"
+    },
+    {
+      "file": "import_origins.csv",
+      "match": true,
+      "sha256": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469"
+    },
+    {
+      "file": "indicators.csv",
+      "match": true,
+      "sha256": "0fc1717ea3824962c114691f849285eb4798befaebf3f0b70fc90ec33fecbf28"
+    },
+    {
+      "file": "model_handoff.csv",
+      "match": true,
+      "sha256": "a7adbf824de526abcce5aac70cb626a51475c75195e719be4243d80e05f1558b"
+    },
+    {
+      "file": "price_trends.svg",
+      "match": true,
+      "sha256": "5fb4a559ebd17aa763b3ef11eccbe730bdb628323492bf43f4bee5d63a0a7408"
+    },
+    {
+      "file": "regional_comparison.csv",
+      "match": true,
+      "sha256": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51"
+    },
+    {
+      "file": "regional_shares.svg",
+      "match": true,
+      "sha256": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396"
+    },
+    {
+      "file": "renewable_regions.csv",
+      "match": true,
+      "sha256": "467362307a9a9a14563380200bc0d2310fdcc54a3d43ae77310a95dd13f669c8"
+    },
+    {
+      "file": "report.md",
+      "match": true,
+      "sha256": "9faa411e8b4cd301aced579a93611dbaa67d821063a3ed112afa5c1e0f236d1a"
+    },
+    {
+      "file": "static_balance.json",
+      "match": true,
+      "sha256": "30a66292a4b577478c0f84f68dae004646dbbbc428a5ace8c95f3e2779ce7624"
+    },
+    {
+      "file": "synergy_assessment.csv",
+      "match": true,
+      "sha256": "9acb3c05e82900862fe84cd6ef8388edc1e1738034a6caaca3227d9afdd433b7"
+    },
+    {
+      "file": "technology_region_capacities.csv",
+      "match": true,
+      "sha256": "3469a8fdbb7c12ef98c19bb8eae1c27e30e54fd5c9d19f60ef629431d7f429a4"
+    }
+  ]
+}

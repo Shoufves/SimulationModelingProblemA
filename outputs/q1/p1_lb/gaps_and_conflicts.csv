@@ -1,5 +1,6 @@
 ﻿item,years,status,reason,impact,action
-"Natural gas, Europe",2015–2024,partial_window,正式月报欧洲气价2024年度单元格与同表季度值不相容，排除；缺年 2024,使用8个相邻年度变化；2024另列NEA TTF截面，不拼接,保留异常原件及版本核查记录
+"Coal, Australian",2015–2024,definition_break,2022年2月现货改期货，2022混合年度；2023–2024仅1个年度变化不足估计样本SD,保留观测，分段报告有效年度对；不报告全十年同口径波动,后续仅凭有明确统一回溯定义的原件扩展可比窗口
+"Natural gas, Europe",2015–2024,definition_break,2015混合边境/现货与TTF定义；2024年度2.00与季度不相容而排除,保留观测，分段报告有效年度对；不报告全十年同口径波动,后续仅凭有明确统一回溯定义的原件扩展可比窗口
 net_gas_import_ratio,scope dependent,gap_or_boundary_conflict,匹配出口与消费边界未齐,不将毛进口比称净依赖,保留空缺，后续用途核验
 crude_country_origins,scope dependent,gap_or_boundary_conflict,本轮未准入原油国别表,原油来源集中度不计算,保留空缺，后续用途核验
 same_reliability_system_cost,scope dependent,gap_or_boundary_conflict,厂端LCOE不含统一调峰/备用/网络服务,不做全技术保供成本排名,保留空缺，后续用途核验
@@ -13,6 +14,7 @@ technology_province_panel,scope dependent,gap_or_boundary_conflict,已补光伏3
 biomass_nonpower,scope dependent,gap_or_boundary_conflict,生物天然气有行业估计；完整供热与液体燃料表未取得，公开报道供热单位可疑而排除,不把生物质发电代表所有生物质用途,保留空缺，后续用途核验
 nuclear_publication_scope,scope dependent,gap_or_boundary_conflict,核电地区并网容量总6088.094与年鉴6083万kW不同,发布口径/容量取值未完全桥接，各自展示不拼接,保留空缺，后续用途核验
 cost_reference_periods,scope dependent,gap_or_boundary_conflict,水电2018—2024样本、生物质2000—2024样本、煤气核旧投影与2024风光成本时期不同,分表比较，不生成跨年份跨服务全能源成本排行榜,保留空缺，后续用途核验
-nonfossil_primary_share,scope dependent,gap_or_boundary_conflict,一次电力及其他不直接等同非化石,保留原栏名；不拿发电份额替代,保留空缺，后续用途核验
+nonfossil_primary_share_history,scope dependent,gap_or_boundary_conflict,已提取NDC独立发布2024初步测算19.8%；同版其他年份仍缺,不把NBS一次电力及其他合并为该序列；不以发电份额替代,保留空缺，后续用途核验
+storage_operating_state,scope dependent,gap_or_boundary_conflict,已补2024新型储能功率/能量与公布时长；SOC、效率和逐时可用率未齐,仅作名牌规模候选，不能初始化可调运行能力,保留空缺，后续用途核验
 hourly_reliability,scope dependent,gap_or_boundary_conflict,同期时序、输送和提取上限未齐,不输出停电概率,保留空缺，后续用途核验
 hydrogen_history,scope dependent,gap_or_boundary_conflict,产量路线主要为2024截面；电解非全绿氢,不编造十年历史,保留空缺，后续用途核验

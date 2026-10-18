@@ -31,6 +31,30 @@ def annual_log_volatility(observations, start=2015, end=2024):
                 adjacent_pairs=pairs, n_returns=len(returns), ddof=1)
 
 
+def segmented_price_volatility(rows, start=2015, end=2024):
+    """Separate definitions; mixed years are retained as evidence, never as returns."""
+    window = [r for r in rows if start <= int(r['year']) <= end]
+    if len({int(r['year']) for r in window}) != len(window):
+        raise ValueError('Duplicate price year')
+    segments = {}
+    excluded = []
+    for r in window:
+        if not r.get('definition_segment') or r.get('annual_definition_status') not in ('homogeneous', 'mixed'):
+            raise ValueError('Missing price definition review')
+        if r['annual_definition_status'] == 'mixed':
+            excluded.append(int(r['year']))
+        else:
+            segments.setdefault(r['definition_segment'], {})[int(r['year'])] = r.get('_value', r['value'])
+    results = []
+    for segment, values in sorted(segments.items()):
+        result = annual_log_volatility(values, min(values), max(values))
+        result.update(definition_segment=segment, excluded_mixed_years=sorted(excluded),
+                      coverage_years=sorted(int(r['year']) for r in window),
+                      missing_window_years=sorted(set(range(start, end+1))-{int(r['year']) for r in window}))
+        results.append(result)
+    return results
+
+
 def spatial_difference(generation, consumption):
     if set(generation) != set(consumption) or not generation:
         raise ValueError("Region sets must be nonempty and identical")

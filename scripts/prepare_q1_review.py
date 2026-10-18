@@ -10,6 +10,7 @@ import json
 
 ROOT = Path(__file__).resolve().parents[1]
 FILES = [
+    ('reviewed2024', 'data/processed/q1/reviewed_2024_additions.csv', 'C1/L2 revision: NDC preliminary 2024 share; storage report published 2025 describing 2021-2024; figure/text precision and regional subsets kept separate; see p1-lb-review-response.md'),
     ('national', 'data/processed/unified/nbs_history.csv', 'Primary same-vintage history; table-image checks; original units and dedup identity retained'),
     ('products', 'data/processed/nbs_products_annual.csv', 'National product rows; physical tonnes/volume separate from standard coal'),
     ('balance', 'data/processed/nbs_balance_checkpoints.csv', '2015/2020/2022/2023 table 9-3 to 9-6; preserve published residuals'),
@@ -22,7 +23,7 @@ FILES = [
     ('research', 'data/processed/china_energy_research_annual.csv', 'Research supplementary history; no splice into NBS primary-energy accounting'),
     ('costs', 'data/processed/technology_accounting_parameters.csv', 'Only IRENA 2024 China LCOE rows for Q1; lifetime and financing scope reviewed'),
     ('cost_comparison', 'data/processed/q1/iea_comparable_costs.csv', '2020 report projected cases with 2018 price year; matched discount/CF groups; not current actual costs'),
-    ('prices', 'data/processed/q1/prices_reviewed.csv', 'Archived prices through 2020 plus explicitly reviewed PDF releases; Europe 2024 anomalous cell excluded; old quarantined workbooks remain excluded'),
+    ('prices', 'data/processed/q1/prices_reviewed.csv', 'Archive/PDF vintages and definition segments retained; mixed Europe 2015 and coal 2022 excluded from returns; coal replacement effective February 2022; Europe 2024 anomalous cell excluded; see p1-lb-review-response.md'),
     ('renewable_regions', 'data/processed/q1/renewable_regions.csv', 'NEA original DOC tables 1-5: consumption responsibility shares, wind/PV grid-region utilization and hydro basins; not capacity factors'),
     ('technology_regions', 'data/processed/q1/technology_region_capacities.csv', 'PV 32 reporting areas including separate XPCC; nuclear 8 operating provinces and same-source total; original images visually checked'),
     ('context', 'data/processed/q1/additional_context.csv', 'Hydro and biomass multiyear costs, 2024 hydrogen December prices and regional shares, NEA gas benchmark snapshot, UHV annual flows, combustion reference factors and supplementary industry estimates; no silent year/scope splice'),

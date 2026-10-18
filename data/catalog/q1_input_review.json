@@ -4,6 +4,35 @@
   "config": "workflow/q1_inputs.json",
   "inputs": [
     {
+      "id": "reviewed2024",
+      "path": "data/processed/q1/reviewed_2024_additions.csv",
+      "sha256": "60e91cb161df7f33da4ca89c7b83b02619c6e44defa5d6f2781f83673d3f8fbd",
+      "source_map": {
+        "lb/base:NDC_2035": "lb/base:NDC_2035",
+        "lb/base:NEA_STORAGE_2025": "lb/base:NEA_STORAGE_2025"
+      },
+      "review": "C1/L2 revision: NDC preliminary 2024 share; storage report published 2025 describing 2021-2024; figure/text precision and regional subsets kept separate; see p1-lb-review-response.md",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "units": [
+        "%",
+        "GW",
+        "GWh",
+        "h"
+      ],
+      "evidence_status": [
+        "published_preliminary",
+        "reviewed_published",
+        "same_source_rounded_crosscheck"
+      ],
+      "allowed_use": "Q1 descriptive assessment only",
+      "blocked_use": "national ABM calibration/initialization without further review"
+    },
+    {
       "id": "national",
       "path": "data/processed/unified/nbs_history.csv",
       "sha256": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
@@ -362,13 +391,13 @@
     {
       "id": "prices",
       "path": "data/processed/q1/prices_reviewed.csv",
-      "sha256": "8ea8e581d88926b3b98bf06710cf695280a6241f86a326507cdc13037fd13111",
+      "sha256": "6cb15a884e48518a1d9ab3bdf7db887ad91bb4cf8ddccc9cf578c4f51ee01cf2",
       "source_map": {
         "Q1_WB_PINK_FEB_2025": "q1:Q1_WB_PINK_FEB_2025",
         "Q1_WB_PINK_JANUARY_2024": "q1:Q1_WB_PINK_JANUARY_2024",
         "WB_PINK_SHEET_STABLE": "yx:WB_PINK_SHEET_STABLE"
       },
-      "review": "Archived prices through 2020 plus explicitly reviewed PDF releases; Europe 2024 anomalous cell excluded; old quarantined workbooks remain excluded",
+      "review": "Archive/PDF vintages and definition segments retained; mixed Europe 2015 and coal 2022 excluded from returns; coal replacement effective February 2022; Europe 2024 anomalous cell excluded; see p1-lb-review-response.md",
       "years": [
         2005,
         2006,

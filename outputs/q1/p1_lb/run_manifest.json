@@ -1,6 +1,7 @@
 {
   "owner": "p1/lb",
   "status": "success",
+  "run_id": "d29627ba332147578260e22a44cdaaac",
   "scientific_scope": "Q1 scoped assessment; no national ABM or external acceptance",
   "command": [
     "python",
@@ -18,23 +19,54 @@
     "runtime": "Python >=3.11",
     "reportlab": "4.4.9"
   },
-  "git_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+  "git_sha": "f68438551f1ac3f5f78e36bcbb18494daccecda4",
   "git_dirty": true,
-  "git_status": "M README.md\n M data/catalog/datasets_unified.csv\n M data/catalog/sources_unified.csv\n M data/catalog/sources_unified.json\n M data/catalog/workspace_catalog_summary.json\n M docs/RUNNING.md\n M outputs/validation/tests.json\n M outputs/validation/workspace_audit.json\n M run.py\n M scripts/audit_workspace.py\n M scripts/build_workspace_catalog.py\n?? data/catalog/q1_input_review.json\n?? data/catalog/q1_sources.json\n?? data/processed/q1/\n?? data/raw/q1/\n?? docs/solutions/\n?? outputs/q1/\n?? outputs/q1_review/\n?? requirements-q1.txt\n?? scripts/build_q1.py\n?? scripts/collect_q1_additions.py\n?? scripts/extract_q1_additions.py\n?? scripts/plot_q1.py\n?? scripts/prepare_q1_review.py\n?? scripts/q1_additional_analysis.py\n?? scripts/review_q1_delivery.py\n?? src/energy_model/q1.py\n?? tests/test_q1.py\n?? workflow/q1_inputs.json",
+  "git_status": "M data/catalog/datasets_unified.csv\n M data/catalog/q1_input_review.json\n M data/catalog/workspace_catalog_summary.json\n M data/processed/q1/prices_reviewed.csv\n M docs/solutions/p1-lb-additional-review.md\n M docs/solutions/p1-lb-final-acceptance.md\n M docs/solutions/p1-lb-input-review.md\n M docs/solutions/p1-lb-iterations.md\n M docs/solutions/p1-lb.md\n M outputs/q1/lb_reproduction/coverage.csv\n M outputs/q1/lb_reproduction/energy_roles.csv\n M outputs/q1/lb_reproduction/gaps_and_conflicts.csv\n M outputs/q1/lb_reproduction/history.csv\n M outputs/q1/lb_reproduction/indicators.csv\n M outputs/q1/lb_reproduction/model_handoff.csv\n M outputs/q1/lb_reproduction/price_trends.svg\n M outputs/q1/lb_reproduction/renewable_regions.csv\n M outputs/q1/lb_reproduction/report.md\n M outputs/q1/lb_reproduction/run_manifest.json\n M outputs/q1/lb_reproduction/synergy_assessment.csv\n M outputs/q1/lb_reproduction/technology_region_capacities.csv\n M outputs/q1/p1_lb/coverage.csv\n M outputs/q1/p1_lb/energy_roles.csv\n M outputs/q1/p1_lb/gaps_and_conflicts.csv\n M outputs/q1/p1_lb/history.csv\n M outputs/q1/p1_lb/indicators.csv\n M outputs/q1/p1_lb/model_handoff.csv\n M outputs/q1/p1_lb/price_trends.svg\n M outputs/q1/p1_lb/renewable_regions.csv\n M outputs/q1/p1_lb/report.md\n M outputs/q1/p1_lb/run_manifest.json\n M outputs/q1/p1_lb/synergy_assessment.csv\n M outputs/q1/p1_lb/technology_region_capacities.csv\n M outputs/validation/tests.json\n M outputs/validation/workspace_audit.json\n M scripts/build_q1.py\n M scripts/extract_q1_additions.py\n M scripts/plot_q1.py\n M scripts/prepare_q1_review.py\n M scripts/q1_additional_analysis.py\n M scripts/review_q1_delivery.py\n M src/energy_model/q1.py\n M tests/test_q1.py\n M workflow/q1_inputs.json\n?? data/processed/q1/reviewed_2024_additions.csv\n?? docs/solutions/p1-lb-review-response.md\n?? outputs/q1/.q1-stage-d29627ba332147578260e22a44cdaaac/\n?? outputs/q1/lb_reproduction.latest-attempt.json\n?? outputs/q1/p1_lb.latest-attempt.json\n?? outputs/q1_review/revision1/\n?? scripts/extract_q1_revision.py",
   "base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
   "config_path": "workflow/q1_inputs.json",
-  "config_sha256": "dc234baf4adae1e3b3c938aadf30bf1d77312f279753cb1f97194f9bcf04fb11",
+  "config_sha256": "f89291efc28a04ac80273797fa07e00315534aed348a7e8cba71f08cc295cab3",
   "code_hashes": {
     "run.py": "389f172097a953bef2e45450a06f204dfd623404a6ab97559bec82f368499570",
-    "scripts/build_q1.py": "4b6f26d952e2d16c18f8852664e531db6ee89677b574c21d3086a42d73e458af",
-    "src/energy_model/q1.py": "ef5cfb7a484469dd559e047c4ae5b5805a01a02f855dac1303105d9ff8d69ceb",
-    "scripts/prepare_q1_review.py": "f632cfdf4c9a188f28f4a22c56c3565931243af126e2f97953c3816eed650f57",
-    "scripts/plot_q1.py": "69fb0c82f46bfe4ad5f73344178a949dbcf7aa783c178571d3311dfa4da6ed29",
-    "scripts/q1_additional_analysis.py": "9625f4797aff3e97f94a25dc24d36c8fa3d77497f7d7222b2ce30e51609e05bc",
-    "scripts/extract_q1_additions.py": "ed5e64deae95ac2ff13f83c38ba6516d86cf8b8822b1fe20c22956e15a3c4695",
+    "scripts/build_q1.py": "7ae21cf0388cb1e86ffe6195fa9174ae7d60a93fade73689ebb0b57af44d159d",
+    "src/energy_model/q1.py": "2207a8a5ecdac03c1d92c5f73a41d38567ed19297dc74d30ea4ccb566bf2bbb4",
+    "scripts/prepare_q1_review.py": "8d925eb7be6ed6a06cca73c855c6fe954cb0806add073b2edb485e28df983b40",
+    "scripts/plot_q1.py": "bb6b6bc44e7527a998b6c2f17f8be7c81622d06e2abacb62176a1ef0b610383d",
+    "scripts/q1_additional_analysis.py": "9b17c4e8e6428877368dee5d374f89016631b7c03fc89c4ac291292274c7f090",
+    "scripts/extract_q1_additions.py": "9e0cbe5dff99b76542ddae8baa7116c3b0e812b5fcb111b82a498ed969a4b73f",
+    "scripts/extract_q1_revision.py": "107a9fab4805b4f10824792cd7bf79615771dc92e472f24024dab808c8b24bce",
+    "scripts/review_q1_delivery.py": "754e1d65f6956e664be671aa5d1371bca0bb6c1cf79a7ba6da6599da84154c84",
     "requirements-q1.txt": "f1b21977c06d06cc687ebb0b0f057787635239f3e446c436f78e722ce2699045"
   },
   "inputs": [
+    {
+      "id": "reviewed2024",
+      "path": "data/processed/q1/reviewed_2024_additions.csv",
+      "sha256": "60e91cb161df7f33da4ca89c7b83b02619c6e44defa5d6f2781f83673d3f8fbd",
+      "source_map": {
+        "lb/base:NDC_2035": "lb/base:NDC_2035",
+        "lb/base:NEA_STORAGE_2025": "lb/base:NEA_STORAGE_2025"
+      },
+      "review": "C1/L2 revision: NDC preliminary 2024 share; storage report published 2025 describing 2021-2024; figure/text precision and regional subsets kept separate; see p1-lb-review-response.md",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "units": [
+        "%",
+        "GW",
+        "GWh",
+        "h"
+      ],
+      "evidence_status": [
+        "published_preliminary",
+        "reviewed_published",
+        "same_source_rounded_crosscheck"
+      ],
+      "allowed_use": "Q1 descriptive assessment only",
+      "blocked_use": "national ABM calibration/initialization without further review"
+    },
     {
       "id": "national",
       "path": "data/processed/unified/nbs_history.csv",
@@ -394,13 +426,13 @@
     {
       "id": "prices",
       "path": "data/processed/q1/prices_reviewed.csv",
-      "sha256": "8ea8e581d88926b3b98bf06710cf695280a6241f86a326507cdc13037fd13111",
+      "sha256": "6cb15a884e48518a1d9ab3bdf7db887ad91bb4cf8ddccc9cf578c4f51ee01cf2",
       "source_map": {
         "Q1_WB_PINK_FEB_2025": "q1:Q1_WB_PINK_FEB_2025",
         "Q1_WB_PINK_JANUARY_2024": "q1:Q1_WB_PINK_JANUARY_2024",
         "WB_PINK_SHEET_STABLE": "yx:WB_PINK_SHEET_STABLE"
       },
-      "review": "Archived prices through 2020 plus explicitly reviewed PDF releases; Europe 2024 anomalous cell excluded; old quarantined workbooks remain excluded",
+      "review": "Archive/PDF vintages and definition segments retained; mixed Europe 2015 and coal 2022 excluded from returns; coal replacement effective February 2022; Europe 2024 anomalous cell excluded; see p1-lb-review-response.md",
       "years": [
         2005,
         2006,
@@ -696,6 +728,28 @@
         {
           "path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
           "sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b"
+        }
+      ]
+    },
+    "lb/base:NDC_2035": {
+      "title": "2035年中国国家自主贡献报告",
+      "publisher": "生态环境部",
+      "url": "https://www.mee.gov.cn/ywgz/ydqhbh/qhbhlf/202511/W020251110629686716033.pdf",
+      "artifacts": [
+        {
+          "path": "data/raw/lb/base/reports/china_ndc_2035.pdf",
+          "sha256": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d"
+        }
+      ]
+    },
+    "lb/base:NEA_STORAGE_2025": {
+      "title": "中国新型储能发展报告2025",
+      "publisher": "国家能源局",
+      "url": "https://www.nea.gov.cn/20250731/1d40d09f75714280a9218d5bea178fbd/202507311d40d09f75714280a9218d5bea178fbd_453d9a0609da1d4456a8b12d843bd256cf.pdf",
+      "artifacts": [
+        {
+          "path": "data/raw/lb/base/reports/storage_2025.pdf",
+          "sha256": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3"
         }
       ]
     },
@@ -1055,28 +1109,28 @@
     "shared_input_status": "lb local Q1 additions; not shared or formal model approval"
   },
   "counts": {
-    "history": 2146,
-    "indicators": 182,
+    "history": 2170,
+    "indicators": 206,
     "regions": 31
   },
   "outputs": {
     "cost_sensitivity.svg": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6",
-    "coverage.csv": "4b553e7f838098de0387e7a547115e213c557b1938998b6d3f03c8f637dfb5da",
+    "coverage.csv": "ac1016499f1602b25810582c567bd711934a484fcd5bd307cb484e861274ed50",
     "demand_trends.svg": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406",
     "energy_assessment.csv": "c0d33c6daabeb73699d1a3a18762b3047d5d668fa4a52688489150daab6e27dd",
-    "energy_roles.csv": "0bf7cc8027d537962a729e94e5020c5ac17eacf099b1fa1b3b8f96b8ff061b52",
-    "gaps_and_conflicts.csv": "9a97b06f8d96444fb15a1c0d73279c567bf4a4de7561c19b7f9b45b34f60d955",
-    "history.csv": "8231fa125863d3f8d7e2b3196dacccbad088cd1ae86f2f336ab981047d001600",
+    "energy_roles.csv": "7dfebae87f6f211afdb3bf9bb07d4a371feae05a196bd3370e6e2fa26c8fc9ba",
+    "gaps_and_conflicts.csv": "46e4da700806daed8dfaecca0265adb22a431367dd304a9430f8f4f028feecf3",
+    "history.csv": "ea4150794b076f4c15bce0b6a65b5fd0dcbd26403c09d53465445f7927a41036",
     "import_origins.csv": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469",
-    "indicators.csv": "29ce942df6d0ab366ddc6d763560ff2d0461a6da12bbf6ad7322d5f0908edd49",
-    "model_handoff.csv": "db1eb38de5045791d652a649d8482fedb7a6917ce08dfd0e56c455ac451784cc",
-    "price_trends.svg": "858c13941f01b03c2f91dfb0ad2adfcf8ed5d598e9b9bb9b13cc1791f75553ab",
+    "indicators.csv": "0fc1717ea3824962c114691f849285eb4798befaebf3f0b70fc90ec33fecbf28",
+    "model_handoff.csv": "a7adbf824de526abcce5aac70cb626a51475c75195e719be4243d80e05f1558b",
+    "price_trends.svg": "5fb4a559ebd17aa763b3ef11eccbe730bdb628323492bf43f4bee5d63a0a7408",
     "regional_comparison.csv": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51",
     "regional_shares.svg": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396",
-    "renewable_regions.csv": "f58324e3695af1f8836df0013bc1a3ad18b99b8dfd3472f9a1245d15a2b82373",
-    "report.md": "ad042cee7ed622ff5bb973c1a756b0ebb3c0ac3c027f54ba4f1fdac434bcba27",
+    "renewable_regions.csv": "467362307a9a9a14563380200bc0d2310fdcc54a3d43ae77310a95dd13f669c8",
+    "report.md": "9faa411e8b4cd301aced579a93611dbaa67d821063a3ed112afa5c1e0f236d1a",
     "static_balance.json": "30a66292a4b577478c0f84f68dae004646dbbbc428a5ace8c95f3e2779ce7624",
-    "synergy_assessment.csv": "25f3d313131c8e201c6a999919a2acb5572c7aac80620dc2a5c594c913692ae3",
-    "technology_region_capacities.csv": "385739642cd63cba8f785b05a5a3d330566b91031824d01a62138843033f01f6"
+    "synergy_assessment.csv": "9acb3c05e82900862fe84cd6ef8388edc1e1738034a6caaca3227d9afdd433b7",
+    "technology_region_capacities.csv": "3469a8fdbb7c12ef98c19bb8eae1c27e30e54fd5c9d19f60ef629431d7f429a4"
   }
 }

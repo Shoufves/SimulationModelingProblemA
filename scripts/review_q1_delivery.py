@@ -1,7 +1,8 @@
-"""Verify present Q1 evidence; does not stand in for two human reviewers."""
+"""Fresh Q1 delivery verification, including actual inputs/originals and new runs."""
 from pathlib import Path
 import csv, hashlib, json, re, subprocess, sys
 import xml.etree.ElementTree as ET
+import build_q1 as q1
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -16,17 +17,75 @@ def rows(p):
     with p.open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
 
 
+def validate_current_artifacts(folder, config):
+    """Reject stale success even when a subsequent failed run preserved its outputs."""
+    q1.preflight(config)
+    m=load(folder/'run_manifest.json')
+    latest=load(folder.parent/(folder.name+'.latest-attempt.json'))
+    if (m.get('status')!='success' or m.get('owner')!='p1/lb' or latest.get('status')!='success'
+            or not latest.get('output_valid_for_this_attempt') or not m.get('run_id')
+            or m['run_id']!=latest.get('run_id') or digest(folder/'run_manifest.json')!=latest.get('manifest_sha256')):
+        raise ValueError('No matching latest successful attempt')
+    if (m.get('config_path')!='workflow/q1_inputs.json' or digest(ROOT/'workflow/q1_inputs.json')!=m.get('config_sha256')
+            or m.get('inputs')!=config['inputs'] or m.get('sources')!=config['sources']
+            or m.get('config')!=config['decisions']):
+        raise ValueError('Manifest/config/input/source identity mismatch')
+    expected={p:digest(ROOT/p) for p in q1.CODE_PATHS}
+    if m.get('code_hashes')!=expected:raise ValueError('Manifest code identity mismatch')
+    if not m.get('outputs') or any(digest(folder/name)!=h for name,h in m['outputs'].items()):
+        raise ValueError('Output hash mismatch')
+    return m
+
+
+def validation_identity(config):
+    paths={'workflow/q1_inputs.json','run.py'}
+    paths.update(str(p.relative_to(ROOT)).replace('\\','/') for sub in ('scripts','src','tests') for p in (ROOT/sub).rglob('*.py'))
+    paths.update(r['path'] for r in config['inputs'])
+    paths.update(a['path'] for s in config['sources'].values() for a in s['artifacts'])
+    return {p:digest(ROOT/p) for p in sorted(paths)}
+
+
 def main():
     out=ROOT/'outputs/q1/p1_lb';replica=ROOT/'outputs/q1/lb_reproduction'
-    evidence=ROOT/'outputs/q1_review/final';evidence.mkdir(parents=True,exist_ok=True)
+    evidence=ROOT/'outputs/q1_review/revision1/delivery';evidence.mkdir(parents=True,exist_ok=True)
+    (evidence/'final_verification.json').write_text(json.dumps(dict(passed=False,status='running',
+        scope='No successful current verification receipt until all checks finish')),encoding='utf-8')
     checks=[]
     def check(name,passed,detail):checks.append(dict(check=name,passed=bool(passed),detail=detail))
+    # Never use a saved tests.json or an old manifest as evidence of a new execution.
+    try:
+        config=load(ROOT/'workflow/q1_inputs.json');q1.preflight(config)
+        before=validation_identity(config)
+        fresh=[]
+        jobs=[('tests',['run.py','test']),('audit',['run.py','audit']),('key_scan',['scripts/scan_google_keys.py'])]
+        for label,args in jobs:
+            result=subprocess.run([sys.executable,'-B','-X','utf8',*args],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
+            (evidence/(label+'.log')).write_text(result.stdout+result.stderr,encoding='utf-8')
+            fresh.append(dict(command=args,returncode=result.returncode))
+            if result.returncode:raise ValueError('Fresh check failed: '+label)
+        for folder in (out,replica):
+            prior=load(folder/'run_manifest.json').get('run_id') if (folder/'run_manifest.json').exists() else None
+            result=subprocess.run([sys.executable,'-B','-X','utf8','run.py','q1','--output-dir',folder.relative_to(ROOT).as_posix()],
+                                  cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
+            (evidence/(folder.name+'.log')).write_text(result.stdout+result.stderr,encoding='utf-8')
+            if result.returncode:raise ValueError('Fresh Q1 run failed: '+folder.name)
+            m=validate_current_artifacts(folder,config)
+            if m['run_id']==prior:raise ValueError('Fresh run did not replace run identity')
+            fresh.append(dict(command=m['command'],returncode=0,run_id=m['run_id'],manifest_sha256=digest(folder/'run_manifest.json')))
+        q1.preflight(config)
+        if before!=validation_identity(config):raise ValueError('Inputs/code changed during verification')
+        check('fresh_checks_and_input_identity',True,dict(identity=before,runs=fresh))
+    except (ValueError,OSError,KeyError,TypeError) as exc:
+        result=dict(passed=False,scope='Fresh delivery verification failed; previous outputs are not current success evidence',
+                    error=str(exc),checks=checks)
+        (evidence/'final_verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        print(json.dumps(result,ensure_ascii=False));return 1
     required={'history.csv','indicators.csv','energy_roles.csv','model_handoff.csv','gaps_and_conflicts.csv','static_balance.json','report.md',
               'coverage.csv','regional_comparison.csv','import_origins.csv','demand_trends.svg','cost_sensitivity.svg','regional_shares.svg',
               'price_trends.svg','energy_assessment.csv','synergy_assessment.csv','renewable_regions.csv','technology_region_capacities.csv'}
     manifests=[]
     for folder in (out,replica):
-        m=load(folder/'run_manifest.json');manifests.append(m)
+        m=validate_current_artifacts(folder,config);manifests.append(m)
         check(folder.name+'_success',m['status']=='success' and m['owner']=='p1/lb',m['counts'])
         check(folder.name+'_output_set',set(m['outputs'])==required,sorted(m['outputs']))
         check(folder.name+'_output_hashes',all(digest(folder/name)==h for name,h in m['outputs'].items()),m['outputs'])
@@ -60,8 +119,7 @@ def main():
     check('report_links_resolve',all((out/path).is_file() for path in targets),targets)
     for name in ('demand_trends.svg','cost_sensitivity.svg','regional_shares.svg','price_trends.svg'):
         root=ET.parse(out/name).getroot();check(name+'_valid_svg',root.tag.endswith('svg'),digest(out/name))
-    for name in ('ei_original_cell_checks.json','price_original_cell_checks.json','cost_original_line_checks.json'):
-        r=load(ROOT/'outputs/q1_review/round3'/name);check(name,r['passed'],r['count'])
+    # Original cell-check receipts remain historical evidence in round3, not current execution gates.
     validation=ROOT/'outputs/validation'
     for filename in ('tests.json','workspace_audit.json'):
         r=load(validation/filename);check(filename,r['passed'],r.get('tests',len(r.get('checks',[]))))

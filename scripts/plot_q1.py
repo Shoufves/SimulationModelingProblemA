@@ -1,5 +1,5 @@
 """Publication-style SVG figures using ReportLab standard chart objects."""
-from reportlab.graphics.shapes import Drawing, String, Rect
+from reportlab.graphics.shapes import Drawing, String, Rect, Line, Circle
 from reportlab.graphics.charts.lineplots import LinePlot
 from reportlab.graphics.charts.barcharts import HorizontalBarChart
 from reportlab.graphics.charts.legends import Legend
@@ -64,12 +64,32 @@ def build(out,indicators,regions,prices):
     d.add(String(34,36,'Five most negative and five most positive shares; all 31 provinces are in regional_comparison.csv.',fontSize=9))
     d.add(String(34,17,'NBS tables 9-14 and 9-19. These differences are not measured interprovincial power flows.',fontSize=8.5,fillColor=HexColor('#526577')))
     renderSVG.drawToFile(d,str(out/'regional_shares.svg'))
-    keys=['Coal, Australian','Crude oil, Brent','Natural gas, Europe']
-    price_series=[]
-    for key in keys:
-        observations={r['year']:r['_value'] for r in prices if r['variable']==key and 2015<=r['year']<=2024}
-        price_series.append([(year,value/observations[2020]*100) for year,value in sorted(observations.items())])
-    d=lines('International fuel price shocks','Selected annual nominal benchmarks | 2020 = 100 | World Bank releases',price_series,
-        ['Australian coal','Brent crude','European natural gas'],2015,2024,1,0,1400,200,
-        'Europe 2024 annual cell rejected; line stops at 2023. These are not Chinese delivered prices.')
+    d=Drawing(760,870)
+    d.add(Rect(0,0,760,870,fillColor=HexColor('#ffffff'),strokeColor=None))
+    d.add(String(34,840,'International annual fuel benchmarks',fontName='Helvetica-Bold',fontSize=19))
+    d.add(String(34,818,'Separate units and definition segments | World Bank retained publication vintages',fontSize=10))
+    panels=[('Coal, Australian','Australian coal (USD/t)',500,100,'Spot 2015-2021; mixed 2022; futures 2023-2024 (one return, SD unavailable).'),
+            ('Crude oil, Brent','Brent crude (USD/bbl)',120,30,'Nine adjacent annual returns in 2015-2024.'),
+            ('Natural gas, Europe','European natural gas (USD/MMBtu)',45,15,'Mixed 2015; TTF 2016-2023 (seven returns); anomalous 2024 value excluded.')]
+    for i,(key,label,maximum,step,note) in enumerate(panels):
+        bottom=592-i*254; left=74; width=620; height=162
+        d.add(String(34,bottom+190,label,fontName='Helvetica-Bold',fontSize=13))
+        def point(r):return left+(r['year']-2015)*width/9,bottom+r['_value']/maximum*height
+        for value in range(0,maximum+1,step):
+            y=bottom+value/maximum*height
+            d.add(Line(left,y,left+width,y,strokeColor=HexColor('#e5eaef')))
+            d.add(String(left-10,y-3,str(value),textAnchor='end',fontSize=9))
+        for year in range(2015,2025):
+            d.add(String(left+(year-2015)*width/9,bottom-16,str(year),textAnchor='middle',fontSize=9))
+        rows=sorted([r for r in prices if r['variable']==key and 2015<=r['year']<=2024],key=lambda r:r['year'])
+        for a,b in zip(rows,rows[1:]):
+            if (b['year']==a['year']+1 and a['definition_segment']==b['definition_segment']
+                    and a['annual_definition_status']==b['annual_definition_status']=='homogeneous'):
+                d.add(Line(*point(a),*point(b),strokeColor=COLORS[i],strokeWidth=2.2))
+        for r in rows:
+            mixed=r['annual_definition_status']=='mixed'
+            d.add(Circle(*point(r),3.8,fillColor=HexColor('#ffffff') if mixed else COLORS[i],
+                         strokeColor=COLORS[i],strokeWidth=1.6))
+        d.add(String(34,bottom-37,note,fontSize=8.5))
+    d.add(String(34,18,'Open circles: mixed definitions, excluded from returns. No line crosses a definition break. Not Chinese delivered prices.',fontSize=9))
     renderSVG.drawToFile(d,str(out/'price_trends.svg'))

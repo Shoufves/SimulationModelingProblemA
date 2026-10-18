@@ -10,7 +10,7 @@ from pypdf import PdfReader
 
 ROOT=Path(__file__).resolve().parents[1]
 DEST=ROOT/'data/processed/q1'
-EVID=ROOT/'outputs/q1_review/additions'
+EVID=ROOT/'outputs/q1_review/revision1'
 
 def writecsv(name,rows):
     with (DEST/name).open('w',encoding='utf-8-sig',newline='') as f:
@@ -69,9 +69,27 @@ def prices():
             if var=='Natural gas, Europe' and year==2024:continue
             rows.append(parsed[('Q1_WB_PINK_FEB_2025',var,year)])
     if any(x['absolute_difference']>x['rounding_tolerance'] for x in overlaps):raise ValueError('Unexpected 2020 bridge discrepancy')
+    for r in rows:
+        year=int(r['year']);var=r['variable']
+        r.update(definition_segment='published_benchmark',annual_definition_status='homogeneous',
+                 definition_switch='',definition_locator='Archive Description sheet; selected PDF p3',
+                 definition_note='No definition break identified in the reviewed 2015-2024 window; vintages and rounding retained')
+        if var=='Coal, Australian':
+            r.update(definition_segment=('pre2015_coal' if year<2015 else 'newcastle_spot_6000' if year<2022 else 'mixed_2022' if year==2022 else 'newcastle_futures_6000'),
+                     annual_definition_status='mixed' if year==2022 else 'homogeneous',definition_switch='2022-02',
+                     definition_locator='Archive Description!B4; January 2023/January 2024/February 2025 PDF p3, November 2022 change note',
+                     definition_note='Replacement effective February 2022, not retrospective to 2021; 2022 mixes spot and futures. No cross-break returns.')
+        elif var=='Natural gas, Europe':
+            r.update(definition_segment='pre2015_gas' if year<2015 else 'mixed_2015' if year==2015 else 'TTF',
+                     annual_definition_status='mixed' if year==2015 else 'homogeneous',definition_switch='2015-04',
+                     definition_locator='Archive Description!B12; selected PDF p3',
+                     definition_note='TTF from April 2015; 2015 annual mean mixes import-border/spot and TTF. No return involving mixed 2015.')
+        if year<2015:
+            r.update(definition_segment='background_outside_review_window',annual_definition_status='outside_review_window',
+                     definition_note='Background observation outside the 2015-2024 definition review; no homogeneous-segment claim for earlier years')
     writecsv('prices_reviewed.csv',rows)
     proof=dict(annual_checks=audits,archive_2020_overlaps=overlaps,
-        selection='Archive through 2020; January 2024 for 2021; February 2025 for 2022--2024. Same labels/units and source definitions; rounded PDF and archive precision differ.',
+        selection='Archive through 2020; January 2024 for 2021; February 2025 for 2022--2024. Overlap is rounding check only, not proof of definition continuity. Explicit segments exclude gas 2015 and coal 2022 from returns; observed mixed values remain in history.',
         rejected='Europe gas 2024 = 2.00 in both 2025 PDFs, outside quarterly range 8.75--13.57; excluded. No repair by averaging. NEA TTF 10.9 is a separate 2024 snapshot, not spliced into WB.',
         revisions='Japan LNG 2022 18.33 in January 2023 vs 18.43 later; 2023 14.23 in January 2024 vs 14.39 later; 2024 12.85 in January 2025 vs 12.84 February. Later values selected explicitly, no averaging.',
         original_quarantined_workbooks='Unchanged and excluded')

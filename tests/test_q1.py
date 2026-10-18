@@ -11,13 +11,29 @@ from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
 sys.path.insert(0,str(ROOT/'scripts'))
-from energy_model.q1 import finite, ratio, annual_log_volatility, compound_index, spatial_difference, concentration
+from energy_model.q1 import finite, ratio, annual_log_volatility, segmented_price_volatility, compound_index, spatial_difference, concentration
 import build_q1 as q1
+import review_q1_delivery as delivery
 from q1_additional_analysis import derive, synthesize
 from audit_workspace import is_external_history
 
 
 class Q1MathTests(unittest.TestCase):
+    def test_price_definition_break_does_not_generate_a_return(self):
+        rows=[dict(year=y,value=v,definition_segment=s,annual_definition_status=t) for y,v,s,t in
+              [(2015,100,'spot','homogeneous'),(2016,110,'spot','homogeneous'),(2017,121,'spot','homogeneous'),
+               (2018,500,'mixed','mixed'),(2019,1000,'future','homogeneous'),(2020,1000,'future','homogeneous')]]
+        results={r['definition_segment']:r for r in segmented_price_volatility(rows)}
+        self.assertAlmostEqual(results['spot']['value'],0)
+        self.assertEqual(results['spot']['n_returns'],2)
+        self.assertEqual(results['future']['adjacent_pairs'],[(2019,2020)])
+        self.assertIsNone(results['future']['value'])
+        self.assertEqual(results['spot']['excluded_mixed_years'],[2018])
+
+    def test_price_missing_definition_is_rejected(self):
+        with self.assertRaisesRegex(ValueError,'definition review'):
+            segmented_price_volatility([dict(year=2015,value=100)])
+
     def test_unknown_and_nonfinite_are_not_zero(self):
         for value in (None,'',True,float('nan'),float('inf')):
             with self.subTest(value=value),self.assertRaises(ValueError):finite(value)
@@ -114,12 +130,33 @@ class Q1InputTests(unittest.TestCase):
         inds,*_=q1.calculate(self.data)
         for r in inds:
             if r['indicator_id'].startswith('price_log_volatility_'):
-                end=2024 if r['indicator_id'].endswith('Natural gas, Europe') else 2025
-                self.assertEqual(r['effective_years'],';'.join(map(str,range(2015,end))))
+                meta=json.loads(r['boundary'])
+                self.assertEqual(r['effective_years'],';'.join(map(str,meta['observed_years'])))
+                if 'Natural gas, Europe' in r['indicator_id']:
+                    self.assertEqual(meta['adjacent_pairs'],[[y,y+1] for y in range(2016,2023)])
+                if r['indicator_id'].endswith('__newcastle_spot_6000'):
+                    self.assertEqual(meta['n_returns'],6)
+                if r['indicator_id'].endswith('__newcastle_futures_6000'):
+                    self.assertEqual(meta['n_returns'],1);self.assertIsNone(r['value'])
         _,handoff=q1.handoff(self.history,inds)
         rows=[r for r in handoff if r['record_kind']=='numeric_observation_candidate']
         self.assertTrue(rows)
         self.assertTrue(all(r['value'] is not None and r['unit'] and r['candidate_refs'] for r in rows))
+
+    def test_2024_additions_keep_definition_precision_and_candidates(self):
+        inds,*_=q1.calculate(self.data)
+        _,hand=q1.handoff(self.history,inds)
+        def value(key):return next(r for r in inds if r['indicator_id']==key and r['year']==2024)
+        self.assertEqual(value('nonfossil_primary_consumption_share')['value'],19.8)
+        self.assertEqual(value('nonfossil_primary_consumption_share')['status'],'published_preliminary')
+        self.assertEqual(value('new_storage_power')['value'],73.76)
+        self.assertEqual(value('new_storage_energy')['value'],168.2)
+        self.assertEqual(value('new_storage_duration_published')['value'],2.3)
+        candidates=[r for r in hand if r['record_kind']=='numeric_observation_candidate']
+        self.assertTrue(any(r['variable']=='nonfossil_primary_consumption_share' for r in candidates))
+        self.assertEqual(len([r for r in candidates if r['variable']=='new_storage_energy' and r['region']=='China']),1)
+        self.assertFalse(any(r['variable']=='new_storage_energy_text_rounded' for r in candidates))
+        self.assertTrue(any(r['variable']=='new_storage_energy_text_rounded' and r['value']==168 for r in self.history))
 
     def test_trade_year_mismatch_rejected(self):
         d=copy.deepcopy(self.data);d['pipeline'][0]['year']=2023
@@ -215,6 +252,55 @@ class Q1OutputTests(unittest.TestCase):
                 for path in ('outputs/q1/other','data/unsafe'):
                     with self.assertRaises(ValueError):q1.run(path)
             self.assertEqual((out/'report.md').read_text(encoding='utf-8'),'other member')
+
+
+class Q1DeliveryTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
+        self.root=Path(self.tmp.name);self.out=self.root/'outputs/q1/test';self.out.mkdir(parents=True)
+        (self.root/'workflow').mkdir()
+        for name,content in [('input.csv','81.48'),('original.txt','original'),('code.py','# fixture')]:
+            (self.root/name).write_text(content,encoding='utf-8')
+        self.config=dict(inputs=[dict(id='cost',path='input.csv',sha256=q1.sha(self.root/'input.csv'),source_map={'s':'s'})],
+                         sources={'s':dict(artifacts=[dict(path='original.txt',sha256=q1.sha(self.root/'original.txt'))])},decisions={})
+        q1.dump(self.root/'workflow/q1_inputs.json',self.config)
+        (self.out/'report.md').write_text('old success',encoding='utf-8')
+        q1.dump(self.out/'run_manifest.json',dict(owner='p1/lb',status='success',run_id='old-success',
+             config_path='workflow/q1_inputs.json',config_sha256=q1.sha(self.root/'workflow/q1_inputs.json'),
+             inputs=self.config['inputs'],sources=self.config['sources'],config={},
+             code_hashes={'code.py':q1.sha(self.root/'code.py')},outputs={'report.md':q1.sha(self.out/'report.md')}))
+        q1.dump(self.out.parent/'test.latest-attempt.json',dict(status='success',run_id='old-success',
+             output_valid_for_this_attempt=True,manifest_sha256=q1.sha(self.out/'run_manifest.json')))
+        for p in (patch.object(q1,'ROOT',self.root),patch.object(delivery,'ROOT',self.root),patch.object(q1,'CODE_PATHS',['code.py'])):
+            p.start();self.addCleanup(p.stop)
+
+    def test_matching_current_artifacts_are_accepted(self):
+        self.assertEqual(delivery.validate_current_artifacts(self.out,self.config)['run_id'],'old-success')
+
+    def test_changed_actual_input_rejects_old_success(self):
+        (self.root/'input.csv').write_text('91.48',encoding='utf-8')
+        with self.assertRaisesRegex(ValueError,'Input hash mismatch'):
+            delivery.validate_current_artifacts(self.out,self.config)
+
+    def test_missing_original_rejects_old_success(self):
+        (self.root/'original.txt').unlink()
+        with self.assertRaises(FileNotFoundError):delivery.validate_current_artifacts(self.out,self.config)
+
+    def test_failed_run_then_restored_input_still_rejects_old_success(self):
+        (self.root/'input.csv').write_text('91.48',encoding='utf-8')
+        self.assertEqual(q1.run('outputs/q1/test'),1)
+        (self.root/'input.csv').write_text('81.48',encoding='utf-8')
+        q1.preflight(self.config)
+        self.assertEqual((self.out/'report.md').read_text(encoding='utf-8'),'old success')
+        with self.assertRaisesRegex(ValueError,'latest successful attempt'):
+            delivery.validate_current_artifacts(self.out,self.config)
+
+    def test_manifest_cannot_claim_different_input_identity(self):
+        m=delivery.load(self.out/'run_manifest.json');m['inputs']=[]
+        q1.dump(self.out/'run_manifest.json',m)
+        latest=delivery.load(self.out.parent/'test.latest-attempt.json')
+        latest['manifest_sha256']=q1.sha(self.out/'run_manifest.json');q1.dump(self.out.parent/'test.latest-attempt.json',latest)
+        with self.assertRaisesRegex(ValueError,'identity mismatch'):delivery.validate_current_artifacts(self.out,self.config)
 
 
 class AuditPortabilityTests(unittest.TestCase):
