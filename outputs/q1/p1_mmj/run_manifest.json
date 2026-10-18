@@ -4,9 +4,9 @@
   "success": true,
   "result_status": "Q1_research_candidate_with_explicit_gaps_pending_A7",
   "base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
-  "code_commit_sha": "0891132923138809f84a4ffbb1d6e9f77729ca61",
+  "code_commit_sha": "8e05bb1df991c1cd110395e9439acacc33a788b6",
   "dirty_worktree": true,
-  "worktree_status": "M README.md\n M docs/solutions/p1-mmj.md\n M outputs/validation/tests.json\n M outputs/validation/workspace_audit.json\n M outputs/workflow/next_prompt.md\n M outputs/workflow/status.json\n M outputs/workflow/status.md\n M scripts/run_q1_assessment.py\n M scripts/validate_q1.py\n M src/energy_model/q1.py\n M tests/test_q1.py\n?? docs/reviews/q1-mmj-selfcheck-round2-20261018.md\n?? outputs/q1/.q1-mmj-4a1855e55b634403aa7e359e7f5f0ca0/",
+  "worktree_status": "D .gitattributes\n M README.md\n M data/catalog/datasets_unified.csv\n M data/catalog/q1_evidence_review.json\n M docs/RUNNING.md\n M docs/solutions/p1-mmj.md\n M outputs/q1/p1_mmj/gaps_and_conflicts.csv\n M outputs/q1/p1_mmj/history.csv\n M outputs/q1/p1_mmj/indicators.csv\n M outputs/q1/p1_mmj/model_handoff.csv\n M outputs/q1/p1_mmj/report.md\n M outputs/q1/p1_mmj/run_manifest.json\n M outputs/q1/p1_mmj/static_balance.json\n M outputs/validation/tests.json\n M outputs/validation/workspace_audit.json\n M outputs/workflow/next_prompt.md\n M outputs/workflow/status.json\n M outputs/workflow/status.md\n M scripts/prepare_q1_inputs.py\n M scripts/run_q1_assessment.py\n M scripts/validate_q1.py\n M src/energy_model/q1.py\n M tests/test_q1.py\n M workflow/q1_inputs.json\n?? data/processed/q1/ndc_2024.csv\n?? data/processed/q1/prices_scoped.csv\n?? docs/reviews/q1-mmj-review-fixes-20261018.md\n?? outputs/q1/.q1-mmj-e7f2163d8f244bee9a249d6d91eaecf5/\n?? outputs/validation/q1_mmj_reviewfix_q1_only_environment.json\n?? outputs/validation/q1_mmj_reviewfix_round1.json\n?? outputs/validation/q1_mmj_reviewfix_round2.json\n?? outputs/validation/q1_mmj_reviewfix_sandbox_attempt.json\n?? requirements-q1.txt",
   "command": [
     "python",
     "-B",
@@ -20,16 +20,27 @@
     "outputs/q1/p1_mmj"
   ],
   "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
-  "executable": "D:\\CSF2026\\mmj\\SimulationModelingProblemA\\.venv\\Scripts\\python.exe",
+  "executable": "D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tmp\\q1-reviewfix-clean-env\\Scripts\\python.exe",
   "dependencies": {
     "matplotlib": "3.10.8",
+    "rendering": {
+      "numpy": "2.3.5",
+      "pillow": "13.0.0",
+      "contourpy": "1.4.0",
+      "fonttools": "4.67.0",
+      "kiwisolver": "1.5.1",
+      "cycler": "0.12.1",
+      "packaging": "26.3",
+      "python-dateutil": "2.9.0.post0"
+    },
+    "freetype": "2.6.1",
     "core": "Python standard library"
   },
   "random_steps": false,
   "network_access": false,
   "input_manifest": {
     "path": "workflow/q1_inputs.json",
-    "sha256": "2d8e57b00ac1095fc2040171c233e339413733ab05377e780b9f3e43e70c433e"
+    "sha256": "58afd3503da370f2a260755484fa0bc1430fc41e9942d083943dde8e7be197d4"
   },
   "input_hashes": {
     "data/processed/unified/nbs_history.csv": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
@@ -43,7 +54,8 @@
     "data/processed/technology_accounting_parameters.csv": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
     "data/processed/q1/cost_method_parameters.csv": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9",
     "data/processed/q1/storage_2024.csv": "e388f90ee66a476b7406d9956e3d875e7394c8e28b705317aff36b56a0c03c10",
-    "data/processed/commodity_price_references.csv": "c123f4ffffd9ccea2320ef951fc05d166696f6196aea1cb3ac31ec4e9586aa2d",
+    "data/processed/q1/ndc_2024.csv": "733a054b28f7c22dd7106af030ba7a286cc8c380da1551601f11db67640007c3",
+    "data/processed/q1/prices_scoped.csv": "f75e574b691501f3357062db09fa8c57ddcd63a553d19440038cdbebe11451b6",
     "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f",
     "data/processed/lb/trade_alternatives/lng_china_2024.csv": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363",
     "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv": "bf10eb6cfb4cba6bebe7b239e861271fac4b9e2e0047a2dc488ba6224584775c",
@@ -68,6 +80,7 @@
     "yx:NEA_STORAGE_2025": "739bb225cb040415095b6d3e1de0c81f75ec32541e0613c823d849d190c44453",
     "yx:IRENA_COST_2024_PDF": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
     "lb/base:NEA_STORAGE_2025": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3",
+    "lb/base:NDC_2035": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d",
     "yx:WB_PINK_SHEET_STABLE": "f25870f3ce992bf6caa6b7159ae3722c9411ab66108cef47aea2e4451a21961a",
     "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63",
     "mmj:S13": "fdcf2c563d51bdfe1135b2f2a3e88d87d2ada2c66acfaa6e075cf8fa15f88e98",
@@ -75,13 +88,14 @@
   },
   "evidence_review": {
     "path": "data/catalog/q1_evidence_review.json",
-    "sha256": "713ba43dfdbcc0c50f5945055cb2a5436398b61b60f9da8d4025cc3be694da7a"
+    "sha256": "dc8810397ab525b4969eb686ecc08056f227c097d026e516db89322df3d18569"
   },
   "code_hashes": {
     "run.py": "688a6db72a3a94aaef16ffe4be2523bc032137f8954f2bb6376375f92380139d",
-    "scripts/run_q1_assessment.py": "d7df40ce2920f0251135fd2a5e9cbf0647e1d37320a068021487a8d13f392bea",
-    "scripts/prepare_q1_inputs.py": "4985868ca0b8ca124d7f5774d0ffea1ae8179ba741fad7cc3b69052f68a80218",
-    "src/energy_model/q1.py": "a296131563eb9452825c269ae89d149ff2be5e478b1be981a065360907dfe1ec"
+    "scripts/run_q1_assessment.py": "7877cf2655aefebc8ff58d15ccd69fc340756e971e09f0d6903b5d054917b4b5",
+    "scripts/prepare_q1_inputs.py": "f4d62b451fe76145b34ffa3e34ae76fe3eb9ecb1747a80430ecf137da5942e92",
+    "src/energy_model/q1.py": "ed2865aa6300fc8b0f31d6603c90fc969e98e27d708f1c3a29498dcdedaaa353",
+    "requirements-q1.txt": "3394982a96de1520c572f1c60267831c570c640eb5322f35587e9a9dcd97691a"
   },
   "configuration": {
     "real_wacc": [
@@ -103,10 +117,10 @@
     "只读工作区/README.md": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af"
   },
   "counts": {
-    "history": 881,
-    "indicators": 168,
+    "history": 882,
+    "indicators": 169,
     "roles": 12,
-    "handoff": 324,
+    "handoff": 325,
     "gaps": 16
   },
   "scientific_limits": [
@@ -138,14 +152,14 @@
   },
   "outputs": {
     "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
-    "gaps_and_conflicts.csv": "9aaf8d55371d93b553b7779f1c77cebd914b9af6f3334c3a4603786fa951b465",
-    "history.csv": "c983a410acef77c6edfeeba191847c4625efe352512b50a728ac09957af056e9",
-    "indicators.csv": "3f1a109fcb54d7d90dbc10cbc04922b702af3b5205fb76886b6f92caa81c6db2",
-    "model_handoff.csv": "5fca67c96ed9a39141b4cf66159ebf3029ca9bd68f2dd8c86439d1ec220ed2fc",
+    "gaps_and_conflicts.csv": "d45d3578547a5b0ed38906ed49c0bc05b4c205b7937eee40af49ceefc193fbc4",
+    "history.csv": "7745a56dfd1fec6a50d1f1d5b0ee5ed6448006b9b1b1788fae6da2c7d00313da",
+    "indicators.csv": "278ee6cf043ad3b5612f902aaca35551a2f0dc8a035c817ee93b2f8969bdd749",
+    "model_handoff.csv": "dbbafcda87cb78371c1ff871a38f892bd2b682b8a125a215ac13439b6df008ee",
     "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
     "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
     "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
-    "report.md": "ea3284e3b4540280f475ffe350ba34cd829005b846dd0535030c25075d6f3db7",
-    "static_balance.json": "1b036da474622b41adb2fd67df9cd5b5866491b55761a1d9f24f35954086e004"
+    "report.md": "4aa24537aa1f78d7eaddbc33cea749a87fcbab8421fed400c1d4049e7f9ee47f",
+    "static_balance.json": "9a7c7e18f6566ef64ff3cbae97698c78a6be759d8396f408485b4e88978c7c21"
   }
 }

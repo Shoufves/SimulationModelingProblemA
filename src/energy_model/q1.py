@@ -117,13 +117,18 @@ def concentration(rows):
 
 
 def price_volatility(rows, start=2015, end=2024):
-    """Sample SD of adjacent annual log changes; never bridges missing years."""
+    """Adjacent annual log SD within one definition; mixed years stay excluded.
+
+    An explicit definition change is never pooled into a single volatility.
+    Missing levels are retained as missing, separately from known mixed levels.
+    """
     if not rows:
         raise Q1Error("Empty price series")
     for field in ("unit", "variable", "source_id", "region"):
         if len({r[field] for r in rows}) != 1:
             raise Q1Error("Price series mismatch: " + field)
-    levels = {}
+    levels, definitions, statuses = {}, {}, {}
+    has_definitions = any("definition_id" in row for row in rows)
     for row in rows:
         year, value = int(row["year"]), number(row["value"])
         if year in levels:
@@ -131,13 +136,44 @@ def price_volatility(rows, start=2015, end=2024):
         if value is not None and value <= 0:
             raise Q1Error("Non-positive price")
         levels[year] = value
-    pairs, changes = [], []
+        if has_definitions:
+            definition = row.get("definition_id")
+            status = row.get("definition_status")
+            if not definition or status not in ("homogeneous", "mixed_definition"):
+                raise Q1Error("Missing or invalid price definition metadata")
+            definitions[year], statuses[year] = definition, status
+        else:
+            definitions[year], statuses[year] = "single_declared_series", "homogeneous"
+    pairs, excluded, grouped = [], [], {}
+    for year in range(start, end + 1):
+        if levels.get(year) is not None and statuses[year] == "homogeneous":
+            segment = grouped.setdefault(definitions[year], dict(
+                definition_id=definitions[year], level_years=[], valid_pairs=[], log_changes=[]))
+            segment["level_years"].append(year)
     for year in range(start + 1, end + 1):
         if levels.get(year-1) is not None and levels.get(year) is not None:
-            pairs.append([year-1, year])
-            changes.append(math.log(levels[year] / levels[year-1]))
-    return dict(value=statistics.stdev(changes) if len(changes) >= 2 else None,
-                valid_pairs=pairs, observations=len(changes),
+            pair = [year-1, year]
+            if "mixed_definition" in (statuses[year-1], statuses[year]):
+                excluded.append(dict(years=pair, reason="mixed_definition_level"))
+            elif definitions[year-1] != definitions[year]:
+                excluded.append(dict(years=pair, reason="definition_change"))
+            else:
+                pairs.append(pair)
+                segment = grouped[definitions[year]]
+                segment["valid_pairs"].append(pair)
+                segment["log_changes"].append(math.log(levels[year] / levels[year-1]))
+    segments = []
+    for segment in grouped.values():
+        changes = segment.pop("log_changes")
+        segments.append(dict(**segment, observations=len(changes),
+            value=statistics.stdev(changes) if len(changes) >= 2 else None))
+    active = [s for s in segments if s["observations"]]
+    return dict(value=active[0]["value"] if len(active) == 1 else None,
+                valid_pairs=pairs, observations=len(pairs), definition_segments=segments,
+                pooled_across_definitions=False, excluded_pairs=excluded,
+                excluded_level_years=[y for y in range(start,end+1) if
+                    levels.get(y) is not None and statuses[y] == "mixed_definition"],
+                comparable_level_years=[y for s in segments for y in s["level_years"]],
                 covered_level_years=[y for y in range(start, end+1) if levels.get(y) is not None],
                 missing_years=[y for y in range(start, end+1) if levels.get(y) is None])
 

@@ -2,7 +2,27 @@
 
 ## Q1 候选研究入口（p1/mmj）
 
-`python -B -X utf8 run.py q1 --output-dir outputs/q1/p1_mmj`离线生成历史、指标、12类角色、Q2交接、缺口、静态账、图文报告和运行manifest。评审使用独立目录`outputs/q1/review_mmj`。缺输入、指纹/口径错误返回非零；无归属目录不覆盖。正常运行需matplotlib，核心计算使用标准库；实质证据重建脚本`prepare_q1_inputs.py`另需openpyxl、pypdf、lxml，不在常规复现中隐式调用。
+`python -B -X utf8 run.py q1 --output-dir outputs/q1/p1_mmj`离线生成历史、指标、12类角色、Q2交接、缺口、静态账、图文报告和运行manifest。评审使用独立目录`outputs/q1/review_mmj`。缺输入、指纹/口径错误返回非零；无归属目录不覆盖。正常运行的可安装依赖见`requirements-q1.txt`，固定matplotlib 3.10.8；核心计算使用标准库。实质证据重建脚本`prepare_q1_inputs.py`另需`requirements-data.txt`中的openpyxl、pypdf、lxml，不在常规复现中隐式调用。
+
+仅复跑已提交的Q1输入和图表时：
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python -m pip install -r requirements-q1.txt
+.\.venv\Scripts\python -B -X utf8 run.py q1 --output-dir outputs/q1/review_mmj
+```
+
+CSV/JSON/Markdown为科学结果比较依据，同代码、输入、配置下应逐字节一致。PNG另受matplotlib、NumPy、Pillow、FreeType等渲染依赖影响；固定顶层版本不构成跨平台PNG字节保证。同一环境应一致，跨环境应核对科学数据和图形含义；每次manifest记录实际matplotlib及渲染依赖版本。
+
+本项目按原件与处理表字节核验。新克隆在首次签出前关闭换行转换；已有干净工作区更新前同样检查本地设置，不对带哈希原件批量规范化：
+
+```powershell
+git -c core.autocrlf=false clone https://github.com/Shoufves/SimulationModelingProblemA.git
+# 已有仓库在其目录中执行
+git config --local core.autocrlf false
+```
+
+本轮撤回候选新增的`.gitattributes`，依协作文档§6.4将仓库换行属性统一留待专门PR评审。
 
 见[候选说明](solutions/p1-mmj.md)。四维结果各有限定范围，不宣称全国校准或Q2准入完成。默认审计对`data/restricted`只验证存在/大小，密钥扫描剪枝私有内容与环境/临时缓存；结果明确披露排除范围。官方附件及只读原文仍逐字节核验。
 
@@ -11,11 +31,12 @@
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements-data.txt
+.\.venv\Scripts\python -m pip install -r requirements-q1.txt
 .\.venv\Scripts\python -B -X utf8 run.py audit
 .\.venv\Scripts\python -B -X utf8 run.py test
 ```
 
-新环境安装命令供迁移到其他机器时使用。本轮未重新安装依赖；精确实际版本见 `outputs/validation/environment.json`。旧 `.venv-workbench` 已移除，不作为数据或提交材料。未来Mesa/SciPy正式模型尚未实现，不能据现有依赖清单宣称全国模型环境已验收。
+完整数据准备使用上面两份依赖，Q1常规复跑只需Q1清单。整理阶段的实际环境见 `outputs/validation/environment.json`；本轮评审修复的干净安装及两轮自检证据另见`docs/reviews/q1-mmj-review-fixes-20261018.md`。旧 `.venv-workbench` 已移除，不作为数据或提交材料。未来Mesa/SciPy正式模型尚未实现，不能据现有依赖清单宣称全国模型环境已验收。
 
 | 命令 | 做什么 | 输出/边界 |
 |---|---|---|

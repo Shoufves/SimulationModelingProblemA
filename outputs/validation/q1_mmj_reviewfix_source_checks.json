@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "source_matches_base:data/raw/lb/base/reports/china_ndc_2035.pdf",
+      "passed": true,
+      "sha256": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d"
+    },
+    {
+      "check": "source_matches_base:data/raw/batch1_national/wb_commodity_prices_stable.xlsx",
+      "passed": true,
+      "sha256": "f25870f3ce992bf6caa6b7159ae3722c9411ab66108cef47aea2e4451a21961a"
+    },
+    {
+      "check": "preliminary_ndc_direct_value",
+      "passed": true,
+      "physical_page": 5,
+      "printed_page": 3
+    },
+    {
+      "check": "europe_definition_date",
+      "passed": true,
+      "locator": "Description!B12",
+      "text": "Natural Gas (Europe), from April 2015, Netherlands Title Transfer Facility (TTF); April 2010 to March 2015, average import border price and a spot price component, including UK; during June 2000 - March 2010 prices excludes UK.  "
+    },
+    {
+      "check": "all_price_levels_retained",
+      "passed": true,
+      "rows": 36
+    },
+    {
+      "check": "europe_independent_sd",
+      "passed": true,
+      "value": 0.4016027718890919,
+      "valid_pairs": [
+        [
+          2016,
+          2017
+        ],
+        [
+          2017,
+          2018
+        ],
+        [
+          2018,
+          2019
+        ],
+        [
+          2019,
+          2020
+        ]
+      ],
+      "excluded_pairs": [
+        {
+          "years": [
+            2015,
+            2016
+          ],
+          "reason": "mixed_definition_level"
+        }
+      ]
+    },
+    {
+      "check": "both_rounds_passed",
+      "passed": true
+    },
+    {
+      "check": "round1_current_code_and_inputs",
+      "passed": true
+    },
+    {
+      "check": "round2_current_code_and_inputs",
+      "passed": true
+    },
+    {
+      "check": "cross_environment_scientific_data",
+      "passed": true,
+      "identical_files": [
+        "energy_roles.csv",
+        "gaps_and_conflicts.csv",
+        "history.csv",
+        "indicators.csv",
+        "model_handoff.csv",
+        "overview.png",
+        "regional.csv",
+        "regional.png",
+        "report.md",
+        "static_balance.json"
+      ],
+      "different_files": []
+    },
+    {
+      "check": "latest_report_preserved:outputs/validation/tests.json",
+      "passed": true
+    },
+    {
+      "check": "latest_report_preserved:outputs/validation/workspace_audit.json",
+      "passed": true
+    },
+    {
+      "check": "latest_report_preserved:outputs/workflow/status.json",
+      "passed": true
+    },
+    {
+      "check": "latest_report_preserved:outputs/workflow/status.md",
+      "passed": true
+    },
+    {
+      "check": "latest_report_preserved:outputs/workflow/next_prompt.md",
+      "passed": true
+    },
+    {
+      "check": "original_contract_preserved:data/sources.json",
+      "passed": true
+    },
+    {
+      "check": "original_contract_preserved:data/evidence_reviews.json",
+      "passed": true
+    },
+    {
+      "check": "original_contract_preserved:workflow/model_inputs.json",
+      "passed": true
+    },
+    {
+      "check": "withdrawn_attributes",
+      "passed": true
+    }
+  ],
+  "scope": "Independent local follow-up; source decoding and arithmetic, not third-party approval"
+}

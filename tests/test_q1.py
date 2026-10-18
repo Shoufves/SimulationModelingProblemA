@@ -2,6 +2,7 @@
 import copy
 import importlib.util
 import math
+import statistics
 from pathlib import Path
 import sys
 import tempfile
@@ -102,6 +103,44 @@ class Q1CalculationTests(unittest.TestCase):
 
     def test_insufficient_prices_unknown_not_zero_volatility(self):
         self.assertIsNone(price_volatility(self.prices([(2015,1),(2016,2)]))["value"])
+
+    def test_mixed_annual_level_is_retained_but_neither_adjacent_return_is_used(self):
+        rows=self.prices([(2015,1),(2016,10),(2017,20),(2018,20)])
+        for row in rows:
+            row.update(definition_id="TTF",definition_status="homogeneous")
+        rows[0].update(definition_id="mixed_border_TTF",definition_status="mixed_definition")
+        result=price_volatility(rows)
+        self.assertEqual(result["valid_pairs"],[[2016,2017],[2017,2018]])
+        self.assertEqual(result["excluded_level_years"],[2015])
+        self.assertNotIn(2015,result["missing_years"])
+        self.assertEqual(result["excluded_pairs"],[
+            dict(years=[2015,2016],reason="mixed_definition_level")])
+        self.assertAlmostEqual(result["value"],math.log(2)/math.sqrt(2))
+        rows[0]["value"]="100000"
+        self.assertEqual(price_volatility(rows)["value"],result["value"])
+
+    def test_definition_switch_segments_are_not_pooled(self):
+        rows=self.prices([(2015,1),(2016,2),(2017,2),(2018,100),(2019,100),(2020,200)])
+        for row in rows:
+            row.update(definition_id="A" if int(row["year"])<2018 else "B",
+                       definition_status="homogeneous")
+        result=price_volatility(rows)
+        self.assertIsNone(result["value"])
+        self.assertEqual(result["observations"],4)
+        self.assertEqual(len(result["definition_segments"]),2)
+        self.assertEqual(result["excluded_pairs"],[
+            dict(years=[2017,2018],reason="definition_change")])
+        for segment in result["definition_segments"]:
+            self.assertEqual(segment["observations"],2)
+            self.assertAlmostEqual(segment["value"],math.log(2)/math.sqrt(2))
+
+    def test_partial_or_invalid_definition_metadata_fails_closed(self):
+        for mutation in (lambda r:r[0].update(definition_id="TTF"),
+                         lambda r:[x.update(definition_id="TTF",definition_status="unknown") for x in r]):
+            rows=self.prices([(2015,1),(2016,2)])
+            mutation(rows)
+            with self.assertRaisesRegex(Q1Error,"definition metadata"):
+                price_volatility(rows)
 
     def test_price_duplicate_nonpositive_and_mixed_series_rejected(self):
         cases=[self.prices([(2015,1),(2015,2)]),self.prices([(2015,0)])]
@@ -336,6 +375,45 @@ class Q1ContractTests(unittest.TestCase):
                             for r in selected))
         self.assertEqual(next(r["status"] for r in gaps if r["gap_id"]=="storage_2024"),
                          "blocked_state")
+
+    def test_ndc_preliminary_share_has_distinct_evidence_and_candidate_handoff(self):
+        history,indicators,roles,handoff,gaps,static=calculate(
+            ROOT,self.manifest,validate_inputs(ROOT,self.manifest))
+        published=[r for r in history if r["variable"]=="nonfossil_primary_consumption_share"]
+        self.assertEqual(len(published),1)
+        observation=published[0]
+        self.assertEqual((observation["year"],observation["value"],observation["unit"]),(2024,19.8,"%"))
+        self.assertEqual(observation["source_key"],"lb/base:NDC_2035")
+        self.assertEqual(observation["status"],"published_preliminary_estimate")
+        nbs=next(r for r in history if r["year"]==2024 and
+                 r["variable"]=="consumption_primary_electricity_other_pct")
+        self.assertNotEqual(observation["record_id"],nbs["record_id"])
+        indicator=next(r for r in indicators if r["indicator_id"]==observation["variable"])
+        self.assertEqual(indicator["input_refs"],observation["record_id"])
+        candidates=[r for r in handoff if r["variable"]==observation["variable"]]
+        self.assertEqual(len(candidates),1)
+        self.assertEqual(candidates[0]["source_status"],"published_preliminary_estimate")
+        self.assertEqual(candidates[0]["status"],"candidate_not_admitted")
+        self.assertEqual(next(r for r in gaps if r["gap_id"]=="nonfossil_consumption")["years"],"2015-2023")
+
+    def test_actual_europe_volatility_uses_only_full_TTF_years_and_reports_pairs(self):
+        history,indicators,roles,handoff,gaps,static=calculate(
+            ROOT,self.manifest,validate_inputs(ROOT,self.manifest))
+        levels={r["year"]:r["value"] for r in history if
+                r["input_id"]=="price" and r["variable"]=="Natural gas, Europe"}
+        expected=statistics.stdev([math.log(levels[y]/levels[y-1]) for y in range(2017,2021)])
+        result=static["prices"]["Natural gas, Europe"]
+        self.assertAlmostEqual(result["value"],expected)
+        self.assertEqual(result["observations"],4)
+        self.assertEqual(result["comparable_level_years"],list(range(2016,2021)))
+        self.assertEqual(result["missing_years"],list(range(2021,2025)))
+        indicator=next(r for r in indicators if r["indicator_id"]=="price_log_sd_Natural gas, Europe")
+        self.assertEqual(indicator["valid_years"],"2016-2017;2017-2018;2018-2019;2019-2020")
+        self.assertTrue(all(s["observations"]==5 for k,s in static["prices"].items()
+                            if k!="Natural gas, Europe"))
+        text=run_q1_assessment.report(indicators,roles,gaps,static,history)
+        self.assertIn("Description!B12",text)
+        self.assertIn("四个相邻变化",text)
 
     def test_scanner_never_opens_restricted_or_virtual_environment(self):
         parent=ROOT/"tmp/tests";parent.mkdir(parents=True,exist_ok=True)

@@ -1,0 +1,1554 @@
+{
+  "scope": "Engineering gate execution; scientific scope/peer approval recorded separately",
+  "passed": false,
+  "executed_on": "2026-10-18T16:43:25.318987+08:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\CSF2026\\mmj\\SimulationModelingProblemA\\.venv\\Scripts\\python.exe",
+  "code_commit_sha": "8e05bb1df991c1cd110395e9439acacc33a788b6",
+  "dirty_worktree": true,
+  "code_hashes": {
+    "run.py": "688a6db72a3a94aaef16ffe4be2523bc032137f8954f2bb6376375f92380139d",
+    "scripts/run_q1_assessment.py": "7877cf2655aefebc8ff58d15ccd69fc340756e971e09f0d6903b5d054917b4b5",
+    "scripts/prepare_q1_inputs.py": "f4d62b451fe76145b34ffa3e34ae76fe3eb9ecb1747a80430ecf137da5942e92",
+    "scripts/validate_q1.py": "a017046da311540beaaf89cf4cb2c964d1b294a99dcb1ca39a80e1ae1e4038c6",
+    "src/energy_model/q1.py": "ed2865aa6300fc8b0f31d6603c90fc969e98e27d708f1c3a29498dcdedaaa353",
+    "tests/test_q1.py": "b9afe03130b7774f273fc67b619b886f029329528fb757caecd827a53f541b65",
+    "scripts/audit_workspace.py": "65b5497f1edaad1ecf8282a98b08ad647c7d03d2f223f27ae37e9d1dd48a0cac",
+    "scripts/scan_google_keys.py": "58b3a8c5bfc195573eed158d8f082c9c35018ec12a934ba7b68e9d369750455a",
+    "scripts/build_workspace_catalog.py": "76a1c1d90b09abd2537e37b62297b138f3954c729a997d22f285e7fee72bbeb4",
+    "requirements-q1.txt": "3394982a96de1520c572f1c60267831c570c640eb5322f35587e9a9dcd97691a"
+  },
+  "input_manifest_sha256": "58afd3503da370f2a260755484fa0bc1430fc41e9942d083943dde8e7be197d4",
+  "checks_passed": false,
+  "tests": {
+    "tests": 172,
+    "failures": 0,
+    "errors": 12,
+    "skipped": 0,
+    "passed": false,
+    "seconds": 11.707292699982645,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "workspace_audit": {
+    "scope": "Workspace preservation and engineering checks only; not completion of final research.",
+    "passed": true,
+    "checks": [
+      {
+        "check": "retained_files_match_inventory",
+        "passed": true,
+        "detail": {
+          "scope": "nonrestricted file hashes; restricted existence/size only, NOT content preservation proof",
+          "resolved_original_paths": 1117,
+          "missing": [],
+          "unrecoverable_modifications": [],
+          "restricted_metadata_only": [
+            {
+              "path": "data/restricted/household/data/household_energy_source_fig4.csv",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 1.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 2.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 3.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 4.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 5.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 6.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            }
+          ],
+          "external_history_not_verified": [
+            {
+              "path": "../B题/2026年第二届全国大学生仿真建模应用挑战赛B题.pdf",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            },
+            {
+              "path": "../C题/2026年第二届全国大学生仿真建模应用挑战赛C题.pdf",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            },
+            {
+              "path": "../C题/附件1：车辆参数表.xlsx",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            },
+            {
+              "path": "../C题/附件2：4段路程车辆行驶数据.xlsx",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            },
+            {
+              "path": "../C题/附件3：参考工况.xlsx",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            },
+            {
+              "path": "../C题/附件4：部件特性（OCV—SOC、内阻、电机效率）.xlsx",
+              "action": "external_duplicate",
+              "content_read": false,
+              "existence_verified": false,
+              "reason": "Out-of-repository B/C retention history; excluded from A clone audit"
+            }
+          ]
+        }
+      },
+      {
+        "check": "working_tree_google_api_keys_absent",
+        "passed": true,
+        "detail": {
+          "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
+          "excluded_directories": [
+            "tmp",
+            "data/restricted"
+          ],
+          "pattern": "Google API key format only; not an exhaustive credential audit",
+          "passed": true,
+          "findings": [],
+          "errors": [],
+          "files_scanned": 1172,
+          "payloads_scanned": 2239,
+          "zip_members_scanned": 1067
+        }
+      },
+      {
+        "check": "protected_directory_unchanged",
+        "passed": true,
+        "detail": 3
+      },
+      {
+        "check": "five_official_originals_unchanged",
+        "passed": true,
+        "detail": [
+          "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+          "附件1.xlsx",
+          "附件2.xlsx",
+          "附件3.xlsx",
+          "附件4.xlsx"
+        ]
+      },
+      {
+        "check": "three_workspaces_consolidated",
+        "passed": true,
+        "detail": "one A workspace"
+      },
+      {
+        "check": "no_B_C_payload",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "check": "all_final_references_resolve",
+        "passed": true,
+        "detail": {
+          "count": 118,
+          "missing": []
+        }
+      },
+      {
+        "check": "final_reader_links_resolve",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "check": "retained_python_syntax",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "check": "unified_data_keys_unique",
+        "passed": true,
+        "detail": 362
+      },
+      {
+        "check": "unified_rows_trace_to_files",
+        "passed": true,
+        "detail": 362
+      },
+      {
+        "check": "scope_not_promoted",
+        "passed": true,
+        "detail": "formal admission still governed by model_inputs and evidence_reviews"
+      },
+      {
+        "check": "known_quarantine_preserved",
+        "passed": true,
+        "detail": [
+          "data/processed/lb/base/prices/worldbank_energy_annual_2000_latest.csv",
+          "data/processed/lb/base/prices/worldbank_energy_monthly_2000_latest.csv",
+          "data/processed/transmission_lines_candidate.csv"
+        ]
+      },
+      {
+        "check": "raw_exact_duplicates_removed",
+        "passed": true,
+        "detail": []
+      }
+    ],
+    "original_files": 5846,
+    "removed_files": 4776,
+    "removed_bytes": 296840178
+  },
+  "original_nine_subset_check": {
+    "passed": true,
+    "errors": [],
+    "accepted_inputs": [
+      {
+        "dataset_path": "data/observations/demand_energy_total_2015_2024.json",
+        "review_id": "R-S01-DEMAND-20261017",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+        "review_id": "R-S06-GDP-20261017",
+        "source_ids": [
+          "S06"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "review_id": "R-S17-20261016",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/energy_official_communique_2024.json",
+        "review_id": "R-S13-20261017",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_official_report_2024.json",
+        "review_id": "R-S22-20261017",
+        "source_ids": [
+          "S22"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_apparent_consumption_2024.json",
+        "review_id": "R-S23-20261017",
+        "source_ids": [
+          "S23"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/electricity_demand_official_2024.json",
+        "review_id": "R-S24-20261017",
+        "source_ids": [
+          "S24"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "review_id": "R-S25-20261017",
+        "source_ids": [
+          "S25"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/qinshan_asset_permit_case.json",
+        "review_id": "R-QINSHAN-ASSETS-20261017",
+        "source_ids": [
+          "S26",
+          "S27",
+          "S28"
+        ]
+      }
+    ],
+    "declared_inputs": 9,
+    "limitation": "仅检查已登记子集的证据结构和文件一致性；不自动验证原文真伪、转录正确性、数据覆盖完整性、情景参数或模型有效性。未准入不等于原数值错误。"
+  },
+  "key_scan": {
+    "working_tree": {
+      "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
+      "excluded_directories": [
+        "tmp",
+        "data/restricted"
+      ],
+      "pattern": "Google API key format only; not an exhaustive credential audit",
+      "passed": true,
+      "findings": [],
+      "errors": [],
+      "files_scanned": 1172,
+      "payloads_scanned": 2239,
+      "zip_members_scanned": 1067
+    }
+  },
+  "independent_reproduction": {
+    "passed": true,
+    "compared": "Current successful runs; all 10 actual artifacts and current code/input/configuration identities",
+    "author_outputs": {
+      "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
+      "gaps_and_conflicts.csv": "d45d3578547a5b0ed38906ed49c0bc05b4c205b7937eee40af49ceefc193fbc4",
+      "history.csv": "7745a56dfd1fec6a50d1f1d5b0ee5ed6448006b9b1b1788fae6da2c7d00313da",
+      "indicators.csv": "278ee6cf043ad3b5612f902aaca35551a2f0dc8a035c817ee93b2f8969bdd749",
+      "model_handoff.csv": "dbbafcda87cb78371c1ff871a38f892bd2b682b8a125a215ac13439b6df008ee",
+      "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
+      "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
+      "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
+      "report.md": "4aa24537aa1f78d7eaddbc33cea749a87fcbab8421fed400c1d4049e7f9ee47f",
+      "static_balance.json": "9a7c7e18f6566ef64ff3cbae97698c78a6be759d8396f408485b4e88978c7c21"
+    },
+    "review_outputs": {
+      "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
+      "gaps_and_conflicts.csv": "d45d3578547a5b0ed38906ed49c0bc05b4c205b7937eee40af49ceefc193fbc4",
+      "history.csv": "7745a56dfd1fec6a50d1f1d5b0ee5ed6448006b9b1b1788fae6da2c7d00313da",
+      "indicators.csv": "278ee6cf043ad3b5612f902aaca35551a2f0dc8a035c817ee93b2f8969bdd749",
+      "model_handoff.csv": "dbbafcda87cb78371c1ff871a38f892bd2b682b8a125a215ac13439b6df008ee",
+      "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
+      "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
+      "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
+      "report.md": "4aa24537aa1f78d7eaddbc33cea749a87fcbab8421fed400c1d4049e7f9ee47f",
+      "static_balance.json": "9a7c7e18f6566ef64ff3cbae97698c78a6be759d8396f408485b4e88978c7c21"
+    },
+    "runs": {
+      "p1_mmj": {
+        "passed": true,
+        "errors": [],
+        "actual_outputs": {
+          "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
+          "gaps_and_conflicts.csv": "d45d3578547a5b0ed38906ed49c0bc05b4c205b7937eee40af49ceefc193fbc4",
+          "history.csv": "7745a56dfd1fec6a50d1f1d5b0ee5ed6448006b9b1b1788fae6da2c7d00313da",
+          "indicators.csv": "278ee6cf043ad3b5612f902aaca35551a2f0dc8a035c817ee93b2f8969bdd749",
+          "model_handoff.csv": "dbbafcda87cb78371c1ff871a38f892bd2b682b8a125a215ac13439b6df008ee",
+          "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
+          "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
+          "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
+          "report.md": "4aa24537aa1f78d7eaddbc33cea749a87fcbab8421fed400c1d4049e7f9ee47f",
+          "static_balance.json": "9a7c7e18f6566ef64ff3cbae97698c78a6be759d8396f408485b4e88978c7c21"
+        },
+        "manifest": {
+          "schema_version": 1,
+          "candidate": "p1/mmj",
+          "success": true,
+          "result_status": "Q1_research_candidate_with_explicit_gaps_pending_A7",
+          "base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+          "code_commit_sha": "8e05bb1df991c1cd110395e9439acacc33a788b6",
+          "dirty_worktree": true,
+          "worktree_status": "D .gitattributes\n M README.md\n M data/catalog/datasets_unified.csv\n M data/catalog/q1_evidence_review.json\n M docs/RUNNING.md\n M docs/solutions/p1-mmj.md\n M outputs/validation/tests.json\n M outputs/validation/workspace_audit.json\n M outputs/workflow/next_prompt.md\n M outputs/workflow/status.json\n M outputs/workflow/status.md\n M scripts/prepare_q1_inputs.py\n M scripts/run_q1_assessment.py\n M scripts/validate_q1.py\n M src/energy_model/q1.py\n M tests/test_q1.py\n M workflow/q1_inputs.json\n?? data/processed/q1/ndc_2024.csv\n?? data/processed/q1/prices_scoped.csv\n?? docs/reviews/q1-mmj-review-fixes-20261018.md\n?? outputs/q1/.q1-mmj-e2363aeb88fe4bc9a8d51bf2c08c804b/\n?? requirements-q1.txt",
+          "command": [
+            "python",
+            "-B",
+            "-X",
+            "utf8",
+            "run.py",
+            "q1",
+            "--inputs",
+            "workflow/q1_inputs.json",
+            "--output-dir",
+            "outputs/q1/p1_mmj"
+          ],
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+          "executable": "D:\\CSF2026\\mmj\\SimulationModelingProblemA\\.venv\\Scripts\\python.exe",
+          "dependencies": {
+            "matplotlib": "3.10.8",
+            "rendering": {
+              "numpy": "2.3.5",
+              "pillow": "12.3.0",
+              "contourpy": "1.4.0",
+              "fonttools": "4.67.0",
+              "kiwisolver": "1.5.1",
+              "cycler": "0.12.1",
+              "packaging": "26.3",
+              "python-dateutil": "2.9.0.post0"
+            },
+            "freetype": "2.6.1",
+            "core": "Python standard library"
+          },
+          "random_steps": false,
+          "network_access": false,
+          "input_manifest": {
+            "path": "workflow/q1_inputs.json",
+            "sha256": "58afd3503da370f2a260755484fa0bc1430fc41e9942d083943dde8e7be197d4"
+          },
+          "input_hashes": {
+            "data/processed/unified/nbs_history.csv": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+            "data/processed/nbs_products_annual.csv": "6fb964607aa68d86f9297a039aeb472c7860324ec21e67da11dbcd7bd8f92642",
+            "data/processed/nbs_balance_checkpoints.csv": "8121d87c60acf5f8c457245f7d1d512f69b4c652dea717a5f823aae3192a3193",
+            "data/processed/nbs_province_demand.csv": "2ed23bee6511030b5b3b8b60c8aa63e1ea65e7bbd967c5958bc6307f7a228e91",
+            "data/processed/q1/province_products_2024.csv": "8773d85284966522dd398ffd0ab29209af0bc8f7d68cdd4552f012cf7eff4525",
+            "data/processed/china_macro_annual.csv": "5b033c6e8593031ff5c223dda4f2e7de42a2d9b77030bed85018f82c5969b1d8",
+            "data/processed/china_co2_gcb_annual.csv": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
+            "data/processed/fuel_storage_hydrogen_snapshots.csv": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
+            "data/processed/technology_accounting_parameters.csv": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
+            "data/processed/q1/cost_method_parameters.csv": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9",
+            "data/processed/q1/storage_2024.csv": "e388f90ee66a476b7406d9956e3d875e7394c8e28b705317aff36b56a0c03c10",
+            "data/processed/q1/ndc_2024.csv": "733a054b28f7c22dd7106af030ba7a286cc8c380da1551601f11db67640007c3",
+            "data/processed/q1/prices_scoped.csv": "f75e574b691501f3357062db09fa8c57ddcd63a553d19440038cdbebe11451b6",
+            "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f",
+            "data/processed/lb/trade_alternatives/lng_china_2024.csv": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363",
+            "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv": "bf10eb6cfb4cba6bebe7b239e861271fac4b9e2e0047a2dc488ba6224584775c",
+            "data/observations/energy_official_communique_2024.json": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+            "data/observations/renewable_operation_official_2024.json": "f59303c667f0529820da3ecd3bb5386445eb5a248051325681641626aacfcb55"
+          },
+          "source_hashes": {
+            "yx:NBS_2025_C09-01": "cc7d20189a1782dd3e6327e173a0871ab0ffdcc2304e8a521e9a885cdf5b4ae3",
+            "yx:NBS_2025_C09-02": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+            "yx:NBS_2025_C09-15": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+            "yx:NBS_2025_C09-19": "7b1d1c5d526905e4611c80f9fd97b637de3b62385218733aa20b55599b0f4d75",
+            "yx:NBS_2025_C09-03": "7b64dcf6845ab84955be19ed60cc68c00764f75ba623f4e623c18deb3018022d",
+            "yx:NBS_2025_C09-04": "04879f1944b4f45aaddcd17c6f8e4f9d7d576f9ab85f04ba1049dcbd73f7b6b5",
+            "yx:NBS_2025_C09-05": "2d29ed89b2cbe42a1adefe75ad63621b42617184b0f094d19def390694dbe988",
+            "yx:NBS_2025_C09-06": "8d415663790fc15d22add695af264dab44f847009367891b7613b629e94d02b3",
+            "yx:NBS_2025_C09-14": "792f54dc21b686356d6e4ea6d49277155a2fef3799b9b1622094548599e488d9",
+            "yx:WDI_CHINA_MACRO": "8ee1bc173ee4bda7975a045b791c8b3f6af3ee8d0f9995ce52d23f896d0a3200",
+            "yx:GCB_GCB2025v15_MtCO2_flat": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+            "yx:NEA_NATURAL_GAS_2025": "6e46cb5edb3bec945c45871750b7c35b267341fbce37745200414993106fea5d",
+            "yx:NEA_HYDROGEN_2025": "0c88c1a6255f778277d008cb641cee9c71fab1936786a010e692d536142eb6ed",
+            "yx:NDRC_GAS_APPARENT_2024": "a55466c36ff019534d5e36615377bb3779f344c516242dc17a20d04b7d026330",
+            "yx:NEA_STORAGE_2025": "739bb225cb040415095b6d3e1de0c81f75ec32541e0613c823d849d190c44453",
+            "yx:IRENA_COST_2024_PDF": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+            "lb/base:NEA_STORAGE_2025": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3",
+            "lb/base:NDC_2035": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d",
+            "yx:WB_PINK_SHEET_STABLE": "f25870f3ce992bf6caa6b7159ae3722c9411ab66108cef47aea2e4451a21961a",
+            "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63",
+            "mmj:S13": "fdcf2c563d51bdfe1135b2f2a3e88d87d2ada2c66acfaa6e075cf8fa15f88e98",
+            "mmj:S25": "5092f8d6083287214961de9c402abc8c9a77aee318c9b22a78b55f078ecba679"
+          },
+          "evidence_review": {
+            "path": "data/catalog/q1_evidence_review.json",
+            "sha256": "dc8810397ab525b4969eb686ecc08056f227c097d026e516db89322df3d18569"
+          },
+          "code_hashes": {
+            "run.py": "688a6db72a3a94aaef16ffe4be2523bc032137f8954f2bb6376375f92380139d",
+            "scripts/run_q1_assessment.py": "7877cf2655aefebc8ff58d15ccd69fc340756e971e09f0d6903b5d054917b4b5",
+            "scripts/prepare_q1_inputs.py": "f4d62b451fe76145b34ffa3e34ae76fe3eb9ecb1747a80430ecf137da5942e92",
+            "src/energy_model/q1.py": "ed2865aa6300fc8b0f31d6603c90fc969e98e27d708f1c3a29498dcdedaaa353",
+            "requirements-q1.txt": "3394982a96de1520c572f1c60267831c570c640eb5322f35587e9a9dcd97691a"
+          },
+          "configuration": {
+            "real_wacc": [
+              0.03,
+              0.05,
+              0.07
+            ],
+            "common_life_years": 25,
+            "cost_service": "unfirmed plant-gate electricity; constant annual output; 8760 hours normalization"
+          },
+          "protected_originals_verified": {
+            "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf": "a892165c851da77c916d6f2dd7a9cf7062c1e37698a88641b3a3105bef90c963",
+            "附件1.xlsx": "4cd3f519f72d18869d33713fc9dd2ec7a3ba83d5178ee6d4170d37adf45ea1cd",
+            "附件2.xlsx": "7a35204be5db7e8cbfddf77a8a36604fafa87dabbf80c69c752b8b8f0d97a330",
+            "附件3.xlsx": "df616d471bd31fe865ad9d509ea3fc1fa68d8bd172af7c10bb15ffba7a74987e",
+            "附件4.xlsx": "a7945ce8d6c279ecb695c3e56b7d331c1d3f098a282b59a8d1826a69b8736eaf",
+            "只读工作区/final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+            "只读工作区/gemini_final_idea.md": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+            "只读工作区/README.md": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af"
+          },
+          "counts": {
+            "history": 882,
+            "indicators": 169,
+            "roles": 12,
+            "handoff": 325,
+            "gaps": 16
+          },
+          "scientific_limits": [
+            "price_2021_2024",
+            "nonfossil_consumption",
+            "gas_net_dependency",
+            "firm_cost",
+            "regional_grid",
+            "storage_2024",
+            "physical_carbon",
+            "hydrogen_categories",
+            "cross_release",
+            "ten_year_technology",
+            "mainland_bridge",
+            "new_extractions",
+            "balance_NBS_2025_C09-03",
+            "balance_NBS_2025_C09-04",
+            "balance_NBS_2025_C09-05",
+            "balance_NBS_2025_C09-06"
+          ],
+          "acceptance": {
+            "A1": "candidate_results_with_itemized_coverage",
+            "A2": "partial_scientific_coverage_key_gaps_remain_draft",
+            "A3": "source_cells_and_review_attached_pending_independent_confirmation",
+            "A4": "candidate_handoff_and_unclosed_physical_balance_explicit",
+            "A5": "requires_independent_reproduction",
+            "A6": "see validation evidence matching this run's code_hashes",
+            "A7": "pending_two_peer_reviews_no_merge"
+          },
+          "outputs": {
+            "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
+            "gaps_and_conflicts.csv": "d45d3578547a5b0ed38906ed49c0bc05b4c205b7937eee40af49ceefc193fbc4",
+            "history.csv": "7745a56dfd1fec6a50d1f1d5b0ee5ed6448006b9b1b1788fae6da2c7d00313da",
+            "indicators.csv": "278ee6cf043ad3b5612f902aaca35551a2f0dc8a035c817ee93b2f8969bdd749",
+            "model_handoff.csv": "dbbafcda87cb78371c1ff871a38f892bd2b682b8a125a215ac13439b6df008ee",
+            "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
+            "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
+            "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
+            "report.md": "4aa24537aa1f78d7eaddbc33cea749a87fcbab8421fed400c1d4049e7f9ee47f",
+            "static_balance.json": "9a7c7e18f6566ef64ff3cbae97698c78a6be759d8396f408485b4e88978c7c21"
+          }
+        }
+      },
+      "review_mmj_validation": {
+        "passed": true,
+        "errors": [],
+        "actual_outputs": {
+          "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
+          "gaps_and_conflicts.csv": "d45d3578547a5b0ed38906ed49c0bc05b4c205b7937eee40af49ceefc193fbc4",
+          "history.csv": "7745a56dfd1fec6a50d1f1d5b0ee5ed6448006b9b1b1788fae6da2c7d00313da",
+          "indicators.csv": "278ee6cf043ad3b5612f902aaca35551a2f0dc8a035c817ee93b2f8969bdd749",
+          "model_handoff.csv": "dbbafcda87cb78371c1ff871a38f892bd2b682b8a125a215ac13439b6df008ee",
+          "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
+          "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
+          "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
+          "report.md": "4aa24537aa1f78d7eaddbc33cea749a87fcbab8421fed400c1d4049e7f9ee47f",
+          "static_balance.json": "9a7c7e18f6566ef64ff3cbae97698c78a6be759d8396f408485b4e88978c7c21"
+        },
+        "manifest": {
+          "schema_version": 1,
+          "candidate": "p1/mmj",
+          "success": true,
+          "result_status": "Q1_research_candidate_with_explicit_gaps_pending_A7",
+          "base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+          "code_commit_sha": "8e05bb1df991c1cd110395e9439acacc33a788b6",
+          "dirty_worktree": true,
+          "worktree_status": "D .gitattributes\n M README.md\n M data/catalog/datasets_unified.csv\n M data/catalog/q1_evidence_review.json\n M docs/RUNNING.md\n M docs/solutions/p1-mmj.md\n M outputs/q1/p1_mmj/gaps_and_conflicts.csv\n M outputs/q1/p1_mmj/history.csv\n M outputs/q1/p1_mmj/indicators.csv\n M outputs/q1/p1_mmj/model_handoff.csv\n M outputs/q1/p1_mmj/report.md\n M outputs/q1/p1_mmj/run_manifest.json\n M outputs/q1/p1_mmj/static_balance.json\n M outputs/validation/tests.json\n M outputs/validation/workspace_audit.json\n M outputs/workflow/next_prompt.md\n M outputs/workflow/status.json\n M outputs/workflow/status.md\n M scripts/prepare_q1_inputs.py\n M scripts/run_q1_assessment.py\n M scripts/validate_q1.py\n M src/energy_model/q1.py\n M tests/test_q1.py\n M workflow/q1_inputs.json\n?? data/processed/q1/ndc_2024.csv\n?? data/processed/q1/prices_scoped.csv\n?? docs/reviews/q1-mmj-review-fixes-20261018.md\n?? outputs/q1/.q1-mmj-788a96cbd7cc4ab7a559d36c837eeec5/\n?? requirements-q1.txt",
+          "command": [
+            "python",
+            "-B",
+            "-X",
+            "utf8",
+            "run.py",
+            "q1",
+            "--inputs",
+            "workflow/q1_inputs.json",
+            "--output-dir",
+            "outputs/q1/review_mmj_validation"
+          ],
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+          "executable": "D:\\CSF2026\\mmj\\SimulationModelingProblemA\\.venv\\Scripts\\python.exe",
+          "dependencies": {
+            "matplotlib": "3.10.8",
+            "rendering": {
+              "numpy": "2.3.5",
+              "pillow": "12.3.0",
+              "contourpy": "1.4.0",
+              "fonttools": "4.67.0",
+              "kiwisolver": "1.5.1",
+              "cycler": "0.12.1",
+              "packaging": "26.3",
+              "python-dateutil": "2.9.0.post0"
+            },
+            "freetype": "2.6.1",
+            "core": "Python standard library"
+          },
+          "random_steps": false,
+          "network_access": false,
+          "input_manifest": {
+            "path": "workflow/q1_inputs.json",
+            "sha256": "58afd3503da370f2a260755484fa0bc1430fc41e9942d083943dde8e7be197d4"
+          },
+          "input_hashes": {
+            "data/processed/unified/nbs_history.csv": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+            "data/processed/nbs_products_annual.csv": "6fb964607aa68d86f9297a039aeb472c7860324ec21e67da11dbcd7bd8f92642",
+            "data/processed/nbs_balance_checkpoints.csv": "8121d87c60acf5f8c457245f7d1d512f69b4c652dea717a5f823aae3192a3193",
+            "data/processed/nbs_province_demand.csv": "2ed23bee6511030b5b3b8b60c8aa63e1ea65e7bbd967c5958bc6307f7a228e91",
+            "data/processed/q1/province_products_2024.csv": "8773d85284966522dd398ffd0ab29209af0bc8f7d68cdd4552f012cf7eff4525",
+            "data/processed/china_macro_annual.csv": "5b033c6e8593031ff5c223dda4f2e7de42a2d9b77030bed85018f82c5969b1d8",
+            "data/processed/china_co2_gcb_annual.csv": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
+            "data/processed/fuel_storage_hydrogen_snapshots.csv": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
+            "data/processed/technology_accounting_parameters.csv": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
+            "data/processed/q1/cost_method_parameters.csv": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9",
+            "data/processed/q1/storage_2024.csv": "e388f90ee66a476b7406d9956e3d875e7394c8e28b705317aff36b56a0c03c10",
+            "data/processed/q1/ndc_2024.csv": "733a054b28f7c22dd7106af030ba7a286cc8c380da1551601f11db67640007c3",
+            "data/processed/q1/prices_scoped.csv": "f75e574b691501f3357062db09fa8c57ddcd63a553d19440038cdbebe11451b6",
+            "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f",
+            "data/processed/lb/trade_alternatives/lng_china_2024.csv": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363",
+            "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv": "bf10eb6cfb4cba6bebe7b239e861271fac4b9e2e0047a2dc488ba6224584775c",
+            "data/observations/energy_official_communique_2024.json": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+            "data/observations/renewable_operation_official_2024.json": "f59303c667f0529820da3ecd3bb5386445eb5a248051325681641626aacfcb55"
+          },
+          "source_hashes": {
+            "yx:NBS_2025_C09-01": "cc7d20189a1782dd3e6327e173a0871ab0ffdcc2304e8a521e9a885cdf5b4ae3",
+            "yx:NBS_2025_C09-02": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+            "yx:NBS_2025_C09-15": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+            "yx:NBS_2025_C09-19": "7b1d1c5d526905e4611c80f9fd97b637de3b62385218733aa20b55599b0f4d75",
+            "yx:NBS_2025_C09-03": "7b64dcf6845ab84955be19ed60cc68c00764f75ba623f4e623c18deb3018022d",
+            "yx:NBS_2025_C09-04": "04879f1944b4f45aaddcd17c6f8e4f9d7d576f9ab85f04ba1049dcbd73f7b6b5",
+            "yx:NBS_2025_C09-05": "2d29ed89b2cbe42a1adefe75ad63621b42617184b0f094d19def390694dbe988",
+            "yx:NBS_2025_C09-06": "8d415663790fc15d22add695af264dab44f847009367891b7613b629e94d02b3",
+            "yx:NBS_2025_C09-14": "792f54dc21b686356d6e4ea6d49277155a2fef3799b9b1622094548599e488d9",
+            "yx:WDI_CHINA_MACRO": "8ee1bc173ee4bda7975a045b791c8b3f6af3ee8d0f9995ce52d23f896d0a3200",
+            "yx:GCB_GCB2025v15_MtCO2_flat": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+            "yx:NEA_NATURAL_GAS_2025": "6e46cb5edb3bec945c45871750b7c35b267341fbce37745200414993106fea5d",
+            "yx:NEA_HYDROGEN_2025": "0c88c1a6255f778277d008cb641cee9c71fab1936786a010e692d536142eb6ed",
+            "yx:NDRC_GAS_APPARENT_2024": "a55466c36ff019534d5e36615377bb3779f344c516242dc17a20d04b7d026330",
+            "yx:NEA_STORAGE_2025": "739bb225cb040415095b6d3e1de0c81f75ec32541e0613c823d849d190c44453",
+            "yx:IRENA_COST_2024_PDF": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+            "lb/base:NEA_STORAGE_2025": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3",
+            "lb/base:NDC_2035": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d",
+            "yx:WB_PINK_SHEET_STABLE": "f25870f3ce992bf6caa6b7159ae3722c9411ab66108cef47aea2e4451a21961a",
+            "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63",
+            "mmj:S13": "fdcf2c563d51bdfe1135b2f2a3e88d87d2ada2c66acfaa6e075cf8fa15f88e98",
+            "mmj:S25": "5092f8d6083287214961de9c402abc8c9a77aee318c9b22a78b55f078ecba679"
+          },
+          "evidence_review": {
+            "path": "data/catalog/q1_evidence_review.json",
+            "sha256": "dc8810397ab525b4969eb686ecc08056f227c097d026e516db89322df3d18569"
+          },
+          "code_hashes": {
+            "run.py": "688a6db72a3a94aaef16ffe4be2523bc032137f8954f2bb6376375f92380139d",
+            "scripts/run_q1_assessment.py": "7877cf2655aefebc8ff58d15ccd69fc340756e971e09f0d6903b5d054917b4b5",
+            "scripts/prepare_q1_inputs.py": "f4d62b451fe76145b34ffa3e34ae76fe3eb9ecb1747a80430ecf137da5942e92",
+            "src/energy_model/q1.py": "ed2865aa6300fc8b0f31d6603c90fc969e98e27d708f1c3a29498dcdedaaa353",
+            "requirements-q1.txt": "3394982a96de1520c572f1c60267831c570c640eb5322f35587e9a9dcd97691a"
+          },
+          "configuration": {
+            "real_wacc": [
+              0.03,
+              0.05,
+              0.07
+            ],
+            "common_life_years": 25,
+            "cost_service": "unfirmed plant-gate electricity; constant annual output; 8760 hours normalization"
+          },
+          "protected_originals_verified": {
+            "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf": "a892165c851da77c916d6f2dd7a9cf7062c1e37698a88641b3a3105bef90c963",
+            "附件1.xlsx": "4cd3f519f72d18869d33713fc9dd2ec7a3ba83d5178ee6d4170d37adf45ea1cd",
+            "附件2.xlsx": "7a35204be5db7e8cbfddf77a8a36604fafa87dabbf80c69c752b8b8f0d97a330",
+            "附件3.xlsx": "df616d471bd31fe865ad9d509ea3fc1fa68d8bd172af7c10bb15ffba7a74987e",
+            "附件4.xlsx": "a7945ce8d6c279ecb695c3e56b7d331c1d3f098a282b59a8d1826a69b8736eaf",
+            "只读工作区/final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+            "只读工作区/gemini_final_idea.md": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+            "只读工作区/README.md": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af"
+          },
+          "counts": {
+            "history": 882,
+            "indicators": 169,
+            "roles": 12,
+            "handoff": 325,
+            "gaps": 16
+          },
+          "scientific_limits": [
+            "price_2021_2024",
+            "nonfossil_consumption",
+            "gas_net_dependency",
+            "firm_cost",
+            "regional_grid",
+            "storage_2024",
+            "physical_carbon",
+            "hydrogen_categories",
+            "cross_release",
+            "ten_year_technology",
+            "mainland_bridge",
+            "new_extractions",
+            "balance_NBS_2025_C09-03",
+            "balance_NBS_2025_C09-04",
+            "balance_NBS_2025_C09-05",
+            "balance_NBS_2025_C09-06"
+          ],
+          "acceptance": {
+            "A1": "candidate_results_with_itemized_coverage",
+            "A2": "partial_scientific_coverage_key_gaps_remain_draft",
+            "A3": "source_cells_and_review_attached_pending_independent_confirmation",
+            "A4": "candidate_handoff_and_unclosed_physical_balance_explicit",
+            "A5": "requires_independent_reproduction",
+            "A6": "see validation evidence matching this run's code_hashes",
+            "A7": "pending_two_peer_reviews_no_merge"
+          },
+          "outputs": {
+            "energy_roles.csv": "5280b51dcb383f616cd05f1c001a34e3d4601487c37fe0df9fac08100ecfb00c",
+            "gaps_and_conflicts.csv": "d45d3578547a5b0ed38906ed49c0bc05b4c205b7937eee40af49ceefc193fbc4",
+            "history.csv": "7745a56dfd1fec6a50d1f1d5b0ee5ed6448006b9b1b1788fae6da2c7d00313da",
+            "indicators.csv": "278ee6cf043ad3b5612f902aaca35551a2f0dc8a035c817ee93b2f8969bdd749",
+            "model_handoff.csv": "dbbafcda87cb78371c1ff871a38f892bd2b682b8a125a215ac13439b6df008ee",
+            "overview.png": "63c74f9b21f97ba51fa1a267d0693b1e674092b7d4c5058154691fc0aec5f9b3",
+            "regional.csv": "c696f8ce3685ce11fcd7299ef8a339bebbc750b4cccf63cc33e8dfd24b6ee4b3",
+            "regional.png": "2f104462fa2159d04efec3232ecef17cc40cd7c5e7a34945e8f8a7c33cde9102",
+            "report.md": "4aa24537aa1f78d7eaddbc33cea749a87fcbab8421fed400c1d4049e7f9ee47f",
+            "static_balance.json": "9a7c7e18f6566ef64ff3cbae97698c78a6be759d8396f408485b4e88978c7c21"
+          }
+        }
+      }
+    }
+  },
+  "negative_cli_probes": {
+    "tampered_input_rejected": true,
+    "missing_manifest_rejected": true,
+    "no_output_created": true
+  },
+  "latest_reports_preserved": [
+    "outputs/validation/tests.json",
+    "outputs/validation/workspace_audit.json",
+    "outputs/workflow/status.json",
+    "outputs/workflow/status.md",
+    "outputs/workflow/next_prompt.md"
+  ],
+  "source_review": {
+    "reviewer": "mmj",
+    "review_date": "2026-10-18",
+    "base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+    "scope": "Q1 descriptive research only; source agreement does not grant Q2 model admission",
+    "checks": [
+      {
+        "check": "NBS_unique_view_and_products_vs_reviewed_transcription",
+        "passed": true,
+        "detail": {
+          "rows": 220,
+          "image_review": "C09-01/02/15/19; 2015-2024 rows and notes",
+          "caution": "same-source concordance, not independent validation"
+        }
+      },
+      {
+        "check": "NBS_balance_cells",
+        "passed": true,
+        "detail": "164 cells; C09-03/04/05/06 selected-year columns; nested rows not additive"
+      },
+      {
+        "check": "NBS_province_demand_cells",
+        "passed": true,
+        "detail": "124 cells; C09-14; provincial use rounded to integer 10^8 kWh"
+      },
+      {
+        "check": "new_provincial_transcription_visual_review",
+        "passed": true,
+        "detail": "mmj/2026-10-18 viewed C09-19 image: 31 province names and four columns; blank Shanghai hydro retained; C09-14 2024 demand column independently reread. One transcription, awaiting teammate review; not an independent observation."
+      },
+      {
+        "check": "WDI_constant_GDP_raw_JSON",
+        "passed": true,
+        "detail": {
+          "rows": 10,
+          "version": "2026-10-08",
+          "scope": "source series constant LCU base; not asserted to be 2020-price GDP"
+        }
+      },
+      {
+        "check": "GCB_raw_country_component_cells",
+        "passed": true,
+        "detail": {
+          "rows": 70,
+          "scope": "GCB2025v15 territorial fossil and industry; no removals"
+        }
+      },
+      {
+        "check": "EI_cells_pipeline_gas_china_2024",
+        "passed": true,
+        "detail": {
+          "rows": 22,
+          "sheet": "Gas trade 2024 - pipeline",
+          "cells": [
+            "B27",
+            "C27",
+            "D27",
+            "E27",
+            "F27",
+            "G27",
+            "H27",
+            "I27",
+            "J27",
+            "K27",
+            "L27",
+            "M27",
+            "N27",
+            "O27",
+            "P27",
+            "Q27",
+            "R27",
+            "S27",
+            "T27",
+            "U27",
+            "V27",
+            "W27"
+          ],
+          "scope": "2024 China imports; source bins include aggregates; GCV 40 MJ/m3 gas or EJ coal"
+        }
+      },
+      {
+        "check": "EI_cells_lng_china_2024",
+        "passed": true,
+        "detail": {
+          "rows": 23,
+          "sheet": "Gas trade 2024 - LNG",
+          "cells": [
+            "B28",
+            "C28",
+            "D28",
+            "E28",
+            "F28",
+            "G28",
+            "H28",
+            "I28",
+            "J28",
+            "K28",
+            "L28",
+            "M28",
+            "N28",
+            "O28",
+            "P28",
+            "Q28",
+            "R28",
+            "S28",
+            "T28",
+            "U28",
+            "V28",
+            "W28",
+            "X28"
+          ],
+          "scope": "2024 China imports; source bins include aggregates; GCV 40 MJ/m3 gas or EJ coal"
+        }
+      },
+      {
+        "check": "EI_cells_coal_china_2024_EJ",
+        "passed": true,
+        "detail": {
+          "rows": 15,
+          "sheet": "Coal trade movements 2024",
+          "cells": [
+            "J5",
+            "J6",
+            "J7",
+            "J8",
+            "J9",
+            "J10",
+            "J11",
+            "J12",
+            "J13",
+            "J14",
+            "J15",
+            "J16",
+            "J17",
+            "J18",
+            "J19"
+          ],
+          "scope": "2024 China imports; source bins include aggregates; GCV 40 MJ/m3 gas or EJ coal"
+        }
+      },
+      {
+        "check": "WB_archived_workbook_cells",
+        "passed": true,
+        "detail": {
+          "rows": 36,
+          "sheet": "Annual Prices (Nominal)",
+          "header_row": 7,
+          "coverage": "2015-2020 only; quarantined edition excluded, not bridged"
+        }
+      },
+      {
+        "check": "WB_adopted_series_definitions",
+        "passed": true,
+        "detail": {
+          "cells": {
+            "Crude oil, average": "Description!B7",
+            "Crude oil, Brent": "Description!B8",
+            "Coal, Australian": "Description!B4",
+            "Natural gas, US": "Description!B13",
+            "Natural gas, Europe": "Description!B12",
+            "Liquefied natural gas, Japan": "Description!B14"
+          },
+          "treatment": "Europe 2015 annual average is mixed; retain level but exclude 2016/2015 return. TTF full-year levels 2016-2020 yield four changes. Australia switch is January 2015: all adopted full years are spot definition."
+        }
+      },
+      {
+        "check": "NDC_2024_nonfossil_direct_statement",
+        "passed": true,
+        "detail": {
+          "source": "lb/base:NDC_2035",
+          "physical_page": 5,
+          "printed_page": 3,
+          "source_sha256": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d",
+          "value": 19.8,
+          "unit": "%",
+          "status": "published_preliminary_estimate",
+          "scope": "2024 national primary energy consumption, China NDC report scope; separate release, not NBS primary electricity/other",
+          "visual_review": "mmj viewed full rendered physical p5 on 2026-10-18"
+        }
+      },
+      {
+        "check": "IRENA_PDF_p71_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p95_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p119_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p76_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p123_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p209_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p212_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p202_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p84_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p106_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "IRENA_PDF_p126_table_row",
+        "passed": true,
+        "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
+      },
+      {
+        "check": "cost_table_vs_reviewed_PDF_rows",
+        "passed": true,
+        "detail": "12 adopted China 2024 CAPEX/quantile/LCOE values checked"
+      },
+      {
+        "check": "storage_2024_paragraph_and_unit_review",
+        "passed": true,
+        "detail": "PDF p20-21 / printed pp010-011; 2024 commissioned cumulative stock, not 2025. mmj visually checked p21 Figure 1: 7376 (10^4 kW), 16820 (10^4 kWh), 2.3 h; paragraph energy 1.68*10^8 kWh retained separately from figure precision. Peer review pending."
+      },
+      {
+        "check": "storage_original_unit_conversion",
+        "passed": true,
+        "detail": "1.36*100 GW, 3.51*100 GWh; 2025 installed source paragraph read with year"
+      },
+      {
+        "check": "snapshot_source_paragraphs",
+        "passed": true,
+        "detail": {
+          "rows": 20,
+          "mismatches": [],
+          "locators": "gas PDF pp10-13; hydrogen pp16-17; NDRC annual paragraph; NEA storage installed statement",
+          "qualifiers": "H2 total EXCEEDS 3650, categories approximate; renewable H2 capacity not output; storage is 2025"
+        }
+      },
+      {
+        "check": "S13_reviewed_capture",
+        "passed": true,
+        "detail": {
+          "rows": 33,
+          "mismatches": [],
+          "scope": "Existing review/capture read with notes; adopted uses stay within original contract"
+        }
+      },
+      {
+        "check": "S25_reviewed_capture",
+        "passed": true,
+        "detail": {
+          "rows": 15,
+          "mismatches": [],
+          "scope": "Existing review/capture read with notes; adopted uses stay within original contract"
+        }
+      }
+    ],
+    "manual_review": "NBS image rows, headings and notes viewed in this session; IRENA tables/method and gas/H2 paragraphs read from stored original PDFs. Two teammate reviews pending.",
+    "exclusions": [
+      "data/restricted/**",
+      "quarantined WB edition and lb price files",
+      "candidate transmission network",
+      "regional storage shares not mapped to Q2 regions"
+    ],
+    "reviewed_snapshot": {
+      "inputs": {
+        "nbs": {
+          "path": "data/processed/unified/nbs_history.csv",
+          "sha256": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+          "source_keys": [
+            "yx:NBS_2025_C09-01",
+            "yx:NBS_2025_C09-02",
+            "yx:NBS_2025_C09-15"
+          ],
+          "coverage": "2015-2024 energy/capacity only; exclude both GDP families",
+          "boundary": "NBS2025 same-table history; end-year capacity; primary electricity/other not relabelled",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "products": {
+          "path": "data/processed/nbs_products_annual.csv",
+          "sha256": "6fb964607aa68d86f9297a039aeb472c7860324ec21e67da11dbcd7bd8f92642",
+          "source_keys": [
+            "yx:NBS_2025_C09-19"
+          ],
+          "coverage": "2015-2024",
+          "boundary": "National product output; 10^8 kWh = 0.1 TWh",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "balance": {
+          "path": "data/processed/nbs_balance_checkpoints.csv",
+          "sha256": "8121d87c60acf5f8c457245f7d1d512f69b4c652dea717a5f823aae3192a3193",
+          "source_keys": [
+            "yx:NBS_2025_C09-03",
+            "yx:NBS_2025_C09-04",
+            "yx:NBS_2025_C09-05",
+            "yx:NBS_2025_C09-06"
+          ],
+          "coverage": "2015/2020/2022/2023 only",
+          "boundary": "Same-table ledgers; oil includes products/bunkering; nested transformation not added",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "demand": {
+          "path": "data/processed/nbs_province_demand.csv",
+          "sha256": "2ed23bee6511030b5b3b8b60c8aa63e1ea65e7bbd967c5958bc6307f7a228e91",
+          "source_keys": [
+            "yx:NBS_2025_C09-14"
+          ],
+          "coverage": "2015/2020/2023/2024",
+          "boundary": "31 provinces; integer-rounded use; own annual denominator",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "province": {
+          "path": "data/processed/q1/province_products_2024.csv",
+          "sha256": "8773d85284966522dd398ffd0ab29209af0bc8f7d68cdd4552f012cf7eff4525",
+          "source_keys": [
+            "yx:NBS_2025_C09-19"
+          ],
+          "coverage": "2024",
+          "boundary": "New visual transcription from locked existing image; blanks not zero; candidate increment pending peer review",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "macro": {
+          "path": "data/processed/china_macro_annual.csv",
+          "sha256": "5b033c6e8593031ff5c223dda4f2e7de42a2d9b77030bed85018f82c5969b1d8",
+          "source_keys": [
+            "yx:WDI_CHINA_MACRO"
+          ],
+          "coverage": "2015-2024 constant GDP only",
+          "boundary": "2026-10-08 version; constant LCU source base; CHN boundary bridge to mainland needs review for Q2",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "co2": {
+          "path": "data/processed/china_co2_gcb_annual.csv",
+          "sha256": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
+          "source_keys": [
+            "yx:GCB_GCB2025v15_MtCO2_flat"
+          ],
+          "coverage": "2015-2024",
+          "boundary": "GCB2025v15 CHN territorial fossil/industry; country bridge to mainland pending Q2; not net GHG",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "snapshot": {
+          "path": "data/processed/fuel_storage_hydrogen_snapshots.csv",
+          "sha256": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
+          "source_keys": [
+            "yx:NEA_NATURAL_GAS_2025",
+            "yx:NEA_HYDROGEN_2025",
+            "yx:NDRC_GAS_APPARENT_2024",
+            "yx:NEA_STORAGE_2025"
+          ],
+          "coverage": "2024 gas/H2; 2025 national storage power/energy/duration separately",
+          "boundary": "Gas definitions not bridged to EI; H2 exceeds/approx qualifiers; added storage not inventory",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "cost": {
+          "path": "data/processed/technology_accounting_parameters.csv",
+          "sha256": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
+          "source_keys": [
+            "yx:IRENA_COST_2024_PDF"
+          ],
+          "coverage": "2024 China IRENA only",
+          "boundary": "CAPEX/quantiles/LCOE; IPCC and 2022 market price excluded; LCOE not additive to capex",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "cost_method": {
+          "path": "data/processed/q1/cost_method_parameters.csv",
+          "sha256": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9",
+          "source_keys": [
+            "yx:IRENA_COST_2024_PDF"
+          ],
+          "coverage": "2024 new wind projects",
+          "boundary": "25y; source CF and O&M; common 3/5/7% real WACC is analysis assumption, not observed China financing",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "storage_2024": {
+          "path": "data/processed/q1/storage_2024.csv",
+          "sha256": "e388f90ee66a476b7406d9956e3d875e7394c8e28b705317aff36b56a0c03c10",
+          "source_keys": [
+            "lb/base:NEA_STORAGE_2025"
+          ],
+          "coverage": "2024 cumulative commissioned new-type storage, from report published 2025",
+          "boundary": "Existing locked-base PDF p21; paragraph/figure energy precision separate; P/E not initial SOC; peer confirmation pending",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "ndc_2024": {
+          "path": "data/processed/q1/ndc_2024.csv",
+          "sha256": "733a054b28f7c22dd7106af030ba7a286cc8c380da1551601f11db67640007c3",
+          "source_keys": [
+            "lb/base:NDC_2035"
+          ],
+          "coverage": "2024 single preliminary estimate; 2025 NDC release",
+          "boundary": "Direct published non-fossil primary consumption share; independent category/release, not relabelled NBS category; geography bridge pending Q2",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "price": {
+          "path": "data/processed/q1/prices_scoped.csv",
+          "sha256": "f75e574b691501f3357062db09fa8c57ddcd63a553d19440038cdbebe11451b6",
+          "source_keys": [
+            "yx:WB_PINK_SHEET_STABLE"
+          ],
+          "coverage": "2015-2024 requested; 2015-2020 archived levels; Europe comparable 2016-2020",
+          "boundary": "Nominal international benchmarks; Description definitions and mixed-2015 Europe retained; no cross-definition pooled SD, quarantined edition or China contract-price inference",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "pipeline": {
+          "path": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+          "sha256": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f",
+          "source_keys": [
+            "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025"
+          ],
+          "coverage": "2024",
+          "boundary": "China pipeline imports; bcm GCV40MJ/m3; bins not invented countries",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "lng": {
+          "path": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+          "sha256": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363",
+          "source_keys": [
+            "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025"
+          ],
+          "coverage": "2024",
+          "boundary": "China LNG imports same EI standard; no mixing with domestic gas",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "coal_trade": {
+          "path": "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv",
+          "sha256": "bf10eb6cfb4cba6bebe7b239e861271fac4b9e2e0047a2dc488ba6224584775c",
+          "source_keys": [
+            "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025"
+          ],
+          "coverage": "2024",
+          "boundary": "EJ imports; grouped geography gives country HHI bounds",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "communique": {
+          "path": "data/observations/energy_official_communique_2024.json",
+          "sha256": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+          "source_keys": [
+            "mmj:S13"
+          ],
+          "coverage": "2024 independent release",
+          "boundary": "Selected crude oil/trade/generation/clean share/growth; no unbridged history splice",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        },
+        "renewables": {
+          "path": "data/observations/renewable_operation_official_2024.json",
+          "sha256": "f59303c667f0529820da3ecd3bb5386445eb5a248051325681641626aacfcb55",
+          "source_keys": [
+            "mmj:S25"
+          ],
+          "coverage": "2024 independent release",
+          "boundary": "15 original scoped observations; version comparison only when NBS differs",
+          "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+          "blocked_use": "automatic national ABM initialization/calibration/forecast"
+        }
+      },
+      "sources": {
+        "yx:NBS_2025_C09-01": {
+          "path": "data/raw/batch1_national/nbs_2025_C09-01.jpg",
+          "sha256": "cc7d20189a1782dd3e6327e173a0871ab0ffdcc2304e8a521e9a885cdf5b4ae3",
+          "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-01.jpg",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NBS_2025_C09-02": {
+          "path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+          "sha256": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+          "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-02.jpg",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NBS_2025_C09-15": {
+          "path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+          "sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+          "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-15.jpg",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NBS_2025_C09-19": {
+          "path": "data/raw/batch2_mechanisms/nbs_2025_C09-19.jpg",
+          "sha256": "7b1d1c5d526905e4611c80f9fd97b637de3b62385218733aa20b55599b0f4d75",
+          "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-19.jpg",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NBS_2025_C09-03": {
+          "path": "data/raw/batch1_national/nbs_2025_C09-03.jpg",
+          "sha256": "7b64dcf6845ab84955be19ed60cc68c00764f75ba623f4e623c18deb3018022d",
+          "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-03.jpg",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NBS_2025_C09-04": {
+          "path": "data/raw/batch1_national/nbs_2025_C09-04.jpg",
+          "sha256": "04879f1944b4f45aaddcd17c6f8e4f9d7d576f9ab85f04ba1049dcbd73f7b6b5",
+          "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-04.jpg",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NBS_2025_C09-05": {
+          "path": "data/raw/batch1_national/nbs_2025_C09-05.jpg",
+          "sha256": "2d29ed89b2cbe42a1adefe75ad63621b42617184b0f094d19def390694dbe988",
+          "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-05.jpg",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NBS_2025_C09-06": {
+          "path": "data/raw/batch1_national/nbs_2025_C09-06.jpg",
+          "sha256": "8d415663790fc15d22add695af264dab44f847009367891b7613b629e94d02b3",
+          "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-06.jpg",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NBS_2025_C09-14": {
+          "path": "data/raw/batch2_mechanisms/nbs_2025_C09-14.jpg",
+          "sha256": "792f54dc21b686356d6e4ea6d49277155a2fef3799b9b1622094548599e488d9",
+          "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-14.jpg",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:WDI_CHINA_MACRO": {
+          "path": "data/raw/batch1_national/wdi_china_macro_2005_2025.json",
+          "sha256": "8ee1bc173ee4bda7975a045b791c8b3f6af3ee8d0f9995ce52d23f896d0a3200",
+          "url": "https://api.worldbank.org/v2/country/CHN/indicator/NY.GDP.MKTP.KN;NY.GDP.MKTP.CN;SP.POP.TOTL;NY.GDP.MKTP.KD.ZG;FP.CPI.TOTL;PA.NUS.FCRF?source=2&date=2005:2025&format=json&per_page=1000",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:GCB_GCB2025v15_MtCO2_flat": {
+          "path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+          "sha256": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+          "url": "https://zenodo.org/api/records/17417124/files/GCB2025v15_MtCO2_flat.csv/content",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NEA_NATURAL_GAS_2025": {
+          "path": "data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf",
+          "sha256": "6e46cb5edb3bec945c45871750b7c35b267341fbce37745200414993106fea5d",
+          "url": "https://www.nea.gov.cn/20250829/a4e2deb9b6444df1a191b9d60c111ffd/20250829a4e2deb9b6444df1a191b9d60c111ffd_43ab87a785d1b64d49b9210dbc15d3781e.pdf",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NEA_HYDROGEN_2025": {
+          "path": "data/raw/batch3_scenarios/nea_hydrogen_2025.pdf",
+          "sha256": "0c88c1a6255f778277d008cb641cee9c71fab1936786a010e692d536142eb6ed",
+          "url": "https://www.nea.gov.cn/20250430/96022785b3a747248288ad1c57d3a025/2025043096022785b3a747248288ad1c57d3a025_35aeee443346424eb4a3da029cb007003c.pdf",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NDRC_GAS_APPARENT_2024": {
+          "path": "data/raw/batch1_national/ndrc_gas_apparent_2024.html",
+          "sha256": "a55466c36ff019534d5e36615377bb3779f344c516242dc17a20d04b7d026330",
+          "url": "https://www.ndrc.gov.cn/fggz/jjyxtj/202501/t20250123_1395858.html",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:NEA_STORAGE_2025": {
+          "path": "data/raw/batch2_mechanisms/nea_storage_2025.html",
+          "sha256": "739bb225cb040415095b6d3e1de0c81f75ec32541e0613c823d849d190c44453",
+          "url": "https://www.nea.gov.cn/20260130/b5b729cb7ad74723bcd614b663c75da6/c.html",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:IRENA_COST_2024_PDF": {
+          "path": "data/raw/batch3_scenarios/irena_power_costs_2024.pdf",
+          "sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+          "url": "https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2025/Jul/IRENA_TEC_RPGC_in_2024_2025.pdf",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "lb/base:NEA_STORAGE_2025": {
+          "path": "data/raw/lb/base/reports/storage_2025.pdf",
+          "sha256": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3",
+          "url": "https://www.nea.gov.cn/20250731/1d40d09f75714280a9218d5bea178fbd/202507311d40d09f75714280a9218d5bea178fbd_453d9a0609da1d4456a8b12d843bd256cf.pdf",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "lb/base:NDC_2035": {
+          "path": "data/raw/lb/base/reports/china_ndc_2035.pdf",
+          "sha256": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d",
+          "url": "https://www.mee.gov.cn/ywgz/ydqhbh/qhbhlf/202511/W020251110629686716033.pdf",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "yx:WB_PINK_SHEET_STABLE": {
+          "path": "data/raw/batch1_national/wb_commodity_prices_stable.xlsx",
+          "sha256": "f25870f3ce992bf6caa6b7159ae3722c9411ab66108cef47aea2e4451a21961a",
+          "url": "https://pubdocs.worldbank.org/en/226371486076391711/CMO-Historical-Data-Annual.xlsx",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025": {
+          "path": "data/raw/lb/trade_alternatives/ei_2025_data.xlsx",
+          "sha256": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63",
+          "url": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "mmj:S13": {
+          "path": "data/raw/official/S13_selected_capture.txt",
+          "sha256": "fdcf2c563d51bdfe1135b2f2a3e88d87d2ada2c66acfaa6e075cf8fa15f88e98",
+          "url": "https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202502/t20250228_1958817.html",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        },
+        "mmj:S25": {
+          "path": "data/raw/official/S25_selected_capture.txt",
+          "sha256": "5092f8d6083287214961de9c402abc8c9a77aee318c9b22a78b55f078ecba679",
+          "url": "https://www.nea.gov.cn/20250221/e10f363cabe3458aaf78ba4558970054/c.html",
+          "version": "Locked base source edition; see source_key and per-record locator",
+          "content_review": "q1_evidence_review.json",
+          "use": "Q1 scoped research only"
+        }
+      }
+    }
+  },
+  "diff_check": {
+    "passed": true,
+    "stdout": "",
+    "stderr": ""
+  },
+  "executions": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "test"
+      ],
+      "returncode": 1,
+      "expected_returncode": 0,
+      "passed": false,
+      "seconds": 15.728,
+      "stdout": "",
+      "stderr": "...................E.E.........EEEEEEEEEE..........................................................................................Q1 FAILED: Output must be a dedicated directory under outputs/q1/\n......Q1 FAILED: Refusing to overwrite a directory not owned by this Q1 candidate\n.usage: validate_q1 [-h] [--evidence EVIDENCE]\nvalidate_q1: error: --evidence cannot replace a protected historical latest report\n..................................\n======================================================================\nERROR: test_missing_or_tampered_admission_creates_no_output (test_asset_lifecycle.AssetLifecycleTests.test_missing_or_tampered_admission_creates_no_output)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_asset_lifecycle.py\", line 113, in test_missing_or_tampered_admission_creates_no_output\n    target.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpny1x15yf\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpny1x15yf'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_asset_lifecycle.py\", line 107, in test_missing_or_tampered_admission_creates_no_output\n    with TemporaryDirectory() as temporary:\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpny1x15yf'\n\n======================================================================\nERROR: test_reviewed_case_runs_reproducibly_with_case_insensitive_original_hash (test_asset_lifecycle.AssetLifecycleTests.test_reviewed_case_runs_reproducibly_with_case_insensitive_original_hash)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_asset_lifecycle.py\", line 138, in test_reviewed_case_runs_reproducibly_with_case_insensitive_original_hash\n    target.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpcg67dvl5\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpcg67dvl5'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_asset_lifecycle.py\", line 122, in test_reviewed_case_runs_reproducibly_with_case_insensitive_original_hash\n    with TemporaryDirectory() as temporary:\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpcg67dvl5'\n\n======================================================================\nERROR: test_changed_evaluation_design_fails_before_calculation (test_demand_hindcast.DemandHindcastTests.test_changed_evaluation_design_fails_before_calculation)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 157, in test_changed_evaluation_design_fails_before_calculation\n    config = fixture(root)\n             ^^^^^^^^^^^^^\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 26, in fixture\n    write(root, CONFIG, config)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 19, in write\n    destination.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpozqt6o16\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpozqt6o16'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 155, in test_changed_evaluation_design_fails_before_calculation\n    with tempfile.TemporaryDirectory() as temp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpozqt6o16'\n\n======================================================================\nERROR: test_changed_observation_is_rejected_by_hash (test_demand_hindcast.DemandHindcastTests.test_changed_observation_is_rejected_by_hash)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 86, in test_changed_observation_is_rejected_by_hash\n    fixture(root)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 26, in fixture\n    write(root, CONFIG, config)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 19, in write\n    destination.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpwcur0e2f\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpwcur0e2f'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 84, in test_changed_observation_is_rejected_by_hash\n    with tempfile.TemporaryDirectory() as temp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpwcur0e2f'\n\n======================================================================\nERROR: test_check_only_has_no_results_and_excludes_2025 (test_demand_hindcast.DemandHindcastTests.test_check_only_has_no_results_and_excludes_2025)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 130, in test_check_only_has_no_results_and_excludes_2025\n    config = fixture(root)\n             ^^^^^^^^^^^^^\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 26, in fixture\n    write(root, CONFIG, config)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 19, in write\n    destination.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpcdekhs4r\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpcdekhs4r'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 128, in test_check_only_has_no_results_and_excludes_2025\n    with tempfile.TemporaryDirectory() as temp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpcdekhs4r'\n\n======================================================================\nERROR: test_configured_source_mismatch_is_rejected (test_demand_hindcast.DemandHindcastTests.test_configured_source_mismatch_is_rejected)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 199, in test_configured_source_mismatch_is_rejected\n    config = fixture(root)\n             ^^^^^^^^^^^^^\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 26, in fixture\n    write(root, CONFIG, config)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 19, in write\n    destination.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpomdufhpa\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpomdufhpa'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 197, in test_configured_source_mismatch_is_rejected\n    with tempfile.TemporaryDirectory() as temp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpomdufhpa'\n\n======================================================================\nERROR: test_explicitly_configured_and_reviewed_alternative_path_runs (test_demand_hindcast.DemandHindcastTests.test_explicitly_configured_and_reviewed_alternative_path_runs)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 167, in test_explicitly_configured_and_reviewed_alternative_path_runs\n    config = fixture(root)\n             ^^^^^^^^^^^^^\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 26, in fixture\n    write(root, CONFIG, config)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 19, in write\n    destination.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp631zhyxw\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp631zhyxw'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 165, in test_explicitly_configured_and_reviewed_alternative_path_runs\n    with tempfile.TemporaryDirectory() as temp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp631zhyxw'\n\n======================================================================\nERROR: test_holdout_energy_does_not_affect_fit_or_predictions (test_demand_hindcast.DemandHindcastTests.test_holdout_energy_does_not_affect_fit_or_predictions)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 115, in test_holdout_energy_does_not_affect_fit_or_predictions\n    config = fixture(root)\n             ^^^^^^^^^^^^^\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 26, in fixture\n    write(root, CONFIG, config)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 19, in write\n    destination.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp4j66i98e\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp4j66i98e'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 113, in test_holdout_energy_does_not_affect_fit_or_predictions\n    with tempfile.TemporaryDirectory() as temp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp4j66i98e'\n\n======================================================================\nERROR: test_missing_admission_creates_no_calibration_directory (test_demand_hindcast.DemandHindcastTests.test_missing_admission_creates_no_calibration_directory)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 76, in test_missing_admission_creates_no_calibration_directory\n    fixture(root)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 26, in fixture\n    write(root, CONFIG, config)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 19, in write\n    destination.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp8e7kst18\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp8e7kst18'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 74, in test_missing_admission_creates_no_calibration_directory\n    with tempfile.TemporaryDirectory() as temp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp8e7kst18'\n\n======================================================================\nERROR: test_success_is_reproducible_with_evidence_and_yearly_errors (test_demand_hindcast.DemandHindcastTests.test_success_is_reproducible_with_evidence_and_yearly_errors)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 139, in test_success_is_reproducible_with_evidence_and_yearly_errors\n    fixture(root)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 26, in fixture\n    write(root, CONFIG, config)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 19, in write\n    destination.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpile_e3w3\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpile_e3w3'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 137, in test_success_is_reproducible_with_evidence_and_yearly_errors\n    with tempfile.TemporaryDirectory() as temp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpile_e3w3'\n\n======================================================================\nERROR: test_units_checked_even_with_structurally_valid_review (test_demand_hindcast.DemandHindcastTests.test_units_checked_even_with_structurally_valid_review)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 99, in test_units_checked_even_with_structurally_valid_review\n    fixture(root)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 26, in fixture\n    write(root, CONFIG, config)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 19, in write\n    destination.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpzr8yd7zh\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpzr8yd7zh'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 97, in test_units_checked_even_with_structurally_valid_review\n    with tempfile.TemporaryDirectory() as temp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmpzr8yd7zh'\n\n======================================================================\nERROR: test_unrelated_unreviewed_input_does_not_block_this_module (test_demand_hindcast.DemandHindcastTests.test_unrelated_unreviewed_input_does_not_block_this_module)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 189, in test_unrelated_unreviewed_input_does_not_block_this_module\n    fixture(root)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 26, in fixture\n    write(root, CONFIG, config)\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 19, in write\n    destination.parent.mkdir(parents=True, exist_ok=True)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1311, in mkdir\n    os.mkdir(self, mode)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp6tdrk1jy\\\\workflow'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen os>\", line 366, in walk\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp6tdrk1jy'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\CSF2026\\mmj\\SimulationModelingProblemA-mmj-inventory\\tests\\test_demand_hindcast.py\", line 187, in test_unrelated_unreviewed_input_does_not_block_this_module\n    with tempfile.TemporaryDirectory() as temp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 950, in __exit__\n    self.cleanup()\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 954, in cleanup\n    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 934, in _rmtree\n    _shutil.rmtree(name, onexc=onexc)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 781, in rmtree\n    return _rmtree_unsafe(path, onexc)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 623, in _rmtree_unsafe\n    for dirpath, dirnames, filenames in results:\n                                        ^^^^^^^\n  File \"<frozen os>\", line 369, in walk\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shutil.py\", line 621, in onerror\n    onexc(os.scandir, err.filename, err)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 906, in onexc\n    _resetperms(path)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 286, in _resetperms\n    _dont_follow_symlinks(_os.chmod, path, 0o700)\n  File \"C:\\Users\\44321\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tempfile.py\", line 277, in _dont_follow_symlinks\n    func(path, *args)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\tests\\\\tmp6tdrk1jy'\n\n----------------------------------------------------------------------\nRan 172 tests in 11.704s\n\nFAILED (errors=12)\n"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "audit"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 45.632,
+      "stdout": "{\n  \"scope\": \"Workspace preservation and engineering checks only; not completion of final research.\",\n  \"passed\": true,\n  \"checks\": [\n    {\n      \"check\": \"retained_files_match_inventory\",\n      \"passed\": true,\n      \"detail\": {\n        \"scope\": \"nonrestricted file hashes; restricted existence/size only, NOT content preservation proof\",\n        \"resolved_original_paths\": 1117,\n        \"missing\": [],\n        \"unrecoverable_modifications\": [],\n        \"restricted_metadata_only\": [\n          {\n            \"path\": \"data/restricted/household/data/household_energy_source_fig4.csv\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 1.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 2.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 3.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 4.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 5.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          },\n          {\n            \"path\": \"data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 6.xlsx\",\n            \"size_matches_inventory\": true,\n            \"content_read\": false,\n            \"content_hash_verified\": false\n          }\n        ],\n        \"external_history_not_verified\": [\n          {\n            \"path\": \"../B题/2026年第二届全国大学生仿真建模应用挑战赛B题.pdf\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          },\n          {\n            \"path\": \"../C题/2026年第二届全国大学生仿真建模应用挑战赛C题.pdf\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          },\n          {\n            \"path\": \"../C题/附件1：车辆参数表.xlsx\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          },\n          {\n            \"path\": \"../C题/附件2：4段路程车辆行驶数据.xlsx\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          },\n          {\n            \"path\": \"../C题/附件3：参考工况.xlsx\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          },\n          {\n            \"path\": \"../C题/附件4：部件特性（OCV—SOC、内阻、电机效率）.xlsx\",\n            \"action\": \"external_duplicate\",\n            \"content_read\": false,\n            \"existence_verified\": false,\n            \"reason\": \"Out-of-repository B/C retention history; excluded from A clone audit\"\n          }\n        ]\n      }\n    },\n    {\n      \"check\": \"working_tree_google_api_keys_absent\",\n      \"passed\": true,\n      \"detail\": {\n        \"scope\": \"working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening\",\n        \"excluded_directories\": [\n          \"tmp\",\n          \"data/restricted\"\n        ],\n        \"pattern\": \"Google API key format only; not an exhaustive credential audit\",\n        \"passed\": true,\n        \"findings\": [],\n        \"errors\": [],\n        \"files_scanned\": 1172,\n        \"payloads_scanned\": 2239,\n        \"zip_members_scanned\": 1067\n      }\n    },\n    {\n      \"check\": \"protected_directory_unchanged\",\n      \"passed\": true,\n      \"detail\": 3\n    },\n    {\n      \"check\": \"five_official_originals_unchanged\",\n      \"passed\": true,\n      \"detail\": [\n        \"2026年第二届全国大学生仿真建模应用挑战赛A题.pdf\",\n        \"附件1.xlsx\",\n        \"附件2.xlsx\",\n        \"附件3.xlsx\",\n        \"附件4.xlsx\"\n      ]\n    },\n    {\n      \"check\": \"three_workspaces_consolidated\",\n      \"passed\": true,\n      \"detail\": \"one A workspace\"\n    },\n    {\n      \"check\": \"no_B_C_payload\",\n      \"passed\": true,\n      \"detail\": []\n    },\n    {\n      \"check\": \"all_final_references_resolve\",\n      \"passed\": true,\n      \"detail\": {\n        \"count\": 118,\n        \"missing\": []\n      }\n    },\n    {\n      \"check\": \"final_reader_links_resolve\",\n      \"passed\": true,\n      \"detail\": []\n    },\n    {\n      \"check\": \"retained_python_syntax\",\n      \"passed\": true,\n      \"detail\": []\n    },\n    {\n      \"check\": \"unified_data_keys_unique\",\n      \"passed\": true,\n      \"detail\": 362\n    },\n    {\n      \"check\": \"unified_rows_trace_to_files\",\n      \"passed\": true,\n      \"detail\": 362\n    },\n    {\n      \"check\": \"scope_not_promoted\",\n      \"passed\": true,\n      \"detail\": \"formal admission still governed by model_inputs and evidence_reviews\"\n    },\n    {\n      \"check\": \"known_quarantine_preserved\",\n      \"passed\": true,\n      \"detail\": [\n        \"data/processed/lb/base/prices/worldbank_energy_annual_2000_latest.csv\",\n        \"data/processed/lb/base/prices/worldbank_energy_monthly_2000_latest.csv\",\n        \"data/processed/transmission_lines_candidate.csv\"\n      ]\n    },\n    {\n      \"check\": \"raw_exact_duplicates_removed\",\n      \"passed\": true,\n      \"detail\": []\n    }\n  ],\n  \"original_files\": 5846,\n  \"removed_files\": 4776,\n  \"removed_bytes\": 296840178\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/scan_google_keys.py"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 4.278,
+      "stdout": "{\n  \"working_tree\": {\n    \"scope\": \"working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening\",\n    \"excluded_directories\": [\n      \"tmp\",\n      \"data/restricted\"\n    ],\n    \"pattern\": \"Google API key format only; not an exhaustive credential audit\",\n    \"passed\": true,\n    \"findings\": [],\n    \"errors\": [],\n    \"files_scanned\": 1172,\n    \"payloads_scanned\": 2239,\n    \"zip_members_scanned\": 1067\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/workflow_status.py",
+        "--check-formal-inputs"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 0.653,
+      "stdout": "已生成 outputs/workflow/；提示词阶段 W2。\n结构检查通过。正式输入检查：通过。\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q1",
+        "--output-dir",
+        "outputs/q1/p1_mmj"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 9.731,
+      "stdout": "{\"success\": true, \"output_dir\": \"outputs/q1/p1_mmj\", \"counts\": {\"history\": 882, \"indicators\": 169, \"roles\": 12, \"handoff\": 325, \"gaps\": 16}, \"acceptance\": \"candidate pending two peer reviews; gaps explicit\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q1",
+        "--output-dir",
+        "outputs/q1/review_mmj_validation"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 6.279,
+      "stdout": "{\"success\": true, \"output_dir\": \"outputs/q1/review_mmj_validation\", \"counts\": {\"history\": 882, \"indicators\": 169, \"roles\": 12, \"handoff\": 325, \"gaps\": 16}, \"acceptance\": \"candidate pending two peer reviews; gaps explicit\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q1",
+        "--inputs",
+        "tmp/q1-validation-ca7b1c8ed9084b82b369bc8d406d2a08/tampered.json",
+        "--output-dir",
+        "outputs/q1/negative_q1-validation-ca7b1c8ed9084b82b369bc8d406d2a08"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "passed": true,
+      "seconds": 1.337,
+      "stdout": "",
+      "stderr": "Q1 FAILED: Input missing or fingerprint mismatch: data/processed/unified/nbs_history.csv\n"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q1",
+        "--inputs",
+        "tmp/q1-validation-ca7b1c8ed9084b82b369bc8d406d2a08/missing.json",
+        "--output-dir",
+        "outputs/q1/negative_q1-validation-ca7b1c8ed9084b82b369bc8d406d2a08"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "passed": true,
+      "seconds": 1.027,
+      "stdout": "",
+      "stderr": "Q1 FAILED: [Errno 2] No such file or directory: 'D:\\\\CSF2026\\\\mmj\\\\SimulationModelingProblemA-mmj-inventory\\\\tmp\\\\q1-validation-ca7b1c8ed9084b82b369bc8d406d2a08\\\\missing.json'\n"
+    }
+  ],
+  "scientific_status": "Q1 scientific coverage partial; explicit gaps remain; Draft, A7 pending",
+  "limits": [
+    "2021-2024 price version remains quarantined",
+    "2024 physical energy-carbon closure and complete operational state blocked",
+    "new extractions need peer/shared-input confirmation",
+    "restricted files: metadata only, no content hashes checked",
+    "six external B/C historical duplicates excluded, no existence/content claim",
+    "full test execution may require leaving Windows desktop sandbox due legacy tempfile ACLs",
+    "not national initialization, calibration or forecast; no merge authorization"
+  ]
+}

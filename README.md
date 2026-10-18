@@ -19,6 +19,7 @@
 | [P1/mmj Q1 候选研究](docs/solutions/p1-mmj.md) | 四项研究、四维诊断、能源角色、静态核对和Q2候选交接；待两人评审 |
 | [mmj Q1 自查记录](docs/reviews/q1-mmj-selfcheck-20261018.md) | 问题修复、2024储能补提取与16项缺口处置；科学覆盖仍部分完成 |
 | [mmj Q1 第二轮自查](docs/reviews/q1-mmj-selfcheck-round2-20261018.md) | 数值边界、配置报告一致性、异常恢复与产物实际哈希核验 |
+| [mmj Q1 评审修复及两轮自检](docs/reviews/q1-mmj-review-fixes-20261018.md) | 非化石直接原件、价格定义断点、可安装依赖与更新验证 |
 
 ## 目录职责
 
@@ -66,7 +67,7 @@ python -B -X utf8 run.py q1 --output-dir outputs/q1/p1_mmj # Q1研究候选，�
 
 原 `run_*.ps1` 入口继续可用。图形界面另装 `requirements-workbench.txt`；主线数据核验不依赖界面。完整说明见[运行指南](docs/RUNNING.md)。
 
-Q1使用`workflow/q1_inputs.json`登记的本地输入与matplotlib，不隐式联网。评审改输出目录为`outputs/q1/review_mmj`，不覆盖其他方案或无归属目录。2021—2024价格版本、2024储能初态、网络时序和独立物理碳核对等缺口仍阻断，不代表全国初始化或校准完成。默认扫描和审计不打开`data/restricted`内容；审计仅查其存在和大小，未证明其内容哈希不变。
+Q1使用`workflow/q1_inputs.json`登记的本地输入；先安装`requirements-q1.txt`，运行时不隐式联网。评审改输出目录为`outputs/q1/review_mmj`，不覆盖其他方案或无归属目录。2024非化石19.8%初步值从NDC原件单列，欧洲气价混合定义的2015年不进入同定义波动。2021—2024价格版本、2024储能运行初态、网络时序和独立物理碳核对等缺口仍保留，不代表全国初始化或校准完成。默认扫描和审计不打开`data/restricted`内容；审计仅查其存在和大小，未证明其内容哈希不变。
 
 ## 固定研究约束
 

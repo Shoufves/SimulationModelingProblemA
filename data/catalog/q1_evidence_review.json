@@ -149,6 +149,36 @@
       }
     },
     {
+      "check": "WB_adopted_series_definitions",
+      "passed": true,
+      "detail": {
+        "cells": {
+          "Crude oil, average": "Description!B7",
+          "Crude oil, Brent": "Description!B8",
+          "Coal, Australian": "Description!B4",
+          "Natural gas, US": "Description!B13",
+          "Natural gas, Europe": "Description!B12",
+          "Liquefied natural gas, Japan": "Description!B14"
+        },
+        "treatment": "Europe 2015 annual average is mixed; retain level but exclude 2016/2015 return. TTF full-year levels 2016-2020 yield four changes. Australia switch is January 2015: all adopted full years are spot definition."
+      }
+    },
+    {
+      "check": "NDC_2024_nonfossil_direct_statement",
+      "passed": true,
+      "detail": {
+        "source": "lb/base:NDC_2035",
+        "physical_page": 5,
+        "printed_page": 3,
+        "source_sha256": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d",
+        "value": 19.8,
+        "unit": "%",
+        "status": "published_preliminary_estimate",
+        "scope": "2024 national primary energy consumption, China NDC report scope; separate release, not NBS primary electricity/other",
+        "visual_review": "mmj viewed full rendered physical p5 on 2026-10-18"
+      }
+    },
+    {
       "check": "IRENA_PDF_p71_table_row",
       "passed": true,
       "detail": "China 2024 row / Annex method; source physical PDF page, not printed offset"
@@ -385,14 +415,25 @@
         "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
         "blocked_use": "automatic national ABM initialization/calibration/forecast"
       },
+      "ndc_2024": {
+        "path": "data/processed/q1/ndc_2024.csv",
+        "sha256": "733a054b28f7c22dd7106af030ba7a286cc8c380da1551601f11db67640007c3",
+        "source_keys": [
+          "lb/base:NDC_2035"
+        ],
+        "coverage": "2024 single preliminary estimate; 2025 NDC release",
+        "boundary": "Direct published non-fossil primary consumption share; independent category/release, not relabelled NBS category; geography bridge pending Q2",
+        "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
+        "blocked_use": "automatic national ABM initialization/calibration/forecast"
+      },
       "price": {
-        "path": "data/processed/commodity_price_references.csv",
-        "sha256": "c123f4ffffd9ccea2320ef951fc05d166696f6196aea1cb3ac31ec4e9586aa2d",
+        "path": "data/processed/q1/prices_scoped.csv",
+        "sha256": "f75e574b691501f3357062db09fa8c57ddcd63a553d19440038cdbebe11451b6",
         "source_keys": [
           "yx:WB_PINK_SHEET_STABLE"
         ],
-        "coverage": "2015-2024 requested; only 2015-2020 archived rows adopted",
-        "boundary": "Nominal international benchmarks; no quarantined edition, no China contract-price inference",
+        "coverage": "2015-2024 requested; 2015-2020 archived levels; Europe comparable 2016-2020",
+        "boundary": "Nominal international benchmarks; Description definitions and mixed-2015 Europe retained; no cross-definition pooled SD, quarantined edition or China contract-price inference",
         "allowed_use": "Q1 descriptive research, diagnostics and Q2 candidate handoff",
         "blocked_use": "automatic national ABM initialization/calibration/forecast"
       },
@@ -585,6 +626,14 @@
         "path": "data/raw/lb/base/reports/storage_2025.pdf",
         "sha256": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3",
         "url": "https://www.nea.gov.cn/20250731/1d40d09f75714280a9218d5bea178fbd/202507311d40d09f75714280a9218d5bea178fbd_453d9a0609da1d4456a8b12d843bd256cf.pdf",
+        "version": "Locked base source edition; see source_key and per-record locator",
+        "content_review": "q1_evidence_review.json",
+        "use": "Q1 scoped research only"
+      },
+      "lb/base:NDC_2035": {
+        "path": "data/raw/lb/base/reports/china_ndc_2035.pdf",
+        "sha256": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d",
+        "url": "https://www.mee.gov.cn/ywgz/ydqhbh/qhbhlf/202511/W020251110629686716033.pdf",
         "version": "Locked base source edition; see source_key and per-record locator",
         "content_review": "q1_evidence_review.json",
         "use": "Q1 scoped research only"

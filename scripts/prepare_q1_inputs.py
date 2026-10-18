@@ -143,7 +143,60 @@ def main():
           annual[int(r["year"])][headers[r["variable"]]]) for r in prices),
           dict(rows=len(prices), sheet=sheet.title, header_row=7,
                coverage="2015-2020 only; quarantined edition excluded, not bridged"))
+    definition_cells = {
+        "Crude oil, average": ("B7", "equally weighed", "oil_average_spot"),
+        "Crude oil, Brent": ("B8", "Brent", "brent_38_API"),
+        "Coal, Australian": ("B4", "from January 2015", "newcastle_6000_spot_from_2015_01"),
+        "Natural gas, US": ("B13", "Henry Hub", "henry_hub_spot"),
+        "Natural gas, Europe": ("B12", "from April 2015", "TTF_from_2015_04"),
+        "Liquefied natural gas, Japan": ("B14", "import price, cif", "japan_LNG_import_cif")}
+    descriptions = {var: str(wb["Description"][cell].value).strip()
+                    for var, (cell, _, _) in definition_cells.items()}
+    check("WB_adopted_series_definitions",
+          all(token in descriptions[var] for var, (_, token, _) in definition_cells.items())
+          and "April 2010 to March 2015" in descriptions["Natural gas, Europe"]
+          and "spot price" in descriptions["Coal, Australian"],
+          dict(cells={var: "Description!"+item[0] for var,item in definition_cells.items()},
+               treatment="Europe 2015 annual average is mixed; retain level but exclude "
+                         "2016/2015 return. TTF full-year levels 2016-2020 yield four changes. "
+                         "Australia switch is January 2015: all adopted full years are spot definition."))
+    scoped_prices = []
+    for r in prices:
+        cell, _, definition = definition_cells[r["variable"]]
+        europe = r["variable"] == "Natural gas, Europe"
+        mixed = europe and int(r["year"]) == 2015
+        scoped_prices.append(dict(r,
+            definition_id="mixed_border_spot_TTF_2015" if mixed else definition,
+            definition_status="mixed_definition" if mixed else "homogeneous",
+            definition=descriptions[r["variable"]],
+            definition_locator="Description!"+cell,
+            definition_change_date="2015-04" if europe else
+                ("2015-01" if r["variable"] == "Coal, Australian" else ""),
+            boundary=r["boundary"]+"; source definition retained; "+
+                ("2015 mixed annual level excluded from comparable log changes" if mixed else
+                 "adjacent returns require same homogeneous definition")))
+    write_csv(out / "prices_scoped.csv", scoped_prices, list(scoped_prices[0]))
     wb.close()
+
+    ndc_path = ROOT / "data/raw/lb/base/reports/china_ndc_2035.pdf"
+    ndc_text = re.sub(r"\s+", "", PdfReader(ndc_path).pages[4].extract_text())
+    check("NDC_2024_nonfossil_direct_statement",
+          bool(re.search(r"初步测算[，,]2024年非化石能源占一次能源消费比重达到19\.8%", ndc_text)),
+          dict(source="lb/base:NDC_2035", physical_page=5, printed_page=3,
+               source_sha256=sha(ndc_path), value=19.8, unit="%",
+               status="published_preliminary_estimate",
+               scope="2024 national primary energy consumption, China NDC report scope; "
+                     "separate release, not NBS primary electricity/other",
+               visual_review="mmj viewed full rendered physical p5 on 2026-10-18"))
+    write_csv(out / "ndc_2024.csv", [dict(year=2024, region="China",
+        variable="nonfossil_primary_consumption_share", value=19.8, unit="%",
+        source_id="NDC_2035",
+        source_locator="PDF physical p5 / printed p3; section (II); 2030 NDC progress paragraph",
+        status="published_preliminary_estimate",
+        boundary="2024 non-fossil share of primary energy consumption; preliminary estimate "
+                 "in 2035 China NDC report (2025 release); source national geography retained, "
+                 "mainland bridge pending Q2; not NBS primary electricity/other or clean energy including gas",
+        missing_reason="")], fields)
 
     irena = PdfReader(ROOT / "data/raw/batch3_scenarios/irena_power_costs_2024.pdf")
     page = lambda n: irena.pages[n-1].extract_text()
@@ -293,7 +346,12 @@ def main():
         ("storage_2024", "data/processed/q1/storage_2024.csv", ["lb/base:NEA_STORAGE_2025"],
          "2024 cumulative commissioned new-type storage, from report published 2025",
          "Existing locked-base PDF p21; paragraph/figure energy precision separate; P/E not initial SOC; peer confirmation pending"),
-        ("price", "data/processed/commodity_price_references.csv", ["yx:WB_PINK_SHEET_STABLE"], "2015-2024 requested; only 2015-2020 archived rows adopted", "Nominal international benchmarks; no quarantined edition, no China contract-price inference"),
+        ("ndc_2024", "data/processed/q1/ndc_2024.csv", ["lb/base:NDC_2035"],
+         "2024 single preliminary estimate; 2025 NDC release",
+         "Direct published non-fossil primary consumption share; independent category/release, not relabelled NBS category; geography bridge pending Q2"),
+        ("price", "data/processed/q1/prices_scoped.csv", ["yx:WB_PINK_SHEET_STABLE"],
+         "2015-2024 requested; 2015-2020 archived levels; Europe comparable 2016-2020",
+         "Nominal international benchmarks; Description definitions and mixed-2015 Europe retained; no cross-definition pooled SD, quarantined edition or China contract-price inference"),
         ("pipeline", "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv", [ei], "2024", "China pipeline imports; bcm GCV40MJ/m3; bins not invented countries"),
         ("lng", "data/processed/lb/trade_alternatives/lng_china_2024.csv", [ei], "2024", "China LNG imports same EI standard; no mixing with domestic gas"),
         ("coal_trade", "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv", [ei], "2024", "EJ imports; grouped geography gives country HHI bounds"),
@@ -322,7 +380,7 @@ def main():
     manifest = dict(schema_version=1, candidate="p1/mmj", base_sha="7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
         reviewed_on="2026-10-18", observation_window=[2015,2024],
         common_input_change=False,
-        incremental_extraction="Three processed tables use originals already in locked base; province, cost method and 2024 storage are candidate additions pending Issue/peer confirmation, not replacement shared baseline",
+        incremental_extraction="Five processed tables use originals already in locked base; province, cost method, 2024 storage, NDC 2024 and scoped price definitions are candidate additions pending Issue/peer confirmation, not replacement shared baseline",
         assumptions=dict(real_wacc=[.03,.05,.07], common_life_years=25,
                          cost_service="unfirmed plant-gate electricity; constant annual output; 8760 hours normalization"),
         evidence_review=dict(path="data/catalog/q1_evidence_review.json", sha256=sha(review_path)),

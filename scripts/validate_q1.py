@@ -19,7 +19,7 @@ ARTIFACTS={"history.csv","indicators.csv","energy_roles.csv","model_handoff.csv"
            "gaps_and_conflicts.csv","regional.csv","static_balance.json","report.md",
            "overview.png","regional.png"}
 RUN_CODE_PATHS=["run.py","scripts/run_q1_assessment.py","scripts/prepare_q1_inputs.py",
-                "src/energy_model/q1.py"]
+                "src/energy_model/q1.py","requirements-q1.txt"]
 
 
 @contextmanager
@@ -155,7 +155,8 @@ def main():
         return subprocess.check_output(["git",*args],cwd=ROOT,text=True,encoding="utf-8").strip()
     code_paths=["run.py","scripts/run_q1_assessment.py","scripts/prepare_q1_inputs.py",
         "scripts/validate_q1.py","src/energy_model/q1.py","tests/test_q1.py",
-        "scripts/audit_workspace.py","scripts/scan_google_keys.py","scripts/build_workspace_catalog.py"]
+        "scripts/audit_workspace.py","scripts/scan_google_keys.py","scripts/build_workspace_catalog.py",
+        "requirements-q1.txt"]
     result=dict(scope="Engineering gate execution; scientific scope/peer approval recorded separately",
         passed=all(r["passed"] for r in records) and checks["checks_passed"] and diff.returncode==0,
         executed_on=datetime.now().astimezone().isoformat(),python=sys.version,executable=sys.executable,

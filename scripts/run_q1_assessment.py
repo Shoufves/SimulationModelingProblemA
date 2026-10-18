@@ -17,7 +17,8 @@ from energy_model.q1 import (Q1Error, balance_table, concentration, identity, in
 
 HISTORY_FIELDS = ["record_id","year","region","energy","variable","value","unit",
     "source_key","source_locator","input_id","input_path","original_value","transformation",
-    "status","boundary","missing_reason","independence","selected_provenance_path","selected_source_key"]
+    "status","boundary","missing_reason","independence","selected_provenance_path","selected_source_key",
+    "definition_id","definition_status","definition","definition_locator","definition_change_date"]
 INDICATOR_FIELDS = ["indicator_id","dimension","year","region","energy","value","unit",
     "direction","formula","input_refs","valid_years","status","interpretation"]
 GAP_FIELDS = ["gap_id","topic","years","status","evidence","reason","impact","next_action"]
@@ -60,7 +61,7 @@ def validate_inputs(root, manifest):
     ids = [r["id"] for r in manifest["inputs"]]
     expected = {"nbs","products","balance","demand","province","macro","co2","snapshot",
                 "cost","cost_method","price","pipeline","lng","coal_trade","communique","renewables",
-                "storage_2024"}
+                "storage_2024","ndc_2024"}
     if set(ids) != expected or len(ids) != len(expected):
         raise Q1Error("Missing or duplicate Q1 input groups")
     entries = [*manifest["inputs"], *manifest["sources"].values(), manifest["evidence_review"]]
@@ -142,6 +143,13 @@ def normalize(root, inputs):
             if key == "nbs":
                 record["source_locator"] += f"; NBS table image; year={year}; column={var}"
                 record["boundary"] = item["boundary"]
+            if key == "price":
+                for field in ("definition_id","definition_status","definition",
+                              "definition_locator","definition_change_date"):
+                    record[field] = r[field]
+                if not all(record[f] for f in ("definition_id","definition_status",
+                                              "definition","definition_locator")):
+                    raise Q1Error("Missing price definition evidence")
             # Keep H2 lower-bound qualifier machine-visible.
             if var == "hydrogen_output":
                 record["status"] = "lower_bound_exceeds"
@@ -267,6 +275,15 @@ def calculate(root, manifest, inputs):
             "published utilization, not capacity factor",[r],"published_scoped",
             "未有理论可发电量，不由利用率反推弃电量；年末容量不用于全国容量因子")
 
+    # Directly published preliminary share; never inferred from another category.
+    nonfossil=select("ndc_2024","nonfossil_primary_consumption_share",2024)
+    if nonfossil["unit"]!="%" or nonfossil["status"]!="published_preliminary_estimate":
+        raise Q1Error("NDC non-fossil share unit/preliminary status mismatch")
+    add("nonfossil_primary_consumption_share","低碳",2024,"非化石",
+        nonfossil["value"],"%","描述","direct published preliminary share",[nonfossil],
+        "published_preliminary_estimate",
+        "NDC2025发布版的2024初步测算；不由NBS一次电力及其他推导；地域桥接待Q2",
+        region=nonfossil["region"])
     # Common service, price year, life AND discount convention for wind comparison.
     cost_result = []
     for technology in ("onshore_wind","offshore_wind"):
@@ -298,9 +315,11 @@ def calculate(root, manifest, inputs):
         result=price_volatility(raw)
         volatility[variable]=result
         add("price_log_sd_"+variable,"经济","2015-2024",variable,result["value"],
-            "sample SD(log annual change)","越低波动越小","stdev(log(P_t/P_t-1)); consecutive covered years only",
+            "sample SD(log annual change)","越低波动越小",
+            "stdev(log(P_t/P_t-1)); adjacent homogeneous same-definition levels; no cross-definition pooling",
             [r for r in rows["price"] if r["variable"]==variable],"partial_window",
-            json.dumps(result,ensure_ascii=False),region="国际基准",valid="2015-2020; 5 adjacent changes")
+            json.dumps(result,ensure_ascii=False),region="国际基准",
+            valid=";".join(f"{a}-{b}" for a,b in result["valid_pairs"]))
     # Mainland province sets are checked exactly; both annual shares use own sum.
     gen = {r["region"]:r for r in rows["province"] if r["variable"]=="generation_100GWh"}
     demand = {r["region"]:r for r in rows["demand"] if r["year"]==2024}
@@ -371,9 +390,10 @@ def calculate(root, manifest, inputs):
     gap("price_2021_2024","价格","2021-2024","blocked_version","price",
         "可用旧版止于2020；新版及lb价格隔离未解除","不能称完整十年波动/国内到厂价",
         "共同审查清洁原始版本及价年，另行输入修订")
-    gap("nonfossil_consumption","非化石一次消费","2015-2024","blocked_definition","nbs;communique",
-        "一次电力及其他、含气清洁能源均不直接等于非化石","低碳分维保留煤份额/强度诊断，不给该点估计",
-        "取得同口径非化石分类与折标系数")
+    gap("nonfossil_consumption","非化石一次消费历史","2015-2023","partial_history","ndc_2024;nbs;communique",
+        "2024已有NDC直接公布19.8%初步值；其他年份未提取同口径历史；NBS分类仍不能替代",
+        "可给独立2024初步截面，不能据此补齐十年序列或当全国正式校准准入",
+        "复核NDC新用途与地域；补同口径历史分类和折标说明")
     gap("gas_net_dependency","天然气净进口依赖","2024","blocked_boundary","snapshot",
         "缺同口径出口、消费、库存；EI标准热值与国内体积未桥接","只给同报告进口CR5与EI分通道集中度",
         "获取完整天然气平衡表和标准状态")
@@ -406,8 +426,10 @@ def calculate(root, manifest, inputs):
         "WDI/GCB用CHN代码，NBS用大陆；GDP历史修订与基期未逐一桥接",
         "强度仅研究对照，不作为官方扣除指标或全国校准准入",
         "核对地域元数据及GDP修订/基价，提交Q2输入审查")
-    gap("new_extractions","共同输入增量确认","2024","pending_peer_confirmation","province;cost_method;storage_2024",
-        "源原件已在锁定base，省表、成本方法、2024储能三份细化表是本方案新提取","不悄悄替换三人共同输入",
+    gap("new_extractions","共同输入增量确认","2015-2024","pending_peer_confirmation",
+        "province;cost_method;storage_2024;ndc_2024;price",
+        "源原件已在锁定base；省表、成本方法、储能、NDC及价格定义五份细化表为候选增量",
+        "不悄悄替换三人共同输入",
         "PR/Issue公开增量；两名成员核对后主持人确认是否修订共同输入")
     for ledger in ledgers:
         if ledger["year"]==2023:
@@ -443,6 +465,13 @@ def calculate(root, manifest, inputs):
             status="candidate_not_admitted",condition="新提取待两人核对；名牌P/E不等运行库存；SOC/效率/分区状态待补",
             model_position="全国新型储能规模边界候选；不能独立初始化储能",split="2024已接触留出",
             **{key:r[key] for key in ("region","source_key","boundary")},source_status=r["status"]))
+    handoff.append(dict(handoff_id=nonfossil["record_id"],kind="结构核对候选",year=2024,
+        variable=nonfossil["variable"],value=nonfossil["value"],unit=nonfossil["unit"],
+        evidence=nonfossil["record_id"],status="candidate_not_admitted",
+        condition="初步测算；独立发布版本及国家地域定义待两人核对；不与NBS另一分类合并",
+        model_position="2024一次非化石份额历史核对；不强制未来政策目标",
+        split="2024已接触留出",**{key:nonfossil[key] for key in ("region","source_key","boundary")},
+        source_status=nonfossil["status"]))
     for key in ("regional_grid","storage_2024","physical_carbon","gas_net_dependency","firm_cost"):
         g=next(g for g in gaps if g["gap_id"]==key)
         handoff.append(dict(handoff_id="blocked_"+key,kind="约束/待补输入",year=2024,
@@ -542,7 +571,10 @@ def report(indicators,roles,gaps,static,history):
     lines += [
         "",
         f"煤炭消费比重从63.8%降至{v('consumption_coal_pct'):.1f}%，但其绝对规模未据此判定下降。"
-        "2024油18.2%、气8.8%、一次电力及其他19.8%保留原分类。含气清洁能源28.6%不是非化石。",
+        "2024油18.2%、气8.8%、一次电力及其他19.8%保留原分类。含气清洁能源28.6%不是非化石。"
+        f"NDC2025发布版另直接公布2024非化石一次消费占比初步测算{v('nonfossil_primary_consumption_share'):.1f}%"
+        "（原PDF物理p5/印刷p3），与NBS分类分别保留；数值相同不等于同一观测或定义。"
+        "NDC国家地域保留China，进入大陆模型前仍需桥接；其他年份未据此回填。",
         "原煤47.81亿吨、气2464.51亿立方米、总发电100868.81亿千瓦时（10086.881 TWh）。"
         "九类能源细分十年发电与区域技术面板未齐全，缺口逐项列示，不填缺年。",
         "",
@@ -554,7 +586,7 @@ def report(indicators,roles,gaps,static,history):
         "|维度|定量结果|解释|",
         "|---|---|---|",
         f"|保障|2023煤净进口依赖{v('net_import_dependency_煤',2023):.2f}%；石油{v('net_import_dependency_石油',2023):.2f}%|同表同单位；不是2024或原油依赖|",
-        f"|低碳|2024煤份额{v('consumption_coal_pct'):.1f}%；水核风太阳能发电占比{v('hydro_nuclear_wind_solar_generation_share'):.2f}%|后者含水电抽蓄未拆分，不代替一次非化石份额|",
+        f"|低碳|2024非化石一次消费初步值{v('nonfossil_primary_consumption_share'):.1f}%；煤份额{v('consumption_coal_pct'):.1f}%；水核风太阳能发电占比{v('hydro_nuclear_wind_solar_generation_share'):.2f}%|NDC初步值独立保留；发电子集含抽蓄未拆分，不代替一次非化石份额|",
         f"|经济|统一{life:g}年、{representative*100:g}%实际WACC的陆风{cost('onshore_wind',representative):.5f}、海风{cost('offshore_wind',representative):.5f}（2024 USD/kWh）|共同融资条件实验，非官方LCOE重现、非到户或保供服务成本|",
         f"|协调|2024年31省发用电份额距离{v('provincial_generation_use_share_distance'):.5f}；风/PV利用率95.9%/96.8%|空间错配提示协调需求，不能直接断言不安全或推弃电量|",
         "",
@@ -587,13 +619,19 @@ def report(indicators,roles,gaps,static,history):
         values=[cost(tech,rate) for rate in rates]
         lines.append("|"+tech+"|"+"|".join(f"{x:.5f}" for x in values)+"|2024 USD/kWh|")
     lines += ["",
-        "价格波动固定考察2015—2024，仅使用可核验旧版年度价格。六个国际基准各有2015—2020六水平、"
-        "五个相邻对数变化；样本标准差如下。2021—2024隔离缺失，不跨缺年、不拼接新版、不当国内到厂价。",
+        "价格波动固定考察2015—2024，仅使用可核验旧版2015—2020年度价格。"
+        "Description!B12注明欧洲气价自2015年4月改为TTF，2015年度混合此前边境进口/现货组合与TTF。"
+        "保留2015原值，但排除2016/2015变化；欧洲仅以2016—2020五个同定义水平、四个相邻变化计算样本标准差。"
+        "其余五系列各有六水平、五个相邻变化；澳煤Description!B4自2015年1月为Newcastle 6000 kcal/kg现货，"
+        "该归档版的采用年度均在同一定义内。2021—2024隔离缺失，不跨缺年、不拼接新版、不当国内到厂价。",
         "",
-        "|国际基准|对数变化样本标准差|有效相邻变化数|",
-        "|---|---:|---:|"]
+        "|国际基准|对数变化样本标准差|有效相邻变化数|同定义水平年份|排除的已知相邻对|",
+        "|---|---:|---:|---|---|"]
     for key,r in static["prices"].items():
-        lines.append(f"|{key}|{r['value']:.5f}|{r['observations']}|")
+        sd="未估计" if r["value"] is None else f"{r['value']:.5f}"
+        levels="、".join(str(y) for y in sorted(r["comparable_level_years"]))
+        excluded="；".join(f"{x['years'][0]}-{x['years'][1]}: {x['reason']}" for x in r["excluded_pairs"]) or "无"
+        lines.append(f"|{key}|{sd}|{r['observations']}|{levels}|{excluded}|")
     lines += ["",
         "协调性用两端各自31省合计作为份额分母，完整省集、同年和单位必须一致。",
         f"省级发电合计{static['spatial']['generation_sum']:.2f}亿千瓦时，与全国产品表差"
@@ -742,8 +780,9 @@ def main():
         write_json(staging/"static_balance.json",static)
         (staging/"report.md").write_bytes(report(indicators,roles,gaps,static,history).encode("utf-8"))
         plots(staging,history,static)
+        from matplotlib.ft2font import __freetype_version__
         codes=["run.py","scripts/run_q1_assessment.py","scripts/prepare_q1_inputs.py",
-               "src/energy_model/q1.py"]
+               "src/energy_model/q1.py","requirements-q1.txt"]
         protected=read_json(ROOT/"archive/organization_20261017/file_disposition.json")
         preserved=[r for r in protected if r["action"]=="protect" or
                    ("/" not in r["path"] and not r["path"].startswith("~$"))]
@@ -757,6 +796,10 @@ def main():
             command=["python","-B","-X","utf8","run.py","q1","--inputs",args.inputs,"--output-dir",args.output_dir],
             python=sys.version,executable=sys.executable,
             dependencies={"matplotlib":importlib.metadata.version("matplotlib"),
+                          "rendering":{name:importlib.metadata.version(name) for name in
+                                       ("numpy","pillow","contourpy","fonttools","kiwisolver",
+                                        "cycler","packaging","python-dateutil")},
+                          "freetype":__freetype_version__,
                           "core":"Python standard library"},
             random_steps=False,network_access=False,
             input_manifest=dict(path=args.inputs,sha256=sha(input_path)),
