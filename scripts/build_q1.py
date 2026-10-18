@@ -5,11 +5,12 @@ import argparse, csv, hashlib, importlib.metadata, json, math, os, platform, shu
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'src'))
-from energy_model.q1 import finite, ratio, compound_index, spatial_difference, segmented_price_volatility, concentration
+from energy_model.q1 import finite, ratio, compound_index, spatial_difference, segmented_price_volatility, concentration, screening_lcoe, COST_ASSUMPTIONS, review_snapshot
 
 CODE_PATHS=['run.py','scripts/build_q1.py','src/energy_model/q1.py','scripts/prepare_q1_review.py',
             'scripts/plot_q1.py','scripts/q1_additional_analysis.py','scripts/extract_q1_additions.py',
-            'scripts/extract_q1_revision.py','scripts/review_q1_delivery.py','requirements-q1.txt']
+            'scripts/extract_q1_revision.py','scripts/review_q1_delivery.py',
+            'scripts/prepare_q1_cost_parameters.py','requirements-q1.txt']
 
 
 def sha(path):
@@ -45,6 +46,19 @@ def preflight(config):
         if not s['artifacts']: raise ValueError('Source lacks original')
         for a in s['artifacts']:
             if sha(local_path(a['path']))!=a['sha256']: raise ValueError(f'Original hash mismatch: {a["path"]}')
+
+    evidence = config.get('evidence_review')
+    if not evidence:
+        raise ValueError('Missing Q1 evidence review binding')
+    review_path = local_path(evidence['path'])
+    if sha(review_path) != evidence['sha256']:
+        raise ValueError('Evidence review hash mismatch')
+    review = json.loads(review_path.read_text(encoding='utf-8'))
+    if (review.get('base_sha') != config.get('base_sha') or
+            not review.get('checks') or not all(r['passed'] for r in review['checks'])):
+        raise ValueError('Q1 evidence review has unresolved failures or mismatched base')
+    if review.get('reviewed_snapshot') != review_snapshot(records, config['sources']):
+        raise ValueError('Input bytes, sources or permitted uses differ from substantive review')
 
 
 def load_history(config):
@@ -122,7 +136,7 @@ def one(data,group,variable,year,unit=None,**filters):
     return row
 
 
-def calculate(data):
+def calculate(data, cost_assumptions=None):
     indicators=[]; balances=[]; regions=[]; origins=[]; gaps=[]
     def add(ident,dimension,year,value,unit,formula,refs,direction='context',status='calculated',boundary=''):
         indicators.append(dict(indicator_id=ident,dimension=dimension,year=year,value=value,unit=unit,direction=direction,
@@ -257,6 +271,28 @@ def calculate(data):
         if 'LCOE' in r['variable']:
             add(r['variable'],'经济',r['year'],r['_value'],r['unit'],'published weighted LCOE',[r],'lower',status='published_estimate',
                 boundary='IRENA 2024美元；经济寿命25年；2024技术/国家特定WACC；不与2018美元旧投影横排；不含相同保供系统成本')
+    # mmj PR #4: common 2024 price year, economic life and real financing scenarios.
+    assumptions = COST_ASSUMPTIONS if cost_assumptions is None else cost_assumptions
+    rates = assumptions['real_wacc']
+    if (not isinstance(rates, list) or not rates or
+            any(isinstance(r, bool) or not isinstance(r, (int, float)) or
+                not math.isfinite(r) or r < 0 for r in rates) or len(set(rates)) != len(rates)):
+        raise ValueError('WACC sensitivity requires distinct finite non-negative rates')
+    if assumptions['cost_service'] != COST_ASSUMPTIONS['cost_service']:
+        raise ValueError('This cost method only implements unfirmed plant-gate service')
+    for technology in ('onshore_wind', 'offshore_wind'):
+        cap = get('costs', technology+'_installed_cost_weighted_average', 2024, '2024 USD/kW')
+        cf = get('cost_method', technology+'_new_project_capacity_factor', 2024, 'fraction')
+        om = get('cost_method', technology+'_fixed_om', 2024, '2024 USD/kW/year')
+        life = get('cost_method', technology+'_economic_life', 2024, 'year')
+        if life['_value'] != assumptions['common_life_years']:
+            raise ValueError('Cost lifetime disagrees with shared analysis convention')
+        for rate in rates:
+            value = screening_lcoe(cap['_value'], om['_value'], cf['_value'], life['_value'], rate)
+            add(f'screening_{technology}_wacc_{rate}', '经济', 2024, value, '2024 USD/kWh',
+                f"(CAPEX*CRF({rate},{life['_value']})+OM)/(8760*CF)", [cap, cf, om, life], 'lower',
+                status='conditional_common_financing_sensitivity',
+                boundary=f"共同实际WACC={rate*100:g}%为研究假设；{life['_value']:g}年、恒定年电量；未含储能/保供/系统接网外部成本；非全国校准成本；国家均值未逐项目配对，CF通常事前估计，O&M为报告假设")
     for var in sorted({r['variable'] for r in data['prices']}):
         rs=select(data,'prices',var); window=[r for r in rs if 2015<=r['year']<=2024]
         if len({r['year'] for r in window})!=len(window) or len({r['unit'] for r in window})!=1: raise ValueError('Price series mismatch')
@@ -318,9 +354,11 @@ def handoff(history,indicators):
                   and r.get('precision_role')!='crosscheck_only')
         carbon=(r['dataset']=='carbon' and r['variable']=='Total' and 2015<=r['year']<=2024)
         if not (primary or snapshot or carbon):continue
-        hands.append(dict(record_kind='numeric_observation_candidate',energy=r['energy'],model_location='state_or_calibration_target',year=r['year'],
+        driver = r['variable'] == 'real_gdp_growth_pct'
+        hands.append(dict(record_kind='exogenous_driver_candidate' if driver else 'numeric_observation_candidate',energy=r['energy'],
+            model_location='historical_activity_driver_not_fitting_target' if driver else 'state_or_calibration_target',year=r['year'],
             variable=r['variable'],value=r['value'],unit=r['unit'],region=r['region'],candidate_refs=r['record_id'],
-            candidate_status='historical_target_candidate' if r['year']<2024 else '2024_state_or_target_candidate',
+            candidate_status='exogenous_driver_not_calibration_target' if driver else ('historical_target_candidate' if r['year']<2024 else '2024_state_or_target_candidate'),
             training_window='2015–2021' if r['year']<=2021 else '',evaluation_window='2022–2024 already seen' if r['year']>=2022 else '',
             constraint_or_gap=r['boundary'],formal_initialization='requires model variable/boundary and contemporaneous stocks/assets review'))
     for r in indicators:
@@ -333,8 +371,8 @@ def handoff(history,indicators):
 def render_report(out,data,history,inds,balances,regions,origins,gaps,assessment,synergies):
     def ind(key,year=2024):return next(r['value'] for r in inds if r['indicator_id']==key and r['year']==year)
     def val(group,var,year):return one(data,group,var,year)['_value']
-    text=['# 问题一：我国多能源发展现状评估（p1/lb）','',
-          '研究日期：2026-10-18。共同起点：`7a65d068d19eea2f7dd8161a618a3ad8d66f98b8`。本报告是问题一三个子问题的修订候选，按独立评审修正C1/C2/L2/L3，等待独立复审与新增用途共同确认；此前完成判断已撤回。见[评审修订记录](../../../docs/solutions/p1-lb-review-response.md)。',
+    text=['# 问题一：我国多能源发展现状评估（lb主线、mmj补强）','',
+          '研究日期：2026-10-18。共同起点：`7a65d068d19eea2f7dd8161a618a3ad8d66f98b8`。本报告以lb `353cca7` 为主线，仅接入mmj `baf1975` 中明确增量。两份原候选已通过yx侧本地技术复审，尚未正式批准或合并；本次完整整合PR须由mmj、lb针对同一最终提交正式评审。见[整合与来源说明](../../../docs/solutions/p1-yx-integration.md)。',
           '', '## 1. 主要判断', '',
           f"2015—2024年能源消费由{ind('energy_total',2015):.4f}增至{ind('energy_total'):.2f}亿吨标准煤（增长{(ind('energy_total')/ind('energy_total',2015)-1)*100:.2f}%）。煤炭份额由{ind('coal_share',2015):.1f}%降至{ind('coal_share'):.1f}%，但同表推导的煤炭标准煤消费量由{ind('coal_allocated_tce',2015):.4f}增至{ind('coal_allocated_tce'):.4f}亿吨。结构转型与绝对需求增长并存，不能只凭份额下降判断煤炭需求已见顶。", '',
           f"2023年同表净进口/消费：石油{ind('oil_net_import_ratio',2023):.2f}%、煤炭{ind('coal_net_import_ratio',2023):.2f}%。石油包括油品等原表边界，不能改称原油依存度。天然气进口中LNG占{ind('gas_imports_LNG_share'):.2f}%；全年分项用途说明工业与气电应共用气源约束，但不足以计算中断损失。", '',
@@ -379,6 +417,13 @@ def render_report(out,data,history,inds,balances,regions,origins,gaps,assessment
         if 'LCOE' in r['variable']:
             label={'onshore_wind_LCOE':'陆上风电','utility_solar_PV_LCOE':'地面光伏','offshore_wind_LCOE':'海上风电'}[r['variable']]
             text.append(f"|{label}|{r['_value']}|{r['unit']}|")
+    wind_costs = [r for r in inds if r['indicator_id'].startswith('screening_')]
+    text += ['', '### mmj补强：统一融资与寿命的风电条件成本', '',
+             '沿用mmj的IRENA中国2024参数：陆风CAPEX 856 USD/kW、O&M 29 USD/kW/年、CF 33%；海风1520、59、37%；共同经济寿命25年。按 (CAPEX×CRF+O&M)/(8760×CF) 重算。实际WACC情景为研究假设，未改变原参数。', '',
+             '|技术与实际WACC情景|条件成本|单位|', '|---|---:|---|']
+    for r in wind_costs:
+        text.append(f"|{r['indicator_id']}|{r['value']:.5f}|{r['unit']}|")
+    text += ['', '参数定位：陆风CAPEX p71、CF p76/Table 2.2、O&M p209/Table A3；海风CAPEX p119、CF p123/Table 4.3、O&M p212/Table A6；寿命p202/Table A1。均为物理PDF页，原值见history.csv。CF通常为事前估计，O&M为报告假设；国家均值未逐项目配对，重算不等于项目LCOE加权均值或全国在运实测成本。共同折现情景下仍仅比较未保供厂门电量，不包括储能、保供及系统接网外部成本，不与公布LCOE或2018美元投影重复相加。光伏缺中国同口径CF，继续只列公布LCOE。']
     text+=['','|国际年均价格序列|年度对数变化标准差|有效收益率数|','|---|---:|---:|']
     for r in inds:
         if r['indicator_id'].startswith('price_log_volatility_'):
@@ -407,7 +452,7 @@ def render_report(out,data,history,inds,balances,regions,origins,gaps,assessment
         if b.get('year')==2023 and 'supply_arithmetic_residual' in b:
             text.append(f"|{b['account']}|{b['unit']}|{b['supply_arithmetic_residual']:.0f}|{b['use_arithmetic_residual']:.0f}|{b['published_supply_minus_consumption']:.0f}|{b['published_balance']}|")
     text+=['','算术差是公式计算与原表公布量之差；公布供需差是统计账本本身的残差，二者不能混同。1个末位单位的差保留；大额统计差不擅自分摊为库存或损耗。GCB仅进行同表分项求和，不以此冒充能源到碳的独立闭合。煤炭产品产量与平衡表产量不同，按用途分开。', '',
-           '[static_balance.json](static_balance.json)保留所有检查点及原值；[model_handoff.csv](model_handoff.csv)列出初态候选、校准目标、约束与阻断项。后续训练2015—2021、评估2022—2024；评估段已接触，不称盲测。本轮没有建立全国真实完整初态、小时调度或未来预测。', '',
+           '[static_balance.json](static_balance.json)保留所有检查点及原值；[model_handoff.csv](model_handoff.csv)列出初态候选、校准目标、约束与阻断项。沿用mmj的用途区分：GDP增长仅作历史活动的外生驱动候选，不作为能源模型拟合目标；数值仍使用lb的原序列。后续训练2015—2021、评估2022—2024；评估段已接触，不称盲测。本轮没有建立全国真实完整初态、小时调度或未来预测。', '',
            '## 9. 结果图与缺口边界','','![需求及煤炭消费指数](demand_trends.svg)', '',
            '图1：按2015=100比较需求与实际GDP。份额下降不代表煤炭标准煤消费绝对量下降。', '',
            '![融资条件与可比成本](cost_sensitivity.svg)', '',
@@ -444,7 +489,7 @@ def run(output_dir):
         dump(attempt,dict(run_id=run_id,status='running',output_valid_for_this_attempt=False))
         config=json.loads(config_path.read_text(encoding='utf-8')); preflight(config)
         data,history=load_history(config)
-        inds,balances,regions,origins,gaps=calculate(data)
+        inds,balances,regions,origins,gaps=calculate(data,config['decisions']['wind_cost_assumptions'])
         from q1_additional_analysis import derive,synthesize
         inds+=derive(data)
         assessment,synergies=synthesize(data,history,inds)

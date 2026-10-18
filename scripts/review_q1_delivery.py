@@ -38,7 +38,7 @@ def validate_current_artifacts(folder, config):
 
 
 def validation_identity(config):
-    paths={'workflow/q1_inputs.json','run.py'}
+    paths={'workflow/q1_inputs.json','run.py',config['evidence_review']['path']}
     paths.update(str(p.relative_to(ROOT)).replace('\\','/') for sub in ('scripts','src','tests') for p in (ROOT/sub).rglob('*.py'))
     paths.update(r['path'] for r in config['inputs'])
     paths.update(a['path'] for s in config['sources'].values() for a in s['artifacts'])
@@ -46,8 +46,8 @@ def validation_identity(config):
 
 
 def main():
-    out=ROOT/'outputs/q1/p1_lb';replica=ROOT/'outputs/q1/lb_reproduction'
-    evidence=ROOT/'outputs/q1_review/revision1/delivery';evidence.mkdir(parents=True,exist_ok=True)
+    out=ROOT/'outputs/q1/p1_yx';replica=ROOT/'outputs/q1/yx_reproduction'
+    evidence=ROOT/'outputs/q1_review/lb_mmj_integration';evidence.mkdir(parents=True,exist_ok=True)
     (evidence/'final_verification.json').write_text(json.dumps(dict(passed=False,status='running',
         scope='No successful current verification receipt until all checks finish')),encoding='utf-8')
     checks=[]

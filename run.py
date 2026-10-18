@@ -23,7 +23,7 @@ def tests():
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command',choices=['audit','catalog','test','attachments','verify','prototype','baseline','reproduce-lb','status','q1'])
-    parser.add_argument('--output-dir',default='outputs/q1/p1_lb')
+    parser.add_argument('--output-dir',default='outputs/q1/p1_yx')
     parser.add_argument('--recipe',choices=['national','trade','international','ai_trade'],default='trade')
     args=parser.parse_args()
     os.chdir(ROOT)

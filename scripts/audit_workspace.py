@@ -36,7 +36,7 @@ def main():
         if p.exists():
             with zipfile.ZipFile(p) as z:
                 archives.append({n:hashlib.sha256(z.read(n)).hexdigest() for n in z.namelist()})
-    missing=[];modified=[];retained=0;external_history=[]
+    missing=[];modified=[];retained=0;external_history=[];restricted_metadata=[]
     for r in plan:
         if not r['target']:continue
         if is_external_history(r):
@@ -46,6 +46,14 @@ def main():
         p=(ROOT/r['target']).resolve()
         if not p.is_relative_to(ROOT):missing.append(r['path']+' (unexpected external target)');continue
         if not p.is_file():missing.append(r['path']);continue
+        # mmj baf1975: restricted retention is metadata-only, never a content read.
+        if p.relative_to(ROOT).as_posix().startswith('data/restricted/'):
+            same_size=p.stat().st_size==r['bytes']
+            restricted_metadata.append(dict(path=r['target'],size_matches_inventory=same_size,
+                content_read=False,content_hash_verified=False))
+            if not same_size:modified.append(r['path']+' (metadata size changed)')
+            retained+=1
+            continue
         h=sha(p)
         stored_copy=(r.get('representation')=='offline_html'
             and r['target'].startswith('data/raw/') and p.suffix=='.html'
@@ -53,7 +61,10 @@ def main():
         if h!=r['sha256'] and not stored_copy and not any(d.get(r['target'])==r['sha256'] for d in archives):
             modified.append(r['path'])
         retained+=1
-    check('retained_files_match_inventory',not missing and not modified,dict(resolved_original_paths=retained,missing=missing,unrecoverable_modifications=modified,external_historical_records=external_history))
+    check('retained_files_match_inventory',not missing and not modified,dict(
+        scope='nonrestricted file hashes; restricted existence/size only, NOT content preservation proof',
+        resolved_original_paths=retained,missing=missing,unrecoverable_modifications=modified,
+        restricted_metadata_only=restricted_metadata,external_historical_records=external_history))
     key_scan=scan_workspace()
     check('working_tree_google_api_keys_absent',key_scan['passed'],key_scan)
     check('protected_directory_unchanged',all(sha(ROOT/r['target'])==r['sha256'] for r in plan if r['action']=='protect'),3)

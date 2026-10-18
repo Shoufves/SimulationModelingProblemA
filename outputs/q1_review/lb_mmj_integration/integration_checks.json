@@ -1,0 +1,232 @@
+{
+  "passed": true,
+  "lb_sha": "353cca7c63b64454210163645b10f9c97b9f21b8",
+  "mmj_sha": "baf197574357b573eecfd13d6dedda18573a2b8a",
+  "scope": "Integration only; unchanged lb science plus existing mmj increments; no claim of national simulation",
+  "source_pages_visually_read": [
+    71,
+    76,
+    119,
+    123,
+    202,
+    209,
+    212
+  ],
+  "checks": [
+    {
+      "check": "all_2170_lb_history_rows_unchanged",
+      "passed": true,
+      "old_count": 2170,
+      "new_count": 2176
+    },
+    {
+      "check": "exactly_six_existing_mmj_parameters_added",
+      "passed": true
+    },
+    {
+      "check": "mmj_parameter_table_byte_identical",
+      "passed": true,
+      "sha256": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9"
+    },
+    {
+      "check": "mmj_scanner_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "mmj_cost_function_only_exception_name_adapted",
+      "passed": true
+    },
+    {
+      "check": "all_206_lb_indicators_unchanged",
+      "passed": true,
+      "old_count": 206,
+      "new_count": 212
+    },
+    {
+      "check": "six_cost_results_equal_mmj_and_independent_discounting",
+      "passed": true,
+      "results": [
+        {
+          "indicator": "screening_onshore_wind_wacc_0.03",
+          "actual": 0.02703689553393296,
+          "mmj": 0.02703689553393296,
+          "independent_cash_flow": 0.027036895533932962,
+          "passed": true
+        },
+        {
+          "indicator": "screening_onshore_wind_wacc_0.05",
+          "actual": 0.031041685155714878,
+          "mmj": 0.031041685155714878,
+          "independent_cash_flow": 0.03104168515571488,
+          "passed": true
+        },
+        {
+          "indicator": "screening_onshore_wind_wacc_0.07",
+          "actual": 0.03544133206755561,
+          "mmj": 0.03544133206755561,
+          "independent_cash_flow": 0.03544133206755563,
+          "passed": true
+        },
+        {
+          "indicator": "screening_offshore_wind_wacc_0.03",
+          "actual": 0.045134630377475705,
+          "mmj": 0.045134630377475705,
+          "independent_cash_flow": 0.04513463037747572,
+          "passed": true
+        },
+        {
+          "indicator": "screening_offshore_wind_wacc_0.05",
+          "actual": 0.0514771489247282,
+          "mmj": 0.0514771489247282,
+          "independent_cash_flow": 0.05147714892472822,
+          "passed": true
+        },
+        {
+          "indicator": "screening_offshore_wind_wacc_0.07",
+          "actual": 0.058445016097560094,
+          "mmj": 0.058445016097560094,
+          "independent_cash_flow": 0.05844501609756011,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "check": "handoff_only_changes_GDP_role_and_adds_six_cost_diagnostics",
+      "passed": true,
+      "rows": 471,
+      "gdp_drivers": 10
+    },
+    {
+      "check": "thirteen_other_lb_scientific_artifacts_byte_identical",
+      "passed": true,
+      "files": [
+        {
+          "file": "cost_sensitivity.svg",
+          "unchanged": true
+        },
+        {
+          "file": "demand_trends.svg",
+          "unchanged": true
+        },
+        {
+          "file": "energy_assessment.csv",
+          "unchanged": true
+        },
+        {
+          "file": "energy_roles.csv",
+          "unchanged": true
+        },
+        {
+          "file": "gaps_and_conflicts.csv",
+          "unchanged": true
+        },
+        {
+          "file": "import_origins.csv",
+          "unchanged": true
+        },
+        {
+          "file": "price_trends.svg",
+          "unchanged": true
+        },
+        {
+          "file": "regional_comparison.csv",
+          "unchanged": true
+        },
+        {
+          "file": "regional_shares.svg",
+          "unchanged": true
+        },
+        {
+          "file": "renewable_regions.csv",
+          "unchanged": true
+        },
+        {
+          "file": "static_balance.json",
+          "unchanged": true
+        },
+        {
+          "file": "synergy_assessment.csv",
+          "unchanged": true
+        },
+        {
+          "file": "technology_region_capacities.csv",
+          "unchanged": true
+        }
+      ]
+    },
+    {
+      "check": "coverage_only_adds_cost_parameters",
+      "passed": true
+    },
+    {
+      "check": "original_22_processed_inputs_and_39_sources_preserved",
+      "passed": true
+    },
+    {
+      "check": "official_readonly_and_three_contracts_byte_preserved",
+      "passed": true,
+      "files": [
+        "只读工作区/final.md",
+        "只读工作区/gemini_final_idea.md",
+        "只读工作区/README.md",
+        "data/sources.json",
+        "data/evidence_reviews.json",
+        "workflow/model_inputs.json",
+        "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+        "附件1.xlsx",
+        "附件2.xlsx",
+        "附件3.xlsx",
+        "附件4.xlsx"
+      ]
+    },
+    {
+      "check": "accepted_lb_outputs_not_overwritten",
+      "passed": true
+    },
+    {
+      "check": "explicit_rebuild_matches_reviewed_inputs",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "check": "negative_probe_baseline_succeeded",
+      "passed": true
+    },
+    {
+      "check": "actual_changed_input_returns_failure",
+      "passed": true,
+      "returncode": 1
+    },
+    {
+      "check": "hash_refresh_cannot_reuse_semantic_review",
+      "passed": true,
+      "error": "Input bytes, sources or permitted uses differ from substantive review"
+    },
+    {
+      "check": "failed_attempt_preserves_previous_science",
+      "passed": true
+    },
+    {
+      "check": "restored_input_does_not_relabel_old_success",
+      "passed": true,
+      "error": "No matching latest successful attempt"
+    },
+    {
+      "check": "unreviewed_use_rejected",
+      "passed": true,
+      "error": "Input bytes, sources or permitted uses differ from substantive review"
+    },
+    {
+      "check": "missing_manifest_returns_failure",
+      "passed": true
+    },
+    {
+      "check": "all_temporarily_modified_inputs_restored",
+      "passed": true
+    },
+    {
+      "check": "real_rerun_recovers_from_failure",
+      "passed": true
+    }
+  ]
+}

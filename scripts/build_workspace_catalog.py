@@ -127,6 +127,9 @@ def datasets(refs):
             status='q1_descriptive_transcription_reviewed'
             use='Q1描述/可比案例；审查见docs/solutions/p1-lb-input-review.md及p1-lb-additional-review.md；非ABM准入'
             boundary='共同base原件转录及另行核验的公开补充；未获三人共同输入更新批准。逐行区分年份、来源及用途：旧成本投影、多年样本、2024实测和12月价格不混用；发用差非潮流。'
+        if rel == 'data/processed/q1/cost_method_parameters.csv':
+            use='mmj baf1975原参数；Q1风电统一融资条件成本；见docs/solutions/p1-yx-integration.md'
+            boundary='2024 USD、25年、3/5/7%实际WACC研究假设；国家新项目均值未配对；CF通常事前估计，O&M为报告假设；非保供系统成本或全国在运成本。'
         rows.append(dict(path=rel,final_refs=';'.join(reverse[rel]),status=status,use=use,boundary=boundary,sha256=sha(p)))
     save_csv(CAT/'datasets_unified.csv',rows,['path','final_refs','status','use','boundary','sha256'])
     return rows

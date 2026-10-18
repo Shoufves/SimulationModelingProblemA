@@ -7,6 +7,7 @@ from pathlib import Path
 import argparse
 import io
 import json
+import os
 import re
 import subprocess
 import zipfile
@@ -34,17 +35,34 @@ def scan_bytes(data, location, findings, stats, depth=0):
 
 def scan_workspace(root=ROOT):
     findings, errors = [], []
+    root = Path(root).resolve()
     stats = dict(files_scanned=0, payloads_scanned=0, zip_members_scanned=0)
-    for path in sorted(root.rglob('*')):
-        if not path.is_file() or '.git' in path.relative_to(root).parts:
-            continue
-        relative = path.relative_to(root).as_posix()
-        try:
-            stats['files_scanned'] += 1
-            scan_bytes(path.read_bytes(), relative, findings, stats)
-        except Exception as exc:
-            errors.append(dict(path=relative, error=type(exc).__name__))
-    return dict(scope='working tree including hidden files and ZIP members; .git excluded',
+    excluded = []
+    def walk_error(exc):
+        errors.append(dict(path=str(exc.filename), error=type(exc).__name__))
+    for folder, dirs, filenames in os.walk(root, followlinks=False, onerror=walk_error):
+        parent = Path(folder)
+        for name in sorted(dirs[:]):
+            path = parent / name
+            rel = path.relative_to(root).as_posix()
+            if (name.lower() in {'.git','.venv','.venv-workbench','__pycache__','.pytest_cache'}
+                    or rel.lower() in {'data/restricted','tmp'}
+                    or path.is_symlink()):
+                dirs.remove(name)
+                excluded.append(rel)
+        for name in sorted(filenames):
+            path = parent / name
+            relative = path.relative_to(root).as_posix()
+            try:
+                if path.is_symlink():
+                    raise ValueError("Symlink content not scanned")
+                stats['files_scanned'] += 1
+                scan_bytes(path.read_bytes(), relative, findings, stats)
+            except Exception as exc:
+                errors.append(dict(path=relative, error=type(exc).__name__))
+    return dict(scope='working tree including hidden files and ZIP members; restricted content, '
+                'Git metadata, environments and disposable caches excluded without opening',
+                excluded_directories=excluded,
                 pattern='Google API key format only; not an exhaustive credential audit',
                 passed=not findings and not errors, findings=findings, errors=errors, **stats)
 

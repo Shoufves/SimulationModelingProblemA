@@ -359,7 +359,7 @@
       "source_map": {
         "IRENA_COST_2024_PDF": "yx:IRENA_COST_2024_PDF"
       },
-      "review": "Only IRENA 2024 China LCOE rows for Q1; lifetime and financing scope reviewed",
+      "review": "IRENA 2024 China published LCOE/CAPEX; mmj baf1975 reviewed wind CAPEX 856/1520 reused for common-financing conditional costs; lifetime and financing boundaries retained",
       "years": [
         2024
       ],
@@ -629,6 +629,29 @@
       ],
       "evidence_status": [
         "reviewed_official_page_capture_single_release"
+      ],
+      "allowed_use": "Q1 descriptive assessment only",
+      "blocked_use": "national ABM calibration/initialization without further review"
+    },
+    {
+      "id": "cost_method",
+      "path": "data/processed/q1/cost_method_parameters.csv",
+      "sha256": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9",
+      "source_map": {
+        "IRENA_COST_2024_PDF": "yx:IRENA_COST_2024_PDF"
+      },
+      "review": "mmj baf1975: China 2024 onshore/offshore O&M, new-project CF and economic life; published assumptions, not operating-fleet observations; see p1-yx-integration.md",
+      "years": [
+        2024
+      ],
+      "units": [
+        "2024 USD/kW/year",
+        "fraction",
+        "year"
+      ],
+      "evidence_status": [
+        "reviewed_new_project_parameter",
+        "reviewed_published_assumption"
       ],
       "allowed_use": "Q1 descriptive assessment only",
       "blocked_use": "national ABM calibration/initialization without further review"
@@ -1076,6 +1099,19 @@
     "volatility_ddof": 1,
     "new_external_inputs": true,
     "additional_review": "docs/solutions/p1-lb-additional-review.md",
-    "shared_input_status": "lb local Q1 additions; not shared or formal model approval"
+    "shared_input_status": "lb and mmj candidates passed yx local technical review; original PRs not formally approved or merged as checked 2026-10-18; integrated PR requires mmj and lb approval of the same final SHA and shared-input-use confirmation; not formal model admission",
+    "wind_cost_assumptions": {
+      "real_wacc": [
+        0.03,
+        0.05,
+        0.07
+      ],
+      "common_life_years": 25,
+      "cost_service": "unfirmed plant-gate electricity; constant annual output; 8760 hours normalization"
+    }
+  },
+  "evidence_review": {
+    "path": "data/catalog/q1_input_review.json",
+    "sha256": "09926951f02141c1ee910c3e441fe57ed004fe55f578f39cf3fdf4a940eadfaf"
   }
 }

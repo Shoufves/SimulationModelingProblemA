@@ -7,6 +7,10 @@ from pathlib import Path
 import csv
 import hashlib
 import json
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'src'))
+from energy_model.q1 import COST_ASSUMPTIONS, review_snapshot
+from prepare_q1_cost_parameters import prepare as prepare_cost_parameters
 
 ROOT = Path(__file__).resolve().parents[1]
 FILES = [
@@ -21,7 +25,7 @@ FILES = [
     ('snapshots', 'data/processed/fuel_storage_hydrogen_snapshots.csv', '2024 gas/hydrogen and 2025 storage snapshots; no mixed-year initial state'),
     ('carbon', 'data/processed/china_co2_gcb_annual.csv', 'Territorial fossil and industry inventory estimate; excludes land-use and removals'),
     ('research', 'data/processed/china_energy_research_annual.csv', 'Research supplementary history; no splice into NBS primary-energy accounting'),
-    ('costs', 'data/processed/technology_accounting_parameters.csv', 'Only IRENA 2024 China LCOE rows for Q1; lifetime and financing scope reviewed'),
+    ('costs', 'data/processed/technology_accounting_parameters.csv', 'IRENA 2024 China published LCOE/CAPEX; mmj baf1975 reviewed wind CAPEX 856/1520 reused for common-financing conditional costs; lifetime and financing boundaries retained'),
     ('cost_comparison', 'data/processed/q1/iea_comparable_costs.csv', '2020 report projected cases with 2018 price year; matched discount/CF groups; not current actual costs'),
     ('prices', 'data/processed/q1/prices_reviewed.csv', 'Archive/PDF vintages and definition segments retained; mixed Europe 2015 and coal 2022 excluded from returns; coal replacement effective February 2022; Europe 2024 anomalous cell excluded; see p1-lb-review-response.md'),
     ('renewable_regions', 'data/processed/q1/renewable_regions.csv', 'NEA original DOC tables 1-5: consumption responsibility shares, wind/PV grid-region utilization and hydro basins; not capacity factors'),
@@ -31,6 +35,7 @@ FILES = [
     ('lng', 'data/processed/lb/trade_alternatives/lng_china_2024.csv', 'Same EI sheet and GCV unit; origin and total rows separated'),
     ('coal_trade', 'data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv', 'Same EI coal energy table; no conversion to tonnes'),
     ('irena_capacity', 'data/processed/lb/base/irena/china_capacity_2016_2025.csv', 'Independent compilation of technical capacity; original flags and categories retained'),
+    ('cost_method', 'data/processed/q1/cost_method_parameters.csv', 'mmj baf1975: China 2024 onshore/offshore O&M, new-project CF and economic life; published assumptions, not operating-fleet observations; see p1-yx-integration.md'),
     ('official2024', 'data/observations/energy_official_communique_2024.json', 'Retain existing S13 admitted scope; independent 2024 release only'),
 ]
 
@@ -41,10 +46,12 @@ def sha(path):
 
 
 def main():
+    cost_checks = prepare_cost_parameters(ROOT)
     registry = json.loads((ROOT/'data/catalog/sources_unified.json').read_text(encoding='utf-8'))
     sources = {s['source_key']: s for s in registry}
+    ordered_files = [r for r in FILES if r[0] != 'cost_method'] + [r for r in FILES if r[0] == 'cost_method']
     inputs, used = [], set()
-    for label, path, review in FILES:
+    for label, path, review in ordered_files:
         p = ROOT/path
         if p.suffix == '.csv':
             with p.open(encoding='utf-8-sig') as stream: rows = list(csv.DictReader(stream))
@@ -88,10 +95,29 @@ def main():
                   decisions={'missing':'never zero fill','conflicts':'retain separate vintages','score':'no composite score',
                              'price_window':[2015,2024],'volatility_ddof':1,'new_external_inputs':True,
                              'additional_review':'docs/solutions/p1-lb-additional-review.md',
-                             'shared_input_status':'lb local Q1 additions; not shared or formal model approval'})
+                             'shared_input_status':'lb and mmj candidates passed yx local technical review; original PRs not formally approved or merged as checked 2026-10-18; integrated PR requires mmj and lb approval of the same final SHA and shared-input-use confirmation; not formal model admission',
+                             'wind_cost_assumptions':COST_ASSUMPTIONS})
+    # Reuse lb's substantive review only for unchanged bytes, sources and uses.
+    prior = json.loads((ROOT/'data/catalog/q1_input_review.json').read_text(encoding='utf-8'))
+    prior_config = json.loads((ROOT/'workflow/q1_inputs.json').read_text(encoding='utf-8'))
+    inherited = [r for r in inputs if r['id'] != 'cost_method']
+    prior_inputs = [dict(r) for r in prior['inputs'] if r['id'] != 'cost_method']
+    # The sole inherited-use extension is mmj's already-reviewed wind CAPEX use.
+    for row in prior_inputs:
+        if row['id'] == 'costs' and row['review'] == 'Only IRENA 2024 China LCOE rows for Q1; lifetime and financing scope reviewed':
+            row['review'] = next(r['review'] for r in inherited if r['id'] == 'costs')
+    reviewed_sources = prior.get('reviewed_snapshot', {}).get('sources', prior_config['sources'])
+    if inherited != prior_inputs or pinned_sources != reviewed_sources:
+        raise ValueError('Inherited lb inputs/sources differ from reviewed scope; substantive re-review required')
+    checks = [dict(check='lb_reviewed_bytes_sources_and_non_cost_uses_unchanged', passed=True)] + cost_checks
+    review = dict(scope='lb reviewed inputs plus mmj cost increment; no original contract replacement',
+        review_document='docs/solutions/p1-yx-integration.md', config='workflow/q1_inputs.json',
+        base_sha=config['base_sha'], inputs=inputs, checks=checks,
+        reviewed_snapshot=review_snapshot(inputs, pinned_sources))
+    review_path = ROOT/'data/catalog/q1_input_review.json'
+    review_path.write_text(json.dumps(review,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    config['evidence_review'] = dict(path='data/catalog/q1_input_review.json', sha256=sha(review_path))
     (ROOT/'workflow/q1_inputs.json').write_text(json.dumps(config,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    (ROOT/'data/catalog/q1_input_review.json').write_text(json.dumps(dict(scope='Q1 additional use review, not original contract replacement',
-        review_document='docs/solutions/p1-lb-input-review.md',config='workflow/q1_inputs.json',inputs=inputs),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(f'Recorded {len(inputs)} Q1 input files and {len(pinned_sources)} original sources')
 
 if __name__=='__main__': main()

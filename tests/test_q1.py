@@ -263,6 +263,13 @@ class Q1DeliveryTests(unittest.TestCase):
             (self.root/name).write_text(content,encoding='utf-8')
         self.config=dict(inputs=[dict(id='cost',path='input.csv',sha256=q1.sha(self.root/'input.csv'),source_map={'s':'s'})],
                          sources={'s':dict(artifacts=[dict(path='original.txt',sha256=q1.sha(self.root/'original.txt'))])},decisions={})
+        self.config['base_sha'] = 'synthetic'
+        for row in self.config['inputs']:
+            row.update(years=[2024], units=['fixture'], review='synthetic', evidence_status=['synthetic'],
+                       allowed_use='test only', blocked_use='national model')
+        q1.dump(self.root/'review.json', dict(base_sha='synthetic', checks=[dict(passed=True)],
+            reviewed_snapshot=q1.review_snapshot(self.config['inputs'], self.config['sources'])))
+        self.config['evidence_review'] = dict(path='review.json', sha256=q1.sha(self.root/'review.json'))
         q1.dump(self.root/'workflow/q1_inputs.json',self.config)
         (self.out/'report.md').write_text('old success',encoding='utf-8')
         q1.dump(self.out/'run_manifest.json',dict(owner='p1/lb',status='success',run_id='old-success',

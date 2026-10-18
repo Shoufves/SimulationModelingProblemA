@@ -1,7 +1,8 @@
 {
-  "scope": "Q1 additional use review, not original contract replacement",
-  "review_document": "docs/solutions/p1-lb-input-review.md",
+  "scope": "lb reviewed inputs plus mmj cost increment; no original contract replacement",
+  "review_document": "docs/solutions/p1-yx-integration.md",
   "config": "workflow/q1_inputs.json",
+  "base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
   "inputs": [
     {
       "id": "reviewed2024",
@@ -354,7 +355,7 @@
       "source_map": {
         "IRENA_COST_2024_PDF": "yx:IRENA_COST_2024_PDF"
       },
-      "review": "Only IRENA 2024 China LCOE rows for Q1; lifetime and financing scope reviewed",
+      "review": "IRENA 2024 China published LCOE/CAPEX; mmj baf1975 reviewed wind CAPEX 856/1520 reused for common-financing conditional costs; lifetime and financing boundaries retained",
       "years": [
         2024
       ],
@@ -627,6 +628,1145 @@
       ],
       "allowed_use": "Q1 descriptive assessment only",
       "blocked_use": "national ABM calibration/initialization without further review"
+    },
+    {
+      "id": "cost_method",
+      "path": "data/processed/q1/cost_method_parameters.csv",
+      "sha256": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9",
+      "source_map": {
+        "IRENA_COST_2024_PDF": "yx:IRENA_COST_2024_PDF"
+      },
+      "review": "mmj baf1975: China 2024 onshore/offshore O&M, new-project CF and economic life; published assumptions, not operating-fleet observations; see p1-yx-integration.md",
+      "years": [
+        2024
+      ],
+      "units": [
+        "2024 USD/kW/year",
+        "fraction",
+        "year"
+      ],
+      "evidence_status": [
+        "reviewed_new_project_parameter",
+        "reviewed_published_assumption"
+      ],
+      "allowed_use": "Q1 descriptive assessment only",
+      "blocked_use": "national ABM calibration/initialization without further review"
     }
-  ]
+  ],
+  "checks": [
+    {
+      "check": "lb_reviewed_bytes_sources_and_non_cost_uses_unchanged",
+      "passed": true
+    },
+    {
+      "check": "IRENA_PDF_p71_table_row",
+      "passed": true,
+      "source_sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+      "method_origin": "mmj baf1975 prepare_q1_inputs.py"
+    },
+    {
+      "check": "IRENA_PDF_p119_table_row",
+      "passed": true,
+      "source_sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+      "method_origin": "mmj baf1975 prepare_q1_inputs.py"
+    },
+    {
+      "check": "IRENA_PDF_p76_table_row",
+      "passed": true,
+      "source_sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+      "method_origin": "mmj baf1975 prepare_q1_inputs.py"
+    },
+    {
+      "check": "IRENA_PDF_p123_table_row",
+      "passed": true,
+      "source_sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+      "method_origin": "mmj baf1975 prepare_q1_inputs.py"
+    },
+    {
+      "check": "IRENA_PDF_p209_table_row",
+      "passed": true,
+      "source_sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+      "method_origin": "mmj baf1975 prepare_q1_inputs.py"
+    },
+    {
+      "check": "IRENA_PDF_p212_table_row",
+      "passed": true,
+      "source_sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+      "method_origin": "mmj baf1975 prepare_q1_inputs.py"
+    },
+    {
+      "check": "IRENA_PDF_p202_table_row",
+      "passed": true,
+      "source_sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+      "method_origin": "mmj baf1975 prepare_q1_inputs.py"
+    },
+    {
+      "check": "onshore_wind_existing_capex_matches_PDF",
+      "passed": true
+    },
+    {
+      "check": "offshore_wind_existing_capex_matches_PDF",
+      "passed": true
+    }
+  ],
+  "reviewed_snapshot": {
+    "inputs": {
+      "reviewed2024": {
+        "path": "data/processed/q1/reviewed_2024_additions.csv",
+        "sha256": "60e91cb161df7f33da4ca89c7b83b02619c6e44defa5d6f2781f83673d3f8fbd",
+        "source_map": {
+          "lb/base:NDC_2035": "lb/base:NDC_2035",
+          "lb/base:NEA_STORAGE_2025": "lb/base:NEA_STORAGE_2025"
+        },
+        "years": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "units": [
+          "%",
+          "GW",
+          "GWh",
+          "h"
+        ],
+        "review": "C1/L2 revision: NDC preliminary 2024 share; storage report published 2025 describing 2021-2024; figure/text precision and regional subsets kept separate; see p1-lb-review-response.md",
+        "evidence_status": [
+          "published_preliminary",
+          "reviewed_published",
+          "same_source_rounded_crosscheck"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "national": {
+        "path": "data/processed/unified/nbs_history.csv",
+        "sha256": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+        "source_map": {
+          "lb/base:NBS_2025_C03-04": "lb/base:NBS_2025_C03-04",
+          "lb/base:NBS_2025_C09-01": "lb/base:NBS_2025_C09-01",
+          "lb/base:NBS_2025_C09-02": "lb/base:NBS_2025_C09-02",
+          "lb/base:NBS_2025_C09-15": "lb/base:NBS_2025_C09-15",
+          "mmj:S01": "mmj:S01",
+          "mmj:S06": "mmj:S06",
+          "yx:NBS_2025_C09-01": "yx:NBS_2025_C09-01",
+          "yx:NBS_2025_C09-02": "yx:NBS_2025_C09-02",
+          "yx:NBS_2025_C09-15": "yx:NBS_2025_C09-15"
+        },
+        "years": [
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "units": [
+          "%",
+          "10^4 kW",
+          "10^4 tce"
+        ],
+        "review": "Primary same-vintage history; table-image checks; original units and dedup identity retained",
+        "evidence_status": [
+          "reviewed_official_image_text_excerpt_scoped",
+          "transcribed_scoped",
+          "usable_with_scope"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "products": {
+        "path": "data/processed/nbs_products_annual.csv",
+        "sha256": "6fb964607aa68d86f9297a039aeb472c7860324ec21e67da11dbcd7bd8f92642",
+        "source_map": {
+          "NBS_2025_C09-19": "yx:NBS_2025_C09-19"
+        },
+        "years": [
+          2005,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "units": [
+          "10^4 t",
+          "10^8 kWh",
+          "10^8 m3",
+          "10^8 t"
+        ],
+        "review": "National product rows; physical tonnes/volume separate from standard coal",
+        "evidence_status": [
+          "observed_or_published_estimate"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "balance": {
+        "path": "data/processed/nbs_balance_checkpoints.csv",
+        "sha256": "8121d87c60acf5f8c457245f7d1d512f69b4c652dea717a5f823aae3192a3193",
+        "source_map": {
+          "NBS_2025_C09-03": "yx:NBS_2025_C09-03",
+          "NBS_2025_C09-04": "yx:NBS_2025_C09-04",
+          "NBS_2025_C09-05": "yx:NBS_2025_C09-05",
+          "NBS_2025_C09-06": "yx:NBS_2025_C09-06"
+        },
+        "years": [
+          2015,
+          2020,
+          2022,
+          2023
+        ],
+        "units": [
+          "10^4 t",
+          "10^4 tce",
+          "10^8 kWh"
+        ],
+        "review": "2015/2020/2022/2023 table 9-3 to 9-6; preserve published residuals",
+        "evidence_status": [
+          "observed_or_published_estimate"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "province": {
+        "path": "data/processed/nbs_province_demand.csv",
+        "sha256": "2ed23bee6511030b5b3b8b60c8aa63e1ea65e7bbd967c5958bc6307f7a228e91",
+        "source_map": {
+          "NBS_2025_C09-14": "yx:NBS_2025_C09-14"
+        },
+        "years": [
+          2015,
+          2020,
+          2023,
+          2024
+        ],
+        "units": [
+          "10^8 kWh"
+        ],
+        "review": "31 provinces at selected years; no interpolated regional panel",
+        "evidence_status": [
+          "observed_or_published_estimate"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "region_generation": {
+        "path": "data/processed/q1/province_generation_2024.csv",
+        "sha256": "5f69f7029dc47f09353386642bfed007ca3d17287680f18b8fb2c2c6a24ee53a",
+        "source_map": {
+          "NBS_2025_C09-19": "yx:NBS_2025_C09-19"
+        },
+        "years": [
+          2024
+        ],
+        "units": [
+          "10^8 kWh"
+        ],
+        "review": "31 province rows visually transcribed from same-base table 9-19",
+        "evidence_status": [
+          "visually_transcribed"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "regional_resources": {
+        "path": "data/processed/q1/regional_resource_top3.csv",
+        "sha256": "5ff7b5213e25d451b3f97906c8ad88cbc94b98bc0a36afe68ce48241c1e70cb8",
+        "source_map": {
+          "NBS_2025_C09-19": "yx:NBS_2025_C09-19"
+        },
+        "years": [
+          2024
+        ],
+        "units": [
+          "10^8 kWh",
+          "10^8 m3",
+          "10^8 t"
+        ],
+        "review": "Top three published provinces per coal/gas/hydro product visually identified on full table 9-19; selected nine cells, not complete province panel",
+        "evidence_status": [
+          "visually_transcribed"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "renewables": {
+        "path": "data/processed/nea_renewables_2024_2025.csv",
+        "sha256": "6726f62a9d125862768b9f7e0b6dedffa170def5497e9b8247e1a35eac076db6",
+        "source_map": {
+          "NEA_RENEWABLE_2024": "yx:NEA_RENEWABLE_2024",
+          "NEA_RENEWABLE_2025": "yx:NEA_RENEWABLE_2025"
+        },
+        "years": [
+          2024,
+          2025
+        ],
+        "units": [
+          "%",
+          "GW",
+          "TWh"
+        ],
+        "review": "Annual official technology snapshots; PV versus solar and hydro definitions separated",
+        "evidence_status": [
+          "published_rounded_converted_units"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "snapshots": {
+        "path": "data/processed/fuel_storage_hydrogen_snapshots.csv",
+        "sha256": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
+        "source_map": {
+          "NDRC_GAS_APPARENT_2024": "yx:NDRC_GAS_APPARENT_2024",
+          "NEA_HYDROGEN_2025": "yx:NEA_HYDROGEN_2025",
+          "NEA_NATURAL_GAS_2025": "yx:NEA_NATURAL_GAS_2025",
+          "NEA_STORAGE_2025": "yx:NEA_STORAGE_2025"
+        },
+        "years": [
+          2024,
+          2025
+        ],
+        "units": [
+          "%",
+          "10^4 tonne",
+          "10^4 tonne/year",
+          "10^8 m3",
+          "GW",
+          "GWh",
+          "hour"
+        ],
+        "review": "2024 gas/hydrogen and 2025 storage snapshots; no mixed-year initial state",
+        "evidence_status": [
+          "approximate",
+          "lower_bound_exceeds",
+          "published_parameter",
+          "rounded_published"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "carbon": {
+        "path": "data/processed/china_co2_gcb_annual.csv",
+        "sha256": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
+        "source_map": {
+          "GCB_GCB2025v15_MtCO2_flat": "yx:GCB_GCB2025v15_MtCO2_flat"
+        },
+        "years": [
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "units": [
+          "Mt CO2"
+        ],
+        "review": "Territorial fossil and industry inventory estimate; excludes land-use and removals",
+        "evidence_status": [
+          "published_inventory_estimate"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "research": {
+        "path": "data/processed/china_energy_research_annual.csv",
+        "sha256": "ab1c42a9df72db6bcf7f7a73a849ac2e60eb14895517c661c0d0a4b203f8f4c5",
+        "source_map": {
+          "OWID_ENERGY_CHINA_ARCHIVE": "yx:OWID_ENERGY_CHINA_ARCHIVE"
+        },
+        "years": [
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "units": [
+          "%",
+          "terawatt-hours (TWh)"
+        ],
+        "review": "Research supplementary history; no splice into NBS primary-energy accounting",
+        "evidence_status": [
+          "research_compilation"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "costs": {
+        "path": "data/processed/technology_accounting_parameters.csv",
+        "sha256": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
+        "source_map": {
+          "IRENA_COST_2024_PDF": "yx:IRENA_COST_2024_PDF"
+        },
+        "years": [
+          2024
+        ],
+        "units": [
+          "2024 USD/kW",
+          "2024 USD/kWh"
+        ],
+        "review": "IRENA 2024 China published LCOE/CAPEX; mmj baf1975 reviewed wind CAPEX 856/1520 reused for common-financing conditional costs; lifetime and financing boundaries retained",
+        "evidence_status": [
+          "published_parameter"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "cost_comparison": {
+        "path": "data/processed/q1/iea_comparable_costs.csv",
+        "sha256": "fa3f1c86fa84b3c3049810f1f7f54a94ddfb462ae4cf3d69770d4ba024c0b45f",
+        "source_map": {
+          "IEA_NEA_GENERATION_COST_2020": "lb/base:IEA_NEA_GENERATION_COST_2020"
+        },
+        "years": [
+          2025
+        ],
+        "units": [
+          "2018 USD/MWh"
+        ],
+        "review": "2020 report projected cases with 2018 price year; matched discount/CF groups; not current actual costs",
+        "evidence_status": [
+          "published_projection"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "prices": {
+        "path": "data/processed/q1/prices_reviewed.csv",
+        "sha256": "6cb15a884e48518a1d9ab3bdf7db887ad91bb4cf8ddccc9cf578c4f51ee01cf2",
+        "source_map": {
+          "Q1_WB_PINK_FEB_2025": "q1:Q1_WB_PINK_FEB_2025",
+          "Q1_WB_PINK_JANUARY_2024": "q1:Q1_WB_PINK_JANUARY_2024",
+          "WB_PINK_SHEET_STABLE": "yx:WB_PINK_SHEET_STABLE"
+        },
+        "years": [
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "units": [
+          "USD/MMBtu",
+          "USD/bbl",
+          "USD/metric tonne"
+        ],
+        "review": "Archive/PDF vintages and definition segments retained; mixed Europe 2015 and coal 2022 excluded from returns; coal replacement effective February 2022; Europe 2024 anomalous cell excluded; see p1-lb-review-response.md",
+        "evidence_status": [
+          "archived_reference",
+          "reviewed_release"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "renewable_regions": {
+        "path": "data/processed/q1/renewable_regions.csv",
+        "sha256": "ea2c254a0d01dcd637a9e695651602ed7e784520c9421caf66c82a7c58471c82",
+        "source_map": {
+          "NEA_PROVINCE_RENEWABLE_2024_DOC": "yx:NEA_PROVINCE_RENEWABLE_2024_DOC"
+        },
+        "years": [
+          2023,
+          2024
+        ],
+        "units": [
+          "%"
+        ],
+        "review": "NEA original DOC tables 1-5: consumption responsibility shares, wind/PV grid-region utilization and hydro basins; not capacity factors",
+        "evidence_status": [
+          "reviewed_published"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "technology_regions": {
+        "path": "data/processed/q1/technology_region_capacities.csv",
+        "sha256": "93c400dc1fbebadcd6b6eff7029f3e397771f8ab9bb03e55172a1d103a58a1bb",
+        "source_map": {
+          "Q1_NEA_PV_REGION_IMAGE_2024": "q1:Q1_NEA_PV_REGION_IMAGE_2024",
+          "Q1_NNSA_NUCLEAR_2024": "q1:Q1_NNSA_NUCLEAR_2024",
+          "Q1_NNSA_NUCLEAR_REGION_IMAGE_2024": "q1:Q1_NNSA_NUCLEAR_REGION_IMAGE_2024"
+        },
+        "years": [
+          2024
+        ],
+        "units": [
+          "10^4 kW"
+        ],
+        "review": "PV 32 reporting areas including separate XPCC; nuclear 8 operating provinces and same-source total; original images visually checked",
+        "evidence_status": [
+          "reviewed_published"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "context": {
+        "path": "data/processed/q1/additional_context.csv",
+        "sha256": "a4b66d22bbcdea6809db4c13df554abac48c17e2b8438d7545c7fcd2e7030765",
+        "source_map": {
+          "IPCC_ENERGY_STATIONARY": "yx:IPCC_ENERGY_STATIONARY",
+          "IRENA_COST_2024_PDF": "yx:IRENA_COST_2024_PDF",
+          "NEA_HYDROGEN_2025": "yx:NEA_HYDROGEN_2025",
+          "NEA_NATURAL_GAS_2025": "yx:NEA_NATURAL_GAS_2025",
+          "NEA_PROVINCE_RENEWABLE_2024_DOC": "yx:NEA_PROVINCE_RENEWABLE_2024_DOC",
+          "NEA_RENEWABLE_2024": "yx:NEA_RENEWABLE_2024",
+          "Q1_BIO_INDUSTRY_INTERVIEW": "q1:Q1_BIO_INDUSTRY_INTERVIEW"
+        },
+        "years": [
+          2006,
+          2024
+        ],
+        "units": [
+          "%",
+          "10^4 kW",
+          "10^8 kWh",
+          "10^8 m3",
+          "2024 USD/kW",
+          "2024 USD/kWh",
+          "CNY/kg",
+          "USD/MMBtu",
+          "kg CO2/TJ NCV"
+        ],
+        "review": "Hydro and biomass multiyear costs, 2024 hydrogen December prices and regional shares, NEA gas benchmark snapshot, UHV annual flows, combustion reference factors and supplementary industry estimates; no silent year/scope splice",
+        "evidence_status": [
+          "industry_report_public_summary",
+          "published_multiyear",
+          "reviewed_published",
+          "reviewed_reference_parameter"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "pipeline": {
+        "path": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sha256": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f",
+        "source_map": {
+          "EI_DATA_2025": "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025"
+        },
+        "years": [
+          2024
+        ],
+        "units": [
+          "billion cubic metres; GCV 40 MJ/m3"
+        ],
+        "review": "Same EI sheet and GCV unit; country versus regional bucket classification",
+        "evidence_status": [
+          "published_compilation"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "lng": {
+        "path": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sha256": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363",
+        "source_map": {
+          "EI_DATA_2025": "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025"
+        },
+        "years": [
+          2024
+        ],
+        "units": [
+          "billion cubic metres; GCV 40 MJ/m3"
+        ],
+        "review": "Same EI sheet and GCV unit; origin and total rows separated",
+        "evidence_status": [
+          "published_compilation"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "coal_trade": {
+        "path": "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv",
+        "sha256": "bf10eb6cfb4cba6bebe7b239e861271fac4b9e2e0047a2dc488ba6224584775c",
+        "source_map": {
+          "EI_DATA_2025": "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025"
+        },
+        "years": [
+          2024
+        ],
+        "units": [
+          "exajoules"
+        ],
+        "review": "Same EI coal energy table; no conversion to tonnes",
+        "evidence_status": [
+          "published_compilation"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "irena_capacity": {
+        "path": "data/processed/lb/base/irena/china_capacity_2016_2025.csv",
+        "sha256": "9b6c9464d7ad29f324202671172faee64c0283be21b92bae44ba54193a337e7f",
+        "source_map": {
+          "IRENA_CAPACITY_2026": "lb/base:IRENA_CAPACITY_2026"
+        },
+        "years": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "units": [
+          "MW"
+        ],
+        "review": "Independent compilation of technical capacity; original flags and categories retained",
+        "evidence_status": [
+          "published_compilation"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "official2024": {
+        "path": "data/observations/energy_official_communique_2024.json",
+        "sha256": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af",
+        "source_map": {
+          "mmj:S13": "mmj:S13"
+        },
+        "years": [
+          2024
+        ],
+        "units": [
+          "%",
+          "万吨",
+          "亿元",
+          "亿千瓦时",
+          "亿吨",
+          "亿吨标准煤",
+          "亿立方米"
+        ],
+        "review": "Retain existing S13 admitted scope; independent 2024 release only",
+        "evidence_status": [
+          "reviewed_official_page_capture_single_release"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      },
+      "cost_method": {
+        "path": "data/processed/q1/cost_method_parameters.csv",
+        "sha256": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9",
+        "source_map": {
+          "IRENA_COST_2024_PDF": "yx:IRENA_COST_2024_PDF"
+        },
+        "years": [
+          2024
+        ],
+        "units": [
+          "2024 USD/kW/year",
+          "fraction",
+          "year"
+        ],
+        "review": "mmj baf1975: China 2024 onshore/offshore O&M, new-project CF and economic life; published assumptions, not operating-fleet observations; see p1-yx-integration.md",
+        "evidence_status": [
+          "reviewed_new_project_parameter",
+          "reviewed_published_assumption"
+        ],
+        "allowed_use": "Q1 descriptive assessment only",
+        "blocked_use": "national ABM calibration/initialization without further review"
+      }
+    },
+    "sources": {
+      "lb/base:IEA_NEA_GENERATION_COST_2020": {
+        "title": "Projected Costs of Generating Electricity 2020",
+        "publisher": "IEA/OECD Nuclear Energy Agency",
+        "url": "https://oecd-nea.org/upload/docs/application/pdf/2026-09/egc-2020_2020-12-09_18-26-46_781.pdf",
+        "artifacts": [
+          {
+            "path": "data/raw/lb/base/reports/iea_oecd_generation_cost_2020.pdf",
+            "sha256": "7471000f732fb256bb9c2ebfbaa74285ea4736e980983b10201e0fdbf71d0b7a"
+          }
+        ]
+      },
+      "lb/base:IRENA_CAPACITY_2026": {
+        "title": "Renewable Capacity Statistics 2026",
+        "publisher": "IRENA",
+        "url": "https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2026/Mar/IRENA_DAT_RE_capacity_statistics_2026.pdf",
+        "artifacts": [
+          {
+            "path": "data/raw/lb/base/reports/irena_capacity_2026.pdf",
+            "sha256": "fc580bd4f4ee39ef20de6b1ce3926005a4e3e3b8e2c92fd6a16d175a52515921"
+          }
+        ]
+      },
+      "lb/base:NBS_2025_C03-04": {
+        "title": "3-4 国内生产总值指数",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C03-04.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/lb/base/nbs/yearbook2025/C03-04.jpg",
+            "sha256": "9f795096c539319d7532ae197251bf533f0fbc742c97ed1612cfe7b7f41e13e4"
+          }
+        ]
+      },
+      "lb/base:NBS_2025_C09-01": {
+        "title": "9-1 一次能源生产总量及构成",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-01.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nbs_2025_C09-01.jpg",
+            "sha256": "cc7d20189a1782dd3e6327e173a0871ab0ffdcc2304e8a521e9a885cdf5b4ae3"
+          }
+        ]
+      },
+      "lb/base:NBS_2025_C09-02": {
+        "title": "9-2 能源消费总量及构成",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-02.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+            "sha256": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708"
+          }
+        ]
+      },
+      "lb/base:NBS_2025_C09-15": {
+        "title": "9-15 发电装机容量",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-15.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+            "sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b"
+          }
+        ]
+      },
+      "lb/base:NDC_2035": {
+        "title": "2035年中国国家自主贡献报告",
+        "publisher": "生态环境部",
+        "url": "https://www.mee.gov.cn/ywgz/ydqhbh/qhbhlf/202511/W020251110629686716033.pdf",
+        "artifacts": [
+          {
+            "path": "data/raw/lb/base/reports/china_ndc_2035.pdf",
+            "sha256": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d"
+          }
+        ]
+      },
+      "lb/base:NEA_STORAGE_2025": {
+        "title": "中国新型储能发展报告2025",
+        "publisher": "国家能源局",
+        "url": "https://www.nea.gov.cn/20250731/1d40d09f75714280a9218d5bea178fbd/202507311d40d09f75714280a9218d5bea178fbd_453d9a0609da1d4456a8b12d843bd256cf.pdf",
+        "artifacts": [
+          {
+            "path": "data/raw/lb/base/reports/storage_2025.pdf",
+            "sha256": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3"
+          }
+        ]
+      },
+      "lb/专项补查_20261017/替代与扩展_20261017/alternatives:EI_DATA_2025": {
+        "title": "Energy Institute Statistical Review 2025 all data",
+        "publisher": "Energy Institute",
+        "url": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+        "artifacts": [
+          {
+            "path": "data/raw/lb/trade_alternatives/ei_2025_data.xlsx",
+            "sha256": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63"
+          }
+        ]
+      },
+      "mmj:S01": {
+        "title": "中国统计年鉴2025，表9-2 能源消费总量及构成",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-02.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/official/S01_demand_excerpt_20261017.txt",
+            "sha256": "bdae0182ff96a1153755073b5840526887b0f358c81a65714999f7f4de77a08c"
+          }
+        ]
+      },
+      "mmj:S06": {
+        "title": "中国统计年鉴2025，表9-8 能源消费弹性系数",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-08.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/official/S06_gdp_excerpt_20261017.txt",
+            "sha256": "b4b45dbb0ea15c11660536efd8b800bab94cda3970734a3c56945acabfd0fba7"
+          }
+        ]
+      },
+      "mmj:S13": {
+        "title": "中华人民共和国2024年国民经济和社会发展统计公报",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202502/t20250228_1958817.html",
+        "artifacts": [
+          {
+            "path": "data/raw/official/S13_selected_capture.txt",
+            "sha256": "fdcf2c563d51bdfe1135b2f2a3e88d87d2ada2c66acfaa6e075cf8fa15f88e98"
+          }
+        ]
+      },
+      "q1:Q1_BIO_INDUSTRY_INTERVIEW": {
+        "title": "生物质能需不断挖掘应用场景",
+        "publisher": "中国能源报（人民日报网站）",
+        "url": "https://paper.people.com.cn/zgnyb/pc/content/202504/14/content_30068709.html",
+        "artifacts": [
+          {
+            "path": "data/raw/q1/bio_industry_interview.html",
+            "sha256": "3bb47743036f21a2dba4bebda60b0557a0bf11f4ff9357ce7ad2c9d7df6337b1"
+          }
+        ]
+      },
+      "q1:Q1_NEA_PV_REGION_IMAGE_2024": {
+        "title": "2024年光伏分省装机原表",
+        "publisher": "国家能源局",
+        "url": "https://www.nea.gov.cn/20250221/f04452701c914d51a89d0c0ea6f4acd1/20250221f04452701c914d51a89d0c0ea6f4acd1_202502211d5ac93ba86a4a7db188d1a8601fe72f.jpeg",
+        "artifacts": [
+          {
+            "path": "data/raw/q1/nea_pv_2024.jpeg",
+            "sha256": "12ce026ce5ac9e3444cfce47f5d90996b9e3a8cc049fdaa4208ab08b03bbbbe5"
+          }
+        ]
+      },
+      "q1:Q1_NNSA_NUCLEAR_2024": {
+        "title": "2024年我国大陆核电机组情况",
+        "publisher": "国家核安全局转载中核智库",
+        "url": "https://nnsa.mee.gov.cn/ywdt/hyzx/202501/t20250107_1100142.html",
+        "artifacts": [
+          {
+            "path": "data/raw/q1/nnsa_nuclear_2024.html",
+            "sha256": "b566deb215c53a2530e3d17a9df9bfd8207a786e0919183cbec50d06b170bb30"
+          }
+        ]
+      },
+      "q1:Q1_NNSA_NUCLEAR_REGION_IMAGE_2024": {
+        "title": "2024年大陆各省在运在建核电机组图",
+        "publisher": "国家核安全局转载中核智库",
+        "url": "https://nnsa.mee.gov.cn/ywdt/hyzx/202501/W020250107553449733306.png",
+        "artifacts": [
+          {
+            "path": "data/raw/q1/nnsa_nuclear_regions_2024.png",
+            "sha256": "eed1fdea3dac27bf1f8656bf4569b55be0ce8a4eb202fef52ad0eeadf31ca69b"
+          }
+        ]
+      },
+      "q1:Q1_WB_PINK_FEB_2025": {
+        "title": "World Bank Pink Sheet February 2025",
+        "publisher": "World Bank",
+        "url": "https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/related/CMO-Pink-Sheet-February-2025.pdf",
+        "artifacts": [
+          {
+            "path": "data/raw/q1/wb_pink_february_2025.pdf",
+            "sha256": "94f053ef4134d5278ba71feec6613aff5d62eeeebf78ea4fb9b226217d7a7907"
+          }
+        ]
+      },
+      "q1:Q1_WB_PINK_JANUARY_2024": {
+        "title": "World Bank Pink Sheet January 2024",
+        "publisher": "World Bank",
+        "url": "https://thedocs.worldbank.org/en/doc/5d903e848db1d1b83e0ec8f744e55570-0350012021/related/CMO-Pink-Sheet-January-2024.pdf",
+        "artifacts": [
+          {
+            "path": "data/raw/q1/wb_pink_january_2024.pdf",
+            "sha256": "3c808387b7e836aa4d1c72384f8a9213d55bf621927346730b11cc696247c4f4"
+          }
+        ]
+      },
+      "yx:GCB_GCB2025v15_MtCO2_flat": {
+        "title": "GCB2025v15_MtCO2_flat.csv",
+        "publisher": "Global Carbon Project",
+        "url": "https://zenodo.org/api/records/17417124/files/GCB2025v15_MtCO2_flat.csv/content",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+            "sha256": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff"
+          }
+        ]
+      },
+      "yx:IPCC_ENERGY_STATIONARY": {
+        "title": "2006 IPCC Guidelines Volume 2 Chapter 2 Stationary Combustion",
+        "publisher": "IPCC",
+        "url": "https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/2_Volume2/V2_2_Ch2_Stationary_Combustion.pdf",
+        "artifacts": [
+          {
+            "path": "data/raw/batch3_scenarios/ipcc_2006_stationary_combustion.pdf",
+            "sha256": "a25d9f96d7672df391b328de79d4cfd812c07fe79d5cf4a30d23d82d8f02985b"
+          }
+        ]
+      },
+      "yx:IRENA_COST_2024_PDF": {
+        "title": "Renewable Power Generation Costs in 2024",
+        "publisher": "IRENA",
+        "url": "https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2025/Jul/IRENA_TEC_RPGC_in_2024_2025.pdf",
+        "artifacts": [
+          {
+            "path": "data/raw/batch3_scenarios/irena_power_costs_2024.pdf",
+            "sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada"
+          }
+        ]
+      },
+      "yx:NBS_2025_C09-01": {
+        "title": "9-1 一次能源生产总量及构成",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-01.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nbs_2025_C09-01.jpg",
+            "sha256": "cc7d20189a1782dd3e6327e173a0871ab0ffdcc2304e8a521e9a885cdf5b4ae3"
+          }
+        ]
+      },
+      "yx:NBS_2025_C09-02": {
+        "title": "9-2 能源消费总量及构成",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-02.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+            "sha256": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708"
+          }
+        ]
+      },
+      "yx:NBS_2025_C09-03": {
+        "title": "9-3 综合能源平衡表",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-03.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nbs_2025_C09-03.jpg",
+            "sha256": "7b64dcf6845ab84955be19ed60cc68c00764f75ba623f4e623c18deb3018022d"
+          }
+        ]
+      },
+      "yx:NBS_2025_C09-04": {
+        "title": "9-4 石油平衡表",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-04.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nbs_2025_C09-04.jpg",
+            "sha256": "04879f1944b4f45aaddcd17c6f8e4f9d7d576f9ab85f04ba1049dcbd73f7b6b5"
+          }
+        ]
+      },
+      "yx:NBS_2025_C09-05": {
+        "title": "9-5 煤炭平衡表",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-05.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nbs_2025_C09-05.jpg",
+            "sha256": "2d29ed89b2cbe42a1adefe75ad63621b42617184b0f094d19def390694dbe988"
+          }
+        ]
+      },
+      "yx:NBS_2025_C09-06": {
+        "title": "9-6 电力平衡表",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-06.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nbs_2025_C09-06.jpg",
+            "sha256": "8d415663790fc15d22add695af264dab44f847009367891b7613b629e94d02b3"
+          }
+        ]
+      },
+      "yx:NBS_2025_C09-14": {
+        "title": "9-14 分地区用电量",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-14.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch2_mechanisms/nbs_2025_C09-14.jpg",
+            "sha256": "792f54dc21b686356d6e4ea6d49277155a2fef3799b9b1622094548599e488d9"
+          }
+        ]
+      },
+      "yx:NBS_2025_C09-15": {
+        "title": "9-15 发电装机容量",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-15.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+            "sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b"
+          }
+        ]
+      },
+      "yx:NBS_2025_C09-19": {
+        "title": "9-19 分地区主要能源产品产量",
+        "publisher": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-19.jpg",
+        "artifacts": [
+          {
+            "path": "data/raw/batch2_mechanisms/nbs_2025_C09-19.jpg",
+            "sha256": "7b1d1c5d526905e4611c80f9fd97b637de3b62385218733aa20b55599b0f4d75"
+          }
+        ]
+      },
+      "yx:NDRC_GAS_APPARENT_2024": {
+        "title": "2024年12月份全国天然气运行快报",
+        "publisher": "国家发展改革委",
+        "url": "https://www.ndrc.gov.cn/fggz/jjyxtj/202501/t20250123_1395858.html",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/ndrc_gas_apparent_2024.html",
+            "sha256": "a55466c36ff019534d5e36615377bb3779f344c516242dc17a20d04b7d026330"
+          }
+        ]
+      },
+      "yx:NEA_HYDROGEN_2025": {
+        "title": "中国氢能发展报告（2025）",
+        "publisher": "国家能源局能源节约和科技装备司等",
+        "url": "https://www.nea.gov.cn/20250430/96022785b3a747248288ad1c57d3a025/2025043096022785b3a747248288ad1c57d3a025_35aeee443346424eb4a3da029cb007003c.pdf",
+        "artifacts": [
+          {
+            "path": "data/raw/batch3_scenarios/nea_hydrogen_2025.pdf",
+            "sha256": "0c88c1a6255f778277d008cb641cee9c71fab1936786a010e692d536142eb6ed"
+          }
+        ]
+      },
+      "yx:NEA_NATURAL_GAS_2025": {
+        "title": "中国天然气发展报告（2025）",
+        "publisher": "国家能源局等",
+        "url": "https://www.nea.gov.cn/20250829/a4e2deb9b6444df1a191b9d60c111ffd/20250829a4e2deb9b6444df1a191b9d60c111ffd_43ab87a785d1b64d49b9210dbc15d3781e.pdf",
+        "artifacts": [
+          {
+            "path": "data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf",
+            "sha256": "6e46cb5edb3bec945c45871750b7c35b267341fbce37745200414993106fea5d"
+          }
+        ]
+      },
+      "yx:NEA_PROVINCE_RENEWABLE_2024_DOC": {
+        "title": "2024年度全国可再生能源电力发展监测评价结果",
+        "publisher": "国家能源局",
+        "url": "https://www.nea.gov.cn/20251113/cc1fb0298a2944f8bd5441f67c9be9b3/20251113cc1fb0298a2944f8bd5441f67c9be9b3_54b6e6c1674e9c4bdca1cdfb4cbb16b477.doc",
+        "artifacts": [
+          {
+            "path": "data/raw/batch2_mechanisms/nea_province_renewable_2024.doc",
+            "sha256": "b2c460a50a2bcd379b1a8c18b0b4c992fffff047dc8c5bb775aa7845ccd62449"
+          }
+        ]
+      },
+      "yx:NEA_RENEWABLE_2024": {
+        "title": "2024年可再生能源并网运行情况",
+        "publisher": "国家能源局",
+        "url": "https://www.nea.gov.cn/20250221/e10f363cabe3458aaf78ba4558970054/c.html",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nea_renewable_2024.html",
+            "sha256": "13fabe3f96b292ab2aab7ab2332541d8839fe21e1f144b2f56184f65fbe552cd"
+          }
+        ]
+      },
+      "yx:NEA_RENEWABLE_2025": {
+        "title": "2025年可再生能源并网运行情况",
+        "publisher": "国家能源局",
+        "url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/nea_renewable_2025.html",
+            "sha256": "14eaf89261b0b02e6543c7406e1e8d5106ebad819921f7aea9204e8f8a30c6a6"
+          }
+        ]
+      },
+      "yx:NEA_STORAGE_2025": {
+        "title": "2025年新型储能装机、能量和区域分布",
+        "publisher": "国家能源局",
+        "url": "https://www.nea.gov.cn/20260130/b5b729cb7ad74723bcd614b663c75da6/c.html",
+        "artifacts": [
+          {
+            "path": "data/raw/batch2_mechanisms/nea_storage_2025.html",
+            "sha256": "739bb225cb040415095b6d3e1de0c81f75ec32541e0613c823d849d190c44453"
+          }
+        ]
+      },
+      "yx:OWID_ENERGY_CHINA_ARCHIVE": {
+        "title": "Our World in Data energy dataset public repository",
+        "publisher": "Our World in Data",
+        "url": "https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/owid_energy_data.csv",
+            "sha256": "266f2e2baad7975351bc9bb4aa061d22b1da9fe4c47d51d2ac6071e01e171f76"
+          }
+        ]
+      },
+      "yx:WB_PINK_SHEET_STABLE": {
+        "title": "World Bank annual Pink Sheet stable download crosscheck",
+        "publisher": "World Bank",
+        "url": "https://pubdocs.worldbank.org/en/226371486076391711/CMO-Historical-Data-Annual.xlsx",
+        "artifacts": [
+          {
+            "path": "data/raw/batch1_national/wb_commodity_prices_stable.xlsx",
+            "sha256": "f25870f3ce992bf6caa6b7159ae3722c9411ab66108cef47aea2e4451a21961a"
+          }
+        ]
+      }
+    }
+  }
 }

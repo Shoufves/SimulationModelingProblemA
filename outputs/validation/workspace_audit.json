@@ -6,9 +6,54 @@
       "check": "retained_files_match_inventory",
       "passed": true,
       "detail": {
+        "scope": "nonrestricted file hashes; restricted existence/size only, NOT content preservation proof",
         "resolved_original_paths": 1117,
         "missing": [],
         "unrecoverable_modifications": [],
+        "restricted_metadata_only": [
+          {
+            "path": "data/restricted/household/data/household_energy_source_fig4.csv",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 1.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 2.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 3.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 4.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 5.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          },
+          {
+            "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 6.xlsx",
+            "size_matches_inventory": true,
+            "content_read": false,
+            "content_hash_verified": false
+          }
+        ],
         "external_historical_records": [
           {
             "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/B题/2026年第二届全国大学生仿真建模应用挑战赛B题.pdf",
@@ -53,14 +98,19 @@
       "check": "working_tree_google_api_keys_absent",
       "passed": true,
       "detail": {
-        "scope": "working tree including hidden files and ZIP members; .git excluded",
+        "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
+        "excluded_directories": [
+          ".git",
+          "tmp",
+          "data/restricted"
+        ],
         "pattern": "Google API key format only; not an exhaustive credential audit",
         "passed": true,
         "findings": [],
         "errors": [],
-        "files_scanned": 2503,
-        "payloads_scanned": 4775,
-        "zip_members_scanned": 2272
+        "files_scanned": 1324,
+        "payloads_scanned": 2391,
+        "zip_members_scanned": 1067
       }
     },
     {

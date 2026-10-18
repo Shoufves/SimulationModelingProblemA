@@ -91,3 +91,26 @@ def compound_index(growth, base=2015, end=2024):
             raise ValueError("Invalid GDP growth")
         index[year] = index[year-1]*(1+g/100)
     return index
+
+
+# Ported from mmj PR #4 baf1975; method and assumptions unchanged.
+COST_ASSUMPTIONS = {'real_wacc': [0.03, 0.05, 0.07], 'common_life_years': 25, 'cost_service': 'unfirmed plant-gate electricity; constant annual output; 8760 hours normalization'}
+
+
+def screening_lcoe(capex, om, cf, life, real_wacc):
+    """Constant annual output, end-of-year O&M/output; unfirmed plant-gate kWh."""
+    if (not all(math.isfinite(x) for x in (capex, om, cf, life, real_wacc))
+            or capex <= 0 or om < 0 or not 0 < cf <= 1 or life <= 0 or real_wacc < 0):
+        raise ValueError("Invalid cost assumptions")
+    # log1p/expm1 retain the r -> 0 limit when 1+r rounds to 1.
+    crf = (1/life if real_wacc == 0 else
+           real_wacc / -math.expm1(-life*math.log1p(real_wacc)))
+    return (capex*crf + om) / (8760*cf)
+
+
+def review_snapshot(inputs, sources):
+    """mmj's review binding, mapped to lb's existing input field names."""
+    fields = ("path", "sha256", "source_map", "years", "units", "review",
+              "evidence_status", "allowed_use", "blocked_use")
+    return dict(inputs={r["id"]: {key: r[key] for key in fields} for r in inputs},
+                sources=sources)
