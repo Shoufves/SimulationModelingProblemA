@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-18T04:38:14.606112+00:00",
+  "owner": "mmj",
+  "scope": "Historical records extracted from the pre-collaboration checkout; not current-main model results.",
+  "source_HEAD": "386436793e3d5afb0901dc66a0099f9bcec847b9",
+  "inventory_reference_main_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+  "historical_files_are_not_included_in_this_PR": true,
+  "formal_Q1_complete": false,
+  "records": [
+    {
+      "source_path": "outputs/validation/environment_repair_summary.json",
+      "source_sha256": "18fae0b810a784eff88ddd244ddcb637d4801b7ff38e5d27aa9715be08c883f3",
+      "historical_values": {
+        "software_ready": true,
+        "tests": {
+          "tests": 134,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "passed": true,
+          "seconds": 4.260259100003168,
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+        },
+        "ui_tests": {
+          "tests": 11,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "passed": true,
+          "seconds": 27.108614800003124,
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+        },
+        "browser": {
+          "checks": 9,
+          "page_errors": [],
+          "evidence": "outputs/validation/workbench_20261018/browser-checks.json"
+        },
+        "reproduction": {
+          "core": {
+            "steps": 4,
+            "passed": true,
+            "evidence": "outputs/validation/reproduction_core.json"
+          },
+          "yx": {
+            "steps": 2,
+            "passed": true,
+            "evidence": "outputs/validation/reproduction_yx.json"
+          },
+          "lb": {
+            "steps": 4,
+            "passed": true,
+            "evidence": "outputs/validation/reproduction_lb.json"
+          }
+        },
+        "formal_inputs": {
+          "passed": true,
+          "accepted_subsets": 9
+        },
+        "restored_working_files": 210
+      },
+      "rerun_in_inventory_branch": false
+    },
+    {
+      "source_path": "outputs/validation/coupled_f2_acceptance.json",
+      "source_sha256": "fdb33f2f28581fd66e025237f1fa963ff90ccd9ec341504aaa7c0267b821aa11",
+      "historical_values": {
+        "run_id": "80b7c35c1ee93cdf",
+        "report": "outputs/engineering/f2/80b7c35c1ee93cdf/report.md",
+        "engineering_checks_passed": true,
+        "test_record": "outputs/validation/tests.json",
+        "checks": {
+          "tests_166_passed": true,
+          "conditional_run_success": true,
+          "all_current_run_file_hashes_match": true,
+          "protected_unchanged_since_task_start": true,
+          "nine_original_subsets_admitted": true,
+          "hand_calculation_matches": true,
+          "storage_reference_zero_unserved": true,
+          "project_lead_time_preserved": true,
+          "national_and_innovation_flags_remain_false": true,
+          "valuable_original_bytes_retained": true
+        }
+      },
+      "rerun_in_inventory_branch": false,
+      "test_count_basis": "166 recorded by tests_166_passed in this acceptance receipt; its test_record field is a mutable path, not an embedded historical test result."
+    },
+    {
+      "source_path": "outputs/validation/coupled_devices_acceptance.json",
+      "source_sha256": "ccd9c5da44a677d98d717b60fa7ee3661133fe5f9dca86c1ac6fc3c79f9547ee",
+      "historical_values": {
+        "run_id": "6dedee4963d3ac6e",
+        "report": "outputs/engineering/f2/6dedee4963d3ac6e/report.md",
+        "engineering_checks_passed": true,
+        "test_record": {
+          "tests": 187,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "passed": true,
+          "seconds": 6.651068400009535,
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+        },
+        "computation": {
+          "annual_simulation_calls": 4,
+          "dispatch_model_calls": 25,
+          "lp_solver_calls": 99,
+          "wall_seconds": 0.538177899987204
+        }
+      },
+      "rerun_in_inventory_branch": false
+    },
+    {
+      "source_path": "outputs/validation/h01_conditional_acceptance.json",
+      "source_sha256": "5f566de80fddfe2c448a17e5ae42a1bae91246bb285240639a98d2c29162e4cb",
+      "historical_values": {
+        "run_id": "16c17bc83d61d245",
+        "report": "outputs/engineering/h01/16c17bc83d61d245/report.md",
+        "engineering_checks_passed": true,
+        "test_record": {
+          "tests": 208,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "passed": true,
+          "seconds": 12.373709999985294,
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+        },
+        "computation": {
+          "annual_model_calls": 45,
+          "dispatch_model_calls": 366,
+          "readiness_replay_calls": 51,
+          "solver_calls": 1464,
+          "wall_seconds": 11.052450400020462
+        },
+        "within_common_boundary": 26,
+        "boundary_violations": 19,
+        "max_physical_residual": 1.8189894035458565e-12,
+        "max_cash_residual_cu": 0,
+        "strict_workspace_audit_passed": false,
+        "strict_audit_pass_count": 12,
+        "strict_audit_total": 13,
+        "formal_H01_complete": false
+      },
+      "rerun_in_inventory_branch": false
+    }
+  ],
+  "source_protected_file_sha256": {
+    "final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+    "gemini_final_idea.md": "6e6ef2195c9705e9e85b4ae5fcb9781e7916ed5911c769f348081ea87744959a",
+    "README.md": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af"
+  },
+  "historical_audit_failure": "protected_directory_unchanged: Gemini historical LF/CRLF difference; not waived",
+  "source_vs_reference_main_content_changed_paths": [
+    "README.md",
+    "archive/organization_20261017/file_disposition.json",
+    "data/catalog/sources_unified.csv",
+    "data/catalog/sources_unified.json",
+    "data/raw/lb/base/literature/abm_investment_2021.html",
+    "docs/17_git_collaboration.md",
+    "docs/rounds/P0_P1_Q1.md",
+    "outputs/validation/p0_q1_20261018.json",
+    "outputs/validation/tests.json",
+    "outputs/validation/workspace_audit.json",
+    "scripts/audit_workspace.py",
+    "scripts/build_workspace_catalog.py",
+    "scripts/scan_google_keys.py"
+  ],
+  "publication_rule": "Do not overwrite these newer main changes when extracting historical candidates.",
+  "authentication_check": "No noninteractive GitHub API credential available; no pull request created during this check.",
+  "inventory_validation": {
+    "checks": {
+      "all_478_source_files_mapped": true,
+      "difference_counts_match": true,
+      "all_source_hashes_still_match": true,
+      "historical_receipt_hashes_match": true,
+      "correct_reference_main": true,
+      "correct_mmj_docs_branch": true,
+      "no_restricted_data_paths_in_inventory": true,
+      "no_machine_absolute_paths_in_new_files": true,
+      "no_new_file_ge_50_mib": true,
+      "README_inventory_link_resolves": true,
+      "google_key_scan_of_four_changed_files_no_hits": true,
+      "explicit_user_requested_branch_base": true,
+      "four_changed_files_use_lf": true
+    },
+    "passed": true,
+    "key_scan_scope": "Exactly the four proposed documentation/JSON files using scan_google_keys.scan_bytes; no whole-tree scan, restricted data or environment read.",
+    "key_scan_findings": [],
+    "historical_models_rerun": false,
+    "test_and_audit_policy": "Documentation inventory only; no current-main model test/audit success claimed. Historical audit failure is not waived."
+  },
+  "initial_inventory_reference_main_sha": "064b91d323f16ced13a98181eeb5f5a16609a978",
+  "inventory_base_sha": "7a65d068d19eea2f7dd8161a618a3ad8d66f98b8",
+  "inventory_branch": "docs/mmj-history-mapping",
+  "branch_base_authority": "mmj explicitly requested this commit in the current conversation.",
+  "updated_utc": "2026-10-18T04:46:28.855101+00:00"
+}
