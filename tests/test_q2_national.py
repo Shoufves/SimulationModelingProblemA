@@ -259,5 +259,125 @@ class NationalTests(unittest.TestCase):
         self.assertLess(abs(m.paths[0]["cash_balance_residual_cny"]),.1)
         self.assertLess(abs(m.paths[0]["ets_balance_cny"]),.1)
 
+    def test_electric_service_growth_cannot_create_free_equipment(self):
+        m=self.model(2024);m.drivers();m.mature()
+        before=m.make_operation()["demands"]["existing_electric_services"]
+        m.electric_activity*=10
+        after=m.make_operation()["demands"]["existing_electric_services"]
+        self.assertEqual(before["input_capacity_mw"],after["input_capacity_mw"])
+        self.assertAlmostEqual(sum(after["service_mwh"])/sum(before["service_mwh"]),10)
+
+    def test_device_approval_needs_cash_and_one_year_to_commission(self):
+        m=self.model(2024);m.drivers();m.mature();m.make_operation()
+        c=m.consumers["electricity"];c.cash=0
+        self.assertEqual(c.proposal()["amount"],0)
+        proposal=dict(actor=c.name,amount=1000,electric_fraction=0,capex=1e6)
+        m.government.approve_devices([proposal])
+        self.assertEqual(c.queue,[])
+        c.cash=1e9
+        before=sum(p["capacity"] for p in c.cohorts if p["status"]=="active")
+        m.government.approve_devices([proposal])
+        self.assertEqual(c.cash,0)
+        self.assertEqual(sum(p["capacity"] for p in c.cohorts if p["status"]=="active"),before)
+        m.year+=1;c.prepare()
+        self.assertTrue(any(p["online"]==m.year and p["capacity"]==1000 for p in c.cohorts))
+        self.assertEqual(c.queue[0]["paid_cost_cny"],1e9)
+
+    def test_zero_income_and_cash_preserve_unmet_requests(self):
+        m=self.model(2024,variant={"consumer_income_multiplier":0})
+        for c in m.consumers.values():c.cash=0
+        m.run(2025)
+        rows=[r for r in m.operations if r["kind"]=="demand" and r["sector"] in m.consumer_by_name]
+        self.assertGreater(sum(r["requested_service_mwh"] for r in rows),0)
+        self.assertAlmostEqual(sum(r["served_service_mwh"] for r in rows),0,places=5)
+        self.assertAlmostEqual(sum(r["unmet_service_mwh"]-r["requested_service_mwh"] for r in rows),0,places=5)
+        self.assertTrue(all(not c.queue and c.cash==0 for c in m.consumers.values()))
+
+    def test_shared_wallet_and_scale_do_not_duplicate_budget(self):
+        op=small_operation()
+        op["storage"].update(initial_mwh=0,power_mw=0,energy_mwh=0)
+        op["fuels"]["gas"]["domestic_mw"]=[5,5]
+        op["demands"]["second"]=deepcopy(op["demands"]["load"])
+        for d in op["demands"].values():d.update(budget_group="household",purchase_price_per_mwh=10)
+        op["spending_limits"]={"household":dict(budget_cny=30)}
+        for result in (operate(op),operate_national(op)):
+            self.assertAlmostEqual(sum(r["input_mwh"] for r in result["demand"]),3,places=6)
+            self.assertAlmostEqual(sum(r["unmet_service_mwh"] for r in result["demand"]),17,places=6)
+        del op["spending_limits"]
+        with self.assertRaises(Q2Error):operate(op)
+
+    def test_consumer_cash_rolls_after_energy_and_device_payments(self):
+        m=self.model(2024).run(2027)
+        for c in m.consumers.values():
+            records=[r for r in m.finance if r["actor"]==c.name and "closing_cash_cny" in r]
+            for left,right in zip(records,records[1:]):
+                self.assertEqual(left["closing_cash_cny"],right["opening_cash_cny"])
+            self.assertEqual(records[-1]["closing_cash_cny"],c.cash)
+            for r in records:
+                if r["kind"]=="consumer_operation":
+                    self.assertLessEqual(r["energy_bill_cny"],r["energy_budget_cny"]+.01)
+                    self.assertLess(abs(r["consumer_cash_balance_residual_cny"]),.01)
+                else:self.assertLess(abs(r["device_cash_balance_residual_cny"]),.01)
+
+    def test_announced_elasticity_is_shared_by_forecast_and_real_demand(self):
+        m=self.model(2024);m.drivers();m.mature();m.make_operation()
+        m.year=2045;m.current_growth=.025
+        expected=m.expected_service_growth("electricity",3)
+        factor=1
+        for y in (2046,2047,2048):
+            mix=(y-2024)/36
+            factor*=1.025**(m.electric_elasticity*(1-mix)+.8*mix)*.99
+        self.assertAlmostEqual(expected,factor)
+        m.year=2046;m.electric_activity=1;m.drivers()
+        self.assertAlmostEqual(m.electric_activity,1.025**m.electricity_elasticity(2046)*.99)
+
+    def test_planning_respects_retiring_and_paid_devices(self):
+        m=self.model(2024);m.drivers();m.mature();m.last_operation=m.make_operation()
+        c=m.consumers["electricity"]
+        future=m.planning_operation(1)["demands"][c.name]
+        expected=sum(p["capacity"] for p in c.cohorts if p["exit"]>2026)
+        self.assertAlmostEqual(future["input_capacity_mw"],expected)
+        c.cash=1e9;m.government.approve([], [dict(actor=c.name,amount=1000,electric_fraction=0,capex=1e6)])
+        self.assertAlmostEqual(m.planning_operation(1)["demands"][c.name]["input_capacity_mw"],expected+1000)
+
+    def test_running_review_replaces_stale_success_before_checks(self):
+        import tempfile
+        from unittest.mock import patch
+        import review_q2_national_delivery as audit
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);out=root/"outputs/q2_review/p2_lb_national";out.mkdir(parents=True)
+            receipt=out/"verification.json";receipt.write_text('{"passed":true,"status":"old_success"}')
+            def interrupted(_):
+                state=json.loads(receipt.read_text())
+                self.assertFalse(state["passed"]);self.assertEqual(state["status"],"running")
+                raise ValueError("injected audit failure")
+            with patch.object(audit,"ROOT",root),patch.object(audit,"verify_latest",side_effect=interrupted),patch.object(audit,"sha",return_value="probe"):
+                self.assertEqual(audit.main(),1)
+            state=json.loads(receipt.read_text());self.assertFalse(state["passed"]);self.assertEqual(state["status"],"failed")
+
+    def test_joint_investment_cannot_sell_same_market_twice(self):
+        from unittest.mock import patch
+        m=self.model(2024)
+        op=small_operation();op["storage"].update(initial_mwh=0,power_mw=0,energy_mwh=0)
+        plant={**op["plants"]["gas"],"input":None,"capacity_mw":0,"window_energy_budget_mwh":0}
+        op["plants"]={"wind":deepcopy(plant),"solar":deepcopy(plant)}
+        m.last_operation=op;m.a["generation_price_cny_per_mwh"]=10000
+        for t in ("wind","solar"):
+            m.generators[t].capex_2024=1;m.generators[t].margin=1e9
+        # Each project alone can serve all 10 MWh; together neither creates
+        # incremental sales. A real dispatch LP must force a smaller portfolio.
+        with patch.object(m,"planning_operation",side_effect=lambda _:deepcopy(op)):
+            for t in ("wind","solar"):self.assertGreater(m.marginal_renewable_margin(t,5),0)
+            approved=m.audit_renewable_portfolio({"wind":5,"solar":5})
+            self.assertEqual(approved,{"wind":2.5,"solar":2.5})
+            for t in approved:self.assertGreater(m.marginal_renewable_margin(t,approved[t],approved),0)
+        audits=[r for r in m.behavior if r["kind"]=="joint_renewable_audit"]
+        self.assertFalse(audits[0]["approved"]);self.assertTrue(audits[-1]["approved"])
+
+    def test_fuel_price_shock_does_not_reimburse_consumer_income(self):
+        a=self.model(2024);b=self.model(2024,variant={"fuel_price_multiplier":2})
+        for fuel in ("coal","oil","gas"):
+            self.assertEqual(a.consumers[fuel].income_per_service,b.consumers[fuel].income_per_service)
+
 
 if __name__=="__main__":unittest.main()

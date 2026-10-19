@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "final_mechanism_tests",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "final_workspace_audit",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "final_key_scan",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "final_current_code_and_26_artifacts",
+      "passed": true,
+      "artifacts": 26
+    }
+  ],
+  "model_run_id": "20261019T022256882831Z",
+  "handoff_hashes": {
+    "README.md": "3db0630364067dc6131a183121ed34f0d17575d9ee6dd63b8a79b9661f722b6d",
+    "WORKFLOW.md": "3293db8fe644848517c673e1b4a5fba5b3e4eb041ad7c9c41f9c5396528920f3",
+    "docs/IMPLEMENTATION_ROADMAP.md": "f4ba3771307497ff0533cfa2f6a18d56c35dc3b402c210248490621bd06235b8",
+    "docs/RUNNING.md": "e54b39a111c1e9d096f58ef5d2f829d3a3aea73d2dd9a4d5d4e0486e37bab7fc",
+    "docs/solutions/p2-lb.md": "7e9cabded45ee583aeef701ea4316bfcbc28035f44f014fb1a65bd69a88affc2",
+    "docs/solutions/p2-lb-repaired.md": "b9841963ee25e145aba5ad8d9806956b547383b13fd7888358d00e4eea88d40f",
+    "scripts/write_q2_repair_report.py": "17871b30e7da68ab292e424eee2582e1259e4f145e90e03f5b7a6d148dee9722",
+    "scripts/check_q2_repaired_mechanisms.py": "64c072e9931437c5acf1576684775ba08dee4cae3f0fce379fc0b02f5ed244bb",
+    "scripts/review_q2_national_delivery.py": "c38da0390cc7689e42f42b90ae3673ff5d1b8a7406f880987cae628536db6e0c",
+    "archive/q2_national_v5_before_remaining_repairs.zip": "2599ba63aa8a31d02cbbfb411d32c3d12e4eabac291356603668a7acf3bf0a89",
+    "archive/q2_revision6_preserved_runs.zip": "47bd6744fa12fe54389ad4d389cb89f42ca0bf77c13af1b2fd691e25089e76ca",
+    "archive/q2_revision6_preserved_runs_manifest.json": "0c06a7945012a34c8ae6e9a7f11ebf4fafbe68e63931b91e27dbd11787f04378"
+  }
+}

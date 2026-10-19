@@ -258,6 +258,7 @@ def experiments(data,design,calibration,folder):
                          ("accounts",baseline.finance),("operations",baseline.operations),("balances",baseline.balances),("solver_stages",baseline.stages)):
         csv_write(folder/(name+".csv"),records)
     dump(folder/"project_queue.json",baseline.projects)
+    dump(folder/"device_project_queue.json",[dict(actor=c.name,**p) for c in baseline.consumers.values() for p in c.queue])
     settings = [("one_factor",name+"="+str(value),{name:value},theta) for name,values in design["sensitivity"].items() for value in values]
     settings += [("equivalent_parameters",str(i),{},t) for i,t in enumerate(calibration["equivalent_parameters"]) if t!=theta]
     for name,values in {"primary_bridge_multiplier":[.9,1.1],"removals_multiplier":[.5,1.5],
@@ -265,7 +266,8 @@ def experiments(data,design,calibration,folder):
         "renewable_availability_multiplier":[.8,1.2],"fuel_price_multiplier":[.7,1.3],
         "initial_age_multiplier":[.75,1.25],"construction_elasticity":[.5,1.5],
         "electricity_terminal_elasticity":[.6,1.0],"project_equity_fraction":[.15,.4],
-        "grid_initial_headroom":[1.05,1.3],"grid_build_fraction":[.05,.15]}.items():
+        "grid_initial_headroom":[1.05,1.3],"grid_build_fraction":[.05,.15],
+        "consumer_income_multiplier":[.5,1.5]}.items():
         settings += [("assumption_bounds",name+"="+str(v),{name:v},theta) for v in values]
     import numpy as np
     rng = np.random.default_rng(design["seed"])
@@ -370,6 +372,7 @@ def report(folder,calibration,rows,failures):
     text += "目标对照逐项保存在 `targets_2030_2060.csv`：2030占比25%、相对2005碳强度65%、相对2025碳强度17%，2060占比80%及R/P≥1分开比较。一次能源折算仍是统计锚点桥接，不能据代理值宣布通过官方考核；CO₂不等于全部温室气体。\n\n"
     text += "## 任务四：灵敏度与稳健性\n\nGDP增长率±1个百分点、风光成本降幅±1个百分点、碳价0.5/1.5倍分别实际运行；同时运行等效参数、碳汇/工业过程/原料比例/成本/风光出力/统计桥接/初始年龄/建设能力边界、6条Morris轨迹以及12点三因素联合Latin Hypercube。全部条件及与S0的差值见 `sensitivity.csv`，Morris逐步效应及μ*/σ见同名表。样本仅用于首轮有界筛选，没有宣称数值精度已收敛。\n\n"
     text += f"试验求解失败{len(failures)}项，原样登记于 `sensitivity_failures.json`。样本代表所检验假设范围，不能解读为达标概率。\n\n"
+    text += "## 本轮需求端与联合投资修复\n\n四类终端服务（含存量电力服务）均使用有限寿命设备、实际付款及下一年投运队列。能源采购由同一主体的年度收入与留存现金共同约束，多个燃料/电力设备共享预算；未满足服务保留在需求账内。外生单位服务收入按初态能源费用与设备更新费用重建，未按实际账单自动补足，也不是居民或企业收入统计。设备队列见 `device_project_queue.json`，现金连续性见 `accounts.csv`。\n\n风光审批使用同一批项目全部存在时的逐项目新增售电收益，有限次数缩减仍不经济则拒绝；不得让两个项目重复占用同一市场空间。前瞻与实际用电采用同一渐变弹性，GDP增长预期为当前增速延续，不读取未来已实现GDP。\n\n"
     text += "## 必须随结果保留的限制\n\n"
     text += "- 历史资料版本、价格及技术参数是事后重建；未把2024物理规模回填2015。已接触评估不能变成盲测。\n- 设备年龄、初始建设队列、细分火电和部门服务是聚合重建；不声称逐厂/逐户普查。\n- 电网是独立投资的全国交付能力代理，不是跨省网络。24小时循环代表日不验证季节性、极端天气或全年可靠性；库存不乘年度权重。\n- 2026年发布的碳配额参考从2027年年度决策启用。终端燃料代理不足以识别工业ETS覆盖，S0不虚构覆盖比例；覆盖机制以单独反例验证。\n- 初态PEO统计桥代理与直接等价值口径分列；后者不作为官方非化石考核。水电统计含抽蓄，完整充放电拆分仍受原观测边界限制。氢在燃料余量/非能源用途内隐含，未另加能源；没有可准入的全国转换初态时不伪造独立氢链、CCUS减排或负排放。\n- 融资、施工及电网参数为明示结构假设，已作范围试验。用电弹性从历史拟合值渐变至条件终值，制造业建设能力增长独立于电站存量并逐渐收敛。\n- BTR工业过程及净碳汇以条件路径外推；中和率R/P不是全温室气体中和认证。社会分配、就业、AI专项及国际冲击属于后续问题三。\n\n"
     text += "复现：`python -B -X utf8 scripts/build_q2_national_inputs.py`，然后 `python -B -X utf8 scripts/run_q2_national.py`。假设全表见 `frozen_design.json`，原件、转换与排除项见问题二输入审查；Q1原契约不变。\n"

@@ -188,6 +188,23 @@ def operate(config, *, solver=linprog):
             lp.eq({x: efficiency, unmet: 1}, requested, f"service/{name}/{t}")
             add(p["carrier"], t, x, -1/eta_grid if p["carrier"] == "electricity" else -1)
             shortages.setdefault(p["priority"], []).append(unmet)
+    # One wallet may fund several device/carrier rows; do not give each row a
+    # fresh copy of the same budget. Unaffordable service remains in u above.
+    for group, budget in sorted(config.get("spending_limits", {}).items()):
+        terms = {}
+        for name, p in demands.items():
+            if p.get("budget_group") == group:
+                price = number(p["purchase_price_per_mwh"], name + ".purchase_price", 0)
+                terms.update({inputs[name, t]: price for t in range(n)})
+        if not terms:
+            raise Q2Error("invalid_input", "Spending limit has no demand: " + group)
+        # Positive row scaling keeps currency magnitudes out of the energy LP;
+        # this is the same constraint, with unchanged affordability bounds.
+        scale = max(1,max(terms.values()))
+        lp.le({i:v/scale for i,v in terms.items()}, number(budget["budget_cny"], group + ".budget")/scale, "spending/" + group)
+    for name, p in demands.items():
+        if "budget_group" in p and p["budget_group"] not in config.get("spending_limits", {}):
+            raise Q2Error("invalid_input", "Missing spending limit: " + name)
     for t, h in enumerate(hours):
         c[t] = lp.var(f"charge/{t}", store["power_mw"] * h, store["throughput_cost"] * weight)
         d[t] = lp.var(f"discharge/{t}", store["power_mw"] * h, store["throughput_cost"] * weight)

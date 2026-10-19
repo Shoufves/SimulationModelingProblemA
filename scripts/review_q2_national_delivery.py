@@ -25,11 +25,16 @@ def main():
     out.mkdir(parents=True,exist_ok=True)
     report=dict(passed=False,status="running",checks=[],team_approved=False,
         completion_scope="Q2 author conditional aggregate research candidate; no official/all-GHG/probabilistic certification")
+    # Replace stale success BEFORE reading inputs or running any check.
+    dump(out/"verification.json",report)
     start=time.perf_counter()
     def check(name,passed,detail):
         report["checks"].append(dict(name=name,passed=bool(passed),detail=detail))
+        dump(out/"verification.json",report)
         if not passed:raise ValueError(name)
     def command(name,args,expected=0,env=None):
+        report["running_check"]=name
+        dump(out/"verification.json",report)
         r=subprocess.run([sys.executable,"-B","-X","utf8",*args],cwd=ROOT,capture_output=True,text=True,encoding="utf-8",env=env)
         (out/(name+".log")).write_text(r.stdout+r.stderr,encoding="utf-8")
         check(name,r.returncode==expected,dict(returncode=r.returncode,expected=expected,tail=(r.stdout+r.stderr)[-500:]))
@@ -85,6 +90,39 @@ def main():
         check("infrastructure_and_financing_ledgers",all(abs(float(r["infrastructure_fund_residual_cny"]))<.1 and abs(float(r["financing_transfer_residual_cny"]))<.1 for r in baseline),"Independent infrastructure escrow and sponsor/shareholder/lender transfers")
         check("cross_year_storage_continuity",all(abs(float(a["storage_closing_mwh"])-float(b["storage_retirement_loss_mwh"])-float(b["storage_opening_mwh"]))<1e-4 for a,b in zip(baseline,baseline[1:])),"New storage enters empty; retirement disposal explicitly deducted")
         accounts=read(folder/"accounts.csv")
+        consumer_rows=[r for r in accounts if r["kind"]=="consumer_operation" and r.get("energy_budget_cny")]
+        check("all_four_service_budgets_fund_energy",len(consumer_rows)==36*4 and all(
+            float(r["energy_bill_cny"])<=float(r["energy_budget_cny"])+.01 and
+            abs(float(r["consumer_cash_balance_residual_cny"]))<.1 for r in consumer_rows),
+            dict(rows=len(consumer_rows),cash_tolerance_cny=.1,basis="Same absolute roundoff bound as national cash ledger; multi-trillion CNY balances"))
+        for actor in sorted({r["actor"] for r in consumer_rows}):
+            ledger=[r for r in accounts if r["actor"]==actor and r.get("closing_cash_cny")]
+            for left,right in zip(ledger,ledger[1:]):
+                if abs(float(left["closing_cash_cny"])-float(right["opening_cash_cny"]))>.01:
+                    raise ValueError("Consumer cash discontinuity: "+actor)
+        device_payments=[r for r in accounts if r["kind"]=="device_finance_and_construction"]
+        check("device_payments_and_retained_cash_reconcile",len(device_payments)==36*4 and all(
+            abs(float(r["device_cash_balance_residual_cny"]))<.01 and float(r["closing_cash_cny"])>=-.01 and
+            abs(float(r["actor_cash_transfer_cny"])+float(r["construction_receipt_cny"]))<.01 for r in device_payments),len(device_payments))
+        device_projects=load(folder/"device_project_queue.json")
+        for p in device_projects:
+            if p["online"]!=p["decision"]+1 or p["paid_cost_cny"]<=0:
+                raise ValueError("Unpaid or instantaneous device commissioning")
+        for payment in device_payments:
+            total=sum(p["paid_cost_cny"] for p in device_projects if p["actor"]==payment["actor"] and p["decision"]==int(payment["year"]))
+            if abs(total-float(payment["amount_cny"]))>.01:raise ValueError("Device queue funding mismatch")
+        check("all_service_device_queues_paid_and_delayed",bool(device_projects),len(device_projects))
+        behavior=read(folder/"behavior.csv")
+        for year in range(2025,2061):
+            approvals={r["project"].split('/')[1]:float(r["approved_mw"]) for r in behavior
+                       if r["kind"]=="approval" and int(r["year"])==year and r["project"].split('/')[1] in {"wind","solar"}}
+            if not approvals:continue
+            audits=[r for r in behavior if r["kind"]=="joint_renewable_audit" and int(r["year"])==year and r["approved"]=="True"]
+            if len(audits)!=1:raise ValueError("Missing final joint renewable approval")
+            capacities=json.loads(audits[0]["capacities_mw"])
+            npvs=json.loads(audits[0]["incremental_npvs_cny_per_mw"])
+            if capacities!=approvals or not all(v>0 for v in npvs.values()):raise ValueError("Unaudited renewable portfolio")
+        check("renewable_approvals_match_final_joint_sales_audit",True,"Every approved project checked with the other same-batch projects present")
         projects=load(folder/"project_queue.json")
         for p in projects:
             if p["initial_reconstruction"]:continue
@@ -132,6 +170,10 @@ def main():
         check("latest_failure_not_hidden_by_old_success",rejected and load(probe/"run_manifest.json")["status"]=="failed","Original success preserved under probe .attempts; primary delivery untouched")
         verify_latest(folder)
         report.update(passed=True,status="repaired_conditional_Q2_candidate_review_ready",implementation_and_declared_checks_complete=True,
+            closed_implementation_gaps=["Finite paid equipment for all four service proxies",
+                "Consumer energy budgets and retained cash constrain device purchases",
+                "Shared demand elasticity schedule and final joint renewable approval",
+                "Audit running/failure state replaces stale success before checks"],
             independent_review_still_required=True,scientific_limits=["Already-seen evaluation reused for disclosed model revisions",
                 "No same-scope emissions holdout", "PEO/nonfossil and process/sink bridges conditional",
                 "Representative day does not validate annual reliability", "Not all-GHG neutrality",
@@ -139,6 +181,7 @@ def main():
     except Exception as exc:
         report.update(status="failed",error=f"{type(exc).__name__}: {exc}")
     finally:
+        report.pop("running_check",None)
         report["elapsed_seconds"]=time.perf_counter()-start
         report["current_hashes"]={p:sha(ROOT/p) for p in CODE+INPUTS+["tests/test_q2_national.py","scripts/review_q2_national_delivery.py"]}
         dump(out/"verification.json",report)

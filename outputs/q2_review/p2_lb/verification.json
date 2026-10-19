@@ -6,18 +6,18 @@
     {
       "name": "all_tests",
       "passed": true,
-      "detail": ".......................................................................................................Q1 FAILED: Input hash mismatch: cost\n......................................Q1 FAILED: [Errno 2] No such file or directory: 'E:\\\\Team\\\\2026JM\\\\SimulationModelingProblemA\\\\tmp\\\\tests\\\\tmpw8i_bahn\\\\missing.csv'\n.................................................................................................\n----------------------------------------------------------------------\nRan 238 tests in 11.590s\n\nOK\n"
+      "detail": "{\"passed\": false, \"status\": \"failed\", \"checks\": 0, \"error\": \"ValueError: injected audit failure\"}\n.......................................................................................................Q1 FAILED: Input hash mismatch: cost\n......................................Q1 FAILED: [Errno 2] No such file or directory: 'E:\\\\Team\\\\2026JM\\\\SimulationModelingProblemA\\\\tmp\\\\tests\\\\tmp3yhj0t2e\\\\missing.csv'\n...........................................................................................................\n----------------------------------------------------------------------\nRan 248 tests in 19.115s\n\nOK\n"
     },
     {
       "name": "q2_tests_not_skipped",
       "passed": true,
       "detail": {
-        "tests": 238,
+        "tests": 248,
         "failures": 0,
         "errors": 0,
         "skipped": 0,
         "passed": true,
-        "seconds": 11.590518200013321,
+        "seconds": 19.115142000024207,
         "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
       }
     },
@@ -29,7 +29,7 @@
     {
       "name": "key_scan",
       "passed": true,
-      "detail": "{\n  \"working_tree\": {\n    \"scope\": \"working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening\",\n    \"excluded_directories\": [\n      \".git\",\n      \"tmp\",\n      \"data/restricted\"\n    ],\n    \"pattern\": \"Google API key format only; not an exhaustive credential audit\",\n    \"passed\": true,\n    \"findings\": [],\n    \"errors\": [],\n    \"files_scanned\": 1632,\n    \"payloads_scanned\": 2911,\n    \"zip_members_scanned\": 1279\n  }\n}\n"
+      "detail": "{\n  \"working_tree\": {\n    \"scope\": \"working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening\",\n    \"excluded_directories\": [\n      \".git\",\n      \"tmp\",\n      \"data/restricted\"\n    ],\n    \"pattern\": \"Google API key format only; not an exhaustive credential audit\",\n    \"passed\": true,\n    \"findings\": [],\n    \"errors\": [],\n    \"files_scanned\": 1534,\n    \"payloads_scanned\": 3144,\n    \"zip_members_scanned\": 1610\n  }\n}\n"
     },
     {
       "name": "nine_original_subsets",
@@ -73,19 +73,19 @@
     {
       "name": "national_expected_block",
       "passed": true,
-      "detail": "{\"status\": \"blocked_national_inputs\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb.attempts/20261019T003515Z-d386d960\", \"q2_scientific_complete\": false, \"error\": \"National historical/current initialization and common scientific design not admitted; see gaps_and_conflicts.csv\"}\n"
+      "detail": "{\"status\": \"blocked_national_inputs\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb.attempts/20261019T022403Z-3fa68bb7\", \"q2_scientific_complete\": false, \"error\": \"National historical/current initialization and common scientific design not admitted; see gaps_and_conflicts.csv\"}\n"
     },
     {
       "name": "national_status_honest",
       "passed": true,
       "detail": {
-        "run_id": "20261019T003515Z-d386d960",
+        "run_id": "20261019T022403Z-3fa68bb7",
         "owner": "p2/lb",
         "status": "blocked_national_inputs",
         "output_valid_for_this_attempt": false,
-        "attempt_path": "outputs/q2/p2_lb.attempts/20261019T003515Z-d386d960",
+        "attempt_path": "outputs/q2/p2_lb.attempts/20261019T022403Z-3fa68bb7",
         "error": "National historical/current initialization and common scientific design not admitted; see gaps_and_conflicts.csv",
-        "manifest_sha256": "d7ea5fc9d27050366f98ec32eb519aa6054bcc319bc76e0323db7ee70c2ba2e2"
+        "manifest_sha256": "1d3d9b1b512ed4821b19bfb967fe6c6920545b063364d06bb2024a3c494fb170"
       }
     },
     {
@@ -129,12 +129,12 @@
     {
       "name": "changed_input_expected_failure",
       "passed": true,
-      "detail": "{\"status\": \"invalid_input\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb_reproduction.attempts/20261019T003535Z-6af45b8d\", \"q2_scientific_complete\": false, \"error\": \"ValueError: Missing/changed input: examples/q2/history_model.json\"}\n"
+      "detail": "{\"status\": \"invalid_input\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb_reproduction.attempts/20261019T022425Z-05192a46\", \"q2_scientific_complete\": false, \"error\": \"ValueError: Missing/changed input: examples/q2/history_model.json\"}\n"
     },
     {
       "name": "old_success_preserved",
       "passed": true,
-      "detail": "92c895c9547099d11891e17d31144a19bff63f406d7ace6a35f1f51d4a677961"
+      "detail": "f57c1533c1076cec1b4e06d1b0a60a6f5f4bd9dbb93d3745f7a3c002f01f4d9b"
     },
     {
       "name": "stale_success_rejected",
@@ -144,7 +144,7 @@
     {
       "name": "missing_input_expected_failure",
       "passed": true,
-      "detail": "{\"status\": \"invalid_input\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb_reproduction.attempts/20261019T003536Z-44f997ee\", \"q2_scientific_complete\": false, \"error\": \"FileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\\\\\Team\\\\\\\\2026JM\\\\\\\\SimulationModelingProblemA\\\\\\\\tmp\\\\\\\\q2-config-does-not-exist.json'\"}\n"
+      "detail": "{\"status\": \"invalid_input\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb_reproduction.attempts/20261019T022426Z-2993ae33\", \"q2_scientific_complete\": false, \"error\": \"FileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\\\\\Team\\\\\\\\2026JM\\\\\\\\SimulationModelingProblemA\\\\\\\\tmp\\\\\\\\q2-config-does-not-exist.json'\"}\n"
     },
     {
       "name": "protected_contracts_unchanged",
@@ -285,17 +285,17 @@
       "expected": 2
     }
   ],
-  "seconds": 41.24923590000253,
+  "seconds": 51.10211939999135,
   "code_hashes": {
     "run.py": "3d427aae2aad978374ad751e99c7992c6edf9a7aabf85e40674c8cc28ba8722e",
     "scripts/run_q2.py": "1f8e35da98626d5f3fda5061edc91c50ae639f672292d45b2613ff60132b15c7",
-    "src/energy_model/q2_operations.py": "2b9ba4f4dd53c1769d6096febd3da58f7dfbb36e3e564da1a8dc5716ac5c9674",
+    "src/energy_model/q2_operations.py": "38758b7e525b64f9036233b4a5ac54c1e43182c588a4a03da95bc6cbd819fcfd",
     "src/energy_model/q2_agents.py": "1f0a4465183916ab475447736c3923e540fd0d82a7408b7cd2bfc00116da5290",
     "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
     "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0",
     "tests/test_q2.py": "327065b5796a02aa917de714f788cf507bb1310e6242924fffddb40e5dc6be4d",
-    "tests/test_q2_national.py": "30840165066026efdb3a35648b04743a8ec59e4faeba908d02a517a01036621d",
-    "src/energy_model/q2_national.py": "0417c1864950a74dacbd1f392bb800d283f8c8e1db9cac81efccdf011e832409",
+    "tests/test_q2_national.py": "cc4d68bfe3db26fc77da458ca18bb194364de41cd0b2ed93886bafe13a2fe0d2",
+    "src/energy_model/q2_national.py": "d5d4809747a3181529826d32259deddc1049943c7da844918e5cfdab6606fcfe",
     "src/energy_model/q2_finance.py": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
     "scripts/review_q2_candidates.py": "bf4232a9e9cc4c2ca29bb69b26c7aee1a29f6e0042096054cb53708af73664e5",
     "scripts/review_q2_delivery.py": "22520b4d8b0b21144a4df70a49416a8135d6536259d6f7c84293a946ecac25cf"
@@ -309,18 +309,18 @@
     "reportlab": "4.5.1"
   },
   "evidence_hashes": {
-    "all_tests.log": "0777a09e93e069097f9d2651b55db85092ef6a9795708b611025fd23dfe539a0",
-    "audit.log": "d7d108e26ef8b6ee268b99c5ae136ce1fcebe6fcff56c5f92c2ebf07b8e232f5",
+    "all_tests.log": "46da90b9504cf12495ff0fb573e72ce2a2b84853cc2c26cb475adae3bd45a314",
+    "audit.log": "aa0b346711e7511cb6af648051fa15ee35ae5e67a90b1a64fef8340e67daf972",
     "candidate_review.log": "bde70dff9cb6ca1d82fe1209cf21f51483f19402f8d7ea8eb99b8e878a5fc55f",
-    "changed_input_expected_failure.log": "82744d182a0cb8ec9c48dac76e33a5731baba5386e3497053cfbe4eb99bee2da",
+    "changed_input_expected_failure.log": "9925715152d1772d52b455aabca79852353b71242c98f8ad4ad5dbddb0d5c615",
     "engineering.log": "f38fc675e7a6e6d103351b169361e05c4ec95b08d13fb1950cd2c2f3b57fad84",
     "engineering_reproduction.log": "da9513c8935f019e707f30d45eee026c566c38aec0c7abe14f8857d37e47d760",
-    "key_scan.log": "0e46b781541ab518a7198ee3a84ca652d823cbbb1fb48d6d813977413dec081b",
-    "missing_input_expected_failure.log": "e547052566bda6ee861b2aabe9216ab88fa6a778fa47ea0275c9eba7e65eab24",
-    "national_expected_block.log": "aee5c68079c923715f81817980bf1553ce780869328499d9bac59730955f8fee",
+    "key_scan.log": "e86c30ec4126fcad58304f7effccbad866ac1fc8f41567e5e3fa784c508104d4",
+    "missing_input_expected_failure.log": "601de6f98bfad61d307ff2c9803e801f72362f5fb32b0db6f095a0006818794b",
+    "national_expected_block.log": "aadaf45928ddc7055bfb979688d6578dbc839ff860a3bed3e8e1c33b462c2fd4",
     "nine_original_subsets.log": "5da9e52f12f5a13032091f0101f886b08fc98e3ff44ded4148416f3f2fa4e8f2",
     "q1_regression.log": "7d9963144043a75459a52a0ffae1afe168b5dbabf2937dcb9bf6335dd480f201",
-    "tests.json": "0a78082b87bfc84bc3ebf16e9b9e2ed90501b54fee5c72b7e824d27fc397a2c4",
-    "workspace_audit.json": "d7d108e26ef8b6ee268b99c5ae136ce1fcebe6fcff56c5f92c2ebf07b8e232f5"
+    "tests.json": "027faf635e2663cb301fdfa0f88962007b8e228e065273a54254a8f2b308e4bd",
+    "workspace_audit.json": "aa0b346711e7511cb6af648051fa15ee35ae5e67a90b1a64fef8340e67daf972"
   }
 }

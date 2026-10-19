@@ -1,6 +1,6 @@
 # 问题二本分支：来源、模型修订及自检
 
-2026-10-19最新状态以[修复与验收报告](p2-lb-repaired.md)为准；[机制复查](p2-lb-mechanism-diagnosis.md)指出的融资、配套及扩张等缺口已按声明范围修复并重新检查。下文为V4来源与修订历史，不能覆盖V5当前规则。当前[研究报告](../../outputs/q2/p2_lb_national/report.md)和[验收](../../outputs/q2_review/p2_lb_national/verification.json)对应修复后候选；旧V4文件保存在 `archive/q2_national_v4_mechanism_review.zip`。
+2026-10-19最新状态以[修复与验收报告](p2-lb-repaired.md)为准；V5修复融资、配套及扩张等缺口，V6继续补齐存量电力设备、需求预算、联合投资审批与验收运行状态。下文为V4来源与修订历史，不能覆盖V6当前规则。当前[研究报告](../../outputs/q2/p2_lb_national/report.md)和[验收](../../outputs/q2_review/p2_lb_national/verification.json)对应修复后候选；旧V4文件保存在 `archive/q2_national_v4_mechanism_review.zip`，V5保存在 `archive/q2_national_v5_before_remaining_repairs.zip`。
 
 ## 原件到新用途
 
