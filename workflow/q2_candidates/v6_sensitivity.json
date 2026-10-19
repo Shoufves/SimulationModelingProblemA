@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "scope": "historical_candidate_response_diagnostic_not_national_sensitivity",
+  "national_acceptance": false,
+  "frozen_before_first_run": true,
+  "case_count": 27,
+  "bindings": {
+    "manifest": {
+      "path": "workflow/q2_candidates/v6/manifest.json",
+      "sha256": "356ab84f8b5bdc57bd73933f9b4b7bb2392c812171c0f1968e0485289b459068"
+    },
+    "training_selection": {
+      "path": "outputs/q2/historical_candidate_v6/training_selection.json",
+      "sha256": "ba044694d2e9f10ada0e0ae8db1e18b57f644ad7ba0ada5581181c5e5228a84f"
+    }
+  },
+  "factors": [
+    {
+      "id": "gdp_growth_multiplier",
+      "values": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "baseline": 1.0,
+      "rationale": "Symmetric20percent perturbation to each historical annual GDP growth rate preserves chronology.",
+      "assumption": "Research response range, not a confidence interval or future GDP forecast."
+    },
+    {
+      "id": "cost_decline_multiplier",
+      "values": [
+        0.5,
+        1.0,
+        1.5
+      ],
+      "baseline": 1.0,
+      "rationale": "Preserve technology-specific solar10percent and wind3percent baseline rates, half and1.5times; unchanged zero trends stay zero.",
+      "assumption": "Research learning-rate response range, not empirically fitted uncertainty."
+    },
+    {
+      "id": "carbon_price_USD2008_per_t",
+      "values": [
+        0.0,
+        25.0,
+        50.0
+      ],
+      "baseline": 0.0,
+      "rationale": "Test two explicit positive liability-price steps from the zero-price diagnostic control. Convert USD to millionUSD before dispatch and settlement.",
+      "assumption": "Uniform constant2008USD charge for all modeled fossil liabilities; not Chinese ETS coverage or nominal CNY. Budgets, opening state, information and seed unchanged."
+    }
+  ],
+  "continuation_note": "Same27factorlevels as v5, frozen before v6 response. No retuning from v6 holdout; compare how source-date and ceiling corrections affect response clipping."
+}

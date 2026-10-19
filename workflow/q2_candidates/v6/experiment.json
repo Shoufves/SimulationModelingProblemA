@@ -1,0 +1,88 @@
+{
+  "windows": {
+    "train": [
+      2015,
+      2021
+    ],
+    "already_seen_holdout": [
+      2022,
+      2024
+    ]
+  },
+  "parameters": [],
+  "maximum_evaluations": 1,
+  "equivalent_loss_absolute_tolerance": 0.001,
+  "targets": [
+    {
+      "id": "consumption_10ktce",
+      "family": "energy_consumption",
+      "scale": 428334.0,
+      "weight": 0.25,
+      "metric_type": "total"
+    },
+    {
+      "id": "consumption_coal_share",
+      "family": "primary_mix",
+      "scale": 0.6579999999999999,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "consumption_oil_share",
+      "family": "primary_mix",
+      "scale": 0.17300000000000001,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "consumption_gas_share",
+      "family": "primary_mix",
+      "scale": 0.055999999999999994,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "wind_10kW",
+      "family": "capacity_or_generation",
+      "scale": 9657.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "solar_10kW",
+      "family": "capacity_or_generation",
+      "scale": 2486.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "nuclear_10kW",
+      "family": "capacity_or_generation",
+      "scale": 2008.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "gcb_fuel_co2",
+      "family": "co2",
+      "scale": 9051.061952,
+      "weight": 0.25,
+      "metric_type": "total"
+    }
+  ],
+  "rule_alternatives": [
+    "adaptive_margin",
+    "instant_margin",
+    "no_investment"
+  ],
+  "selection": "Four frozen source-mapping structures x three existing behavior rules, one fixed inherited parameter vector. Minimum2015-2021 loss; exact ties use declared structure/rule order. No new parameter search.",
+  "future_use": "No S0 until structural accounting, policy and quality gates are resolved",
+  "structural_alternatives": [
+    "date_and_resource_ceiling",
+    "date_only",
+    "resource_ceiling_only",
+    "v5_control"
+  ],
+  "development_information": "V1-v5 holdout already seen; sequential source/mapping correction, not blind validation. All fitted demand, capex, adjustment, construction-rate and queue choices frozen from prior training. Resource correction appears first for deterministic training ties, before any evaluation.",
+  "source_publication_convention": "IRENA2014cost report published January2015: available for end-year2015 decision in corrected variants; no2014 hindsight. REmap potential published November2014. Control deliberately retains prior2016delay."
+}

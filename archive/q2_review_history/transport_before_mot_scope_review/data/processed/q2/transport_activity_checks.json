@@ -1,0 +1,60 @@
+{
+  "source_cells": 132,
+  "arithmetic_checks": 22,
+  "arithmetic_passed": true,
+  "exported_activity_series": [
+    "C16-06:rail",
+    "C16-06:road",
+    "C16-06:water",
+    "C16-06:civil_aviation",
+    "C16-08:rail",
+    "C16-08:water",
+    "C16-08:civil_aviation",
+    "C16-08:pipeline"
+  ],
+  "withheld": [
+    {
+      "series": "C16-06:total",
+      "reason": "Use a distinct service, not a mixed-mode total or overlapping subset"
+    },
+    {
+      "series": "C16-08:total",
+      "reason": "Use a distinct service, not a mixed-mode total or overlapping subset"
+    },
+    {
+      "series": "C16-08:road",
+      "reason": "Transport activity transition remains unbridged"
+    },
+    {
+      "series": "C16-08:ocean_subset",
+      "reason": "Use a distinct service, not a mixed-mode total or overlapping subset"
+    }
+  ],
+  "unresolved_transitions": [
+    {
+      "table": "C16-08",
+      "mode": "road",
+      "from_year": 2018,
+      "to_year": 2019,
+      "reason": "Printed series falls71249.2to59636.4; cause/comparable-base revision not established; do not automatically interpret as real activity decline."
+    },
+    {
+      "table": "C16-08",
+      "mode": "ocean_subset",
+      "from_year": 2019,
+      "to_year": 2020,
+      "reason": "Printed ocean subset jumps54057to89897 while water total changes103963to105834.4; cause not established. This subset must never be added again to water."
+    }
+  ],
+  "source_review_sha256": "b4cf7e8954497f7e4744e1f69f925e18af51c6705b5566019aead929ccb4509d",
+  "national_model_admission": false,
+  "model_energy_intensities_or_future_paths_supplied": false,
+  "scope_notes": [
+    "Passenger-km and tonne-km are different services; do not add them or convert without explicit mass/load assumptions.",
+    "Road/water cover registered commercial vehicles/vessels; road passenger is not private-car travel or all national mobility.",
+    "Rail excludes military and non-public dedicated lines; civil aviation covers domestic-registered carriers including domestic,HongKong/Macao/Taiwan and international operations, not a territorial fuel boundary.",
+    "Pipeline includes crude/refinedoil,naturalgas andothergas, not directly energy consumed transporting them.",
+    "NBS2025 is retrospective data. Precise public availability of each historical revision not established. Given realized activity is not an investor forecast.",
+    "Mode totals are arithmetic checks only; no energy intensities,equipment fuel shares or future2060activity supplied."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "scope": "historical_aggregate_candidate_not_admitted",
+  "reference_year": 2014,
+  "currency": "million_USD_2008",
+  "tce_LHV_MWh": 8.141,
+  "named_capacity_MW": {
+    "coal": 840227.3223470825,
+    "gas": 56681.03222706374,
+    "hydro": 304860.0,
+    "nuclear": 20080.0,
+    "wind": 96570.0,
+    "solar": 24860.0
+  },
+  "unmodelled_thermal_MW": 35411.64542585367,
+  "unmodelled_other_MW": 190.0,
+  "NEA_unallocated_generation_MWh": 1100000.0,
+  "primary_fuel_MWh_equivalent": {
+    "coal": 22944901478.52,
+    "oil": 6032626072.62,
+    "gas": 1952757572.64
+  },
+  "reconstructed_residual_MWh": {
+    "coal": 13542677352.451136,
+    "oil": 6032626072.62,
+    "gas": 1445344633.7633061
+  },
+  "effective_inventory_tCO2_per_MWh": {
+    "coal": 0.32361139466870986,
+    "oil": 0.20813636000062619,
+    "gas": 0.18958910065804263
+  },
+  "primary_electricity_proxy_factor": 2.872629449748487,
+  "literature_samples": {
+    "coal": "chn-c1",
+    "gas": "chn-g1",
+    "hydro": "chn-h1",
+    "nuclear": "chn-n1",
+    "wind": "chn-W1",
+    "solar": "chn-S2"
+  },
+  "base_services_MWh": {
+    "industrial_electricity": 3712907753.647686,
+    "other_electricity": 1331897192.21871,
+    "coal_residual": 13542677352.451136,
+    "oil_residual": 6032626072.62,
+    "gas_residual": 1445344633.7633061
+  },
+  "limitations": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14"
+  ],
+  "new_PV_mapping": {
+    "currency_conversion": 0.0009127968909508361,
+    "price_nodes_USD2014_per_kW": [
+      1320,
+      2205.0,
+      3090
+    ],
+    "availability_cf": 0.17,
+    "decision_available_from": 2016,
+    "opening_solar_unchanged": true,
+    "new_opening_capacity_MW": 0.0,
+    "nuclear_queue_admitted": false
+  }
+}

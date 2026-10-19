@@ -1,0 +1,271 @@
+{
+  "scope": "historical_aggregate_candidate_not_admitted",
+  "reference_year": 2014,
+  "currency": "million_USD_2008",
+  "tce_LHV_MWh": 8.141,
+  "named_capacity_MW": {
+    "coal": 840227.3223470825,
+    "gas": 56681.03222706374,
+    "hydro": 304860.0,
+    "nuclear": 20080.0,
+    "wind": 96570.0,
+    "solar": 24860.0
+  },
+  "unmodelled_thermal_MW": 35411.64542585367,
+  "unmodelled_other_MW": 190.0,
+  "NEA_unallocated_generation_MWh": 1100000.0,
+  "primary_fuel_MWh_equivalent": {
+    "coal": 22944901478.52,
+    "oil": 6032626072.62,
+    "gas": 1952757572.64
+  },
+  "reconstructed_residual_MWh": {
+    "coal": 13542677352.451136,
+    "oil": 6032626072.62,
+    "gas": 1445344633.7633061
+  },
+  "effective_inventory_tCO2_per_MWh": {
+    "coal": 0.32361139466870986,
+    "oil": 0.20813636000062619,
+    "gas": 0.18958910065804263
+  },
+  "primary_electricity_proxy_factor": 2.872629449748487,
+  "literature_samples": {
+    "coal": "chn-c1",
+    "gas": "chn-g1",
+    "hydro": "chn-h1",
+    "nuclear": "chn-n1",
+    "wind": "chn-W1",
+    "solar": "chn-S2"
+  },
+  "base_services_MWh": {
+    "industrial_electricity": 3712907753.647686,
+    "other_electricity": 1331897192.21871,
+    "coal_residual": 13542677352.451136,
+    "oil_residual": 6032626072.62,
+    "gas_residual": 1445344633.7633061
+  },
+  "limitations": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14"
+  ],
+  "new_PV_mapping": {
+    "currency_conversion": 0.0009127968909508361,
+    "price_nodes_USD2014_per_kW": [
+      1320,
+      2205.0,
+      3090
+    ],
+    "availability_cf": 0.17,
+    "decision_available_from": 2016,
+    "opening_solar_unchanged": true,
+    "new_opening_capacity_MW": 0.0,
+    "nuclear_queue_admitted": false
+  },
+  "nuclear_queue_reconstruction": {
+    "source_units": 26,
+    "source_capacity_MW": 28450,
+    "inherited_construction_hypothesis": "double_stock_rate",
+    "remaining_years_by_stage": {
+      "near_completion": 1,
+      "testing": 2,
+      "installation": 3,
+      "first_of_kind_delayed": 4,
+      "civil": 5
+    },
+    "additional_delays_years": [
+      0,
+      1,
+      2
+    ],
+    "no_queue_control": true,
+    "source_dates": "2014year-end status and historical construction-start month only",
+    "cost": "Same existing representative nuclear sample in million2008USD; not actual project budget",
+    "funding": "Uniform annual construction-cost hypothesis from start year through year before modeled online; unpaid balance fully escrowed from opening generator cash",
+    "status": "explicit_diagnostic_reconstruction_not_national_initial_state_admission"
+  },
+  "fuel_response_mapping": {
+    "inherited_training_selection": {
+      "trial": 357,
+      "rule": "instant_margin",
+      "parameters": {
+        "residual_elasticity": 0.4,
+        "electricity_elasticity": 0.7,
+        "investment_adjustment": 1.0,
+        "solar_capex_million_USD2008_per_MW": 1.2048918960551036
+      },
+      "structure": "stage_schedule",
+      "status": "valid",
+      "loss": 0.804700005954829,
+      "parts": [
+        {
+          "indicator": "consumption_10ktce",
+          "n": 7,
+          "scale": 428334.0,
+          "weight": 0.25,
+          "normalized_mse": 0.0023587574256790584,
+          "weighted_loss": 0.0005896893564197646
+        },
+        {
+          "indicator": "consumption_coal_share",
+          "n": 7,
+          "scale": 0.6579999999999999,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.008423455172646713,
+          "weighted_loss": 0.0007019545977205593
+        },
+        {
+          "indicator": "consumption_oil_share",
+          "n": 7,
+          "scale": 0.17300000000000001,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.015921333955558052,
+          "weighted_loss": 0.0013267778296298376
+        },
+        {
+          "indicator": "consumption_gas_share",
+          "n": 7,
+          "scale": 0.055999999999999994,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.4047213790673836,
+          "weighted_loss": 0.03372678158894863
+        },
+        {
+          "indicator": "wind_10kW",
+          "n": 7,
+          "scale": 9657.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.8350260641462521,
+          "weighted_loss": 0.069585505345521
+        },
+        {
+          "indicator": "solar_10kW",
+          "n": 7,
+          "scale": 2486.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 8.357788715349873,
+          "weighted_loss": 0.6964823929458227
+        },
+        {
+          "indicator": "nuclear_10kW",
+          "n": 7,
+          "scale": 2008.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.008201081558796118,
+          "weighted_loss": 0.0006834234632330097
+        },
+        {
+          "indicator": "gcb_fuel_co2",
+          "n": 7,
+          "scale": 9051.061952,
+          "weight": 0.25,
+          "normalized_mse": 0.006413923310134226,
+          "weighted_loss": 0.0016034808275335564
+        }
+      ]
+    },
+    "gas_thermal_input_MWh_LHV_reference": 246779283.33333334,
+    "gas_original_reconstructed_residual_MWh": 1445344633.7633061,
+    "gas_alternative_reconstructed_residual_MWh": 1705978289.3066669,
+    "reference_cell": "CEADs5425546.v1,2014!R54=228.2 in10^8m3",
+    "heat_value": "WRI2013 default389310MJ/10^4m3; not2014 observed gas quality",
+    "status": "cross_source_mapping_hypothesis_not_reconciled_national_balance"
+  },
+  "solar_v6_mapping": {
+    "inherited_v5_training_selection": {
+      "trial": 509,
+      "rule": "instant_margin",
+      "parameters": {
+        "coal_residual_elasticity": 0.0,
+        "oil_residual_elasticity": 0.5,
+        "gas_residual_elasticity": 2.0
+      },
+      "structure": "gas_power_input_reference",
+      "status": "valid",
+      "loss": 0.7695149811736803,
+      "parts": [
+        {
+          "indicator": "consumption_10ktce",
+          "n": 7,
+          "scale": 428334.0,
+          "weight": 0.25,
+          "normalized_mse": 0.0023903689120564594,
+          "weighted_loss": 0.0005975922280141148
+        },
+        {
+          "indicator": "consumption_coal_share",
+          "n": 7,
+          "scale": 0.6579999999999999,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.001271224202651965,
+          "weighted_loss": 0.00010593535022099707
+        },
+        {
+          "indicator": "consumption_oil_share",
+          "n": 7,
+          "scale": 0.17300000000000001,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.0101331462614925,
+          "weighted_loss": 0.000844428855124375
+        },
+        {
+          "indicator": "consumption_gas_share",
+          "n": 7,
+          "scale": 0.055999999999999994,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.003244861687457019,
+          "weighted_loss": 0.00027040514062141825
+        },
+        {
+          "indicator": "wind_10kW",
+          "n": 7,
+          "scale": 9657.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.8350260641462521,
+          "weighted_loss": 0.069585505345521
+        },
+        {
+          "indicator": "solar_10kW",
+          "n": 7,
+          "scale": 2486.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 8.357788715349873,
+          "weighted_loss": 0.6964823929458227
+        },
+        {
+          "indicator": "nuclear_10kW",
+          "n": 7,
+          "scale": 2008.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.008201081558796118,
+          "weighted_loss": 0.0006834234632330097
+        },
+        {
+          "indicator": "gcb_fuel_co2",
+          "n": 7,
+          "scale": 9051.061952,
+          "weight": 0.25,
+          "normalized_mse": 0.003781191380490846,
+          "weighted_loss": 0.0009452978451227115
+        }
+      ]
+    },
+    "corrected_decision_available_from": 2015,
+    "resource_ceiling_MW": 2200000.0,
+    "opening_stock_and_generation_unchanged": true,
+    "annual_construction_and_connection_unchanged": true,
+    "earlier_2012_cost_reference_used": false
+  }
+}

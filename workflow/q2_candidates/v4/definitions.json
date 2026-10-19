@@ -1,0 +1,211 @@
+[
+  {
+    "id": "consumption_10ktce",
+    "numerator": [
+      {
+        "kind": "flow",
+        "flow_kind": "source",
+        "ids": [
+          "coal_supply",
+          "oil_supply",
+          "gas_supply"
+        ],
+        "coefficient": 1.2283503255128363e-05
+      },
+      {
+        "kind": "flow",
+        "flow_kind": "process",
+        "ids": [
+          "hydro_power",
+          "nuclear_power",
+          "wind_power",
+          "solar_power",
+          "solar_new_power"
+        ],
+        "coefficient": 3.5285953196763143e-05
+      }
+    ],
+    "denominator": null,
+    "unit": "10^4 tce",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy"
+  },
+  {
+    "id": "consumption_coal_share",
+    "numerator": [
+      {
+        "kind": "flow",
+        "flow_kind": "source",
+        "ids": [
+          "coal_supply"
+        ],
+        "coefficient": 1.2283503255128363e-05
+      }
+    ],
+    "denominator": [
+      {
+        "kind": "flow",
+        "flow_kind": "source",
+        "ids": [
+          "coal_supply",
+          "oil_supply",
+          "gas_supply"
+        ],
+        "coefficient": 1.2283503255128363e-05
+      },
+      {
+        "kind": "flow",
+        "flow_kind": "process",
+        "ids": [
+          "hydro_power",
+          "nuclear_power",
+          "wind_power",
+          "solar_power",
+          "solar_new_power"
+        ],
+        "coefficient": 3.5285953196763143e-05
+      }
+    ],
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy"
+  },
+  {
+    "id": "consumption_oil_share",
+    "numerator": [
+      {
+        "kind": "flow",
+        "flow_kind": "source",
+        "ids": [
+          "oil_supply"
+        ],
+        "coefficient": 1.2283503255128363e-05
+      }
+    ],
+    "denominator": [
+      {
+        "kind": "flow",
+        "flow_kind": "source",
+        "ids": [
+          "coal_supply",
+          "oil_supply",
+          "gas_supply"
+        ],
+        "coefficient": 1.2283503255128363e-05
+      },
+      {
+        "kind": "flow",
+        "flow_kind": "process",
+        "ids": [
+          "hydro_power",
+          "nuclear_power",
+          "wind_power",
+          "solar_power",
+          "solar_new_power"
+        ],
+        "coefficient": 3.5285953196763143e-05
+      }
+    ],
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy"
+  },
+  {
+    "id": "consumption_gas_share",
+    "numerator": [
+      {
+        "kind": "flow",
+        "flow_kind": "source",
+        "ids": [
+          "gas_supply"
+        ],
+        "coefficient": 1.2283503255128363e-05
+      }
+    ],
+    "denominator": [
+      {
+        "kind": "flow",
+        "flow_kind": "source",
+        "ids": [
+          "coal_supply",
+          "oil_supply",
+          "gas_supply"
+        ],
+        "coefficient": 1.2283503255128363e-05
+      },
+      {
+        "kind": "flow",
+        "flow_kind": "process",
+        "ids": [
+          "hydro_power",
+          "nuclear_power",
+          "wind_power",
+          "solar_power",
+          "solar_new_power"
+        ],
+        "coefficient": 3.5285953196763143e-05
+      }
+    ],
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy"
+  },
+  {
+    "id": "wind_10kW",
+    "numerator": [
+      {
+        "kind": "capacity",
+        "asset_kind": "process",
+        "ids": [
+          "wind_power"
+        ],
+        "coefficient": 0.1
+      }
+    ],
+    "denominator": null,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity"
+  },
+  {
+    "id": "solar_10kW",
+    "numerator": [
+      {
+        "kind": "capacity",
+        "asset_kind": "process",
+        "ids": [
+          "solar_power",
+          "solar_new_power"
+        ],
+        "coefficient": 0.1
+      }
+    ],
+    "denominator": null,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity"
+  },
+  {
+    "id": "nuclear_10kW",
+    "numerator": [
+      {
+        "kind": "capacity",
+        "asset_kind": "process",
+        "ids": [
+          "nuclear_power"
+        ],
+        "coefficient": 0.1
+      }
+    ],
+    "denominator": null,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity"
+  },
+  {
+    "id": "gcb_fuel_co2",
+    "numerator": [
+      {
+        "kind": "annual",
+        "field": "gross_energy_co2_t",
+        "coefficient": 1e-06
+      }
+    ],
+    "denominator": null,
+    "unit": "Mt CO2",
+    "boundary": "GCB_coal_oil_gas_categories_effective_coefficient_proxy"
+  }
+]

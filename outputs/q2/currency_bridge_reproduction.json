@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-19",
+  "scope": "same-author independent offline currencyreference reproduction;notmodeladmission",
+  "independent_copy_files": 9,
+  "copied_inputs": {
+    "data/catalog/q2_currency_bridge_review.json": "08e6bd2848bdd14eff0c1ac48d8d27fd8bf41f8f1460e82bbc0987b503b9fe16",
+    "data/catalog/q2_sources.json": "acd3ebb9516469aa7fbfe223f4146264834d8ddbf94c9f04adc75b58fafaddcc",
+    "data/raw/batch1_national/wdi_china_macro_2005_2025.json": "8ee1bc173ee4bda7975a045b791c8b3f6af3ee8d0f9995ce52d23f896d0a3200",
+    "data/raw/q2/wdi_deflator_indicator_definition.json": "d16ffd97064b47e9d2d822bda7be773a6218ade7502f8e8cca07b7cb9c918182",
+    "data/raw/q2/wdi_fx_indicator_definition.json": "879ac40c1e115d0575c0ac1d26a45b68432303927ea163be9c80e7f47c739b12",
+    "data/raw/q2/wdi_us_gdp_deflator_2008_2014.json": "e850330ba82805e4f34a548eb53f7b691b4bc75a639f416c0ce3411f1dd89962",
+    "data/raw/q2/wdi_us_gdp_deflator_2008_2024.json": "52cff7d5e6280ad659dae91f548eb81d03c830d0191deffa92367c95f52cc1b2",
+    "scripts/prepare_q2_currency_bridge.py": "cbc162a6beb26dd3bc191cb28f5bcfe87352d5900a2511618f03a9097f3dfbde",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32"
+  },
+  "runs": [
+    {
+      "environment": "clean",
+      "exit_code": 0,
+      "comparisons": [
+        {
+          "artifact": "currency_bridge_2008_2024.csv",
+          "sha256": "2e4a4db04780413aa8bfd3320291b1c9e8fcbf6c984d685ddefede84a4d2de63",
+          "identical": true
+        },
+        {
+          "artifact": "currency_bridge_checks.json",
+          "sha256": "f4b058c51c25685b842e4fdec3d0c598a0f048147a7fed431cb5ec596e739a8d",
+          "identical": true
+        }
+      ]
+    },
+    {
+      "environment": "alternate",
+      "exit_code": 0,
+      "comparisons": [
+        {
+          "artifact": "currency_bridge_2008_2024.csv",
+          "sha256": "2e4a4db04780413aa8bfd3320291b1c9e8fcbf6c984d685ddefede84a4d2de63",
+          "identical": true
+        },
+        {
+          "artifact": "currency_bridge_checks.json",
+          "sha256": "f4b058c51c25685b842e4fdec3d0c598a0f048147a7fed431cb5ec596e739a8d",
+          "identical": true
+        }
+      ]
+    }
+  ],
+  "all_artifacts_identical": true,
+  "historical_model_changed": false,
+  "national_acceptance": false
+}

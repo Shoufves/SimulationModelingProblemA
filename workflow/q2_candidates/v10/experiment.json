@@ -1,0 +1,141 @@
+{
+  "windows": {
+    "train": [
+      2015,
+      2021
+    ],
+    "already_seen_holdout": [
+      2022,
+      2024
+    ]
+  },
+  "parameters": [
+    {
+      "id": "wind_stock_expansion_rate",
+      "grid": [
+        0.0,
+        0.05363984674329502,
+        0.10727969348659004,
+        0.16091954022988506,
+        0.21455938697318008,
+        0.2681992337164751,
+        0.3218390804597701,
+        0.37547892720306514,
+        0.42911877394636017
+      ],
+      "bounds": [
+        0.0,
+        0.42911877394636017
+      ],
+      "paths": [
+        [
+          "investment_groups",
+          0,
+          "stock_expansion_rate"
+        ]
+      ]
+    },
+    {
+      "id": "solar_stock_expansion_rate",
+      "grid": [
+        0.0,
+        0.08216009654062752,
+        0.16432019308125503,
+        0.24648028962188256,
+        0.32864038616251007,
+        0.41080048270313757,
+        0.49296057924376513,
+        0.5751206757843926,
+        0.6572807723250201
+      ],
+      "bounds": [
+        0.0,
+        0.6572807723250201
+      ],
+      "paths": [
+        [
+          "investment_groups",
+          1,
+          "stock_expansion_rate"
+        ]
+      ]
+    }
+  ],
+  "maximum_evaluations": 81,
+  "equivalent_loss_absolute_tolerance": 0.001,
+  "targets": [
+    {
+      "id": "consumption_10ktce",
+      "family": "energy_consumption",
+      "scale": 428334.0,
+      "weight": 0.25,
+      "metric_type": "total"
+    },
+    {
+      "id": "consumption_coal_share",
+      "family": "primary_mix",
+      "scale": 0.6579999999999999,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "consumption_oil_share",
+      "family": "primary_mix",
+      "scale": 0.17300000000000001,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "consumption_gas_share",
+      "family": "primary_mix",
+      "scale": 0.055999999999999994,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "wind_10kW",
+      "family": "capacity_or_generation",
+      "scale": 9657.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "solar_10kW",
+      "family": "capacity_or_generation",
+      "scale": 2486.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "nuclear_10kW",
+      "family": "capacity_or_generation",
+      "scale": 2008.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "gcb_fuel_co2",
+      "family": "co2",
+      "scale": 9051.061952,
+      "weight": 0.25,
+      "metric_type": "total"
+    }
+  ],
+  "rule_alternatives": [
+    "adaptive_margin",
+    "instant_margin",
+    "no_investment"
+  ],
+  "selection": "2015-2021 loss only; 3 latent queue states x 2 deployment structures x 3 existing rules x 81 wind/PV rate pairs. Exact ties retain declared trial order.",
+  "future_use": "No S0 until structural accounting, policy and quality gates are resolved",
+  "structural_alternatives": [
+    "shared_construction_connection",
+    "technology_frontiers",
+    "shared_construction_connection_pvqueue_1",
+    "technology_frontiers_pvqueue_1",
+    "shared_construction_connection_pvqueue_2",
+    "technology_frontiers_pvqueue_2"
+  ],
+  "development_information": "V1-v9 holdout already seen. This is an exploratory initial-state/deployment identification diagnostic, not fresh validation. Other fitted parameters, observations, thresholds and rate bounds stay frozen.",
+  "source_publication_convention": "IRENA2014cost report published January2015: available for end-year2015 decision in corrected variants; no2014 hindsight. REmap potential published November2014. Control deliberately retains prior2016delay."
+}

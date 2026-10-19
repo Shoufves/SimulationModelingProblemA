@@ -1,0 +1,1093 @@
+{
+  "version": 1,
+  "statistical_year": 2014,
+  "edition": "NBS_2016",
+  "geography": "China_mainland",
+  "publication_year": 2016,
+  "annual_information_available_from": 2017,
+  "information_convention": "conservative next complete year; retrospective state reconstruction is separate from agent knowledge",
+  "tables": [
+    {
+      "table": "0903CH",
+      "source_key": "lb/base:NBS_ARCHIVE_2016_0903CH",
+      "source_path": "data/raw/lb/base/nbs/archive/2016/0903CH.jpg",
+      "source_sha256": "4317db197e7dbe0c2a52035d4d0f694c5b31b2120e8ff58e75a769a1927d9987",
+      "default_unit": "10^4 tce",
+      "notes": [
+        "电力、热力按等价热值折算；转换损失不包括发电、供热损失。不得乘固定物理热当量来恢复燃料投入。",
+        "村办工业包括在工业中。进口含我国飞机轮船在国外加油；出口含外国飞机轮船在我国加油。",
+        "2014 列顶部回收能单元格留白；下部回收能为 14578。留白不置零。"
+      ],
+      "cells": [
+        {
+          "account": "supply",
+          "source_label": "可供消费的能源总量",
+          "raw_value": "426095"
+        },
+        {
+          "account": "production",
+          "source_label": "一次能源生产量",
+          "raw_value": "361866"
+        },
+        {
+          "account": "imports",
+          "source_label": "进口量",
+          "raw_value": "77325"
+        },
+        {
+          "account": "exports",
+          "source_label": "出口量(-)",
+          "raw_value": "8271"
+        },
+        {
+          "account": "inventory_draw",
+          "source_label": "年初年末库存差额",
+          "raw_value": "-4825"
+        },
+        {
+          "account": "consumption",
+          "source_label": "能源消费总量",
+          "raw_value": "425806"
+        },
+        {
+          "account": "agriculture",
+          "source_label": "农、林、牧、渔、水利业",
+          "raw_value": "8094"
+        },
+        {
+          "account": "industry",
+          "source_label": "工业",
+          "raw_value": "295686"
+        },
+        {
+          "account": "construction",
+          "source_label": "建筑业",
+          "raw_value": "7520"
+        },
+        {
+          "account": "transport",
+          "source_label": "交通运输、仓储和邮政业",
+          "raw_value": "36336"
+        },
+        {
+          "account": "trade",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "raw_value": "10873"
+        },
+        {
+          "account": "other",
+          "source_label": "其他行业",
+          "raw_value": "20084"
+        },
+        {
+          "account": "household",
+          "source_label": "生活消费",
+          "raw_value": "47212"
+        },
+        {
+          "account": "final",
+          "source_label": "终端消费",
+          "raw_value": "413162"
+        },
+        {
+          "account": "industrial_final",
+          "source_label": "终端消费 #工业",
+          "raw_value": "283420"
+        },
+        {
+          "account": "transformation_loss",
+          "source_label": "加工转换损失量",
+          "raw_value": "17020"
+        },
+        {
+          "account": "coking_loss",
+          "source_label": "加工转换损失量 #炼焦",
+          "raw_value": "2731"
+        },
+        {
+          "account": "refining_loss",
+          "source_label": "加工转换损失量 炼油",
+          "raw_value": "2115"
+        },
+        {
+          "account": "recovery",
+          "source_label": "回收能（表下部）",
+          "raw_value": "14578"
+        },
+        {
+          "account": "loss",
+          "source_label": "损失量",
+          "raw_value": "10201"
+        },
+        {
+          "account": "statistical_difference",
+          "source_label": "平衡差额",
+          "raw_value": "289"
+        }
+      ]
+    },
+    {
+      "table": "0904CH",
+      "source_key": "lb/base:NBS_ARCHIVE_2016_0904CH",
+      "source_path": "data/raw/lb/base/nbs/archive/2016/0904CH.jpg",
+      "source_sha256": "1c48bf738f3de96abce0702a88f4e3fe9e6398f5e2323301065465f3b872933f",
+      "default_unit": "10^4 t",
+      "notes": [
+        "生产量为原油产量。进口/出口包括相应境外/境内飞机轮船加油。",
+        "中间消费中的炼油项是损失量，不是全部炼厂进料。2014 制气格留白，不填零。"
+      ],
+      "cells": [
+        {
+          "account": "supply",
+          "source_label": "可供量",
+          "raw_value": "51861.8"
+        },
+        {
+          "account": "production",
+          "source_label": "生产量",
+          "raw_value": "21142.9"
+        },
+        {
+          "account": "imports",
+          "source_label": "进口量",
+          "raw_value": "36179.6"
+        },
+        {
+          "account": "exports",
+          "source_label": "出口量(-)",
+          "raw_value": "4213.9"
+        },
+        {
+          "account": "inventory_draw",
+          "source_label": "年初年末库存差额",
+          "raw_value": "-1246.8"
+        },
+        {
+          "account": "consumption",
+          "source_label": "消费量",
+          "raw_value": "51814.4"
+        },
+        {
+          "account": "agriculture",
+          "source_label": "农、林、牧、渔、水利业",
+          "raw_value": "1717.7"
+        },
+        {
+          "account": "industry",
+          "source_label": "工业",
+          "raw_value": "18217.5"
+        },
+        {
+          "account": "construction",
+          "source_label": "建筑业",
+          "raw_value": "3311.9"
+        },
+        {
+          "account": "transport",
+          "source_label": "交通运输、仓储和邮政业",
+          "raw_value": "19546.9"
+        },
+        {
+          "account": "trade",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "raw_value": "563.2"
+        },
+        {
+          "account": "other",
+          "source_label": "其他行业",
+          "raw_value": "3152.0"
+        },
+        {
+          "account": "household",
+          "source_label": "生活消费",
+          "raw_value": "5305.2"
+        },
+        {
+          "account": "final",
+          "source_label": "终端消费",
+          "raw_value": "49134.0"
+        },
+        {
+          "account": "industrial_final",
+          "source_label": "终端消费 #工业",
+          "raw_value": "15584.5"
+        },
+        {
+          "account": "intermediate",
+          "source_label": "中间消费（用于加工转换）",
+          "raw_value": "2570.0"
+        },
+        {
+          "account": "power_input",
+          "source_label": "发电",
+          "raw_value": "254.1"
+        },
+        {
+          "account": "heat_input",
+          "source_label": "供热",
+          "raw_value": "521.3"
+        },
+        {
+          "account": "gas_input",
+          "source_label": "制气",
+          "raw_value": null
+        },
+        {
+          "account": "refining_loss",
+          "source_label": "炼油损失量",
+          "raw_value": "1794.6"
+        },
+        {
+          "account": "loss",
+          "source_label": "损失量",
+          "raw_value": "110.3"
+        },
+        {
+          "account": "statistical_difference",
+          "source_label": "平衡差额",
+          "raw_value": "47.4"
+        }
+      ]
+    },
+    {
+      "table": "0905CH",
+      "source_key": "lb/base:NBS_ARCHIVE_2016_0905CH",
+      "source_path": "data/raw/lb/base/nbs/archive/2016/0905CH.jpg",
+      "source_sha256": "49258e2158ad376d5bce37aca3f474d9fb236435b3647c3b84335100c753f075",
+      "default_unit": "10^4 t",
+      "notes": [
+        "生产量为原煤产量；实物煤种质量不等于标准煤质量。"
+      ],
+      "cells": [
+        {
+          "account": "supply",
+          "source_label": "可供量",
+          "raw_value": "411833.5"
+        },
+        {
+          "account": "production",
+          "source_label": "生产量",
+          "raw_value": "387391.9"
+        },
+        {
+          "account": "imports",
+          "source_label": "进口量",
+          "raw_value": "29122.0"
+        },
+        {
+          "account": "exports",
+          "source_label": "出口量(-)",
+          "raw_value": "574.2"
+        },
+        {
+          "account": "inventory_draw",
+          "source_label": "年初年末库存差额",
+          "raw_value": "-4106.2"
+        },
+        {
+          "account": "consumption",
+          "source_label": "消费量",
+          "raw_value": "411613.5"
+        },
+        {
+          "account": "agriculture",
+          "source_label": "农、林、牧、渔、水利业",
+          "raw_value": "2578.8"
+        },
+        {
+          "account": "industry",
+          "source_label": "工业",
+          "raw_value": "390497.4"
+        },
+        {
+          "account": "construction",
+          "source_label": "建筑业",
+          "raw_value": "913.6"
+        },
+        {
+          "account": "transport",
+          "source_label": "交通运输、仓储和邮政业",
+          "raw_value": "558.0"
+        },
+        {
+          "account": "trade",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "raw_value": "3767.0"
+        },
+        {
+          "account": "other",
+          "source_label": "其他行业",
+          "raw_value": "4045.5"
+        },
+        {
+          "account": "household",
+          "source_label": "生活消费",
+          "raw_value": "9253.2"
+        },
+        {
+          "account": "final",
+          "source_label": "终端消费",
+          "raw_value": "116043.8"
+        },
+        {
+          "account": "industrial_final",
+          "source_label": "终端消费 #工业",
+          "raw_value": "94927.7"
+        },
+        {
+          "account": "intermediate",
+          "source_label": "中间消费（用于加工转换）",
+          "raw_value": "272194.5"
+        },
+        {
+          "account": "power_input",
+          "source_label": "中间消费 #发电",
+          "raw_value": "184525.3"
+        },
+        {
+          "account": "heat_input",
+          "source_label": "供热",
+          "raw_value": "22444.9"
+        },
+        {
+          "account": "coking_input",
+          "source_label": "炼焦",
+          "raw_value": "62893.9"
+        },
+        {
+          "account": "refining_input",
+          "source_label": "炼油及煤制油",
+          "raw_value": "650.3"
+        },
+        {
+          "account": "gas_input",
+          "source_label": "制气",
+          "raw_value": "948.4"
+        },
+        {
+          "account": "loss",
+          "source_label": "洗选损耗",
+          "raw_value": "23375.2"
+        },
+        {
+          "account": "statistical_difference",
+          "source_label": "平衡差额",
+          "raw_value": "220.0"
+        }
+      ]
+    },
+    {
+      "table": "0906CH",
+      "source_key": "lb/base:NBS_ARCHIVE_2016_0906CH",
+      "source_path": "data/raw/lb/base/nbs/archive/2016/0906CH.jpg",
+      "source_sha256": "6e5452bd056f2c92e0de5f86e5d0eef172cdde6b5598849c6d985b612628c3a2",
+      "default_unit": "10^8 kWh",
+      "notes": [
+        "四类发电分项未穷尽总量。剩余项不据此命名为太阳能。",
+        "工业终端消费原图为 37702.8；不是 37002.8。供需差额照录，不调整配平。"
+      ],
+      "cells": [
+        {
+          "account": "supply",
+          "source_label": "可供量",
+          "raw_value": "56381.8"
+        },
+        {
+          "account": "production",
+          "source_label": "生产量",
+          "raw_value": "56495.8"
+        },
+        {
+          "account": "hydro",
+          "source_label": "水电",
+          "raw_value": "10643.4"
+        },
+        {
+          "account": "thermal",
+          "source_label": "火电",
+          "raw_value": "42686.5"
+        },
+        {
+          "account": "nuclear",
+          "source_label": "核电",
+          "raw_value": "1325.4"
+        },
+        {
+          "account": "wind",
+          "source_label": "风电",
+          "raw_value": "1560.8"
+        },
+        {
+          "account": "imports",
+          "source_label": "进口量",
+          "raw_value": "67.5"
+        },
+        {
+          "account": "exports",
+          "source_label": "出口量(-)",
+          "raw_value": "181.6"
+        },
+        {
+          "account": "consumption",
+          "source_label": "消费量",
+          "raw_value": "56383.7"
+        },
+        {
+          "account": "agriculture",
+          "source_label": "农、林、牧、渔、水利业",
+          "raw_value": "1013.4"
+        },
+        {
+          "account": "industry",
+          "source_label": "工业",
+          "raw_value": "40802.7"
+        },
+        {
+          "account": "construction",
+          "source_label": "建筑业",
+          "raw_value": "721.7"
+        },
+        {
+          "account": "transport",
+          "source_label": "交通运输、仓储和邮政业",
+          "raw_value": "1059.2"
+        },
+        {
+          "account": "trade",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "raw_value": "1995.6"
+        },
+        {
+          "account": "other",
+          "source_label": "其他行业",
+          "raw_value": "3615.0"
+        },
+        {
+          "account": "household",
+          "source_label": "生活消费",
+          "raw_value": "7176.1"
+        },
+        {
+          "account": "final",
+          "source_label": "终端消费",
+          "raw_value": "53283.8"
+        },
+        {
+          "account": "industrial_final",
+          "source_label": "终端消费 #工业",
+          "raw_value": "37702.8"
+        },
+        {
+          "account": "loss",
+          "source_label": "输配电损失量",
+          "raw_value": "3099.9"
+        }
+      ]
+    },
+    {
+      "table": "0910CH",
+      "source_key": "lb/base:NBS_ARCHIVE_2016_0910CH",
+      "source_path": "data/raw/lb/base/nbs/archive/2016/0910CH.jpg",
+      "source_sha256": "2affcaa25ebd878214cb88077a6b3a9fdfa70369996102d4932f47252b21ece8",
+      "default_unit": "%",
+      "notes": [
+        "43.55 是发电及电站供热合计效率，不能作为煤电纯发电效率。"
+      ],
+      "cells": [
+        {
+          "account": "overall",
+          "source_label": "总效率",
+          "raw_value": "73.49"
+        },
+        {
+          "account": "electricity_and_station_heat",
+          "source_label": "发电及电站供热",
+          "raw_value": "43.55"
+        },
+        {
+          "account": "coking",
+          "source_label": "炼焦",
+          "raw_value": "95.07"
+        },
+        {
+          "account": "refining",
+          "source_label": "炼油",
+          "raw_value": "97.54"
+        }
+      ]
+    },
+    {
+      "table": "0909CH",
+      "source_key": "lb/base:NBS_ARCHIVE_2016_0909CH",
+      "source_path": "data/raw/lb/base/nbs/archive/2016/0909CH.jpg",
+      "source_sha256": "f25059d69c17f2a8d6ead9b6285231803b654103825aa3fad77391201517bbfb",
+      "default_unit": "mixed",
+      "notes": [
+        "部门用能包含工业转换投入；不全是终端服务。居民汽油、柴油不能全部映射建筑。",
+        "留白按 missing 保存；以下为原表七大部门及总量，未冒充全部行业明细。"
+      ],
+      "cells": [
+        {
+          "account": "total:energy",
+          "source_label": "消费总量",
+          "source_column": "能源消费总量",
+          "unit": "10^4 tce",
+          "raw_value": "425806.07"
+        },
+        {
+          "account": "total:coal",
+          "source_label": "消费总量",
+          "source_column": "煤炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "411613.50"
+        },
+        {
+          "account": "total:coke",
+          "source_label": "消费总量",
+          "source_column": "焦炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "46884.94"
+        },
+        {
+          "account": "total:crude",
+          "source_label": "消费总量",
+          "source_column": "原油消费量",
+          "unit": "10^4 t",
+          "raw_value": "51546.95"
+        },
+        {
+          "account": "total:gasoline",
+          "source_label": "消费总量",
+          "source_column": "汽油消费量",
+          "unit": "10^4 t",
+          "raw_value": "9776.37"
+        },
+        {
+          "account": "total:kerosene",
+          "source_label": "消费总量",
+          "source_column": "煤油消费量",
+          "unit": "10^4 t",
+          "raw_value": "2335.42"
+        },
+        {
+          "account": "total:diesel",
+          "source_label": "消费总量",
+          "source_column": "柴油消费量",
+          "unit": "10^4 t",
+          "raw_value": "17165.30"
+        },
+        {
+          "account": "total:fuel_oil",
+          "source_label": "消费总量",
+          "source_column": "燃料油消费量",
+          "unit": "10^4 t",
+          "raw_value": "4400.47"
+        },
+        {
+          "account": "total:gas",
+          "source_label": "消费总量",
+          "source_column": "天然气消费量",
+          "unit": "10^8 m3",
+          "raw_value": "1868.94"
+        },
+        {
+          "account": "total:electricity",
+          "source_label": "消费总量",
+          "source_column": "电力消费量",
+          "unit": "10^8 kWh",
+          "raw_value": "56383.69"
+        },
+        {
+          "account": "agriculture:energy",
+          "source_label": "农、林、牧、渔、水利业",
+          "source_column": "能源消费总量",
+          "unit": "10^4 tce",
+          "raw_value": "8094.27"
+        },
+        {
+          "account": "agriculture:coal",
+          "source_label": "农、林、牧、渔、水利业",
+          "source_column": "煤炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "2578.77"
+        },
+        {
+          "account": "agriculture:coke",
+          "source_label": "农、林、牧、渔、水利业",
+          "source_column": "焦炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "34.85"
+        },
+        {
+          "account": "agriculture:crude",
+          "source_label": "农、林、牧、渔、水利业",
+          "source_column": "原油消费量",
+          "unit": "10^4 t",
+          "raw_value": null
+        },
+        {
+          "account": "agriculture:gasoline",
+          "source_label": "农、林、牧、渔、水利业",
+          "source_column": "汽油消费量",
+          "unit": "10^4 t",
+          "raw_value": "216.60"
+        },
+        {
+          "account": "agriculture:kerosene",
+          "source_label": "农、林、牧、渔、水利业",
+          "source_column": "煤油消费量",
+          "unit": "10^4 t",
+          "raw_value": "0.75"
+        },
+        {
+          "account": "agriculture:diesel",
+          "source_label": "农、林、牧、渔、水利业",
+          "source_column": "柴油消费量",
+          "unit": "10^4 t",
+          "raw_value": "1491.99"
+        },
+        {
+          "account": "agriculture:fuel_oil",
+          "source_label": "农、林、牧、渔、水利业",
+          "source_column": "燃料油消费量",
+          "unit": "10^4 t",
+          "raw_value": "1.27"
+        },
+        {
+          "account": "agriculture:gas",
+          "source_label": "农、林、牧、渔、水利业",
+          "source_column": "天然气消费量",
+          "unit": "10^8 m3",
+          "raw_value": "0.79"
+        },
+        {
+          "account": "agriculture:electricity",
+          "source_label": "农、林、牧、渔、水利业",
+          "source_column": "电力消费量",
+          "unit": "10^8 kWh",
+          "raw_value": "1013.39"
+        },
+        {
+          "account": "industry:energy",
+          "source_label": "工业",
+          "source_column": "能源消费总量",
+          "unit": "10^4 tce",
+          "raw_value": "295686.44"
+        },
+        {
+          "account": "industry:coal",
+          "source_label": "工业",
+          "source_column": "煤炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "390497.43"
+        },
+        {
+          "account": "industry:coke",
+          "source_label": "工业",
+          "source_column": "焦炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "46749.60"
+        },
+        {
+          "account": "industry:crude",
+          "source_label": "工业",
+          "source_column": "原油消费量",
+          "unit": "10^4 t",
+          "raw_value": "51502.10"
+        },
+        {
+          "account": "industry:gasoline",
+          "source_label": "工业",
+          "source_column": "汽油消费量",
+          "unit": "10^4 t",
+          "raw_value": "489.04"
+        },
+        {
+          "account": "industry:kerosene",
+          "source_label": "工业",
+          "source_column": "煤油消费量",
+          "unit": "10^4 t",
+          "raw_value": "17.36"
+        },
+        {
+          "account": "industry:diesel",
+          "source_label": "工业",
+          "source_column": "柴油消费量",
+          "unit": "10^4 t",
+          "raw_value": "1595.28"
+        },
+        {
+          "account": "industry:fuel_oil",
+          "source_label": "工业",
+          "source_column": "燃料油消费量",
+          "unit": "10^4 t",
+          "raw_value": "2835.74"
+        },
+        {
+          "account": "industry:gas",
+          "source_label": "工业",
+          "source_column": "天然气消费量",
+          "unit": "10^8 m3",
+          "raw_value": "1221.33"
+        },
+        {
+          "account": "industry:electricity",
+          "source_label": "工业",
+          "source_column": "电力消费量",
+          "unit": "10^8 kWh",
+          "raw_value": "40802.71"
+        },
+        {
+          "account": "construction:energy",
+          "source_label": "建筑业",
+          "source_column": "能源消费总量",
+          "unit": "10^4 tce",
+          "raw_value": "7519.58"
+        },
+        {
+          "account": "construction:coal",
+          "source_label": "建筑业",
+          "source_column": "煤炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "913.60"
+        },
+        {
+          "account": "construction:coke",
+          "source_label": "建筑业",
+          "source_column": "焦炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "9.69"
+        },
+        {
+          "account": "construction:crude",
+          "source_label": "建筑业",
+          "source_column": "原油消费量",
+          "unit": "10^4 t",
+          "raw_value": null
+        },
+        {
+          "account": "construction:gasoline",
+          "source_label": "建筑业",
+          "source_column": "汽油消费量",
+          "unit": "10^4 t",
+          "raw_value": "331.03"
+        },
+        {
+          "account": "construction:kerosene",
+          "source_label": "建筑业",
+          "source_column": "煤油消费量",
+          "unit": "10^4 t",
+          "raw_value": "10.42"
+        },
+        {
+          "account": "construction:diesel",
+          "source_label": "建筑业",
+          "source_column": "柴油消费量",
+          "unit": "10^4 t",
+          "raw_value": "551.95"
+        },
+        {
+          "account": "construction:fuel_oil",
+          "source_label": "建筑业",
+          "source_column": "燃料油消费量",
+          "unit": "10^4 t",
+          "raw_value": "44.59"
+        },
+        {
+          "account": "construction:gas",
+          "source_label": "建筑业",
+          "source_column": "天然气消费量",
+          "unit": "10^8 m3",
+          "raw_value": "1.88"
+        },
+        {
+          "account": "construction:electricity",
+          "source_label": "建筑业",
+          "source_column": "电力消费量",
+          "unit": "10^8 kWh",
+          "raw_value": "721.67"
+        },
+        {
+          "account": "transport:energy",
+          "source_label": "交通运输、仓储和邮政业",
+          "source_column": "能源消费总量",
+          "unit": "10^4 tce",
+          "raw_value": "36336.43"
+        },
+        {
+          "account": "transport:coal",
+          "source_label": "交通运输、仓储和邮政业",
+          "source_column": "煤炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "557.97"
+        },
+        {
+          "account": "transport:coke",
+          "source_label": "交通运输、仓储和邮政业",
+          "source_column": "焦炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "2.70"
+        },
+        {
+          "account": "transport:crude",
+          "source_label": "交通运输、仓储和邮政业",
+          "source_column": "原油消费量",
+          "unit": "10^4 t",
+          "raw_value": "44.85"
+        },
+        {
+          "account": "transport:gasoline",
+          "source_label": "交通运输、仓储和邮政业",
+          "source_column": "汽油消费量",
+          "unit": "10^4 t",
+          "raw_value": "4665.01"
+        },
+        {
+          "account": "transport:kerosene",
+          "source_label": "交通运输、仓储和邮政业",
+          "source_column": "煤油消费量",
+          "unit": "10^4 t",
+          "raw_value": "2216.03"
+        },
+        {
+          "account": "transport:diesel",
+          "source_label": "交通运输、仓储和邮政业",
+          "source_column": "柴油消费量",
+          "unit": "10^4 t",
+          "raw_value": "11042.80"
+        },
+        {
+          "account": "transport:fuel_oil",
+          "source_label": "交通运输、仓储和邮政业",
+          "source_column": "燃料油消费量",
+          "unit": "10^4 t",
+          "raw_value": "1486.37"
+        },
+        {
+          "account": "transport:gas",
+          "source_label": "交通运输、仓储和邮政业",
+          "source_column": "天然气消费量",
+          "unit": "10^8 m3",
+          "raw_value": "214.42"
+        },
+        {
+          "account": "transport:electricity",
+          "source_label": "交通运输、仓储和邮政业",
+          "source_column": "电力消费量",
+          "unit": "10^8 kWh",
+          "raw_value": "1059.24"
+        },
+        {
+          "account": "trade:energy",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "source_column": "能源消费总量",
+          "unit": "10^4 tce",
+          "raw_value": "10873.01"
+        },
+        {
+          "account": "trade:coal",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "source_column": "煤炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "3767.01"
+        },
+        {
+          "account": "trade:coke",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "source_column": "焦炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "46.58"
+        },
+        {
+          "account": "trade:crude",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "source_column": "原油消费量",
+          "unit": "10^4 t",
+          "raw_value": null
+        },
+        {
+          "account": "trade:gasoline",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "source_column": "汽油消费量",
+          "unit": "10^4 t",
+          "raw_value": "217.79"
+        },
+        {
+          "account": "trade:kerosene",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "source_column": "煤油消费量",
+          "unit": "10^4 t",
+          "raw_value": "11.28"
+        },
+        {
+          "account": "trade:diesel",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "source_column": "柴油消费量",
+          "unit": "10^4 t",
+          "raw_value": "230.13"
+        },
+        {
+          "account": "trade:fuel_oil",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "source_column": "燃料油消费量",
+          "unit": "10^4 t",
+          "raw_value": "17.39"
+        },
+        {
+          "account": "trade:gas",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "source_column": "天然气消费量",
+          "unit": "10^8 m3",
+          "raw_value": "46.63"
+        },
+        {
+          "account": "trade:electricity",
+          "source_label": "批发、零售业和住宿、餐饮业",
+          "source_column": "电力消费量",
+          "unit": "10^8 kWh",
+          "raw_value": "1995.60"
+        },
+        {
+          "account": "other:energy",
+          "source_label": "其他行业",
+          "source_column": "能源消费总量",
+          "unit": "10^4 tce",
+          "raw_value": "20084.01"
+        },
+        {
+          "account": "other:coal",
+          "source_label": "其他行业",
+          "source_column": "煤炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "4045.50"
+        },
+        {
+          "account": "other:coke",
+          "source_label": "其他行业",
+          "source_column": "焦炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "5.10"
+        },
+        {
+          "account": "other:crude",
+          "source_label": "其他行业",
+          "source_column": "原油消费量",
+          "unit": "10^4 t",
+          "raw_value": null
+        },
+        {
+          "account": "other:gasoline",
+          "source_label": "其他行业",
+          "source_column": "汽油消费量",
+          "unit": "10^4 t",
+          "raw_value": "1738.07"
+        },
+        {
+          "account": "other:kerosene",
+          "source_label": "其他行业",
+          "source_column": "煤油消费量",
+          "unit": "10^4 t",
+          "raw_value": "50.73"
+        },
+        {
+          "account": "other:diesel",
+          "source_label": "其他行业",
+          "source_column": "柴油消费量",
+          "unit": "10^4 t",
+          "raw_value": "1268.75"
+        },
+        {
+          "account": "other:fuel_oil",
+          "source_label": "其他行业",
+          "source_column": "燃料油消费量",
+          "unit": "10^4 t",
+          "raw_value": "15.11"
+        },
+        {
+          "account": "other:gas",
+          "source_label": "其他行业",
+          "source_column": "天然气消费量",
+          "unit": "10^8 m3",
+          "raw_value": "41.31"
+        },
+        {
+          "account": "other:electricity",
+          "source_label": "其他行业",
+          "source_column": "电力消费量",
+          "unit": "10^8 kWh",
+          "raw_value": "3614.98"
+        },
+        {
+          "account": "household:energy",
+          "source_label": "生活消费",
+          "source_column": "能源消费总量",
+          "unit": "10^4 tce",
+          "raw_value": "47212.33"
+        },
+        {
+          "account": "household:coal",
+          "source_label": "生活消费",
+          "source_column": "煤炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "9253.22"
+        },
+        {
+          "account": "household:coke",
+          "source_label": "生活消费",
+          "source_column": "焦炭消费量",
+          "unit": "10^4 t",
+          "raw_value": "36.42"
+        },
+        {
+          "account": "household:crude",
+          "source_label": "生活消费",
+          "source_column": "原油消费量",
+          "unit": "10^4 t",
+          "raw_value": null
+        },
+        {
+          "account": "household:gasoline",
+          "source_label": "生活消费",
+          "source_column": "汽油消费量",
+          "unit": "10^4 t",
+          "raw_value": "2118.83"
+        },
+        {
+          "account": "household:kerosene",
+          "source_label": "生活消费",
+          "source_column": "煤油消费量",
+          "unit": "10^4 t",
+          "raw_value": "28.85"
+        },
+        {
+          "account": "household:diesel",
+          "source_label": "生活消费",
+          "source_column": "柴油消费量",
+          "unit": "10^4 t",
+          "raw_value": "984.40"
+        },
+        {
+          "account": "household:fuel_oil",
+          "source_label": "生活消费",
+          "source_column": "燃料油消费量",
+          "unit": "10^4 t",
+          "raw_value": null
+        },
+        {
+          "account": "household:gas",
+          "source_label": "生活消费",
+          "source_column": "天然气消费量",
+          "unit": "10^8 m3",
+          "raw_value": "342.58"
+        },
+        {
+          "account": "household:electricity",
+          "source_label": "生活消费",
+          "source_column": "电力消费量",
+          "unit": "10^8 kWh",
+          "raw_value": "7176.10"
+        }
+      ]
+    }
+  ]
+}

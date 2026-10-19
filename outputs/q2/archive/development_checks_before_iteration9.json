@@ -1,0 +1,1335 @@
+{
+  "date": "2026-10-19",
+  "scope": "development checks; no national Q2 acceptance",
+  "branch": "work/q2-yx-local",
+  "tests": {
+    "tests": 326,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "seconds": 13.335121799987974,
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "clean_environment": {
+    "include_system_site_packages": false,
+    "dependencies_file": "requirements-q2-lock.txt",
+    "dependencies_sha256": "feeb4df023c49f48e31f01ee220f1566506680d6aabe873fe13b4e474417241c",
+    "pip_check": "No broken requirements found."
+  },
+  "audit": {
+    "scope": "Workspace preservation and engineering checks only; not completion of final research.",
+    "passed": true,
+    "checks": [
+      {
+        "check": "retained_files_match_inventory",
+        "passed": true,
+        "detail": {
+          "scope": "nonrestricted file hashes; restricted existence/size only, NOT content preservation proof",
+          "resolved_original_paths": 1117,
+          "missing": [],
+          "unrecoverable_modifications": [],
+          "restricted_metadata_only": [
+            {
+              "path": "data/restricted/household/data/household_energy_source_fig4.csv",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 1.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 2.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 3.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 4.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 5.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            },
+            {
+              "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 6.xlsx",
+              "size_matches_inventory": true,
+              "content_read": false,
+              "content_hash_verified": false
+            }
+          ],
+          "external_historical_records": [
+            {
+              "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/B题/2026年第二届全国大学生仿真建模应用挑战赛B题.pdf",
+              "historical_target": "../B题/2026年第二届全国大学生仿真建模应用挑战赛B题.pdf",
+              "sha256": "104132baece63e54fcc8238d414bd31e8c6c0923402380ba41674b1eda812981",
+              "status": "historical_foreign_duplicate; external presence not checked"
+            },
+            {
+              "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/2026年第二届全国大学生仿真建模应用挑战赛C题.pdf",
+              "historical_target": "../C题/2026年第二届全国大学生仿真建模应用挑战赛C题.pdf",
+              "sha256": "5f98ef37a4052c58e7e514f77c5fb9463d14f1a3af36468e82489585efebdff0",
+              "status": "historical_foreign_duplicate; external presence not checked"
+            },
+            {
+              "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件1：车辆参数表.xlsx",
+              "historical_target": "../C题/附件1：车辆参数表.xlsx",
+              "sha256": "2bd051219c2cb3d6bb9fb22b2f6a29d1434aa0405aa5168216a747d8f6569abc",
+              "status": "historical_foreign_duplicate; external presence not checked"
+            },
+            {
+              "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件2：4段路程车辆行驶数据.xlsx",
+              "historical_target": "../C题/附件2：4段路程车辆行驶数据.xlsx",
+              "sha256": "c947f403767334b85afc1792eee46f2b74d0271a99af628b3fdd8c95cd7ddd1d",
+              "status": "historical_foreign_duplicate; external presence not checked"
+            },
+            {
+              "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件3：参考工况.xlsx",
+              "historical_target": "../C题/附件3：参考工况.xlsx",
+              "sha256": "75fdd54aa2f880b9e4e1e7539e4e4760f582917407afca41a29a6329533e7e49",
+              "status": "historical_foreign_duplicate; external presence not checked"
+            },
+            {
+              "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件4：部件特性（OCV—SOC、内阻、电机效率）.xlsx",
+              "historical_target": "../C题/附件4：部件特性（OCV—SOC、内阻、电机效率）.xlsx",
+              "sha256": "375d44e233362586ed4699abe3d95e691ace96fda880a55737f57087189a1776",
+              "status": "historical_foreign_duplicate; external presence not checked"
+            }
+          ]
+        }
+      },
+      {
+        "check": "working_tree_google_api_keys_absent",
+        "passed": true,
+        "detail": {
+          "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
+          "excluded_directories": [
+            ".git",
+            "tmp",
+            "data/restricted"
+          ],
+          "pattern": "Google API key format only; not an exhaustive credential audit",
+          "passed": true,
+          "findings": [],
+          "errors": [],
+          "files_scanned": 1959,
+          "payloads_scanned": 3054,
+          "zip_members_scanned": 1095
+        }
+      },
+      {
+        "check": "protected_directory_unchanged",
+        "passed": true,
+        "detail": 3
+      },
+      {
+        "check": "five_official_originals_unchanged",
+        "passed": true,
+        "detail": [
+          "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+          "附件1.xlsx",
+          "附件2.xlsx",
+          "附件3.xlsx",
+          "附件4.xlsx"
+        ]
+      },
+      {
+        "check": "three_workspaces_consolidated",
+        "passed": true,
+        "detail": "one A workspace"
+      },
+      {
+        "check": "no_B_C_payload",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "check": "all_final_references_resolve",
+        "passed": true,
+        "detail": {
+          "count": 118,
+          "missing": []
+        }
+      },
+      {
+        "check": "final_reader_links_resolve",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "check": "retained_python_syntax",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "check": "unified_data_keys_unique",
+        "passed": true,
+        "detail": 362
+      },
+      {
+        "check": "unified_rows_trace_to_files",
+        "passed": true,
+        "detail": 362
+      },
+      {
+        "check": "scope_not_promoted",
+        "passed": true,
+        "detail": "formal admission still governed by model_inputs and evidence_reviews"
+      },
+      {
+        "check": "known_quarantine_preserved",
+        "passed": true,
+        "detail": [
+          "data/processed/lb/base/prices/worldbank_energy_annual_2000_latest.csv",
+          "data/processed/lb/base/prices/worldbank_energy_monthly_2000_latest.csv",
+          "data/processed/transmission_lines_candidate.csv"
+        ]
+      },
+      {
+        "check": "raw_exact_duplicates_removed",
+        "passed": true,
+        "detail": []
+      }
+    ],
+    "original_files": 5846,
+    "removed_files": 4776,
+    "removed_bytes": 296840178
+  },
+  "reproduction": {
+    "independent_v2": {
+      "files": [
+        {
+          "file": "action_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "asset_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_metrics.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_path.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_path.svg",
+          "equal": true
+        },
+        {
+          "file": "calibration.json",
+          "equal": true
+        },
+        {
+          "file": "cash_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "gaps_and_conflicts.csv",
+          "equal": true
+        },
+        {
+          "file": "historical_operation_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "historical_quality.json",
+          "equal": true
+        },
+        {
+          "file": "history_baselines.csv",
+          "equal": true
+        },
+        {
+          "file": "history_fit.csv",
+          "equal": true
+        },
+        {
+          "file": "history_fit.svg",
+          "equal": true
+        },
+        {
+          "file": "information_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "lifecycle_queue.json",
+          "equal": true
+        },
+        {
+          "file": "operation_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "project_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "report.md",
+          "equal": true
+        },
+        {
+          "file": "sensitivity.csv",
+          "equal": true
+        }
+      ],
+      "passed": true
+    },
+    "cross_environment_v2": {
+      "files": [
+        {
+          "file": "action_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "asset_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_metrics.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_path.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_path.svg",
+          "equal": true
+        },
+        {
+          "file": "calibration.json",
+          "equal": true
+        },
+        {
+          "file": "cash_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "gaps_and_conflicts.csv",
+          "equal": true
+        },
+        {
+          "file": "historical_operation_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "historical_quality.json",
+          "equal": true
+        },
+        {
+          "file": "history_baselines.csv",
+          "equal": true
+        },
+        {
+          "file": "history_fit.csv",
+          "equal": true
+        },
+        {
+          "file": "history_fit.svg",
+          "equal": true
+        },
+        {
+          "file": "information_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "lifecycle_queue.json",
+          "equal": true
+        },
+        {
+          "file": "operation_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "project_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "report.md",
+          "equal": true
+        },
+        {
+          "file": "sensitivity.csv",
+          "equal": true
+        }
+      ],
+      "passed": true
+    },
+    "q1_regression": {
+      "files": [
+        {
+          "file": "cost_sensitivity.svg",
+          "equal": true
+        },
+        {
+          "file": "coverage.csv",
+          "equal": true
+        },
+        {
+          "file": "demand_trends.svg",
+          "equal": true
+        },
+        {
+          "file": "energy_assessment.csv",
+          "equal": true
+        },
+        {
+          "file": "energy_roles.csv",
+          "equal": true
+        },
+        {
+          "file": "gaps_and_conflicts.csv",
+          "equal": true
+        },
+        {
+          "file": "history.csv",
+          "equal": true
+        },
+        {
+          "file": "import_origins.csv",
+          "equal": true
+        },
+        {
+          "file": "indicators.csv",
+          "equal": true
+        },
+        {
+          "file": "model_handoff.csv",
+          "equal": true
+        },
+        {
+          "file": "price_trends.svg",
+          "equal": true
+        },
+        {
+          "file": "regional_comparison.csv",
+          "equal": true
+        },
+        {
+          "file": "regional_shares.svg",
+          "equal": true
+        },
+        {
+          "file": "renewable_regions.csv",
+          "equal": true
+        },
+        {
+          "file": "report.md",
+          "equal": true
+        },
+        {
+          "file": "static_balance.json",
+          "equal": true
+        },
+        {
+          "file": "synergy_assessment.csv",
+          "equal": true
+        },
+        {
+          "file": "technology_region_capacities.csv",
+          "equal": true
+        }
+      ],
+      "passed": true
+    },
+    "independent_directory_v3": {
+      "files": [
+        {
+          "file": "action_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "asset_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_metrics.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_path.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_path.svg",
+          "equal": true
+        },
+        {
+          "file": "calibration.json",
+          "equal": true
+        },
+        {
+          "file": "cash_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "gaps_and_conflicts.csv",
+          "equal": true
+        },
+        {
+          "file": "historical_operation_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "historical_quality.json",
+          "equal": true
+        },
+        {
+          "file": "history_baselines.csv",
+          "equal": true
+        },
+        {
+          "file": "history_fit.csv",
+          "equal": true
+        },
+        {
+          "file": "history_fit.svg",
+          "equal": true
+        },
+        {
+          "file": "information_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "lifecycle_queue.json",
+          "equal": true
+        },
+        {
+          "file": "operation_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "project_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "report.md",
+          "equal": true
+        },
+        {
+          "file": "sensitivity.csv",
+          "equal": true
+        }
+      ],
+      "passed": true,
+      "directory": "tmp/q2/independent_engineering_v3"
+    },
+    "cross_environment_v3": {
+      "files": [
+        {
+          "file": "action_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "asset_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_metrics.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_path.csv",
+          "equal": true
+        },
+        {
+          "file": "baseline_path.svg",
+          "equal": true
+        },
+        {
+          "file": "calibration.json",
+          "equal": true
+        },
+        {
+          "file": "cash_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "gaps_and_conflicts.csv",
+          "equal": true
+        },
+        {
+          "file": "historical_operation_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "historical_quality.json",
+          "equal": true
+        },
+        {
+          "file": "history_baselines.csv",
+          "equal": true
+        },
+        {
+          "file": "history_fit.csv",
+          "equal": true
+        },
+        {
+          "file": "history_fit.svg",
+          "equal": true
+        },
+        {
+          "file": "information_ledger.csv",
+          "equal": true
+        },
+        {
+          "file": "lifecycle_queue.json",
+          "equal": true
+        },
+        {
+          "file": "operation_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "project_ledger.json",
+          "equal": true
+        },
+        {
+          "file": "report.md",
+          "equal": true
+        },
+        {
+          "file": "sensitivity.csv",
+          "equal": true
+        }
+      ],
+      "passed": true,
+      "retained_directory": "tmp/q2/retained_runs/cross_environment_v3"
+    }
+  },
+  "formal_q2_status": "failed_required_inputs_not_admitted",
+  "remaining_gates": [
+    "B1 national mapping/age/permission parameters; lifecycle mechanism implemented and tested",
+    "B2 real parameter and primary accounting bridge",
+    "B3 complete model admission",
+    "B4 real national fit and quality",
+    "B5 national S0 and all targets",
+    "B6 justified ranges and robustness",
+    "B9 external review"
+  ],
+  "regression_note": "Cross-environment OLS final-bit mismatch found and fixed using centered closed-form fsum; earlier failed record retained in tmp/q2/before_baseline_reproduction_fix.json",
+  "targeted_tests_after_fix": {
+    "q2_tests": 56,
+    "full_tests": 238,
+    "failures": 0,
+    "errors": 0,
+    "log": "tmp/q2/full_tests_v3.log"
+  },
+  "current_code_hashes": {
+    "scripts/build_q2_capacity_candidate.py": "48c7683a2a28612f2adcc77553a2ab5a2fd82f8d1b7894486a06118ac6f5d698",
+    "scripts/build_q2_engineering_fixture.py": "7b95edeaeb65b3329482883197cbbc12905b23908ffdaa1c5fdb2751a13ef6c0",
+    "scripts/build_q2_fuel_candidate.py": "5d829e6660d6b54b6b33275355acab9d35378aeececcc4b74976f4f9f11dc0f6",
+    "scripts/build_q2_historical_candidate.py": "740cd77b6cd5ec78c242b2d51b44bba2cd1597a40c785b221d5ba3b3bfccd244",
+    "scripts/build_q2_mapping_candidate.py": "a3b846af664e0014071a168c2e487f797a815c698523e55724c9fb1306e4c0b8",
+    "scripts/build_q2_queue_candidate.py": "974bef8a0f578441f41de6e79b4bde2171a067c1468663a6b87650220573ba4b",
+    "scripts/build_q2_solar_candidate.py": "e0706493ce4ce25522a6bd437a75d1572c2eaf9b37c1e8c5bb6cb3b531a63343",
+    "scripts/prepare_q2_history.py": "ac643277a37baec050b44c3ef6c6a0ed1d346103959b2bc0a57a0329b4edc96a",
+    "scripts/prepare_q2_initialization_references.py": "383a5fe23398f88747a1d9c79e5ef5bd07f9520d21699ab2d5c48d5ef99b6c34",
+    "scripts/prepare_q2_national_balance.py": "fb166a0a158f0a8afac5a407b4ad4dc923c227234008726cb04c32d705e84419",
+    "scripts/prepare_q2_nbs2014.py": "d89af7e9e615f3daa92ff18be1d28753ba0b57ec6a721be147614ae2e4fe4510",
+    "scripts/prepare_q2_nuclear_queue.py": "f3c2a7bbbe5a9ff4df0baa64531c27a421749581a71bb51b9277a952b2881b8d",
+    "scripts/prepare_q2_policy.py": "93ce156cb9101c64853cff87a0689094ff81dcc5fa54b175ab2df54b66149a62",
+    "scripts/prepare_q2_sector_state.py": "30e9b4376c055dfeeed7cf7e377a9f3ab03954cdd8959ca1e4230584c9f5299e",
+    "scripts/prepare_q2_technology.py": "fcd37b6d2b54c8ef2fd3ff17b247ed63a457389fcc6e454c0b5723fe38871e0b",
+    "scripts/prepare_q2_technology_2010.py": "f33e53bdb44075241a55699730306bc18225e9ca9ac1114b39be323fd81f3e74",
+    "scripts/run_q2.py": "e2560d02ab834f0453c117f94359317c5864477ba9a3f2ca52d24172640e9e1c",
+    "scripts/run_q2_candidate_sensitivity.py": "c61be5f1553ad83bb7a52d0ce9de143f135577fda2df1b5917c4291037b5809f",
+    "scripts/run_q2_historical_candidate.py": "8319d294dff187d706c6160c4773db455940cb8decaa4179c85052c722612723",
+    "scripts/run_q2_solar_ablation.py": "e254f80194d93f975a200666294b58ce243d8e2ce7853b58e116e5de9b2519af",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/annual.py": "4acd3144f1110b784614b4d681dd8e1584f72d15a93b89d6c4b0e4b616f73d48",
+    "src/energy_model/q2/contracts.py": "5c7497f1ff8786851a99e228a2f71e945e115a31d2240b68606a016e7d79a8fc",
+    "src/energy_model/q2/experiments.py": "b6432f11758893710dbe20296657313eeb5c70238978f774604513453ff4eb8f",
+    "src/energy_model/q2/finance.py": "6724e4a9a37411cc12565fdb36086bca37de49dc1f245b5aec4548a64a39e22e",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32",
+    "src/energy_model/q2/lifecycle.py": "77c1908aa1cca437f72674b3ac88873206f07188f1e3eae6d2f8504aec86c403",
+    "src/energy_model/q2/operations.py": "95b0999dfdcb57b46046178c93c7a07facd7a16a1da4f0407bd93e1658bd2bb2",
+    "src/energy_model/q2/quality.py": "a1176bc537f7bbddcc664ed697ac9bbac8f8f347097a5650e06cd1f978cd370d",
+    "src/energy_model/q2/targets.py": "2e67cd5f0996f4e1a20c836ecc2a300f48ffdddbd058f620f7312634f72ce064",
+    "scripts/prepare_q2_coal_bridge.py": "1b7c172475e0b4aba119f92ea0d76a0a93185f29e7d71351ce1a7a64bbbc20a0",
+    "scripts/prepare_q2_apec_balance.py": "cd33811c1b2c8a243356e1054cb0d64ed1c356767487bcd6239f17a38a5e4c48",
+    "tests/test_q2_balance_bridge.py": "e95835985b2968f5409f64ce939b1ee0c398fc6e777ebe69e11a39d0670b1fff",
+    "src/energy_model/q2/deployment.py": "2ec6fe0a88a43bb1c1ae0284c6e6f6bf1e768609c0a3894f13dc7046a67e33f7",
+    "scripts/build_q2_deployment_candidate.py": "e80a22203f1578c5f64bd6acfa014a0416cbe4d726313268a0499d6dd9281a10",
+    "scripts/run_q2_deployment_ablation.py": "5beb9be9c97a04c6fdef6972958706bba4d70656cdc79fb51fc1a746ecd22820",
+    "tests/test_q2_deployment.py": "72581e0de486b4d66d7fe6eee7dd8a64d47a40e90e34917ed8326939ad3c2bab",
+    "scripts/prepare_q2_nuclear_capacity.py": "e7baac12339572332868f6acb9a3c9f5e24a46a2298ee04257b73e71ab952590",
+    "tests/test_q2_nuclear_capacity.py": "1568614edcb197f7cdd588b01d9c22df5ed493e7e332944b925b977a051bfc08",
+    "scripts/build_workspace_catalog.py": "9b9bafe4a9d5b2b9f19232a58e7886ff9f93877a6d2fee0da0ae13b1b28a9090",
+    "src/energy_model/q2/approvals.py": "0e6cf2f7903e76d8490c52daed1648d407e44dcf3562e674ee2eaa6496e969c9",
+    "scripts/build_q2_permit_candidate.py": "e383e92fd6c22aa16b74ef6c0dad0dbd8dfa01e0761ac540e938ff7fa3663472",
+    "scripts/run_q2_permit_ablation.py": "faaeeafa072a3dd3b6a25f14a7f875a5ed11cc24c51e8abb5a7f7885efd95940",
+    "tests/test_q2_approval_blocks.py": "90e32f2d365b97fcf477a33f3c1f7b73994ac133e8b1874b232d56736558b1fb"
+  },
+  "formal_q2_failure": {
+    "run_id": "13eea4e5cadd4939bf91569ae04a669f",
+    "status": "failed",
+    "output_valid_for_this_attempt": false,
+    "national_acceptance": false,
+    "error": "Required national inputs are not yet admitted",
+    "exception": "AdmissionError",
+    "config_path": "workflow/q2_inputs.json",
+    "config_sha256": "80633b164e932580c802a0ff9de80f5f5a39037b100ba06ffacaccc66bada334",
+    "seconds": 0.0008590999932494015,
+    "gaps": [
+      {
+        "id": "historical_initialization",
+        "gate": "B3/B4",
+        "required": "2014 end / 2015 start sector service, technology, finance and project queues with causal information dates",
+        "available_evidence": "data/processed/q2/history_observations.csv; data/processed/q2/sector_balance_2014_30province.csv; data/processed/q2/nbs2014_accounts.csv; data/processed/q2/nbs2014_boundary_diagnostics.csv; data/processed/q2/initialization_2014_capacity.csv; data/processed/q2/power_2014_reference.csv; data/processed/q2/initialization_2014_fuel_normalization.csv; workflow/q2_candidates/v1/initialization.json; workflow/q2_candidates/v1/assumptions.json; data/processed/q2/nuclear_queue_2014_reference.csv; data/catalog/q2_nuclear_queue_review.json; workflow/q2_candidates/v4/initialization.json; data/processed/q2/national_balance_2014_reference.csv; data/catalog/q2_national_balance_review.json; data/catalog/q2_nuclear_permit_2015_review.json; workflow/q2_candidates/v5/initialization.json; data/processed/q2/coal_bridge_2014.csv; data/catalog/q2_coal_bridge_review.json; data/processed/q2/apec_balance_2014.csv; data/processed/q2/apec_balance_2014_sector_bounds.csv; data/catalog/q2_apec_balance_review.json; data/catalog/q2_nuclear_permit_2015_supplement_review.json; data/catalog/q2_nuclear_capacity_2015_review.json; data/processed/q2/nuclear_capacity_2015_reference.csv; data/processed/q2/nuclear_capacity_2015_conflicts.csv; data/catalog/q2_nuclear_nonissuance_2016_2018_review.json; workflow/q2_candidates/v8/manifest.json",
+        "remaining": "26NEA2014year-end units28450MW and NNSA statuses now reviewed; v4 applies explicit duration/funding hypotheses rather than observed future dates. NEA/NBS20MW stock difference retained. Full sector services/nonenergy/ages/finance and national statistical bridge still need substantive mapping. National CEADs2014 cells1260 and60identities reviewed, gas total/transport differences remain unresolved. Coal-power category mismatch is explained by B54+C54+D54;15coal aggregates agree within rounding. APEC2014 supplies separate finalenergy/nonenergy and explicit statisticaldiscrepancy;6840cells transcribed,5539dashes retained,54sector/product conditional intervals. Database revision unknown and physical-use/equipment2024 bridge still incomplete. Four positive2015construction-permit records now cover8named units, matching annualreportcount after verifyingTianwan5/6onphysical96. CNS7now supplies8980MWe across8licensedunits:6startdates and2approved-without-date. ItsJune2016reportdate is not2015real-timeavailability. Tianwanunit5firstconcrete release verified;unit6separate-release date unknown. OriginalCNcodes conflict withCNS7and are kept separately. Other-yearcalendar,operatingpermission,exactpublication and gross/net ratingbasis remain unresolved. CNS8section6.1explicitly reportszero2016-2018constructionpermits;v8replayscurrent-yearnewapprovalblocks withoutstoppingexistingqueue. Fullother-year/discrete-unit calendar remains unresolved."
+      },
+      {
+        "id": "current_initialization",
+        "gate": "B3/B5",
+        "required": "2024 asset, fuel, service, storage and queue state on one consistent boundary",
+        "available_evidence": "outputs/q1/p1_yx/model_handoff.csv",
+        "remaining": "Candidate totals do not uniquely determine service/efficiency, inventory or asset age"
+      },
+      {
+        "id": "technology_and_prices",
+        "gate": "B2/B3/B6",
+        "required": "Matched CAPEX/OPEX, lifetimes, fuel energy factors, prices, price year, policy coverage and allocation rules",
+        "available_evidence": "data/processed/q2/technology_reference.csv; data/catalog/q2_technology_review.json; data/processed/technology_accounting_parameters.csv; data/processed/q2/fuel_reference.csv; data/processed/q2/technology_2010_samples.csv; data/processed/q2/technology_2010_annex.csv; data/processed/q2/technology_2010_parameters.csv; data/processed/q2/technology_2010_diagnostics.csv; data/processed/q2/policy_reference.csv; data/catalog/q2_policy_review.json; data/catalog/q2_mapping_2014_review.json; data/catalog/q2_mapping_2014_transcription.json; data/catalog/q2_solar_timing_ceiling_review.json",
+        "remaining": "Historical-vintage IEA2010 references and22 WRI2013 named-fuel defaults now reviewed. Still need model-specific parameter selection, matched price year, fixed/variable O&M split, service conversion and liability coverage. Three IEA main/annex comparisons remain unresolved; do not silently mix coal mass price and heat basis or treat samples as observed national fleet. IRENA2014cost range/indicative new-projectCF and US GDP deflator rebasing now tested as explicit research assumptions; no certification of Chinese price index or national fleet sample. V6correctsJanuary2015sourceavailability and compares2200GWutilitytechnicalpotential with20xopeningstock; aggregate mapping is still hypothetical, not an annual deployment allowance."
+      },
+      {
+        "id": "operation_chronology",
+        "gate": "B2/B3",
+        "required": "Matched load/wind/PV/hydro profiles, fuel supply and withdrawal bounds, inventory conditions",
+        "available_evidence": "data/processed/province_load_2018_MWh.csv",
+        "remaining": "2018 reconstructed shape is not 2024 measured chronology; representative-year hypothesis and robustness need review"
+      },
+      {
+        "id": "carbon_boundary",
+        "gate": "B3/B5",
+        "required": "One reviewed gross CO2/process/waste/net land or engineered removal boundary and 2024-2060 assumptions",
+        "available_evidence": "data/processed/q2/btr_co2_anchors.csv; data/processed/q2/inventory_boundary_checks.csv",
+        "remaining": "BTR/GCB disagree; sparse official anchors are not a future removal forecast"
+      },
+      {
+        "id": "frozen_experiment",
+        "gate": "B4/B6",
+        "required": "Reviewed bounds/scales/weights and GDP/cost/carbon ranges, information dates and policy target comparisons",
+        "available_evidence": "workflow/q2_acceptance.json; workflow/q2_candidates/v1/experiment.json; outputs/q2/historical_candidate_v1/historical_quality.json; workflow/q2_candidates/v4/experiment.json; outputs/q2/historical_candidate_v4/historical_quality.json; outputs/q2/iteration4_reproduction.json; workflow/q2_candidates/v5/experiment.json; outputs/q2/historical_candidate_v5/historical_quality.json; outputs/q2/iteration5_reproduction.json; workflow/q2_candidates/v5_sensitivity.json; outputs/q2/historical_candidate_v5_sensitivity/summary.json; workflow/q2_candidates/v6/manifest.json; outputs/q2/historical_candidate_v6/historical_quality.json; outputs/q2/iteration6_reproduction.json; outputs/q2/historical_candidate_v6_ablation/constraint_usage.csv; workflow/q2_candidates/v7/manifest.json; outputs/q2/historical_candidate_v7/historical_quality.json; outputs/q2/historical_candidate_v7_ablation/technology_activity.csv; outputs/q2/iteration7_reproduction.json; workflow/q2_candidates/v8/manifest.json; outputs/q2/historical_candidate_v8/historical_quality.json; outputs/q2/iteration8_reproduction.json; workflow/q2_candidates/v8_sensitivity.json; outputs/q2/historical_candidate_v8_sensitivity/summary.json",
+        "remaining": "Eight exploratory versions executed81/486/729/972/750/12/12/3valid trainingcases;3045total. V8mandatoryCNS8documented2016-2018nonissuance replay selectsinstant_margin withtrainingloss0.262688888;4of8numericgatesstillfail(oil,gas,wind,solar). NuclearholdoutMAPE4.584percent andRMSE/persistence0.558pass numerically butfullpermit/calendar mapping remains unadmitted. PriorV7shared-bound ablation and allfrozen failures retained. V5/V6/V8each have27historicalresponsecases,notnationalS0/B6. Service/equipment,policy,accounting,currentstate andnetCO2 gaps remain."
+      }
+    ]
+  },
+  "legacy_nine_input_check": {
+    "passed": true,
+    "errors": [],
+    "accepted_inputs": [
+      {
+        "dataset_path": "data/observations/demand_energy_total_2015_2024.json",
+        "review_id": "R-S01-DEMAND-20261017",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+        "review_id": "R-S06-GDP-20261017",
+        "source_ids": [
+          "S06"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "review_id": "R-S17-20261016",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/energy_official_communique_2024.json",
+        "review_id": "R-S13-20261017",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_official_report_2024.json",
+        "review_id": "R-S22-20261017",
+        "source_ids": [
+          "S22"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_apparent_consumption_2024.json",
+        "review_id": "R-S23-20261017",
+        "source_ids": [
+          "S23"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/electricity_demand_official_2024.json",
+        "review_id": "R-S24-20261017",
+        "source_ids": [
+          "S24"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "review_id": "R-S25-20261017",
+        "source_ids": [
+          "S25"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/qinshan_asset_permit_case.json",
+        "review_id": "R-QINSHAN-ASSETS-20261017",
+        "source_ids": [
+          "S26",
+          "S27",
+          "S28"
+        ]
+      }
+    ],
+    "declared_inputs": 9,
+    "limitation": "仅检查已登记子集的证据结构和文件一致性；不自动验证原文真伪、转录正确性、数据覆盖完整性、情景参数或模型有效性。未准入不等于原数值错误。"
+  },
+  "previous_checks": "outputs/q2/archive/development_checks_before_iteration6.json",
+  "superseded_evidence_note": "v1 had invalid replacement quantities; v2 fixed physics but still used immediate annuity investment and later construction payment. v3 values dated cashflows with explicit escrow opportunity cost and pays declared fractions before commissioning. Historical evidence retained.",
+  "q1_regression_scope": "PriorQ1scientific comparison retained;Q1code unchanged. Current326-test regression,source preservation audit andnine original admission subsets pass.",
+  "shared_base": "804ec15ee43874303986a7ad91b2cde05c65b124",
+  "remote_check": {
+    "path": "tmp/q2/remote_current.json",
+    "issue": 7,
+    "issue_status": "development_in_progress_base_locked",
+    "checked_at": "2026-10-19T00:03:38.331662+08:00",
+    "subsequent_api_attempt": {
+      "path": "tmp/q2/remote_latest.json",
+      "status": "HTTP403; not a fresh issue-state confirmation"
+    },
+    "subsequent_ssh_check": {
+      "date": "2026-10-19",
+      "command": "git ls-remote origin HEAD refs/heads/main",
+      "head": "804ec15ee43874303986a7ad91b2cde05c65b124",
+      "main": "804ec15ee43874303986a7ad91b2cde05c65b124"
+    }
+  },
+  "new_source_review": {
+    "reference_values": 49,
+    "path": "data/catalog/q2_technology_review.json",
+    "full_national_admission": false
+  },
+  "sector_state_preparation": {
+    "record_count": 1260,
+    "checks": 1800,
+    "all_checks_passed": true,
+    "deterministic_rerun": true,
+    "original_decimal_resolution_checked": true,
+    "full_national_initialization_admitted": false,
+    "reader": "xlrd 2.0.1; isolated source_tools; not a model dependency"
+  },
+  "preparation_code_hashes": {
+    "scripts/prepare_q2_history.py": "ac643277a37baec050b44c3ef6c6a0ed1d346103959b2bc0a57a0329b4edc96a",
+    "scripts/prepare_q2_technology.py": "fcd37b6d2b54c8ef2fd3ff17b247ed63a457389fcc6e454c0b5723fe38871e0b",
+    "scripts/prepare_q2_sector_state.py": "30e9b4376c055dfeeed7cf7e377a9f3ab03954cdd8959ca1e4230584c9f5299e",
+    "scripts/build_q2_engineering_fixture.py": "7b95edeaeb65b3329482883197cbbc12905b23908ffdaa1c5fdb2751a13ef6c0",
+    "requirements-q2-data.txt": "ef292ee603cefb0b9c9c69137723ebde2c02c4870942cb6e3af856d41048ee09",
+    "scripts/prepare_q2_nbs2014.py": "d89af7e9e615f3daa92ff18be1d28753ba0b57ec6a721be147614ae2e4fe4510",
+    "scripts/prepare_q2_initialization_references.py": "383a5fe23398f88747a1d9c79e5ef5bd07f9520d21699ab2d5c48d5ef99b6c34",
+    "scripts/prepare_q2_technology_2010.py": "f33e53bdb44075241a55699730306bc18225e9ca9ac1114b39be323fd81f3e74",
+    "scripts/build_workspace_catalog.py": "f244fafcd39153da829a99c819a27d80f9861055483486a698afffda1f17e204"
+  },
+  "final_diff_whitespace_check": "git -c core.whitespace=cr-at-eol diff --check returned0; tracked code/docs preserve LF",
+  "data_catalog_files": 113,
+  "current_engineering_fixture_version": 3,
+  "national_2014_accounts": {
+    "records": 169,
+    "checks": 23,
+    "diagnostics": 4,
+    "national_model_admission": false,
+    "deterministic_rerun": true,
+    "missing_cells": 7
+  },
+  "national_reporting_layer": {
+    "implemented": true,
+    "actual_national_inputs_admitted": false,
+    "unit_and_boundary_counterexamples_passed": true,
+    "policy_thresholds_do_not_change_path": true,
+    "no_full_acceptance_claim": true
+  },
+  "scanner_after_v3": {
+    "passed": true,
+    "files_scanned": 1364,
+    "payloads_scanned": 2431,
+    "zip_members_scanned": 1067,
+    "errors": 0,
+    "findings": 0,
+    "scope": "Google key-format working-tree scan; restricted inputs not opened"
+  },
+  "full_test_run": {
+    "tests": 326,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "seconds": 13.335121799987974,
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "data_catalog_sources": 674,
+  "reviewed_reference_reproduction": {
+    "passed": true,
+    "outputs": {
+      "data/processed/q2/fuel_reference.csv": "4c5f6c204160530b1a96c8fa64c872530a1af06e3c0eb7ba897c960800e026af",
+      "data/processed/q2/power_2014_reference.csv": "9e17d5f48182e1529dbcd0fcd32593d135dcc9175b800e06f3d94fc27170c929",
+      "data/processed/q2/initialization_2014_capacity.csv": "b5bfbe98282d84044a953eb4648e0499acd637675804781d075b3e104cec4b2d",
+      "data/processed/q2/initialization_2014_fuel_normalization.csv": "0599564b3f8bb43b07fa9d7af8268668f1ccd940f8ce30458995b16088170f74",
+      "data/processed/q2/initialization_2014_reference_checks.json": "f3ea8d54b2c00b44bb188d86a580fd1924268684ea9c1d90652b65f34a3a1e14",
+      "data/processed/q2/technology_2010_samples.csv": "37f4a5646816e1224e7658eeeb734f9b18e78641fc3cd148763eca8e5b43b85e",
+      "data/processed/q2/technology_2010_annex.csv": "769121dfbd7851f0f92ad0daece10c8eb6505b0a5908115d82621d31ca22b1a6",
+      "data/processed/q2/technology_2010_parameters.csv": "ec2e6e25eedfa97d731dcfc921701a9f184694a4939389f5cd1838e43722dc86",
+      "data/processed/q2/technology_2010_diagnostics.csv": "826a129e990e576cd8cb2a50467333a996ca5465fbe1d16e753eff9db2b3da81",
+      "data/processed/q2/technology_2010_checks.json": "1209c8f9452f2e43af9e9bbd1a8a5ed441c1be430b93e371532ffbd4b56c2be5"
+    },
+    "initialization": {
+      "fuels": 22,
+      "power_records": 42,
+      "capacity_groups": 9,
+      "normalized_fuel_records": 56,
+      "checks": 25,
+      "complete_model_state": false
+    },
+    "historical_technology": {
+      "main_samples": 19,
+      "annex_samples": 20,
+      "parameters": 24,
+      "diagnostics": 8,
+      "unresolved_source_comparisons": 3,
+      "model_parameters_admitted": false,
+      "review_sha256": "cf2223ebae5430e1990bc5c9f592665708b42258dd90fa701364ec80b99dc0ea"
+    },
+    "national_model_admission": false,
+    "scope": "Same-environment offline real-source extraction rerun; not national model calibration or external peer review"
+  },
+  "source_review_binding": {
+    "mode": "exact reviewed registry records plus originals",
+    "checks": "Unrelated additions accepted; changed metadata/originals, duplicate/missing identities and empty bindings rejected",
+    "prior_review": "archive/q2_review_history/initialization_reference_review_v1.json"
+  },
+  "current_engineering_reproduction_note": "v3 scientific outputs retain previous cross-directory/cross-environment verification. This iteration changes source-review IO, data extraction, catalog and docs only; no annual/operation/experiment/finance/target numerical changes and no new engineering result claim.",
+  "scanner_after_reference_catalog": {
+    "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
+    "excluded_directories": [
+      ".git",
+      "tmp",
+      "data/restricted"
+    ],
+    "pattern": "Google API key format only; not an exhaustive credential audit",
+    "passed": true,
+    "findings": [],
+    "errors": [],
+    "files_scanned": 1387,
+    "payloads_scanned": 2454,
+    "zip_members_scanned": 1067
+  },
+  "unified_nbs_hash": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+  "scientific_acceptance": false,
+  "iteration": "v13_observed_nuclear_approval_replay_v8",
+  "real_historical_candidate": {
+    "scope": "historical_aggregate_candidate_not_admitted",
+    "inputs": "workflow/q2_candidates/v1/manifest.json",
+    "outputs": "outputs/q2/historical_candidate_v1",
+    "training_trials": 81,
+    "valid_training_trials": 81,
+    "passed_numeric_targets": 2,
+    "failed_numeric_targets": [
+      "consumption_coal_share",
+      "consumption_oil_share",
+      "consumption_gas_share",
+      "wind_10kW",
+      "solar_10kW",
+      "nuclear_10kW"
+    ],
+    "national_acceptance": false,
+    "reproduction": "outputs/q2/candidate_v1_reproduction.json"
+  },
+  "policy_reference_reproduction": {
+    "policy_records": 8,
+    "before_first_second_sha256": [
+      "0d264191638244363249619f450673e56c534f3c7bf4167aec6d159468194150",
+      "0d264191638244363249619f450673e56c534f3c7bf4167aec6d159468194150",
+      "0d264191638244363249619f450673e56c534f3c7bf4167aec6d159468194150"
+    ],
+    "byte_identical": true,
+    "national_policy_mapping_complete": false
+  },
+  "current_engineering_regression": {
+    "files": 19,
+    "all_identical": true,
+    "evidence": "outputs/q2/engineering_regression_v6.json"
+  },
+  "current_legacy_inputs": {
+    "passed": true,
+    "errors": [],
+    "accepted_inputs": [
+      {
+        "dataset_path": "data/observations/demand_energy_total_2015_2024.json",
+        "review_id": "R-S01-DEMAND-20261017",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+        "review_id": "R-S06-GDP-20261017",
+        "source_ids": [
+          "S06"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "review_id": "R-S17-20261016",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/energy_official_communique_2024.json",
+        "review_id": "R-S13-20261017",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_official_report_2024.json",
+        "review_id": "R-S22-20261017",
+        "source_ids": [
+          "S22"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_apparent_consumption_2024.json",
+        "review_id": "R-S23-20261017",
+        "source_ids": [
+          "S23"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/electricity_demand_official_2024.json",
+        "review_id": "R-S24-20261017",
+        "source_ids": [
+          "S24"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "review_id": "R-S25-20261017",
+        "source_ids": [
+          "S25"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/qinshan_asset_permit_case.json",
+        "review_id": "R-QINSHAN-ASSETS-20261017",
+        "source_ids": [
+          "S26",
+          "S27",
+          "S28"
+        ]
+      }
+    ],
+    "declared_inputs": 9,
+    "limitation": "仅检查已登记子集的证据结构和文件一致性；不自动验证原文真伪、转录正确性、数据覆盖完整性、情景参数或模型有效性。未准入不等于原数值错误。"
+  },
+  "current_remote_check": {
+    "checked_at": "2026-10-19T09:40:36.079829+08:00",
+    "issue": 7,
+    "title": "P2/Q2：问题二开发与验收（进行中）",
+    "state": "open",
+    "updated_at": "2026-10-18T15:11:40Z",
+    "shared_base_from_issue_body": "804ec15ee43874303986a7ad91b2cde05c65b124",
+    "main_sha_not_reverified_in_this_check": true,
+    "published": false
+  },
+  "current_national_entry": {
+    "exit_code": 1,
+    "reason": "Required national inputs are not yet admitted",
+    "unresolved_groups": 6,
+    "config_sha256": "80633b164e932580c802a0ff9de80f5f5a39037b100ba06ffacaccc66bada334",
+    "attempt_path": "outputs/q2/iteration8_final_national_gate.failed-attempt.json"
+  },
+  "note": "V8replaysexplicit2016-2018zero nuclearconstructionpermitissuance;3trainingrulecases,2pairedtrajectories,27historicalresponses. All326tests pass. NuclearholdoutMAPE12.29to4.58percent;4of8numericgatesstillfail. Trainingloss rises0.255206596to0.262688888;documentedevidencecorrection retained. Independent95-file copy:17/17candidate,8/8paired,33/33response;alternate16/17candidate(PNGonly),8/8paired,33/33response. FullV7control andV8responsebaseline ledgersidentical. No nationalS0/B6;6requiredinputgroupsremain. No remote refresh success after09:40:36;10:35:15API403recorded.",
+  "git_whitespace_check": {
+    "passed": true,
+    "command": "git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --check",
+    "detail": ""
+  },
+  "retained_repeat_runs": {
+    "alternate_candidate": "tmp/q2/retained_runs/historical_candidate_v1_alternate_final",
+    "engineering_regression": "tmp/q2/retained_runs/engineering_v6_regression",
+    "independent_candidate": "tmp/q2/independent_candidate_v1_final",
+    "status": "Repeat artifacts retained locally in ignored temporary workspace; canonical results and full hash evidence are in outputs/q2."
+  },
+  "current_candidate": {
+    "version": "v8",
+    "manifest": "workflow/q2_candidates/v8/manifest.json",
+    "manifest_sha256": "2dbc5636a662f038fb1cd58fbfa50b04d76f41aa495eec459287f6d6310dae82",
+    "valid_training_cases": 3,
+    "new_fitted_parameters": 0,
+    "numeric_failed_indicators": [
+      "consumption_oil_share",
+      "consumption_gas_share",
+      "wind_10kW",
+      "solar_10kW"
+    ],
+    "national_acceptance": false,
+    "prior_valid_training_cases": {
+      "v1": 81,
+      "v2r1": 486,
+      "v3": 729,
+      "v4": 972,
+      "v5": 750,
+      "v6": 12,
+      "v7": 12
+    },
+    "invalid_v2_attempt_retained": true,
+    "reproduction": "outputs/q2/iteration8_reproduction.json",
+    "selected_structure": "observed_nuclear_nonissuance",
+    "selected_rule": "instant_margin",
+    "selected_training_loss": 0.26268888761816667,
+    "total_valid_training_cases": 3045
+  },
+  "current_reference_catalog": {
+    "final_references": 118,
+    "missing_references": [],
+    "source_records": 674,
+    "source_records_with_files": 618,
+    "dataset_files": 113,
+    "nbs": {
+      "candidate_cells": 704,
+      "unique_records": 362,
+      "repeated_cells_removed": 342,
+      "conflicting_keys": 0,
+      "years": [
+        2005,
+        2024
+      ],
+      "key": [
+        "edition",
+        "family",
+        "year",
+        "region",
+        "variable",
+        "unit"
+      ],
+      "policy": "No zero filling, no averaging, no scope promotion. GDP table 3-4 versus 9-8 retained separately.",
+      "outputs": {
+        "history": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+        "provenance": "6dc5bad2fb8c555759921824a8e4eeef80053fe32c8f47535fde2e635673d95f"
+      }
+    }
+  },
+  "latest_remote_attempt": {
+    "status": "failed",
+    "error": "HTTP Error 403: rate limit exceeded",
+    "attempted_at": "2026-10-19T10:35:15.590683+08:00",
+    "metadata_path": "tmp/q2/remote_iteration8_checkpoint.json",
+    "last_successful_get": "2026-10-19T09:40:36.079829+08:00",
+    "last_success_record": "tmp/q2/remote_balance_checkpoint.json"
+  },
+  "current_historical_response": {
+    "scope": "historical_candidate_response_diagnostic_not_national_sensitivity",
+    "version": "v8",
+    "summary": {
+      "scope": "historical_candidate_response_diagnostic_not_national_sensitivity",
+      "cases": 27,
+      "valid": 27,
+      "failed": [],
+      "baseline_case": 12,
+      "national_acceptance": false,
+      "identical_opening_cash": true,
+      "identical_seed": true,
+      "metric_boundaries": "Same unreconciled proxy definitions as v5; no nationwide policy inference.",
+      "assumptions": "Common historical GDP-growth multipliers; relative cost-decline multipliers; uniform real2008USD carbon charges on all modeled fossil liabilities. These ranges/coverage are research scenarios, not historical policy observations.",
+      "not_B6_acceptance": "No2025-2060 baseline, admitted national boundary or empirical uncertainty distribution."
+    },
+    "independent_artifacts_identical": 33,
+    "baseline_full_ledger_matches_paired_candidate": true,
+    "national_B6_passed": false
+  },
+  "current_national_balance_reference": {
+    "cells": 1260,
+    "arithmetic_identities": 60,
+    "unresolved_cross_source_differences": 2,
+    "national_admission": false,
+    "review": "data/catalog/q2_national_balance_review.json",
+    "frozen_old_comparison_unresolved_count": 3,
+    "coal_bridge": "data/catalog/q2_coal_bridge_review.json",
+    "note": "The former raw-coal/coal power comparison is superseded by15rounding-consistent aggregates;gas total/transport remain unresolved; old artifacts unchanged."
+  },
+  "current_nuclear_permit_reference": {
+    "positive_records": 4,
+    "named_units": 8,
+    "year2015_identity_count_matches_report": true,
+    "all_year_calendar_complete": false,
+    "capacities_verified": true,
+    "model_admission": false,
+    "review": "data/catalog/q2_nuclear_permit_2015_supplement_review.json",
+    "source_original_fingerprints_verified": true,
+    "old_review_retained": true,
+    "capacities_verified_scope": "2015eightlicensedunits_only",
+    "capacity_MWe": 8980,
+    "start_dates": 6,
+    "approved_without_start_date": 2,
+    "source_code_conflicts": 2,
+    "construction_and_first_concrete_separated": true,
+    "capacity_review": "data/catalog/q2_nuclear_capacity_2015_review.json",
+    "reproduction": "outputs/q2/nuclear_capacity_2015_reproduction.json",
+    "independent_copy_files": 13,
+    "independent_artifacts_identical_each_environment": 3,
+    "environments": 2,
+    "exact_publication_dates_verified": false,
+    "gross_net_rating_basis_verified": false,
+    "nonissuance_review": "data/catalog/q2_nuclear_nonissuance_2016_2018_review.json",
+    "explicitly_reviewed_zero_issuance_years": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  "current_solar_ablation": {
+    "cases": 4,
+    "annual_constraint_records": 44,
+    "source_review": "data/catalog/q2_solar_timing_ceiling_review.json",
+    "independent_artifacts_identical": 8,
+    "v5_control_numeric_artifacts_identical": 8,
+    "selected_training_loss": 0.25520659563761644,
+    "national_acceptance": false,
+    "annual_global_limit_still_assumed_MW": 150000.0
+  },
+  "current_navigation_check": {
+    "passed": true,
+    "missing": []
+  },
+  "current_new_text_hygiene": {
+    "passed": true,
+    "issues": []
+  },
+  "current_accounting_bridge": {
+    "coal": {
+      "decision": "scoped_coal_aggregate_bridge_only",
+      "comparisons": 15,
+      "all_within_rounding": true,
+      "national_initialization_admitted": false,
+      "supersedes": "The raw_coal_power_input discrepancy interpretation only; old records and model outputs retained.",
+      "remaining": [
+        "Naturalgas total and transport mismatch remains.",
+        "MergedBriquettes/gangue cannot be uniquely split into physical fuels.",
+        "Aggregate agreement does not establish full national vintage or final-service/equipment admission."
+      ],
+      "review_sha256": "06def2833e4d10e650f215243c1079d01d9a511c8c476cca8296a3f3825c14f6",
+      "output_sha256": "faf5e54fcb0aa981f281a5e82625fdaeaf4ea35850b3df0074e30375768ef1ea"
+    },
+    "apec": {
+      "decision": "scoped_retrospective_energy_accounting_reference",
+      "rows": 6840,
+      "unresolved_dash_count": 5539,
+      "negative_zero_count": 8,
+      "html_tsv_exact_agreement": true,
+      "same_source_unit_checks": 1301,
+      "maximum_cross_unit_residual_PJ": 0.515264,
+      "identities_passed": 57,
+      "identities_not_testable": 468,
+      "national_initialization_admitted": false,
+      "review_sha256": "124f937c91da2ce1994f7a1d4eaf3161540eb8122efcc272ee8bcedead767e78",
+      "outputs": {
+        "apec_balance_2014.csv": "39b839399b3eae956ebf08f7fbeb67f50680643fde8d84f67f9421733d489f35",
+        "apec_balance_2014_controls.csv": "bf60b51fe5174349ac0e14a022f4840b67d399a938d126b45b1e522fdd9a644e",
+        "apec_balance_2014_identities.csv": "d0b22a363e8271cf3216ce0178af8dfb789aca161ae3c1e0bbb2bdcceba50dd1",
+        "apec_balance_2014_sector_bounds.csv": "650c3b69f406e6a44a7b15483d153897efb7e88be026eaf7a37cac6c85363ee3"
+      }
+    },
+    "sector_product_interval_rows": 54,
+    "missing_sector_aggregate_upper_ktoe": [
+      5.5,
+      3.5,
+      5.5
+    ],
+    "new_tests": 14,
+    "reproduction": "outputs/q2/balance_bridge_reproduction.json",
+    "independent_copy_files": 22,
+    "environments": 2,
+    "identical_artifacts_each": 7,
+    "historical_model_changed": false,
+    "frozen_v6_builder_reproduced": true,
+    "national_admission": false
+  },
+  "current_deployment_ablation": {
+    "cases": 4,
+    "annual_constraint_records": 44,
+    "summary": "outputs/q2/historical_candidate_v7_ablation/summary.json",
+    "technology_activity": "outputs/q2/historical_candidate_v7_ablation/technology_activity.csv",
+    "independent_artifacts_identical": 9,
+    "new_numeric_parameters": 0,
+    "single_constraint_changes_preserve_legacy_numeric_path": true,
+    "both_changed_training_loss_instant_margin": 2.6274459341477217,
+    "selected_training_loss": 0.25520659563761644,
+    "national_acceptance": false,
+    "interpretation": "Under inherited jointly-confounded stock rates and prices,removing both assumed shared bottlenecks produces overexpansion;not a reoptimized rejection of technology-frontier models."
+  },
+  "current_nuclear_approval_ablation": {
+    "cases": 2,
+    "annual_approval_records": 22,
+    "new_numeric_parameters": 0,
+    "summary": "outputs/q2/historical_candidate_v8_ablation/summary.json",
+    "approvals": "outputs/q2/historical_candidate_v8_ablation/nuclear_approvals.csv",
+    "independent_artifacts_identical": 8,
+    "control_full_ledger_identical": true,
+    "nuclear_holdout_mape": 0.045840816388736806,
+    "train_loss_increased": true,
+    "observed_event_conditioning_not_causal_policy": true,
+    "national_acceptance": false
+  },
+  "current_catalog_summary": {
+    "final_references": 118,
+    "missing_references": [],
+    "source_records": 679,
+    "source_records_with_files": 623,
+    "dataset_files": 115,
+    "nbs": {
+      "candidate_cells": 704,
+      "unique_records": 362,
+      "repeated_cells_removed": 342,
+      "conflicting_keys": 0,
+      "years": [
+        2005,
+        2024
+      ],
+      "key": [
+        "edition",
+        "family",
+        "year",
+        "region",
+        "variable",
+        "unit"
+      ],
+      "policy": "No zero filling, no averaging, no scope promotion. GDP table 3-4 versus 9-8 retained separately.",
+      "outputs": {
+        "history": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+        "provenance": "6dc5bad2fb8c555759921824a8e4eeef80053fe32c8f47535fde2e635673d95f"
+      }
+    }
+  }
+}

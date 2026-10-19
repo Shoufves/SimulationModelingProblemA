@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "rounded_mass_CO2_factor:raw_coal",
+      "residual": "0.0001626296",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:cleaned_coal",
+      "residual": "0.0003810704",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:other_washed_coal",
+      "residual": "-0.0004808036",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:coal_products",
+      "residual": "0.000255648",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:briquettes",
+      "residual": "-0.00028608",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:coal_water_slurry",
+      "residual": "0.000092544",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:pulverized_coal",
+      "residual": "0.000366688",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:coke",
+      "residual": "0.000418825",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:other_coking_products",
+      "residual": "-0.000431095",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:coke_oven_gas",
+      "residual": "-0.0002762840",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:blast_furnace_gas",
+      "residual": "-0.0001952",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:other_coal_gas",
+      "residual": "0.000426348",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:natural_gas",
+      "residual": "-0.000111910",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:liquefied_natural_gas",
+      "residual": "0.0000378",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:crude_oil",
+      "residual": "0.000202416",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:gasoline",
+      "residual": "0.000055980",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:kerosene",
+      "residual": "0.000391386666666666666666667",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:diesel",
+      "residual": "-0.000090362666666666666666667",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:fuel_oil",
+      "residual": "0.000461242666666666666666667",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:liquefied_petroleum_gas",
+      "residual": "0.000329821333333333333333333",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:refinery_dry_gas",
+      "residual": "-0.000064406666666666666666667",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "rounded_mass_CO2_factor:other_petroleum_products",
+      "residual": "0.000406933333333333333333333",
+      "tolerance": "0.0005",
+      "passed": true
+    },
+    {
+      "check": "disjoint_capacity_partition_MW",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "check": "generation_named_subtotal_does_not_exceed_total",
+      "unallocated_difference": 11.0,
+      "passed": true,
+      "interpretation": "Not a verified exhaustive partition; retain 11 x 10^8 kWh as unallocated, not rounding or a named technology."
+    },
+    {
+      "check": "generation_and_grid_construction_spending",
+      "residual": 0.0,
+      "passed": true
+    }
+  ],
+  "fuel_references": 22,
+  "power_records": 42,
+  "disjoint_capacity_groups": 9,
+  "fuel_normalization_records": 56,
+  "normalized_missing_records": 6,
+  "model_state_complete": false,
+  "no_cross_vintage_scaling": true,
+  "source_review_sha256": "9eb5502f440dedc9b4520aa6109fc07c04943f677879614e3ba79b2598cb64ad"
+}

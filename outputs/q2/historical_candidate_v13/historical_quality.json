@@ -1,0 +1,146 @@
+{
+  "passed": false,
+  "targets": [
+    {
+      "indicator": "consumption_10ktce",
+      "family": "energy_consumption",
+      "n": 3,
+      "holdout_mape": 0.04526725051846197,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 37330.40678473981,
+      "maximum_share_error_fraction": null,
+      "normalized_rmse": 0.06525086689898375,
+      "persistence_normalized_rmse": 0.11630114097040882,
+      "rmse_ratio_to_persistence": 0.5610509609324118,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "indicator": "consumption_coal_share",
+      "family": "primary_mix",
+      "n": 3,
+      "holdout_mape": 0.09885355106555076,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 0.05899261779535481,
+      "maximum_share_error_fraction": 0.05899261779535481,
+      "normalized_rmse": 0.08225417377747668,
+      "persistence_normalized_rmse": 0.02333045377845893,
+      "rmse_ratio_to_persistence": 3.5256139704158764,
+      "passed": false,
+      "reasons": [
+        "share_error_exceeded",
+        "worse_than_persistence"
+      ]
+    },
+    {
+      "indicator": "consumption_oil_share",
+      "family": "primary_mix",
+      "n": 3,
+      "holdout_mape": 0.06320754235664706,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 0.015790860865004697,
+      "maximum_share_error_fraction": 0.015790860865004697,
+      "normalized_rmse": 0.06956952886474822,
+      "persistence_normalized_rmse": 0.024065502884001555,
+      "rmse_ratio_to_persistence": 2.890840436623378,
+      "passed": false,
+      "reasons": [
+        "worse_than_persistence"
+      ]
+    },
+    {
+      "indicator": "consumption_gas_share",
+      "family": "primary_mix",
+      "n": 3,
+      "holdout_mape": 0.2140073691314819,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 0.023308242793782158,
+      "maximum_share_error_fraction": 0.023308242793782158,
+      "normalized_rmse": 0.3375950843050878,
+      "persistence_normalized_rmse": 0.05154913117764521,
+      "rmse_ratio_to_persistence": 6.548996590101391,
+      "passed": false,
+      "reasons": [
+        "mape_exceeded",
+        "worse_than_persistence"
+      ]
+    },
+    {
+      "indicator": "wind_10kW",
+      "family": "capacity_or_generation",
+      "n": 3,
+      "holdout_mape": 0.06572441068022561,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 5165.273121421094,
+      "maximum_share_error_fraction": null,
+      "normalized_rmse": 0.35600193348443776,
+      "persistence_normalized_rmse": 1.3496576566563168,
+      "rmse_ratio_to_persistence": 0.2637720252455781,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "indicator": "solar_10kW",
+      "family": "capacity_or_generation",
+      "n": 3,
+      "holdout_mape": 0.19362916354226845,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 30833.201289141114,
+      "maximum_share_error_fraction": null,
+      "normalized_rmse": 7.6886802920230535,
+      "persistence_normalized_rmse": 15.356380095669406,
+      "rmse_ratio_to_persistence": 0.5006831195973919,
+      "passed": false,
+      "reasons": [
+        "mape_exceeded"
+      ]
+    },
+    {
+      "indicator": "nuclear_10kW",
+      "family": "capacity_or_generation",
+      "n": 3,
+      "holdout_mape": 0.045840816388736806,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 390.0,
+      "maximum_share_error_fraction": null,
+      "normalized_rmse": 0.13971823377397005,
+      "persistence_normalized_rmse": 0.25059831553389833,
+      "rmse_ratio_to_persistence": 0.5575385990775761,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "indicator": "gcb_fuel_co2",
+      "family": "co2",
+      "n": 3,
+      "holdout_mape": 0.13183128893148452,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 1686.8314656727907,
+      "maximum_share_error_fraction": null,
+      "normalized_rmse": 0.16543769124926155,
+      "persistence_normalized_rmse": 0.10472521735079766,
+      "rmse_ratio_to_persistence": 1.579731180648645,
+      "passed": false,
+      "reasons": [
+        "worse_than_persistence"
+      ]
+    }
+  ],
+  "criteria": {
+    "status": "proposed_before_q2_fit",
+    "reason": "Author's explicit research tolerance, not an official contest or team threshold. No Q2 fit has been evaluated when frozen.",
+    "maximum_holdout_mape_each_target": 0.15,
+    "maximum_holdout_share_absolute_error": 0.05,
+    "maximum_holdout_normalized_rmse_ratio_to_persistence": 1.0,
+    "target_families": [
+      "energy_consumption",
+      "primary_mix",
+      "capacity_or_generation",
+      "co2"
+    ],
+    "all_families_required": true,
+    "no_holdout_retuning": true
+  },
+  "window": "already_seen_holdout",
+  "interpretation": "Quality gate only; passing synthetic fixtures is not empirical validation"
+}

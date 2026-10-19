@@ -1,0 +1,81 @@
+{
+  "id": "Q2_CURRENCY_BRIDGE_2008_2024",
+  "decision": "scoped_retrospective_currency_reference",
+  "review_date": "2026-10-19",
+  "reviewer": "same_author_original_JSON_and_indicator_definition_review",
+  "team_approval": false,
+  "dataset_updated": "2026-10-08",
+  "roles": {
+    "china_fx": "WDI_CHINA_FX_Q2_2008_2024",
+    "us_deflator": "WDI_US_GDP_DEFLATOR_2008_2024",
+    "legacy_deflator": "WDI_US_GDP_DEFLATOR_2008_2014",
+    "fx_definition": "WDI_FX_INDICATOR_DEFINITION",
+    "deflator_definition": "WDI_DEFLATOR_INDICATOR_DEFINITION"
+  },
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "WDI_CHINA_FX_Q2_2008_2024",
+      "record_sha256": "5d4d1d23ba3c72c27adce9dd22c954202da8998f721eb33d43cb6ab3a87e4442"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "WDI_US_GDP_DEFLATOR_2008_2024",
+      "record_sha256": "3a7684de5eacf3414963f8e0272f16856a229fc36eb09b5827e7e4ba146b901a"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "WDI_US_GDP_DEFLATOR_2008_2014",
+      "record_sha256": "2c8e8dfc5e3f875c198d7e4b99cd042b9843b714943e965b2dbd2cd0f8a07d13"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "WDI_FX_INDICATOR_DEFINITION",
+      "record_sha256": "0420eed8860d3743d781aca93e862444a903c1e6c3787ba9099921a7eb031013"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "WDI_DEFLATOR_INDICATOR_DEFINITION",
+      "record_sha256": "514e4eda4673cd130383ea83d55037a1ea7419de347b71cf06b890016e3d481a"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "ExistingChina macrooriginal fullyloaded:onepage126records,6indicators21years;selected17uniqueCHNPA.NUS.FCRF2008-2024positivevalues.2025notused. Headerdatasetupdated2026-10-08."
+    },
+    {
+      "passed": true,
+      "evidence": "NewUSoriginal:onepage17uniqueUSANY.GDP.DEFL.ZS2008-2024positivevalues;headerdatasetupdated2026-10-08. Sevenoverlapvalues exactlyequal oldreviewed2008-2014original;notindependentvalidation."
+    },
+    {
+      "passed": true,
+      "evidence": "WDIindicator metadata statesofficialFX islocalcurrencyunitsperUSD,periodaverage,underlyingIMFIFS. DividenominalCNYbyFX;do notmultiply or useCHNGDPgrowth."
+    },
+    {
+      "passed": true,
+      "evidence": "WDIdeflator metadata definescurrent-to-constantlocalcurrencyGDPratio;normalizewithD2008/Dyear,notassumeindexbase2008. Uniformindexrebasing leavesconversionunchanged."
+    },
+    {
+      "passed": true,
+      "evidence": "Explicitresearchassumption:USgeneralGDPdeflator normalizesnominalUSD to2008USDforaccounting,notChineseprices,costlearningorreal-timeavailableforecast. AnnualFX approximatescalendar-yearmoneyconversion."
+    },
+    {
+      "passed": true,
+      "evidence": "Unitidentity:tariffCNY/kWh *1000 /FX *D2008/Dyear /1e6 givesmillionUSD2008/MWh. VATstatusunchanged;noeligibility,fiscalpaymentorfuturepathinferred."
+    },
+    {
+      "passed": true,
+      "evidence": "Scopedreuse explicitly binds existing yx:WDI_CHINA_MACRO canonicalpath andSHA;catalog verifies identicalpublicoriginal instead of requiring duplicate rawcopy. No sourcecontent or revieweduses changed."
+    }
+  ],
+  "allowed_uses": [
+    "Retrospective annual money-unit conversion after preserving original price and tax basis.",
+    "Future explicit historical-price mapping with separate information timing and eligibility review."
+  ],
+  "prohibited_uses": [
+    "Future realized FX or inflation as investor foresight.",
+    "Interpreting factors as a forecast, VAT removal, Chinese sector inflation or national observed tariff.",
+    "Treating same-source overlap as independent data or applying2024rates to allhistoricalyears."
+  ]
+}

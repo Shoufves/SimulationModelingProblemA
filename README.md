@@ -1,10 +1,16 @@
 # A题 · 多能源协同仿真研究工作区
 
+问题二交流入口：[P2/yx 阶段性 Draft](docs/solutions/p2-yx-draft.md)。本次分享工程闭环和截至 v13 的历史诊断，全国模型与预测尚未验收；供与其他成员方案比较补强。
+
+2026-10-19 当前状态见 [v13 审批与需求联合校准](docs/solutions/p2-iteration-v13.md)：653 次训练、423 项测试通过；风电留出 MAPE 降至 6.57%，但煤、油、气、光及 CO₂ 代理共五项失败，六组全国输入、S0 和全国灵敏度尚未完成。
+
+输入与机制补强另见 [2024 初态核对](docs/solutions/p2-current-state-2024.md)及[终端服务与设备替代](docs/solutions/p2-device-service-mapping.md)；历次结果均保留原适用边界。
+
 以 `只读工作区/final.md` 为唯一研究主线。本工程已将 yx 的数学与数据准备、mmj 的可运行模块和证据核验、lb 的贸易及社会扩展资料按用途合并。仅研究 A 题。
 
-**先看路线，再选数据，再运行。** 当前能够复现附件处理、限定数据初评、需求统计回算、许可案例与合成机制实验。全国多智能体历史校准、年度与运行层耦合、2030/2060预测及政策优化仍需实施；整理完成不等于这些研究已完成。
+**先看路线，再选数据，再运行。** 当前能够复现附件处理、限定数据初评、需求统计回算、许可案例与合成机制实验。Q2已实现年度与运行层耦合，并完成十三轮真实历史聚合诊断及五轮各27组历史配对响应；当前候选五项质量门槛仍失败，尚未完成全国校准验收、2030/2060预测及政策优化。整理或工程测试通过不等于研究完成。
 
-**Q1 已整合并合入 main：lb 主线、mmj 补强。** PR #6 的评审 head 为 `da8a983`，squash 合并提交为 `804ec15ee43874303986a7ad91b2cde05c65b124`；用户明确确认三人同意并授权合并，正式 reviews 留痕的例外见[轮次日志](docs/ROUND_LOG.md)。见[整合与逐项来源](docs/solutions/p1-yx-integration.md)和[完整报告](outputs/q1/p1_yx/report.md)。默认 `run.py q1` 写入 `outputs/q1/p1_yx/`。问题二现处[准备阶段](docs/rounds/P2_Q2.md)，正式 base 待准备资料入库并验证后在 Issue 锁定。
+**Q1 已整合并合入 main：lb 主线、mmj 补强。** PR #6 的评审 head 为 `da8a983`，squash 合并提交为 `804ec15ee43874303986a7ad91b2cde05c65b124`；用户明确确认三人同意并授权合并，正式 reviews 留痕的例外见[轮次日志](docs/ROUND_LOG.md)。见[整合与逐项来源](docs/solutions/p1-yx-integration.md)和[完整报告](outputs/q1/p1_yx/report.md)。默认 `run.py q1` 写入 `outputs/q1/p1_yx/`。问题二已在 Issue #7 标为开发进行中，共同 base 为 `804ec15ee43874303986a7ad91b2cde05c65b124`；文档 PR #8 并行评审。本地进度与未完成项见 [P2/yx](docs/solutions/p2-yx.md)，较早的[开工单](docs/rounds/P2_Q2.md)准备状态保留为当时快照。
 
 ## 阅读入口
 
@@ -20,6 +26,7 @@
 | [P0 → P1/Q1 开工单](docs/rounds/P0_P1_Q1.md) | 问题一的输入范围、交付物、验收与起跑线锁定状态 |
 | [轮次日志](docs/ROUND_LOG.md) | 问题一采用关系、合并、验收、延期项及下一轮状态 |
 | [P2/Q2 开工单](docs/rounds/P2_Q2.md) | 问题二完整任务、输入用途、必交产物、验收与待锁定基线 |
+| [P2/yx 本地实现进展](docs/solutions/p2-yx.md) | 用户授权后的 Mesa/SciPy 闭环、历史用途复核、工程复现与未完成项；不等于全国验收 |
 | [P1/lb 问题一候选](docs/solutions/p1-lb.md) | 本分支的问题一报告、补齐后逐项核对、用途审查与复现入口；尚未替代三人评审 |
 
 ## 目录职责
@@ -51,6 +58,8 @@ A题/
 `docs/history/` 中旧基年、情景编号与研究优先级仅作追溯；执行以final为准。`tmp/` 仅由运行时产生，不是数据或交付成果。原三人工作区已不再作为并行工程保留。
 
 ## 常用命令
+
+此前[第七轮建设约束对照](docs/solutions/p2-iteration-v7.md)选中原结构，保留五项失败。此前补入[能源账桥接与部门初态约束](docs/solutions/p2-balance-bridge.md)：煤炭15项聚合吻合、APEC2014详细平衡及缺项区间已离线复算。另补[2015核电许可/容量/开工状态](docs/solutions/p2-nuclear-reference.md)，8台额定8980MWe及两处编号冲突已核验。[v8核电审批回放](docs/solutions/p2-iteration-v8.md)使核电项通过原门槛，仍有四项失败；最新[v9风光联合校准](docs/solutions/p2-iteration-v9.md)完成486组训练，训练改善但风电留出恶化；另有[历史电价时间线](docs/solutions/p2-policy-timeline.md)补核。另完成[名义合同有限批次对照](docs/solutions/p2-nominal-contracts.md)：七条路径财政支付有变化，物理路径未改善；其后[v10初始光伏队列联合诊断](docs/solutions/p2-iteration-v10.md)完成1458组训练，四项门槛仍失败；另补[2024核电设备与队列参照](docs/solutions/p2-nuclear-state-2024.md)，源内身份/时点冲突保留；另完成[活动量驱动及交通口径复审](docs/solutions/p2-activity-drivers.md)，其后完成[非能源原料分账试验](docs/solutions/p2-nonenergy-partition.md)：29条预设路径、原料/燃料/现金核对及两环境37项产物复现通过。其后[v11部门需求诊断](docs/solutions/p2-iteration-v11.md)完成756次训练，六种结构均保留原控制；新的部门统一GDP响应没有改善训练。当前392项测试通过，全国预测尚未验收。
 
 在本目录用 Python 3.11 及以上运行（本轮复现环境记录在 `outputs/validation/`）：
 

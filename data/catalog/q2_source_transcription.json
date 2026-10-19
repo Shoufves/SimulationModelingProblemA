@@ -1,0 +1,74 @@
+{
+  "status": "visually_checked_source_cells_2026-10-18",
+  "reviewer": "yx_assisted_local_review_not_team_approval",
+  "nbs_consumption": {
+    "path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+    "columns": ["consumption_10ktce", "consumption_coal_pct", "consumption_oil_pct", "consumption_gas_pct", "consumption_primary_electricity_other_pct"],
+    "rows": {
+      "2005": [261369,72.4,17.8,2.4,7.4],
+      "2014": [428334,65.8,17.3,5.6,11.3],
+      "2015": [434113,63.8,18.4,5.8,12.0],
+      "2016": [441492,62.2,18.7,6.1,13.0],
+      "2017": [455827,60.6,18.9,6.9,13.6],
+      "2018": [471925,59.0,18.9,7.6,14.5],
+      "2019": [485584,57.5,19.0,8.0,15.4],
+      "2020": [496514,56.7,18.9,8.4,16.0],
+      "2021": [525027,55.7,18.8,8.8,16.7],
+      "2022": [541274,55.6,18.4,8.4,17.6],
+      "2023": [571327,54.8,18.8,8.5,17.9],
+      "2024": [596000,53.2,18.2,8.8,19.8]
+    },
+    "admitted_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+    "restriction": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice."
+  },
+  "nbs_capacity": {
+    "path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+    "columns": ["total_10kW", "thermal_10kW", "hydro_10kW", "nuclear_10kW", "wind_10kW", "solar_10kW", "other_10kW"],
+    "rows": {
+      "2005": [51718,39138,11739,696,106,null,null],
+      "2014": [137887,93232,30486,2008,9657,2486,19],
+      "2015": [152527,100554,31954,2717,13075,4218,9],
+      "2016": [165051,106094,33207,3364,14747,7631,7],
+      "2017": [177708,110495,34359,3582,16325,12942,7],
+      "2018": [189997,114408,35259,4466,18427,17433,5],
+      "2019": [200985,118957,35804,4874,20915,20429,5],
+      "2020": [220504,124960,37028,4989,28165,25356,5],
+      "2021": [237689,129739,39094,5326,32871,30654,5],
+      "2022": [256317,133527,41396,5557,36564,39268,5],
+      "2023": [292224,139099,42237,5691,44144,61048,5],
+      "2024": [334922,144462,43552,6083,52078,88742,5]
+    },
+    "admitted_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+    "restriction": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue."
+  },
+  "nbs_gdp": {
+    "path": "data/raw/lb/base/nbs/yearbook2025/C09-08.jpg",
+    "columns": ["real_gdp_growth_pct"],
+    "rows": {"2005":[11.5],"2014":[7.5],"2015":[7.0],"2016":[6.8],"2017":[6.9],"2018":[6.8],"2019":[6.1],"2020":[2.3],"2021":[8.6],"2022":[3.1],"2023":[5.4],"2024":[5.0]},
+    "admitted_use": "Q2 exogenous realized GDP growth driver, never an energy-behavior calibration target",
+    "restriction": "Already-seen conditional hindcast. Do not mix with table 3-4 silently; this limited subset alone cannot compound a 2005-2024 index."
+  },
+  "btr_co2": {
+    "path": "data/raw/lb/base/reports/china_btr1_2024.pdf",
+    "locator": "Table 1-4a; physical PDF pages 30-31, printed pages 20-21; CO2 columns only; table notes on physical page 32",
+    "unit": "10^4 t CO2",
+    "years": [2005,2020,2021],
+    "rows": {
+      "total_excluding_lulucf": [653345.2,1120166.8,1162800.9],
+      "total_including_lulucf": [580478.5,985904.0,1028151.0],
+      "energy_combustion": [578429.9,966087.9,1009504.3],
+      "energy_industry": [244372.7,478003.0,525862.1],
+      "manufacturing_construction": [236837.4,332293.1,323880.8],
+      "transport": [46102.1,91049.9,99129.3],
+      "other_energy_sectors": [51117.7,64741.9,60632.1],
+      "industrial_process_product_use": [74864.7,153211.8,152398.3],
+      "lulucf_net_co2": [-72866.7,-134262.9,-134649.9],
+      "waste_co2": [50.7,867.1,898.3],
+      "international_aviation_memo": [1330.0,2206.9,2032.2],
+      "international_shipping_memo": [1538.6,3586.8,3993.3],
+      "biomass_combustion_memo": [83206.3,29230.6,32506.8]
+    },
+    "admitted_use": "Q2 historical CO2 boundary checks; sparse net-flux anchors; memoir emissions remain outside inventory totals",
+    "restriction": "No CH4/N2O/CO2e mixing. LULUCF is a net sector flux, not gross engineered removal capacity. No 2024-2060 sink path follows from these three observations. Do not splice with GCB without boundary reconciliation."
+  }
+}

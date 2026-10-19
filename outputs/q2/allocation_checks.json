@@ -1,0 +1,92 @@
+{
+  "all_checks_passed": true,
+  "years": 11,
+  "allocation_requests": 54,
+  "no_same_year_commissioning": true,
+  "maximum_money_error": 9.5367431640625e-07,
+  "maximum_queue_escrow_error": 8.731149137020111e-11,
+  "maximum_carrier_balance_error_mwh": 1.862645149230957e-09,
+  "engineering_identical_count": 19,
+  "engineering_files": {
+    "action_ledger.csv": {
+      "byte_identical": true,
+      "sha256": "f5b6af4527d5649f1819aedb1cf4185e98ab7db460ce0758a6d5c28ea6aae564"
+    },
+    "asset_ledger.csv": {
+      "byte_identical": true,
+      "sha256": "605f039d8014b6801200b2f2736a3b19020404d9834cf66f37decb4461108046"
+    },
+    "baseline_metrics.csv": {
+      "byte_identical": true,
+      "sha256": "9785ed9f51cc7f1e635d47a2135cf089feb7b924b615cbee997f79b487926b04"
+    },
+    "baseline_path.csv": {
+      "byte_identical": true,
+      "sha256": "12e55142fd2d7f85c5006d90e75de17313a252a9d8fc97bf48719279b1ef003b"
+    },
+    "baseline_path.svg": {
+      "byte_identical": true,
+      "sha256": "970cc56b00341add7219d10cb0965f1e5b2bcc1e81dfe4a86cc2750ad116ded8"
+    },
+    "calibration.json": {
+      "byte_identical": true,
+      "sha256": "b24aae57a0c94fb34bd5bc3d76df7b6eabccd2f3fe4002a0dcade2e7edfee6ed"
+    },
+    "cash_ledger.csv": {
+      "byte_identical": true,
+      "sha256": "2e85883f1132ef4a50ea06c44696686b46328208535933f07f7413ede64f83b1"
+    },
+    "gaps_and_conflicts.csv": {
+      "byte_identical": true,
+      "sha256": "b5aff8809293936d54605c53f39c152b0f98d8a997629224e0b5b8aebe3b3fd8"
+    },
+    "historical_operation_ledger.json": {
+      "byte_identical": true,
+      "sha256": "ae6f1ee945ac6d2e91330c181340c269a1c7cd3a44fd1a0a4d17291e75286df9"
+    },
+    "historical_quality.json": {
+      "byte_identical": true,
+      "sha256": "bfb17f11dd6088a5c44ffccab66badc819e4dbe5c138138b445f1a09bd7d8cea"
+    },
+    "history_baselines.csv": {
+      "byte_identical": true,
+      "sha256": "e3e8fc764c1d2fb112e1a1902c7c4f47f7f7942823083e818b3ccf03f5682a56"
+    },
+    "history_fit.csv": {
+      "byte_identical": true,
+      "sha256": "0434b4c5c1e7cf32123ce42cb05c11ab106726c95bf120f388af08561fdab266"
+    },
+    "history_fit.svg": {
+      "byte_identical": true,
+      "sha256": "63d86a6cdf17fcebb40831f2f354d71539484980b098fe6c9c2daf273cb2dae3"
+    },
+    "information_ledger.csv": {
+      "byte_identical": true,
+      "sha256": "c75143b854f93001e456f055a20a7c5817b14b9dbdf85bebdd07eb05d5351178"
+    },
+    "lifecycle_queue.json": {
+      "byte_identical": true,
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    "operation_ledger.json": {
+      "byte_identical": true,
+      "sha256": "0f3b8fcfb59f3ea8502fdc65e10553ab7a68ed423456ecebcf238287dad37456"
+    },
+    "project_ledger.json": {
+      "byte_identical": true,
+      "sha256": "e5b84ff0a50a814c6e97349b6b0d3af5ca6775ed264ddb7e5e025f8a2075c155"
+    },
+    "report.md": {
+      "byte_identical": true,
+      "sha256": "63cf28d93d354fb2a875920c08f434efa270001599150d0e3e51142014de0531"
+    },
+    "sensitivity.csv": {
+      "byte_identical": true,
+      "sha256": "93a6f67fa73bb41b74b8d2bcca692e7cd018b8e14751ec846a02d1f1e00a5c75"
+    }
+  },
+  "wind_receives_positive_allocation_2019_2024": true,
+  "national_acceptance": false,
+  "model_sha256": "6f1d68792c5577b5af2ac6167a46203e910a04864e2cd799d120da6b96d1cfd0",
+  "result_sha256": "ab1c9e732b879ce6a7e4e8deef21bae96e5ac1c3b44388fba0da8add0c37bb8f"
+}

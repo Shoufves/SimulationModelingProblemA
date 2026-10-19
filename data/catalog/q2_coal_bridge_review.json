@@ -1,0 +1,295 @@
+{
+  "version": 1,
+  "review_date": "2026-10-19",
+  "reviewer": "yx_assisted_local_review",
+  "team_approval": false,
+  "decision": "scoped_coal_aggregate_bridge_only",
+  "supersedes_interpretation": "q2_national_balance_review.json raw-coal power discrepancy; frozen reviews and v5/v6 numerical outputs preserved.",
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/ceads_national_energy_inventory_2000_2015_v1.xlsx",
+      "sha256": "541f53af9bad48184aa87f7378a229cba765de6b9157b08f0411461a9c86a237"
+    },
+    {
+      "path": "data/raw/q2/ceads_national5425546_v1.json",
+      "sha256": "18e7c3e0cb2bc108e1a10e678c58510dd460f6da84b5d006af756a51087f18f2"
+    },
+    {
+      "path": "data/raw/q2/ceads_national_methods_2018.html",
+      "sha256": "cacdccec66be189048de41644a6cb5bb514b1ff9eaeadad43a2fa65b30222793"
+    },
+    {
+      "path": "data/processed/q2/nbs2014_accounts.csv",
+      "sha256": "906aa8825738437673a56a4ca64872f9d99082b1e9775fb0b47c582ca9280993"
+    },
+    {
+      "path": "data/catalog/q2_nbs2014_review.json",
+      "sha256": "239ffad4e945c785803d8a0b5173195ac8ecdaa66feedcbdd7efbdcca5f59be7"
+    },
+    {
+      "path": "data/processed/q2/national_balance_2014_reference.csv",
+      "sha256": "6035f3c203583217b1b2047497c20c7bd9437553992e613d6cbea822ce583fa6"
+    },
+    {
+      "path": "data/raw/lb/base/nbs/archive/2016/0905CH.jpg",
+      "sha256": "49258e2158ad376d5bce37aca3f474d9fb236435b3647c3b84335100c753f075"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "CEADS_NATIONAL_ENERGY_2000_2015_V1",
+      "record_sha256": "08de4862ba13550d65745f50019374036cb064e356a5dc00b29b5fe677533568"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "CEADS_NATIONAL_ENERGY_2000_2015_V1_METADATA",
+      "record_sha256": "43ad7f8047d58400eddd38d1a898c9ca148f26e743ee4a1cc4caaac69aee53fd"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "CEADS_NATIONAL_METHODS_2018",
+      "record_sha256": "6716dcb2cb01c0e46bae93ea926959c75db031324bf21673ea48ce229e0cf239"
+    }
+  ],
+  "mappings": [
+    {
+      "comparison": "coal_power_input",
+      "ceads_cells": [
+        "B54",
+        "C54",
+        "D54"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "power_input",
+      "scope": "Raw+cleaned+otherwashed coal; excludes merged briquettes/gangue columnE."
+    },
+    {
+      "comparison": "coal_heat_input",
+      "ceads_cells": [
+        "B55",
+        "C55",
+        "D55"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "heat_input",
+      "scope": "Raw+cleaned+otherwashed coal; excludes merged briquettes/gangue columnE."
+    },
+    {
+      "comparison": "coal_coking_input",
+      "ceads_cells": [
+        "B57",
+        "C57",
+        "D57"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "coking_input",
+      "scope": "Raw+cleaned+otherwashed coal; excludes merged briquettes/gangue columnE."
+    },
+    {
+      "comparison": "coal_refining_input",
+      "ceads_cells": [
+        "B58",
+        "C58",
+        "D58"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "refining_input",
+      "scope": "Raw+cleaned+otherwashed coal; excludes merged briquettes/gangue columnE."
+    },
+    {
+      "comparison": "coal_gas_input",
+      "ceads_cells": [
+        "B59",
+        "C59",
+        "D59"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "gas_input",
+      "scope": "Raw+cleaned+otherwashed coal; excludes merged briquettes/gangue columnE."
+    },
+    {
+      "comparison": "coal_loss",
+      "ceads_cells": [
+        "B56",
+        "C56",
+        "D56"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "loss",
+      "scope": "Raw+cleaned+otherwashed coal; excludes merged briquettes/gangue columnE."
+    },
+    {
+      "comparison": "coal_final",
+      "ceads_cells": [
+        "B3",
+        "C3",
+        "D3",
+        "E3"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "final",
+      "scope": "All four coal product columns at final use; no claim to split merged columnE."
+    },
+    {
+      "comparison": "coal_intermediate",
+      "ceads_cells": [
+        "B54",
+        "C54",
+        "D54",
+        "B55",
+        "C55",
+        "D55",
+        "B57",
+        "C57",
+        "D57",
+        "B58",
+        "C58",
+        "D58",
+        "B59",
+        "C59",
+        "D59",
+        "B61",
+        "C61",
+        "D61",
+        "E61"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "intermediate",
+      "scope": "Five conversion uses plus net briquetting; wash loss separately counted."
+    },
+    {
+      "comparison": "coal_consumption",
+      "ceads_cells": [
+        "B3",
+        "C3",
+        "D3",
+        "E3",
+        "B54",
+        "C54",
+        "D54",
+        "B55",
+        "C55",
+        "D55",
+        "B57",
+        "C57",
+        "D57",
+        "B58",
+        "C58",
+        "D58",
+        "B59",
+        "C59",
+        "D59",
+        "B61",
+        "C61",
+        "D61",
+        "E61",
+        "B56",
+        "C56",
+        "D56"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "consumption",
+      "scope": "Final+intermediate+wash loss; excludes columnE power/heat/washing net17.0. Aggregate bridge does not disaggregate gangue."
+    },
+    {
+      "comparison": "coal_agriculture",
+      "ceads_cells": [
+        "B4",
+        "C4",
+        "D4",
+        "E4"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "agriculture",
+      "scope": "Sector coal aggregate including merged briquettes/gangue column; no inferred product split."
+    },
+    {
+      "comparison": "coal_construction",
+      "ceads_cells": [
+        "B45",
+        "C45",
+        "D45",
+        "E45"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "construction",
+      "scope": "Sector coal aggregate including merged briquettes/gangue column; no inferred product split."
+    },
+    {
+      "comparison": "coal_transport",
+      "ceads_cells": [
+        "B46",
+        "C46",
+        "D46",
+        "E46"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "transport",
+      "scope": "Sector coal aggregate including merged briquettes/gangue column; no inferred product split."
+    },
+    {
+      "comparison": "coal_trade",
+      "ceads_cells": [
+        "B47",
+        "C47",
+        "D47",
+        "E47"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "trade",
+      "scope": "Sector coal aggregate including merged briquettes/gangue column; no inferred product split."
+    },
+    {
+      "comparison": "coal_other",
+      "ceads_cells": [
+        "B48",
+        "C48",
+        "D48",
+        "E48"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "other",
+      "scope": "Sector coal aggregate including merged briquettes/gangue column; no inferred product split."
+    },
+    {
+      "comparison": "coal_household",
+      "ceads_cells": [
+        "B49",
+        "C49",
+        "D49",
+        "E49",
+        "B50",
+        "C50",
+        "D50",
+        "E50"
+      ],
+      "nbs_table": "0905CH",
+      "nbs_account": "household",
+      "scope": "Sector coal aggregate including merged briquettes/gangue column; no inferred product split."
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "NBS2016 original0905CH image visually re-read: title煤炭平衡表, unit万吨,2014 column. Coal is not rawcoal alone. CEADs2014 B/C/D are raw,cleaned,otherwashed coal in104tn. B54+C54+D54=181945.9+32.2+2547.2=184525.3, exactly NBS powerinput."
+    },
+    {
+      "passed": true,
+      "evidence": "CEADs methods2018 Table1 (HTML aroundlines1561–1566) merges briquettes and gangue into the inventoryBriquettes category. E54/E55/E56 cannot each be relabeled puregangue without original disaggregation; bridge excludes those conversion entries and reports scope explicitly."
+    },
+    {
+      "passed": true,
+      "evidence": "Direct source-cell expressions specified for power,heat,coking,refining,gasworks,washloss,final,intermediate,total andsixfinalsectors. Source rounding is0.1万吨 in both tables; use halfunit bound per independently printed term, not a fitted tolerance."
+    },
+    {
+      "passed": true,
+      "evidence": "Original B54-only discrepancy remains in old frozen report as historical diagnostic. New bridge supersedes that interpretation only. Naturalgas total/transport discrepancy, nonenergy allocation and broad vintage equivalence remain unresolved."
+    }
+  ],
+  "unresolved": [
+    "Naturalgas total and transport mismatch remains.",
+    "MergedBriquettes/gangue cannot be uniquely split into physical fuels.",
+    "Aggregate agreement does not establish full national vintage or final-service/equipment admission."
+  ]
+}

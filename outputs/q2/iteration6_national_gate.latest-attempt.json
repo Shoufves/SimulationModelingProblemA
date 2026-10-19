@@ -1,0 +1,55 @@
+{
+  "run_id": "6b6689b5f4df425fa5190e3fd7335bbd",
+  "status": "failed",
+  "output_valid_for_this_attempt": false,
+  "national_acceptance": false,
+  "error": "Required national inputs are not yet admitted",
+  "exception": "AdmissionError",
+  "config_path": "workflow/q2_inputs.json",
+  "config_sha256": "98b5dea4fc119ef02ae401193a9dcb6ae61c585de5059a23c60182c6f5fbeb10",
+  "seconds": 0.0012935999839100987,
+  "gaps": [
+    {
+      "id": "historical_initialization",
+      "gate": "B3/B4",
+      "required": "2014 end / 2015 start sector service, technology, finance and project queues with causal information dates",
+      "available_evidence": "data/processed/q2/history_observations.csv; data/processed/q2/sector_balance_2014_30province.csv; data/processed/q2/nbs2014_accounts.csv; data/processed/q2/nbs2014_boundary_diagnostics.csv; data/processed/q2/initialization_2014_capacity.csv; data/processed/q2/power_2014_reference.csv; data/processed/q2/initialization_2014_fuel_normalization.csv; workflow/q2_candidates/v1/initialization.json; workflow/q2_candidates/v1/assumptions.json; data/processed/q2/nuclear_queue_2014_reference.csv; data/catalog/q2_nuclear_queue_review.json; workflow/q2_candidates/v4/initialization.json; data/processed/q2/national_balance_2014_reference.csv; data/catalog/q2_national_balance_review.json; data/catalog/q2_nuclear_permit_2015_review.json; workflow/q2_candidates/v5/initialization.json",
+      "remaining": "26NEA2014year-end units28450MW and NNSA statuses now reviewed; v4 applies explicit duration/funding hypotheses rather than observed future dates. NEA/NBS20MW stock difference retained. Full sector services/nonenergy/ages/finance and national statistical bridge still need substantive mapping. National CEADs2014 cells1260 and60identities reviewed, but gas total/transport and coal-power differences remain unresolved. Three positive2015construction-permit records cover six named units; capacities/calendar incomplete, not used to invent approvals."
+    },
+    {
+      "id": "current_initialization",
+      "gate": "B3/B5",
+      "required": "2024 asset, fuel, service, storage and queue state on one consistent boundary",
+      "available_evidence": "outputs/q1/p1_yx/model_handoff.csv",
+      "remaining": "Candidate totals do not uniquely determine service/efficiency, inventory or asset age"
+    },
+    {
+      "id": "technology_and_prices",
+      "gate": "B2/B3/B6",
+      "required": "Matched CAPEX/OPEX, lifetimes, fuel energy factors, prices, price year, policy coverage and allocation rules",
+      "available_evidence": "data/processed/q2/technology_reference.csv; data/catalog/q2_technology_review.json; data/processed/technology_accounting_parameters.csv; data/processed/q2/fuel_reference.csv; data/processed/q2/technology_2010_samples.csv; data/processed/q2/technology_2010_annex.csv; data/processed/q2/technology_2010_parameters.csv; data/processed/q2/technology_2010_diagnostics.csv; data/processed/q2/policy_reference.csv; data/catalog/q2_policy_review.json; data/catalog/q2_mapping_2014_review.json; data/catalog/q2_mapping_2014_transcription.json; data/catalog/q2_solar_timing_ceiling_review.json",
+      "remaining": "Historical-vintage IEA2010 references and22 WRI2013 named-fuel defaults now reviewed. Still need model-specific parameter selection, matched price year, fixed/variable O&M split, service conversion and liability coverage. Three IEA main/annex comparisons remain unresolved; do not silently mix coal mass price and heat basis or treat samples as observed national fleet. IRENA2014cost range/indicative new-projectCF and US GDP deflator rebasing now tested as explicit research assumptions; no certification of Chinese price index or national fleet sample. V6correctsJanuary2015sourceavailability and compares2200GWutilitytechnicalpotential with20xopeningstock; aggregate mapping is still hypothetical, not an annual deployment allowance."
+    },
+    {
+      "id": "operation_chronology",
+      "gate": "B2/B3",
+      "required": "Matched load/wind/PV/hydro profiles, fuel supply and withdrawal bounds, inventory conditions",
+      "available_evidence": "data/processed/province_load_2018_MWh.csv",
+      "remaining": "2018 reconstructed shape is not 2024 measured chronology; representative-year hypothesis and robustness need review"
+    },
+    {
+      "id": "carbon_boundary",
+      "gate": "B3/B5",
+      "required": "One reviewed gross CO2/process/waste/net land or engineered removal boundary and 2024-2060 assumptions",
+      "available_evidence": "data/processed/q2/btr_co2_anchors.csv; data/processed/q2/inventory_boundary_checks.csv",
+      "remaining": "BTR/GCB disagree; sparse official anchors are not a future removal forecast"
+    },
+    {
+      "id": "frozen_experiment",
+      "gate": "B4/B6",
+      "required": "Reviewed bounds/scales/weights and GDP/cost/carbon ranges, information dates and policy target comparisons",
+      "available_evidence": "workflow/q2_acceptance.json; workflow/q2_candidates/v1/experiment.json; outputs/q2/historical_candidate_v1/historical_quality.json; workflow/q2_candidates/v4/experiment.json; outputs/q2/historical_candidate_v4/historical_quality.json; outputs/q2/iteration4_reproduction.json; workflow/q2_candidates/v5/experiment.json; outputs/q2/historical_candidate_v5/historical_quality.json; outputs/q2/iteration5_reproduction.json; workflow/q2_candidates/v5_sensitivity.json; outputs/q2/historical_candidate_v5_sensitivity/summary.json; workflow/q2_candidates/v6/manifest.json; outputs/q2/historical_candidate_v6/historical_quality.json; outputs/q2/iteration6_reproduction.json; outputs/q2/historical_candidate_v6_ablation/constraint_usage.csv",
+      "remaining": "Six exploratory versions executed81/486/729/972/750/12valid training cases. V6zero-new-parameter date/resource ablation lowers training loss but still fails5of8numeric targets; wind worsens. V5/v6each execute27historical response cases. Technical ceiling no longer clips PV, but arbitrary150GWannual construction/connection limits bind from2016. Not national S0/B6; all prior boundary and sequential-search limitations remain."
+    }
+  ]
+}

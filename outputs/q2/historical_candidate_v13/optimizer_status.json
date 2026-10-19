@@ -1,0 +1,278 @@
+[
+  {
+    "case": "fixed_150GW__benefit_priority",
+    "rule": "adaptive_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "actual_executions": 49,
+    "best": {
+      "trial": 44,
+      "case": "fixed_150GW__benefit_priority",
+      "rule": "adaptive_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.4291187739463601,
+        "solar_stock_expansion_rate": 0.6572807723250199,
+        "oil_residual_elasticity": 0.6873840130088182,
+        "gas_residual_elasticity": 1.9130470201265433,
+        "coal_residual_intensity_improvement": 0.029999178332475177,
+        "electricity_elasticity": 0.7000153841710041
+      },
+      "status": "valid",
+      "loss": 0.7183150526570823
+    }
+  },
+  {
+    "case": "fixed_150GW__benefit_priority",
+    "rule": "instant_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "actual_executions": 56,
+    "best": {
+      "trial": 105,
+      "case": "fixed_150GW__benefit_priority",
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.23924051055197737,
+        "solar_stock_expansion_rate": 0.4574523830819981,
+        "oil_residual_elasticity": 0.7073623298546036,
+        "gas_residual_elasticity": 1.9266697123264003,
+        "coal_residual_intensity_improvement": 0.029995456452928955,
+        "electricity_elasticity": 0.7031696633164236
+      },
+      "status": "valid",
+      "loss": 0.13583297995129776
+    }
+  },
+  {
+    "case": "fixed_150GW__proportional_requests",
+    "rule": "adaptive_margin",
+    "success": true,
+    "status": 2,
+    "message": "`ftol` termination condition is satisfied.",
+    "actual_executions": 56,
+    "best": {
+      "trial": 161,
+      "case": "fixed_150GW__proportional_requests",
+      "rule": "adaptive_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.11544675474321771,
+        "solar_stock_expansion_rate": 0.6572807723250118,
+        "oil_residual_elasticity": 0.6787743262842579,
+        "gas_residual_elasticity": 1.913895969742359,
+        "coal_residual_intensity_improvement": 0.028394200880586275,
+        "electricity_elasticity": 0.7000002435957249
+      },
+      "status": "valid",
+      "loss": 0.7601379769768937
+    }
+  },
+  {
+    "case": "fixed_150GW__proportional_requests",
+    "rule": "instant_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "actual_executions": 63,
+    "best": {
+      "trial": 219,
+      "case": "fixed_150GW__proportional_requests",
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.24183444314471036,
+        "solar_stock_expansion_rate": 0.5082671370268271,
+        "oil_residual_elasticity": 0.7105777108855307,
+        "gas_residual_elasticity": 1.9343189347712555,
+        "coal_residual_intensity_improvement": 0.029999999999999624,
+        "electricity_elasticity": 0.7168458276073418
+      },
+      "status": "valid",
+      "loss": 0.07621858174497165
+    }
+  },
+  {
+    "case": "GDP_proportional__benefit_priority",
+    "rule": "adaptive_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "actual_executions": 49,
+    "best": {
+      "trial": 273,
+      "case": "GDP_proportional__benefit_priority",
+      "rule": "adaptive_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.4291187739462382,
+        "solar_stock_expansion_rate": 0.6572807654583313,
+        "oil_residual_elasticity": 0.6963289960079874,
+        "gas_residual_elasticity": 1.91904222571863,
+        "coal_residual_intensity_improvement": 0.02999667752972325,
+        "electricity_elasticity": 0.7001641462041215
+      },
+      "status": "valid",
+      "loss": 0.6534437442797093
+    }
+  },
+  {
+    "case": "GDP_proportional__benefit_priority",
+    "rule": "instant_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "actual_executions": 56,
+    "best": {
+      "trial": 329,
+      "case": "GDP_proportional__benefit_priority",
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.1854559626638201,
+        "solar_stock_expansion_rate": 0.42179424863095183,
+        "oil_residual_elasticity": 0.7074488804147925,
+        "gas_residual_elasticity": 1.9267103613472474,
+        "coal_residual_intensity_improvement": 0.029997091856039295,
+        "electricity_elasticity": 0.7025410015116528
+      },
+      "status": "valid",
+      "loss": 0.16111047523696437
+    }
+  },
+  {
+    "case": "GDP_proportional__proportional_requests",
+    "rule": "adaptive_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "actual_executions": 49,
+    "best": {
+      "trial": 378,
+      "case": "GDP_proportional__proportional_requests",
+      "rule": "adaptive_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.3537907608049336,
+        "solar_stock_expansion_rate": 0.657280772325018,
+        "oil_residual_elasticity": 0.6948545184013657,
+        "gas_residual_elasticity": 1.9180951518114595,
+        "coal_residual_intensity_improvement": 0.029999343948970754,
+        "electricity_elasticity": 0.7000918012177473
+      },
+      "status": "valid",
+      "loss": 0.6664084880269967
+    }
+  },
+  {
+    "case": "GDP_proportional__proportional_requests",
+    "rule": "instant_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "actual_executions": 63,
+    "best": {
+      "trial": 436,
+      "case": "GDP_proportional__proportional_requests",
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.20771687025183652,
+        "solar_stock_expansion_rate": 0.4306761509387004,
+        "oil_residual_elasticity": 0.7095814846296522,
+        "gas_residual_elasticity": 1.9312788311654714,
+        "coal_residual_intensity_improvement": 0.029999999999999992,
+        "electricity_elasticity": 0.7105061362705958
+      },
+      "status": "valid",
+      "loss": 0.15052608416522323
+    }
+  },
+  {
+    "case": "technology_frontiers__benefit_priority",
+    "rule": "adaptive_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "actual_executions": 49,
+    "best": {
+      "trial": 490,
+      "case": "technology_frontiers__benefit_priority",
+      "rule": "adaptive_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.38337877687720423,
+        "solar_stock_expansion_rate": 0.6572807712988995,
+        "oil_residual_elasticity": 0.6990514686222655,
+        "gas_residual_elasticity": 1.9209993166549157,
+        "coal_residual_intensity_improvement": 0.029993153113201262,
+        "electricity_elasticity": 0.7003082092544601
+      },
+      "status": "valid",
+      "loss": 0.652649063772557
+    }
+  },
+  {
+    "case": "technology_frontiers__benefit_priority",
+    "rule": "instant_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "actual_executions": 56,
+    "best": {
+      "trial": 546,
+      "case": "technology_frontiers__benefit_priority",
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.18354496892577726,
+        "solar_stock_expansion_rate": 0.4219484088995854,
+        "oil_residual_elasticity": 0.7075732841912388,
+        "gas_residual_elasticity": 1.9268625889740445,
+        "coal_residual_intensity_improvement": 0.02999759823024116,
+        "electricity_elasticity": 0.702685740902331
+      },
+      "status": "valid",
+      "loss": 0.16090237197295743
+    }
+  },
+  {
+    "case": "technology_frontiers__proportional_requests",
+    "rule": "adaptive_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "actual_executions": 49,
+    "best": {
+      "trial": 595,
+      "case": "technology_frontiers__proportional_requests",
+      "rule": "adaptive_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.38337877687720423,
+        "solar_stock_expansion_rate": 0.6572807712988995,
+        "oil_residual_elasticity": 0.6990514686222655,
+        "gas_residual_elasticity": 1.9209993166549157,
+        "coal_residual_intensity_improvement": 0.029993153113201262,
+        "electricity_elasticity": 0.7003082092544601
+      },
+      "status": "valid",
+      "loss": 0.652649063772557
+    }
+  },
+  {
+    "case": "technology_frontiers__proportional_requests",
+    "rule": "instant_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "actual_executions": 56,
+    "best": {
+      "trial": 651,
+      "case": "technology_frontiers__proportional_requests",
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.18354496892577726,
+        "solar_stock_expansion_rate": 0.4219484088995854,
+        "oil_residual_elasticity": 0.7075732841912388,
+        "gas_residual_elasticity": 1.9268625889740445,
+        "coal_residual_intensity_improvement": 0.02999759823024116,
+        "electricity_elasticity": 0.702685740902331
+      },
+      "status": "valid",
+      "loss": 0.16090237197295743
+    }
+  }
+]

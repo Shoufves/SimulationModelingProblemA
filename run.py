@@ -22,13 +22,15 @@ def tests():
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command',choices=['audit','catalog','test','attachments','verify','prototype','baseline','reproduce-lb','status','q1'])
+    parser.add_argument('command',choices=['audit','catalog','test','attachments','verify','prototype','baseline','reproduce-lb','status','q1','q2'])
+    parser.add_argument('--config',default='workflow/q2_inputs.json')
     parser.add_argument('--output-dir',default='outputs/q1/p1_yx')
     parser.add_argument('--recipe',choices=['national','trade','international','ai_trade'],default='trade')
     args=parser.parse_args()
     os.chdir(ROOT)
     if args.command=='test':return tests()
     if args.command=='q1':return script('build_q1.py','--output-dir',args.output_dir)
+    if args.command=='q2':return script('run_q2.py','--config',args.config,'--output-dir',args.output_dir if args.output_dir!='outputs/q1/p1_yx' else 'outputs/q2/p2_yx')
     if args.command=='reproduce-lb':return script('reproduce_lb.py',args.recipe)
     jobs={
         'audit':[('audit_workspace.py',)],

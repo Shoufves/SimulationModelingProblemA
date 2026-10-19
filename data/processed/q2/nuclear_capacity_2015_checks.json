@@ -1,0 +1,40 @@
+{
+  "scope": "retrospective_2015_nuclear_reference",
+  "units": 8,
+  "capacity_MWe": 8980,
+  "start_date_reported_units": 6,
+  "approved_without_start_date_units": 2,
+  "source_code_conflicts": 2,
+  "construction_first_concrete_operation_separated": true,
+  "prior_permit_unit_count_reconciled": true,
+  "full_year_calendar_complete": false,
+  "national_model_admission": false,
+  "review_sha256": "6be90d12d0b9ca25813e185406152319d5af51bcec56cd1c473eb0a032d5b29a",
+  "transcription_sha256": "a069143c95f45ccbbc3338126176bfd92c1738e326f2c43139d5a9607d1e201c",
+  "sources": [
+    {
+      "path": "data/raw/q2/china_cns_7_2016.pdf",
+      "sha256": "55623e45ce7665cbda06b7d6b43fc893e85533e6e6f4a1f74c5ae96df202218b"
+    },
+    {
+      "path": "data/raw/q2/nnsa_tianwan56_notice_2015.html",
+      "sha256": "5ea14562b0f4c51e1ab92cb2e027a5005028594663eeda7cdf5025b33eb99a31"
+    },
+    {
+      "path": "data/raw/q2/nnsa_tianwan5_permit_2015.pdf",
+      "sha256": "d363d6904a0a343b81a1d45b564d3ae05ca3318f890a137e98df7e89eccff99b"
+    },
+    {
+      "path": "data/raw/q2/nnsa_tianwan6_permit_2015.pdf",
+      "sha256": "369cfdbc27e25f0f97dd59651bd666361565e520098b2aa53e0cf9d4884636bf"
+    },
+    {
+      "path": "data/catalog/q2_nuclear_capacity_2015_transcription.json",
+      "sha256": "a069143c95f45ccbbc3338126176bfd92c1738e326f2c43139d5a9607d1e201c"
+    },
+    {
+      "path": "data/catalog/q2_nuclear_permit_2015_supplement_review.json",
+      "sha256": "b32beecfe8bcb68fbaf0e637ef9d01e4779aa75e8ae457bb20e17c09eab8d89b"
+    }
+  ]
+}

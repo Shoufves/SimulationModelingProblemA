@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-19",
+  "scope": "source extraction and accounting bounds, not national model acceptance",
+  "independent_copy_files": 22,
+  "copied_inputs": {
+    "data/catalog/q2_apec_balance_review.json": "124f937c91da2ce1994f7a1d4eaf3161540eb8122efcc272ee8bcedead767e78",
+    "data/catalog/q2_coal_bridge_review.json": "06def2833e4d10e650f215243c1079d01d9a511c8c476cca8296a3f3825c14f6",
+    "data/catalog/q2_nbs2014_review.json": "239ffad4e945c785803d8a0b5173195ac8ecdaa66feedcbdd7efbdcca5f59be7",
+    "data/catalog/q2_sources.json": "aaa8ee064105eb975777eb86a07d0f72cb20f5e532b1dddf06b8db6c7108efc1",
+    "data/processed/q2/national_balance_2014_reference.csv": "6035f3c203583217b1b2047497c20c7bd9437553992e613d6cbea822ce583fa6",
+    "data/processed/q2/nbs2014_accounts.csv": "906aa8825738437673a56a4ca64872f9d99082b1e9775fb0b47c582ca9280993",
+    "data/raw/lb/base/nbs/archive/2016/0905CH.jpg": "49258e2158ad376d5bce37aca3f474d9fb236435b3647c3b84335100c753f075",
+    "data/raw/q2/apec_balance_download.json": "cbb346c7962328325cd8c0033396f809f1f8f7e86ca8ac745ee18cf276e2113d",
+    "data/raw/q2/apec_china_balance_2014_detailed_PJ.html": "241a2431a9daded1cf834383cfc356aa36a817dfa9b1a4b86169ad190403718c",
+    "data/raw/q2/apec_china_balance_2014_detailed_PJ.txt": "a3a5a52c84ea8af433573fbe697c9fb63078a6da30bb9eb57fd2dadfbd9f95fd",
+    "data/raw/q2/apec_china_balance_2014_detailed_ktoe.html": "c2e04292c041272eff6d435f8ac8a41035928c70f67d17931b381c1f304c800b",
+    "data/raw/q2/apec_china_balance_2014_detailed_ktoe.txt": "065763527587c3717c7aa922f51cd77f348a190102012031576f65dc2dadde6e",
+    "data/raw/q2/apec_ktoe_download.json": "149badf5056fdbea230e5059a59e8afdc3ae3c1d94136cf896e6932aef93a06c",
+    "data/raw/q2/apec_processing_information.html": "b00b1e3221079a7bfcb1f86ea0dabe3b0e4fc3686fd4553e02d171ea09c99b30",
+    "data/raw/q2/apec_revised_definitions.pdf": "a08b4cac76b4184420248840d9559606592f66f48538662ebd7c2e3596b6ea33",
+    "data/raw/q2/apec_standardisation.html": "f61155b11909bf528c6784f8febf8e7b9142cfa97ec4d2fbe982d3b40900b4c3",
+    "data/raw/q2/ceads_national5425546_v1.json": "18e7c3e0cb2bc108e1a10e678c58510dd460f6da84b5d006af756a51087f18f2",
+    "data/raw/q2/ceads_national_energy_inventory_2000_2015_v1.xlsx": "541f53af9bad48184aa87f7378a229cba765de6b9157b08f0411461a9c86a237",
+    "data/raw/q2/ceads_national_methods_2018.html": "cacdccec66be189048de41644a6cb5bb514b1ff9eaeadad43a2fa65b30222793",
+    "scripts/prepare_q2_apec_balance.py": "cd33811c1b2c8a243356e1054cb0d64ed1c356767487bcd6239f17a38a5e4c48",
+    "scripts/prepare_q2_coal_bridge.py": "1b7c172475e0b4aba119f92ea0d76a0a93185f29e7d71351ce1a7a64bbbc20a0",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32"
+  },
+  "runs": [
+    {
+      "environment": "clean",
+      "commands": [
+        {
+          "script": "prepare_q2_coal_bridge.py",
+          "exit_code": 0,
+          "stdout": "{\"decision\": \"scoped_coal_aggregate_bridge_only\", \"comparisons\": 15, \"all_within_rounding\": true, \"national_initialization_admitted\": false, \"supersedes\": \"The raw_coal_power_input discrepancy interpretation only; old records and model outputs retained.\", \"remaining\": [\"Naturalgas total and transport mismatch remains.\", \"MergedBriquettes/gangue cannot be uniquely split into physical fuels.\", \"Aggregate agreement does not establish full national vintage or final-service/equipment admission.\"], \"review_sha256\": \"06def2833e4d10e650f215243c1079d01d9a511c8c476cca8296a3f3825c14f6\", \"output_sha256\": \"faf5e54fcb0aa981f281a5e82625fdaeaf4ea35850b3df0074e30375768ef1ea\"}\n",
+          "stderr": ""
+        },
+        {
+          "script": "prepare_q2_apec_balance.py",
+          "exit_code": 0,
+          "stdout": "{\"decision\": \"scoped_retrospective_energy_accounting_reference\", \"rows\": 6840, \"unresolved_dash_count\": 5539, \"negative_zero_count\": 8, \"html_tsv_exact_agreement\": true, \"same_source_unit_checks\": 1301, \"maximum_cross_unit_residual_PJ\": 0.515264, \"identities_passed\": 57, \"identities_not_testable\": 468, \"national_initialization_admitted\": false, \"review_sha256\": \"124f937c91da2ce1994f7a1d4eaf3161540eb8122efcc272ee8bcedead767e78\", \"outputs\": {\"apec_balance_2014.csv\": \"39b839399b3eae956ebf08f7fbeb67f50680643fde8d84f67f9421733d489f35\", \"apec_balance_2014_controls.csv\": \"bf60b51fe5174349ac0e14a022f4840b67d399a938d126b45b1e522fdd9a644e\", \"apec_balance_2014_identities.csv\": \"d0b22a363e8271cf3216ce0178af8dfb789aca161ae3c1e0bbb2bdcceba50dd1\", \"apec_balance_2014_sector_bounds.csv\": \"650c3b69f406e6a44a7b15483d153897efb7e88be026eaf7a37cac6c85363ee3\"}}\n",
+          "stderr": ""
+        }
+      ],
+      "comparisons": [
+        {
+          "artifact": "apec_balance_2014.csv",
+          "original_sha256": "39b839399b3eae956ebf08f7fbeb67f50680643fde8d84f67f9421733d489f35",
+          "reproduced_sha256": "39b839399b3eae956ebf08f7fbeb67f50680643fde8d84f67f9421733d489f35",
+          "identical": true
+        },
+        {
+          "artifact": "apec_balance_2014_checks.json",
+          "original_sha256": "4e3bd53f5772c03b1c173e40b914b193b9517e16d04f5a3ddbd06ad921d2deb4",
+          "reproduced_sha256": "4e3bd53f5772c03b1c173e40b914b193b9517e16d04f5a3ddbd06ad921d2deb4",
+          "identical": true
+        },
+        {
+          "artifact": "apec_balance_2014_controls.csv",
+          "original_sha256": "bf60b51fe5174349ac0e14a022f4840b67d399a938d126b45b1e522fdd9a644e",
+          "reproduced_sha256": "bf60b51fe5174349ac0e14a022f4840b67d399a938d126b45b1e522fdd9a644e",
+          "identical": true
+        },
+        {
+          "artifact": "apec_balance_2014_identities.csv",
+          "original_sha256": "d0b22a363e8271cf3216ce0178af8dfb789aca161ae3c1e0bbb2bdcceba50dd1",
+          "reproduced_sha256": "d0b22a363e8271cf3216ce0178af8dfb789aca161ae3c1e0bbb2bdcceba50dd1",
+          "identical": true
+        },
+        {
+          "artifact": "apec_balance_2014_sector_bounds.csv",
+          "original_sha256": "650c3b69f406e6a44a7b15483d153897efb7e88be026eaf7a37cac6c85363ee3",
+          "reproduced_sha256": "650c3b69f406e6a44a7b15483d153897efb7e88be026eaf7a37cac6c85363ee3",
+          "identical": true
+        },
+        {
+          "artifact": "coal_bridge_2014.csv",
+          "original_sha256": "faf5e54fcb0aa981f281a5e82625fdaeaf4ea35850b3df0074e30375768ef1ea",
+          "reproduced_sha256": "faf5e54fcb0aa981f281a5e82625fdaeaf4ea35850b3df0074e30375768ef1ea",
+          "identical": true
+        },
+        {
+          "artifact": "coal_bridge_2014_checks.json",
+          "original_sha256": "37ac4dde5b7b6bd458baf3c7b271779bbd18357e3327521b099620cbb59414c0",
+          "reproduced_sha256": "37ac4dde5b7b6bd458baf3c7b271779bbd18357e3327521b099620cbb59414c0",
+          "identical": true
+        }
+      ],
+      "all_identical": true
+    },
+    {
+      "environment": "alternate",
+      "commands": [
+        {
+          "script": "prepare_q2_coal_bridge.py",
+          "exit_code": 0,
+          "stdout": "{\"decision\": \"scoped_coal_aggregate_bridge_only\", \"comparisons\": 15, \"all_within_rounding\": true, \"national_initialization_admitted\": false, \"supersedes\": \"The raw_coal_power_input discrepancy interpretation only; old records and model outputs retained.\", \"remaining\": [\"Naturalgas total and transport mismatch remains.\", \"MergedBriquettes/gangue cannot be uniquely split into physical fuels.\", \"Aggregate agreement does not establish full national vintage or final-service/equipment admission.\"], \"review_sha256\": \"06def2833e4d10e650f215243c1079d01d9a511c8c476cca8296a3f3825c14f6\", \"output_sha256\": \"faf5e54fcb0aa981f281a5e82625fdaeaf4ea35850b3df0074e30375768ef1ea\"}\n",
+          "stderr": ""
+        },
+        {
+          "script": "prepare_q2_apec_balance.py",
+          "exit_code": 0,
+          "stdout": "{\"decision\": \"scoped_retrospective_energy_accounting_reference\", \"rows\": 6840, \"unresolved_dash_count\": 5539, \"negative_zero_count\": 8, \"html_tsv_exact_agreement\": true, \"same_source_unit_checks\": 1301, \"maximum_cross_unit_residual_PJ\": 0.515264, \"identities_passed\": 57, \"identities_not_testable\": 468, \"national_initialization_admitted\": false, \"review_sha256\": \"124f937c91da2ce1994f7a1d4eaf3161540eb8122efcc272ee8bcedead767e78\", \"outputs\": {\"apec_balance_2014.csv\": \"39b839399b3eae956ebf08f7fbeb67f50680643fde8d84f67f9421733d489f35\", \"apec_balance_2014_controls.csv\": \"bf60b51fe5174349ac0e14a022f4840b67d399a938d126b45b1e522fdd9a644e\", \"apec_balance_2014_identities.csv\": \"d0b22a363e8271cf3216ce0178af8dfb789aca161ae3c1e0bbb2bdcceba50dd1\", \"apec_balance_2014_sector_bounds.csv\": \"650c3b69f406e6a44a7b15483d153897efb7e88be026eaf7a37cac6c85363ee3\"}}\n",
+          "stderr": ""
+        }
+      ],
+      "comparisons": [
+        {
+          "artifact": "apec_balance_2014.csv",
+          "original_sha256": "39b839399b3eae956ebf08f7fbeb67f50680643fde8d84f67f9421733d489f35",
+          "reproduced_sha256": "39b839399b3eae956ebf08f7fbeb67f50680643fde8d84f67f9421733d489f35",
+          "identical": true
+        },
+        {
+          "artifact": "apec_balance_2014_checks.json",
+          "original_sha256": "4e3bd53f5772c03b1c173e40b914b193b9517e16d04f5a3ddbd06ad921d2deb4",
+          "reproduced_sha256": "4e3bd53f5772c03b1c173e40b914b193b9517e16d04f5a3ddbd06ad921d2deb4",
+          "identical": true
+        },
+        {
+          "artifact": "apec_balance_2014_controls.csv",
+          "original_sha256": "bf60b51fe5174349ac0e14a022f4840b67d399a938d126b45b1e522fdd9a644e",
+          "reproduced_sha256": "bf60b51fe5174349ac0e14a022f4840b67d399a938d126b45b1e522fdd9a644e",
+          "identical": true
+        },
+        {
+          "artifact": "apec_balance_2014_identities.csv",
+          "original_sha256": "d0b22a363e8271cf3216ce0178af8dfb789aca161ae3c1e0bbb2bdcceba50dd1",
+          "reproduced_sha256": "d0b22a363e8271cf3216ce0178af8dfb789aca161ae3c1e0bbb2bdcceba50dd1",
+          "identical": true
+        },
+        {
+          "artifact": "apec_balance_2014_sector_bounds.csv",
+          "original_sha256": "650c3b69f406e6a44a7b15483d153897efb7e88be026eaf7a37cac6c85363ee3",
+          "reproduced_sha256": "650c3b69f406e6a44a7b15483d153897efb7e88be026eaf7a37cac6c85363ee3",
+          "identical": true
+        },
+        {
+          "artifact": "coal_bridge_2014.csv",
+          "original_sha256": "faf5e54fcb0aa981f281a5e82625fdaeaf4ea35850b3df0074e30375768ef1ea",
+          "reproduced_sha256": "faf5e54fcb0aa981f281a5e82625fdaeaf4ea35850b3df0074e30375768ef1ea",
+          "identical": true
+        },
+        {
+          "artifact": "coal_bridge_2014_checks.json",
+          "original_sha256": "37ac4dde5b7b6bd458baf3c7b271779bbd18357e3327521b099620cbb59414c0",
+          "reproduced_sha256": "37ac4dde5b7b6bd458baf3c7b271779bbd18357e3327521b099620cbb59414c0",
+          "identical": true
+        }
+      ],
+      "all_identical": true
+    }
+  ],
+  "all_identical": true,
+  "source_originals_unchanged": true
+}

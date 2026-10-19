@@ -100,7 +100,6 @@
       "detail": {
         "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
         "excluded_directories": [
-          ".git",
           "tmp",
           "data/restricted"
         ],
@@ -108,9 +107,9 @@
         "passed": true,
         "findings": [],
         "errors": [],
-        "files_scanned": 1324,
-        "payloads_scanned": 2391,
-        "zip_members_scanned": 1067
+        "files_scanned": 2585,
+        "payloads_scanned": 3680,
+        "zip_members_scanned": 1095
       }
     },
     {

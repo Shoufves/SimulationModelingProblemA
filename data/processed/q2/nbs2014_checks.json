@@ -1,0 +1,360 @@
+{
+  "passed": true,
+  "arithmetic_checks": [
+    {
+      "table": "0903CH",
+      "identity": "supply = production + imports - exports + inventory draw",
+      "terms": {
+        "supply": 1,
+        "production": -1,
+        "imports": -1,
+        "exports": 1,
+        "inventory_draw": -1
+      },
+      "residual": "0",
+      "rounding_bound": "2.5",
+      "passed": true
+    },
+    {
+      "table": "0903CH",
+      "identity": "supply - consumption = statistical difference",
+      "terms": {
+        "supply": 1,
+        "consumption": -1,
+        "statistical_difference": -1
+      },
+      "residual": "0",
+      "rounding_bound": "1.5",
+      "passed": true
+    },
+    {
+      "table": "0904CH",
+      "identity": "supply = production + imports - exports + inventory draw",
+      "terms": {
+        "supply": 1,
+        "production": -1,
+        "imports": -1,
+        "exports": 1,
+        "inventory_draw": -1
+      },
+      "residual": "0.0",
+      "rounding_bound": "0.25",
+      "passed": true
+    },
+    {
+      "table": "0904CH",
+      "identity": "supply - consumption = statistical difference",
+      "terms": {
+        "supply": 1,
+        "consumption": -1,
+        "statistical_difference": -1
+      },
+      "residual": "0.0",
+      "rounding_bound": "0.15",
+      "passed": true
+    },
+    {
+      "table": "0905CH",
+      "identity": "supply = production + imports - exports + inventory draw",
+      "terms": {
+        "supply": 1,
+        "production": -1,
+        "imports": -1,
+        "exports": 1,
+        "inventory_draw": -1
+      },
+      "residual": "0.0",
+      "rounding_bound": "0.25",
+      "passed": true
+    },
+    {
+      "table": "0905CH",
+      "identity": "supply - consumption = statistical difference",
+      "terms": {
+        "supply": 1,
+        "consumption": -1,
+        "statistical_difference": -1
+      },
+      "residual": "0.0",
+      "rounding_bound": "0.15",
+      "passed": true
+    },
+    {
+      "table": "0903CH",
+      "identity": "consumption = sum of seven broad sectors",
+      "terms": {
+        "consumption": 1,
+        "agriculture": -1,
+        "industry": -1,
+        "construction": -1,
+        "transport": -1,
+        "trade": -1,
+        "other": -1,
+        "household": -1
+      },
+      "residual": "1",
+      "rounding_bound": "4.0",
+      "passed": true
+    },
+    {
+      "table": "0904CH",
+      "identity": "consumption = sum of seven broad sectors",
+      "terms": {
+        "consumption": 1,
+        "agriculture": -1,
+        "industry": -1,
+        "construction": -1,
+        "transport": -1,
+        "trade": -1,
+        "other": -1,
+        "household": -1
+      },
+      "residual": "0.0",
+      "rounding_bound": "0.40",
+      "passed": true
+    },
+    {
+      "table": "0905CH",
+      "identity": "consumption = sum of seven broad sectors",
+      "terms": {
+        "consumption": 1,
+        "agriculture": -1,
+        "industry": -1,
+        "construction": -1,
+        "transport": -1,
+        "trade": -1,
+        "other": -1,
+        "household": -1
+      },
+      "residual": "0.0",
+      "rounding_bound": "0.40",
+      "passed": true
+    },
+    {
+      "table": "0906CH",
+      "identity": "consumption = sum of seven broad sectors",
+      "terms": {
+        "consumption": 1,
+        "agriculture": -1,
+        "industry": -1,
+        "construction": -1,
+        "transport": -1,
+        "trade": -1,
+        "other": -1,
+        "household": -1
+      },
+      "residual": "0.0",
+      "rounding_bound": "0.40",
+      "passed": true
+    },
+    {
+      "table": "0903CH",
+      "identity": "consumption = final + conversion loss + loss - recovered energy",
+      "terms": {
+        "consumption": 1,
+        "final": -1,
+        "transformation_loss": -1,
+        "loss": -1,
+        "recovery": 1
+      },
+      "residual": "1",
+      "rounding_bound": "2.5",
+      "passed": true
+    },
+    {
+      "table": "0904CH",
+      "identity": "consumption = final + intermediate + loss",
+      "terms": {
+        "consumption": 1,
+        "final": -1,
+        "intermediate": -1,
+        "loss": -1
+      },
+      "residual": "0.1",
+      "rounding_bound": "0.20",
+      "passed": true
+    },
+    {
+      "table": "0905CH",
+      "identity": "consumption = final + intermediate + loss",
+      "terms": {
+        "consumption": 1,
+        "final": -1,
+        "intermediate": -1,
+        "loss": -1
+      },
+      "residual": "0.0",
+      "rounding_bound": "0.20",
+      "passed": true
+    },
+    {
+      "table": "0906CH",
+      "identity": "supply = production + imports - exports",
+      "terms": {
+        "supply": 1,
+        "production": -1,
+        "imports": -1,
+        "exports": 1
+      },
+      "residual": "0.1",
+      "rounding_bound": "0.20",
+      "passed": true
+    },
+    {
+      "table": "0906CH",
+      "identity": "consumption = final + transmission/distribution loss",
+      "terms": {
+        "consumption": 1,
+        "final": -1,
+        "loss": -1
+      },
+      "residual": "0.0",
+      "rounding_bound": "0.15",
+      "passed": true
+    },
+    {
+      "table": "0909CH",
+      "identity": "sector sum: energy",
+      "terms": {
+        "total:energy": 1,
+        "agriculture:energy": -1,
+        "industry:energy": -1,
+        "construction:energy": -1,
+        "transport:energy": -1,
+        "trade:energy": -1,
+        "other:energy": -1,
+        "household:energy": -1
+      },
+      "residual": "0.00",
+      "rounding_bound": "0.040",
+      "passed": true
+    },
+    {
+      "table": "0909CH",
+      "identity": "sector sum: coal",
+      "terms": {
+        "total:coal": 1,
+        "agriculture:coal": -1,
+        "industry:coal": -1,
+        "construction:coal": -1,
+        "transport:coal": -1,
+        "trade:coal": -1,
+        "other:coal": -1,
+        "household:coal": -1
+      },
+      "residual": "0.00",
+      "rounding_bound": "0.040",
+      "passed": true
+    },
+    {
+      "table": "0909CH",
+      "identity": "sector sum: coke",
+      "terms": {
+        "total:coke": 1,
+        "agriculture:coke": -1,
+        "industry:coke": -1,
+        "construction:coke": -1,
+        "transport:coke": -1,
+        "trade:coke": -1,
+        "other:coke": -1,
+        "household:coke": -1
+      },
+      "residual": "0.00",
+      "rounding_bound": "0.040",
+      "passed": true
+    },
+    {
+      "table": "0909CH",
+      "identity": "sector sum: gasoline",
+      "terms": {
+        "total:gasoline": 1,
+        "agriculture:gasoline": -1,
+        "industry:gasoline": -1,
+        "construction:gasoline": -1,
+        "transport:gasoline": -1,
+        "trade:gasoline": -1,
+        "other:gasoline": -1,
+        "household:gasoline": -1
+      },
+      "residual": "0.00",
+      "rounding_bound": "0.040",
+      "passed": true
+    },
+    {
+      "table": "0909CH",
+      "identity": "sector sum: kerosene",
+      "terms": {
+        "total:kerosene": 1,
+        "agriculture:kerosene": -1,
+        "industry:kerosene": -1,
+        "construction:kerosene": -1,
+        "transport:kerosene": -1,
+        "trade:kerosene": -1,
+        "other:kerosene": -1,
+        "household:kerosene": -1
+      },
+      "residual": "0.00",
+      "rounding_bound": "0.040",
+      "passed": true
+    },
+    {
+      "table": "0909CH",
+      "identity": "sector sum: diesel",
+      "terms": {
+        "total:diesel": 1,
+        "agriculture:diesel": -1,
+        "industry:diesel": -1,
+        "construction:diesel": -1,
+        "transport:diesel": -1,
+        "trade:diesel": -1,
+        "other:diesel": -1,
+        "household:diesel": -1
+      },
+      "residual": "0.00",
+      "rounding_bound": "0.040",
+      "passed": true
+    },
+    {
+      "table": "0909CH",
+      "identity": "sector sum: gas",
+      "terms": {
+        "total:gas": 1,
+        "agriculture:gas": -1,
+        "industry:gas": -1,
+        "construction:gas": -1,
+        "transport:gas": -1,
+        "trade:gas": -1,
+        "other:gas": -1,
+        "household:gas": -1
+      },
+      "residual": "0.00",
+      "rounding_bound": "0.040",
+      "passed": true
+    },
+    {
+      "table": "0909CH",
+      "identity": "sector sum: electricity",
+      "terms": {
+        "total:electricity": 1,
+        "agriculture:electricity": -1,
+        "industry:electricity": -1,
+        "construction:electricity": -1,
+        "transport:electricity": -1,
+        "trade:electricity": -1,
+        "other:electricity": -1,
+        "household:electricity": -1
+      },
+      "residual": "0.00",
+      "rounding_bound": "0.040",
+      "passed": true
+    }
+  ],
+  "columns_not_summed_because_missing": [
+    "crude",
+    "fuel_oil"
+  ],
+  "records": 169,
+  "source_review_sha256": "239ffad4e945c785803d8a0b5173195ac8ecdaa66feedcbdd7efbdcca5f59be7",
+  "model_admission": false,
+  "missing_cells": 7
+}

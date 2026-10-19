@@ -1,0 +1,19 @@
+{
+  "decision": "scoped_retrospective_currency_reference",
+  "years": 17,
+  "overlapping_legacy_deflator_years": 7,
+  "overlapping_values_exact": true,
+  "dataset_updated": "2026-10-08",
+  "review_sha256": "08e6bd2848bdd14eff0c1ac48d8d27fd8bf41f8f1460e82bbc0987b503b9fe16",
+  "historical_model_changed": false,
+  "national_model_admission": false,
+  "future_path_supplied": false,
+  "uses_revised_historical_data": true,
+  "limitations": [
+    "Annual-average FX is not a project transaction rate.",
+    "US general GDP deflator is an accounting assumption, not Chinese technology inflation.",
+    "All source tax bases are retained; these factors do not harmonize VAT.",
+    "Future realized FX/deflators may not enter historical investment expectations.",
+    "No current/2060 forecast, project eligibility or national policy weights supplied."
+  ]
+}

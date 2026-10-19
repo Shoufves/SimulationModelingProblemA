@@ -1,0 +1,33 @@
+{
+  "status": "ablation_executed",
+  "bindings": {
+    "workflow/q2_candidates/v6/manifest.json": "356ab84f8b5bdc57bd73933f9b4b7bb2392c812171c0f1968e0485289b459068",
+    "outputs/q2/historical_candidate_v6/training_selection.json": "ba044694d2e9f10ada0e0ae8db1e18b57f644ad7ba0ada5581181c5e5228a84f",
+    "workflow/q2_candidates/v6_sensitivity.json": "b9b7fcad2b038af4e1db7fb01738b01c79322de887cd890e9eeae82dd70f5bbc"
+  },
+  "code_hashes": {
+    "scripts/run_q2_solar_ablation.py": "e254f80194d93f975a200666294b58ce243d8e2ce7853b58e116e5de9b2519af",
+    "scripts/run_q2_historical_candidate.py": "c1a079c62275c4386a3bf3ba0beafbac290388045d792da18f3a32df15f1662d",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/annual.py": "3f00adb4638454ea594c4da3d144a0976f430cd421c93581b0683d32c6e05d8c",
+    "src/energy_model/q2/contracts.py": "5c7497f1ff8786851a99e228a2f71e945e115a31d2240b68606a016e7d79a8fc",
+    "src/energy_model/q2/experiments.py": "b6432f11758893710dbe20296657313eeb5c70238978f774604513453ff4eb8f",
+    "src/energy_model/q2/finance.py": "6724e4a9a37411cc12565fdb36086bca37de49dc1f245b5aec4548a64a39e22e",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32",
+    "src/energy_model/q2/lifecycle.py": "77c1908aa1cca437f72674b3ac88873206f07188f1e3eae6d2f8504aec86c403",
+    "src/energy_model/q2/operations.py": "95b0999dfdcb57b46046178c93c7a07facd7a16a1da4f0407bd93e1658bd2bb2",
+    "src/energy_model/q2/quality.py": "a1176bc537f7bbddcc664ed697ac9bbac8f8f347097a5650e06cd1f978cd370d",
+    "src/energy_model/q2/targets.py": "2e67cd5f0996f4e1a20c836ecc2a300f48ffdddbd058f620f7312634f72ce064"
+  },
+  "outputs": {
+    "constraint_usage.csv": "7ca605d5f2a53d6c5b3530e7716d69fa27c922101fd2ea9a45afd6874999ef97",
+    "date_and_resource_ceiling.json": "04351f904c0e6858ecd5a08d80ab89bc3cad5079f49061400e35dfb969eba777",
+    "date_only.json": "fba56f3cf13134a8f51fd76f5d106bc76c3546598be394eff594457d13f67948",
+    "metrics.csv": "63b0e90adb6aa87eaf74e85a7fead7b5c8f865e95da6eac65f7b781137ce8f06",
+    "quality.csv": "6f9e09d31976f26bb9de6174b88541260771cafec6cbd3b1764702d0811d1842",
+    "resource_ceiling_only.json": "01076a00b120359c2a010af95898e8c06a49bad558579434ac01c244bec0e773",
+    "summary.json": "928e7256e9846f372dd078127dae0266542cb8d519b20a65e55b5cadb7544fb1",
+    "v5_control.json": "32125b433411a8e248a1647c3e2d8e078f0e9b5c2001f9e52a0198c8d1f41f89"
+  },
+  "national_acceptance": false
+}

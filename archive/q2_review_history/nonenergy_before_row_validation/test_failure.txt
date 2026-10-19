@@ -1,0 +1,40 @@
+test_all_responses_predeclared_without_fitting_or_observation_feedback (test_q2_nonenergy.NonenergyTests.test_all_responses_predeclared_without_fitting_or_observation_feedback) ... ok
+test_binding_failure_happens_before_creating_output (test_q2_nonenergy.NonenergyTests.test_binding_failure_happens_before_creating_output) ... ok
+test_changed_material_cells_rejected (test_q2_nonenergy.NonenergyTests.test_changed_material_cells_rejected) ... ok
+test_duplicate_or_missing_material_rows_rejected (test_q2_nonenergy.NonenergyTests.test_duplicate_or_missing_material_rows_rejected) ... 
+  test_duplicate_or_missing_material_rows_rejected (test_q2_nonenergy.NonenergyTests.test_duplicate_or_missing_material_rows_rejected) (rows=97) ... FAIL
+  test_duplicate_or_missing_material_rows_rejected (test_q2_nonenergy.NonenergyTests.test_duplicate_or_missing_material_rows_rejected) (rows=95) ... ERROR
+test_full_parent_control_and_same_growth_reconciliation (test_q2_nonenergy.NonenergyTests.test_full_parent_control_and_same_growth_reconciliation) ... ok
+test_future_growth_cannot_change_earlier_ledgers (test_q2_nonenergy.NonenergyTests.test_future_growth_cannot_change_earlier_ledgers) ... ok
+test_initial_fuel_capacity_and_money_preserved (test_q2_nonenergy.NonenergyTests.test_initial_fuel_capacity_and_money_preserved) ... ok
+test_material_mapping_rejects_duplicates_invalid_owners_and_oversize (test_q2_nonenergy.NonenergyTests.test_material_mapping_rejects_duplicates_invalid_owners_and_oversize) ... ok
+test_material_still_consumes_fuel_and_owner_cash (test_q2_nonenergy.NonenergyTests.test_material_still_consumes_fuel_and_owner_cash) ... ok
+test_no_double_partition_or_implicit_response (test_q2_nonenergy.NonenergyTests.test_no_double_partition_or_implicit_response) ... ok
+test_partial_carbon_never_uses_parent_metric_identity (test_q2_nonenergy.NonenergyTests.test_partial_carbon_never_uses_parent_metric_identity) ... ok
+test_reported_cells_and_joint_missing_interval (test_q2_nonenergy.NonenergyTests.test_reported_cells_and_joint_missing_interval) ... ok
+
+======================================================================
+ERROR: test_duplicate_or_missing_material_rows_rejected (test_q2_nonenergy.NonenergyTests.test_duplicate_or_missing_material_rows_rejected) (rows=95)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\tests\test_q2_nonenergy.py", line 58, in test_duplicate_or_missing_material_rows_rejected
+    builder.extract_material_reference(table)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\scripts\build_q2_nonenergy_episode.py", line 38, in extract_material_reference
+    index, row = rows[flow]
+                 ~~~~^^^^^^
+KeyError: '17.2 Industry sector'
+
+======================================================================
+FAIL: test_duplicate_or_missing_material_rows_rejected (test_q2_nonenergy.NonenergyTests.test_duplicate_or_missing_material_rows_rejected) (rows=97)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\tests\test_q2_nonenergy.py", line 57, in test_duplicate_or_missing_material_rows_rejected
+    with self.subTest(rows=len(table)), self.assertRaises(ValueError):
+                                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.584s
+
+FAILED (failures=1, errors=1)

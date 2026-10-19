@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-19",
+  "scope": "same-author offline copy reproduction of source reference, not independent human approval",
+  "copied_files": {
+    "data/catalog/q2_nuclear_state_2024_review.json": "5d500608f7efa88164b8ed0a428e45be18cd1041c8a0b8fd680aec832546a68f",
+    "data/catalog/q2_nuclear_state_2024_transcription.json": "b0d66299f6a441cde593abd74c29205954a9c69b9c38d9208342df01c2a23f98",
+    "data/catalog/q2_sources.json": "fc7c04aeff9538c1e8f54ecf3d9867122e4bac1c6d1efe7f8cee5e9f3188614b",
+    "data/processed/unified/nbs_history.csv": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+    "data/raw/q1/nnsa_nuclear_2024.html": "b566deb215c53a2530e3d17a9df9bfd8207a786e0919183cbec50d06b170bb30",
+    "data/raw/q2/nnsa_nuclear_construction_2024.png": "286afa16da29107868464b1eaed6f0dbf643eac8bd9cee236e43dfd95e37d5d7",
+    "data/raw/q2/nnsa_nuclear_operating_2024.png": "ee2881396bdcee4bc7008f48484ac0301a7426b24310c117218914003a502439",
+    "scripts/prepare_q2_nuclear_capacity.py": "e7baac12339572332868f6acb9a3c9f5e24a46a2298ee04257b73e71ab952590",
+    "scripts/prepare_q2_nuclear_state_2024.py": "6b5df5933dbda8f78f22d42939a858154e611275f9bf6f04e3272c688ca0b296",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32"
+  },
+  "runs": [
+    {
+      "environment": "clean",
+      "exit_code": 0,
+      "command": [
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/prepare_q2_nuclear_state_2024.py",
+        "--output-dir",
+        "outputs/clean"
+      ],
+      "comparisons": [
+        {
+          "file": "nuclear_state_2024_checks.json",
+          "sha256": "a67ef8c4f9b01b19df0037bebdf507bb1b8ce206b41e165a919b9e22cbe157a7",
+          "identical": true
+        },
+        {
+          "file": "nuclear_state_2024_diagnostics.csv",
+          "sha256": "ed64abb130a787f0ab61583abc048faba967025343620828994c8df6fe67c6dc",
+          "identical": true
+        },
+        {
+          "file": "nuclear_state_2024_reference.csv",
+          "sha256": "46538b33562720c0f7794710069a350f72e9643c63fd3cb2f327385bc9efafe4",
+          "identical": true
+        }
+      ]
+    },
+    {
+      "environment": "alternate",
+      "exit_code": 0,
+      "command": [
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/prepare_q2_nuclear_state_2024.py",
+        "--output-dir",
+        "outputs/alternate"
+      ],
+      "comparisons": [
+        {
+          "file": "nuclear_state_2024_checks.json",
+          "sha256": "a67ef8c4f9b01b19df0037bebdf507bb1b8ce206b41e165a919b9e22cbe157a7",
+          "identical": true
+        },
+        {
+          "file": "nuclear_state_2024_diagnostics.csv",
+          "sha256": "ed64abb130a787f0ab61583abc048faba967025343620828994c8df6fe67c6dc",
+          "identical": true
+        },
+        {
+          "file": "nuclear_state_2024_reference.csv",
+          "sha256": "46538b33562720c0f7794710069a350f72e9643c63fd3cb2f327385bc9efafe4",
+          "identical": true
+        }
+      ]
+    }
+  ],
+  "all_identical": true,
+  "national_model_admission": false
+}

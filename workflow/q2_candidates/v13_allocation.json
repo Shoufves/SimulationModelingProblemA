@@ -1,0 +1,184 @@
+{
+  "version": 13,
+  "scope": "historical_aggregate_candidate_not_admitted",
+  "national_acceptance": false,
+  "previous_holdout_already_seen": true,
+  "bindings": [
+    {
+      "path": "workflow/q2_candidates/v12_joint_response.json",
+      "sha256": "9234146cf9a8a9cb020ebd231cecee2d9f9491c75f90eddf57b4d69de97dcd71"
+    },
+    {
+      "path": "workflow/q2_candidates/v10/manifest.json",
+      "sha256": "af7533e51f622db9d1c932c9fbe73096cec1529bc92696fd416ac6cedfa7b192"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v12/selected_model.json",
+      "sha256": "022d14840a8ac2991508f9357e4d4af7068cd9bc9a1717847b16f58eda462edb"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v12/training_selection.json",
+      "sha256": "77cefbb2f0ff85660ed88e44e551034c1ec5c2f39ab2d5c1c35a61fa16a57253"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v12/result.json",
+      "sha256": "6ae1a1fd06466b4355f50c76855c99ecfd3fdab71d3ef72d9f00da70c8b28eb5"
+    }
+  ],
+  "parameters": [
+    {
+      "id": "wind_stock_expansion_rate",
+      "grid": [
+        0.0,
+        0.05363984674329502,
+        0.10727969348659004,
+        0.16091954022988506,
+        0.21455938697318008,
+        0.2681992337164751,
+        0.3218390804597701,
+        0.37547892720306514,
+        0.42911877394636017
+      ],
+      "bounds": [
+        0.0,
+        0.42911877394636017
+      ],
+      "paths": [
+        [
+          "investment_groups",
+          0,
+          "stock_expansion_rate"
+        ]
+      ]
+    },
+    {
+      "id": "solar_stock_expansion_rate",
+      "grid": [
+        0.0,
+        0.08216009654062752,
+        0.16432019308125503,
+        0.24648028962188256,
+        0.32864038616251007,
+        0.41080048270313757,
+        0.49296057924376513,
+        0.5751206757843926,
+        0.6572807723250201
+      ],
+      "bounds": [
+        0.0,
+        0.6572807723250201
+      ],
+      "paths": [
+        [
+          "investment_groups",
+          1,
+          "stock_expansion_rate"
+        ]
+      ]
+    },
+    {
+      "id": "oil_residual_elasticity",
+      "bounds": [
+        0.0,
+        2.0
+      ],
+      "paths": [
+        [
+          "demand_drivers",
+          "oil_residual",
+          "gdp_elasticity"
+        ]
+      ]
+    },
+    {
+      "id": "gas_residual_elasticity",
+      "bounds": [
+        0.0,
+        2.0
+      ],
+      "paths": [
+        [
+          "demand_drivers",
+          "gas_residual",
+          "gdp_elasticity"
+        ]
+      ]
+    },
+    {
+      "id": "coal_residual_intensity_improvement",
+      "bounds": [
+        0.0,
+        0.03
+      ],
+      "paths": [
+        [
+          "demand_drivers",
+          "coal_residual",
+          "annual_intensity_improvement"
+        ]
+      ]
+    },
+    {
+      "id": "electricity_elasticity",
+      "bounds": [
+        0.7,
+        1.3
+      ],
+      "paths": [
+        [
+          "demand_drivers",
+          "industrial_electricity",
+          "gdp_elasticity"
+        ],
+        [
+          "demand_drivers",
+          "other_electricity",
+          "gdp_elasticity"
+        ]
+      ]
+    }
+  ],
+  "initial": {
+    "wind_stock_expansion_rate": 0.23964410660736596,
+    "solar_stock_expansion_rate": 0.45748987283728887,
+    "oil_residual_elasticity": 0.6022340335535771,
+    "gas_residual_elasticity": 1.9999834066680309,
+    "coal_residual_intensity_improvement": 0.01,
+    "electricity_elasticity": 0.85
+  },
+  "envelopes": {
+    "fixed_150GW": 0.0,
+    "GDP_proportional": 1.0,
+    "technology_frontiers": null
+  },
+  "allocations": [
+    "benefit_priority",
+    "proportional_requests"
+  ],
+  "rules": [
+    "adaptive_margin",
+    "instant_margin"
+  ],
+  "optimizer": {
+    "method": "trf",
+    "max_nfev": 40,
+    "ftol": 1e-07,
+    "xtol": 1e-07,
+    "gtol": 1e-07
+  },
+  "normalized_jacobian_step": 0.0001,
+  "equivalent_training_loss_tolerance": 0.001,
+  "controls": [
+    "exact_v12_selected",
+    "no_investment"
+  ],
+  "selection": "Minimum original weighted2015-2021 loss including exact control; ties use execution order. Persist selection before any holdout evaluation.",
+  "parameter_basis": [
+    "The firstfour bounds, all eight target scales/weights and quality thresholds are unchanged.",
+    "Electricity elasticity reuses the v1-v4 declared0.7-1.3 bound instead of fixing the previous minimum0.7.",
+    "Coal residual statistical intensity0-3percent/year is a new explicit research range, not measured equipment efficiency. Training overprediction of coal,totalenergy andCO2 motivates testing it; all other fuel residual intensities stayzero.",
+    "Proportional requests is an approval-order alternative allowed byfinal D3. It is not a claim about actual national allocation. Existing cash,queue,group and physical limits remain.",
+    "Defaultbenefit allocation remains an exact control. No2024reset, data rescaling, added observed future capacity, changed carbon coefficient or relaxed acceptance.",
+    "This is exploratory development after the holdout was already seen; no claim of fresh validation. One deterministic start per group does not establish a global optimum."
+  ]
+}

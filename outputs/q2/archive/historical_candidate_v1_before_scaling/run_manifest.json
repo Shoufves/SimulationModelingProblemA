@@ -1,0 +1,51 @@
+{
+  "owner": "p2/yx",
+  "scope": "historical_aggregate_candidate_not_admitted",
+  "status": "diagnostic_executed",
+  "numeric_quality_passed": false,
+  "national_acceptance": false,
+  "config_path": "workflow/q2_candidates/v1/manifest.json",
+  "config_sha256": "a53c7d1ea7147ab6042b83468f51b5e0f3e36a70920165a3f956d176fa377263",
+  "git_sha": "af930750a57144324995142a75e47ce3cdae1fd8",
+  "git_dirty": true,
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "mesa": "3.3.1",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.6"
+  },
+  "code_hashes": {
+    "scripts/run_q2_historical_candidate.py": "8ec352c1617be026843f7d62456b3a7bc3c946ba9faf06a7a29e7c3a90a3ac41",
+    "scripts/build_q2_historical_candidate.py": "740cd77b6cd5ec78c242b2d51b44bba2cd1597a40c785b221d5ba3b3bfccd244",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/annual.py": "9f1471ac009b2a4e7bd7079a3a1d10392fd3aa6f1ea980f7d6c59fa82ec85edc",
+    "src/energy_model/q2/contracts.py": "84406fca17c4146b62a6c5108d6d534bb9b6d2674c0dc685eb4e439d36f16044",
+    "src/energy_model/q2/experiments.py": "b6432f11758893710dbe20296657313eeb5c70238978f774604513453ff4eb8f",
+    "src/energy_model/q2/finance.py": "6724e4a9a37411cc12565fdb36086bca37de49dc1f245b5aec4548a64a39e22e",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32",
+    "src/energy_model/q2/lifecycle.py": "77c1908aa1cca437f72674b3ac88873206f07188f1e3eae6d2f8504aec86c403",
+    "src/energy_model/q2/operations.py": "b4dbe693a1cf6e031035ca26255279108e69a560484d7674b7e75f332dbcd984",
+    "src/energy_model/q2/quality.py": "a1176bc537f7bbddcc664ed697ac9bbac8f8f347097a5650e06cd1f978cd370d",
+    "src/energy_model/q2/targets.py": "2e67cd5f0996f4e1a20c836ecc2a300f48ffdddbd058f620f7312634f72ce064"
+  },
+  "scientific_outputs": {
+    "actions.csv": "af9d3c6c795b91c0406445bc200cdacfbef9be58e70ec26dd103c859506b8578",
+    "annual_path.csv": "3b97a4592d46ccd8e75d8a2a402a6b2e1be9d19ed118446d67077f71fc7c4f42",
+    "assets.csv": "1e1533f49732b92de03e3b6c11c8bb21649c4b4c1376e34a610cc70c1ab8eb9e",
+    "cash.csv": "ea76129682507b51a48d2c6ea1e1bdac6d8db8741ac60819abfd2e1b9eff007f",
+    "historical_fit.svg": "9756424d902aa5f4ba3238d0ca07dc6b8e2c841f7d2b40bb9bfa0ac42e83dc2c",
+    "historical_quality.json": "a8748624b32edab6e3f59393fc2604eca0e8d9424bc8ef9e2a3e18bfddec7ef6",
+    "history_baselines.csv": "084ed5c65bd72b1b5733dc562a9c66866910782f8f96cf61e428fd725047d298",
+    "history_fit.csv": "9ad36f0d3b2226833a18f917540b209117c0060b7c8612fe28e43e768e25f316",
+    "information.csv": "e44da52923b45babef90fed020177cb78e1b259744ad7a4e5a312440cbcb6a1b",
+    "metrics.csv": "22fcc356b8d7185360a9f9c48d76aa5a521e644e255bf538ff68712f76a5bbee",
+    "operations.json": "69ac9ed11875fd0805057abf2dbf548aa2a7285e748152383a1cbaf0fbb0804d",
+    "projects.json": "3af3374291b6b7cb125349d403b1ea702c270ccb350afb067374faee689950e3",
+    "report.md": "a7c6514b20a61775cbb97bd5e839a92fcbbe528976a9b32c515de948ff63dd69",
+    "rule_comparison.csv": "cf298b407637fdfe4674de5d03e0b5fcf74bc692946ce833e61b54137267e3da",
+    "training_selection.json": "19bf8f41f1838b8cb459b2b059e85783ee11230e8830c5da862a9eeec2694953",
+    "training_trials.json": "fbb04d255ccd93a98b9c4e580b41c5b71e9238db11f87fd10dae024a14fa93bc"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "reviewer": "yx_assisted_local_review",
+  "review_date": "2026-10-19",
+  "team_approval": false,
+  "decision": "scoped_2014_mapping_reference_not_national_model",
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/irena_cost_2014.pdf",
+      "sha256": "44a322c00349c74cac94a890ccefc334cc300053e94ac03022a9507cf84d1b37"
+    },
+    {
+      "path": "data/raw/q2/nnsa_annual_2014.pdf",
+      "sha256": "d834ac16ddc2f623a3c435a0b9b3770033c65694b1debcde7461b37b7e0e478d"
+    },
+    {
+      "path": "data/raw/q2/wdi_us_gdp_deflator_2008_2014.json",
+      "sha256": "e850330ba82805e4f34a548eb53f7b691b4bc75a639f416c0ce3411f1dd89962"
+    },
+    {
+      "path": "data/catalog/q2_mapping_2014_transcription.json",
+      "sha256": "ed7bf23fa313fbbec4b088153a7828f607b2119913ebab02d216e6e1677949c6"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "IRENA_COST_2014",
+      "record_sha256": "89b0b59cbda04b9577dd86ae3641c539f04923a5424431410578c0be3e52d188"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NNSA_ANNUAL_2014",
+      "record_sha256": "5e0da1ccb0fb7e1626a62a5aec9f0f6fe6723a9af801fc907e7a8d9df6fdecaa"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "WDI_US_GDP_DEFLATOR_2008_2014",
+      "record_sha256": "2c8e8dfc5e3f875c198d7e4b99cd042b9843b714943e965b2dbd2cd0f8a07d13"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "IRENA physical93-94 full pages visually inspected: cost range1320-3090, approximate CF17%, typical installations and site-specific limitations retained."
+    },
+    {
+      "passed": true,
+      "evidence": "NNSA physical23,25,27 full pages visually inspected: twelve selected unit statuses transcribed; Fuqing1 and Yangjiang1 explicitly excluded as new-queue candidates. Unknown capacities and dates remain null."
+    },
+    {
+      "passed": true,
+      "evidence": "WDI originalJSON checked: one page, seven unique USA NY.GDP.DEFL.ZS records2008-2014, positive values, dataset update2026-10-08. Revised index is retrospective normalization, not agent information."
+    }
+  ],
+  "allowed_uses": [
+    "Literature-range diagnostic of new utility PV capital cost and indicative capacity factor with explicit price conversion.",
+    "Price-unit rebasing using declared US general deflator assumption; no change to technology decline path.",
+    "Selected2014 nuclear status evidence and exclusion checks; further capacity/stock-boundary/funding review required before queue admission."
+  ],
+  "prohibited_uses": [
+    "Automatic national model admission or fleet-average cost certification.",
+    "Applying2015 publication to2014 decisions as if already known.",
+    "Treating revised US GDP deflator as Chinese sector-specific cost inflation.",
+    "Filling unknown nuclear capacity, schedule or funding from section titles."
+  ]
+}

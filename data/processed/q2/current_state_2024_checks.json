@@ -1,0 +1,191 @@
+{
+  "status": "partial_state_reproduced",
+  "observations": 45,
+  "source_review_sha256": "fa51ac97a1def8fa3df30a0695aaada7939f136859a9b67528edc994c91e20c5",
+  "checks": {
+    "capacity_sum_residual_mw": 0.0,
+    "electricity_category_residual_mwh": 0.0,
+    "gas_share_sum": 1.0
+  },
+  "national_acceptance": false,
+  "initialization_complete": false,
+  "full_state_rejection": {
+    "rejected": true,
+    "reason": "2024 physical initialization remains incomplete",
+    "unresolved_fields": [
+      {
+        "component": "wind_power",
+        "field": "operating_availability"
+      },
+      {
+        "component": "wind_power",
+        "field": "age_distribution"
+      },
+      {
+        "component": "nuclear_power",
+        "field": "operating_availability"
+      },
+      {
+        "component": "nuclear_power",
+        "field": "age_distribution"
+      },
+      {
+        "component": "nuclear_power",
+        "field": "unit_identity_and_licensing"
+      },
+      {
+        "component": "coal_power",
+        "field": "thermal_fuel_partition"
+      },
+      {
+        "component": "coal_power",
+        "field": "capacity_mw"
+      },
+      {
+        "component": "coal_power",
+        "field": "operating_availability"
+      },
+      {
+        "component": "coal_power",
+        "field": "age_distribution"
+      },
+      {
+        "component": "gas_power",
+        "field": "thermal_fuel_partition"
+      },
+      {
+        "component": "gas_power",
+        "field": "capacity_mw"
+      },
+      {
+        "component": "gas_power",
+        "field": "operating_availability"
+      },
+      {
+        "component": "gas_power",
+        "field": "age_distribution"
+      },
+      {
+        "component": "conventional_hydro",
+        "field": "same_vintage_hydro_partition"
+      },
+      {
+        "component": "conventional_hydro",
+        "field": "capacity_mw"
+      },
+      {
+        "component": "conventional_hydro",
+        "field": "operating_availability"
+      },
+      {
+        "component": "conventional_hydro",
+        "field": "age_distribution"
+      },
+      {
+        "component": "solar_PV",
+        "field": "same_vintage_solar_partition"
+      },
+      {
+        "component": "solar_PV",
+        "field": "capacity_mw"
+      },
+      {
+        "component": "solar_PV",
+        "field": "operating_availability"
+      },
+      {
+        "component": "solar_PV",
+        "field": "age_distribution"
+      },
+      {
+        "component": "other_generation",
+        "field": "technology_and_fuel_identity"
+      },
+      {
+        "component": "other_generation",
+        "field": "capacity_mw"
+      },
+      {
+        "component": "other_generation",
+        "field": "operating_availability"
+      },
+      {
+        "component": "other_generation",
+        "field": "age_distribution"
+      },
+      {
+        "component": "pumped_hydro",
+        "field": "same_vintage_hydro_partition"
+      },
+      {
+        "component": "pumped_hydro",
+        "field": "energy_capacity_mwh"
+      },
+      {
+        "component": "pumped_hydro",
+        "field": "initial_soc_mwh"
+      },
+      {
+        "component": "pumped_hydro",
+        "field": "efficiency"
+      },
+      {
+        "component": "pumped_hydro",
+        "field": "operating_availability"
+      },
+      {
+        "component": "pumped_hydro",
+        "field": "age_distribution"
+      },
+      {
+        "component": "new_storage",
+        "field": "technology_composition"
+      },
+      {
+        "component": "new_storage",
+        "field": "initial_soc_mwh"
+      },
+      {
+        "component": "new_storage",
+        "field": "efficiency"
+      },
+      {
+        "component": "new_storage",
+        "field": "operating_availability"
+      },
+      {
+        "component": "new_storage",
+        "field": "age_distribution"
+      },
+      {
+        "component": "fuel_supply",
+        "field": "dated_supply_inventory_and_withdrawal"
+      },
+      {
+        "component": "end_use",
+        "field": "useful_services_device_capacity_efficiency_and_age"
+      },
+      {
+        "component": "project_queue",
+        "field": "identity_status_remaining_cost_and_schedule"
+      },
+      {
+        "component": "finance",
+        "field": "opening_cash_credit_and_commitments"
+      },
+      {
+        "component": "chronology",
+        "field": "matched_load_weather_and_operating_profiles"
+      }
+    ]
+  },
+  "candidate_endpoint_compared": true,
+  "historical_model_unchanged": true,
+  "calibration_executions_added": 0,
+  "output_hashes": {
+    "current_state_2024.json": "ff72ad44a0b800d768e5f5be258b994da040003e7b43440fda1a0bbfdeae7b6d",
+    "current_state_2024_diagnostics.csv": "35fa2f0616e7e623e77694abb7c3506bf95a4ace3d2d75d44c77468d7fa021b9",
+    "current_state_2024_endpoint.csv": "05593da843784feab8da8edaba41589b6db6bb10ab8259d98d5485819c498ae9",
+    "current_state_2024_observations.csv": "6f625dc314c4d38c0df5b56932cbb2f0a8ec3f57c6d37249cdb2ec77dce24f12"
+  }
+}

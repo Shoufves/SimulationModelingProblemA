@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "targets": [
+    {
+      "indicator": "energy",
+      "family": "energy_consumption",
+      "n": 3,
+      "holdout_mape": 0.0,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 0.0,
+      "maximum_share_error_fraction": null,
+      "normalized_rmse": 0.0,
+      "persistence_normalized_rmse": 0.4958952315964901,
+      "rmse_ratio_to_persistence": 0.0,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "indicator": "nonfossil_share",
+      "family": "primary_mix",
+      "n": 3,
+      "holdout_mape": 0.0,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 0.0,
+      "maximum_share_error_fraction": 0.0,
+      "normalized_rmse": 0.0,
+      "persistence_normalized_rmse": 0.012365212506576514,
+      "rmse_ratio_to_persistence": 0.0,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "indicator": "capacity",
+      "family": "capacity_or_generation",
+      "n": 3,
+      "holdout_mape": 0.0,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 0.0,
+      "maximum_share_error_fraction": null,
+      "normalized_rmse": 0.0,
+      "persistence_normalized_rmse": 0.0,
+      "rmse_ratio_to_persistence": 0.0,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "indicator": "co2",
+      "family": "co2",
+      "n": 3,
+      "holdout_mape": 0.0,
+      "mape_nonzero_observations": 3,
+      "maximum_absolute_error": 0.0,
+      "maximum_share_error_fraction": null,
+      "normalized_rmse": 0.0,
+      "persistence_normalized_rmse": 0.10918277251895629,
+      "rmse_ratio_to_persistence": 0.0,
+      "passed": true,
+      "reasons": []
+    }
+  ],
+  "criteria": {
+    "status": "proposed_before_q2_fit",
+    "reason": "Author's explicit research tolerance, not an official contest or team threshold. No Q2 fit has been evaluated when frozen.",
+    "maximum_holdout_mape_each_target": 0.15,
+    "maximum_holdout_share_absolute_error": 0.05,
+    "maximum_holdout_normalized_rmse_ratio_to_persistence": 1.0,
+    "target_families": [
+      "energy_consumption",
+      "primary_mix",
+      "capacity_or_generation",
+      "co2"
+    ],
+    "all_families_required": true,
+    "no_holdout_retuning": true
+  },
+  "window": "already_seen_holdout",
+  "interpretation": "Quality gate only; passing synthetic fixtures is not empirical validation"
+}

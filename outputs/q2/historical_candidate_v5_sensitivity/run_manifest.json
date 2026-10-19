@@ -1,0 +1,65 @@
+{
+  "config_path": "workflow/q2_candidates/v5_sensitivity.json",
+  "config_sha256": "4c903db531663f6d1e9cb0064fe1fa269672da18a2f382fb2fc054a8d58197aa",
+  "bindings": {
+    "manifest": {
+      "path": "workflow/q2_candidates/v5/manifest.json",
+      "sha256": "b65d159b2a276fbbd829c07eae1d5a29574700f3b4a31407289e9806239e0d13"
+    },
+    "training_selection": {
+      "path": "outputs/q2/historical_candidate_v5/training_selection.json",
+      "sha256": "23d49b67167cd9296fcb2bbbf5f0cdeb05dbb785cbccc7d19d6f715b852fac9f"
+    }
+  },
+  "status": "response_diagnostic_executed",
+  "code_hashes": {
+    "scripts/run_q2_candidate_sensitivity.py": "c61be5f1553ad83bb7a52d0ce9de143f135577fda2df1b5917c4291037b5809f",
+    "scripts/run_q2_historical_candidate.py": "56a81209f9a8be8837bb47519c1d662e43b3d7962fe36a78b0aeb3c8e6372cc8",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/annual.py": "3f00adb4638454ea594c4da3d144a0976f430cd421c93581b0683d32c6e05d8c",
+    "src/energy_model/q2/contracts.py": "5c7497f1ff8786851a99e228a2f71e945e115a31d2240b68606a016e7d79a8fc",
+    "src/energy_model/q2/experiments.py": "b6432f11758893710dbe20296657313eeb5c70238978f774604513453ff4eb8f",
+    "src/energy_model/q2/finance.py": "6724e4a9a37411cc12565fdb36086bca37de49dc1f245b5aec4548a64a39e22e",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32",
+    "src/energy_model/q2/lifecycle.py": "77c1908aa1cca437f72674b3ac88873206f07188f1e3eae6d2f8504aec86c403",
+    "src/energy_model/q2/operations.py": "95b0999dfdcb57b46046178c93c7a07facd7a16a1da4f0407bd93e1658bd2bb2",
+    "src/energy_model/q2/quality.py": "a1176bc537f7bbddcc664ed697ac9bbac8f8f347097a5650e06cd1f978cd370d",
+    "src/energy_model/q2/targets.py": "2e67cd5f0996f4e1a20c836ecc2a300f48ffdddbd058f620f7312634f72ce064"
+  },
+  "outputs": {
+    "action_ledger.csv": "95a7376a8710facb86817e59c553af660b85b26a1561bb89bd87822d949b7c1b",
+    "annual_paths.csv": "1ee170f418d9016b5d86f55c4dfb7316c49b77e237cdc9f5e26a3d325b8a156c",
+    "case_00.json": "692b8653321485f3420c5bf3fdf29e2dc7e62ab195a0e4a8a08f7cfe03d20e79",
+    "case_01.json": "0331a1848febbd458f0cdc02ce88a9e76cdc7f36dfc0bd49e4940d4465c2f402",
+    "case_02.json": "42575dad7d8ce29ed91c23c020648ad9b41ffdc50464114a8f5252e0b08893dc",
+    "case_03.json": "fc71c4fffca24f5698381a141528838a45f37669071918add777915196947d25",
+    "case_04.json": "96bde254d96fe0e1755f98b4b7e6ad72629c14324e86aafc61c0cf35c3678b9c",
+    "case_05.json": "fd19c166c6f953ab16d7e2026ac45b7b5ccca27eb620ab684b93342a2f1efa41",
+    "case_06.json": "428c355592eedf431dff4c7b2532abc32dba196daff998aa88dd7c1158b44cb4",
+    "case_07.json": "f50e7a580d19b18e5cbee50d464668c6422ef204c84c041fd83aa23916956cc4",
+    "case_08.json": "fb8c0a8c89be81eb8919587c873cb771c2602d4acacc72a585c66c04bba5dca6",
+    "case_09.json": "93afcd977792d17f5ab264c739208be14fb503ed67b44507c0c5bb80246494e7",
+    "case_10.json": "55282e6c927e552b0d5f7f17fd61480171feec2008b6989e99f091b5a49099c6",
+    "case_11.json": "bfa0680865f8949615f967cd7dad3244081adb3a339f8149969851de6e2fc62a",
+    "case_12.json": "0a55c5e0dc4c84751f092139963219d9eacbb8e155a851cd6e3732f4f75bff81",
+    "case_13.json": "c442ee7509c719fd52e6561db53fc81232a83bfa1347a20d0e4f4c02ae5ad016",
+    "case_14.json": "bb42ac88e85e086260a3b92771d140ff33e0b749f1556686eb7a4d4295cd61f7",
+    "case_15.json": "3841ff7d2eacf94e951fa6914cc438ba4bc29b9bd394d613d45bf9ae83845dd5",
+    "case_16.json": "f1f4f73b59e64ac620a1bc97bcbd252990f3d900eda828392fb97f10b9d0bae6",
+    "case_17.json": "3373041a17a77948e29e7997d5cb09c939f739cf94c0d03c499e1d00db3ad190",
+    "case_18.json": "eaa8ee26ee95547353cc0994338e57dd3462b0daf4992fdae463eb8c91227bcc",
+    "case_19.json": "35ce734c3deaf9f01e2756bec2558cb15dba9469762675b8882d25e3de8cd3be",
+    "case_20.json": "291bf9c7bcbc7258267bebe4a214389d0e1d3a8a31dde7528262253ebcc1a912",
+    "case_21.json": "d9cf50ae8bc535f8c653a2fa624ef7f7dff083e09255a24b20e787964ec3a59f",
+    "case_22.json": "ab37f7f82dd4f27f4db87146e3c87932802d3c85bf8f1c44de218269b2abb651",
+    "case_23.json": "33f08ad1853cab6c15c22ea03e858b81d4e60081f0887ebe8f8c20cab0d3b012",
+    "case_24.json": "28122dae25a156bfa20f29c0eb0ac441c9cf7c173118ce0361fe39fd3bf99bc1",
+    "case_25.json": "ff1143632ad1766c89ca43e8dc30156dd32b4e730d3d83621d7e92edb28c5a7d",
+    "case_26.json": "28f1cfbecc57a50303b6909cac55d362140b9044395ed35a0440eb15ed52f3e3",
+    "cases.csv": "3f76ed696036438cf23a484ce0da6820e2933f40545dcb14963a37bf4c13a496",
+    "one_factor_2024.csv": "a8a69dcb324d704b0bfc1abf0541ccbf16c5d9f1ea0fa1f7a833257966ce62aa",
+    "paired_metrics.csv": "a589fb3f4d941f9e705a3e9732460241582a57b7e7a877b8c8846a6f920ba3ad",
+    "summary.json": "6f46d028598154e641bdf10fcbbde763337aa84d284c2afd7ea66fe557bba90e"
+  },
+  "national_acceptance": false
+}

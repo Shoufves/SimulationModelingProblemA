@@ -1,0 +1,71 @@
+{
+  "targets": [
+    {
+      "id": "consumption_10ktce",
+      "family": "energy_consumption",
+      "scale": 428334.0,
+      "weight": 0.25,
+      "metric_type": "total"
+    },
+    {
+      "id": "consumption_coal_share",
+      "family": "primary_mix",
+      "scale": 0.6579999999999999,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "consumption_oil_share",
+      "family": "primary_mix",
+      "scale": 0.17300000000000001,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "consumption_gas_share",
+      "family": "primary_mix",
+      "scale": 0.055999999999999994,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "wind_10kW",
+      "family": "capacity_or_generation",
+      "scale": 9657.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "solar_10kW",
+      "family": "capacity_or_generation",
+      "scale": 2486.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "nuclear_10kW",
+      "family": "capacity_or_generation",
+      "scale": 2008.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "gcb_fuel_co2",
+      "family": "co2",
+      "scale": 9051.061952,
+      "weight": 0.25,
+      "metric_type": "total"
+    }
+  ],
+  "windows": {
+    "train": [
+      2015,
+      2021
+    ],
+    "already_seen_holdout": [
+      2022,
+      2024
+    ]
+  },
+  "selection": "No fitting or selection in this episode; retain every predeclared case."
+}

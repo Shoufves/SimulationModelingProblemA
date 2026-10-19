@@ -1,0 +1,22 @@
+{
+  "scope": "v10_latent_pv_queue_and_joint_deployment_comparison",
+  "control_name": "v9_control",
+  "bindings": {
+    "manifest": {
+      "path": "workflow/q2_candidates/v10/manifest.json",
+      "sha256": "af7533e51f622db9d1c932c9fbe73096cec1529bc92696fd416ac6cedfa7b192"
+    },
+    "training_trials": {
+      "path": "outputs/q2/historical_candidate_v10/training_trials.json",
+      "sha256": "781eb23adf15f4eeb90f9658ae0b9b463d0d93fe39a31260819bfe9b9cdf05cc"
+    },
+    "parent_manifest": {
+      "path": "workflow/q2_candidates/v9/manifest.json",
+      "sha256": "c6c03181a7da1927d5922b988fabf57688204c495552a47b8eab0a3b9f842cbf"
+    },
+    "parent_selection": {
+      "path": "outputs/q2/historical_candidate_v9/training_selection.json",
+      "sha256": "f7e0fc0b6d926c06a18ff888bf52c98032b3dfc4921f5d9dc88ca0eb0d20b92f"
+    }
+  }
+}

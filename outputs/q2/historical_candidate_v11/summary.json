@@ -1,0 +1,173 @@
+{
+  "scope": "historical_sector_final_energy_diagnostic_not_national",
+  "training_executions": 756,
+  "valid_training_executions": 756,
+  "failed_training_executions": 0,
+  "exact_v10_control_training_executions": 6,
+  "exact_v10_full_control_ledgers_equal": 6,
+  "same_growth_classification_controls": 6,
+  "selected": {
+    "trial": 4,
+    "structure": "shared_construction_connection_pvqueue_2",
+    "kind": "unchanged_v10_control",
+    "parameters": {},
+    "status": "valid",
+    "loss": 0.1615137337952601,
+    "parts": [
+      {
+        "indicator": "consumption_10ktce",
+        "n": 7,
+        "scale": 428334.0,
+        "weight": 0.25,
+        "normalized_mse": 0.002363476972367886,
+        "weighted_loss": 0.0005908692430919715
+      },
+      {
+        "indicator": "consumption_coal_share",
+        "n": 7,
+        "scale": 0.6579999999999999,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.0014655306599482313,
+        "weighted_loss": 0.00012212755499568594
+      },
+      {
+        "indicator": "consumption_oil_share",
+        "n": 7,
+        "scale": 0.17300000000000001,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.010086225481269846,
+        "weighted_loss": 0.0008405187901058205
+      },
+      {
+        "indicator": "consumption_gas_share",
+        "n": 7,
+        "scale": 0.055999999999999994,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.003224329919944102,
+        "weighted_loss": 0.00026869415999534183
+      },
+      {
+        "indicator": "wind_10kW",
+        "n": 7,
+        "scale": 9657.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.1883969231842216,
+        "weighted_loss": 0.01569974359868513
+      },
+      {
+        "indicator": "solar_10kW",
+        "n": 7,
+        "scale": 2486.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 1.7075362227265853,
+        "weighted_loss": 0.14229468522721544
+      },
+      {
+        "indicator": "nuclear_10kW",
+        "n": 7,
+        "scale": 2008.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.008201081558796118,
+        "weighted_loss": 0.0006834234632330097
+      },
+      {
+        "indicator": "gcb_fuel_co2",
+        "n": 7,
+        "scale": 9051.061952,
+        "weight": 0.25,
+        "normalized_mse": 0.004054687031750724,
+        "weighted_loss": 0.001013671757937681
+      }
+    ]
+  },
+  "comparison": [
+    {
+      "structure": "shared_construction_connection",
+      "kind": "unchanged_v10_control",
+      "parameters": {},
+      "training_loss": 0.2357603114879326,
+      "parent_training_loss": 0.2357603114879326,
+      "selected_overall": false,
+      "failed_numeric_targets": [
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ]
+    },
+    {
+      "structure": "technology_frontiers",
+      "kind": "unchanged_v10_control",
+      "parameters": {},
+      "training_loss": 0.3993364743934041,
+      "parent_training_loss": 0.3993364743934041,
+      "selected_overall": false,
+      "failed_numeric_targets": [
+        "consumption_coal_share",
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "solar_10kW",
+        "gcb_fuel_co2"
+      ]
+    },
+    {
+      "structure": "shared_construction_connection_pvqueue_1",
+      "kind": "unchanged_v10_control",
+      "parameters": {},
+      "training_loss": 0.19577414924298217,
+      "parent_training_loss": 0.19577414924298217,
+      "selected_overall": false,
+      "failed_numeric_targets": [
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ]
+    },
+    {
+      "structure": "technology_frontiers_pvqueue_1",
+      "kind": "unchanged_v10_control",
+      "parameters": {},
+      "training_loss": 0.2628297988269793,
+      "parent_training_loss": 0.2628297988269793,
+      "selected_overall": false,
+      "failed_numeric_targets": [
+        "consumption_coal_share",
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "solar_10kW",
+        "gcb_fuel_co2"
+      ]
+    },
+    {
+      "structure": "shared_construction_connection_pvqueue_2",
+      "kind": "unchanged_v10_control",
+      "parameters": {},
+      "training_loss": 0.1615137337952601,
+      "parent_training_loss": 0.1615137337952601,
+      "selected_overall": true,
+      "failed_numeric_targets": [
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ]
+    },
+    {
+      "structure": "technology_frontiers_pvqueue_2",
+      "kind": "unchanged_v10_control",
+      "parameters": {},
+      "training_loss": 0.17254144329219598,
+      "parent_training_loss": 0.17254144329219598,
+      "selected_overall": false,
+      "failed_numeric_targets": [
+        "consumption_coal_share",
+        "consumption_oil_share",
+        "consumption_gas_share"
+      ]
+    }
+  ],
+  "sector_account_rows": 0,
+  "national_acceptance": false,
+  "reason": "Nine source-based final-energy groups with GDP proxies. Unresolved remainder and originaleffectiveCO2account retained. Not measured useful services or a complete carbon boundary; no nationalS0."
+}

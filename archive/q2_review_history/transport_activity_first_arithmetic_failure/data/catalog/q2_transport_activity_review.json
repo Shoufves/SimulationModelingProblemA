@@ -1,0 +1,72 @@
+{
+  "id": "Q2_TRANSPORT_ACTIVITY_2014_2024",
+  "decision": "scoped_transport_activity_reference",
+  "review_date": "2026-10-19",
+  "reviewer": "same_author_original_image_scope_and_definition_review",
+  "team_approval": false,
+  "roles": {
+    "passenger": "NBS2025_PASSENGER_ACTIVITY_Q2",
+    "freight": "NBS2025_FREIGHT_ACTIVITY_Q2",
+    "scope": "NBS2025_TRANSPORT_SCOPE_Q2",
+    "definitions": "NBS2025_TRANSPORT_DEFINITIONS_Q2"
+  },
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NBS2025_PASSENGER_ACTIVITY_Q2",
+      "record_sha256": "1a9f070f85e7e85a885dc7789f4f63f231c2dbdf7539ad74352af7cbe80e2252"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NBS2025_FREIGHT_ACTIVITY_Q2",
+      "record_sha256": "9e079e9806a3a1658cacce584e950c4dd636dd963d5a59680f4d67e970da1c37"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NBS2025_TRANSPORT_SCOPE_Q2",
+      "record_sha256": "676d0b75bd6665bf8e5c2535891b3fbbf20dc951a0e7cdaf62f22493b24eff70"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NBS2025_TRANSPORT_DEFINITIONS_Q2",
+      "record_sha256": "da67e3bceedd2897f7c5d7d0ec8402ae0c7092ba3df329cb95805a143eaf817e"
+    }
+  ],
+  "fingerprints": [
+    {
+      "path": "data/catalog/q2_transport_activity_transcription.json",
+      "sha256": "0e7ae33c40f3fa22956b97af3242fd06226a9b8b7f6b889f4ac14ea9be6a2050"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Full C16-06 and C16-08 original images visually reviewed;11years55passenger and77freight cells transcribed. Freight ocean subset enlarged for visual check,including2019value54057and2020value89897."
+    },
+    {
+      "passed": true,
+      "evidence": "Chapter scope sections2.1-2.4 read: rail public operations,commercial road/water,operator aviation includinginternational,carrier throughput for pipelines. Not total private travel or a directly territorial energy balance."
+    },
+    {
+      "passed": true,
+      "evidence": "Indicator PDF physicalpage1 printed543 defines turnover as quantity times distance. Passenger andfreight services remain separate; subsetocean not added towater again."
+    },
+    {
+      "passed": true,
+      "evidence": "2019road and2020ocean discontinuities remain unresolved. Neither source has supplied an approved bridge here; do not fill,average,splice or train a homogeneous response over those transitions."
+    },
+    {
+      "passed": true,
+      "evidence": "Yearbook tables reused at original paths and hashes. New scope/definition originals stored separately; no duplicate observations,post2024data or energyconversion invented."
+    }
+  ],
+  "allowed_uses": [
+    "Retrospective transport activity references and unit/scope/aggregation diagnostics; later service mapping requires separate review"
+  ],
+  "prohibited_uses": [
+    "Direct substitution for all national oil/gas or private-car activity",
+    "Adding passenger and freight service units,or water and its ocean subset",
+    "Assuming source discontinuities are real shocks or that contemporaneous actors knew the2025revision",
+    "Claiming future activity,energy intensity,equipment efficiency,age or fuel shares from these tables"
+  ]
+}

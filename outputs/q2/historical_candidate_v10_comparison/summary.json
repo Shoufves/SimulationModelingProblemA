@@ -1,0 +1,547 @@
+{
+  "scope": "v10_latent_pv_queue_and_joint_deployment_comparison",
+  "cases": 7,
+  "selected_by_structure": {
+    "shared_construction_connection": {
+      "trial": 134,
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.2681992337164751,
+        "solar_stock_expansion_rate": 0.6572807723250201
+      },
+      "structure": "shared_construction_connection",
+      "status": "valid",
+      "loss": 0.2357603114879326,
+      "parts": [
+        {
+          "indicator": "consumption_10ktce",
+          "n": 7,
+          "scale": 428334.0,
+          "weight": 0.25,
+          "normalized_mse": 0.0023383575748656157,
+          "weighted_loss": 0.0005845893937164039
+        },
+        {
+          "indicator": "consumption_coal_share",
+          "n": 7,
+          "scale": 0.6579999999999999,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.0016595435914201469,
+          "weighted_loss": 0.00013829529928501222
+        },
+        {
+          "indicator": "consumption_oil_share",
+          "n": 7,
+          "scale": 0.17300000000000001,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.010041968122284807,
+          "weighted_loss": 0.0008368306768570672
+        },
+        {
+          "indicator": "consumption_gas_share",
+          "n": 7,
+          "scale": 0.055999999999999994,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.003206306803789108,
+          "weighted_loss": 0.00026719223364909234
+        },
+        {
+          "indicator": "wind_10kW",
+          "n": 7,
+          "scale": 9657.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.2015005508914794,
+          "weighted_loss": 0.01679171257428995
+        },
+        {
+          "indicator": "solar_10kW",
+          "n": 7,
+          "scale": 2486.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 2.584562503550526,
+          "weighted_loss": 0.2153802086292105
+        },
+        {
+          "indicator": "nuclear_10kW",
+          "n": 7,
+          "scale": 2008.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.008201081558796118,
+          "weighted_loss": 0.0006834234632330097
+        },
+        {
+          "indicator": "gcb_fuel_co2",
+          "n": 7,
+          "scale": 9051.061952,
+          "weight": 0.25,
+          "normalized_mse": 0.004312236870766271,
+          "weighted_loss": 0.0010780592176915678
+        }
+      ]
+    },
+    "technology_frontiers": {
+      "trial": 358,
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.16091954022988506,
+        "solar_stock_expansion_rate": 0.5751206757843926
+      },
+      "structure": "technology_frontiers",
+      "status": "valid",
+      "loss": 0.3993364743934041,
+      "parts": [
+        {
+          "indicator": "consumption_10ktce",
+          "n": 7,
+          "scale": 428334.0,
+          "weight": 0.25,
+          "normalized_mse": 0.002295976997968152,
+          "weighted_loss": 0.000573994249492038
+        },
+        {
+          "indicator": "consumption_coal_share",
+          "n": 7,
+          "scale": 0.6579999999999999,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.002116842732267503,
+          "weighted_loss": 0.0001764035610222919
+        },
+        {
+          "indicator": "consumption_oil_share",
+          "n": 7,
+          "scale": 0.17300000000000001,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.009974959030018538,
+          "weighted_loss": 0.0008312465858348781
+        },
+        {
+          "indicator": "consumption_gas_share",
+          "n": 7,
+          "scale": 0.055999999999999994,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.0031202057120571186,
+          "weighted_loss": 0.0002600171426714265
+        },
+        {
+          "indicator": "wind_10kW",
+          "n": 7,
+          "scale": 9657.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.04149224428059813,
+          "weighted_loss": 0.0034576870233831774
+        },
+        {
+          "indicator": "solar_10kW",
+          "n": 7,
+          "scale": 2486.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 4.705478808847928,
+          "weighted_loss": 0.39212323407066063
+        },
+        {
+          "indicator": "nuclear_10kW",
+          "n": 7,
+          "scale": 2008.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.008201081558796118,
+          "weighted_loss": 0.0006834234632330097
+        },
+        {
+          "indicator": "gcb_fuel_co2",
+          "n": 7,
+          "scale": 9051.061952,
+          "weight": 0.25,
+          "normalized_mse": 0.0049218731884264275,
+          "weighted_loss": 0.0012304682971066069
+        }
+      ]
+    },
+    "shared_construction_connection_pvqueue_1": {
+      "trial": 619,
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.2681992337164751,
+        "solar_stock_expansion_rate": 0.5751206757843926
+      },
+      "structure": "shared_construction_connection_pvqueue_1",
+      "status": "valid",
+      "loss": 0.19577414924298217,
+      "parts": [
+        {
+          "indicator": "consumption_10ktce",
+          "n": 7,
+          "scale": 428334.0,
+          "weight": 0.25,
+          "normalized_mse": 0.0023528879346947184,
+          "weighted_loss": 0.0005882219836736796
+        },
+        {
+          "indicator": "consumption_coal_share",
+          "n": 7,
+          "scale": 0.6579999999999999,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.001546040734662943,
+          "weighted_loss": 0.00012883672788857858
+        },
+        {
+          "indicator": "consumption_oil_share",
+          "n": 7,
+          "scale": 0.17300000000000001,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.010067526799062839,
+          "weighted_loss": 0.0008389605665885698
+        },
+        {
+          "indicator": "consumption_gas_share",
+          "n": 7,
+          "scale": 0.055999999999999994,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.0032166756212976826,
+          "weighted_loss": 0.0002680563017748069
+        },
+        {
+          "indicator": "wind_10kW",
+          "n": 7,
+          "scale": 9657.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.20283033540780102,
+          "weighted_loss": 0.016902527950650083
+        },
+        {
+          "indicator": "solar_10kW",
+          "n": 7,
+          "scale": 2486.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 2.1038825418220073,
+          "weighted_loss": 0.17532354515183393
+        },
+        {
+          "indicator": "nuclear_10kW",
+          "n": 7,
+          "scale": 2008.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.008201081558796118,
+          "weighted_loss": 0.0006834234632330097
+        },
+        {
+          "indicator": "gcb_fuel_co2",
+          "n": 7,
+          "scale": 9051.061952,
+          "weight": 0.25,
+          "normalized_mse": 0.00416230838935806,
+          "weighted_loss": 0.001040577097339515
+        }
+      ]
+    },
+    "technology_frontiers_pvqueue_1": {
+      "trial": 843,
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.16091954022988506,
+        "solar_stock_expansion_rate": 0.49296057924376513
+      },
+      "structure": "technology_frontiers_pvqueue_1",
+      "status": "valid",
+      "loss": 0.2628297988269793,
+      "parts": [
+        {
+          "indicator": "consumption_10ktce",
+          "n": 7,
+          "scale": 428334.0,
+          "weight": 0.25,
+          "normalized_mse": 0.0023014999101721246,
+          "weighted_loss": 0.0005753749775430311
+        },
+        {
+          "indicator": "consumption_coal_share",
+          "n": 7,
+          "scale": 0.6579999999999999,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.0020374231895676524,
+          "weighted_loss": 0.00016978526579730435
+        },
+        {
+          "indicator": "consumption_oil_share",
+          "n": 7,
+          "scale": 0.17300000000000001,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.009983888966686824,
+          "weighted_loss": 0.000831990747223902
+        },
+        {
+          "indicator": "consumption_gas_share",
+          "n": 7,
+          "scale": 0.055999999999999994,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.0031357370566331153,
+          "weighted_loss": 0.0002613114213860929
+        },
+        {
+          "indicator": "wind_10kW",
+          "n": 7,
+          "scale": 9657.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.04149224428059813,
+          "weighted_loss": 0.0034576870233831774
+        },
+        {
+          "indicator": "solar_10kW",
+          "n": 7,
+          "scale": 2486.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 3.067763206617751,
+          "weighted_loss": 0.2556469338848126
+        },
+        {
+          "indicator": "nuclear_10kW",
+          "n": 7,
+          "scale": 2008.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.008201081558796118,
+          "weighted_loss": 0.0006834234632330097
+        },
+        {
+          "indicator": "gcb_fuel_co2",
+          "n": 7,
+          "scale": 9051.061952,
+          "weight": 0.25,
+          "normalized_mse": 0.004813168174400986,
+          "weighted_loss": 0.0012032920436002466
+        }
+      ]
+    },
+    "shared_construction_connection_pvqueue_2": {
+      "trial": 1104,
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.2681992337164751,
+        "solar_stock_expansion_rate": 0.49296057924376513
+      },
+      "structure": "shared_construction_connection_pvqueue_2",
+      "status": "valid",
+      "loss": 0.1615137337952601,
+      "parts": [
+        {
+          "indicator": "consumption_10ktce",
+          "n": 7,
+          "scale": 428334.0,
+          "weight": 0.25,
+          "normalized_mse": 0.002363476972367886,
+          "weighted_loss": 0.0005908692430919715
+        },
+        {
+          "indicator": "consumption_coal_share",
+          "n": 7,
+          "scale": 0.6579999999999999,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.0014655306599482313,
+          "weighted_loss": 0.00012212755499568594
+        },
+        {
+          "indicator": "consumption_oil_share",
+          "n": 7,
+          "scale": 0.17300000000000001,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.010086225481269846,
+          "weighted_loss": 0.0008405187901058205
+        },
+        {
+          "indicator": "consumption_gas_share",
+          "n": 7,
+          "scale": 0.055999999999999994,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.003224329919944102,
+          "weighted_loss": 0.00026869415999534183
+        },
+        {
+          "indicator": "wind_10kW",
+          "n": 7,
+          "scale": 9657.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.1883969231842216,
+          "weighted_loss": 0.01569974359868513
+        },
+        {
+          "indicator": "solar_10kW",
+          "n": 7,
+          "scale": 2486.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 1.7075362227265853,
+          "weighted_loss": 0.14229468522721544
+        },
+        {
+          "indicator": "nuclear_10kW",
+          "n": 7,
+          "scale": 2008.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.008201081558796118,
+          "weighted_loss": 0.0006834234632330097
+        },
+        {
+          "indicator": "gcb_fuel_co2",
+          "n": 7,
+          "scale": 9051.061952,
+          "weight": 0.25,
+          "normalized_mse": 0.004054687031750724,
+          "weighted_loss": 0.001013671757937681
+        }
+      ]
+    },
+    "technology_frontiers_pvqueue_2": {
+      "trial": 1328,
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.16091954022988506,
+        "solar_stock_expansion_rate": 0.41080048270313757
+      },
+      "structure": "technology_frontiers_pvqueue_2",
+      "status": "valid",
+      "loss": 0.17254144329219598,
+      "parts": [
+        {
+          "indicator": "consumption_10ktce",
+          "n": 7,
+          "scale": 428334.0,
+          "weight": 0.25,
+          "normalized_mse": 0.002291667767743681,
+          "weighted_loss": 0.0005729169419359202
+        },
+        {
+          "indicator": "consumption_coal_share",
+          "n": 7,
+          "scale": 0.6579999999999999,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.0020743894546038015,
+          "weighted_loss": 0.0001728657878836501
+        },
+        {
+          "indicator": "consumption_oil_share",
+          "n": 7,
+          "scale": 0.17300000000000001,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.009965280639043709,
+          "weighted_loss": 0.0008304400532536424
+        },
+        {
+          "indicator": "consumption_gas_share",
+          "n": 7,
+          "scale": 0.055999999999999994,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.0031500205994991026,
+          "weighted_loss": 0.0002625017166249252
+        },
+        {
+          "indicator": "wind_10kW",
+          "n": 7,
+          "scale": 9657.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.04149224428059813,
+          "weighted_loss": 0.0034576870233831774
+        },
+        {
+          "indicator": "solar_10kW",
+          "n": 7,
+          "scale": 2486.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 1.98424694388164,
+          "weighted_loss": 0.16535391199013666
+        },
+        {
+          "indicator": "nuclear_10kW",
+          "n": 7,
+          "scale": 2008.0,
+          "weight": 0.08333333333333333,
+          "normalized_mse": 0.008201081558796118,
+          "weighted_loss": 0.0006834234632330097
+        },
+        {
+          "indicator": "gcb_fuel_co2",
+          "n": 7,
+          "scale": 9051.061952,
+          "weight": 0.25,
+          "normalized_mse": 0.004830785262979978,
+          "weighted_loss": 0.0012076963157449945
+        }
+      ]
+    }
+  },
+  "control": {
+    "trial": 134,
+    "rule": "instant_margin",
+    "parameters": {
+      "wind_stock_expansion_rate": 0.2681992337164751,
+      "solar_stock_expansion_rate": 0.6572807723250201
+    },
+    "structure": "shared_construction_connection",
+    "status": "valid",
+    "loss": 0.2357603114879326,
+    "parts": [
+      {
+        "indicator": "consumption_10ktce",
+        "n": 7,
+        "scale": 428334.0,
+        "weight": 0.25,
+        "normalized_mse": 0.0023383575748656157,
+        "weighted_loss": 0.0005845893937164039
+      },
+      {
+        "indicator": "consumption_coal_share",
+        "n": 7,
+        "scale": 0.6579999999999999,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.0016595435914201469,
+        "weighted_loss": 0.00013829529928501222
+      },
+      {
+        "indicator": "consumption_oil_share",
+        "n": 7,
+        "scale": 0.17300000000000001,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.010041968122284807,
+        "weighted_loss": 0.0008368306768570672
+      },
+      {
+        "indicator": "consumption_gas_share",
+        "n": 7,
+        "scale": 0.055999999999999994,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.003206306803789108,
+        "weighted_loss": 0.00026719223364909234
+      },
+      {
+        "indicator": "wind_10kW",
+        "n": 7,
+        "scale": 9657.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.2015005508914794,
+        "weighted_loss": 0.01679171257428995
+      },
+      {
+        "indicator": "solar_10kW",
+        "n": 7,
+        "scale": 2486.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 2.584562503550526,
+        "weighted_loss": 0.2153802086292105
+      },
+      {
+        "indicator": "nuclear_10kW",
+        "n": 7,
+        "scale": 2008.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.008201081558796118,
+        "weighted_loss": 0.0006834234632330097
+      },
+      {
+        "indicator": "gcb_fuel_co2",
+        "n": 7,
+        "scale": 9051.061952,
+        "weight": 0.25,
+        "normalized_mse": 0.004312236870766271,
+        "weighted_loss": 0.0010780592176915678
+      }
+    ]
+  },
+  "national_acceptance": false,
+  "interpretation": "Each structure uses its own 2015-2021 training-optimal rates and rule on the frozen grid. All holdout data were already seen. This separates inherited-rate confounding from structural comparison; it is neither a causal bottleneck estimate nor a global optimum."
+}

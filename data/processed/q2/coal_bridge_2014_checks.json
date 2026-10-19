@@ -1,0 +1,14 @@
+{
+  "decision": "scoped_coal_aggregate_bridge_only",
+  "comparisons": 15,
+  "all_within_rounding": true,
+  "national_initialization_admitted": false,
+  "supersedes": "The raw_coal_power_input discrepancy interpretation only; old records and model outputs retained.",
+  "remaining": [
+    "Naturalgas total and transport mismatch remains.",
+    "MergedBriquettes/gangue cannot be uniquely split into physical fuels.",
+    "Aggregate agreement does not establish full national vintage or final-service/equipment admission."
+  ],
+  "review_sha256": "06def2833e4d10e650f215243c1079d01d9a511c8c476cca8296a3f3825c14f6",
+  "output_sha256": "faf5e54fcb0aa981f281a5e82625fdaeaf4ea35850b3df0074e30375768ef1ea"
+}

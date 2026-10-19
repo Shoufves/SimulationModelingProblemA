@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "id": "wind2009:I",
+      "technology": "onshore_wind",
+      "zone": "I",
+      "price": 0.51,
+      "unit": "CNY_nominal/kWh",
+      "tax_basis": "not_explicit_in_this_original_table",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "issued_date": "2009-07-20",
+      "web_publication_date": "2009-07-27",
+      "effective_date": "2009-08-01",
+      "eligibility": "Projects approved before 2009-08-01 retain previous rules; new onshore approvals use their zone. Offshore not covered.",
+      "region_description": "内蒙古除赤峰市、通辽市、兴安盟、呼伦贝尔市以外其他地区；新疆乌鲁木齐市、伊犁哈萨克自治州、昌吉回族自治州、克拉玛依市、石河子市",
+      "support_years": null,
+      "support_duration_status": "not_stated_in_this_notice",
+      "funding": "Grid pays up to local desulfurized-coal benchmark; surcharge funds the excess, with grid share adjusted when coal benchmark changes.",
+      "source_ids": [
+        "NDRC_WIND_PRICE_2009_1906",
+        "NDRC_WIND_PRICE_2009_TABLE"
+      ],
+      "source_locator": "notice sections I/II/III; attachment physicalp1"
+    },
+    {
+      "id": "wind2009:II",
+      "technology": "onshore_wind",
+      "zone": "II",
+      "price": 0.54,
+      "unit": "CNY_nominal/kWh",
+      "tax_basis": "not_explicit_in_this_original_table",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "issued_date": "2009-07-20",
+      "web_publication_date": "2009-07-27",
+      "effective_date": "2009-08-01",
+      "eligibility": "Projects approved before 2009-08-01 retain previous rules; new onshore approvals use their zone. Offshore not covered.",
+      "region_description": "河北张家口市、承德市；内蒙古赤峰市、通辽市、兴安盟、呼伦贝尔市；甘肃张掖市、嘉峪关市、酒泉市",
+      "support_years": null,
+      "support_duration_status": "not_stated_in_this_notice",
+      "funding": "Grid pays up to local desulfurized-coal benchmark; surcharge funds the excess, with grid share adjusted when coal benchmark changes.",
+      "source_ids": [
+        "NDRC_WIND_PRICE_2009_1906",
+        "NDRC_WIND_PRICE_2009_TABLE"
+      ],
+      "source_locator": "notice sections I/II/III; attachment physicalp1"
+    },
+    {
+      "id": "wind2009:III",
+      "technology": "onshore_wind",
+      "zone": "III",
+      "price": 0.58,
+      "unit": "CNY_nominal/kWh",
+      "tax_basis": "not_explicit_in_this_original_table",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "issued_date": "2009-07-20",
+      "web_publication_date": "2009-07-27",
+      "effective_date": "2009-08-01",
+      "eligibility": "Projects approved before 2009-08-01 retain previous rules; new onshore approvals use their zone. Offshore not covered.",
+      "region_description": "吉林白城市、松原市；黑龙江鸡西市、双鸭山市、七台河市、绥化市、伊春市、大兴安岭地区；甘肃除Ⅱ类所列三市以外地区；新疆除Ⅰ类所列地区以外地区；宁夏",
+      "support_years": null,
+      "support_duration_status": "not_stated_in_this_notice",
+      "funding": "Grid pays up to local desulfurized-coal benchmark; surcharge funds the excess, with grid share adjusted when coal benchmark changes.",
+      "source_ids": [
+        "NDRC_WIND_PRICE_2009_1906",
+        "NDRC_WIND_PRICE_2009_TABLE"
+      ],
+      "source_locator": "notice sections I/II/III; attachment physicalp1"
+    },
+    {
+      "id": "wind2009:IV",
+      "technology": "onshore_wind",
+      "zone": "IV",
+      "price": 0.61,
+      "unit": "CNY_nominal/kWh",
+      "tax_basis": "not_explicit_in_this_original_table",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "issued_date": "2009-07-20",
+      "web_publication_date": "2009-07-27",
+      "effective_date": "2009-08-01",
+      "eligibility": "Projects approved before 2009-08-01 retain previous rules; new onshore approvals use their zone. Offshore not covered.",
+      "region_description": "除Ⅰ、Ⅱ、Ⅲ类资源区以外的其他地区",
+      "support_years": null,
+      "support_duration_status": "not_stated_in_this_notice",
+      "funding": "Grid pays up to local desulfurized-coal benchmark; surcharge funds the excess, with grid share adjusted when coal benchmark changes.",
+      "source_ids": [
+        "NDRC_WIND_PRICE_2009_1906",
+        "NDRC_WIND_PRICE_2009_TABLE"
+      ],
+      "source_locator": "notice sections I/II/III; attachment physicalp1"
+    },
+    {
+      "id": "pv2013:I",
+      "technology": "utility_pv",
+      "zone": "I",
+      "price": 0.9,
+      "unit": "CNY_nominal/kWh",
+      "tax_basis": "tax_inclusive",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "issued_date": "2013-08-26",
+      "effective_date": "2013-09-01",
+      "eligibility": "Filed/approved after2013-09-01, or filed/approved before that date and commissioned on/after2014-01-01. Tibet separately priced. Competitive tariff cannot exceed benchmark.",
+      "region_description": "宁夏，青海海西，甘肃嘉峪关、武威、张掖、酒泉、敦煌、金昌，新疆哈密、塔城、阿勒泰、克拉玛依，内蒙古除赤峰、通辽、兴安盟、呼伦贝尔以外地区",
+      "support_years": 20,
+      "support_duration_status": "in_principle_from_start_of_operation_not_verified_individual_entitlement",
+      "funding": "Renewable fund pays excess over local coal benchmark; not the full tariff a second time.",
+      "source_ids": [
+        "NDRC_PV_PRICE_2013_1638"
+      ],
+      "source_locator": "physical pp1-3; attachment physicalp4"
+    },
+    {
+      "id": "pv2013:II",
+      "technology": "utility_pv",
+      "zone": "II",
+      "price": 0.95,
+      "unit": "CNY_nominal/kWh",
+      "tax_basis": "tax_inclusive",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "issued_date": "2013-08-26",
+      "effective_date": "2013-09-01",
+      "eligibility": "Filed/approved after2013-09-01, or filed/approved before that date and commissioned on/after2014-01-01. Tibet separately priced. Competitive tariff cannot exceed benchmark.",
+      "region_description": "北京，天津，黑龙江，吉林，辽宁，四川，云南，内蒙古赤峰、通辽、兴安盟、呼伦贝尔，河北承德、张家口、唐山、秦皇岛，山西大同、朔州、忻州，陕西榆林、延安，青海、甘肃、新疆除Ⅰ类外其他地区",
+      "support_years": 20,
+      "support_duration_status": "in_principle_from_start_of_operation_not_verified_individual_entitlement",
+      "funding": "Renewable fund pays excess over local coal benchmark; not the full tariff a second time.",
+      "source_ids": [
+        "NDRC_PV_PRICE_2013_1638"
+      ],
+      "source_locator": "physical pp1-3; attachment physicalp4"
+    },
+    {
+      "id": "pv2013:III",
+      "technology": "utility_pv",
+      "zone": "III",
+      "price": 1.0,
+      "unit": "CNY_nominal/kWh",
+      "tax_basis": "tax_inclusive",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "issued_date": "2013-08-26",
+      "effective_date": "2013-09-01",
+      "eligibility": "Filed/approved after2013-09-01, or filed/approved before that date and commissioned on/after2014-01-01. Tibet separately priced. Competitive tariff cannot exceed benchmark.",
+      "region_description": "除Ⅰ、Ⅱ类资源区以外的其他地区；西藏电价另行制定",
+      "support_years": 20,
+      "support_duration_status": "in_principle_from_start_of_operation_not_verified_individual_entitlement",
+      "funding": "Renewable fund pays excess over local coal benchmark; not the full tariff a second time.",
+      "source_ids": [
+        "NDRC_PV_PRICE_2013_1638"
+      ],
+      "source_locator": "physical pp1-3; attachment physicalp4"
+    },
+    {
+      "id": "distributed_pv2013",
+      "technology": "distributed_pv",
+      "zone": "eligible_projects",
+      "price": 0.42,
+      "unit": "CNY_nominal/kWh_generated",
+      "tax_basis": "tax_inclusive",
+      "payment_kind": "generation_premium_not_total_tariff",
+      "issued_date": "2013-08-26",
+      "effective_date": null,
+      "eligibility": "Excludes projects already receiving central government capital-investment subsidy. All generation premium; excess exports bought at local coal benchmark; self-use exempt from specified charges. Do not apply utility-PV eligibility dates as an extra unquoted condition.",
+      "region_description": "Eligible distributed projects; self-use/export must be separately accounted",
+      "support_years": 20,
+      "support_duration_status": "in_principle_from_start_of_operation_not_verified_individual_entitlement",
+      "funding": "Renewable fund via grid; the generation premium is additional to applicable exported-power revenue or self-use savings.",
+      "source_ids": [
+        "NDRC_PV_PRICE_2013_1638"
+      ],
+      "source_locator": "physicalp2 sectionsII/III/IV"
+    }
+  ],
+  "restrictions": [
+    "Published nominal rates require declared tax and real-price conversion before constant-currency model use.",
+    "No national zone/cohort weights inferred; no simple average treated as observed national tariff.",
+    "Wind2009 does not specify support lifetime; PV20years is in principle, not a universal permit guarantee.",
+    "Earlier approvals, monthly cutoffs and commissioning deadlines require cohort state, not just a calendar-year policy switch.",
+    "These two vintages do not supply the entire2015-2024 policy sequence or current S0 policy.",
+    "The model currently has no distributed-PV self-consumption/export topology or fiscal arrears financing; those paths are not admitted by this extraction."
+  ]
+}

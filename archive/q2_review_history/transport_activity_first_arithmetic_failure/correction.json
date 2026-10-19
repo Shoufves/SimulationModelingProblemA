@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-19",
+  "table": "C16-06",
+  "year": 2018,
+  "mode": "road",
+  "old_cell": "9297.7",
+  "corrected_cell": "9279.7",
+  "unit": "10^8 passenger_km",
+  "evidence": "Original C16-06.jpg visually re-read: row2018 column公路 prints9279.7. Previous digit transposition caused -18.0 arithmetic residual against0.25 rounding bound. No source value or tolerance changed.",
+  "source_path": "data/raw/lb/base/nbs/yearbook2025/C16-06.jpg",
+  "source_sha256": "87d3072782fd1c0deece9d9d57b747418d25c123039123dbf92a8c10bfe2ad80",
+  "previous_artifacts": {
+    "data/catalog/q2_transport_activity_transcription.json": "0e7ae33c40f3fa22956b97af3242fd06226a9b8b7f6b889f4ac14ea9be6a2050",
+    "data/catalog/q2_transport_activity_review.json": "1704c158b0ddbaf8a21154554fd430b5d3a688ae8eaae6cea134e70301db7682",
+    "data/processed/q2/transport_activity_2014_2024.csv": "c8688df99475016f725a0d9792d56f7070a856e8e951276da728e415c7b72d4a",
+    "data/processed/q2/transport_activity_arithmetic.csv": "5ca692f6c5ad719a23d54c32d1c29515c17111314727002cabdbde5f28b61afe",
+    "data/processed/q2/transport_activity_checks.json": "d497841610095423db32fb21104ab784c013524763999ba01e66abc216684279",
+    "data/processed/q2/transport_activity_series.json": "76a3d3643e03e58116680874698900f31dfd54f7c20f71b80cb5e64a29d8dcb8"
+  },
+  "applied_to_national_or_calibration": false
+}

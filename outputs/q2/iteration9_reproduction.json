@@ -1,0 +1,1045 @@
+{
+  "date": "2026-10-19",
+  "scope": "same-author independent historicalmodel snapshot;not nationaladmission or externalreview",
+  "independent_copy_files": 99,
+  "copied_inputs": {
+    "data/catalog/q2_history_review.json": "b8e2d13e4bd22b41c67d2681629fbb405d8c57af468504ff9b875bea07358cc3",
+    "data/catalog/q2_initialization_reference_review.json": "9eb5502f440dedc9b4520aa6109fc07c04943f677879614e3ba79b2598cb64ad",
+    "data/catalog/q2_mapping_2014_review.json": "5c540d2d6b266373b226713af9931bf9e7f56ca303f1c485feb6f7d76b6e61dd",
+    "data/catalog/q2_mapping_2014_transcription.json": "ed7bf23fa313fbbec4b088153a7828f607b2119913ebab02d216e6e1677949c6",
+    "data/catalog/q2_national_balance_review.json": "75f476ae40847a3b074607116c08ddc76b3b1869bf0ad6fca1e5bc055104d145",
+    "data/catalog/q2_nbs2014_review.json": "239ffad4e945c785803d8a0b5173195ac8ecdaa66feedcbdd7efbdcca5f59be7",
+    "data/catalog/q2_nuclear_nonissuance_2016_2018_review.json": "2b7e6fad75ec4797f54e4b29192236b78908db8b36c5d7067d87e7026fb3c35f",
+    "data/catalog/q2_nuclear_queue_review.json": "4c49a76748a3a675f5f20d69baeaf983347743ba91a25475f1c1e87a030a68e6",
+    "data/catalog/q2_nuclear_queue_status_transcription.json": "a46e402f166c909d86c8169681d34d6e7f4ac4f3a78de5b2c3f769d26a21d287",
+    "data/catalog/q2_solar_timing_ceiling_review.json": "9da25d26c8b82950d6f0077147b7b6e25775d5ed83d205349b5f7fb982554c67",
+    "data/catalog/q2_solar_timing_ceiling_transcription.json": "4bc7c8904be623f6055018f04657d96252839b5ee396214ba39f42883be44587",
+    "data/catalog/q2_sources.json": "896e4fa5cb1503a2b61aadc57b4a4b69cb2b2b002b2bdd412dc31dc7a4175193",
+    "data/catalog/q2_technology_2010_review.json": "cf2223ebae5430e1990bc5c9f592665708b42258dd90fa701364ec80b99dc0ea",
+    "data/processed/q2/fuel_reference.csv": "4c5f6c204160530b1a96c8fa64c872530a1af06e3c0eb7ba897c960800e026af",
+    "data/processed/q2/history_observations.csv": "b3f8e393eff571271acda1d016a75b12637179dda4e57728085fd4b24174e9f9",
+    "data/processed/q2/national_balance_2014_checks.json": "559027d230153de8d53674e7d71e2e35f7a09fcb89dd83c36676a66263e5b568",
+    "data/processed/q2/national_balance_2014_reference.csv": "6035f3c203583217b1b2047497c20c7bd9437553992e613d6cbea822ce583fa6",
+    "data/processed/q2/nbs2014_accounts.csv": "906aa8825738437673a56a4ca64872f9d99082b1e9775fb0b47c582ca9280993",
+    "data/processed/q2/nuclear_queue_2014_reference.csv": "93b853b19dda574ea438d1a1eeab7c2ef9ad042ff4aafb5b59eea03c1a2daf31",
+    "data/processed/q2/power_2014_reference.csv": "9e17d5f48182e1529dbcd0fcd32593d135dcc9175b800e06f3d94fc27170c929",
+    "data/processed/q2/technology_2010_parameters.csv": "ec2e6e25eedfa97d731dcfc921701a9f184694a4939389f5cd1838e43722dc86",
+    "data/processed/q2/technology_2010_samples.csv": "37f4a5646816e1224e7658eeeb734f9b18e78641fc3cd148763eca8e5b43b85e",
+    "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+    "data/raw/batch1_national/nbs_2025_C09-02.jpg": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+    "data/raw/batch1_national/nbs_2025_C09-15.jpg": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+    "data/raw/lb/base/nbs/yearbook2025/C09-08.jpg": "3620c3720491426d14de105b545f190c3d0b57cf3e05f29d4745519b19e218cf",
+    "data/raw/q2/ceads_national5425546_v1.json": "18e7c3e0cb2bc108e1a10e678c58510dd460f6da84b5d006af756a51087f18f2",
+    "data/raw/q2/ceads_national_energy_inventory_2000_2015_v1.xlsx": "541f53af9bad48184aa87f7378a229cba765de6b9157b08f0411461a9c86a237",
+    "data/raw/q2/ceads_national_methods_2018.html": "cacdccec66be189048de41644a6cb5bb514b1ff9eaeadad43a2fa65b30222793",
+    "data/raw/q2/china_cns_8_2019.pdf": "1e4cab0943dc66ba82bf50239163bf48be67801495ef3cb0e90004f0a5e9acac",
+    "data/raw/q2/iea_nea_cost_2010.pdf": "830e0e9f116d40462d94571d8772a1803c53859c255c224ac0b0d7da9a823ac0",
+    "data/raw/q2/irena_cost_2012.pdf": "44a97e22a705d1d4795b7aa911328b7d7eaf46a8c273918ea15bcd7974f97e48",
+    "data/raw/q2/irena_cost_2014.pdf": "44a322c00349c74cac94a890ccefc334cc300053e94ac03022a9507cf84d1b37",
+    "data/raw/q2/irena_remap_china_2014.pdf": "5dd5f991adcbb14a4ebf36d1c26200a359ccf5ccd9991d83edf7f81df98a30bf",
+    "data/raw/q2/nea_nuclear_2014_qa.html": "b2270e467bdb636c12d65ad6ab40bc99a3494be63d416a9e0e70679ad8c8e4fa",
+    "data/raw/q2/nea_power_2014_review.html": "fc18bb249596948c7af5cc1d0bc8826646affff76955614592ab9f143babd10d",
+    "data/raw/q2/nnsa_annual_2014.pdf": "d834ac16ddc2f623a3c435a0b9b3770033c65694b1debcde7461b37b7e0e478d",
+    "data/raw/q2/wdi_us_gdp_deflator_2008_2014.json": "e850330ba82805e4f34a548eb53f7b691b4bc75a639f416c0ce3411f1dd89962",
+    "outputs/q2/historical_candidate_v3/training_selection.json": "7812072ef21d1b8a3d4db523f70901a40ca42e2331d0539736893ba10beeccd6",
+    "outputs/q2/historical_candidate_v4/training_selection.json": "d487c26f457d9fd71ff009c90f50180abe4d5889d2c3bf0015b24bbf70c1dfa0",
+    "outputs/q2/historical_candidate_v5/training_selection.json": "23d49b67167cd9296fcb2bbbf5f0cdeb05dbb785cbccc7d19d6f715b852fac9f",
+    "outputs/q2/historical_candidate_v6/training_selection.json": "ba044694d2e9f10ada0e0ae8db1e18b57f644ad7ba0ada5581181c5e5228a84f",
+    "outputs/q2/historical_candidate_v7/training_selection.json": "e21d3c7cf6ebd65af2c1bd82b053d73cbe44d095982d42b84b70b328fff5d9db",
+    "outputs/q2/historical_candidate_v8/training_selection.json": "9334545f290b37375de05099c00513483d5a8d93b91242648336011d3c436759",
+    "outputs/q2/historical_candidate_v9/training_selection.json": "f7e0fc0b6d926c06a18ff888bf52c98032b3dfc4921f5d9dc88ca0eb0d20b92f",
+    "outputs/q2/historical_candidate_v9/training_trials.json": "250d8808636026a399549fedfde21209291573256d146d0a6c5a23e724fd6c89",
+    "scripts/build_q2_capacity_candidate.py": "48c7683a2a28612f2adcc77553a2ab5a2fd82f8d1b7894486a06118ac6f5d698",
+    "scripts/build_q2_deployment_candidate.py": "e80a22203f1578c5f64bd6acfa014a0416cbe4d726313268a0499d6dd9281a10",
+    "scripts/build_q2_fuel_candidate.py": "5d829e6660d6b54b6b33275355acab9d35378aeececcc4b74976f4f9f11dc0f6",
+    "scripts/build_q2_historical_candidate.py": "740cd77b6cd5ec78c242b2d51b44bba2cd1597a40c785b221d5ba3b3bfccd244",
+    "scripts/build_q2_joint_deployment_candidate.py": "670d156129503b0c62f218b36151e7095bd752f0c3f5f38abcb835e9e0d8d230",
+    "scripts/build_q2_mapping_candidate.py": "a3b846af664e0014071a168c2e487f797a815c698523e55724c9fb1306e4c0b8",
+    "scripts/build_q2_permit_candidate.py": "e383e92fd6c22aa16b74ef6c0dad0dbd8dfa01e0761ac540e938ff7fa3663472",
+    "scripts/build_q2_queue_candidate.py": "974bef8a0f578441f41de6e79b4bde2171a067c1468663a6b87650220573ba4b",
+    "scripts/build_q2_solar_candidate.py": "e0706493ce4ce25522a6bd437a75d1572c2eaf9b37c1e8c5bb6cb3b531a63343",
+    "scripts/prepare_q2_national_balance.py": "fb166a0a158f0a8afac5a407b4ad4dc923c227234008726cb04c32d705e84419",
+    "scripts/prepare_q2_nuclear_queue.py": "f3c2a7bbbe5a9ff4df0baa64531c27a421749581a71bb51b9277a952b2881b8d",
+    "scripts/run_q2_candidate_sensitivity.py": "c61be5f1553ad83bb7a52d0ce9de143f135577fda2df1b5917c4291037b5809f",
+    "scripts/run_q2_deployment_ablation.py": "5beb9be9c97a04c6fdef6972958706bba4d70656cdc79fb51fc1a746ecd22820",
+    "scripts/run_q2_historical_candidate.py": "3b73e357cf2c78f2be8baf8a79dbe2d98204256c1ad6a9e90d5cf9d09fce497e",
+    "scripts/run_q2_joint_deployment_comparison.py": "1bb3df61b54ff1fbfa03e815a71f04a118e495ea9816ce81eefc051a4c48cdfd",
+    "scripts/run_q2_solar_ablation.py": "e254f80194d93f975a200666294b58ce243d8e2ce7853b58e116e5de9b2519af",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/annual.py": "4acd3144f1110b784614b4d681dd8e1584f72d15a93b89d6c4b0e4b616f73d48",
+    "src/energy_model/q2/approvals.py": "0e6cf2f7903e76d8490c52daed1648d407e44dcf3562e674ee2eaa6496e969c9",
+    "src/energy_model/q2/contracts.py": "5c7497f1ff8786851a99e228a2f71e945e115a31d2240b68606a016e7d79a8fc",
+    "src/energy_model/q2/deployment.py": "2ec6fe0a88a43bb1c1ae0284c6e6f6bf1e768609c0a3894f13dc7046a67e33f7",
+    "src/energy_model/q2/experiments.py": "b6432f11758893710dbe20296657313eeb5c70238978f774604513453ff4eb8f",
+    "src/energy_model/q2/finance.py": "6724e4a9a37411cc12565fdb36086bca37de49dc1f245b5aec4548a64a39e22e",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32",
+    "src/energy_model/q2/lifecycle.py": "77c1908aa1cca437f72674b3ac88873206f07188f1e3eae6d2f8504aec86c403",
+    "src/energy_model/q2/operations.py": "95b0999dfdcb57b46046178c93c7a07facd7a16a1da4f0407bd93e1658bd2bb2",
+    "src/energy_model/q2/quality.py": "a1176bc537f7bbddcc664ed697ac9bbac8f8f347097a5650e06cd1f978cd370d",
+    "src/energy_model/q2/targets.py": "2e67cd5f0996f4e1a20c836ecc2a300f48ffdddbd058f620f7312634f72ce064",
+    "workflow/q2_candidates/v4/manifest.json": "ef5cc5d33ddf6edb4b52bc549ff95bea04c46e3309075defbf81d00f35ccaa10",
+    "workflow/q2_candidates/v5/manifest.json": "b65d159b2a276fbbd829c07eae1d5a29574700f3b4a31407289e9806239e0d13",
+    "workflow/q2_candidates/v6/manifest.json": "356ab84f8b5bdc57bd73933f9b4b7bb2392c812171c0f1968e0485289b459068",
+    "workflow/q2_candidates/v6_sensitivity.json": "b9b7fcad2b038af4e1db7fb01738b01c79322de887cd890e9eeae82dd70f5bbc",
+    "workflow/q2_candidates/v7/manifest.json": "53d5d6a42c6e67caa2c8380ff8e2f9b660a163540143040ce2bb2cb930762200",
+    "workflow/q2_candidates/v8/acceptance.json": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8",
+    "workflow/q2_candidates/v8/assumptions.json": "cea5e75ba710bca8d368357db0f296be671de5acc79d779953adde83b460d616",
+    "workflow/q2_candidates/v8/definitions.json": "30d62bcfe498137089a55826fef5ee3aa3218cfdebcceca7618260cc681bdf64",
+    "workflow/q2_candidates/v8/experiment.json": "85bc46b974943162cfac1bc347b82dd05a46c39bd8d8052ec0b363a918b4fa0f",
+    "workflow/q2_candidates/v8/initialization.json": "53dc297672a391f62dad3dad8677fa7ea05ed3ed2cc0fc94ef96c69741b1b0d1",
+    "workflow/q2_candidates/v8/manifest.json": "2dbc5636a662f038fb1cd58fbfa50b04d76f41aa495eec459287f6d6310dae82",
+    "workflow/q2_candidates/v8/model.json": "d1d59e80680de463da80a8f14cef06c45a3f66445bdcd39880754733877683e8",
+    "workflow/q2_candidates/v8/observations.json": "214aec6b74d770d609e1989a4bd619eb82e32c6d77aff692d57ba22fc136ce28",
+    "workflow/q2_candidates/v8/structural_models.json": "881297099a73fcbc46e040d4ae794d6efc835d4955548414006cd7f26cbf146f",
+    "workflow/q2_candidates/v9/acceptance.json": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8",
+    "workflow/q2_candidates/v9/assumptions.json": "ac842f1344b2be8a1ef4f612b56fbe91d762587f03c685c0e9fa0123bc585264",
+    "workflow/q2_candidates/v9/definitions.json": "30d62bcfe498137089a55826fef5ee3aa3218cfdebcceca7618260cc681bdf64",
+    "workflow/q2_candidates/v9/experiment.json": "c3a90cc4cdd6673f9fdf1d525689a41de931be7b814ad41bbae94d66d763c0ab",
+    "workflow/q2_candidates/v9/initialization.json": "8d66adcdce879dd310ff02551abe387769283cf2ffbfed551989204178d9f50c",
+    "workflow/q2_candidates/v9/manifest.json": "c6c03181a7da1927d5922b988fabf57688204c495552a47b8eab0a3b9f842cbf",
+    "workflow/q2_candidates/v9/model.json": "d1d59e80680de463da80a8f14cef06c45a3f66445bdcd39880754733877683e8",
+    "workflow/q2_candidates/v9/observations.json": "214aec6b74d770d609e1989a4bd619eb82e32c6d77aff692d57ba22fc136ce28",
+    "workflow/q2_candidates/v9/structural_models.json": "b7a1b360ad33deddade076c27a0921418ead9fcde6e3807fcb882c46643c854c",
+    "workflow/q2_candidates/v9_comparison.json": "c4b52454eee8203b8d8a58ecdcccb9686717f22f6315ac29264614afb5bffb28",
+    "workflow/q2_candidates/v9_sensitivity.json": "56ffcc9f3a093279e129a59ef774b4f87e423b341957168c000e066bf9e67f50"
+  },
+  "runs": [
+    {
+      "environment": "clean",
+      "commands": [
+        {
+          "name": "builder",
+          "arguments": [
+            "scripts/build_q2_joint_deployment_candidate.py"
+          ],
+          "exit_code": 0,
+          "stdout": "Existing v9 reproduced exactly\n",
+          "stderr": ""
+        },
+        {
+          "name": "candidate",
+          "arguments": [
+            "scripts/run_q2_historical_candidate.py",
+            "--manifest",
+            "workflow/q2_candidates/v9/manifest.json",
+            "--output-dir",
+            "outputs/q2/clean_candidate"
+          ],
+          "exit_code": 0,
+          "stdout": "{\"rule\": \"adaptive_margin\", \"structure\": \"shared_construction_connection\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 1.6492024826272516}\n{\"rule\": \"instant_margin\", \"structure\": \"shared_construction_connection\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 0.2357603114879326}\n{\"rule\": \"no_investment\", \"structure\": \"shared_construction_connection\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 4.008925026250364}\n{\"rule\": \"adaptive_margin\", \"structure\": \"technology_frontiers\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 1.6381734764348217}\n{\"rule\": \"instant_margin\", \"structure\": \"technology_frontiers\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 0.3993364743934041}\n{\"rule\": \"no_investment\", \"structure\": \"technology_frontiers\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 4.008925026250364}\n{\"status\": \"diagnostic_executed\", \"numeric_quality_passed\": false, \"failed_indicators\": [\"consumption_oil_share\", \"consumption_gas_share\", \"wind_10kW\", \"solar_10kW\"], \"national_acceptance\": false}\n",
+          "stderr": ""
+        },
+        {
+          "name": "ablation",
+          "arguments": [
+            "scripts/run_q2_joint_deployment_comparison.py",
+            "--output-dir",
+            "outputs/q2/clean_ablation"
+          ],
+          "exit_code": 0,
+          "stdout": "Three complete trajectories; each training prefix agrees with its frozen selected trial\n",
+          "stderr": ""
+        },
+        {
+          "name": "sensitivity",
+          "arguments": [
+            "scripts/run_q2_candidate_sensitivity.py",
+            "--config",
+            "workflow/q2_candidates/v9_sensitivity.json",
+            "--output-dir",
+            "outputs/q2/clean_sensitivity"
+          ],
+          "exit_code": 0,
+          "stdout": "{\"scope\": \"historical_candidate_response_diagnostic_not_national_sensitivity\", \"cases\": 27, \"valid\": 27, \"failed\": [], \"baseline_case\": 12, \"national_acceptance\": false, \"identical_opening_cash\": true, \"identical_seed\": true, \"metric_boundaries\": \"Same unreconciled proxy definitions as v5; no nationwide policy inference.\", \"assumptions\": \"Common historical GDP-growth multipliers; relative cost-decline multipliers; uniform real2008USD carbon charges on all modeled fossil liabilities. These ranges/coverage are research scenarios, not historical policy observations.\", \"not_B6_acceptance\": \"No2025-2060 baseline, admitted national boundary or empirical uncertainty distribution.\"}\n",
+          "stderr": ""
+        }
+      ],
+      "comparisons": [
+        {
+          "group": "candidate",
+          "artifact": "actions.csv",
+          "sha256": "c6bd7840c67abb8c3c96a5f7e7b2dcfec7acc6c59cef7d2f447104fb94ce2144",
+          "original_sha256": "c6bd7840c67abb8c3c96a5f7e7b2dcfec7acc6c59cef7d2f447104fb94ce2144",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "annual_path.csv",
+          "sha256": "4470c26c693ac93c6955047679de36a644f7bbc967963b835fe5567902d7a035",
+          "original_sha256": "4470c26c693ac93c6955047679de36a644f7bbc967963b835fe5567902d7a035",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "assets.csv",
+          "sha256": "32b1d7219b46d075dc9584bc4f3ebd81fbda139e7eec54caf14187bcb4335ab1",
+          "original_sha256": "32b1d7219b46d075dc9584bc4f3ebd81fbda139e7eec54caf14187bcb4335ab1",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "cash.csv",
+          "sha256": "4359d13cb43a83a02caea12c780c2ec05982c2a86c365731b92c9f38d2f24539",
+          "original_sha256": "4359d13cb43a83a02caea12c780c2ec05982c2a86c365731b92c9f38d2f24539",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "historical_fit.png",
+          "sha256": "6669ee84b57a033e608bad7ea8ebd17f61c79f793bb7dfc22c3525dab7805672",
+          "original_sha256": "6669ee84b57a033e608bad7ea8ebd17f61c79f793bb7dfc22c3525dab7805672",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "historical_fit.svg",
+          "sha256": "39b488d000322fd23472f56786c95f9d09d30cbeddc5d0600465cee39a7b161a",
+          "original_sha256": "39b488d000322fd23472f56786c95f9d09d30cbeddc5d0600465cee39a7b161a",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "historical_quality.json",
+          "sha256": "38df2222afc5afbf4df074090a1393aa8a586d44fda803f2bad51f0e280dfea2",
+          "original_sha256": "38df2222afc5afbf4df074090a1393aa8a586d44fda803f2bad51f0e280dfea2",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "history_baselines.csv",
+          "sha256": "084ed5c65bd72b1b5733dc562a9c66866910782f8f96cf61e428fd725047d298",
+          "original_sha256": "084ed5c65bd72b1b5733dc562a9c66866910782f8f96cf61e428fd725047d298",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "history_fit.csv",
+          "sha256": "fa90757482bf2896513c0731bf7b3bfac3284c3fce8c326d3e0a8f3ff18e2ec8",
+          "original_sha256": "fa90757482bf2896513c0731bf7b3bfac3284c3fce8c326d3e0a8f3ff18e2ec8",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "information.csv",
+          "sha256": "4cb7105df71e0500d8a9ce57a726ca3198dd8ccbe0c8c8a49bbe159dc2c606dd",
+          "original_sha256": "4cb7105df71e0500d8a9ce57a726ca3198dd8ccbe0c8c8a49bbe159dc2c606dd",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "metrics.csv",
+          "sha256": "679eb48608db36b3046b116d9e870ddda075fb6ce6ac93009d64542da02403f6",
+          "original_sha256": "679eb48608db36b3046b116d9e870ddda075fb6ce6ac93009d64542da02403f6",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "operations.json",
+          "sha256": "09e06c3e9e6103cfc178e910893666242e4224744be168ea3df71ba2f577ade8",
+          "original_sha256": "09e06c3e9e6103cfc178e910893666242e4224744be168ea3df71ba2f577ade8",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "projects.json",
+          "sha256": "e93e7077a166794f6ddbe0ca4e5d35ab2a9ab1b07076c8b2e3650643cb85a83c",
+          "original_sha256": "e93e7077a166794f6ddbe0ca4e5d35ab2a9ab1b07076c8b2e3650643cb85a83c",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "report.md",
+          "sha256": "984d1b5a06be31a628614fd60d1875c84617a56257dde1c333ca3c10c669ece1",
+          "original_sha256": "984d1b5a06be31a628614fd60d1875c84617a56257dde1c333ca3c10c669ece1",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "rule_comparison.csv",
+          "sha256": "6422ab82c9d71546ac5979584488e06d189a3edef63816294c121eeaa03493fa",
+          "original_sha256": "6422ab82c9d71546ac5979584488e06d189a3edef63816294c121eeaa03493fa",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "training_selection.json",
+          "sha256": "f7e0fc0b6d926c06a18ff888bf52c98032b3dfc4921f5d9dc88ca0eb0d20b92f",
+          "original_sha256": "f7e0fc0b6d926c06a18ff888bf52c98032b3dfc4921f5d9dc88ca0eb0d20b92f",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "training_trials.json",
+          "sha256": "250d8808636026a399549fedfde21209291573256d146d0a6c5a23e724fd6c89",
+          "original_sha256": "250d8808636026a399549fedfde21209291573256d146d0a6c5a23e724fd6c89",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "constraint_usage.csv",
+          "sha256": "d7c8e676e98a6e2e310b84890a8da04f404a63811c668b9e8be6a8b052fbeb74",
+          "original_sha256": "d7c8e676e98a6e2e310b84890a8da04f404a63811c668b9e8be6a8b052fbeb74",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "metrics.csv",
+          "sha256": "db7f948e53050949c53a61314a7a56e75625853f01b2d95dc08b5d105fefe5e6",
+          "original_sha256": "db7f948e53050949c53a61314a7a56e75625853f01b2d95dc08b5d105fefe5e6",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "quality.csv",
+          "sha256": "48e3e4fc5e3fc044639847547667d9801a685c6d51fd0604b2083b3b94ed30d1",
+          "original_sha256": "48e3e4fc5e3fc044639847547667d9801a685c6d51fd0604b2083b3b94ed30d1",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "shared_construction_connection.json",
+          "sha256": "0730bc38676f060e4f0dbacc1bec4dd99dbd3eee3bb23c260499c27f0be3d29c",
+          "original_sha256": "0730bc38676f060e4f0dbacc1bec4dd99dbd3eee3bb23c260499c27f0be3d29c",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "summary.json",
+          "sha256": "f58e50f11534959b57ea7cb69914912833bb9bb272215045861e228847cdd492",
+          "original_sha256": "f58e50f11534959b57ea7cb69914912833bb9bb272215045861e228847cdd492",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "technology_activity.csv",
+          "sha256": "af79f657030679edc7e5330ab4237b30ee3d5a05c2a033d1fbdf8c60ec3a6d69",
+          "original_sha256": "af79f657030679edc7e5330ab4237b30ee3d5a05c2a033d1fbdf8c60ec3a6d69",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "technology_frontiers.json",
+          "sha256": "16d925d3c053c160cc68e30e9d2f2eafd80a96a1b82f0d446e707b77151ccc7b",
+          "original_sha256": "16d925d3c053c160cc68e30e9d2f2eafd80a96a1b82f0d446e707b77151ccc7b",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "training_loss_parts.csv",
+          "sha256": "5e79101aa17bfcb3ab2e450b5ca89ed4ce3403419d58cab5cee5d9f4911f8270",
+          "original_sha256": "5e79101aa17bfcb3ab2e450b5ca89ed4ce3403419d58cab5cee5d9f4911f8270",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "v8_control.json",
+          "sha256": "a943652405b4a8ed906eaf243e8b34fe484d7dc27d2d343b671eb2554e382497",
+          "original_sha256": "a943652405b4a8ed906eaf243e8b34fe484d7dc27d2d343b671eb2554e382497",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "action_ledger.csv",
+          "sha256": "cf135b1119a11b763e1f4cf86d5f58d5a15094f34bd59eb6e929dd8b2b20cab4",
+          "original_sha256": "cf135b1119a11b763e1f4cf86d5f58d5a15094f34bd59eb6e929dd8b2b20cab4",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "annual_paths.csv",
+          "sha256": "525fd1f25806cc214a4b2dfb83e960904956837e431da89d401dbb7b72d83e41",
+          "original_sha256": "525fd1f25806cc214a4b2dfb83e960904956837e431da89d401dbb7b72d83e41",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_00.json",
+          "sha256": "a8ad940274bbcbee4876709e603430033bbe770ef39c0262670e9502b695b48a",
+          "original_sha256": "a8ad940274bbcbee4876709e603430033bbe770ef39c0262670e9502b695b48a",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_01.json",
+          "sha256": "41dc1bd45b288ccb75bf015bf7e081d68a59770b3727872119596d0e897b7272",
+          "original_sha256": "41dc1bd45b288ccb75bf015bf7e081d68a59770b3727872119596d0e897b7272",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_02.json",
+          "sha256": "958e12d019f3d1410973846e531c5b4f04fbd358d0476f170a044615b48efd6d",
+          "original_sha256": "958e12d019f3d1410973846e531c5b4f04fbd358d0476f170a044615b48efd6d",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_03.json",
+          "sha256": "bf726dc25b5084093c46c32eadfc65c4b858de4f1aa9f635914ff06e9a1e65d6",
+          "original_sha256": "bf726dc25b5084093c46c32eadfc65c4b858de4f1aa9f635914ff06e9a1e65d6",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_04.json",
+          "sha256": "18767e76fd75fedbd0047183d97e1a1e394943830cbb1c28d5f0979b18782966",
+          "original_sha256": "18767e76fd75fedbd0047183d97e1a1e394943830cbb1c28d5f0979b18782966",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_05.json",
+          "sha256": "4597af6bf7f376557a8af090487b3f0494248fc44580d24a0a073c9ddfe15653",
+          "original_sha256": "4597af6bf7f376557a8af090487b3f0494248fc44580d24a0a073c9ddfe15653",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_06.json",
+          "sha256": "a2a5ae968f35285eac0f015b2a1525cc64f4c45822eb620bed21a618cbc472bd",
+          "original_sha256": "a2a5ae968f35285eac0f015b2a1525cc64f4c45822eb620bed21a618cbc472bd",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_07.json",
+          "sha256": "d3a2f509bbfa46f7a24b3fb1565c3564ae95f35440c0b09843acce3ebe7c1832",
+          "original_sha256": "d3a2f509bbfa46f7a24b3fb1565c3564ae95f35440c0b09843acce3ebe7c1832",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_08.json",
+          "sha256": "4905bb870398d366fa9ed50338e127a3642faa5cadddaebbfea5fe56fdcc73bd",
+          "original_sha256": "4905bb870398d366fa9ed50338e127a3642faa5cadddaebbfea5fe56fdcc73bd",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_09.json",
+          "sha256": "7f239053ac9493afca5b8bdd53b7c4e79622e77605d0c7e70d8fc928cafddbbf",
+          "original_sha256": "7f239053ac9493afca5b8bdd53b7c4e79622e77605d0c7e70d8fc928cafddbbf",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_10.json",
+          "sha256": "00088875b8bcf8da15d9b1382e820a077d1a48628850759521a49669323b36f9",
+          "original_sha256": "00088875b8bcf8da15d9b1382e820a077d1a48628850759521a49669323b36f9",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_11.json",
+          "sha256": "013393a23d3f9e4c61f7938a4abb41768daee181772d97043bfbac93fc6c3885",
+          "original_sha256": "013393a23d3f9e4c61f7938a4abb41768daee181772d97043bfbac93fc6c3885",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_12.json",
+          "sha256": "c2cfaa134020d353c7a208da9fd31ebfefa937251fca092383224605f144088d",
+          "original_sha256": "c2cfaa134020d353c7a208da9fd31ebfefa937251fca092383224605f144088d",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_13.json",
+          "sha256": "a7a74bdec79e0817838488f30f91961c53bb2abeb683ee6195cf9d39006ce526",
+          "original_sha256": "a7a74bdec79e0817838488f30f91961c53bb2abeb683ee6195cf9d39006ce526",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_14.json",
+          "sha256": "cd49bb40f65538e3cdfb34a83cb28daabd68bfebd802e577bfee9dc70785eeed",
+          "original_sha256": "cd49bb40f65538e3cdfb34a83cb28daabd68bfebd802e577bfee9dc70785eeed",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_15.json",
+          "sha256": "cc76f07f62503135bee8b2f02f73719ebb37327ae218458a0fb997d64dbe3eb5",
+          "original_sha256": "cc76f07f62503135bee8b2f02f73719ebb37327ae218458a0fb997d64dbe3eb5",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_16.json",
+          "sha256": "4403b9d6d366f8451779d091831774ddc2c5c615dd28cbb1f44d236deede67c8",
+          "original_sha256": "4403b9d6d366f8451779d091831774ddc2c5c615dd28cbb1f44d236deede67c8",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_17.json",
+          "sha256": "1d90122834a05ec52562f08847a2b0174750d7e1fe5b7c5e80603dd117b0df67",
+          "original_sha256": "1d90122834a05ec52562f08847a2b0174750d7e1fe5b7c5e80603dd117b0df67",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_18.json",
+          "sha256": "8ba6e352578ee619d35ff14c99f40e54618de4c064be1a5d6f067c2d70c7a2c8",
+          "original_sha256": "8ba6e352578ee619d35ff14c99f40e54618de4c064be1a5d6f067c2d70c7a2c8",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_19.json",
+          "sha256": "acc447b505989a5b2947fc1dd5b21cdc4891fdbb54e6b6ab1d44494884eb0641",
+          "original_sha256": "acc447b505989a5b2947fc1dd5b21cdc4891fdbb54e6b6ab1d44494884eb0641",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_20.json",
+          "sha256": "76b5d7259772195bc776f2a54c48e93bc20e1a25e636f5d87e135c3a9ebbac47",
+          "original_sha256": "76b5d7259772195bc776f2a54c48e93bc20e1a25e636f5d87e135c3a9ebbac47",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_21.json",
+          "sha256": "e20ab4cc99cca2e4789f4f0fd45080123d7f56fd783891621110e3c6ece5ea07",
+          "original_sha256": "e20ab4cc99cca2e4789f4f0fd45080123d7f56fd783891621110e3c6ece5ea07",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_22.json",
+          "sha256": "8ac8e3711c740f23b18a559b412357850510f30be7950883ae562334a82f5ca1",
+          "original_sha256": "8ac8e3711c740f23b18a559b412357850510f30be7950883ae562334a82f5ca1",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_23.json",
+          "sha256": "7b79c68a8c091ca77effa29ccfeda3332ff2ceb41d06c9e756e394a4b54a1de1",
+          "original_sha256": "7b79c68a8c091ca77effa29ccfeda3332ff2ceb41d06c9e756e394a4b54a1de1",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_24.json",
+          "sha256": "01272748b58edeb633c276c090554bee567b8c31b3bcffba2990e550b568f8b4",
+          "original_sha256": "01272748b58edeb633c276c090554bee567b8c31b3bcffba2990e550b568f8b4",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_25.json",
+          "sha256": "408f2798729184accccfd6a6f7490f22afebce7ac15e860ef52ad56c0d43d41f",
+          "original_sha256": "408f2798729184accccfd6a6f7490f22afebce7ac15e860ef52ad56c0d43d41f",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_26.json",
+          "sha256": "91d571147d27e3b295e1c481df7c61de734ae2d9ed6b1806a8c734642aa7e799",
+          "original_sha256": "91d571147d27e3b295e1c481df7c61de734ae2d9ed6b1806a8c734642aa7e799",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "cases.csv",
+          "sha256": "7610798062bf78816863a3294e10d525392fd1fb182033633203e2b7f259f96a",
+          "original_sha256": "7610798062bf78816863a3294e10d525392fd1fb182033633203e2b7f259f96a",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "one_factor_2024.csv",
+          "sha256": "99aec92c217abea40eaebed1405c922fea784736e5c339876df9e8e5ec5facf7",
+          "original_sha256": "99aec92c217abea40eaebed1405c922fea784736e5c339876df9e8e5ec5facf7",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "paired_metrics.csv",
+          "sha256": "169903c7b9567fbb27bfe9be619bff6ea736e1961399e9e8a6c418559e34e6ea",
+          "original_sha256": "169903c7b9567fbb27bfe9be619bff6ea736e1961399e9e8a6c418559e34e6ea",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "summary.json",
+          "sha256": "6f46d028598154e641bdf10fcbbde763337aa84d284c2afd7ea66fe557bba90e",
+          "original_sha256": "6f46d028598154e641bdf10fcbbde763337aa84d284c2afd7ea66fe557bba90e",
+          "identical": true
+        }
+      ]
+    },
+    {
+      "environment": "alternate",
+      "commands": [
+        {
+          "name": "builder",
+          "arguments": [
+            "scripts/build_q2_joint_deployment_candidate.py"
+          ],
+          "exit_code": 0,
+          "stdout": "Existing v9 reproduced exactly\n",
+          "stderr": ""
+        },
+        {
+          "name": "candidate",
+          "arguments": [
+            "scripts/run_q2_historical_candidate.py",
+            "--manifest",
+            "workflow/q2_candidates/v9/manifest.json",
+            "--output-dir",
+            "outputs/q2/alternate_candidate"
+          ],
+          "exit_code": 0,
+          "stdout": "{\"rule\": \"adaptive_margin\", \"structure\": \"shared_construction_connection\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 1.6492024826272516}\n{\"rule\": \"instant_margin\", \"structure\": \"shared_construction_connection\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 0.2357603114879326}\n{\"rule\": \"no_investment\", \"structure\": \"shared_construction_connection\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 4.008925026250364}\n{\"rule\": \"adaptive_margin\", \"structure\": \"technology_frontiers\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 1.6381734764348217}\n{\"rule\": \"instant_margin\", \"structure\": \"technology_frontiers\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 0.3993364743934041}\n{\"rule\": \"no_investment\", \"structure\": \"technology_frontiers\", \"valid\": 81, \"failed\": 0, \"best_training_loss\": 4.008925026250364}\n{\"status\": \"diagnostic_executed\", \"numeric_quality_passed\": false, \"failed_indicators\": [\"consumption_oil_share\", \"consumption_gas_share\", \"wind_10kW\", \"solar_10kW\"], \"national_acceptance\": false}\n",
+          "stderr": ""
+        },
+        {
+          "name": "ablation",
+          "arguments": [
+            "scripts/run_q2_joint_deployment_comparison.py",
+            "--output-dir",
+            "outputs/q2/alternate_ablation"
+          ],
+          "exit_code": 0,
+          "stdout": "Three complete trajectories; each training prefix agrees with its frozen selected trial\n",
+          "stderr": ""
+        },
+        {
+          "name": "sensitivity",
+          "arguments": [
+            "scripts/run_q2_candidate_sensitivity.py",
+            "--config",
+            "workflow/q2_candidates/v9_sensitivity.json",
+            "--output-dir",
+            "outputs/q2/alternate_sensitivity"
+          ],
+          "exit_code": 0,
+          "stdout": "{\"scope\": \"historical_candidate_response_diagnostic_not_national_sensitivity\", \"cases\": 27, \"valid\": 27, \"failed\": [], \"baseline_case\": 12, \"national_acceptance\": false, \"identical_opening_cash\": true, \"identical_seed\": true, \"metric_boundaries\": \"Same unreconciled proxy definitions as v5; no nationwide policy inference.\", \"assumptions\": \"Common historical GDP-growth multipliers; relative cost-decline multipliers; uniform real2008USD carbon charges on all modeled fossil liabilities. These ranges/coverage are research scenarios, not historical policy observations.\", \"not_B6_acceptance\": \"No2025-2060 baseline, admitted national boundary or empirical uncertainty distribution.\"}\n",
+          "stderr": ""
+        }
+      ],
+      "comparisons": [
+        {
+          "group": "candidate",
+          "artifact": "actions.csv",
+          "sha256": "c6bd7840c67abb8c3c96a5f7e7b2dcfec7acc6c59cef7d2f447104fb94ce2144",
+          "original_sha256": "c6bd7840c67abb8c3c96a5f7e7b2dcfec7acc6c59cef7d2f447104fb94ce2144",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "annual_path.csv",
+          "sha256": "4470c26c693ac93c6955047679de36a644f7bbc967963b835fe5567902d7a035",
+          "original_sha256": "4470c26c693ac93c6955047679de36a644f7bbc967963b835fe5567902d7a035",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "assets.csv",
+          "sha256": "32b1d7219b46d075dc9584bc4f3ebd81fbda139e7eec54caf14187bcb4335ab1",
+          "original_sha256": "32b1d7219b46d075dc9584bc4f3ebd81fbda139e7eec54caf14187bcb4335ab1",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "cash.csv",
+          "sha256": "4359d13cb43a83a02caea12c780c2ec05982c2a86c365731b92c9f38d2f24539",
+          "original_sha256": "4359d13cb43a83a02caea12c780c2ec05982c2a86c365731b92c9f38d2f24539",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "historical_fit.png",
+          "sha256": "4790c7c08c4a3394f0e80459cd9fb784dff91923df94778a0ab5396448e2c4df",
+          "original_sha256": "6669ee84b57a033e608bad7ea8ebd17f61c79f793bb7dfc22c3525dab7805672",
+          "identical": false
+        },
+        {
+          "group": "candidate",
+          "artifact": "historical_fit.svg",
+          "sha256": "39b488d000322fd23472f56786c95f9d09d30cbeddc5d0600465cee39a7b161a",
+          "original_sha256": "39b488d000322fd23472f56786c95f9d09d30cbeddc5d0600465cee39a7b161a",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "historical_quality.json",
+          "sha256": "38df2222afc5afbf4df074090a1393aa8a586d44fda803f2bad51f0e280dfea2",
+          "original_sha256": "38df2222afc5afbf4df074090a1393aa8a586d44fda803f2bad51f0e280dfea2",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "history_baselines.csv",
+          "sha256": "084ed5c65bd72b1b5733dc562a9c66866910782f8f96cf61e428fd725047d298",
+          "original_sha256": "084ed5c65bd72b1b5733dc562a9c66866910782f8f96cf61e428fd725047d298",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "history_fit.csv",
+          "sha256": "fa90757482bf2896513c0731bf7b3bfac3284c3fce8c326d3e0a8f3ff18e2ec8",
+          "original_sha256": "fa90757482bf2896513c0731bf7b3bfac3284c3fce8c326d3e0a8f3ff18e2ec8",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "information.csv",
+          "sha256": "4cb7105df71e0500d8a9ce57a726ca3198dd8ccbe0c8c8a49bbe159dc2c606dd",
+          "original_sha256": "4cb7105df71e0500d8a9ce57a726ca3198dd8ccbe0c8c8a49bbe159dc2c606dd",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "metrics.csv",
+          "sha256": "679eb48608db36b3046b116d9e870ddda075fb6ce6ac93009d64542da02403f6",
+          "original_sha256": "679eb48608db36b3046b116d9e870ddda075fb6ce6ac93009d64542da02403f6",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "operations.json",
+          "sha256": "09e06c3e9e6103cfc178e910893666242e4224744be168ea3df71ba2f577ade8",
+          "original_sha256": "09e06c3e9e6103cfc178e910893666242e4224744be168ea3df71ba2f577ade8",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "projects.json",
+          "sha256": "e93e7077a166794f6ddbe0ca4e5d35ab2a9ab1b07076c8b2e3650643cb85a83c",
+          "original_sha256": "e93e7077a166794f6ddbe0ca4e5d35ab2a9ab1b07076c8b2e3650643cb85a83c",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "report.md",
+          "sha256": "984d1b5a06be31a628614fd60d1875c84617a56257dde1c333ca3c10c669ece1",
+          "original_sha256": "984d1b5a06be31a628614fd60d1875c84617a56257dde1c333ca3c10c669ece1",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "rule_comparison.csv",
+          "sha256": "6422ab82c9d71546ac5979584488e06d189a3edef63816294c121eeaa03493fa",
+          "original_sha256": "6422ab82c9d71546ac5979584488e06d189a3edef63816294c121eeaa03493fa",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "training_selection.json",
+          "sha256": "f7e0fc0b6d926c06a18ff888bf52c98032b3dfc4921f5d9dc88ca0eb0d20b92f",
+          "original_sha256": "f7e0fc0b6d926c06a18ff888bf52c98032b3dfc4921f5d9dc88ca0eb0d20b92f",
+          "identical": true
+        },
+        {
+          "group": "candidate",
+          "artifact": "training_trials.json",
+          "sha256": "250d8808636026a399549fedfde21209291573256d146d0a6c5a23e724fd6c89",
+          "original_sha256": "250d8808636026a399549fedfde21209291573256d146d0a6c5a23e724fd6c89",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "constraint_usage.csv",
+          "sha256": "d7c8e676e98a6e2e310b84890a8da04f404a63811c668b9e8be6a8b052fbeb74",
+          "original_sha256": "d7c8e676e98a6e2e310b84890a8da04f404a63811c668b9e8be6a8b052fbeb74",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "metrics.csv",
+          "sha256": "db7f948e53050949c53a61314a7a56e75625853f01b2d95dc08b5d105fefe5e6",
+          "original_sha256": "db7f948e53050949c53a61314a7a56e75625853f01b2d95dc08b5d105fefe5e6",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "quality.csv",
+          "sha256": "48e3e4fc5e3fc044639847547667d9801a685c6d51fd0604b2083b3b94ed30d1",
+          "original_sha256": "48e3e4fc5e3fc044639847547667d9801a685c6d51fd0604b2083b3b94ed30d1",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "shared_construction_connection.json",
+          "sha256": "0730bc38676f060e4f0dbacc1bec4dd99dbd3eee3bb23c260499c27f0be3d29c",
+          "original_sha256": "0730bc38676f060e4f0dbacc1bec4dd99dbd3eee3bb23c260499c27f0be3d29c",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "summary.json",
+          "sha256": "f58e50f11534959b57ea7cb69914912833bb9bb272215045861e228847cdd492",
+          "original_sha256": "f58e50f11534959b57ea7cb69914912833bb9bb272215045861e228847cdd492",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "technology_activity.csv",
+          "sha256": "af79f657030679edc7e5330ab4237b30ee3d5a05c2a033d1fbdf8c60ec3a6d69",
+          "original_sha256": "af79f657030679edc7e5330ab4237b30ee3d5a05c2a033d1fbdf8c60ec3a6d69",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "technology_frontiers.json",
+          "sha256": "16d925d3c053c160cc68e30e9d2f2eafd80a96a1b82f0d446e707b77151ccc7b",
+          "original_sha256": "16d925d3c053c160cc68e30e9d2f2eafd80a96a1b82f0d446e707b77151ccc7b",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "training_loss_parts.csv",
+          "sha256": "5e79101aa17bfcb3ab2e450b5ca89ed4ce3403419d58cab5cee5d9f4911f8270",
+          "original_sha256": "5e79101aa17bfcb3ab2e450b5ca89ed4ce3403419d58cab5cee5d9f4911f8270",
+          "identical": true
+        },
+        {
+          "group": "ablation",
+          "artifact": "v8_control.json",
+          "sha256": "a943652405b4a8ed906eaf243e8b34fe484d7dc27d2d343b671eb2554e382497",
+          "original_sha256": "a943652405b4a8ed906eaf243e8b34fe484d7dc27d2d343b671eb2554e382497",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "action_ledger.csv",
+          "sha256": "cf135b1119a11b763e1f4cf86d5f58d5a15094f34bd59eb6e929dd8b2b20cab4",
+          "original_sha256": "cf135b1119a11b763e1f4cf86d5f58d5a15094f34bd59eb6e929dd8b2b20cab4",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "annual_paths.csv",
+          "sha256": "525fd1f25806cc214a4b2dfb83e960904956837e431da89d401dbb7b72d83e41",
+          "original_sha256": "525fd1f25806cc214a4b2dfb83e960904956837e431da89d401dbb7b72d83e41",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_00.json",
+          "sha256": "a8ad940274bbcbee4876709e603430033bbe770ef39c0262670e9502b695b48a",
+          "original_sha256": "a8ad940274bbcbee4876709e603430033bbe770ef39c0262670e9502b695b48a",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_01.json",
+          "sha256": "41dc1bd45b288ccb75bf015bf7e081d68a59770b3727872119596d0e897b7272",
+          "original_sha256": "41dc1bd45b288ccb75bf015bf7e081d68a59770b3727872119596d0e897b7272",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_02.json",
+          "sha256": "958e12d019f3d1410973846e531c5b4f04fbd358d0476f170a044615b48efd6d",
+          "original_sha256": "958e12d019f3d1410973846e531c5b4f04fbd358d0476f170a044615b48efd6d",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_03.json",
+          "sha256": "bf726dc25b5084093c46c32eadfc65c4b858de4f1aa9f635914ff06e9a1e65d6",
+          "original_sha256": "bf726dc25b5084093c46c32eadfc65c4b858de4f1aa9f635914ff06e9a1e65d6",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_04.json",
+          "sha256": "18767e76fd75fedbd0047183d97e1a1e394943830cbb1c28d5f0979b18782966",
+          "original_sha256": "18767e76fd75fedbd0047183d97e1a1e394943830cbb1c28d5f0979b18782966",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_05.json",
+          "sha256": "4597af6bf7f376557a8af090487b3f0494248fc44580d24a0a073c9ddfe15653",
+          "original_sha256": "4597af6bf7f376557a8af090487b3f0494248fc44580d24a0a073c9ddfe15653",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_06.json",
+          "sha256": "a2a5ae968f35285eac0f015b2a1525cc64f4c45822eb620bed21a618cbc472bd",
+          "original_sha256": "a2a5ae968f35285eac0f015b2a1525cc64f4c45822eb620bed21a618cbc472bd",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_07.json",
+          "sha256": "d3a2f509bbfa46f7a24b3fb1565c3564ae95f35440c0b09843acce3ebe7c1832",
+          "original_sha256": "d3a2f509bbfa46f7a24b3fb1565c3564ae95f35440c0b09843acce3ebe7c1832",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_08.json",
+          "sha256": "4905bb870398d366fa9ed50338e127a3642faa5cadddaebbfea5fe56fdcc73bd",
+          "original_sha256": "4905bb870398d366fa9ed50338e127a3642faa5cadddaebbfea5fe56fdcc73bd",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_09.json",
+          "sha256": "7f239053ac9493afca5b8bdd53b7c4e79622e77605d0c7e70d8fc928cafddbbf",
+          "original_sha256": "7f239053ac9493afca5b8bdd53b7c4e79622e77605d0c7e70d8fc928cafddbbf",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_10.json",
+          "sha256": "00088875b8bcf8da15d9b1382e820a077d1a48628850759521a49669323b36f9",
+          "original_sha256": "00088875b8bcf8da15d9b1382e820a077d1a48628850759521a49669323b36f9",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_11.json",
+          "sha256": "013393a23d3f9e4c61f7938a4abb41768daee181772d97043bfbac93fc6c3885",
+          "original_sha256": "013393a23d3f9e4c61f7938a4abb41768daee181772d97043bfbac93fc6c3885",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_12.json",
+          "sha256": "c2cfaa134020d353c7a208da9fd31ebfefa937251fca092383224605f144088d",
+          "original_sha256": "c2cfaa134020d353c7a208da9fd31ebfefa937251fca092383224605f144088d",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_13.json",
+          "sha256": "a7a74bdec79e0817838488f30f91961c53bb2abeb683ee6195cf9d39006ce526",
+          "original_sha256": "a7a74bdec79e0817838488f30f91961c53bb2abeb683ee6195cf9d39006ce526",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_14.json",
+          "sha256": "cd49bb40f65538e3cdfb34a83cb28daabd68bfebd802e577bfee9dc70785eeed",
+          "original_sha256": "cd49bb40f65538e3cdfb34a83cb28daabd68bfebd802e577bfee9dc70785eeed",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_15.json",
+          "sha256": "cc76f07f62503135bee8b2f02f73719ebb37327ae218458a0fb997d64dbe3eb5",
+          "original_sha256": "cc76f07f62503135bee8b2f02f73719ebb37327ae218458a0fb997d64dbe3eb5",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_16.json",
+          "sha256": "4403b9d6d366f8451779d091831774ddc2c5c615dd28cbb1f44d236deede67c8",
+          "original_sha256": "4403b9d6d366f8451779d091831774ddc2c5c615dd28cbb1f44d236deede67c8",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_17.json",
+          "sha256": "1d90122834a05ec52562f08847a2b0174750d7e1fe5b7c5e80603dd117b0df67",
+          "original_sha256": "1d90122834a05ec52562f08847a2b0174750d7e1fe5b7c5e80603dd117b0df67",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_18.json",
+          "sha256": "8ba6e352578ee619d35ff14c99f40e54618de4c064be1a5d6f067c2d70c7a2c8",
+          "original_sha256": "8ba6e352578ee619d35ff14c99f40e54618de4c064be1a5d6f067c2d70c7a2c8",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_19.json",
+          "sha256": "acc447b505989a5b2947fc1dd5b21cdc4891fdbb54e6b6ab1d44494884eb0641",
+          "original_sha256": "acc447b505989a5b2947fc1dd5b21cdc4891fdbb54e6b6ab1d44494884eb0641",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_20.json",
+          "sha256": "76b5d7259772195bc776f2a54c48e93bc20e1a25e636f5d87e135c3a9ebbac47",
+          "original_sha256": "76b5d7259772195bc776f2a54c48e93bc20e1a25e636f5d87e135c3a9ebbac47",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_21.json",
+          "sha256": "e20ab4cc99cca2e4789f4f0fd45080123d7f56fd783891621110e3c6ece5ea07",
+          "original_sha256": "e20ab4cc99cca2e4789f4f0fd45080123d7f56fd783891621110e3c6ece5ea07",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_22.json",
+          "sha256": "8ac8e3711c740f23b18a559b412357850510f30be7950883ae562334a82f5ca1",
+          "original_sha256": "8ac8e3711c740f23b18a559b412357850510f30be7950883ae562334a82f5ca1",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_23.json",
+          "sha256": "7b79c68a8c091ca77effa29ccfeda3332ff2ceb41d06c9e756e394a4b54a1de1",
+          "original_sha256": "7b79c68a8c091ca77effa29ccfeda3332ff2ceb41d06c9e756e394a4b54a1de1",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_24.json",
+          "sha256": "01272748b58edeb633c276c090554bee567b8c31b3bcffba2990e550b568f8b4",
+          "original_sha256": "01272748b58edeb633c276c090554bee567b8c31b3bcffba2990e550b568f8b4",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_25.json",
+          "sha256": "408f2798729184accccfd6a6f7490f22afebce7ac15e860ef52ad56c0d43d41f",
+          "original_sha256": "408f2798729184accccfd6a6f7490f22afebce7ac15e860ef52ad56c0d43d41f",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "case_26.json",
+          "sha256": "91d571147d27e3b295e1c481df7c61de734ae2d9ed6b1806a8c734642aa7e799",
+          "original_sha256": "91d571147d27e3b295e1c481df7c61de734ae2d9ed6b1806a8c734642aa7e799",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "cases.csv",
+          "sha256": "7610798062bf78816863a3294e10d525392fd1fb182033633203e2b7f259f96a",
+          "original_sha256": "7610798062bf78816863a3294e10d525392fd1fb182033633203e2b7f259f96a",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "one_factor_2024.csv",
+          "sha256": "99aec92c217abea40eaebed1405c922fea784736e5c339876df9e8e5ec5facf7",
+          "original_sha256": "99aec92c217abea40eaebed1405c922fea784736e5c339876df9e8e5ec5facf7",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "paired_metrics.csv",
+          "sha256": "169903c7b9567fbb27bfe9be619bff6ea736e1961399e9e8a6c418559e34e6ea",
+          "original_sha256": "169903c7b9567fbb27bfe9be619bff6ea736e1961399e9e8a6c418559e34e6ea",
+          "identical": true
+        },
+        {
+          "group": "sensitivity",
+          "artifact": "summary.json",
+          "sha256": "6f46d028598154e641bdf10fcbbde763337aa84d284c2afd7ea66fe557bba90e",
+          "original_sha256": "6f46d028598154e641bdf10fcbbde763337aa84d284c2afd7ea66fe557bba90e",
+          "identical": true
+        }
+      ]
+    }
+  ],
+  "full_v8_control_ledger_identical": true,
+  "response_baseline_full_ledger_identical": true,
+  "candidate_projects_operations_match_paired_run": true,
+  "all_numeric_artifacts_identical": true,
+  "national_acceptance": false
+}

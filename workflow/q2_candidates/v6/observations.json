@@ -1,0 +1,2102 @@
+[
+  {
+    "year": 2015,
+    "indicator": "consumption_10ktce",
+    "value": 434113.0,
+    "unit": "10^4 tce",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2015",
+        "indicator": "consumption_10ktce",
+        "value": "434113",
+        "unit": "10^4 tce",
+        "family": "energy_consumption",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2015; column=consumption_10ktce",
+        "source_record_id": "7db4133f01ac1c6d9567",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "indicator": "consumption_coal_share",
+    "value": 0.638,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2015",
+        "indicator": "consumption_coal_pct",
+        "value": "63.8",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2015; column=consumption_coal_pct",
+        "source_record_id": "d6747a88fe3114f2003b",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "indicator": "consumption_oil_share",
+    "value": 0.184,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2015",
+        "indicator": "consumption_oil_pct",
+        "value": "18.4",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2015; column=consumption_oil_pct",
+        "source_record_id": "ee7c1b3347b34780acf3",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "indicator": "consumption_gas_share",
+    "value": 0.057999999999999996,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2015",
+        "indicator": "consumption_gas_pct",
+        "value": "5.8",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2015; column=consumption_gas_pct",
+        "source_record_id": "6b499b5f63956018a011",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "indicator": "wind_10kW",
+    "value": 13075.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2015",
+        "indicator": "wind_10kW",
+        "value": "13075",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2015; column=wind_10kW",
+        "source_record_id": "f6df10d1a8498d20b2b3",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "indicator": "solar_10kW",
+    "value": 4218.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2015",
+        "indicator": "solar_10kW",
+        "value": "4218",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2015; column=solar_10kW",
+        "source_record_id": "b2d86dff29f1a91f0752",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "indicator": "nuclear_10kW",
+    "value": 2717.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2015",
+        "indicator": "nuclear_10kW",
+        "value": "2717",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2015; column=nuclear_10kW",
+        "source_record_id": "77b75046acdb97d14612",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "indicator": "gcb_fuel_co2",
+    "value": 8975.216887,
+    "unit": "Mt CO2",
+    "boundary": "GCB_coal_oil_gas_categories_effective_coefficient_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2015",
+        "indicator": "gcb_Coal",
+        "value": "7266.352288",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2015; Coal",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2015",
+        "indicator": "gcb_Oil",
+        "value": "1328.812391",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2015; Oil",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2015",
+        "indicator": "gcb_Gas",
+        "value": "380.052208",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2015; Gas",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "indicator": "consumption_10ktce",
+    "value": 441492.0,
+    "unit": "10^4 tce",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2016",
+        "indicator": "consumption_10ktce",
+        "value": "441492",
+        "unit": "10^4 tce",
+        "family": "energy_consumption",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2016; column=consumption_10ktce",
+        "source_record_id": "3216d0202f2858bbeba5",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "indicator": "consumption_coal_share",
+    "value": 0.622,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2016",
+        "indicator": "consumption_coal_pct",
+        "value": "62.2",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2016; column=consumption_coal_pct",
+        "source_record_id": "35d53647277625671215",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "indicator": "consumption_oil_share",
+    "value": 0.187,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2016",
+        "indicator": "consumption_oil_pct",
+        "value": "18.7",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2016; column=consumption_oil_pct",
+        "source_record_id": "b6d17fac57d2abf36683",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "indicator": "consumption_gas_share",
+    "value": 0.061,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2016",
+        "indicator": "consumption_gas_pct",
+        "value": "6.1",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2016; column=consumption_gas_pct",
+        "source_record_id": "17e942e6603443fbe5d8",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "indicator": "wind_10kW",
+    "value": 14747.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2016",
+        "indicator": "wind_10kW",
+        "value": "14747",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2016; column=wind_10kW",
+        "source_record_id": "9a2d93175dae1fcb00f5",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "indicator": "solar_10kW",
+    "value": 7631.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2016",
+        "indicator": "solar_10kW",
+        "value": "7631",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2016; column=solar_10kW",
+        "source_record_id": "69ad383ddeee73a7c33d",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "indicator": "nuclear_10kW",
+    "value": 3364.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2016",
+        "indicator": "nuclear_10kW",
+        "value": "3364",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2016; column=nuclear_10kW",
+        "source_record_id": "ac36f2209dacab17c019",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "indicator": "gcb_fuel_co2",
+    "value": 8851.45456,
+    "unit": "Mt CO2",
+    "boundary": "GCB_coal_oil_gas_categories_effective_coefficient_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2016",
+        "indicator": "gcb_Coal",
+        "value": "7071.8864",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2016; Coal",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2016",
+        "indicator": "gcb_Oil",
+        "value": "1357.84176",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2016; Oil",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2016",
+        "indicator": "gcb_Gas",
+        "value": "421.7264",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2016; Gas",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "indicator": "consumption_10ktce",
+    "value": 455827.0,
+    "unit": "10^4 tce",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2017",
+        "indicator": "consumption_10ktce",
+        "value": "455827",
+        "unit": "10^4 tce",
+        "family": "energy_consumption",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2017; column=consumption_10ktce",
+        "source_record_id": "5ed2d326db43e91ff2ac",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "indicator": "consumption_coal_share",
+    "value": 0.606,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2017",
+        "indicator": "consumption_coal_pct",
+        "value": "60.6",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2017; column=consumption_coal_pct",
+        "source_record_id": "4ef4d60c3aee520717cf",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "indicator": "consumption_oil_share",
+    "value": 0.18899999999999997,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2017",
+        "indicator": "consumption_oil_pct",
+        "value": "18.9",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2017; column=consumption_oil_pct",
+        "source_record_id": "d831808036a5fc18f449",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "indicator": "consumption_gas_share",
+    "value": 0.069,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2017",
+        "indicator": "consumption_gas_pct",
+        "value": "6.9",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2017; column=consumption_gas_pct",
+        "source_record_id": "4e89270683d3f018c3ef",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "indicator": "wind_10kW",
+    "value": 16325.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2017",
+        "indicator": "wind_10kW",
+        "value": "16325",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2017; column=wind_10kW",
+        "source_record_id": "8e5545ffdd17845d5564",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "indicator": "solar_10kW",
+    "value": 12942.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2017",
+        "indicator": "solar_10kW",
+        "value": "12942",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2017; column=solar_10kW",
+        "source_record_id": "29b690707f65c3521584",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "indicator": "nuclear_10kW",
+    "value": 3582.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2017",
+        "indicator": "nuclear_10kW",
+        "value": "3582",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2017; column=nuclear_10kW",
+        "source_record_id": "5b91ad22d732d5c7fd39",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "indicator": "gcb_fuel_co2",
+    "value": 9080.615775999999,
+    "unit": "Mt CO2",
+    "boundary": "GCB_coal_oil_gas_categories_effective_coefficient_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2017",
+        "indicator": "gcb_Coal",
+        "value": "7163.662272",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2017; Coal",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2017",
+        "indicator": "gcb_Oil",
+        "value": "1430.594144",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2017; Oil",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2017",
+        "indicator": "gcb_Gas",
+        "value": "486.35936",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2017; Gas",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "indicator": "consumption_10ktce",
+    "value": 471925.0,
+    "unit": "10^4 tce",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2018",
+        "indicator": "consumption_10ktce",
+        "value": "471925",
+        "unit": "10^4 tce",
+        "family": "energy_consumption",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2018; column=consumption_10ktce",
+        "source_record_id": "9d6e7704fcf157c34588",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "indicator": "consumption_coal_share",
+    "value": 0.59,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2018",
+        "indicator": "consumption_coal_pct",
+        "value": "59.0",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2018; column=consumption_coal_pct",
+        "source_record_id": "7722a56648a0bc2fa5e9",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "indicator": "consumption_oil_share",
+    "value": 0.18899999999999997,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2018",
+        "indicator": "consumption_oil_pct",
+        "value": "18.9",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2018; column=consumption_oil_pct",
+        "source_record_id": "6c1d89f4d29ffebd490b",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "indicator": "consumption_gas_share",
+    "value": 0.076,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2018",
+        "indicator": "consumption_gas_pct",
+        "value": "7.6",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2018; column=consumption_gas_pct",
+        "source_record_id": "fdbfbf3264098ba56530",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "indicator": "wind_10kW",
+    "value": 18427.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2018",
+        "indicator": "wind_10kW",
+        "value": "18427",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2018; column=wind_10kW",
+        "source_record_id": "bce1b76b51353c45cae5",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "indicator": "solar_10kW",
+    "value": 17433.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2018",
+        "indicator": "solar_10kW",
+        "value": "17433",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2018; column=solar_10kW",
+        "source_record_id": "552e13d7038f7987ed17",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "indicator": "nuclear_10kW",
+    "value": 4466.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2018",
+        "indicator": "nuclear_10kW",
+        "value": "4466",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2018; column=nuclear_10kW",
+        "source_record_id": "663e5b95733bec1c46da",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "indicator": "gcb_fuel_co2",
+    "value": 9392.546752,
+    "unit": "Mt CO2",
+    "boundary": "GCB_coal_oil_gas_categories_effective_coefficient_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2018",
+        "indicator": "gcb_Coal",
+        "value": "7316.700224",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2018; Coal",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2018",
+        "indicator": "gcb_Oil",
+        "value": "1500.477616",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2018; Oil",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2018",
+        "indicator": "gcb_Gas",
+        "value": "575.368912",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2018; Gas",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "indicator": "consumption_10ktce",
+    "value": 485584.0,
+    "unit": "10^4 tce",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2019",
+        "indicator": "consumption_10ktce",
+        "value": "485584",
+        "unit": "10^4 tce",
+        "family": "energy_consumption",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2019; column=consumption_10ktce",
+        "source_record_id": "eefe27e0ff2397c8b62c",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "indicator": "consumption_coal_share",
+    "value": 0.575,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2019",
+        "indicator": "consumption_coal_pct",
+        "value": "57.5",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2019; column=consumption_coal_pct",
+        "source_record_id": "cc03d8771266d9db0f07",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "indicator": "consumption_oil_share",
+    "value": 0.19,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2019",
+        "indicator": "consumption_oil_pct",
+        "value": "19.0",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2019; column=consumption_oil_pct",
+        "source_record_id": "6f49154956c383517c82",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "indicator": "consumption_gas_share",
+    "value": 0.08,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2019",
+        "indicator": "consumption_gas_pct",
+        "value": "8.0",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2019; column=consumption_gas_pct",
+        "source_record_id": "33a6c3b5834f212ac1b8",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "indicator": "wind_10kW",
+    "value": 20915.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2019",
+        "indicator": "wind_10kW",
+        "value": "20915",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2019; column=wind_10kW",
+        "source_record_id": "7e652375c2a608f2d490",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "indicator": "solar_10kW",
+    "value": 20429.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2019",
+        "indicator": "solar_10kW",
+        "value": "20429",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2019; column=solar_10kW",
+        "source_record_id": "7316126cd7a7094c639a",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "indicator": "nuclear_10kW",
+    "value": 4874.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2019",
+        "indicator": "nuclear_10kW",
+        "value": "4874",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2019; column=nuclear_10kW",
+        "source_record_id": "cf83493de0cd34d118f1",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "indicator": "gcb_fuel_co2",
+    "value": 9712.487232,
+    "unit": "Mt CO2",
+    "boundary": "GCB_coal_oil_gas_categories_effective_coefficient_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2019",
+        "indicator": "gcb_Coal",
+        "value": "7522.57672",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2019; Coal",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2019",
+        "indicator": "gcb_Oil",
+        "value": "1559.739152",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2019; Oil",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2019",
+        "indicator": "gcb_Gas",
+        "value": "630.17136",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2019; Gas",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "indicator": "consumption_10ktce",
+    "value": 496514.0,
+    "unit": "10^4 tce",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2020",
+        "indicator": "consumption_10ktce",
+        "value": "496514",
+        "unit": "10^4 tce",
+        "family": "energy_consumption",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2020; column=consumption_10ktce",
+        "source_record_id": "9d73dfec994dc9bc7336",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "indicator": "consumption_coal_share",
+    "value": 0.5670000000000001,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2020",
+        "indicator": "consumption_coal_pct",
+        "value": "56.7",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2020; column=consumption_coal_pct",
+        "source_record_id": "ddd3aa8d91e7fe792489",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "indicator": "consumption_oil_share",
+    "value": 0.18899999999999997,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2020",
+        "indicator": "consumption_oil_pct",
+        "value": "18.9",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2020; column=consumption_oil_pct",
+        "source_record_id": "27b346dda2dc1ca2db7b",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "indicator": "consumption_gas_share",
+    "value": 0.084,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2020",
+        "indicator": "consumption_gas_pct",
+        "value": "8.4",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2020; column=consumption_gas_pct",
+        "source_record_id": "ae22e1153bfc48741555",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "indicator": "wind_10kW",
+    "value": 28165.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2020",
+        "indicator": "wind_10kW",
+        "value": "28165",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2020; column=wind_10kW",
+        "source_record_id": "d6806211cd7cc63af669",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "indicator": "solar_10kW",
+    "value": 25356.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2020",
+        "indicator": "solar_10kW",
+        "value": "25356",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2020; column=solar_10kW",
+        "source_record_id": "ab996badcac3c8923472",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "indicator": "nuclear_10kW",
+    "value": 4989.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2020",
+        "indicator": "nuclear_10kW",
+        "value": "4989",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2020; column=nuclear_10kW",
+        "source_record_id": "c2b2a53db8e40a894e60",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "indicator": "gcb_fuel_co2",
+    "value": 9878.913723,
+    "unit": "Mt CO2",
+    "boundary": "GCB_coal_oil_gas_categories_effective_coefficient_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2020",
+        "indicator": "gcb_Coal",
+        "value": "7679.3823",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2020; Coal",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2020",
+        "indicator": "gcb_Oil",
+        "value": "1523.058327",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2020; Oil",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2020",
+        "indicator": "gcb_Gas",
+        "value": "676.473096",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2020; Gas",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "indicator": "consumption_10ktce",
+    "value": 525027.0,
+    "unit": "10^4 tce",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2021",
+        "indicator": "consumption_10ktce",
+        "value": "525027",
+        "unit": "10^4 tce",
+        "family": "energy_consumption",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2021; column=consumption_10ktce",
+        "source_record_id": "113cc200ce692ec0a6b8",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "indicator": "consumption_coal_share",
+    "value": 0.557,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2021",
+        "indicator": "consumption_coal_pct",
+        "value": "55.7",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2021; column=consumption_coal_pct",
+        "source_record_id": "4037d1a5359e7beba9f7",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "indicator": "consumption_oil_share",
+    "value": 0.188,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2021",
+        "indicator": "consumption_oil_pct",
+        "value": "18.8",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2021; column=consumption_oil_pct",
+        "source_record_id": "dd53ec460531fe7550a5",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "indicator": "consumption_gas_share",
+    "value": 0.08800000000000001,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2021",
+        "indicator": "consumption_gas_pct",
+        "value": "8.8",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2021; column=consumption_gas_pct",
+        "source_record_id": "b3a892eabef39497f296",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "indicator": "wind_10kW",
+    "value": 32871.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2021",
+        "indicator": "wind_10kW",
+        "value": "32871",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2021; column=wind_10kW",
+        "source_record_id": "91735fcd8cfc5c34b9df",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "indicator": "solar_10kW",
+    "value": 30654.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2021",
+        "indicator": "solar_10kW",
+        "value": "30654",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2021; column=solar_10kW",
+        "source_record_id": "f78940619114ff7b70ce",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "indicator": "nuclear_10kW",
+    "value": 5326.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2021",
+        "indicator": "nuclear_10kW",
+        "value": "5326",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2021; column=nuclear_10kW",
+        "source_record_id": "caeff2247965dfad176f",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "indicator": "gcb_fuel_co2",
+    "value": 10290.644717,
+    "unit": "Mt CO2",
+    "boundary": "GCB_coal_oil_gas_categories_effective_coefficient_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2021",
+        "indicator": "gcb_Coal",
+        "value": "8004.203215",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2021; Coal",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2021",
+        "indicator": "gcb_Oil",
+        "value": "1521.109098",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2021; Oil",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2021",
+        "indicator": "gcb_Gas",
+        "value": "765.332404",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2021; Gas",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "indicator": "consumption_10ktce",
+    "value": 541274.0,
+    "unit": "10^4 tce",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2022",
+        "indicator": "consumption_10ktce",
+        "value": "541274",
+        "unit": "10^4 tce",
+        "family": "energy_consumption",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2022; column=consumption_10ktce",
+        "source_record_id": "dee8743b3e8bf6975358",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "indicator": "consumption_coal_share",
+    "value": 0.556,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2022",
+        "indicator": "consumption_coal_pct",
+        "value": "55.6",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2022; column=consumption_coal_pct",
+        "source_record_id": "ee27204c1aec2b1ee0ed",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "indicator": "consumption_oil_share",
+    "value": 0.184,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2022",
+        "indicator": "consumption_oil_pct",
+        "value": "18.4",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2022; column=consumption_oil_pct",
+        "source_record_id": "accfc3cbf3a2dd3ba32d",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "indicator": "consumption_gas_share",
+    "value": 0.084,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2022",
+        "indicator": "consumption_gas_pct",
+        "value": "8.4",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2022; column=consumption_gas_pct",
+        "source_record_id": "fdfd2aad2b5b0f7a26f2",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "indicator": "wind_10kW",
+    "value": 36564.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2022",
+        "indicator": "wind_10kW",
+        "value": "36564",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2022; column=wind_10kW",
+        "source_record_id": "0d0de818aac2b918760a",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "indicator": "solar_10kW",
+    "value": 39268.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2022",
+        "indicator": "solar_10kW",
+        "value": "39268",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2022; column=solar_10kW",
+        "source_record_id": "9578bf86247981e714a5",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "indicator": "nuclear_10kW",
+    "value": 5557.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2022",
+        "indicator": "nuclear_10kW",
+        "value": "5557",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2022; column=nuclear_10kW",
+        "source_record_id": "c370525ddd4026e19ad7",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "indicator": "gcb_fuel_co2",
+    "value": 10801.893116,
+    "unit": "Mt CO2",
+    "boundary": "GCB_coal_oil_gas_categories_effective_coefficient_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2022",
+        "indicator": "gcb_Coal",
+        "value": "8468.947515",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2022; Coal",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2022",
+        "indicator": "gcb_Oil",
+        "value": "1559.720832",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2022; Oil",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2022",
+        "indicator": "gcb_Gas",
+        "value": "773.224769",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2022; Gas",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "indicator": "consumption_10ktce",
+    "value": 571327.0,
+    "unit": "10^4 tce",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2023",
+        "indicator": "consumption_10ktce",
+        "value": "571327",
+        "unit": "10^4 tce",
+        "family": "energy_consumption",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2023; column=consumption_10ktce",
+        "source_record_id": "1280f507e17e7e6c5e77",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "indicator": "consumption_coal_share",
+    "value": 0.5479999999999999,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2023",
+        "indicator": "consumption_coal_pct",
+        "value": "54.8",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2023; column=consumption_coal_pct",
+        "source_record_id": "5ad4ec7b04345e3ebdc3",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "indicator": "consumption_oil_share",
+    "value": 0.188,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2023",
+        "indicator": "consumption_oil_pct",
+        "value": "18.8",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2023; column=consumption_oil_pct",
+        "source_record_id": "4e32258219cf4cad92df",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "indicator": "consumption_gas_share",
+    "value": 0.085,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2023",
+        "indicator": "consumption_gas_pct",
+        "value": "8.5",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2023; column=consumption_gas_pct",
+        "source_record_id": "28e749d8440e74ee90f5",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "indicator": "wind_10kW",
+    "value": 44144.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2023",
+        "indicator": "wind_10kW",
+        "value": "44144",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2023; column=wind_10kW",
+        "source_record_id": "13ae1e270bf5bba49baf",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "indicator": "solar_10kW",
+    "value": 61048.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2023",
+        "indicator": "solar_10kW",
+        "value": "61048",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2023; column=solar_10kW",
+        "source_record_id": "df2435807b3a4867d3d8",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "indicator": "nuclear_10kW",
+    "value": 5691.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2023",
+        "indicator": "nuclear_10kW",
+        "value": "5691",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2023; column=nuclear_10kW",
+        "source_record_id": "1e4950ae39b12da72bb8",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "indicator": "gcb_fuel_co2",
+    "value": 11299.368155,
+    "unit": "Mt CO2",
+    "boundary": "GCB_coal_oil_gas_categories_effective_coefficient_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2023",
+        "indicator": "gcb_Coal",
+        "value": "8740.890938",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2023; Coal",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2023",
+        "indicator": "gcb_Oil",
+        "value": "1729.580294",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2023; Oil",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2023",
+        "indicator": "gcb_Gas",
+        "value": "828.896923",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2023; Gas",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "indicator": "consumption_10ktce",
+    "value": 596000.0,
+    "unit": "10^4 tce",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2024",
+        "indicator": "consumption_10ktce",
+        "value": "596000",
+        "unit": "10^4 tce",
+        "family": "energy_consumption",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2024; column=consumption_10ktce",
+        "source_record_id": "420e190a073849c669ac",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "indicator": "consumption_coal_share",
+    "value": 0.532,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2024",
+        "indicator": "consumption_coal_pct",
+        "value": "53.2",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2024; column=consumption_coal_pct",
+        "source_record_id": "e48ee6746380a1098293",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "indicator": "consumption_oil_share",
+    "value": 0.182,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2024",
+        "indicator": "consumption_oil_pct",
+        "value": "18.2",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2024; column=consumption_oil_pct",
+        "source_record_id": "447dd08069df6ad23cb3",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "indicator": "consumption_gas_share",
+    "value": 0.08800000000000001,
+    "unit": "fraction",
+    "boundary": "NBS_2025_mainland_primary_consumption_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2024",
+        "indicator": "consumption_gas_pct",
+        "value": "8.8",
+        "unit": "%",
+        "family": "primary_mix",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+        "source_locator": "year=2024; column=consumption_gas_pct",
+        "source_record_id": "2c57b9986c78e2a4772f",
+        "boundary": "Primary electricity and other energy is the published category; it is not automatically nonfossil consumption. No NBS/OWID accounting splice.",
+        "allowed_use": "Q2 historical aggregate targets and initial aggregate magnitude; not hourly supply, sector service or physical fuel LHV",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "indicator": "wind_10kW",
+    "value": 52078.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2024",
+        "indicator": "wind_10kW",
+        "value": "52078",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2024; column=wind_10kW",
+        "source_record_id": "1faed76d8bd7a793927e",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "indicator": "solar_10kW",
+    "value": 88742.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2024",
+        "indicator": "solar_10kW",
+        "value": "88742",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2024; column=solar_10kW",
+        "source_record_id": "969b438607c7e315951d",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "indicator": "nuclear_10kW",
+    "value": 6083.0,
+    "unit": "10^4 kW",
+    "boundary": "NBS_2025_mainland_nameplate_capacity",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2024",
+        "indicator": "nuclear_10kW",
+        "value": "6083",
+        "unit": "10^4 kW",
+        "family": "capacity_or_generation",
+        "source_path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+        "source_locator": "year=2024; column=nuclear_10kW",
+        "source_record_id": "eed54a8d44dd942d0d61",
+        "boundary": "Thermal is not coal alone; hydro includes unspecified pumped component; year-end stock is not full-year available capacity; no implied age/permit/queue.",
+        "allowed_use": "Q2 year-end aggregate capacity targets; source unit 10^4 kW; multiply by 10 to MW",
+        "independent_observations": "1"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "indicator": "gcb_fuel_co2",
+    "value": 11480.812733,
+    "unit": "Mt CO2",
+    "boundary": "GCB_coal_oil_gas_categories_effective_coefficient_proxy",
+    "comparison_status": "assumption_based_proxy_not_reviewed_boundary_equivalence",
+    "source_records": [
+      {
+        "year": "2024",
+        "indicator": "gcb_Coal",
+        "value": "8886.02066",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2024; Coal",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2024",
+        "indicator": "gcb_Oil",
+        "value": "1705.385689",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2024; Oil",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      },
+      {
+        "year": "2024",
+        "indicator": "gcb_Gas",
+        "value": "889.406384",
+        "unit": "Mt CO2",
+        "family": "co2",
+        "source_path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+        "source_locator": "ISO=CHN; Year=2024; Gas",
+        "source_record_id": "",
+        "boundary": "GCB2025v15 territorial fossil and industry emissions; excludes land-use net flux and removals",
+        "allowed_use": "Q2 fossil/industry historical CO2 target only; not net national GHG",
+        "independent_observations": "1"
+      }
+    ]
+  }
+]

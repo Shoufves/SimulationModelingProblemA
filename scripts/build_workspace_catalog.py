@@ -32,6 +32,22 @@ def csv_rows(path):
     with path.open(encoding='utf-8-sig',newline='') as f:
         return list(csv.DictReader(f))
 
+def scoped_original(namespace, row, registered, root=ROOT):
+    """Allow scoped reuse only of an already cataloged identical public original."""
+    original=str(row.get('file',row.get('path',''))).replace('\\','/')
+    candidate=(root/original).resolve()
+    dedicated=(root/'data/raw'/namespace).resolve()
+    if candidate.is_relative_to(dedicated):
+        return candidate.relative_to(root).as_posix()
+    matches=[r for r in registered if r['source_key']==row.get('reuse_source_key')]
+    if (not candidate.is_relative_to((root/'data/raw').resolve()) or len(matches)!=1 or
+            not matches[0]['file_available'] or not matches[0]['canonical_path'] or
+            candidate!=(root/matches[0]['canonical_path']).resolve() or
+            row.get('sha256')!=matches[0]['sha256'] or sha(candidate)!=matches[0]['sha256']):
+        raise ValueError(namespace.upper()+' original outside dedicated source directory without verified reuse')
+    return candidate.relative_to(root).as_posix()
+
+
 def references(aliases):
     refs={}
     text=(ROOT/'只读工作区/final.md').read_text(encoding='utf-8')
@@ -55,9 +71,13 @@ def sources(aliases):
                and Path(r['path']).name.startswith('sources') and r['path'].endswith('.json')]
     specs=[('yx','data/catalog/sources.json','data/catalog/sources.json'),
            ('mmj','A题_mmj/data/sources.json','data/sources.json')]
-    if (CAT/'q1_sources.json').is_file():
-        specs.append(('q1','data/catalog/q1_sources.json','data/catalog/q1_sources.json'))
+    # Legacy public originals must exist in the registry before Q1/Q2 can
+    # verify scoped reuse. This includes lb originals, not just yx/mmj.
     specs.extend(('lb/'+('base' if Path(r['path'][len(LIB):]).parent.as_posix()=='.' else Path(r['path'][len(LIB):]).parent.as_posix()),r['path'],r['target']) for r in manifests)
+    for namespace in ('q1','q2'):
+        manifest=f'data/catalog/{namespace}_sources.json'
+        if (ROOT/manifest).is_file():
+            specs.append((namespace,manifest,manifest))
     evidence=defaultdict(list)
     for review in load(ROOT/'data/evidence_reviews.json')['reviews']:
         for item in review.get('evidence_files',[]):
@@ -76,10 +96,8 @@ def sources(aliases):
                 else:
                     attempts=[(Path(old_manifest).parent/oldfile).as_posix(),LIB+oldfile]
             canonical=next((aliases[x] for x in attempts if x in aliases),'')
-            if namespace=='q1':
-                candidate=(ROOT/oldfile).resolve()
-                if not candidate.is_relative_to(ROOT/'data/raw/q1'):raise ValueError('Q1 original outside dedicated source directory')
-                canonical=candidate.relative_to(ROOT).as_posix()
+            if namespace in {'q1','q2'}:
+                canonical=scoped_original(namespace,row,registry)
             exists=bool(canonical and (ROOT/canonical).is_file())
             filehash=sha(ROOT/canonical) if exists else ''
             registry.append(dict(source_key=namespace+':'+sid,namespace=namespace,original_source_id=sid,
@@ -92,6 +110,10 @@ def sources(aliases):
                 evidence_available=bool(evidence[sid]) if namespace=='mmj' else exists))
             if canonical in representations:
                 registry[-1]['representation']=representations[canonical]
+    # Verification dependency order need not reorder the published catalog.
+    # Keep the established namespace order so review diffs show new records.
+    namespace_order = {'yx': 0, 'mmj': 1, 'q1': 2, 'q2': 3}
+    registry.sort(key=lambda row: namespace_order.get(row['namespace'], 4))
     save_json(CAT/'sources_unified.json',registry)
     save_csv(CAT/'sources_unified.csv',registry,['source_key','namespace','original_source_id','title','publisher',
         'url','canonical_path','sha256','content_group','registry_path','status','file_available','notes'])
@@ -130,6 +152,78 @@ def datasets(refs):
         if rel == 'data/processed/q1/cost_method_parameters.csv':
             use='mmj baf1975原参数；Q1风电统一融资条件成本；见docs/solutions/p1-yx-integration.md'
             boundary='2024 USD、25年、3/5/7%实际WACC研究假设；国家新项目均值未配对；CF通常事前估计，O&M为报告假设；非保供系统成本或全国在运成本。'
+        if rel.startswith('data/processed/q2/'):
+            status='q2_scoped_historical_review_not_complete_model_admission'
+            use='Q2历史总量/装机/CO2候选目标、GDP外生驱动或稀疏清单边界核对；见data/catalog/q2_history_review.json'
+            boundary='同源不增样本数；GDP非行为拟合目标；一次电力及其他不改名非化石；BTR与GCB清单分存；稀疏碳汇不外推未来；不批准完整主体初态或全国预测。'
+        if rel == 'data/processed/q2/technology_reference.csv':
+            status='q2_reviewed_technology_reference_not_complete_model_admission'
+            use='Q2寿命/工期及中国样本技术经济参照；实质审查见data/catalog/q2_technology_review.json'
+            boundary='2020报告、2018美元、2025投运样本；非2024实测全国机组。寿命非许可，年CF非小时序列，O&M未拆分，燃料热值口径待匹配；不用于2021前主体信息。'
+        if rel == 'data/processed/q2/sector_balance_2014_30province.csv':
+            status='q2_scoped_historical_sector_balance_candidate'
+            use='2014年30省部门/燃料账候选；见data/catalog/q2_sector_state_review.json'
+            boundary='不含西藏，未与新版全国统计桥接；保留质量/体积/热量原单位与正负号；居民汽油不直接归建筑服务，非能源用途不直接算燃烧。'
+        if rel.startswith('data/processed/q2/nbs2014_'):
+            status='q2_reviewed_national_2014_accounts_and_boundary_diagnostics'
+            use='2016版统计年鉴的2014全国平衡及七大部门原值；23项算术核对；见data/catalog/q2_nbs2014_review.json'
+            boundary='同年不同版本不拼接；综合能源按原表等价热值，不是简单物理热当量；工业含转换，留白非零，30省汇总高于全国的差异不分摊；尚非完整主体初态。'
+        if Path(rel).name in {'fuel_reference.csv','power_2014_reference.csv','initialization_2014_capacity.csv','initialization_2014_fuel_normalization.csv'} and rel.startswith('data/processed/q2/'):
+            status='q2_scoped_initialization_references'
+            use='2014年NEA装机分组、2013燃料默认热值/碳因子和具名燃料热量归一；见q2_initialization_reference_review.json'
+            boundary='NEA2015发布版本不缩放到NBS修订总量；残差未分配；建设支出非现金存量；总用量含转换/原料，热量不可加作一次能源，未计算实际燃烧排放。'
+        if Path(rel).name.startswith('technology_2010_') and rel.startswith('data/processed/q2/'):
+            status='q2_scoped_historical_technology_reference'
+            use='IEA/NEA2010中国样本及统一假设；见q2_technology_2010_review.json；供历史决策参数候选与原件冲突检查'
+            boundary='2008美元、2015投运预测样本，非2014全国实测；正文净容量与附录项目规模分存；煤价热值矛盾保留；O&M未拆分，寿命非许可。'
+        if rel=='data/processed/q2/policy_reference.csv':
+            status='q2_scoped_historical_policy_terms'
+            use='2009陆上风电、2013光伏政策条款与分区费率；见q2_policy_review.json'
+            boundary='名义价格、税基、核准/投运资格及排除项分存；全额标杆价非额外补贴，分布式全电量补贴非总电价；不平均成全国价格，不继承未知年限或倒灌历史。'
+        if rel.startswith('data/processed/q2/policy_timeline_'):
+            status='q2_scoped_policy_vintage_reference'
+            use='3008/3044/2729号文件六组历史电价表、23项价格及公布/明确替代事件；见q2_policy_timeline_review.json'
+            boundary='保留已宣布后撤销的2018风电计划价及各版地区；公布日不是核准/开工/投运日，未来价格不倒灌历史。标杆上限非实际付款，名义含税价格不直接接入常价美元模型；未建立全国分区/项目权重或财政时序。'
+        if rel.startswith('data/processed/q2/currency_bridge_'):
+            status='q2_scoped_retrospective_currency_reference'
+            use='WDI中国2008—2024年均人民币/美元汇率与美国GDP平减指数的常价2008美元换算因子；见q2_currency_bridge_review.json'
+            boundary='复用既有宏观原件；2026-10-08修订版事后会计换算。美国一般平减为明确研究假设，非中国技术物价；年均汇率非项目交易价，税基不变，不把未来实际值用于历史投资预期，不提供2060路径或全国合同准入。'
+        if Path(rel).name.startswith('national_balance_2014_') and rel.startswith('data/processed/q2/'):
+            status='q2_scoped_national2014_balance_with_unresolved_differences'
+            use='CEADs全国2014原表及冻结差异诊断；煤电原煤/煤炭比较已由q2_coal_bridge_review.json补充解释；气体差异仍未解释'
+            boundary='旧差异文件保留当时结果；不得自动升级为NBS同版全国初态或CO2燃烧量；保留非能源用途与附列项'
+        if Path(rel).name.startswith('coal_bridge_2014') and rel.startswith('data/processed/q2/'):
+            status='q2_scoped_coal_aggregate_bridge'
+            use='CEADs B/C/D煤种和部分E合并类别到NBS2016煤炭聚合的15项舍入范围核对；见q2_coal_bridge_review.json'
+            boundary='修正原煤与煤炭直接比较的类别错误；不唯一拆分型煤/煤矸石，不解决天然气差异或全国初态准入。'
+        if Path(rel).name.startswith('apec_balance_2014') and rel.startswith('data/processed/q2/'):
+            status='q2_scoped_retrospective_energy_accounting_reference'
+            use='APEC中国005的2014详细能源平衡；ktoe/PJ与HTML/TSV同源核对、终端/非能源用途和条件区间；见q2_apec_balance_review.json'
+            boundary='5539个破折号未填零；两个产出附列使用独立单位；总量/子项不双计。版本日期未知，净热值与NBS等价值不直接拼接，能源消耗不是有效服务/设备初态；区间以非负和整数四舍五入为显式假设。'
+        if rel=='data/processed/q2/nuclear_queue_2014_reference.csv':
+            status='q2_scoped_historical_nuclear_queue_reference'
+            use='NEA第33问26台2014年末在建机组28450MW与NNSA同期状态逐机组匹配；见q2_nuclear_queue_review.json'
+            boundary='源容量和开工月可追溯；剩余工期、余额和实际未来投运日期留空；在运机组排除；NEA/NBS存量20MW版本差异未调平；模型工期与托管现金仍是明确研究假设。'
+        if Path(rel).name.startswith('nuclear_capacity_2015_') and rel.startswith('data/processed/q2/'):
+            status='q2_scoped_nuclear_2015_capacity_start_reference'
+            use='2015年8台获建造许可机组与CNS7额定MW(e)/开工状态核对；田湾原许可与控制点分存；见q2_nuclear_capacity_2015_review.json'
+            boundary='8980MWe为逐机组加总；6台有开工日、2台已核准而日期缺失；CN编号冲突保留，按电厂/机组对应。2016年6月回顾报告不倒灌2015信息；不等于运行许可或完整模型日历。'
+        if rel.startswith('data/processed/q2/nuclear_state_2024_'):
+            status='q2_scoped_2024_nuclear_state_reference'
+            use='2024年底58行在运/27行在建额定容量与日期原表；见q2_nuclear_state_2024_review.json'
+            boundary='2025-01-07转载汇编；防城港重复编号、石岛湾技术同号、缺日期、漳州跨年商运和NBS容量差异保留。不是已准入全国设备表；不推断未来投运、退出、许可或资金。'
+        if rel.startswith('data/processed/q2/transport_activity_'):
+            status='q2_scoped_transport_activity_reference'
+            use='NBS2025表16-6/16-8的2014—2024年132格周转量与统计范围、指标定义；见q2_transport_activity_review.json'
+            boundary='人公里/吨公里分开，海洋不与水路重复加总；公路为营业性范围，民航含国际航线。2019公路货运与2020海洋子项跳变未桥接，禁止自动驱动跨断点模型；不提供能耗强度、私人出行或未来预测。'
+        if rel.startswith('data/processed/q2/current_state_2024'):
+            status='q2_partial_current_state_not_admitted'
+            use='2024年末装机、储能功率/能量、年度用电及燃气用途的45项源定位与v12终点对照；见q2_current_state_review.json'
+            boundary='年鉴/公报版本分开；可靠性样本不外推全国煤气容量；抽蓄不重复加总，发电量不除年末装机冒充容量因子。SOC、设备年龄、同版技术拆分、服务、燃料库存、队列与资金仍缺，不构成全国S0初态。'
+        if rel=='data/processed/q2/end_use_reference.csv':
+            status='q2_scoped_prospective_end_use_performance_reference'
+            use='IRENA REmap中国2014报告附录A七项终端技术的性能及单位换算；见q2_end_use_review.json'
+            boundary='2030情景技术假设，不是2014全国设备实测。热泵限空间/低温热；MJ/人公里先求逆再换算。成本价年、kW分母及实际存量未准入，成本未用于历史投资。'
         rows.append(dict(path=rel,final_refs=';'.join(reverse[rel]),status=status,use=use,boundary=boundary,sha256=sha(p)))
     save_csv(CAT/'datasets_unified.csv',rows,['path','final_refs','status','use','boundary','sha256'])
     return rows

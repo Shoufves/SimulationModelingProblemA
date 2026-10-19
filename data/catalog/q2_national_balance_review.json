@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "review_date": "2026-10-19",
+  "reviewer": "yx_assisted_local_review",
+  "team_approval": false,
+  "decision": "scoped_2014_national_balance_reference_with_unresolved_discrepancies",
+  "source_path": "data/raw/q2/ceads_national_energy_inventory_2000_2015_v1.xlsx",
+  "source_sha256": "541f53af9bad48184aa87f7378a229cba765de6b9157b08f0411461a9c86a237",
+  "sheet_names": [
+    "2015",
+    "2014",
+    "2013",
+    "2012",
+    "2011",
+    "2010",
+    "2009",
+    "2008",
+    "2007",
+    "2006",
+    "2005",
+    "2004",
+    "2003",
+    "2002",
+    "2001",
+    "2000"
+  ],
+  "row_labels": [
+    null,
+    null,
+    "Total Final Consumption",
+    "Farming, Forestry, Animal Husbandry, Fishery & Water Conservancy",
+    "Coal Mining and Dressing",
+    "Petroleum and Naturl Gas Extraction",
+    "Ferrous Metals Mining and Dressing",
+    "Nonferrous Metals Mining and Dressing",
+    "Nonmetal Minerals Mining and Dressing",
+    "Other Minerals Mining and Dressing",
+    "Logging and Transport of Wood and Bamboo",
+    "Food Processing",
+    "Food Production",
+    "Beverage Production",
+    "Tobacco Processing",
+    "Textile Industry",
+    "Garments and Other Fiber Products",
+    "Leather, Furs, Down and Related Products",
+    "Timber Processing, Bamboo, Cane, Palm & Straw Products",
+    "Furniture Manufacturing",
+    "Papermaking and Paper Products",
+    "Printing and Record Medium Reproduction",
+    "Cultural, Educational and Sports Articles",
+    "Petroleum Processing and Coking",
+    "Raw Chemical Materials and Chemical Products",
+    "Medical and Pharmaceutical Products",
+    "Chemical Fiber",
+    "Rubber Products",
+    "Plastic Products",
+    "Nonmetal Mineral Products",
+    "Smelting and Pressing of Ferrous Metals",
+    "Smelting and Pressing of Nonferrous Metals",
+    "Metal Products",
+    "Ordinary Machinery",
+    "Equipment for Special Purpose",
+    "Transportation Equipment",
+    "Electric Equipment and Machinery",
+    "Electronic and Telecommunications Equipment",
+    "Instruments, Meters Cultural and Office Machinery",
+    "Other Manufacturing Industry",
+    "Scrap and waste",
+    "Electric Power, Steam and Hot Water Production and Supply",
+    "Gas Production and Supply",
+    "Tap Water Production and Supply",
+    "Construction",
+    "Transport, Storage, Postal & Telecommunications Services",
+    "Wholesale, Retail Trade and Catering Service",
+    "Other",
+    "     Urban",
+    "     Rural",
+    null,
+    null,
+    "Inputs(+) outputs(-)",
+    "Thermal Power",
+    "Heating Supply",
+    "Coal Washing",
+    "Coking",
+    "Petroleum Refineries",
+    "Gas Works",
+    "     Coke Input (-)",
+    "Briquettes",
+    null,
+    "Loss",
+    "% Loss",
+    "Total Consumption",
+    null,
+    "     Non-Energy Use",
+    null,
+    "China Airplanes&ships Refueling in Abroad",
+    "Foreign Airplanes&ships Refueling in China"
+  ],
+  "carrier_labels": [
+    null,
+    "Raw Coal",
+    "Cleaned Coal",
+    "Other Washed Coal",
+    "Briquettes",
+    "Coke",
+    "Coke Oven Gas",
+    "Other Gas",
+    "Other Coking Products",
+    "Crude Oil",
+    "Gasoline",
+    "Kerosene",
+    "Diesel Oil",
+    "Fuel Oil",
+    "LPG",
+    "Refinery Gas",
+    "Other Petroleum Products",
+    "Natural Gas",
+    "Heat",
+    "Electricity",
+    "Other Energy"
+  ],
+  "unit_labels": [
+    null,
+    "104 tn",
+    "104 tn",
+    "104 tn",
+    "104 tn",
+    "104 tn",
+    "108 cu.m",
+    "108 cu.m",
+    "104 tn",
+    "104 tn",
+    "104 tn",
+    "104 tn",
+    "104 tn",
+    "104 tn",
+    "104 tn",
+    "104 tn",
+    "104 tn",
+    "108 cu.m",
+    "1010 kj",
+    "108 kwh",
+    "104 tce"
+  ],
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/ceads_national_energy_inventory_2000_2015_v1.xlsx",
+      "sha256": "541f53af9bad48184aa87f7378a229cba765de6b9157b08f0411461a9c86a237"
+    },
+    {
+      "path": "data/raw/q2/ceads_national5425546_v1.json",
+      "sha256": "18e7c3e0cb2bc108e1a10e678c58510dd460f6da84b5d006af756a51087f18f2"
+    },
+    {
+      "path": "data/raw/q2/ceads_national_methods_2018.html",
+      "sha256": "cacdccec66be189048de41644a6cb5bb514b1ff9eaeadad43a2fa65b30222793"
+    },
+    {
+      "path": "data/processed/q2/nbs2014_accounts.csv",
+      "sha256": "906aa8825738437673a56a4ca64872f9d99082b1e9775fb0b47c582ca9280993"
+    },
+    {
+      "path": "data/catalog/q2_nbs2014_review.json",
+      "sha256": "239ffad4e945c785803d8a0b5173195ac8ecdaa66feedcbdd7efbdcca5f59be7"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "CEADS_NATIONAL_ENERGY_2000_2015_V1",
+      "record_sha256": "08de4862ba13550d65745f50019374036cb064e356a5dc00b29b5fe677533568"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "CEADS_NATIONAL_ENERGY_2000_2015_V1_METADATA",
+      "record_sha256": "43ad7f8047d58400eddd38d1a898c9ca148f26e743ee4a1cc4caaac69aee53fd"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "CEADS_NATIONAL_METHODS_2018",
+      "record_sha256": "6716dcb2cb01c0e46bae93ea926959c75db031324bf21673ea48ce229e0cf239"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Versioned author metadata inspected: DOI5425546.v1, file9360832,139260bytes, MD5ffbcc886b7e880dd88c883c71aa78365 agrees. Publication2017-09-20. Sixteen national annual sheets, not the thirty-province workbook."
+    },
+    {
+      "passed": true,
+      "evidence": "2014 row/column labels, units and all scalar values read from original. No formulas. Row3 final;4–50 details;53 signed conversion;54–59,61 processes;60 coke-input memo;63 separate loss;65 final+conversion;67 nonenergy memo;69–70 bunkers. No added memo or total rows."
+    },
+    {
+      "passed": true,
+      "evidence": "Original methods paragraphs on sectoral approach and reference approach read. Exclusion of nonenergy, loss and nonburning conversion belongs to emission calculation, not proof that every inventory cell has been pre-adjusted. Paper technical validation reports data revisions and national/provincial differences."
+    },
+    {
+      "passed": true,
+      "evidence": "Explicit cross-check: gas R65=1509.8 vs NBS2016 total1868.94; R46=170.1 vs214.42; coal B54=181945.9 vs184525.3. Differences unresolved. T3=53283.8 agrees with NBS2016 electricity final. Neither arithmetic agreement nor metadata establishes boundary equivalence."
+    }
+  ],
+  "allowed_uses": [
+    "2014 original cells as bounded source references and explicit alternative mapping hypotheses.",
+    "Signed accounting and uncertainty diagnostics; retrospective initial-state research."
+  ],
+  "prohibited_uses": [
+    "Treating 2017 publication as information available to2014 decision makers.",
+    "Replacing NBS totals or silently rescaling sectors.",
+    "Inferring gas discrepancy is fully explained by nonenergy or loss.",
+    "Interpreting negative net consumption as negative physical demand.",
+    "Treating memo row67 as additional consumption or subtracting it twice."
+  ],
+  "unresolved": [
+    "National natural-gas total and transport discrepancy.",
+    "Raw-coal thermal input difference.",
+    "Sector allocation of nonenergy and loss for physical services.",
+    "Merged fuel qualities and national vintage bridge."
+  ]
+}

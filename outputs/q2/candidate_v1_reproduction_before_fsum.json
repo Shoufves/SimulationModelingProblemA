@@ -1,0 +1,34 @@
+{
+  "independent_directory": {
+    "scientific_files": 17,
+    "different_files": [],
+    "dependencies": {
+      "mesa": "3.3.1",
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "matplotlib": "3.10.6"
+    },
+    "code_hashes_equal": true,
+    "config_hash_equal": true
+  },
+  "alternate_environment": {
+    "scientific_files": 17,
+    "different_files": [
+      "historical_fit.png",
+      "operations.json"
+    ],
+    "dependencies": {
+      "mesa": "3.3.1",
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "matplotlib": "3.10.6"
+    },
+    "code_hashes_equal": true,
+    "config_hash_equal": true
+  },
+  "diagnosis": {
+    "numeric_differences": "Two BLAS-reduced objective values differed by5.820766091346741e-11; actual flows, annual totals, fitted parameters, metrics and SVG were byte-identical.",
+    "renderer_difference": "Clean Pillow13.0.0/FreeType2.6.1 versus alternate Pillow12.0.0/FreeType2.13.3; PNG pixels differ; same pinned clean environment reproduces every output byte.",
+    "next_change": "Use math.fsum for logged and fixed lexicographic objectives; no parameter/threshold change."
+  }
+}

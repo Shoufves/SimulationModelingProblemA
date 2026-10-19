@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-19",
+  "scope": "same-author independent offline reference reproduction;notmodeladmission",
+  "independent_copy_files": 12,
+  "copied_inputs": {
+    "data/catalog/q2_policy_timeline_review.json": "5b2dbccc32dd3d29970b20d9397874a994fc3b00743d9132983ce68992c46534",
+    "data/catalog/q2_policy_timeline_transcription.json": "a9fe25a2686599efb01af90fdbf9e90880b1970bc07aa4953bd1e9f726036737",
+    "data/catalog/q2_sources.json": "f6fd160505611803ab76ef1a67cfbaee49fe22f34fb733484f3744ae4dc8728a",
+    "data/raw/q2/ndrc_renewables2015_3044.html": "3dff896038fc950c5293262428d4567f79fd02400c822a520610a20e323fd57e",
+    "data/raw/q2/ndrc_renewables2015_3044_table1.pdf": "0403ab67cba06ad681f8733b86e0221a023610c21cc6dcf20ff0237237cb6e13",
+    "data/raw/q2/ndrc_renewables2015_3044_table2.pdf": "7589aa8d58d29112c5a3806310277b371f6f7706162bf9f2e78fa0499686f13d",
+    "data/raw/q2/ndrc_renewables2016_2729.html": "e280d9f695210d782b1e5bfd578e315fb090836fbab2226a29bf2f9b38df050b",
+    "data/raw/q2/ndrc_renewables2016_2729_table1.pdf": "84dd10c23d6ec6597621aab7dcffa77a4c2da9716b98aed50d30451e4d7f76a7",
+    "data/raw/q2/ndrc_renewables2016_2729_table2.pdf": "373b7b7208cea458c526c4dbc9b62f76c1829367a1f0ba6fe7c4ffe25082145e",
+    "data/raw/q2/ndrc_wind2014_3008.html": "ca55af93bf61c6baf5e1a928b79fcf721b731bceaa04ef5b0997eeb6ae6a7979",
+    "scripts/prepare_q2_policy_timeline.py": "14958ddfce1ba4400e57ce00b0fdba6ea6dbfa188f29a4ad475ffc618291a287",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32"
+  },
+  "runs": [
+    {
+      "environment": "clean",
+      "exit_code": 0,
+      "comparisons": [
+        {
+          "artifact": "policy_timeline_checks.json",
+          "sha256": "b61c9d3dec50d2025a7b44b58a1f2b72bdf29372aec3a2f28d001620e1059487",
+          "identical": true
+        },
+        {
+          "artifact": "policy_timeline_events.csv",
+          "sha256": "0785a133e0b8b6d9d1336a43505e274550b9916a6927fb9d4c425bbbc3925e9b",
+          "identical": true
+        },
+        {
+          "artifact": "policy_timeline_reference.csv",
+          "sha256": "0c656ad39fdbf3be1c272e124a05aa02112f1fd6828476c76bf68a9d318b51dd",
+          "identical": true
+        }
+      ]
+    },
+    {
+      "environment": "alternate",
+      "exit_code": 0,
+      "comparisons": [
+        {
+          "artifact": "policy_timeline_checks.json",
+          "sha256": "b61c9d3dec50d2025a7b44b58a1f2b72bdf29372aec3a2f28d001620e1059487",
+          "identical": true
+        },
+        {
+          "artifact": "policy_timeline_events.csv",
+          "sha256": "0785a133e0b8b6d9d1336a43505e274550b9916a6927fb9d4c425bbbc3925e9b",
+          "identical": true
+        },
+        {
+          "artifact": "policy_timeline_reference.csv",
+          "sha256": "0c656ad39fdbf3be1c272e124a05aa02112f1fd6828476c76bf68a9d318b51dd",
+          "identical": true
+        }
+      ]
+    }
+  ],
+  "all_artifacts_identical": true,
+  "historical_model_changed": false,
+  "national_acceptance": false
+}

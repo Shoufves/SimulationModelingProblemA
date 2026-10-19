@@ -1,0 +1,110 @@
+[
+  {
+    "id": "A01",
+    "topic": "Retrospective initialization",
+    "statement": "2014 NBS values use the revised 2025 vintage; agents do not receive 2015-2024 targets. This is not a real-time historical forecast.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A02",
+    "topic": "Vintage bridge",
+    "statement": "NEA2015-vintage proportions split NBS2025-vintage 2014 thermal capacity; the split is reconstructed, never an observed revised split.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A03",
+    "topic": "Excluded capacity",
+    "statement": "Unclassified thermal, other generation and the 11e8 kWh NEA discrepancy are unmodelled. Hydro includes pumped storage in the observed category; the reduced proxy cannot claim storage or reliability fidelity.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A04",
+    "topic": "Residual consumption",
+    "statement": "Primary fuel less reconstructed power input is a residual-account service. It includes transformation/nonenergy discrepancies and is NOT measured useful heat or transport activity. Sector owners are bookkeeping assignments.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A05",
+    "topic": "Carbon bridge",
+    "statement": "GCB2014 coal/oil/gas emissions divided by NBS2014 fuel-equivalent energy provide fixed effective inventory coefficients. They are not chemical factors or a reviewed GCB/NBS equivalence. Cement, flaring, other and removals are excluded.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A06",
+    "topic": "Primary electricity bridge",
+    "statement": "One fixed 2014 ratio maps named nonthermal generation to the NBS primary-electricity-and-other category. This proxy cannot identify nonfossil consumption or its changing statistical conversion.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A07",
+    "topic": "Chronology",
+    "statement": "Four 6-hour blocks repeat 365 times. Assumed demand shape 0.9/1/1.1/1, flat non-solar availability and daytime solar preserve reference annual means. No measured weather, ramp events or reliability probabilities.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A08",
+    "topic": "Supply envelope",
+    "statement": "All fuel sources have a finite four-times-2014-total-energy envelope; it is a deliberately nonbinding diagnostic bound, not domestic/import capacity. No inferred hourly import rate.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A09",
+    "topic": "Technology mapping",
+    "statement": "Single named IEA2010 samples supply 2008USD costs; fleet coal/gas efficiencies 0.40/0.50 are assumptions below modern sample values 0.46/0.58. Nuclear resource is output-equivalent rather than reactor heat. All reported O&M is treated as variable for this variant, not claimed identified.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A10",
+    "topic": "Prices and finance",
+    "statement": "All currency is million constant2008USD. Electricity bus/retail70/80USD per MWh, oil22USD per MWh and service200USD per MWh are research prices, not nominal tariffs. Large finite opening cash makes finance nonbinding; zero carbon/support is a control rule, not actual historical Chinese policy.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A11",
+    "topic": "Queue and lifecycle",
+    "statement": "No verified initial queue, retirement schedule or ages. Empty queue and zero retirements are explicitly assumed for a diagnostic decade only. online_year2014 means bookkeeping entry, not actual commissioning. Not suitable for2060.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A12",
+    "topic": "Investment supply chain",
+    "statement": "Annual build limits equal 2014 observed additions, split thermal by the reconstructed named shares; total construction/connection150GW per year, technology ceiling20times opening, hydro lead5years are assumptions. Wind/solar capex decline3%/10% per year; other costs fixed.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A13",
+    "topic": "Grid and end use",
+    "statement": "Fixed NEA6.34% delivery loss; free aggregate grid operations and fixed one-for-one residual devices. No claimed endogenous fuel substitution, device replacement, regional network, H2, CCUS or storage.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "A14",
+    "topic": "Search and alternatives",
+    "statement": "Three bounded parameters,27candidates per rule; adaptive expectations0.5, instant expectations1, and no investment, all frozen before first fit. Zero intensity trend isolates elasticity. Already-seen holdout is evaluated only after training selection; failure cannot relax thresholds.",
+    "status": "explicit_research_assumption_not_observation"
+  },
+  {
+    "id": "V2A01",
+    "topic": "Price-year normalization",
+    "status": "explicit_research_assumption_not_observation",
+    "statement": "IRENA typical installed-cost interval1320-3090USD2014/kW rebased by US GDP deflator D2008/D2014=0.9127968909508362. General price conversion, not Chinese technology inflation. Midpoint2205 is an assumed grid node. Original2008USD prices and all other technology samples retained."
+  },
+  {
+    "id": "V2A02",
+    "topic": "PV cohort mapping",
+    "status": "explicit_research_assumption_not_observation",
+    "statement": "New utility-PV project process uses indicative17% availability with assumed daytime shape, preserving opening fleet at its2014 ratio. It is not observed hourly availability; no inferred national utility/distributed split. Comparison variant retains old availability while updating new-project cost only. IRENA total installed cost used as a fully funded project-cost proxy; financing/cost-definition equivalence remains unreviewed."
+  },
+  {
+    "id": "V2A03",
+    "topic": "Unresolved queue and scale",
+    "status": "explicit_research_assumption_not_observation",
+    "statement": "Twelve NNSA unit statuses are reviewed separately but unknown rated capacities, stock overlap, remaining time and funds prevent physical queue admission. Empty initial queue persists as diagnostic assumption. Installation limits and20x ceiling remain v1 assumptions; new option has its own limit, so combined-vintage competition is an explicit limitation rather than certified construction capacity."
+  },
+  {
+    "id": "V3A01",
+    "topic": "Shared endogenous construction limits",
+    "status": "explicit_research_assumption_not_observation",
+    "statement": "All solar vintages share one annual limit and total ceiling. Wind and solar annual group limit=max(2014 additions, rate*current productive commissioned group stock). Rate alternatives0,1,2times2014 additions/2014 closing stock are research hypotheses, not observed manufacturer capacity. Queues consume total headroom but do not expand annual productive capacity. Global150GW construction/connection and20times group ceiling remain unchanged. All demand/statistical/queue/policy limitations persist."
+  }
+]

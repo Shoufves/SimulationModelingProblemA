@@ -1,0 +1,175 @@
+{
+  "best_parameters": {
+    "elasticity": 1.0
+  },
+  "training_loss": 0.0,
+  "holdout_loss": 0.0,
+  "holdout_parts": [
+    {
+      "indicator": "energy",
+      "n": 3,
+      "scale": 1.0,
+      "weight": 0.25,
+      "normalized_mse": 0.0,
+      "weighted_loss": 0.0
+    },
+    {
+      "indicator": "nonfossil_share",
+      "n": 3,
+      "scale": 1.0,
+      "weight": 0.25,
+      "normalized_mse": 0.0,
+      "weighted_loss": 0.0
+    },
+    {
+      "indicator": "capacity",
+      "n": 3,
+      "scale": 1.0,
+      "weight": 0.25,
+      "normalized_mse": 0.0,
+      "weighted_loss": 0.0
+    },
+    {
+      "indicator": "co2",
+      "n": 3,
+      "scale": 1.0,
+      "weight": 0.25,
+      "normalized_mse": 0.0,
+      "weighted_loss": 0.0
+    }
+  ],
+  "trials": [
+    {
+      "trial": 0,
+      "parameters": {
+        "elasticity": 0.5
+      },
+      "loss": 0.037836260883122697,
+      "parts": [
+        {
+          "indicator": "energy",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.14393634437571245,
+          "weighted_loss": 0.035984086093928114
+        },
+        {
+          "indicator": "nonfossil_share",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.00011028578983984013,
+          "weighted_loss": 2.7571447459960033e-05
+        },
+        {
+          "indicator": "capacity",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.0,
+          "weighted_loss": 0.0
+        },
+        {
+          "indicator": "co2",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.007298413366938486,
+          "weighted_loss": 0.0018246033417346214
+        }
+      ],
+      "status": "valid"
+    },
+    {
+      "trial": 1,
+      "parameters": {
+        "elasticity": 1.0
+      },
+      "loss": 0.0,
+      "parts": [
+        {
+          "indicator": "energy",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.0,
+          "weighted_loss": 0.0
+        },
+        {
+          "indicator": "nonfossil_share",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.0,
+          "weighted_loss": 0.0
+        },
+        {
+          "indicator": "capacity",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.0,
+          "weighted_loss": 0.0
+        },
+        {
+          "indicator": "co2",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.0,
+          "weighted_loss": 0.0
+        }
+      ],
+      "status": "valid"
+    },
+    {
+      "trial": 2,
+      "parameters": {
+        "elasticity": 1.5
+      },
+      "loss": 0.06136172452233075,
+      "parts": [
+        {
+          "indicator": "energy",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.23391992310675835,
+          "weighted_loss": 0.05847998077668959
+        },
+        {
+          "indicator": "nonfossil_share",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.00014964487740731254,
+          "weighted_loss": 3.7411219351828135e-05
+        },
+        {
+          "indicator": "capacity",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.0,
+          "weighted_loss": 0.0
+        },
+        {
+          "indicator": "co2",
+          "n": 7,
+          "scale": 1.0,
+          "weight": 0.25,
+          "normalized_mse": 0.011377330105157327,
+          "weighted_loss": 0.0028443325262893318
+        }
+      ],
+      "status": "valid"
+    }
+  ],
+  "equivalent_candidates": [
+    {
+      "elasticity": 1.0
+    }
+  ],
+  "interpretation": "Already-seen holdout; conditional on declared historical drivers; grid optimum only"
+}

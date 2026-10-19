@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-19",
+  "removed_duplicate_path": "data/raw/q2/nbs2025_transport_definitions.pdf",
+  "retained_original_path": "data/raw/lb/base/nbs/yearbook2025/zb16.pdf",
+  "identical_sha256": "c898ef3d7101c65b18864951cc62b0afab4ed9986ff29454b1802828725c209e",
+  "reason": "Workspace audit discovered the existing identical NBSdefinitionPDF. Rebind Q2scoped source, preserve existing original and alias old path; no scientific value changed."
+}

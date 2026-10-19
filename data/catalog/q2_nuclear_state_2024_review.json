@@ -1,0 +1,73 @@
+{
+  "id": "Q2_NUCLEAR_STATE_2024_REFERENCE",
+  "decision": "scoped_2024_nuclear_state_reference",
+  "review_date": "2026-10-19",
+  "reviewer": "same_author_full_table_visual_review",
+  "team_approval": false,
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NNSA_NUCLEAR_STATE_2024_BODY",
+      "record_sha256": "605716786f74518b2d112465fad52ffe5e3b4af492122d153c2a5d7ee82e4de9"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NNSA_NUCLEAR_OPERATING_2024_TABLE",
+      "record_sha256": "7f12f00e09727eb2530ab13fc21e243ff730d6dcf4f03b5a0b210a9e51dce131"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NNSA_NUCLEAR_CONSTRUCTION_2024_TABLE",
+      "record_sha256": "b29f1df2c41bd27e90408fdbf0bf6fcfd26fc69d874f1943e0abb477967f6b84"
+    }
+  ],
+  "roles": {
+    "body": "NNSA_NUCLEAR_STATE_2024_BODY",
+    "operating": "NNSA_NUCLEAR_OPERATING_2024_TABLE",
+    "construction": "NNSA_NUCLEAR_CONSTRUCTION_2024_TABLE"
+  },
+  "fingerprints": [
+    {
+      "path": "data/catalog/q2_nuclear_state_2024_transcription.json",
+      "sha256": "b0d66299f6a441cde593abd74c29205954a9c69b9c38d9208342df01c2a23f98"
+    },
+    {
+      "path": "data/processed/unified/nbs_history.csv",
+      "sha256": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Both full original images viewed. All58operating and27construction rows manually transcribed, including power,technology and all displayed date cells; no OCR-only acceptance."
+    },
+    {
+      "passed": true,
+      "evidence": "Public date2025-01-07 and reference date2024-12-31 kept distinct. Source is CNNC think-tank compilation reposted by regulator, not licensing documents or unique national statistical inventory."
+    },
+    {
+      "passed": true,
+      "evidence": "Table1row49 duplicated unit label retained; Shidaowan unit-number collision across different technologies retained. Source-row keys used; no deduplication or silent unit rename."
+    },
+    {
+      "passed": true,
+      "evidence": "Dash dates and absent construction-table commissioning columns remain missing. Future2025commercial date not counted as2024commercial operation."
+    },
+    {
+      "passed": true,
+      "evidence": "Only same-source table sums are checked against printed body; this is arithmetic validation, not independent observation. Rounded body3230.9 differs from precise table sum and NBS6083 mismatch is not silently reconciled."
+    },
+    {
+      "passed": true,
+      "evidence": "No availability, annual generation, cash, age-to-retirement rule, remaining construction cost or2060commissioning path inferred. All such mappings require separate review."
+    }
+  ],
+  "allowed_uses": [
+    "2024 reference asset/queue inventory and source-internal arithmetic/identity diagnostics"
+  ],
+  "prohibited_uses": [
+    "National admitted initial state without resolving identity,boundary,availability and finance mapping",
+    "2014 historical information set or treating2025public compilation as known at2024year start",
+    "Inferring retirement or commissioning dates from age/start or using forecasts as observations"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "numerical_reproduction_not_scientific_acceptance",
+  "frozen_before_reproduction": true,
+  "fixed_environment": "all_artifact_bytes_identical",
+  "alternate_environment": {
+    "selected_case_and_rule": "identical",
+    "all_eight_quality_decisions": "identical",
+    "metric_max_scaled_difference": 1e-8,
+    "parameter_max_scaled_difference": 1e-7,
+    "complete_result_ledger_max_scaled_difference": 1e-6,
+    "scaling": "abs(a-b)/max(1,abs(a),abs(b)); no missing rows or changed keys allowed",
+    "optimizer_trace_and_renderer": "record_byte_differences; do_not_claim_bit_identical"
+  },
+  "note": "Numerical tolerances assess repeatability only; all original historical quality thresholds remain unchanged. Same full source snapshot is used by both environments."
+}

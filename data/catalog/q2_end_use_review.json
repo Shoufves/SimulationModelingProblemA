@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "review_date": "2026-10-19",
+  "reviewer": "same_author_scoped_reference_review",
+  "team_approval": false,
+  "decision": "limited_prospective_performance_and_unit_reference",
+  "national_admission": false,
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/irena_remap_china_2014.pdf",
+      "sha256": "5dd5f991adcbb14a4ebf36d1c26200a359ccf5ccd9991d83edf7f81df98a30bf"
+    },
+    {
+      "path": "data/catalog/q2_end_use_transcription.json",
+      "sha256": "81f47a51104f53bd8ee9f69d7e2ff3939f69a7f53c7a854329028ea69d049905"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "IRENA_REMAP_CHINA_2014",
+      "record_sha256": "d6e227d3965fabc1efba3cfc855574e946365d8b711bdd13c4e71199633517a0"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Physical101/printed89 visually inspected: heat-pump350percent, coalboiler90percent and oilboiler85percent; capital/O&M/CF columns distinguished."
+    },
+    {
+      "passed": true,
+      "evidence": "Physical102/printed90 visually inspected: passenger-car petroleum1.6 and battery0.69 MJ/passenger-km, both15000annualpassenger-km. This is energy intensity, not dimensionless efficiency."
+    },
+    {
+      "passed": true,
+      "evidence": "Physical20/printed8 visually inspected: cost-supply comparison is for2030; no assertion of2014 observed national costs."
+    },
+    {
+      "passed": true,
+      "evidence": "Physical107/printed95 visually inspected: heat-pump applications explicitlyspaceheating andLTindustry. No all-industrialheat eligibility inference."
+    },
+    {
+      "passed": true,
+      "evidence": "Physical103/printed91 visually inspected: energyprices explicitly2030; withheld from historical operation."
+    },
+    {
+      "passed": true,
+      "evidence": "Costs, actual equipment efficiency/stock/lifetimes and thermal eligibility remain unadmitted; conversion factors can support explicitly labeled conditional mapping only."
+    }
+  ],
+  "limitations": [
+    "Two-wheeler row has published O&M 10000 versus capex 4000; no silent correction or use.",
+    "Annex B is explicitly 2030 energy-price assumptions; no historical tariff insertion.",
+    "Annex A costs lack sufficiently reconciled capacity and price-year mapping for current model use.",
+    "No new source observation or national source admission."
+  ]
+}

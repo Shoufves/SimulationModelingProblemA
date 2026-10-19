@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "review_date": "2026-10-19",
+  "reviewer": "yx_assisted_local_review",
+  "team_approval": false,
+  "decision": "scoped_retrospective_energy_accounting_reference",
+  "ktoe_export": "data/raw/q2/apec_china_balance_2014_detailed_ktoe.txt",
+  "ktoe_sha256": "065763527587c3717c7aa922f51cd77f348a190102012031576f65dc2dadde6e",
+  "pj_export": "data/raw/q2/apec_china_balance_2014_detailed_PJ.txt",
+  "ktoe_html": "data/raw/q2/apec_china_balance_2014_detailed_ktoe.html",
+  "pj_html": "data/raw/q2/apec_china_balance_2014_detailed_PJ.html",
+  "column_labels": [
+    "",
+    "1. Coal",
+    "1.1 Coking coal",
+    "1.2 Other bituminous coal",
+    "1.3 Sub-bituminous coal",
+    "1.4 Anthracite",
+    "1.5 Lignite",
+    "2. Coal products",
+    "2.1 Coke oven coke",
+    "2.2 Coke oven gas",
+    "2.3 Blast furnace gas",
+    "2.4 Other recovered gases",
+    "2.5 Patent fuel",
+    "2.6 Coal tar",
+    "2.7 BKB/PB",
+    "3. Peat",
+    "4. Peat products",
+    "5. Oil shale and oil sands",
+    "6. Crude oil & NGL",
+    "6.1 Crude oil",
+    "6.2 Natural gas liquids",
+    "6.3 Refinery feedstocks",
+    "6.4 Additives/ oxygenates",
+    "6.5 Other hydrocarbons",
+    "7. Petroleum products",
+    "7.1 Motor gasoline",
+    "7.2 Aviation gasoline",
+    "7.3 Naphtha",
+    "7.4 Gasoline type jet fuel",
+    "7.5 Kerosene type jet fuel",
+    "7.6 Kerosene",
+    "7.7 Gas/diesel oil",
+    "7.8 Fuel oil",
+    "7.9 LPG",
+    "7.10 Refinery gas (not liquefied)",
+    "7.11 Ethane",
+    "7.12 White spirit SBP",
+    "7.13 Lubricants",
+    "7.14 Bitumen",
+    "7.15 Paraffin waxes",
+    "7.16 Petroleum coke",
+    "7.17 Other products",
+    "8. Gas",
+    "8.1 Natural gas",
+    "8.2 LNG",
+    "8.3 Gas works gas",
+    "9. Nuclear",
+    "10. Hydro",
+    "11. Geothermal",
+    "12. Solar",
+    "12.1 of which: Photovoltaics",
+    "13. Tide, wave, ocean",
+    "14. Wind",
+    "15. Solid biomass",
+    "15.1 Fuelwood & woodwaste",
+    "15.2 Bagasse",
+    "15.3 Charcoal",
+    "15.4 Black liquor",
+    "15.5 Other biomass",
+    "16. Others",
+    "16.1 Biogas",
+    "16.2 Industrial waste",
+    "16.3 Municipal solid waste (renewable)",
+    "16.4 Municipal solid waste (non-renewable)",
+    "16.5 Biogasoline",
+    "16.6 Biodiesel",
+    "16.7 Bio jet kerosene",
+    "16.8 Other liquid biofuels",
+    "16.9 Other sources",
+    "17. Electricity",
+    "18. Heat",
+    "19. Total",
+    "20. Total Renewables"
+  ],
+  "row_labels": [
+    "",
+    "1. Indigenous production",
+    "2. Imports",
+    "3. Exports",
+    "4. International marine bunkers",
+    "5. International aviation bunkers",
+    "6. Stock changes",
+    "7. Total primary energy supply",
+    "8. Transfers",
+    "8.1 Recycled products",
+    "8.2 Interproduct transfers",
+    "8.3 Products transferred",
+    "8.4 Gas separation",
+    "9. Total transformation sector",
+    "9.1 Main activity producer",
+    "9.1.1 Electricity plants",
+    "9.1.2 CHP plants",
+    "9.1.3 Heat plants",
+    "9.2 Autoproducers",
+    "9.2.1 Electricity plants",
+    "9.2.2 CHP plants",
+    "9.2.3 Heat plants",
+    "9.3 Gas processing plants",
+    "9.3.1 Gas works plants",
+    "9.3.2 Liquefaction plants",
+    "9.3.3 Regasification plants",
+    "9.3.4 Natural gas blending plants",
+    "9.3.5 Gas-to-liquids plants",
+    "9.4 Oil refineries",
+    "9.5 Coal transformation",
+    "9.5.1 Coke ovens",
+    "9.5.2 Blast furnaces",
+    "9.5.3 Patent fuel plants",
+    "9.5.4 BKB/PB plants",
+    "9.5.5 Liquefaction (coal to oil)",
+    "9.6 Petrochemical industry",
+    "9.7 Biofuels processing",
+    "9.8 Charcoal processing",
+    "9.9 Non-specified transformation",
+    "10. Losses & own use",
+    "10.1 Own Use",
+    "10.1.1 Electricity, CHP and heat plants",
+    "10.1.2 Gas works plants",
+    "10.1.3 Liquefaction/regasification plants",
+    "10.1.4 Gas-to-liquids plants",
+    "10.1.5 Coke ovens",
+    "10.1.6 Coal mines",
+    "10.1.7 Blast furnaces",
+    "10.1.8 Patent fuel plants",
+    "10.1.9 BKB/PB plants",
+    "10.1.10 Liquefaction plants (coal to oil)",
+    "10.1.11 Oil refineries",
+    "10.1.12 Oil and gas extraction",
+    "10.1.13 Pump storage plants",
+    "10.1.14 Nuclear industry",
+    "10.1.15 Charcoal production plants",
+    "10.1.16 Gasification plants for biogases",
+    "10.1.17 Non-specified own uses",
+    "10.2 Transmision and distribution losses",
+    "11. Statistical discrepancy",
+    "12. Total final consumption",
+    "13. Total final energy consumption",
+    "14. Industry sector",
+    "14.1 Iron and steel",
+    "14.2 Chemical (incl. petrochemical)",
+    "14.3 Non ferrous metals",
+    "14.4 Non-metallic mineral products",
+    "14.5 Transportation equipment",
+    "14.6 Machinery",
+    "14.7 Mining and quarrying",
+    "14.8 Food, beverages and tobacco",
+    "14.9 Pulp, paper and printing",
+    "14.10 Wood and wood products",
+    "14.11 Construction",
+    "14.12 Textiles and leather",
+    "14.13 Non-specified industry",
+    "15. Transport sector",
+    "15.1 Domestic air transport",
+    "15.2 Road",
+    "15.3 Rail",
+    "15.4 Domestic navigation",
+    "15.5 Pipeline transport",
+    "15.6 Non-specified transport",
+    "16. Other sector",
+    "16.1 Commercial and public services",
+    "16.2 Residential",
+    "16.3 Agriculture",
+    "16.4 Fishing",
+    "16.5 Non-specified others",
+    "17. Non-energy use",
+    "17.1 Transformation sector",
+    "17.2 Industry sector",
+    "17.3 Transport sector",
+    "17.4 Other sector",
+    "18. Electricity output in GWh",
+    "19. Heat output in ktoe"
+  ],
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_ktoe.html",
+      "sha256": "c2e04292c041272eff6d435f8ac8a41035928c70f67d17931b381c1f304c800b"
+    },
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_ktoe.txt",
+      "sha256": "065763527587c3717c7aa922f51cd77f348a190102012031576f65dc2dadde6e"
+    },
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_PJ.html",
+      "sha256": "241a2431a9daded1cf834383cfc356aa36a817dfa9b1a4b86169ad190403718c"
+    },
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_PJ.txt",
+      "sha256": "a3a5a52c84ea8af433573fbe697c9fb63078a6da30bb9eb57fd2dadfbd9f95fd"
+    },
+    {
+      "path": "data/raw/q2/apec_standardisation.html",
+      "sha256": "f61155b11909bf528c6784f8febf8e7b9142cfa97ec4d2fbe982d3b40900b4c3"
+    },
+    {
+      "path": "data/raw/q2/apec_processing_information.html",
+      "sha256": "b00b1e3221079a7bfcb1f86ea0dabe3b0e4fc3686fd4553e02d171ea09c99b30"
+    },
+    {
+      "path": "data/raw/q2/apec_revised_definitions.pdf",
+      "sha256": "a08b4cac76b4184420248840d9559606592f66f48538662ebd7c2e3596b6ea33"
+    },
+    {
+      "path": "data/raw/q2/apec_ktoe_download.json",
+      "sha256": "149badf5056fdbea230e5059a59e8afdc3ae3c1d94136cf896e6932aef93a06c"
+    },
+    {
+      "path": "data/raw/q2/apec_balance_download.json",
+      "sha256": "cbb346c7962328325cd8c0033396f809f1f8f7e86ca8ac745ee18cf276e2113d"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_KTOE_HTML",
+      "record_sha256": "3bf95f01a285a6c5ad2037c094481795512f8916a8935cb3bc5749e008665e57"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_KTOE_TSV",
+      "record_sha256": "3435fd85f73f227fcde75fce1b2423ac2baebd4e7101ce148b15d2cfa98be81d"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_PJ_HTML",
+      "record_sha256": "4683a2d4d54620c9636724e6530ef2badde2f4b83c9cd453a5858d54d7002f2a"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_PJ_TSV",
+      "record_sha256": "5559e1f4f699c536afd64771d3a121077f0ed43b6396825879c15b77d3bc9ac4"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_BALANCE_STANDARDISATION",
+      "record_sha256": "36083d60f23cceb4014dbdbb6825dcc1fa656424b34ebf3625e2ce8444fada27"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_BALANCE_PROCESSING",
+      "record_sha256": "ae77b71d223fd610dee654a758f575e94f1f01f0a3e2886846dc1c385e22b877"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_REVISED_DEFINITIONS",
+      "record_sha256": "513931163292eb5ee81de4f4885a044a7a55a01de4cf5a9121a485c80b7a425e"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_KTOE_QUERY",
+      "record_sha256": "692d5828212485d296c164d32e3646853681dfc4b6262221c7d027e80e1921be"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_PJ_QUERY",
+      "record_sha256": "e598b490a4c9efcb7910d54674d6fb76c46defe7afa418b25224d20c101883fb"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Official annual-data form and conditions inspected. Query Y1=2014,fC[]=005,OIL=1,U=001/002 retained verbatim in query originals; China only, excludes separately selectable Hong Kong006 and Chinese Taipei016. Retrieval2026-10-19, latest selector2023. Export filename timestamp is not a release/revision date."
+    },
+    {
+      "passed": true,
+      "evidence": "Both original HTML and native TSV read: 95 flows x72 product/control fields; headers and integers including -0 retained. Dash has no verified legend and remains unresolved/null; it is not zero. ktoe export preserves finer integer precision than PJ; both same-source, not independent observations."
+    },
+    {
+      "passed": true,
+      "evidence": "Standardisation page explicitly uses member calorific values and net heat basis, gross-to-net coal/oil95% and gas90% only when needed. Primary electricity factors hydro100%, nuclear33%, geothermal10%, othernewpower100%. Do not splice into NBS equal-value primary energy."
+    },
+    {
+      "passed": true,
+      "evidence": "Revised definitions PDF physical8/printed168 visually inspected for naturalgas/LNG; physical22/printed182 for1toe=41.868GJ; physical24/printed184 for older final-use definition. SectionD is old13-column layout: old final-consumption wording and row numbers do not override current detailed headers."
+    },
+    {
+      "passed": true,
+      "evidence": "New table row13 explicitly totalfinalenergy; row17 nonenergy. Totalfinal=finalenergy+nonenergy; industry+transport+other=finalenergy. Statisticaldiscrepancy remains signed and separate. SolarPV and TotalRenewables are subsets, not additional products."
+    },
+    {
+      "passed": true,
+      "evidence": "Rows18 electricityoutputGWh and19 heatoutputktoe override maincaption in both unit exports. Gas includes separate naturalgas,LNG,gasworksgas; negative transformation inputs and positive outputs are not final demand. No inference that LNG fully explains older CEADs/NBS gas residual."
+    }
+  ],
+  "allowed_uses": [
+    "Offline source-preserving retrospective2014 energy-accounting diagnostics.",
+    "Sector finalenergy and nonenergy controls, signed conversion reference and candidate initial-state research."
+  ],
+  "prohibited_uses": [
+    "Dash to zero imputation.",
+    "Parent+child or outputmemo+balance-flow addition.",
+    "Treat as2014 decision-time publication.",
+    "Claim independent validation of NBS or CEADs.",
+    "Replace NBS total without heat/accounting/vintage bridge.",
+    "Treat finalenergy as useful service or installed equipment."
+  ],
+  "unresolved": [
+    "Dash symbol semantics.",
+    "Database revision/publication date.",
+    "Cross-source NBS/CEADs physical/accounting bridge.",
+    "Useful-service efficiencies, equipment ages, fuel-specific end-use and2024 state."
+  ]
+}

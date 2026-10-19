@@ -1,0 +1,53 @@
+{
+  "source_sha256": "5c80d4b5284568e7f781f0093bef7c697b61d8de94ff561dab7b851bfe4b3a3d",
+  "rows": 1260,
+  "checks": 1800,
+  "all_checks_passed": true,
+  "check_records_digest": "b698466736bf9b207bf8a89a13dc78dd069ab8dbf69282c11f4f85cd5a851dd1",
+  "maximum_absolute_residual_by_identity": {
+    "final_sector_sum": 0.6000000000003638,
+    "conversion_detail_sum": 0.10000000000582077,
+    "reported_total_excludes_losses": 0.10000000000582077
+  },
+  "source_sheets": [
+    "Beijing",
+    "Tianjin",
+    "Hebei",
+    "Shanxi",
+    "InnerMongolia",
+    "Liaoning",
+    "Jilin",
+    "Heilongjiang",
+    "Shanghai",
+    "Jiangsu",
+    "Zhejiang",
+    "Anhui",
+    "Fujian",
+    "Jiangxi",
+    "Shandong",
+    "Henan",
+    "Hubei",
+    "Hunan",
+    "Guangdong",
+    "Guangxi",
+    "Hainan",
+    "Chongqing",
+    "Sichuan",
+    "Guizhou",
+    "Yunnan",
+    "Shaanxi",
+    "Gansu",
+    "Qinghai",
+    "Ningxia",
+    "Xinjiang"
+  ],
+  "excluded_geography": [
+    "Tibet",
+    "Hong Kong",
+    "Macao",
+    "Taiwan"
+  ],
+  "full_national_initialization_admitted": false,
+  "inferred_arithmetic_identity_is_not_independent_method_validation": true,
+  "output_sha256": "dbeb5039977eabd6a56703a3ed8392be0858348014c8a4d04bbc93f2999523ba"
+}

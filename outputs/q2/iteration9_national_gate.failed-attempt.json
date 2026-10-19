@@ -1,0 +1,55 @@
+{
+  "run_id": "24163afd94a8476ab7ec2d700ade6510",
+  "status": "failed",
+  "output_valid_for_this_attempt": false,
+  "national_acceptance": false,
+  "error": "Required national inputs are not yet admitted",
+  "exception": "AdmissionError",
+  "config_path": "workflow/q2_inputs.json",
+  "config_sha256": "293e46e09e82514a3574bbc30b1a9b292e864b87967db9d893383a49cf24d0e0",
+  "seconds": 0.0010811999964062124,
+  "gaps": [
+    {
+      "id": "historical_initialization",
+      "gate": "B3/B4",
+      "required": "2014 end / 2015 start sector service, technology, finance and project queues with causal information dates",
+      "available_evidence": "data/processed/q2/history_observations.csv; data/processed/q2/sector_balance_2014_30province.csv; data/processed/q2/nbs2014_accounts.csv; data/processed/q2/nbs2014_boundary_diagnostics.csv; data/processed/q2/initialization_2014_capacity.csv; data/processed/q2/power_2014_reference.csv; data/processed/q2/initialization_2014_fuel_normalization.csv; workflow/q2_candidates/v1/initialization.json; workflow/q2_candidates/v1/assumptions.json; data/processed/q2/nuclear_queue_2014_reference.csv; data/catalog/q2_nuclear_queue_review.json; workflow/q2_candidates/v4/initialization.json; data/processed/q2/national_balance_2014_reference.csv; data/catalog/q2_national_balance_review.json; data/catalog/q2_nuclear_permit_2015_review.json; workflow/q2_candidates/v5/initialization.json; data/processed/q2/coal_bridge_2014.csv; data/catalog/q2_coal_bridge_review.json; data/processed/q2/apec_balance_2014.csv; data/processed/q2/apec_balance_2014_sector_bounds.csv; data/catalog/q2_apec_balance_review.json; data/catalog/q2_nuclear_permit_2015_supplement_review.json; data/catalog/q2_nuclear_capacity_2015_review.json; data/processed/q2/nuclear_capacity_2015_reference.csv; data/processed/q2/nuclear_capacity_2015_conflicts.csv; data/catalog/q2_nuclear_nonissuance_2016_2018_review.json; workflow/q2_candidates/v8/manifest.json",
+      "remaining": "26NEA2014year-end units28450MW and NNSA statuses now reviewed; v4 applies explicit duration/funding hypotheses rather than observed future dates. NEA/NBS20MW stock difference retained. Full sector services/nonenergy/ages/finance and national statistical bridge still need substantive mapping. National CEADs2014 cells1260 and60identities reviewed, gas total/transport differences remain unresolved. Coal-power category mismatch is explained by B54+C54+D54;15coal aggregates agree within rounding. APEC2014 supplies separate finalenergy/nonenergy and explicit statisticaldiscrepancy;6840cells transcribed,5539dashes retained,54sector/product conditional intervals. Database revision unknown and physical-use/equipment2024 bridge still incomplete. Four positive2015construction-permit records now cover8named units, matching annualreportcount after verifyingTianwan5/6onphysical96. CNS7now supplies8980MWe across8licensedunits:6startdates and2approved-without-date. ItsJune2016reportdate is not2015real-timeavailability. Tianwanunit5firstconcrete release verified;unit6separate-release date unknown. OriginalCNcodes conflict withCNS7and are kept separately. Other-yearcalendar,operatingpermission,exactpublication and gross/net ratingbasis remain unresolved. CNS8section6.1explicitly reportszero2016-2018constructionpermits;v8replayscurrent-yearnewapprovalblocks withoutstoppingexistingqueue. Fullother-year/discrete-unit calendar remains unresolved."
+    },
+    {
+      "id": "current_initialization",
+      "gate": "B3/B5",
+      "required": "2024 asset, fuel, service, storage and queue state on one consistent boundary",
+      "available_evidence": "outputs/q1/p1_yx/model_handoff.csv",
+      "remaining": "Candidate totals do not uniquely determine service/efficiency, inventory or asset age"
+    },
+    {
+      "id": "technology_and_prices",
+      "gate": "B2/B3/B6",
+      "required": "Matched CAPEX/OPEX, lifetimes, fuel energy factors, prices, price year, policy coverage and allocation rules",
+      "available_evidence": "data/processed/q2/technology_reference.csv; data/catalog/q2_technology_review.json; data/processed/technology_accounting_parameters.csv; data/processed/q2/fuel_reference.csv; data/processed/q2/technology_2010_samples.csv; data/processed/q2/technology_2010_annex.csv; data/processed/q2/technology_2010_parameters.csv; data/processed/q2/technology_2010_diagnostics.csv; data/processed/q2/policy_reference.csv; data/catalog/q2_policy_review.json; data/catalog/q2_mapping_2014_review.json; data/catalog/q2_mapping_2014_transcription.json; data/catalog/q2_solar_timing_ceiling_review.json; data/catalog/q2_policy_timeline_review.json; data/processed/q2/policy_timeline_reference.csv; outputs/q2/policy_timeline_reproduction.json",
+      "remaining": "Historical-vintage IEA2010 references and22 WRI2013 named-fuel defaults now reviewed. Still need model-specific parameter selection, matched price year, fixed/variable O&M split, service conversion and liability coverage. Three IEA main/annex comparisons remain unresolved; do not silently mix coal mass price and heat basis or treat samples as observed national fleet. IRENA2014cost range/indicative new-projectCF and US GDP deflator rebasing now tested as explicit research assumptions; no certification of Chinese price index or national fleet sample. V6correctsJanuary2015sourceavailability and compares2200GWutilitytechnicalpotential with20xopeningstock; aggregate mapping is still hypothetical, not an annual deployment allowance. ThreeNDRCnotices3008/3044/2729 andfourPDFtablesnowverified:6schedules,23prices,oneexplicit2018windannouncementwithdrawal. Publication/cohort/construction/commissioning andchanginggeography preserved. No nationalzone/cohortweight,priceyear/VATconversion,fiscalcashorfullsubsequentcalendar;notappliedtov9."
+    },
+    {
+      "id": "operation_chronology",
+      "gate": "B2/B3",
+      "required": "Matched load/wind/PV/hydro profiles, fuel supply and withdrawal bounds, inventory conditions",
+      "available_evidence": "data/processed/province_load_2018_MWh.csv",
+      "remaining": "2018 reconstructed shape is not 2024 measured chronology; representative-year hypothesis and robustness need review"
+    },
+    {
+      "id": "carbon_boundary",
+      "gate": "B3/B5",
+      "required": "One reviewed gross CO2/process/waste/net land or engineered removal boundary and 2024-2060 assumptions",
+      "available_evidence": "data/processed/q2/btr_co2_anchors.csv; data/processed/q2/inventory_boundary_checks.csv",
+      "remaining": "BTR/GCB disagree; sparse official anchors are not a future removal forecast"
+    },
+    {
+      "id": "frozen_experiment",
+      "gate": "B4/B6",
+      "required": "Reviewed bounds/scales/weights and GDP/cost/carbon ranges, information dates and policy target comparisons",
+      "available_evidence": "workflow/q2_acceptance.json; workflow/q2_candidates/v1/experiment.json; outputs/q2/historical_candidate_v1/historical_quality.json; workflow/q2_candidates/v4/experiment.json; outputs/q2/historical_candidate_v4/historical_quality.json; outputs/q2/iteration4_reproduction.json; workflow/q2_candidates/v5/experiment.json; outputs/q2/historical_candidate_v5/historical_quality.json; outputs/q2/iteration5_reproduction.json; workflow/q2_candidates/v5_sensitivity.json; outputs/q2/historical_candidate_v5_sensitivity/summary.json; workflow/q2_candidates/v6/manifest.json; outputs/q2/historical_candidate_v6/historical_quality.json; outputs/q2/iteration6_reproduction.json; outputs/q2/historical_candidate_v6_ablation/constraint_usage.csv; workflow/q2_candidates/v7/manifest.json; outputs/q2/historical_candidate_v7/historical_quality.json; outputs/q2/historical_candidate_v7_ablation/technology_activity.csv; outputs/q2/iteration7_reproduction.json; workflow/q2_candidates/v8/manifest.json; outputs/q2/historical_candidate_v8/historical_quality.json; outputs/q2/iteration8_reproduction.json; workflow/q2_candidates/v8_sensitivity.json; outputs/q2/historical_candidate_v8_sensitivity/summary.json; workflow/q2_candidates/v9/manifest.json; outputs/q2/historical_candidate_v9/historical_quality.json; outputs/q2/iteration9_reproduction.json; outputs/q2/historical_candidate_v9_comparison/summary.json; outputs/q2/historical_candidate_v9_sensitivity/summary.json",
+      "remaining": "Nine exploratory versions executed81/486/729/972/750/12/12/3/486validtrainingcases;3531total. V9jointstructure/wind/PVrate calibration selectssharedconstruction/connection,instant_margin,loss0.2357603115. Four numericgates stillfail(oil,gas,wind,solar);windholdoutMAPE worsens29.07to42.61percent. Technologyfrontier structure refittedloss0.399336;cannot use inherited-rate v7failure as generalrejection. V5/V6/V8/V9each27historicalresponses,notnationalS0/B6. Allfrozenfailures retained. Service/equipment,policy,accounting,currentstate andnetCO2 gapsremain."
+    }
+  ]
+}

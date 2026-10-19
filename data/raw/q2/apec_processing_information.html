@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+<html class='lt-ie9 no-js' lang='en'>
+<![endif]-->
+<!--[if IE 9]>
+<html class='ie9 no-js' lang='en'>
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Processing Information of Energy Data - EGEDA [Expert Group Energy Data Analysis]</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+    
+    <link href="../css/reset.css" type="text/css" rel="stylesheet">
+	<link href="../css/style.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+
+<div id="header-line"></div>
+<div id="wrapper">
+
+<div id="header">
+<div class="header-logo"><img src="../images/logo-apec.png" width="118" height="69" alt="apec"></div>
+<div class="header-logo"><a href="/"><img src="../images/logo-egeda2.png" width="520" height="69" alt="APEC Energy Working Group Expert Group on Energy Data and Analysis (EGEDA)"></a></div>
+
+</div>
+
+<div id="navigation">
+<ul>
+<li><a href="/">HOME</a></li>
+<li><a href="../database_info/index.html">DATABASE</a></li>
+<li><a href="../about/index.html">ABOUT</a></li>
+<li><a href="../meeting/index.html">MEETING</a></li>
+<li><a href="../publication/index.html">PUBLICATION</a></li>
+<li><a href="../training/index.html">TRAINING</a></li>
+<li><a href="../analysis/index.html">ANALYSIS</a></li>
+</ul>
+</div>
+
+<div id="submenu">
+
+<div class="submenu-head"><a href="index.html">DATABASE »</a></div>
+
+<ul>
+<li><a href="../database/wnewcgi.php" target="_blank">Updating Information</a></li>
+<li><a href="annual_data.html">Annual Data</a></li>
+<li><a href="quarterly_data.html">Quarterly Data</a></li>
+<li><a href="monthly_data.html">Monthly Data</a></li>
+<li><a href="Environment.html">Environment</a></li>
+<li><a href="members_only.html">Members Only</a></li>
+<li class="this-page">Database Information</li>
+</ul>
+</div>
+
+
+
+
+
+
+<div id="contents-wrapper">
+
+<h1>Processing Information of Energy Data</h1>
+
+<div class="contents-container processing-container">
+
+<h2>General</h2>
+<h3>[ 1 July 2017 ]</h3>
+
+
+<p class="processing-pdf">Revised Definitions:<br>
+
+<span><a href="processing_information/revised_definitions.pdf">Definition of product, Definition of flows, Energy prices, Definition of columns and rows of the energy balance table, Conversion factors (PDF file)</a></span></p>
+
+</div>
+
+
+<div class="contents-container processing-container">
+
+<h2>General</h2>
+<h3>[ 20 April 2001 ]</h3>
+
+<p>Used unit names in original tables are as following mainly:</p>
+
+
+<table border="0" class="processing-tbl">
+  <tr>
+    <th class="unit-name-th">Unit Name</th>
+    <th class="description-th">Description</th>
+  </tr>
+  <tr>
+    <td class="unit-name">k</td>
+    <td>kilo-, 1,000 = 10<SUP>3</SUP></td>
+  </tr>
+  <tr>
+    <td class="unit-name">M</td>
+    <td>mega-, 1,000,000 = 10<SUP>6</SUP></td>
+  </tr>
+  <tr>
+    <td class="unit-name">G</td>
+    <td>giga-, 1,000,000,000 = 10<SUP>9</SUP></td>
+  </tr>
+  <tr>
+    <td class="unit-name">T</td>
+    <td>tera-, 1,000,000,000,000 = 10<SUP>12</SUP></td>
+  </tr>
+  <tr>
+    <td class="unit-name">P</td>
+    <td>peta-, 1,000,000,000,000,000 = 10<SUP>15</SUP></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="unit-name">&nbsp;</td>
+    </tr>
+  <tr>
+    <td class="unit-name">bbl</td>
+    <td>barrel</td>
+  </tr>
+  <tr>
+    <td class="unit-name">bbl/d</td>
+    <td>barrel per day</td>
+  </tr>
+  <tr>
+    <td class="unit-name">ft^3</td>
+    <td>cubic feet, ft<SUP>3</SUP></td>
+  </tr>
+  <tr>
+    <td class="unit-name">L</td>
+    <td>litre</td>
+  </tr>
+  <tr>
+    <td class="unit-name">m^3</td>
+    <td>cubic metre, m<SUP>3</SUP></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="unit-name">&nbsp;</td>
+    </tr>
+  <tr>
+    <td class="unit-name">kg</td>
+    <td>kilogramme</td>
+  </tr>
+  <tr>
+    <td class="unit-name">st</td>
+    <td>short ton</td>
+  </tr>
+  <tr>
+    <td class="unit-name">t</td>
+    <td>(metric) ton</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="unit-name">&nbsp;</td>
+    </tr>
+  <tr>
+    <td class="unit-name">bfoe</td>
+    <td>barrel of fuel oil equivalent</td>
+  </tr>
+  <tr>
+    <td class="unit-name">Btu</td>
+    <td>British thermal unit</td>
+  </tr>
+  <tr>
+    <td class="unit-name">COE</td>
+    <td>ton of crude oil equivalent, Australia only</td>
+  </tr>
+  <tr>
+    <td class="unit-name">J</td>
+    <td>Joule</td>
+  </tr>
+  <tr>
+    <td class="unit-name">Loe</td>
+    <td>litre of oil equivalent</td>
+  </tr>
+  <tr>
+    <td class="unit-name">tce (China and Russia)</td>
+    <td>ton of coal equivalent = 0.7×10<SUP>7</SUP>kcal</td>
+  </tr>
+  <tr>
+    <td class="unit-name">tce (Chinese Taipei)</td>
+    <td>ton of coal equivalent = 0.62×10<SUP>7</SUP>kcal</td>
+  </tr>
+  <tr>
+    <td class="unit-name">toe</td>
+    <td>ton of oil equivalent = 1×10<SUP>7</SUP>kcal</td>
+  </tr>
+  <tr>
+    <td class="unit-name">Wh</td>
+    <td>watt hour</td>
+  </tr></table>
+
+</div>
+
+<div class="contents-container processing-container">
+
+<h2>General</h2>
+<h3>[ 16 March 1999 ]</h3>
+
+<p class="processing-pdf">Definitions:<br>
+
+<span><a href="processing_information/definitions.pdf">Definition of the Revised APEC Energy Data Reporting Format, Definition of Columns and Rows of the Energy Balance Table, Conversion Factors (PDF file, 24,870 bytes)</a></span></p>
+
+</div>
+
+
+
+
+
+<div class="contents-container processing-container">
+
+<h2>General</h2>
+<h3>[ 30 August 1999 ]</h3>
+
+<p>Annual data cover the following period:</p>
+
+<table border="0" class="processing-tbl processing-td-center">
+  <tr>
+    <th class="unit-name-th">Member Economies</th>
+    <th class="description-th">Period</th>
+  </tr>
+  <tr>
+    <td class="member">Australia</td>
+    <td>Fiscal Year (1 July - 30 June)</td>
+  </tr>
+  <tr>
+    <td class="member">Brunei Darussalam</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Canada</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Chile</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">China</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Hong Kong, China</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Indonesia</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Japan</td>
+    <td>Before 1982: Fiscal Year (1 April - 31 March)<br>
+      1982 onwards: Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Republic of Korea</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Malaysia</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Mexico</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">New Zealand</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Papua New Guinea</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Peru</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Philippines</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Russia</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Singapore</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Chinese Taipei</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Thailand</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">United States of America</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+  <tr>
+    <td class="member">Vietnam</td>
+    <td>Calendar Year (1 January - 31 December)</td>
+  </tr>
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="contents-container processing-container">
+
+<h2>China</h2>
+<h3>[ 1 July 2017 ]</h3>
+
+<p>CA collects data of power generation capacities from the website of the State Power Corporation of China from 1996 to 2014, due to impossibility of submitting it by the Government of China.</p>
+
+</div>
+
+
+
+<div class="contents-container processing-container">
+
+<h2>Hong Kong, China</h2>
+<h3>[ 1 July 2017 ]</h3>
+
+<p>From 2004 all data are submitted by Hong Kong, China. No estimates by CA.</p>
+
+<h3>[ 17 April 2001 ]</h3>
+
+<p>CA estimates natural gas consumption for power generation based on import amounts of natural gas.</p>
+
+<h3>[ 20 January 1997 ]</h3>
+
+<p>Only total consumption figures for petroleum products are available for annual data. We used the ratio of estimated final energy consumption figures, which Trade Department of Hong Kong, China sent in April 25, 1995, to calculate the consumption figures for petroleum products in sectors such as industry and transport for annual data from 1980 to 1995.
+The used ratio is shown below:</p>
+
+
+<table border="0" class="processing-hkg">
+  <tr>
+    <td>&nbsp;</td>
+    <th class="hkg-th">Jet</td>
+    <th class="hkg-th">Mogas</td>
+    <th class="hkg-th">Diesel</td>
+    <th class="hkg-th">LPG</td>
+    <th class="hkg-th">Fuel Oil</td>
+    <th class="hkg-th">Kerosene</td>
+  </tr>
+  <tr>
+    <td class="hkg-item">Transport</td>
+    <td>100%</td>
+    <td>100%</td>
+    <td>71.37%</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="hkg-item">Industrial</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>28.63%</td>
+    <td>9.01%</td>
+    <td>100%</td>
+    <td>15.49%</td>
+  </tr>
+  <tr>
+    <td class="hkg-item">Residential / Commercial</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>90.99%</td>
+    <td>&nbsp;</td>
+    <td>84.51%</td>
+  </tr>
+  <tr>
+    <td class="hkg-total">Total</td>
+    <td>100%</td>
+    <td>100%</td>
+    <td>100%</td>
+    <td>100%</td>
+    <td>100%</td>
+    <td>100%</td>
+  </tr>
+</table>
+
+
+
+
+
+
+</div>
+
+
+
+<div class="contents-container processing-container">
+
+<h2>Indonesia</h2>
+<h3>[ 1 July 2017 ]</h3>
+
+<p>From 2004 all data are submitted by Indonesia. No estimates by CA.</p>
+
+<h3>[ 17 April 2001 ]</h3>
+
+<p>CA estimates fuel consumption for power generation based on power generation amounts by fuels assuming a 30% thermal efficiency, which is the historical average during the period 1980 to 1993, as reported in the ASEAN ENERGY REVIEW 1998 by AEEMTRC (current name is ACE).</p>
+
+</div>
+
+
+
+<div class="contents-container processing-container">
+
+<h2>Malaysia</h2>
+<h3>[ 17 April 2001 ]</h3>
+
+<p>Natural Gas in Loss and Own Use sector includes its use for Gas Flaring and Re-injection.</p>
+
+</div>
+
+
+
+
+<div class="contents-container processing-container">
+
+<h2>Papua New Guinea</h2>
+<h3>[ 1 July 2017 ]</h3>
+
+<p>From 2004 Papua New Guinea EBT are estimates of CA.</p>
+
+<h3>[ 2 June 1998 ]</h3>
+
+<p>Data of Papua New Guinea are made from "Energy Statistical Yearbook" (the United Nations) by the Coordinating Agency.</p>
+
+</div>
+
+
+
+</div><!-- /#contents-wrapper -->
+
+
+</div><!-- /#wrapper -->
+
+
+
+
+
+<div id="footer">
+
+<div class="footer-wrapper">
+
+<div class="footer-link">
+<p class="footer-heading">ABOUT</p>
+<ul>
+  <li><a href="../about/index.html">About EGEDA</a></li>
+  <li><a href="../about/terms_of_reference.html">Terms of Reference</a></li>
+  <li><a href="../about/contact_us.html">Contact Us</a></li>
+</ul>
+</div>
+
+<div class="footer-link">
+<p class="footer-heading">LINKAGES</p>
+<ul>
+  <li><a href="../relationship/focal_point.html">Focal Point</a></li>
+  <li><a href="../relationship/link.html">Link</a></li>
+</ul>
+</div>
+
+<div class="footer-link footer-questionnaire">
+<p class="footer-heading">Questionnaire</p>
+<ul>
+  <li><a href="../questionnaire/index.html">Questionnaires, Manuals</a></li>
+  <li><a href="../questionnaire/submission_for_member_economies.php">Submission</a></li>
+  <li><a href="../internal-only/internal-only.html">Internal Only</a></li>
+</ul>
+</div>
+
+</div><!-- /.footer-wrapper -->
+
+
+<div class="footer-copyright-wrapper">
+
+<div class="footer-wrapper footer-copyright">
+<p>&copy;Energy Statistics & Training Office, Asia Pacific Energy Research Centre (APERC).</p>
+
+</div>
+
+</div>
+
+</div><!-- /#footer -->
+
+
+
+
+
+
+
+</body>
+
+</html>

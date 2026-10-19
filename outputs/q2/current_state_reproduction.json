@@ -1,0 +1,103 @@
+{
+  "scope": "partial_current_state_reproduction_only",
+  "national_acceptance": false,
+  "snapshot_files": {
+    "data/catalog/q2_current_state_review.json": "fa51ac97a1def8fa3df30a0695aaada7939f136859a9b67528edc994c91e20c5",
+    "data/catalog/q2_current_state_transcription.json": "1c270735be5d3a3589f9228d65b94ae4a033ffb166e543f149e63606892c2483",
+    "data/processed/unified/nbs_history.csv": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+    "data/raw/batch1_national/nbs_2025_C09-15.jpg": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+    "data/raw/batch1_national/nea_renewable_2024.html": "13fabe3f96b292ab2aab7ab2332541d8839fe21e1f144b2f56184f65fbe552cd",
+    "data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf": "6e46cb5edb3bec945c45871750b7c35b267341fbce37745200414993106fea5d",
+    "data/raw/lb/base/reports/power_reliability_2024.pdf": "af0c088a6c25511ec9fa9f758af374c5a22d0002e2c507a9450f2d64c85e5e95",
+    "data/raw/lb/base/reports/storage_2025.pdf": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3",
+    "data/raw/official/S17_page_capture.txt": "160fd1ffe6021dcc42484216a8fbea09ad9108bcea66f137dc41f0a3fdab3163",
+    "data/raw/official/S24_page_capture.txt": "e07931550e610bab31ea3d82934c22fa4e60637f477ad30783726a75a8c8fb9a",
+    "outputs/q2/historical_candidate_v12/result.json": "6ae1a1fd06466b4355f50c76855c99ecfd3fdab71d3ef72d9f00da70c8b28eb5",
+    "outputs/q2/historical_candidate_v12/selected_model.json": "022d14840a8ac2991508f9357e4d4af7068cd9bc9a1717847b16f58eda462edb",
+    "scripts/prepare_q2_current_state.py": "5057d035337a8295ebf5bc2d3e828db2215d83b7b6b694d7e40b36cf8ab8d33c",
+    "src/energy_model/__init__.py": "6918004f3238cce27b61c55a1423d9eaad5dc7028b711d138ba10db47d91ecbe",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/current_state.py": "380dbdadcd40ca8d3966eb461c69b950e23584a4e6dd10e5edfab915615dc648",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32"
+  },
+  "runs": [
+    {
+      "environment": "clean_env",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"partial_state_reproduced\", \"observations\": 45, \"initialization_complete\": false}\n",
+      "stderr": "",
+      "comparisons": [
+        {
+          "name": "current_state_2024.json",
+          "expected": "ff72ad44a0b800d768e5f5be258b994da040003e7b43440fda1a0bbfdeae7b6d",
+          "reproduced": "ff72ad44a0b800d768e5f5be258b994da040003e7b43440fda1a0bbfdeae7b6d",
+          "identical": true
+        },
+        {
+          "name": "current_state_2024_checks.json",
+          "expected": "d9c41e8cb7d17e70d9032d7566e6a4c37092a4508c6061b9d11dac744dec9ba1",
+          "reproduced": "d9c41e8cb7d17e70d9032d7566e6a4c37092a4508c6061b9d11dac744dec9ba1",
+          "identical": true
+        },
+        {
+          "name": "current_state_2024_diagnostics.csv",
+          "expected": "35fa2f0616e7e623e77694abb7c3506bf95a4ace3d2d75d44c77468d7fa021b9",
+          "reproduced": "35fa2f0616e7e623e77694abb7c3506bf95a4ace3d2d75d44c77468d7fa021b9",
+          "identical": true
+        },
+        {
+          "name": "current_state_2024_endpoint.csv",
+          "expected": "05593da843784feab8da8edaba41589b6db6bb10ab8259d98d5485819c498ae9",
+          "reproduced": "05593da843784feab8da8edaba41589b6db6bb10ab8259d98d5485819c498ae9",
+          "identical": true
+        },
+        {
+          "name": "current_state_2024_observations.csv",
+          "expected": "6f625dc314c4d38c0df5b56932cbb2f0a8ec3f57c6d37249cdb2ec77dce24f12",
+          "reproduced": "6f625dc314c4d38c0df5b56932cbb2f0a8ec3f57c6d37249cdb2ec77dce24f12",
+          "identical": true
+        }
+      ]
+    },
+    {
+      "environment": "venv",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"partial_state_reproduced\", \"observations\": 45, \"initialization_complete\": false}\n",
+      "stderr": "",
+      "comparisons": [
+        {
+          "name": "current_state_2024.json",
+          "expected": "ff72ad44a0b800d768e5f5be258b994da040003e7b43440fda1a0bbfdeae7b6d",
+          "reproduced": "ff72ad44a0b800d768e5f5be258b994da040003e7b43440fda1a0bbfdeae7b6d",
+          "identical": true
+        },
+        {
+          "name": "current_state_2024_checks.json",
+          "expected": "d9c41e8cb7d17e70d9032d7566e6a4c37092a4508c6061b9d11dac744dec9ba1",
+          "reproduced": "d9c41e8cb7d17e70d9032d7566e6a4c37092a4508c6061b9d11dac744dec9ba1",
+          "identical": true
+        },
+        {
+          "name": "current_state_2024_diagnostics.csv",
+          "expected": "35fa2f0616e7e623e77694abb7c3506bf95a4ace3d2d75d44c77468d7fa021b9",
+          "reproduced": "35fa2f0616e7e623e77694abb7c3506bf95a4ace3d2d75d44c77468d7fa021b9",
+          "identical": true
+        },
+        {
+          "name": "current_state_2024_endpoint.csv",
+          "expected": "05593da843784feab8da8edaba41589b6db6bb10ab8259d98d5485819c498ae9",
+          "reproduced": "05593da843784feab8da8edaba41589b6db6bb10ab8259d98d5485819c498ae9",
+          "identical": true
+        },
+        {
+          "name": "current_state_2024_observations.csv",
+          "expected": "6f625dc314c4d38c0df5b56932cbb2f0a8ec3f57c6d37249cdb2ec77dce24f12",
+          "reproduced": "6f625dc314c4d38c0df5b56932cbb2f0a8ec3f57c6d37249cdb2ec77dce24f12",
+          "identical": true
+        }
+      ]
+    }
+  ],
+  "all_outputs_byte_identical": true,
+  "candidate_history_not_rerun_or_modified": true
+}

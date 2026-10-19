@@ -1,0 +1,44 @@
+{
+  "reviewer": "yx_assisted_local_review",
+  "review_date": "2026-10-18",
+  "team_approval": false,
+  "decision": "scoped_reference_parameters_only",
+  "fingerprints": [
+    {
+      "path": "data/raw/lb/base/reports/iea_oecd_generation_cost_2020.pdf",
+      "sha256": "7471000f732fb256bb9c2ebfbaa74285ea4736e980983b10201e0fdbf71d0b7a"
+    },
+    {
+      "path": "data/catalog/q2_technology_transcription.json",
+      "sha256": "41d800afc9d714312cbc699a7666b4d48bc024bed254b0e132b457bccd25a10e"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Lifetimes and construction are harmonized methodology, country CAPEX/efficiency/CF are China project samples."
+    },
+    {
+      "passed": true,
+      "evidence": "2018 USD; exchange rate 6.62 CNY/USD; solar is AC; overnight excludes IDC."
+    },
+    {
+      "passed": true,
+      "evidence": "Physical pp58/59 and60/61 read together; China nuclear fuel=10 USD/MWh and generic fuel=9.33 retained as separate assumptions."
+    }
+  ],
+  "allowed_uses": [
+    "Q2 forward technology reference candidates with explicit vintage and uncertainty",
+    "lifecycle/construction mechanism parameter provenance",
+    "price-year conversion using reported exchange rate only"
+  ],
+  "prohibited_uses": [
+    "2024 observed national fleet cost/efficiency or ages",
+    "historical agent information before 2021",
+    "O&M aggregate silently converted into fixed or variable cost",
+    "fuel price treated as current Chinese domestic tariff",
+    "CF turned into measured hourly profile",
+    "China hydro/biomass/storage CAPEX filled from foreign sample rows",
+    "new nuclear LTO permissions inferred from harmonized lifetime"
+  ]
+}

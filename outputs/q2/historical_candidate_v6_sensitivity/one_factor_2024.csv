@@ -1,0 +1,73 @@
+﻿factor,level,case,year,indicator,value,unit,boundary,baseline_value,difference,relative_change
+gdp_growth_multiplier,0.8,3,2024,consumption_10ktce,553244.8765727456,10^4 tce,NBS_2025_mainland_primary_consumption_proxy,589328.6989707833,-36083.82239803765,-0.06122868691284722
+gdp_growth_multiplier,0.8,3,2024,consumption_coal_share,0.5279455649741902,fraction,NBS_2025_mainland_primary_consumption_proxy,0.526381539206084,0.0015640257681062142,0.002971277774036496
+gdp_growth_multiplier,0.8,3,2024,consumption_oil_share,0.16795377641280007,fraction,NBS_2025_mainland_primary_consumption_proxy,0.16656270470065193,0.0013910717121481397,0.008351639790241006
+gdp_growth_multiplier,0.8,3,2024,consumption_gas_share,0.0936466902360061,fraction,NBS_2025_mainland_primary_consumption_proxy,0.10948760785558251,-0.015840917619576414,-0.1446822880674411
+gdp_growth_multiplier,0.8,3,2024,wind_10kW,29107.994884058862,10^4 kW,NBS_2025_mainland_nameplate_capacity,29107.994884058862,0.0,0.0
+gdp_growth_multiplier,0.8,3,2024,solar_10kW,58784.241503098725,10^4 kW,NBS_2025_mainland_nameplate_capacity,58784.241503098725,0.0,0.0
+gdp_growth_multiplier,0.8,3,2024,nuclear_10kW,7041.0,10^4 kW,NBS_2025_mainland_nameplate_capacity,7041.0,0.0,0.0
+gdp_growth_multiplier,0.8,3,2024,gcb_fuel_co2,10069.107234057865,Mt CO2,GCB_coal_oil_gas_categories_effective_coefficient_proxy,10831.750485761464,-762.6432517035992,-0.07040812588012513
+gdp_growth_multiplier,1.0,12,2024,consumption_10ktce,589328.6989707833,10^4 tce,NBS_2025_mainland_primary_consumption_proxy,589328.6989707833,0.0,0.0
+gdp_growth_multiplier,1.0,12,2024,consumption_coal_share,0.526381539206084,fraction,NBS_2025_mainland_primary_consumption_proxy,0.526381539206084,0.0,0.0
+gdp_growth_multiplier,1.0,12,2024,consumption_oil_share,0.16656270470065193,fraction,NBS_2025_mainland_primary_consumption_proxy,0.16656270470065193,0.0,0.0
+gdp_growth_multiplier,1.0,12,2024,consumption_gas_share,0.10948760785558251,fraction,NBS_2025_mainland_primary_consumption_proxy,0.10948760785558251,0.0,0.0
+gdp_growth_multiplier,1.0,12,2024,wind_10kW,29107.994884058862,10^4 kW,NBS_2025_mainland_nameplate_capacity,29107.994884058862,0.0,0.0
+gdp_growth_multiplier,1.0,12,2024,solar_10kW,58784.241503098725,10^4 kW,NBS_2025_mainland_nameplate_capacity,58784.241503098725,0.0,0.0
+gdp_growth_multiplier,1.0,12,2024,nuclear_10kW,7041.0,10^4 kW,NBS_2025_mainland_nameplate_capacity,7041.0,0.0,0.0
+gdp_growth_multiplier,1.0,12,2024,gcb_fuel_co2,10831.750485761464,Mt CO2,GCB_coal_oil_gas_categories_effective_coefficient_proxy,10831.750485761464,0.0,0.0
+gdp_growth_multiplier,1.2,21,2024,consumption_10ktce,629759.9522048584,10^4 tce,NBS_2025_mainland_primary_consumption_proxy,589328.6989707833,40431.25323407515,0.068605607201355
+gdp_growth_multiplier,1.2,21,2024,consumption_coal_share,0.5232904325062682,fraction,NBS_2025_mainland_primary_consumption_proxy,0.526381539206084,-0.0030911066998158265,-0.005872369126922683
+gdp_growth_multiplier,1.2,21,2024,consumption_oil_share,0.16455336589905326,fraction,NBS_2025_mainland_primary_consumption_proxy,0.16656270470065193,-0.0020093388015986757,-0.012063557716656237
+gdp_growth_multiplier,1.2,21,2024,consumption_gas_share,0.12727213687869193,fraction,NBS_2025_mainland_primary_consumption_proxy,0.10948760785558251,0.017784529023109424,0.16243417288436657
+gdp_growth_multiplier,1.2,21,2024,wind_10kW,29107.994884058862,10^4 kW,NBS_2025_mainland_nameplate_capacity,29107.994884058862,0.0,0.0
+gdp_growth_multiplier,1.2,21,2024,solar_10kW,58784.241503098725,10^4 kW,NBS_2025_mainland_nameplate_capacity,58784.241503098725,0.0,0.0
+gdp_growth_multiplier,1.2,21,2024,nuclear_10kW,7041.0,10^4 kW,NBS_2025_mainland_nameplate_capacity,7041.0,0.0,0.0
+gdp_growth_multiplier,1.2,21,2024,gcb_fuel_co2,11675.008419053567,Mt CO2,GCB_coal_oil_gas_categories_effective_coefficient_proxy,10831.750485761464,843.2579332921032,0.07785056851157912
+cost_decline_multiplier,0.5,9,2024,consumption_10ktce,589255.0362691386,10^4 tce,NBS_2025_mainland_primary_consumption_proxy,589328.6989707833,-73.66270164470188,-0.00012499425494350014
+cost_decline_multiplier,0.5,9,2024,consumption_coal_share,0.5272860431235776,fraction,NBS_2025_mainland_primary_consumption_proxy,0.526381539206084,0.0009045039174936376,0.0017183427801397144
+cost_decline_multiplier,0.5,9,2024,consumption_oil_share,0.16658352668445572,fraction,NBS_2025_mainland_primary_consumption_proxy,0.16656270470065193,2.0821983803792632e-05,0.00012500988046038053
+cost_decline_multiplier,0.5,9,2024,consumption_gas_share,0.10950129488835243,fraction,NBS_2025_mainland_primary_consumption_proxy,0.10948760785558251,1.3687032769924001e-05,0.00012500988046038053
+cost_decline_multiplier,0.5,9,2024,wind_10kW,35480.11590754935,10^4 kW,NBS_2025_mainland_nameplate_capacity,29107.994884058862,6372.121023490487,0.21891308724189074
+cost_decline_multiplier,0.5,9,2024,solar_10kW,50778.120479608246,10^4 kW,NBS_2025_mainland_nameplate_capacity,58784.241503098725,-8006.121023490479,-0.1361950212978158
+cost_decline_multiplier,0.5,9,2024,nuclear_10kW,7041.0,10^4 kW,NBS_2025_mainland_nameplate_capacity,7041.0,0.0,0.0
+cost_decline_multiplier,0.5,9,2024,gcb_fuel_co2,10844.770517302268,Mt CO2,GCB_coal_oil_gas_categories_effective_coefficient_proxy,10831.750485761464,13.020031540803757,0.0012020246919386413
+cost_decline_multiplier,1.0,12,2024,consumption_10ktce,589328.6989707833,10^4 tce,NBS_2025_mainland_primary_consumption_proxy,589328.6989707833,0.0,0.0
+cost_decline_multiplier,1.0,12,2024,consumption_coal_share,0.526381539206084,fraction,NBS_2025_mainland_primary_consumption_proxy,0.526381539206084,0.0,0.0
+cost_decline_multiplier,1.0,12,2024,consumption_oil_share,0.16656270470065193,fraction,NBS_2025_mainland_primary_consumption_proxy,0.16656270470065193,0.0,0.0
+cost_decline_multiplier,1.0,12,2024,consumption_gas_share,0.10948760785558251,fraction,NBS_2025_mainland_primary_consumption_proxy,0.10948760785558251,0.0,0.0
+cost_decline_multiplier,1.0,12,2024,wind_10kW,29107.994884058862,10^4 kW,NBS_2025_mainland_nameplate_capacity,29107.994884058862,0.0,0.0
+cost_decline_multiplier,1.0,12,2024,solar_10kW,58784.241503098725,10^4 kW,NBS_2025_mainland_nameplate_capacity,58784.241503098725,0.0,0.0
+cost_decline_multiplier,1.0,12,2024,nuclear_10kW,7041.0,10^4 kW,NBS_2025_mainland_nameplate_capacity,7041.0,0.0,0.0
+cost_decline_multiplier,1.0,12,2024,gcb_fuel_co2,10831.750485761464,Mt CO2,GCB_coal_oil_gas_categories_effective_coefficient_proxy,10831.750485761464,0.0,0.0
+cost_decline_multiplier,1.5,15,2024,consumption_10ktce,589731.0603861791,10^4 tce,NBS_2025_mainland_primary_consumption_proxy,589328.6989707833,402.3614153958624,0.0006827453271809336
+cost_decline_multiplier,1.5,15,2024,consumption_coal_share,0.5214449335397645,fraction,NBS_2025_mainland_primary_consumption_proxy,0.526381539206084,-0.004936605666319482,-0.009378379176756657
+cost_decline_multiplier,1.5,15,2024,consumption_oil_share,0.1664490623810976,fraction,NBS_2025_mainland_primary_consumption_proxy,0.16656270470065193,-0.00011364231955432458,-0.0006822795040376528
+cost_decline_multiplier,1.5,15,2024,consumption_gas_share,0.10941290670479654,fraction,NBS_2025_mainland_primary_consumption_proxy,0.10948760785558251,-7.470115078596351e-05,-0.0006822795040375418
+cost_decline_multiplier,1.5,15,2024,wind_10kW,29107.994884058862,10^4 kW,NBS_2025_mainland_nameplate_capacity,29107.994884058862,0.0,0.0
+cost_decline_multiplier,1.5,15,2024,solar_10kW,64687.12047960824,10^4 kW,NBS_2025_mainland_nameplate_capacity,58784.241503098725,5902.878976509513,0.10041600989609356
+cost_decline_multiplier,1.5,15,2024,nuclear_10kW,7041.0,10^4 kW,NBS_2025_mainland_nameplate_capacity,7041.0,0.0,0.0
+cost_decline_multiplier,1.5,15,2024,gcb_fuel_co2,10760.63229158338,Mt CO2,GCB_coal_oil_gas_categories_effective_coefficient_proxy,10831.750485761464,-71.11819417808329,-0.006565715695867391
+carbon_price_USD2008_per_t,0.0,12,2024,consumption_10ktce,589328.6989707833,10^4 tce,NBS_2025_mainland_primary_consumption_proxy,589328.6989707833,0.0,0.0
+carbon_price_USD2008_per_t,0.0,12,2024,consumption_coal_share,0.526381539206084,fraction,NBS_2025_mainland_primary_consumption_proxy,0.526381539206084,0.0,0.0
+carbon_price_USD2008_per_t,0.0,12,2024,consumption_oil_share,0.16656270470065193,fraction,NBS_2025_mainland_primary_consumption_proxy,0.16656270470065193,0.0,0.0
+carbon_price_USD2008_per_t,0.0,12,2024,consumption_gas_share,0.10948760785558251,fraction,NBS_2025_mainland_primary_consumption_proxy,0.10948760785558251,0.0,0.0
+carbon_price_USD2008_per_t,0.0,12,2024,wind_10kW,29107.994884058862,10^4 kW,NBS_2025_mainland_nameplate_capacity,29107.994884058862,0.0,0.0
+carbon_price_USD2008_per_t,0.0,12,2024,solar_10kW,58784.241503098725,10^4 kW,NBS_2025_mainland_nameplate_capacity,58784.241503098725,0.0,0.0
+carbon_price_USD2008_per_t,0.0,12,2024,nuclear_10kW,7041.0,10^4 kW,NBS_2025_mainland_nameplate_capacity,7041.0,0.0,0.0
+carbon_price_USD2008_per_t,0.0,12,2024,gcb_fuel_co2,10831.750485761464,Mt CO2,GCB_coal_oil_gas_categories_effective_coefficient_proxy,10831.750485761464,0.0,0.0
+carbon_price_USD2008_per_t,25.0,13,2024,consumption_10ktce,585972.4047006877,10^4 tce,NBS_2025_mainland_primary_consumption_proxy,589328.6989707833,-3356.294270095532,-0.005695114247714406
+carbon_price_USD2008_per_t,25.0,13,2024,consumption_coal_share,0.49238271921741006,fraction,NBS_2025_mainland_primary_consumption_proxy,0.526381539206084,-0.033998819988673934,-0.0645896891444041
+carbon_price_USD2008_per_t,25.0,13,2024,consumption_oil_share,0.1675167316256638,fraction,NBS_2025_mainland_primary_consumption_proxy,0.16656270470065193,0.0009540269250118694,0.005727734349213698
+carbon_price_USD2008_per_t,25.0,13,2024,consumption_gas_share,0.135886730843343,fraction,NBS_2025_mainland_primary_consumption_proxy,0.10948760785558251,0.02639912298776048,0.2411151682351278
+carbon_price_USD2008_per_t,25.0,13,2024,wind_10kW,28245.486513322045,10^4 kW,NBS_2025_mainland_nameplate_capacity,29107.994884058862,-862.5083707368176,-0.029631322053350173
+carbon_price_USD2008_per_t,25.0,13,2024,solar_10kW,65870.48550488973,10^4 kW,NBS_2025_mainland_nameplate_capacity,58784.241503098725,7086.244001791005,0.12054666047562201
+carbon_price_USD2008_per_t,25.0,13,2024,nuclear_10kW,7041.0,10^4 kW,NBS_2025_mainland_nameplate_capacity,7041.0,0.0,0.0
+carbon_price_USD2008_per_t,25.0,13,2024,gcb_fuel_co2,10493.433921224916,Mt CO2,GCB_coal_oil_gas_categories_effective_coefficient_proxy,10831.750485761464,-338.31656453654796,-0.03123378487911732
+carbon_price_USD2008_per_t,50.0,14,2024,consumption_10ktce,587731.1891063284,10^4 tce,NBS_2025_mainland_primary_consumption_proxy,589328.6989707833,-1597.5098644548561,-0.0027107281000310346
+carbon_price_USD2008_per_t,50.0,14,2024,consumption_coal_share,0.4708323627952394,fraction,NBS_2025_mainland_primary_consumption_proxy,0.526381539206084,-0.055549176410844614,-0.10553025186754605
+carbon_price_USD2008_per_t,50.0,14,2024,consumption_oil_share,0.16701543814196235,fraction,NBS_2025_mainland_primary_consumption_proxy,0.16656270470065193,0.0004527334413104156,0.0027180961195609754
+carbon_price_USD2008_per_t,50.0,14,2024,consumption_gas_share,0.13548009007359896,fraction,NBS_2025_mainland_primary_consumption_proxy,0.10948760785558251,0.02599248221801645,0.23740113358126624
+carbon_price_USD2008_per_t,50.0,14,2024,wind_10kW,40222.24768294569,10^4 kW,NBS_2025_mainland_nameplate_capacity,29107.994884058862,11114.252798886824,0.3818281830526773
+carbon_price_USD2008_per_t,50.0,14,2024,solar_10kW,78656.12243441827,10^4 kW,NBS_2025_mainland_nameplate_capacity,58784.241503098725,19871.880931319545,0.3380477560516286
+carbon_price_USD2008_per_t,50.0,14,2024,nuclear_10kW,7041.0,10^4 kW,NBS_2025_mainland_nameplate_capacity,7041.0,0.0,0.0
+carbon_price_USD2008_per_t,50.0,14,2024,gcb_fuel_co2,10182.56521937713,Mt CO2,GCB_coal_oil_gas_categories_effective_coefficient_proxy,10831.750485761464,-649.1852663843347,-0.05993355065164219

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "scope": "training_selected_structure_comparison",
+  "national_acceptance": false,
+  "bindings": {
+    "manifest": {
+      "path": "workflow/q2_candidates/v9/manifest.json",
+      "sha256": "c6c03181a7da1927d5922b988fabf57688204c495552a47b8eab0a3b9f842cbf"
+    },
+    "training_trials": {
+      "path": "outputs/q2/historical_candidate_v9/training_trials.json",
+      "sha256": "250d8808636026a399549fedfde21209291573256d146d0a6c5a23e724fd6c89"
+    },
+    "parent_manifest": {
+      "path": "workflow/q2_candidates/v8/manifest.json",
+      "sha256": "2dbc5636a662f038fb1cd58fbfa50b04d76f41aa495eec459287f6d6310dae82"
+    },
+    "parent_selection": {
+      "path": "outputs/q2/historical_candidate_v8/training_selection.json",
+      "sha256": "9334545f290b37375de05099c00513483d5a8d93b91242648336011d3c436759"
+    }
+  }
+}

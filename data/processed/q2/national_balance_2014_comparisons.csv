@@ -1,0 +1,6 @@
+﻿comparison,ceads_cells,ceads_value,nbs_table,nbs_account,nbs_value,difference_ceads_minus_nbs,interpretation,status
+natural_gas_total,"[""R65""]",1509.8,0909CH,total:gas,1868.94,-359.1400000000001,Reported net consumption excludes loss; source/method difference remains unresolved.,unresolved_difference
+natural_gas_transport,"[""R46""]",170.1,0909CH,transport:gas,214.42,-44.31999999999999,Sector labels do not resolve the numerical discrepancy.,unresolved_difference
+natural_gas_household,"[""R49"", ""R50""]",342.6,0909CH,household:gas,342.58,0.020000000000038654,Only this local comparison agrees within workbook rounding.,agreement_within_rounding
+raw_coal_power_input,"[""B54""]",181945.9,0905CH,power_input,184525.3,-2579.399999999994,Different input totals retained; not rescaled or averaged.,unresolved_difference
+final_electricity,"[""T3""]",53283.8,0906CH,final,53283.8,0.0,Equal control total does not validate other carriers.,agreement_within_rounding
