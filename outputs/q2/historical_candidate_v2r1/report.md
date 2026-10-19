@@ -1,0 +1,22 @@
+# 全国历史聚合候选 v2：实测目标诊断，未准入
+
+此结果使用真实 NBS/GCB 历史观测和明确研究假设。它不是合成目标恢复，也不是全国问题二验收通过。初态、统计桥接、残余消费服务、年龄/队列和历史政策仍有实质缺口，详见冻结的 assumptions.json。
+
+实际执行 486 次训练候选，486 次成功。三个规则均先按2015—2021训练误差比较；结构对照为 `new_project_cohort`。设计本轮时已看过v1留出，属于探索性修正，不是新的盲测。选中 `instant_margin` / `{'residual_elasticity': 0.4, 'electricity_elasticity': 0.7, 'investment_adjustment': 1.0, 'solar_capex_million_USD2008_per_MW': 1.2048918960551036}`，训练损失 3.05694。随后固定规则与参数，运行2022—2024已接触留出；没有按留出改变阈值或再次选参。
+
+| 指标 | 留出MAPE | RMSE/持平基线 | 数值门槛 |
+|---|---:|---:|---|
+| consumption_10ktce | 1.77% | 0.224 | 通过 |
+| consumption_coal_share | 21.02% | 7.469 | 未通过 |
+| consumption_oil_share | 12.65% | 5.645 | 未通过 |
+| consumption_gas_share | 54.87% | 16.304 | 未通过 |
+| wind_10kW | 35.27% | 1.275 | 未通过 |
+| solar_10kW | 85.86% | 1.525 | 未通过 |
+| nuclear_10kW | 37.03% | 4.256 | 未通过 |
+| gcb_fuel_co2 | 4.39% | 0.527 | 通过 |
+
+未通过项：consumption_coal_share, consumption_oil_share, consumption_gas_share, wind_10kW, solar_10kW, nuclear_10kW。
+
+容量、总量与能源结构分别计算，不能用总量误差掩盖技术路径错误。参考价格、现存设备年龄和初始队列的简化属于待检验假设；训练/留出失败并不证明某项实际政策失效。本候选不输出2030/2060预测、不计算全国中和率；正式入口的六组准入缺口继续有效。
+
+![真实历史目标与聚合代理比较](historical_fit.svg)

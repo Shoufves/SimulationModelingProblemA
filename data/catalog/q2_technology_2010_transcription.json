@@ -1,0 +1,639 @@
+{
+  "source_key": "q2:IEA_NEA_GENERATING_COSTS_2010",
+  "source_path": "data/raw/q2/iea_nea_cost_2010.pdf",
+  "source_sha256": "830e0e9f116d40462d94571d8772a1803c53859c255c224ac0b0d7da9a823ac0",
+  "publication_year": 2010,
+  "price_year": 2008,
+  "projection_commission_date": "2015-12-31",
+  "annual_decision_available_from": 2011,
+  "scope": "literature_reference_not_observed_national_fleet",
+  "main_samples": [
+    {
+      "id": "chn-n1",
+      "technology": "nuclear",
+      "physical_page": 60,
+      "printed_page": 59,
+      "table": "3.7a",
+      "net_capacity_MWe": 1000,
+      "overnight_USD_2008_per_kWe": 1763,
+      "levelized_om_USD_2008_per_MWh": 7.1,
+      "load_factor_percent": 85,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 9.33
+    },
+    {
+      "id": "chn-n2",
+      "technology": "nuclear",
+      "physical_page": 60,
+      "printed_page": 59,
+      "table": "3.7a",
+      "net_capacity_MWe": 1000,
+      "overnight_USD_2008_per_kWe": 1748,
+      "levelized_om_USD_2008_per_MWh": 7.04,
+      "load_factor_percent": 85,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 9.33
+    },
+    {
+      "id": "chn-n3",
+      "technology": "nuclear",
+      "physical_page": 60,
+      "printed_page": 59,
+      "table": "3.7a",
+      "net_capacity_MWe": 1250,
+      "overnight_USD_2008_per_kWe": 2302,
+      "levelized_om_USD_2008_per_MWh": 9.28,
+      "load_factor_percent": 85,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 9.33
+    },
+    {
+      "id": "chn-c1",
+      "technology": "coal",
+      "physical_page": 61,
+      "printed_page": 60,
+      "table": "3.7b",
+      "net_capacity_MWe": 932,
+      "overnight_USD_2008_per_kWe": 656,
+      "levelized_om_USD_2008_per_MWh": 1.64,
+      "load_factor_percent": 85,
+      "net_efficiency_percent": 46,
+      "levelized_fuel_USD_2008_per_MWh": 23.06
+    },
+    {
+      "id": "chn-c2",
+      "technology": "coal",
+      "physical_page": 61,
+      "printed_page": 60,
+      "table": "3.7b",
+      "net_capacity_MWe": 1119,
+      "overnight_USD_2008_per_kWe": 602,
+      "levelized_om_USD_2008_per_MWh": 1.51,
+      "load_factor_percent": 85,
+      "net_efficiency_percent": 46,
+      "levelized_fuel_USD_2008_per_MWh": 23.06
+    },
+    {
+      "id": "chn-c3",
+      "technology": "coal",
+      "physical_page": 61,
+      "printed_page": 60,
+      "table": "3.7b",
+      "net_capacity_MWe": 559,
+      "overnight_USD_2008_per_kWe": 672,
+      "levelized_om_USD_2008_per_MWh": 1.68,
+      "load_factor_percent": 85,
+      "net_efficiency_percent": 46,
+      "levelized_fuel_USD_2008_per_MWh": 23.06
+    },
+    {
+      "id": "chn-g1",
+      "technology": "gas",
+      "physical_page": 62,
+      "printed_page": 61,
+      "table": "3.7c",
+      "net_capacity_MWe": 1358,
+      "overnight_USD_2008_per_kWe": 538,
+      "levelized_om_USD_2008_per_MWh": 2.81,
+      "load_factor_percent": 85,
+      "net_efficiency_percent": 58,
+      "levelized_fuel_USD_2008_per_MWh": 28.14
+    },
+    {
+      "id": "chn-g2",
+      "technology": "gas",
+      "physical_page": 62,
+      "printed_page": 61,
+      "table": "3.7c",
+      "net_capacity_MWe": 1358,
+      "overnight_USD_2008_per_kWe": 583,
+      "levelized_om_USD_2008_per_MWh": 3.04,
+      "load_factor_percent": 85,
+      "net_efficiency_percent": 58,
+      "levelized_fuel_USD_2008_per_MWh": 28.14
+    },
+    {
+      "id": "chn-W1",
+      "technology": "wind",
+      "physical_page": 63,
+      "printed_page": 62,
+      "table": "3.7d",
+      "net_capacity_MWe": 200,
+      "overnight_USD_2008_per_kWe": 1223,
+      "levelized_om_USD_2008_per_MWh": 15.51,
+      "load_factor_percent": 27,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 0
+    },
+    {
+      "id": "chn-W2",
+      "technology": "wind",
+      "physical_page": 63,
+      "printed_page": 62,
+      "table": "3.7d",
+      "net_capacity_MWe": 50,
+      "overnight_USD_2008_per_kWe": 1541,
+      "levelized_om_USD_2008_per_MWh": 19.54,
+      "load_factor_percent": 27,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 0
+    },
+    {
+      "id": "chn-W4",
+      "technology": "wind",
+      "physical_page": 63,
+      "printed_page": 62,
+      "table": "3.7d",
+      "net_capacity_MWe": 35,
+      "overnight_USD_2008_per_kWe": 1627,
+      "levelized_om_USD_2008_per_MWh": 25.33,
+      "load_factor_percent": 22,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 0
+    },
+    {
+      "id": "chn-W3",
+      "technology": "wind",
+      "physical_page": 63,
+      "printed_page": 62,
+      "table": "3.7d",
+      "net_capacity_MWe": 30,
+      "overnight_USD_2008_per_kWe": 1583,
+      "levelized_om_USD_2008_per_MWh": 27.11,
+      "load_factor_percent": 20,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 0
+    },
+    {
+      "id": "chn-h2",
+      "technology": "hydro",
+      "physical_page": 63,
+      "printed_page": 62,
+      "table": "3.7d",
+      "net_capacity_MWe": 18134,
+      "overnight_USD_2008_per_kWe": 1583,
+      "levelized_om_USD_2008_per_MWh": 9.85,
+      "load_factor_percent": 53,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 0
+    },
+    {
+      "id": "chn-h1",
+      "technology": "hydro",
+      "physical_page": 63,
+      "printed_page": 62,
+      "table": "3.7d",
+      "net_capacity_MWe": 6277,
+      "overnight_USD_2008_per_kWe": 757,
+      "levelized_om_USD_2008_per_MWh": 2.54,
+      "load_factor_percent": 34,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 0
+    },
+    {
+      "id": "chn-h3",
+      "technology": "hydro",
+      "physical_page": 63,
+      "printed_page": 62,
+      "table": "3.7d",
+      "net_capacity_MWe": 4783,
+      "overnight_USD_2008_per_kWe": 896,
+      "levelized_om_USD_2008_per_MWh": 1.37,
+      "load_factor_percent": 57,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 0
+    },
+    {
+      "id": "chn-S2",
+      "technology": "solar",
+      "physical_page": 63,
+      "printed_page": 62,
+      "table": "3.7d",
+      "net_capacity_MWe": 20,
+      "overnight_USD_2008_per_kWe": 2878,
+      "levelized_om_USD_2008_per_MWh": 15.65,
+      "load_factor_percent": 21,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 0
+    },
+    {
+      "id": "chn-S1",
+      "technology": "solar",
+      "physical_page": 63,
+      "printed_page": 62,
+      "table": "3.7d",
+      "net_capacity_MWe": 10,
+      "overnight_USD_2008_per_kWe": 3742,
+      "levelized_om_USD_2008_per_MWh": 23.73,
+      "load_factor_percent": 18,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 0
+    },
+    {
+      "id": "chn-S3",
+      "technology": "solar",
+      "physical_page": 63,
+      "printed_page": 62,
+      "table": "3.7d",
+      "net_capacity_MWe": 10,
+      "overnight_USD_2008_per_kWe": 2921,
+      "levelized_om_USD_2008_per_MWh": 15.88,
+      "load_factor_percent": 21,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 0
+    },
+    {
+      "id": "chn-S4",
+      "technology": "solar",
+      "physical_page": 63,
+      "printed_page": 62,
+      "table": "3.7d",
+      "net_capacity_MWe": 10,
+      "overnight_USD_2008_per_kWe": 3598,
+      "levelized_om_USD_2008_per_MWh": 22.82,
+      "load_factor_percent": 18,
+      "net_efficiency_percent": null,
+      "levelized_fuel_USD_2008_per_MWh": 0
+    }
+  ],
+  "annex_samples": [
+    {
+      "id": "chn-n1",
+      "plant_name_as_printed": "Fujian Ningde",
+      "project_capacity_MWe": 4000,
+      "overnight_USD_2008_per_kWe_project": 1762.84,
+      "construction_years": 4,
+      "domestic_load_factor": 0.88,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-n2",
+      "plant_name_as_printed": "Liaoning Hongyanhe",
+      "project_capacity_MWe": 4000,
+      "overnight_USD_2008_per_kWe_project": 1748.45,
+      "construction_years": 5,
+      "domestic_load_factor": 0.88,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-n3",
+      "plant_name_as_printed": "Shandong Haiyang",
+      "project_capacity_MWe": 2500,
+      "overnight_USD_2008_per_kWe_project": 2302.49,
+      "construction_years": 5.7,
+      "domestic_load_factor": 0.88,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-W1",
+      "plant_name_as_printed": "Yumen Changma",
+      "project_capacity_MWe": 200,
+      "overnight_USD_2008_per_kWe_project": 1200,
+      "construction_years": 3,
+      "domestic_load_factor": 0.27,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-W2",
+      "plant_name_as_printed": "CPI Dalian Tuoshan",
+      "project_capacity_MWe": 49.5,
+      "overnight_USD_2008_per_kWe_project": 1540.81,
+      "construction_years": 1.25,
+      "domestic_load_factor": 0.27,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-W3",
+      "plant_name_as_printed": "Xianjuding",
+      "project_capacity_MWe": 30,
+      "overnight_USD_2008_per_kWe_project": 1582.96,
+      "construction_years": 1.2,
+      "domestic_load_factor": 0.2,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-W4",
+      "plant_name_as_printed": "Xinyang Jigongshan",
+      "project_capacity_MWe": 34.85,
+      "overnight_USD_2008_per_kWe_project": 1627.14,
+      "construction_years": 1,
+      "domestic_load_factor": 0.22,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-c1",
+      "plant_name_as_printed": "Pinhai",
+      "project_capacity_MWe": 2000,
+      "overnight_USD_2008_per_kWe_project": 611.6,
+      "construction_years": 2,
+      "domestic_load_factor": 0.56,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-c2",
+      "plant_name_as_printed": "Xiangyang",
+      "project_capacity_MWe": 1200,
+      "overnight_USD_2008_per_kWe_project": 561.23,
+      "construction_years": 2,
+      "domestic_load_factor": 0.56,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-c3",
+      "plant_name_as_printed": "Huadian Liuan",
+      "project_capacity_MWe": 600,
+      "overnight_USD_2008_per_kWe_project": 625.99,
+      "construction_years": 2,
+      "domestic_load_factor": 0.56,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-g1",
+      "plant_name_as_printed": "Putian",
+      "project_capacity_MWe": 1400,
+      "overnight_USD_2008_per_kWe_project": 522.17,
+      "construction_years": 1.33,
+      "domestic_load_factor": 0.56,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-g2",
+      "plant_name_as_printed": "Shanghai Lingang",
+      "project_capacity_MWe": 1400,
+      "overnight_USD_2008_per_kWe_project": 565.34,
+      "construction_years": 2,
+      "domestic_load_factor": 0.56,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-CHP",
+      "plant_name_as_printed": "Guodian Anshan",
+      "project_capacity_MWe": 600,
+      "overnight_USD_2008_per_kWe_project": 719.53,
+      "construction_years": 1.5,
+      "domestic_load_factor": null,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-S1",
+      "plant_name_as_printed": "Qinghai Delingha",
+      "project_capacity_MWe": 10,
+      "overnight_USD_2008_per_kWe_project": 3741.55,
+      "construction_years": 1.33,
+      "domestic_load_factor": 0.18,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-S2",
+      "plant_name_as_printed": "Qinghai Geermu",
+      "project_capacity_MWe": 20,
+      "overnight_USD_2008_per_kWe_project": 2878.11,
+      "construction_years": 1,
+      "domestic_load_factor": 0.21,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-S3",
+      "plant_name_as_printed": "Gansu Dunhuang",
+      "project_capacity_MWe": 10,
+      "overnight_USD_2008_per_kWe_project": 2921.28,
+      "construction_years": 1.2,
+      "domestic_load_factor": 0.21,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-S4",
+      "plant_name_as_printed": "Ningxia Pingluo",
+      "project_capacity_MWe": 10,
+      "overnight_USD_2008_per_kWe_project": 3597.64,
+      "construction_years": 1.5,
+      "domestic_load_factor": 0.18,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-h1",
+      "plant_name_as_printed": "Longtan",
+      "project_capacity_MWe": 6300,
+      "overnight_USD_2008_per_kWe_project": 753.79,
+      "construction_years": 6,
+      "domestic_load_factor": 0.34,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-h2",
+      "plant_name_as_printed": "Three Gorges",
+      "project_capacity_MWe": 18200,
+      "overnight_USD_2008_per_kWe_project": 1577.04,
+      "construction_years": 5.5,
+      "domestic_load_factor": 0.53,
+      "physical_page": 206,
+      "table": "A.2"
+    },
+    {
+      "id": "chn-h3",
+      "plant_name_as_printed": "Yalongjiang Jinping",
+      "project_capacity_MWe": 4800,
+      "overnight_USD_2008_per_kWe_project": 892.51,
+      "construction_years": 6,
+      "domestic_load_factor": 0.57,
+      "physical_page": 206,
+      "table": "A.2"
+    }
+  ],
+  "parameters": [
+    {
+      "id": "exchange_CNY_USD_2008",
+      "value": 6.95,
+      "unit": "CNY_2008/USD_2008",
+      "physical_page": 39,
+      "meaning": "2008 average; not purchasing-power parity"
+    },
+    {
+      "id": "life:wind",
+      "value": 25,
+      "unit": "years",
+      "physical_page": 44,
+      "meaning": "Harmonized study assumption; not actual retirement or license duration"
+    },
+    {
+      "id": "life:solar",
+      "value": 25,
+      "unit": "years",
+      "physical_page": 44,
+      "meaning": "Harmonized study assumption; not actual retirement or license duration"
+    },
+    {
+      "id": "life:gas",
+      "value": 30,
+      "unit": "years",
+      "physical_page": 44,
+      "meaning": "Harmonized study assumption; not actual retirement or license duration"
+    },
+    {
+      "id": "life:coal",
+      "value": 40,
+      "unit": "years",
+      "physical_page": 44,
+      "meaning": "Harmonized study assumption; not actual retirement or license duration"
+    },
+    {
+      "id": "life:geothermal",
+      "value": 40,
+      "unit": "years",
+      "physical_page": 44,
+      "meaning": "Harmonized study assumption; not actual retirement or license duration"
+    },
+    {
+      "id": "life:nuclear",
+      "value": 60,
+      "unit": "years",
+      "physical_page": 44,
+      "meaning": "Harmonized study assumption; not actual retirement or license duration"
+    },
+    {
+      "id": "life:hydro",
+      "value": 80,
+      "unit": "years",
+      "physical_page": 44,
+      "meaning": "Harmonized study assumption; not actual retirement or license duration"
+    },
+    {
+      "id": "default_lead:wind",
+      "value": 1,
+      "unit": "years",
+      "physical_page": 45,
+      "meaning": "Fallback only where national construction period unavailable; China sample durations retained separately"
+    },
+    {
+      "id": "default_lead:solar",
+      "value": 1,
+      "unit": "years",
+      "physical_page": 45,
+      "meaning": "Fallback only where national construction period unavailable; China sample durations retained separately"
+    },
+    {
+      "id": "default_lead:gas",
+      "value": 2,
+      "unit": "years",
+      "physical_page": 45,
+      "meaning": "Fallback only where national construction period unavailable; China sample durations retained separately"
+    },
+    {
+      "id": "default_lead:coal",
+      "value": 4,
+      "unit": "years",
+      "physical_page": 45,
+      "meaning": "Fallback only where national construction period unavailable; China sample durations retained separately"
+    },
+    {
+      "id": "default_lead:nuclear",
+      "value": 7,
+      "unit": "years",
+      "physical_page": 45,
+      "meaning": "Fallback only where national construction period unavailable; China sample durations retained separately"
+    },
+    {
+      "id": "discount_rate_low",
+      "value": 0.05,
+      "unit": "fraction",
+      "physical_page": 42,
+      "meaning": "Study scenario, not observed firm financing"
+    },
+    {
+      "id": "discount_rate_high",
+      "value": 0.1,
+      "unit": "fraction",
+      "physical_page": 42,
+      "meaning": "Study scenario, not observed firm financing"
+    },
+    {
+      "id": "coal_price_main",
+      "value": 2.95,
+      "unit": "USD_2008/GJ",
+      "physical_page": 43,
+      "meaning": "Main methodology heat price; conflicts with annex mass-price/heat pair"
+    },
+    {
+      "id": "coal_price_mass",
+      "value": 86.34,
+      "unit": "USD_2008/t",
+      "physical_page": 43,
+      "meaning": "Same mass price appears in annex p206"
+    },
+    {
+      "id": "coal_NCV_annex",
+      "value": 22.274,
+      "unit": "GJ/t",
+      "physical_page": 206,
+      "meaning": "China annex fuel heat assumption; cannot silently combine with main heat price"
+    },
+    {
+      "id": "gas_price_main",
+      "value": 4.53,
+      "unit": "USD_2008/GJ",
+      "physical_page": 43,
+      "meaning": "Main methodology thermal price"
+    },
+    {
+      "id": "gas_price_main_MMBtu",
+      "value": 4.78,
+      "unit": "USD_2008/MMBtu",
+      "physical_page": 43,
+      "meaning": "Main study assumption"
+    },
+    {
+      "id": "gas_price_Shanghai_annex",
+      "value": 4.67,
+      "unit": "USD_2008/MBtu_as_printed",
+      "physical_page": 206,
+      "meaning": "Shanghai power-sector 2008 annex price, not national series"
+    },
+    {
+      "id": "coal_auxiliary_share",
+      "value": 0.0679,
+      "unit": "fraction",
+      "physical_page": 205,
+      "meaning": "China study auxiliary-use assumption"
+    },
+    {
+      "id": "gas_auxiliary_share",
+      "value": 0.03,
+      "unit": "fraction",
+      "physical_page": 205,
+      "meaning": "China study auxiliary-use assumption"
+    },
+    {
+      "id": "hydro_auxiliary_share",
+      "value": 0.0036,
+      "unit": "fraction",
+      "physical_page": 205,
+      "meaning": "China study auxiliary-use assumption"
+    }
+  ],
+  "notes": [
+    "China data were researched by IEA Secretariat; Chinese authorities did not submit these samples. Physical p205.",
+    "Main tables use net capacity; annex A.2 includes multiple-unit project capacities. Do not force their equality or average them.",
+    "Main tables combine fixed and variable O&M in a levelized component; no dispatch fixed/variable split is identified.",
+    "Annex sentence claiming hydro 85% conflicts with main sample table load factors; retain table-specific CF.",
+    "Tables are reported rounded; precise input workbook is not supplied. China lead durations differ from generic defaults.",
+    "No national age, cash, construction queue, grid cost, observed 2014 tariff or policy entitlement is inferred."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "reviewer": "yx_assisted_local_review",
+  "review_date": "2026-10-19",
+  "team_approval": false,
+  "decision": "scoped_solar_information_time_and_resource_ceiling_diagnostic",
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/irena_cost_2014.pdf",
+      "sha256": "44a322c00349c74cac94a890ccefc334cc300053e94ac03022a9507cf84d1b37"
+    },
+    {
+      "path": "data/raw/q2/irena_remap_china_2014.pdf",
+      "sha256": "5dd5f991adcbb14a4ebf36d1c26200a359ccf5ccd9991d83edf7f81df98a30bf"
+    },
+    {
+      "path": "data/raw/q2/irena_cost_2012.pdf",
+      "sha256": "44a97e22a705d1d4795b7aa911328b7d7eaf46a8c273918ea15bcd7974f97e48"
+    },
+    {
+      "path": "data/catalog/q2_solar_timing_ceiling_transcription.json",
+      "sha256": "4bc7c8904be623f6055018f04657d96252839b5ee396214ba39f42883be44587"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "IRENA_COST_2014",
+      "record_sha256": "89b0b59cbda04b9577dd86ae3641c539f04923a5424431410578c0be3e52d188"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "IRENA_REMAP_CHINA_2014",
+      "record_sha256": "d6e227d3965fabc1efba3cfc855574e946365d8b711bdd13c4e71199633517a0"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "IRENA_COST_2012",
+      "record_sha256": "53497a1d5e93f2abf885634dbb03b65ec1d2d3f191392b36fd3a71c6cb1f71e7"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Visually reviewed full IRENA2014cost cover physical1: JANUARY2015. End-year2015 decisions need not wait until2016."
+    },
+    {
+      "passed": true,
+      "evidence": "Visually reviewed REmap cover physical1 November2014 and full physical59/printed47/Table13. Utility2200GWe, rooftop500GWe are technical potentials, distinct from2012 installed capacities4/1.4GWe and2030 scenario deployments."
+    },
+    {
+      "passed": true,
+      "evidence": "Visually reviewed IRENA2012cost physical20/printed18: India/Germany/China respectively1720/2008/2160USD/kW. Physical58/printed56: China utility-projectCF around18%, not fleet observation. Copyright page states2013; no exact publication day inferred."
+    },
+    {
+      "passed": true,
+      "evidence": "No resource value is used as annual build or connection capacity.2012 cost/CF remains outside the candidate. Opening generation/stock, cash and nuclear queue preserved."
+    }
+  ],
+  "allowed_uses": [
+    "Correct source availability in retrospective annual decision diagnostic.",
+    "Compare original20xassumption with explicitly coarse2200GW aggregate-PV ceiling; retain construction and connection constraints.",
+    "Keep earlier cost/CF as separate reference pending price-year and cohort review."
+  ],
+  "prohibited_uses": [
+    "National admission or claim of observed resource deployment.",
+    "Using2200GW as an annual installation, financing or grid-access allowance.",
+    "Inferring opening utility/rooftop shares or pre2015 construction queue.",
+    "Using future observed installed capacity to choose the ceiling or relaxing acceptance thresholds."
+  ]
+}

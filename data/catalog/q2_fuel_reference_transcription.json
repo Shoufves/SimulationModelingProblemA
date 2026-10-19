@@ -1,0 +1,239 @@
+{
+  "source_id": "q2:WRI_CHINA_ENERGY_GUIDE_2013_V21",
+  "source_path": "data/raw/q2/wri_china_energy_guide_2013_v21.pdf",
+  "source_sha256": "d745b096ad6a76f2ddf0a21ccafeefb898149de8c70744fe7e88bbc16f803497",
+  "version": "2.1",
+  "published_date": "2013-07",
+  "annual_information_available_from": 2014,
+  "source_locator": "physical PDF p55 / printed p50 / Table B.1; equations on physical pp32-34",
+  "records": [
+    {
+      "fuel": "raw_coal",
+      "label": "原煤",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 26.37,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 20908,
+      "printed_CO2_t_per_physical_unit": 1.981,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "cleaned_coal",
+      "label": "洗精煤",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 25.41,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 26344,
+      "printed_CO2_t_per_physical_unit": 2.405,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "other_washed_coal",
+      "label": "其它洗煤",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 25.41,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 10454,
+      "printed_CO2_t_per_physical_unit": 0.955,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "coal_products",
+      "label": "煤制品",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 33.6,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 17793,
+      "printed_CO2_t_per_physical_unit": 2.148,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "briquettes",
+      "label": "型煤",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 33.6,
+      "oxidation_percent": 90,
+      "NCV_MJ_per_physical_unit": 17584,
+      "printed_CO2_t_per_physical_unit": 1.95,
+      "row_role": "subcategory_of_coal_products"
+    },
+    {
+      "fuel": "coal_water_slurry",
+      "label": "水煤浆",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 33.6,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 19854,
+      "printed_CO2_t_per_physical_unit": 2.397,
+      "row_role": "subcategory_of_coal_products"
+    },
+    {
+      "fuel": "pulverized_coal",
+      "label": "煤粉",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 33.6,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 20933,
+      "printed_CO2_t_per_physical_unit": 2.527,
+      "row_role": "subcategory_of_coal_products"
+    },
+    {
+      "fuel": "coke",
+      "label": "焦炭",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 29.5,
+      "oxidation_percent": 93,
+      "NCV_MJ_per_physical_unit": 28435,
+      "printed_CO2_t_per_physical_unit": 2.86,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "other_coking_products",
+      "label": "其他焦化产品",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 29.5,
+      "oxidation_percent": 93,
+      "NCV_MJ_per_physical_unit": 38099,
+      "printed_CO2_t_per_physical_unit": 3.833,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "coke_oven_gas",
+      "label": "焦炉煤气",
+      "physical_unit": "10^4 m3",
+      "carbon_g_per_MJ_NCV": 13.58,
+      "oxidation_percent": 99,
+      "NCV_MJ_per_physical_unit": 173540,
+      "printed_CO2_t_per_physical_unit": 8.555,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "blast_furnace_gas",
+      "label": "高炉煤气",
+      "physical_unit": "10^4 m3",
+      "carbon_g_per_MJ_NCV": 70.8,
+      "oxidation_percent": 100,
+      "NCV_MJ_per_physical_unit": 37688,
+      "printed_CO2_t_per_physical_unit": 9.784,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "other_coal_gas",
+      "label": "其他煤气",
+      "physical_unit": "10^4 m3",
+      "carbon_g_per_MJ_NCV": 12.2,
+      "oxidation_percent": 99,
+      "NCV_MJ_per_physical_unit": 202218,
+      "printed_CO2_t_per_physical_unit": 8.955,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "natural_gas",
+      "label": "天然气",
+      "physical_unit": "10^4 m3",
+      "carbon_g_per_MJ_NCV": 15.3,
+      "oxidation_percent": 99,
+      "NCV_MJ_per_physical_unit": 389310,
+      "printed_CO2_t_per_physical_unit": 21.622,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "liquefied_natural_gas",
+      "label": "液化天然气",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 15.3,
+      "oxidation_percent": 100,
+      "NCV_MJ_per_physical_unit": 51498,
+      "printed_CO2_t_per_physical_unit": 2.889,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "crude_oil",
+      "label": "原油",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 20.1,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 41816,
+      "printed_CO2_t_per_physical_unit": 3.02,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "gasoline",
+      "label": "汽油",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 18.9,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 43070,
+      "printed_CO2_t_per_physical_unit": 2.925,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "kerosene",
+      "label": "煤油",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 19.6,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 43070,
+      "printed_CO2_t_per_physical_unit": 3.033,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "diesel",
+      "label": "柴油",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 20.2,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 42652,
+      "printed_CO2_t_per_physical_unit": 3.096,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "fuel_oil",
+      "label": "燃料油",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 21.1,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 41816,
+      "printed_CO2_t_per_physical_unit": 3.17,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "liquefied_petroleum_gas",
+      "label": "液化石油气",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 17.2,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 50179,
+      "printed_CO2_t_per_physical_unit": 3.101,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "refinery_dry_gas",
+      "label": "炼厂干气",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 18.2,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 46055,
+      "printed_CO2_t_per_physical_unit": 3.012,
+      "row_role": "fuel_reference"
+    },
+    {
+      "fuel": "other_petroleum_products",
+      "label": "其他石油制品",
+      "physical_unit": "t",
+      "carbon_g_per_MJ_NCV": 20.0,
+      "oxidation_percent": 98,
+      "NCV_MJ_per_physical_unit": 35168,
+      "printed_CO2_t_per_physical_unit": 2.527,
+      "row_role": "fuel_reference"
+    }
+  ],
+  "restrictions": [
+    "Literature default values, not measured 2014 national fuel batches.",
+    "Apply only to matching fuel and quantity units; broad coal/oil categories require composition mapping.",
+    "CO2 combustion coefficients do not convert all final nonenergy feedstock use to emissions.",
+    "Stored carbon, nonoxidized carbon and transformation products cannot be counted as new primary fuel.",
+    "Do not combine parent coal-products row with its subcategories in a sum.",
+    "Do not add purchased-electricity carbon to production-side combustion."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "review_date": "2026-10-19",
+  "reviewer": "yx_assisted_local_review",
+  "team_approval": false,
+  "decision": "scoped_2014_nuclear_queue_reference",
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/nea_nuclear_2014_qa.html",
+      "sha256": "b2270e467bdb636c12d65ad6ab40bc99a3494be63d416a9e0e70679ad8c8e4fa"
+    },
+    {
+      "path": "data/raw/q2/nnsa_annual_2014.pdf",
+      "sha256": "d834ac16ddc2f623a3c435a0b9b3770033c65694b1debcde7461b37b7e0e478d"
+    },
+    {
+      "path": "data/catalog/q2_nuclear_queue_status_transcription.json",
+      "sha256": "a46e402f166c909d86c8169681d34d6e7f4ac4f3a78de5b2c3f769d26a21d287"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NEA_NUCLEAR_2014_QA",
+      "record_sha256": "27b44a2ef7c3a054b6918ecec9770a5a5207ee995553bdde1d500fefae207e65"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NNSA_ANNUAL_2014",
+      "record_sha256": "5e0da1ccb0fb7e1626a62a5aec9f0f6fe6723a9af801fc907e7a8d9df6fdecaa"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "NEA raw HTML question33 table read with headers, all12site rows and total26units2845ten-thousand-kW. Exact start months retained. Question34 reports22operating units2010ten-thousand-kW, not NBS2025 revised2008ten-thousand-kW."
+    },
+    {
+      "passed": true,
+      "evidence": "NNSA full physical pages23,24,25,27,29,32,34,35,36,38,39,40 rendered and visually reviewed;26status records matched to NEA unit numbers. Already-operating units excluded; planned projects on page40 excluded."
+    },
+    {
+      "passed": true,
+      "evidence": "No actual future commissioning dates used. Annual remaining-duration scenarios and cash reconstruction require explicit assumptions; this review does not certify them."
+    }
+  ],
+  "allowed_uses": [
+    "Historical year-end2014 queue identities, reported capacities and construction-start months.",
+    "State-conditioned diagnostic schedule hypotheses with explicit unknown cash/permit boundaries."
+  ],
+  "prohibited_uses": [
+    "Promoting assumed commissioning to observed future dates or approved operating permits.",
+    "Calling rounded capacity or NEA/NBS vintage difference reconciled.",
+    "Using empty queue and claiming observed zero, or double counting already-operating units."
+  ]
+}

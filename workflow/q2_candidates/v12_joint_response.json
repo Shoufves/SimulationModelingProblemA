@@ -1,0 +1,131 @@
+{
+  "version": 12,
+  "scope": "historical_aggregate_candidate_not_admitted",
+  "national_acceptance": false,
+  "previous_holdout_already_seen": true,
+  "parent": {
+    "path": "workflow/q2_candidates/v10/manifest.json",
+    "sha256": "af7533e51f622db9d1c932c9fbe73096cec1529bc92696fd416ac6cedfa7b192"
+  },
+  "parent_selection": {
+    "path": "outputs/q2/historical_candidate_v10/training_selection.json",
+    "sha256": "3cf70f668c146aac84fac4e4b48b464e439289d137c885e2877a40d45929b4e6"
+  },
+  "opening_structure": "shared_construction_connection_pvqueue_2",
+  "parameters": [
+    {
+      "id": "wind_stock_expansion_rate",
+      "grid": [
+        0.0,
+        0.05363984674329502,
+        0.10727969348659004,
+        0.16091954022988506,
+        0.21455938697318008,
+        0.2681992337164751,
+        0.3218390804597701,
+        0.37547892720306514,
+        0.42911877394636017
+      ],
+      "bounds": [
+        0.0,
+        0.42911877394636017
+      ],
+      "paths": [
+        [
+          "investment_groups",
+          0,
+          "stock_expansion_rate"
+        ]
+      ]
+    },
+    {
+      "id": "solar_stock_expansion_rate",
+      "grid": [
+        0.0,
+        0.08216009654062752,
+        0.16432019308125503,
+        0.24648028962188256,
+        0.32864038616251007,
+        0.41080048270313757,
+        0.49296057924376513,
+        0.5751206757843926,
+        0.6572807723250201
+      ],
+      "bounds": [
+        0.0,
+        0.6572807723250201
+      ],
+      "paths": [
+        [
+          "investment_groups",
+          1,
+          "stock_expansion_rate"
+        ]
+      ]
+    },
+    {
+      "id": "oil_residual_elasticity",
+      "bounds": [
+        0.0,
+        2.0
+      ],
+      "paths": [
+        [
+          "demand_drivers",
+          "oil_residual",
+          "gdp_elasticity"
+        ]
+      ]
+    },
+    {
+      "id": "gas_residual_elasticity",
+      "bounds": [
+        0.0,
+        2.0
+      ],
+      "paths": [
+        [
+          "demand_drivers",
+          "gas_residual",
+          "gdp_elasticity"
+        ]
+      ]
+    }
+  ],
+  "initial": {
+    "wind_stock_expansion_rate": 0.2681992337164751,
+    "solar_stock_expansion_rate": 0.49296057924376513,
+    "oil_residual_elasticity": 0.5,
+    "gas_residual_elasticity": 2.0
+  },
+  "envelopes": {
+    "fixed_150GW": 0.0,
+    "GDP_proportional": 1.0,
+    "GDP_squared": 2.0,
+    "technology_frontiers": null
+  },
+  "rules": [
+    "adaptive_margin",
+    "instant_margin"
+  ],
+  "optimizer": {
+    "method": "trf",
+    "max_nfev": 40,
+    "diff_step": 0.0001,
+    "ftol": 1e-07,
+    "xtol": 1e-07,
+    "gtol": 1e-07
+  },
+  "controls": [
+    "exact_v10_selected",
+    "no_investment"
+  ],
+  "selection": "Minimum original weighted 2015-2021 loss, including exact controls; exact ties use execution order.",
+  "limitations": [
+    "GDP-indexed common capacity is an explicit research hypothesis, not observed construction or grid capacity.",
+    "Four jointly fitted parameters retain prior bounds; other inherited choices and latent PV opening queue remain fixed.",
+    "Only one deterministic starting point per structure/rule; local optimizer is not a global optimum.",
+    "All eight original targets, weights, scales and acceptance thresholds are unchanged.",
+    "No current-state or national physical-accounting admission follows from numerical improvement."
+  ]
+}

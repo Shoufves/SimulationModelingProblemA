@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "review_date": "2026-10-19",
+  "reviewer": "yx_assisted_local_review",
+  "team_approval": false,
+  "decision": "scoped_2015_nuclear_capacity_start_reference",
+  "model_admission": false,
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/china_cns_7_2016.pdf",
+      "sha256": "55623e45ce7665cbda06b7d6b43fc893e85533e6e6f4a1f74c5ae96df202218b"
+    },
+    {
+      "path": "data/raw/q2/nnsa_tianwan56_notice_2015.html",
+      "sha256": "5ea14562b0f4c51e1ab92cb2e027a5005028594663eeda7cdf5025b33eb99a31"
+    },
+    {
+      "path": "data/raw/q2/nnsa_tianwan5_permit_2015.pdf",
+      "sha256": "d363d6904a0a343b81a1d45b564d3ae05ca3318f890a137e98df7e89eccff99b"
+    },
+    {
+      "path": "data/raw/q2/nnsa_tianwan6_permit_2015.pdf",
+      "sha256": "369cfdbc27e25f0f97dd59651bd666361565e520098b2aa53e0cf9d4884636bf"
+    },
+    {
+      "path": "data/catalog/q2_nuclear_capacity_2015_transcription.json",
+      "sha256": "a069143c95f45ccbbc3338126176bfd92c1738e326f2c43139d5a9607d1e201c"
+    },
+    {
+      "path": "data/catalog/q2_nuclear_permit_2015_supplement_review.json",
+      "sha256": "b32beecfe8bcb68fbaf0e637ef9d01e4779aa75e8ae457bb20e17c09eab8d89b"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "CHINA_CNS7_2016",
+      "record_sha256": "e8ab9cae7f69f4e5214fd0894ce40817f3f89a152ae675af7bcf2d30a90c5207"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NNSA_TIANWAN56_NOTICE_2015",
+      "record_sha256": "0170e40488cd4cb0162a51675dd5e3ac94f4265402e19fc484e4d15423b9b0ea"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NNSA_TIANWAN5_PERMIT_2015",
+      "record_sha256": "c6740e3f73c5ae036d84aa3bd0708ae46bed5406f7b08b2122fb4a7708610a90"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NNSA_TIANWAN6_PERMIT_2015",
+      "record_sha256": "0ded785c417f2da2edb913faed5c86f74ca07b0140008fd0f58ef3375386678d"
+    }
+  ],
+  "parent_review": "data/catalog/q2_nuclear_permit_2015_supplement_review.json",
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "CNS7 cover physical1 visually checked: June2016, report period2013-2015. Appendix1 physical161-163/printed155-157 explicitly cut off2015-12-31. Release date not certified."
+    },
+    {
+      "passed": true,
+      "evidence": "Full Appendix1 pages161-163 visually reviewed; Hongyanhe6×1080 spanning161/162, Fuqing2×1150, Fangchenggang2×1180, Tianwan2×1080. MW(e) header; no net/gross specification. Eight plant/unit identities reconciled to four permit pairs."
+    },
+    {
+      "passed": true,
+      "evidence": "Six explicit start dates; Fangchenggang4 and Tianwan6 show已核准 instead of a date. Grid/commercial fields blank for all eight; kept null. Total8980MWe is derived, not a separately printed fleet total."
+    },
+    {
+      "passed": true,
+      "evidence": "Original notice HTML title, generation date, document275, signed date and unit-specific first-concrete paragraph read. Unit5 approved; Unit6 separate release required. URL20151225 is not promoted to verified publication date."
+    },
+    {
+      "passed": true,
+      "evidence": "Both permit PDFs physical1-3 visually read. Unit5certificate1515/CN-53, Unit6certificate1516/CN-54. CNS7 usesCN-55/CN-56 for Tianwan andCN-53/CN-54 for Fangchenggang; explicit source-code conflict retained. Join only by reviewed plant/unit."
+    },
+    {
+      "passed": true,
+      "evidence": "No electrical rating in the two permits; capacity is from CNS7 only. None of the construction documents establishes operatingpermission, future completion or remaining finance."
+    }
+  ],
+  "allowed_uses": [
+    "Retrospective2015 licensed-unit identities, rated electriccapacity and recorded startstatus.",
+    "Separate issued constructionpermit, first-concrete authorization and observed start events in model input review."
+  ],
+  "prohibited_uses": [
+    "Treat June2016 report as real-time2015 known capacity data.",
+    "Use source CN code as a globally consistent join key.",
+    "Fill blank start/commissioning/operating dates with permitdates.",
+    "Infer zero permit issuance in other years or use known2015 subset as a full-fleet capacity ceiling.",
+    "Substitute later revised Fuqing1161MW for this1150MWe vintage without review."
+  ],
+  "unresolved": [
+    "Full multi-year permit/start/operating calendar.",
+    "Exact public-release dates and historical actor information availability.",
+    "Rated MW(e) gross/net boundary and later capacity revisions.",
+    "Cash, remaining construction duration and operatingpermission.",
+    "Cause of original-permit/CNS7 CN-code disagreement."
+  ]
+}

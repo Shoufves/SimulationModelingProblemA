@@ -1,0 +1,52 @@
+{
+  "review_date": "2026-10-18",
+  "reviewer": "yx_assisted_local_review",
+  "team_approval": false,
+  "method": "Read full source images C09-02/C09-15/C09-08 and rendered BTR physical pages 30-31. Reconcile selected cells against unified table; check every GCB selected cell against archived machine-readable original. BTR CO2, CO2e and memo columns distinguished.",
+  "permitted_uses": [
+    "Q2 historical aggregate target candidates subject to model boundary match",
+    "Q2 realized GDP exogenous driver",
+    "Q2 sparse inventory boundary checks"
+  ],
+  "not_permitted": [
+    "national initialization of sector service, equipment age, finance or queues",
+    "hourly supply inferred from annual totals",
+    "primary-electricity-other relabeled nonfossil",
+    "GCB/BTR spliced into a single inventory",
+    "BTR anchors treated as a future sink forecast"
+  ],
+  "fingerprints": [
+    {
+      "path": "data/catalog/q2_source_transcription.json",
+      "sha256": "4c7561144c25a9bfcba74dff06a8ae895255442f87ac9fb4c73e962b0b2dcb2d"
+    },
+    {
+      "path": "data/processed/unified/nbs_history.csv",
+      "sha256": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb"
+    },
+    {
+      "path": "data/processed/china_co2_gcb_annual.csv",
+      "sha256": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98"
+    },
+    {
+      "path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+      "sha256": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff"
+    },
+    {
+      "path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+      "sha256": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708"
+    },
+    {
+      "path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+      "sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b"
+    },
+    {
+      "path": "data/raw/lb/base/nbs/yearbook2025/C09-08.jpg",
+      "sha256": "3620c3720491426d14de105b545f190c3d0b57cf3e05f29d4745519b19e218cf"
+    },
+    {
+      "path": "data/raw/lb/base/reports/china_btr1_2024.pdf",
+      "sha256": "3864e6e16e03517946907f518b9843bd8e5934f72a36e4ee78e8e0212f90a5cb"
+    }
+  ]
+}

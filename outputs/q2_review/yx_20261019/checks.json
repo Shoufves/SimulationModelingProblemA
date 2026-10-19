@@ -1,0 +1,1033 @@
+{
+  "checked_at": "2026-10-19T13:23:05.041076+08:00",
+  "reviewed_branch": "work/q2-yx-local",
+  "reviewed_git_head": "af930750a57144324995142a75e47ce3cdae1fd8",
+  "reviewed_dirty_worktree": true,
+  "shared_base": "804ec15ee43874303986a7ad91b2cde05c65b124",
+  "decision": {
+    "draft_after_packaging_and_commit": true,
+    "ready_as_complete_q2": false,
+    "complete_q2_acceptance": false,
+    "merge_authorized_or_performed": false
+  },
+  "checks": {
+    "checked_at": "2026-10-19T13:18:59.072804+08:00",
+    "commands": [
+      {
+        "args": [
+          "run.py",
+          "test"
+        ],
+        "returncode": 0,
+        "expected_returncode": 0,
+        "passed": true,
+        "seconds": 39.3066709000268,
+        "receipt": {
+          "tests": 392,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "passed": true,
+          "seconds": 35.989704600011464,
+          "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+        }
+      },
+      {
+        "args": [
+          "run.py",
+          "audit"
+        ],
+        "returncode": 0,
+        "expected_returncode": 0,
+        "passed": true,
+        "seconds": 5.284957399999257,
+        "receipt": {
+          "scope": "Workspace preservation and engineering checks only; not completion of final research.",
+          "passed": true,
+          "checks": [
+            {
+              "check": "retained_files_match_inventory",
+              "passed": true,
+              "detail": {
+                "scope": "nonrestricted file hashes; restricted existence/size only, NOT content preservation proof",
+                "resolved_original_paths": 1117,
+                "missing": [],
+                "unrecoverable_modifications": [],
+                "restricted_metadata_only": [
+                  {
+                    "path": "data/restricted/household/data/household_energy_source_fig4.csv",
+                    "size_matches_inventory": true,
+                    "content_read": false,
+                    "content_hash_verified": false
+                  },
+                  {
+                    "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 1.xlsx",
+                    "size_matches_inventory": true,
+                    "content_read": false,
+                    "content_hash_verified": false
+                  },
+                  {
+                    "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 2.xlsx",
+                    "size_matches_inventory": true,
+                    "content_read": false,
+                    "content_hash_verified": false
+                  },
+                  {
+                    "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 3.xlsx",
+                    "size_matches_inventory": true,
+                    "content_read": false,
+                    "content_hash_verified": false
+                  },
+                  {
+                    "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 4.xlsx",
+                    "size_matches_inventory": true,
+                    "content_read": false,
+                    "content_hash_verified": false
+                  },
+                  {
+                    "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 5.xlsx",
+                    "size_matches_inventory": true,
+                    "content_read": false,
+                    "content_hash_verified": false
+                  },
+                  {
+                    "path": "data/restricted/household/extracted_source_data/Source_Data_files/Source_Data_Fig. 6.xlsx",
+                    "size_matches_inventory": true,
+                    "content_read": false,
+                    "content_hash_verified": false
+                  }
+                ],
+                "external_historical_records": [
+                  {
+                    "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/B题/2026年第二届全国大学生仿真建模应用挑战赛B题.pdf",
+                    "historical_target": "../B题/2026年第二届全国大学生仿真建模应用挑战赛B题.pdf",
+                    "sha256": "104132baece63e54fcc8238d414bd31e8c6c0923402380ba41674b1eda812981",
+                    "status": "historical_foreign_duplicate; external presence not checked"
+                  },
+                  {
+                    "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/2026年第二届全国大学生仿真建模应用挑战赛C题.pdf",
+                    "historical_target": "../C题/2026年第二届全国大学生仿真建模应用挑战赛C题.pdf",
+                    "sha256": "5f98ef37a4052c58e7e514f77c5fb9463d14f1a3af36468e82489585efebdff0",
+                    "status": "historical_foreign_duplicate; external presence not checked"
+                  },
+                  {
+                    "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件1：车辆参数表.xlsx",
+                    "historical_target": "../C题/附件1：车辆参数表.xlsx",
+                    "sha256": "2bd051219c2cb3d6bb9fb22b2f6a29d1434aa0405aa5168216a747d8f6569abc",
+                    "status": "historical_foreign_duplicate; external presence not checked"
+                  },
+                  {
+                    "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件2：4段路程车辆行驶数据.xlsx",
+                    "historical_target": "../C题/附件2：4段路程车辆行驶数据.xlsx",
+                    "sha256": "c947f403767334b85afc1792eee46f2b74d0271a99af628b3fdd8c95cd7ddd1d",
+                    "status": "historical_foreign_duplicate; external presence not checked"
+                  },
+                  {
+                    "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件3：参考工况.xlsx",
+                    "historical_target": "../C题/附件3：参考工况.xlsx",
+                    "sha256": "75fdd54aa2f880b9e4e1e7539e4e4760f582917407afca41a29a6329533e7e49",
+                    "status": "historical_foreign_duplicate; external presence not checked"
+                  },
+                  {
+                    "path": "A题_lb/A题完整资料包/2026年第二届全国大学生仿真建模应用挑战赛赛题/C题/附件4：部件特性（OCV—SOC、内阻、电机效率）.xlsx",
+                    "historical_target": "../C题/附件4：部件特性（OCV—SOC、内阻、电机效率）.xlsx",
+                    "sha256": "375d44e233362586ed4699abe3d95e691ace96fda880a55737f57087189a1776",
+                    "status": "historical_foreign_duplicate; external presence not checked"
+                  }
+                ]
+              }
+            },
+            {
+              "check": "working_tree_google_api_keys_absent",
+              "passed": true,
+              "detail": {
+                "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
+                "excluded_directories": [
+                  ".git",
+                  "tmp",
+                  "data/restricted"
+                ],
+                "pattern": "Google API key format only; not an exhaustive credential audit",
+                "passed": true,
+                "findings": [],
+                "errors": [],
+                "files_scanned": 2406,
+                "payloads_scanned": 3501,
+                "zip_members_scanned": 1095
+              }
+            },
+            {
+              "check": "protected_directory_unchanged",
+              "passed": true,
+              "detail": 3
+            },
+            {
+              "check": "five_official_originals_unchanged",
+              "passed": true,
+              "detail": [
+                "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+                "附件1.xlsx",
+                "附件2.xlsx",
+                "附件3.xlsx",
+                "附件4.xlsx"
+              ]
+            },
+            {
+              "check": "three_workspaces_consolidated",
+              "passed": true,
+              "detail": "one A workspace"
+            },
+            {
+              "check": "no_B_C_payload",
+              "passed": true,
+              "detail": []
+            },
+            {
+              "check": "all_final_references_resolve",
+              "passed": true,
+              "detail": {
+                "count": 118,
+                "missing": []
+              }
+            },
+            {
+              "check": "final_reader_links_resolve",
+              "passed": true,
+              "detail": []
+            },
+            {
+              "check": "retained_python_syntax",
+              "passed": true,
+              "detail": []
+            },
+            {
+              "check": "unified_data_keys_unique",
+              "passed": true,
+              "detail": 362
+            },
+            {
+              "check": "unified_rows_trace_to_files",
+              "passed": true,
+              "detail": 362
+            },
+            {
+              "check": "scope_not_promoted",
+              "passed": true,
+              "detail": "formal admission still governed by model_inputs and evidence_reviews"
+            },
+            {
+              "check": "known_quarantine_preserved",
+              "passed": true,
+              "detail": [
+                "data/processed/lb/base/prices/worldbank_energy_annual_2000_latest.csv",
+                "data/processed/lb/base/prices/worldbank_energy_monthly_2000_latest.csv",
+                "data/processed/transmission_lines_candidate.csv"
+              ]
+            },
+            {
+              "check": "raw_exact_duplicates_removed",
+              "passed": true,
+              "detail": []
+            }
+          ],
+          "original_files": 5846,
+          "removed_files": 4776,
+          "removed_bytes": 296840178
+        }
+      },
+      {
+        "args": [
+          "scripts/scan_google_keys.py"
+        ],
+        "returncode": 0,
+        "expected_returncode": 0,
+        "passed": true,
+        "seconds": 1.6513406000158284
+      },
+      {
+        "args": [
+          "scripts/workflow_status.py",
+          "--check-formal-inputs"
+        ],
+        "returncode": 0,
+        "expected_returncode": 0,
+        "passed": true,
+        "seconds": 0.11513220000779256,
+        "receipt": {
+          "generated_at": "2026-10-19T13:19:45+08:00",
+          "selected_stage": "W2",
+          "current_stage": "W2",
+          "workflow_check": {
+            "passed": true,
+            "errors": [],
+            "original_inputs": [
+              {
+                "path": "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+                "unchanged": true
+              },
+              {
+                "path": "附件1.xlsx",
+                "unchanged": true
+              },
+              {
+                "path": "附件2.xlsx",
+                "unchanged": true
+              },
+              {
+                "path": "附件3.xlsx",
+                "unchanged": true
+              },
+              {
+                "path": "附件4.xlsx",
+                "unchanged": true
+              }
+            ]
+          },
+          "formal_input_check": {
+            "passed": true,
+            "errors": [],
+            "accepted_inputs": [
+              {
+                "dataset_path": "data/observations/demand_energy_total_2015_2024.json",
+                "review_id": "R-S01-DEMAND-20261017",
+                "source_ids": [
+                  "S01"
+                ]
+              },
+              {
+                "dataset_path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+                "review_id": "R-S06-GDP-20261017",
+                "source_ids": [
+                  "S06"
+                ]
+              },
+              {
+                "dataset_path": "data/observations/power_official_release_2024.json",
+                "review_id": "R-S17-20261016",
+                "source_ids": [
+                  "S17"
+                ]
+              },
+              {
+                "dataset_path": "data/observations/energy_official_communique_2024.json",
+                "review_id": "R-S13-20261017",
+                "source_ids": [
+                  "S13"
+                ]
+              },
+              {
+                "dataset_path": "data/observations/gas_official_report_2024.json",
+                "review_id": "R-S22-20261017",
+                "source_ids": [
+                  "S22"
+                ]
+              },
+              {
+                "dataset_path": "data/observations/gas_apparent_consumption_2024.json",
+                "review_id": "R-S23-20261017",
+                "source_ids": [
+                  "S23"
+                ]
+              },
+              {
+                "dataset_path": "data/observations/electricity_demand_official_2024.json",
+                "review_id": "R-S24-20261017",
+                "source_ids": [
+                  "S24"
+                ]
+              },
+              {
+                "dataset_path": "data/observations/renewable_operation_official_2024.json",
+                "review_id": "R-S25-20261017",
+                "source_ids": [
+                  "S25"
+                ]
+              },
+              {
+                "dataset_path": "data/observations/qinshan_asset_permit_case.json",
+                "review_id": "R-QINSHAN-ASSETS-20261017",
+                "source_ids": [
+                  "S26",
+                  "S27",
+                  "S28"
+                ]
+              }
+            ],
+            "declared_inputs": 9,
+            "limitation": "仅检查已登记子集的证据结构和文件一致性；不自动验证原文真伪、转录正确性、数据覆盖完整性、情景参数或模型有效性。未准入不等于原数值错误。"
+          },
+          "requirement_status_counts": {
+            "not_started": 9,
+            "partial": 15,
+            "done": 0
+          },
+          "source_registry_count": 28,
+          "observation_inventory": [
+            {
+              "path": "data/observations/anchors_2025.json",
+              "measurements": 20,
+              "source_ids": [
+                "S02",
+                "S04"
+              ],
+              "sha256": "ce1e1e77cce93ee853f112f560de607fd74b88be93388547a21f1bc50e7cb6bb"
+            },
+            {
+              "path": "data/observations/coal_balance_2015_2023.json",
+              "measurements": 87,
+              "source_ids": [
+                "S10",
+                "S11",
+                "S12"
+              ],
+              "sha256": "847d28b3884bf1f95930a413a501c8d58ab8d11537be88bdda8a9342a31a8c74"
+            },
+            {
+              "path": "data/observations/demand_energy_total_2015_2024.json",
+              "measurements": 10,
+              "source_ids": [
+                "S01"
+              ],
+              "sha256": "909be60ca5dd53e79059df6eb087db132b34ca1f831728efe2debb20a02e80f0"
+            },
+            {
+              "path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+              "measurements": 10,
+              "source_ids": [
+                "S06"
+              ],
+              "sha256": "3769c34c8f38f39dd456665758da7f892dd11cf1eb90e0603f45254fecdbc6e1"
+            },
+            {
+              "path": "data/observations/electricity_demand_official_2024.json",
+              "measurements": 11,
+              "source_ids": [
+                "S24"
+              ],
+              "sha256": "145522816e8d23c8f96356875d3886186cf0f04ba2724f82b3f554f4c5a26f34"
+            },
+            {
+              "path": "data/observations/energy_consumption_2015_2024.json",
+              "measurements": 50,
+              "source_ids": [
+                "S01"
+              ],
+              "sha256": "fc2e26b41d3f3e54751e097f6969494884c4e69378efef894b9a72583166f126"
+            },
+            {
+              "path": "data/observations/energy_official_communique_2024.json",
+              "measurements": 33,
+              "source_ids": [
+                "S13"
+              ],
+              "sha256": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af"
+            },
+            {
+              "path": "data/observations/fuel_production_2023_2024.json",
+              "measurements": 6,
+              "source_ids": [
+                "S16"
+              ],
+              "sha256": "f756a0a232a08c5b34d4d5302ffde1e0b455a62de0aab39a102a6839867c1606"
+            },
+            {
+              "path": "data/observations/gas_apparent_consumption_2024.json",
+              "measurements": 2,
+              "source_ids": [
+                "S23"
+              ],
+              "sha256": "a0a0febf71f955b657bad404d66700db7804a056c36a5b3c2f01b4eb4ef7019a"
+            },
+            {
+              "path": "data/observations/gas_official_report_2024.json",
+              "measurements": 20,
+              "source_ids": [
+                "S22"
+              ],
+              "sha256": "20a0a46a2113440e2cf65d9395ff4c4377587cd83124e9f92c0f266af2fadc9b"
+            },
+            {
+              "path": "data/observations/macro_growth_2015_2024.json",
+              "measurements": 30,
+              "source_ids": [
+                "S06"
+              ],
+              "sha256": "c8039a79be2f80fc18e42d2a5fcc1ea7e87939f5b9a67cb70e771baafd51ca14"
+            },
+            {
+              "path": "data/observations/petroleum_balance_selected_years.json",
+              "measurements": 45,
+              "source_ids": [
+                "S14",
+                "S15"
+              ],
+              "sha256": "f498bf491177655cc3f2e0aa2565988f8bd2a16526fb0700c094ca16b49b5b65"
+            },
+            {
+              "path": "data/observations/power_capacity_2015_2024.json",
+              "measurements": 70,
+              "source_ids": [
+                "S05"
+              ],
+              "sha256": "c2e25b7bcac1b38967526f00253e8807c27b9351af56a5d69263c23be82c3f27"
+            },
+            {
+              "path": "data/observations/power_generation_2015_2024.json",
+              "measurements": 51,
+              "source_ids": [
+                "S07",
+                "S08",
+                "S09",
+                "S13"
+              ],
+              "sha256": "a6aae99a8d04304f29ccb291cabb6dab06ac208493cb498cb1fc149223738e11"
+            },
+            {
+              "path": "data/observations/power_official_release_2024.json",
+              "measurements": 10,
+              "source_ids": [
+                "S17"
+              ],
+              "sha256": "c4ad62a266a5136d9d8a76dc795bfd2140c90f16e26007a5e672a22207a3b90c"
+            },
+            {
+              "path": "data/observations/qinshan_asset_permit_case.json",
+              "measurements": 1,
+              "source_ids": [
+                "S26",
+                "S27",
+                "S28"
+              ],
+              "sha256": "49377e3598b1f91f9fa226551e92ec06b860da3a9bf21f7f918e8993e0ee56e6"
+            },
+            {
+              "path": "data/observations/renewable_operation_official_2024.json",
+              "measurements": 15,
+              "source_ids": [
+                "S25"
+              ],
+              "sha256": "f59303c667f0529820da3ecd3bb5386445eb5a248051325681641626aacfcb55"
+            }
+          ],
+          "measurement_count": 471,
+          "stages": [
+            {
+              "id": "W0",
+              "title": "题目对齐及工作流",
+              "status": "done",
+              "depends_on": [],
+              "prompt": "prompts/01_alignment.md",
+              "evidence": [
+                "WORKFLOW.md",
+                "docs/06_alignment_review.md",
+                "workflow/requirements.json",
+                "scripts/workflow_status.py",
+                "tests/test_workflow.py"
+              ],
+              "acceptance": "目标覆盖、提示词、状态和证据检查工具齐全且验证通过。"
+            },
+            {
+              "id": "W1",
+              "title": "题给附件清洗与使用",
+              "status": "in_progress",
+              "depends_on": [
+                "W0"
+              ],
+              "prompt": "prompts/02_attachments.md",
+              "evidence": [
+                "scripts/build_attachments.py",
+                "data/processed/attachment_assets.json",
+                "data/attachment_reviews.json",
+                "outputs/attachments/report.md",
+                "docs/16_asset_lifecycle_case.md",
+                "outputs/asset_cases/index.md",
+                "outputs/data_review/review_assets_20261017.md"
+              ],
+              "acceptance": "四份附件标准表、原行定位、核查标记及用途映射齐全。"
+            },
+            {
+              "id": "W2",
+              "title": "官方数据补齐与核验",
+              "status": "in_progress",
+              "depends_on": [
+                "W0"
+              ],
+              "prompt": "prompts/03_official_data.md",
+              "evidence": [
+                "data/raw/official/S17_page_capture.txt",
+                "data/raw/official/S13_selected_capture.txt",
+                "data/raw/official/S22_selected_capture.txt",
+                "data/raw/official/S23_page_capture.txt",
+                "data/raw/official/S24_page_capture.txt",
+                "data/raw/official/S25_selected_capture.txt",
+                "data/raw/official/S01_demand_excerpt_20261017.txt",
+                "data/raw/official/S06_gdp_excerpt_20261017.txt",
+                "data/evidence_reviews.json",
+                "workflow/model_inputs.json",
+                "docs/08_statistical_boundaries.md",
+                "outputs/data_review/catalog.md",
+                "data/raw/official/S26_qinshan_permits_2017_capture.txt",
+                "data/raw/official/S27_qinshan_extension_2021_capture.txt",
+                "data/raw/official/S28_qinshan_design_life_capture.txt"
+              ],
+              "acceptance": "最低可用正式子集证据通过；核算边界与关键缺口有处置说明。"
+            },
+            {
+              "id": "W3",
+              "title": "现状定量评价",
+              "status": "in_progress",
+              "depends_on": [
+                "W1",
+                "W2"
+              ],
+              "prompt": "prompts/04_current_assessment.md",
+              "evidence": [
+                "outputs/current_assessment/electricity_2024_partial.md",
+                "outputs/current_assessment/energy_2024_partial.md",
+                "outputs/current_assessment/gas_2024_partial.md",
+                "outputs/current_assessment/four_dimensions_2024_partial.md",
+                "outputs/current_assessment/four_dimensions_2024.json",
+                "outputs/current_assessment/electricity_inputs_2024_partial.md",
+                "outputs/current_assessment/electricity_inputs_2024.json"
+              ],
+              "acceptance": "完成供给保障、低碳、经济性、协调性及综合结论。"
+            },
+            {
+              "id": "W4",
+              "title": "多智能体实现",
+              "status": "in_progress",
+              "depends_on": [
+                "W1",
+                "W2"
+              ],
+              "prompt": "prompts/05_agent_model.md",
+              "evidence": [
+                "docs/09_agent_prototype.md",
+                "examples/synthetic_agents.json",
+                "src/energy_model/agents.py",
+                "scripts/run_agent_prototype.py",
+                "tests/test_agents.py",
+                "outputs/prototype/report.md",
+                "outputs/data_review/history_readiness.md",
+                "docs/10_operation_windows.md",
+                "src/energy_model/operations.py",
+                "examples/synthetic_operation_windows.json",
+                "scripts/run_operation_windows.py",
+                "tests/test_operations.py",
+                "outputs/prototype/operations/report.md",
+                "docs/11_calibration_input_contract.md",
+                "docs/12_workbench.md",
+                "apps/workbench.py",
+                "src/energy_model/workbench.py",
+                "run_workbench.ps1",
+                "tests/test_workbench.py",
+                "tests/ui/test_workbench_app.py",
+                "outputs/data_review/review_workbench_20261017.md",
+                "docs/16_asset_lifecycle_case.md",
+                "src/energy_model/asset_lifecycle.py",
+                "scripts/run_asset_lifecycle_case.py",
+                "tests/test_asset_lifecycle.py",
+                "outputs/asset_cases/qinshan_8daa8f844e19a278/result.json",
+                "outputs/data_review/review_assets_20261017.md"
+              ],
+              "acceptance": "可运行主体决策、交互和约束验证闭环。",
+              "progress_note": "独立真实许可事件模块已连接附件3条厂记录与7台机组，尚未连接年度调度或自主经济决策；全国初态、成本和主体校准未验收。"
+            },
+            {
+              "id": "W5",
+              "title": "历史校准与验证",
+              "status": "in_progress",
+              "depends_on": [
+                "W4"
+              ],
+              "prompt": "prompts/06_calibration.md",
+              "evidence": [
+                "outputs/calibration/demand_94d020b761970170/result.json",
+                "outputs/calibration/demand_94d020b761970170/report.md",
+                "outputs/data_review/review_demand_minimal_20261017.md",
+                "outputs/calibration/demand_3312e2a52e0430a7/result.json",
+                "outputs/calibration/demand_3312e2a52e0430a7/report.md"
+              ],
+              "progress_note": "已完成限定真实总能源需求统计基线条件回算；全国ABM、多指标行为校准和机制对照仍未完成，W4依赖未验收，不宣称W5完成。",
+              "acceptance": "输入证据检查通过，多指标校准、历史检验与机制对照完成。"
+            },
+            {
+              "id": "W6",
+              "title": "基准及对比情景",
+              "status": "pending",
+              "depends_on": [
+                "W5"
+              ],
+              "prompt": "prompts/07_scenarios.md",
+              "evidence": [],
+              "acceptance": "全部2030/2060指标及至少三种对比情景、灵敏度和区间齐全。"
+            },
+            {
+              "id": "W7",
+              "title": "能源安全与优化",
+              "status": "pending",
+              "depends_on": [
+                "W6"
+              ],
+              "prompt": "prompts/08_security_optimization.md",
+              "evidence": [],
+              "acceptance": "安全框架、压力实验和约束下建议有结果支撑。"
+            },
+            {
+              "id": "W8",
+              "title": "论文视频复现包",
+              "status": "pending",
+              "depends_on": [
+                "W3",
+                "W7"
+              ],
+              "prompt": "prompts/09_deliverables.md",
+              "evidence": [],
+              "acceptance": "论文、实际<=180秒视频、源代码和原始资料及说明完成。"
+            },
+            {
+              "id": "W9",
+              "title": "最终审查",
+              "status": "pending",
+              "depends_on": [
+                "W8"
+              ],
+              "prompt": "prompts/10_final_review.md",
+              "evidence": [],
+              "acceptance": "所有必需要求均实质验收，提交材料检查通过。"
+            }
+          ],
+          "pending_dependencies": []
+        }
+      }
+    ],
+    "passed": true,
+    "previous_receipts_restored": true
+  },
+  "q1_scientific_comparison": [
+    {
+      "file": "cost_sensitivity.svg",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "coverage.csv",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "demand_trends.svg",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "energy_assessment.csv",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "energy_roles.csv",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "gaps_and_conflicts.csv",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "history.csv",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "import_origins.csv",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "indicators.csv",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "model_handoff.csv",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "price_trends.svg",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "regional_comparison.csv",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "regional_shares.svg",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "renewable_regions.csv",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "report.md",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "static_balance.json",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "synergy_assessment.csv",
+      "matches_accepted_q1": true
+    },
+    {
+      "file": "technology_region_capacities.csv",
+      "matches_accepted_q1": true
+    }
+  ],
+  "science": {
+    "scope": "local Q2 working tree; not a final-commit acceptance",
+    "checked_files": [
+      {
+        "directory": "historical_candidate_v11",
+        "code_hash_mismatches": [],
+        "output_hash_mismatches": []
+      },
+      {
+        "directory": "historical_candidate_v11_sector_diagnostics",
+        "code_hash_mismatches": [],
+        "output_hash_mismatches": []
+      }
+    ],
+    "retained_182_file_snapshot": {
+      "count": 182,
+      "mismatches": []
+    },
+    "selected_path_replay": {
+      "seconds": 0.12842630001250654,
+      "matches_entire_retained_ledger": true
+    },
+    "quality_recomputed_identically": true,
+    "training_loss": 0.1615137337952601,
+    "quality": {
+      "passed": false,
+      "targets": [
+        {
+          "indicator": "consumption_10ktce",
+          "family": "energy_consumption",
+          "n": 3,
+          "holdout_mape": 0.011570168251651346,
+          "mape_nonzero_observations": 3,
+          "maximum_absolute_error": 12266.649389655679,
+          "maximum_share_error_fraction": null,
+          "normalized_rmse": 0.019156240180054518,
+          "persistence_normalized_rmse": 0.11630114097040882,
+          "rmse_ratio_to_persistence": 0.16471240110128027,
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "indicator": "consumption_coal_share",
+          "family": "primary_mix",
+          "n": 3,
+          "holdout_mape": 0.00333424758438637,
+          "mape_nonzero_observations": 3,
+          "maximum_absolute_error": 0.002992571220780338,
+          "maximum_share_error_fraction": 0.002992571220780338,
+          "normalized_rmse": 0.0031554194366513757,
+          "persistence_normalized_rmse": 0.02333045377845893,
+          "rmse_ratio_to_persistence": 0.1352489525756581,
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "indicator": "consumption_oil_share",
+          "family": "primary_mix",
+          "n": 3,
+          "holdout_mape": 0.09201848205939661,
+          "mape_nonzero_observations": 3,
+          "maximum_absolute_error": 0.020330792438925493,
+          "maximum_share_error_fraction": 0.020330792438925493,
+          "normalized_rmse": 0.09930612794486553,
+          "persistence_normalized_rmse": 0.024065502884001555,
+          "rmse_ratio_to_persistence": 4.126492948164528,
+          "passed": false,
+          "reasons": [
+            "worse_than_persistence"
+          ]
+        },
+        {
+          "indicator": "consumption_gas_share",
+          "family": "primary_mix",
+          "n": 3,
+          "holdout_mape": 0.19446555842167046,
+          "mape_nonzero_observations": 3,
+          "maximum_absolute_error": 0.02158162989816531,
+          "maximum_share_error_fraction": 0.02158162989816531,
+          "normalized_rmse": 0.3083735477620792,
+          "persistence_normalized_rmse": 0.05154913117764521,
+          "rmse_ratio_to_persistence": 5.982128907262911,
+          "passed": false,
+          "reasons": [
+            "mape_exceeded",
+            "worse_than_persistence"
+          ]
+        },
+        {
+          "indicator": "wind_10kW",
+          "family": "capacity_or_generation",
+          "n": 3,
+          "holdout_mape": 0.41134886378174973,
+          "mape_nonzero_observations": 3,
+          "maximum_absolute_error": 26560.067107601026,
+          "maximum_share_error_fraction": null,
+          "normalized_rmse": 2.0488116970088273,
+          "persistence_normalized_rmse": 1.3496576566563168,
+          "rmse_ratio_to_persistence": 1.5180232460464205,
+          "passed": false,
+          "reasons": [
+            "mape_exceeded",
+            "worse_than_persistence"
+          ]
+        },
+        {
+          "indicator": "solar_10kW",
+          "family": "capacity_or_generation",
+          "n": 3,
+          "holdout_mape": 0.19709920884933207,
+          "mape_nonzero_observations": 3,
+          "maximum_absolute_error": 28242.679915321743,
+          "maximum_share_error_fraction": null,
+          "normalized_rmse": 6.959754401390074,
+          "persistence_normalized_rmse": 15.356380095669406,
+          "rmse_ratio_to_persistence": 0.45321582026696305,
+          "passed": false,
+          "reasons": [
+            "mape_exceeded"
+          ]
+        },
+        {
+          "indicator": "nuclear_10kW",
+          "family": "capacity_or_generation",
+          "n": 3,
+          "holdout_mape": 0.045840816388736806,
+          "mape_nonzero_observations": 3,
+          "maximum_absolute_error": 390.0,
+          "maximum_share_error_fraction": null,
+          "normalized_rmse": 0.13971823377397005,
+          "persistence_normalized_rmse": 0.25059831553389833,
+          "rmse_ratio_to_persistence": 0.5575385990775761,
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "indicator": "gcb_fuel_co2",
+          "family": "co2",
+          "n": 3,
+          "holdout_mape": 0.04143668339496133,
+          "mape_nonzero_observations": 3,
+          "maximum_absolute_error": 569.5302276749844,
+          "maximum_share_error_fraction": null,
+          "normalized_rmse": 0.05380392787485144,
+          "persistence_normalized_rmse": 0.10472521735079766,
+          "rmse_ratio_to_persistence": 0.5137628666324427,
+          "passed": true,
+          "reasons": []
+        }
+      ],
+      "criteria": {
+        "status": "proposed_before_q2_fit",
+        "reason": "Author's explicit research tolerance, not an official contest or team threshold. No Q2 fit has been evaluated when frozen.",
+        "maximum_holdout_mape_each_target": 0.15,
+        "maximum_holdout_share_absolute_error": 0.05,
+        "maximum_holdout_normalized_rmse_ratio_to_persistence": 1.0,
+        "target_families": [
+          "energy_consumption",
+          "primary_mix",
+          "capacity_or_generation",
+          "co2"
+        ],
+        "all_families_required": true,
+        "no_holdout_retuning": true
+      },
+      "window": "already_seen_holdout",
+      "interpretation": "Quality gate only; passing synthetic fixtures is not empirical validation"
+    },
+    "national_gaps": [
+      {
+        "id": "historical_initialization",
+        "gate": "B3/B4",
+        "required": "2014 end / 2015 start sector service, technology, finance and project queues with causal information dates"
+      },
+      {
+        "id": "current_initialization",
+        "gate": "B3/B5",
+        "required": "2024 asset, fuel, service, storage and queue state on one consistent boundary"
+      },
+      {
+        "id": "technology_and_prices",
+        "gate": "B2/B3/B6",
+        "required": "Matched CAPEX/OPEX, lifetimes, fuel energy factors, prices, price year, policy coverage and allocation rules"
+      },
+      {
+        "id": "operation_chronology",
+        "gate": "B2/B3",
+        "required": "Matched load/wind/PV/hydro profiles, fuel supply and withdrawal bounds, inventory conditions"
+      },
+      {
+        "id": "carbon_boundary",
+        "gate": "B3/B5",
+        "required": "One reviewed gross CO2/process/waste/net land or engineered removal boundary and 2024-2060 assumptions"
+      },
+      {
+        "id": "frozen_experiment",
+        "gate": "B4/B6",
+        "required": "Reviewed bounds/scales/weights and GDP/cost/carbon ranges, information dates and policy target comparisons"
+      }
+    ],
+    "source_scope_and_synthetic_inputs_not_promoted": true,
+    "untracked_delivery": {
+      "files": 1118,
+      "bytes": 514927889,
+      "larger_than_50MB": []
+    }
+  },
+  "runtime": [
+    {
+      "args": [
+        "run.py",
+        "q2",
+        "--config",
+        "workflow/q2_inputs.json",
+        "--output-dir",
+        "outputs/q2/review_20261019_national"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "passed": true,
+      "status": "failed",
+      "national_acceptance": false,
+      "config_sha256": "b13be478daad13c0308c2c0db0726505986ea8d7a932787178b450d50bca93bf",
+      "unresolved_ids": [
+        "historical_initialization",
+        "current_initialization",
+        "technology_and_prices",
+        "operation_chronology",
+        "carbon_boundary",
+        "frozen_experiment"
+      ]
+    },
+    {
+      "args": [
+        "run.py",
+        "q2",
+        "--config",
+        "examples/q2_engineering.json",
+        "--output-dir",
+        "outputs/q2/review_20261019_engineering"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "status": "engineering_success",
+      "national_acceptance": false,
+      "config_sha256": "ea0ccd825ac17b262aba848d54910b3f0e3ed68a0dd8420bad5061d6b4455a89",
+      "unresolved_ids": []
+    }
+  ],
+  "reproduction_limit": "Existing independent-environment snapshot hashes verified and selected v11 path replayed; complete historical search not repeated this review",
+  "local_logs": "tmp/accept_q2_20261019/"
+}

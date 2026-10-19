@@ -1,0 +1,9 @@
+{
+  "status": "strict_cross_environment_byte_comparison_failed",
+  "command": "python -B -X utf8 tmp/q2/reproduce_joint_response.py",
+  "failure": "AssertionError: ('alternate', 'attempt.json')",
+  "fixed_environment_artifacts_equal": 16,
+  "failed_environment": "venv",
+  "note": "Both executions finished; the comparator failed at the first alternate file. Original results and comparator preserved.",
+  "comparator_sha256": "6ef925bf9df44470ea69d8e931ec9757f6c9087dc6928a424fc6db7ef56a9c34"
+}

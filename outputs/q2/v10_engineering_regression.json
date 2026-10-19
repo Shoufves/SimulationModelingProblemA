@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-19",
+  "compared_scientific_files": 19,
+  "all_identical": true,
+  "by_file": {
+    "action_ledger.csv": true,
+    "asset_ledger.csv": true,
+    "baseline_metrics.csv": true,
+    "baseline_path.csv": true,
+    "baseline_path.svg": true,
+    "calibration.json": true,
+    "cash_ledger.csv": true,
+    "gaps_and_conflicts.csv": true,
+    "historical_operation_ledger.json": true,
+    "historical_quality.json": true,
+    "history_baselines.csv": true,
+    "history_fit.csv": true,
+    "history_fit.svg": true,
+    "information_ledger.csv": true,
+    "lifecycle_queue.json": true,
+    "operation_ledger.json": true,
+    "project_ledger.json": true,
+    "report.md": true,
+    "sensitivity.csv": true
+  },
+  "current_code_run_manifest": {
+    "owner": "p2/yx",
+    "run_id": "6b8fe6052c3e429e96e4548b24cacae8",
+    "status": "engineering_success",
+    "national_acceptance": false,
+    "scope": "synthetic_engineering_only",
+    "command": [
+      "python",
+      "-B",
+      "-X",
+      "utf8",
+      "run.py",
+      "q2",
+      "--config",
+      "examples/q2_engineering.json",
+      "--output-dir",
+      "outputs/q2/v10_engineering_regression"
+    ],
+    "git_sha": "af930750a57144324995142a75e47ce3cdae1fd8",
+    "git_dirty": true,
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": {
+      "mesa": "3.3.1",
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "pandas": "2.3.3",
+      "matplotlib": "3.10.6"
+    },
+    "solver": "SciPy HiGHS LP/MILP",
+    "seconds": 8.302973799989559,
+    "config_path": "examples/q2_engineering.json",
+    "config_sha256": "ea0ccd825ac17b262aba848d54910b3f0e3ed68a0dd8420bad5061d6b4455a89",
+    "inputs": [
+      {
+        "id": "model_bundle",
+        "path": "examples/q2/model_bundle.json",
+        "sha256": "4535603d4e466f69e33de3e82432142f7807dc53d0783659a45e81b7da169587",
+        "purpose": "synthetic engineering verification only",
+        "boundary": "synthetic_engineering_only"
+      },
+      {
+        "id": "experiment",
+        "path": "examples/q2/experiment.json",
+        "sha256": "c7cffb994439e2a3baa93f55861e45a7636534cc55e6a89606c63a2f9cb46ade",
+        "purpose": "synthetic engineering verification only",
+        "boundary": "synthetic_engineering_only"
+      },
+      {
+        "id": "metric_definitions",
+        "path": "examples/q2/metric_definitions.json",
+        "sha256": "c1b541b68dc84557dbc9e215a8fc7927575c18fa7c92a3e157d5f3018dbb0fe2",
+        "purpose": "synthetic engineering verification only",
+        "boundary": "synthetic_engineering_only"
+      },
+      {
+        "id": "acceptance",
+        "path": "examples/q2/acceptance.json",
+        "sha256": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8",
+        "purpose": "synthetic engineering verification only",
+        "boundary": "synthetic_engineering_only"
+      },
+      {
+        "id": "observations",
+        "path": "examples/q2/observations.json",
+        "sha256": "8af876ba5c1d2aeb461c16b168bfbc6e97bea547c36e794bf5f0fdea31b8a9d3",
+        "purpose": "synthetic engineering verification only",
+        "boundary": "synthetic_engineering_only"
+      }
+    ],
+    "code_hashes": {
+      "run.py": "104411bd52367970f60242f5c55673d61f7f244eb309150305283eee097388a6",
+      "scripts/run_q2.py": "e2560d02ab834f0453c117f94359317c5864477ba9a3f2ca52d24172640e9e1c",
+      "requirements-q2.txt": "588f2f39fcddf324336c274485340016879ddb90c0cd4f230e196dfcc5227874",
+      "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+      "src/energy_model/q2/annual.py": "202438bf5c84eef4da8ef2cb18529069627706a5d0907ba1e85b768c96e0ea85",
+      "src/energy_model/q2/approvals.py": "0e6cf2f7903e76d8490c52daed1648d407e44dcf3562e674ee2eaa6496e969c9",
+      "src/energy_model/q2/contracts.py": "ac00ba2450fc0ff01060ef846b700c0f5ed9e481acb9a6577aa067a39a155ee2",
+      "src/energy_model/q2/deployment.py": "2ec6fe0a88a43bb1c1ae0284c6e6f6bf1e768609c0a3894f13dc7046a67e33f7",
+      "src/energy_model/q2/experiments.py": "b6432f11758893710dbe20296657313eeb5c70238978f774604513453ff4eb8f",
+      "src/energy_model/q2/finance.py": "6724e4a9a37411cc12565fdb36086bca37de49dc1f245b5aec4548a64a39e22e",
+      "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32",
+      "src/energy_model/q2/lifecycle.py": "77c1908aa1cca437f72674b3ac88873206f07188f1e3eae6d2f8504aec86c403",
+      "src/energy_model/q2/operations.py": "95b0999dfdcb57b46046178c93c7a07facd7a16a1da4f0407bd93e1658bd2bb2",
+      "src/energy_model/q2/quality.py": "a1176bc537f7bbddcc664ed697ac9bbac8f8f347097a5650e06cd1f978cd370d",
+      "src/energy_model/q2/targets.py": "2e67cd5f0996f4e1a20c836ecc2a300f48ffdddbd058f620f7312634f72ce064"
+    },
+    "outputs": {
+      "action_ledger.csv": "f5b6af4527d5649f1819aedb1cf4185e98ab7db460ce0758a6d5c28ea6aae564",
+      "asset_ledger.csv": "605f039d8014b6801200b2f2736a3b19020404d9834cf66f37decb4461108046",
+      "baseline_metrics.csv": "9785ed9f51cc7f1e635d47a2135cf089feb7b924b615cbee997f79b487926b04",
+      "baseline_path.csv": "12e55142fd2d7f85c5006d90e75de17313a252a9d8fc97bf48719279b1ef003b",
+      "baseline_path.svg": "970cc56b00341add7219d10cb0965f1e5b2bcc1e81dfe4a86cc2750ad116ded8",
+      "calibration.json": "b24aae57a0c94fb34bd5bc3d76df7b6eabccd2f3fe4002a0dcade2e7edfee6ed",
+      "cash_ledger.csv": "2e85883f1132ef4a50ea06c44696686b46328208535933f07f7413ede64f83b1",
+      "gaps_and_conflicts.csv": "b5aff8809293936d54605c53f39c152b0f98d8a997629224e0b5b8aebe3b3fd8",
+      "historical_operation_ledger.json": "ae6f1ee945ac6d2e91330c181340c269a1c7cd3a44fd1a0a4d17291e75286df9",
+      "historical_quality.json": "bfb17f11dd6088a5c44ffccab66badc819e4dbe5c138138b445f1a09bd7d8cea",
+      "history_baselines.csv": "e3e8fc764c1d2fb112e1a1902c7c4f47f7f7942823083e818b3ccf03f5682a56",
+      "history_fit.csv": "0434b4c5c1e7cf32123ce42cb05c11ab106726c95bf120f388af08561fdab266",
+      "history_fit.svg": "63d86a6cdf17fcebb40831f2f354d71539484980b098fe6c9c2daf273cb2dae3",
+      "information_ledger.csv": "c75143b854f93001e456f055a20a7c5817b14b9dbdf85bebdd07eb05d5351178",
+      "lifecycle_queue.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "operation_ledger.json": "0f3b8fcfb59f3ea8502fdc65e10553ab7a68ed423456ecebcf238287dad37456",
+      "project_ledger.json": "e5b84ff0a50a814c6e97349b6b0d3af5ca6775ed264ddb7e5e025f8a2075c155",
+      "report.md": "63cf28d93d354fb2a875920c08f434efa270001599150d0e3e51142014de0531",
+      "sensitivity.csv": "93a6f67fa73bb41b74b8d2bcca692e7cd018b8e14751ec846a02d1f1e00a5c75"
+    }
+  },
+  "reference_evidence": "outputs/q2/nominal_contract_engineering_regression.json",
+  "retained_repeat_output": "tmp/q2/retained_runs/v10_engineering_regression",
+  "national_acceptance": false
+}

@@ -1,0 +1,48 @@
+{
+  "version": 3,
+  "scope": "synthetic_engineering_only",
+  "unresolved_required_inputs": [],
+  "inputs": [
+    {
+      "id": "model_bundle",
+      "path": "examples/q2/model_bundle.json",
+      "sha256": "4535603d4e466f69e33de3e82432142f7807dc53d0783659a45e81b7da169587",
+      "purpose": "synthetic engineering verification only",
+      "boundary": "synthetic_engineering_only"
+    },
+    {
+      "id": "experiment",
+      "path": "examples/q2/experiment.json",
+      "sha256": "c7cffb994439e2a3baa93f55861e45a7636534cc55e6a89606c63a2f9cb46ade",
+      "purpose": "synthetic engineering verification only",
+      "boundary": "synthetic_engineering_only"
+    },
+    {
+      "id": "metric_definitions",
+      "path": "examples/q2/metric_definitions.json",
+      "sha256": "c1b541b68dc84557dbc9e215a8fc7927575c18fa7c92a3e157d5f3018dbb0fe2",
+      "purpose": "synthetic engineering verification only",
+      "boundary": "synthetic_engineering_only"
+    },
+    {
+      "id": "acceptance",
+      "path": "examples/q2/acceptance.json",
+      "sha256": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8",
+      "purpose": "synthetic engineering verification only",
+      "boundary": "synthetic_engineering_only"
+    },
+    {
+      "id": "observations",
+      "path": "examples/q2/observations.json",
+      "sha256": "8af876ba5c1d2aeb461c16b168bfbc6e97bea547c36e794bf5f0fdea31b8a9d3",
+      "purpose": "synthetic engineering verification only",
+      "boundary": "synthetic_engineering_only"
+    }
+  ],
+  "sources": [],
+  "assumptions": [
+    "All model quantities and observation targets are synthetic fixtures. No Chinese forecast or historical validity follows.",
+    "Version 2 corrects replacement service capacity: 2 units added replace 2 units, not 200. Earlier outputs remain historical failed-physics evidence.",
+    "Version 3 values timed construction, operating cash and terminal value; construction is paid at offsets 0..L-1. Fully funded non-remunerated escrow opportunity cost is explicit and excluded from resource accounts."
+  ]
+}

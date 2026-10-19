@@ -1,0 +1,178 @@
+[
+  {
+    "case": "fixed_150GW",
+    "rule": "adaptive_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "nfev": 6,
+    "actual_training_executions": 30,
+    "best": {
+      "trial": 27,
+      "case": "fixed_150GW",
+      "rule": "adaptive_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.42911877394627734,
+        "solar_stock_expansion_rate": 0.6572807715008028,
+        "oil_residual_elasticity": 0.5833352945980612,
+        "gas_residual_elasticity": 1.993941024752097
+      },
+      "status": "valid",
+      "loss": 0.7207423683938001
+    }
+  },
+  {
+    "case": "fixed_150GW",
+    "rule": "instant_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "nfev": 5,
+    "actual_training_executions": 25,
+    "best": {
+      "trial": 52,
+      "case": "fixed_150GW",
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.23964410660736596,
+        "solar_stock_expansion_rate": 0.45748987283728887,
+        "oil_residual_elasticity": 0.6022340335535771,
+        "gas_residual_elasticity": 1.9999834066680309
+      },
+      "status": "valid",
+      "loss": 0.1377543447385913
+    }
+  },
+  {
+    "case": "GDP_proportional",
+    "rule": "adaptive_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "nfev": 7,
+    "actual_training_executions": 35,
+    "best": {
+      "trial": 87,
+      "case": "GDP_proportional",
+      "rule": "adaptive_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.42911877394635156,
+        "solar_stock_expansion_rate": 0.6572807717656932,
+        "oil_residual_elasticity": 0.5921057070018817,
+        "gas_residual_elasticity": 1.9994824634224433
+      },
+      "status": "valid",
+      "loss": 0.6556712821085019
+    }
+  },
+  {
+    "case": "GDP_proportional",
+    "rule": "instant_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "nfev": 6,
+    "actual_training_executions": 30,
+    "best": {
+      "trial": 117,
+      "case": "GDP_proportional",
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.18578033389366141,
+        "solar_stock_expansion_rate": 0.4218136972471057,
+        "oil_residual_elasticity": 0.6020441293194738,
+        "gas_residual_elasticity": 1.9999987647401594
+      },
+      "status": "valid",
+      "loss": 0.16304693621513253
+    }
+  },
+  {
+    "case": "GDP_squared",
+    "rule": "adaptive_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "nfev": 7,
+    "actual_training_executions": 35,
+    "best": {
+      "trial": 152,
+      "case": "GDP_squared",
+      "rule": "adaptive_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.383816297989833,
+        "solar_stock_expansion_rate": 0.6572807722363548,
+        "oil_residual_elasticity": 0.5944543808827295,
+        "gas_residual_elasticity": 1.9999999999998954
+      },
+      "status": "valid",
+      "loss": 0.6548223114828844
+    }
+  },
+  {
+    "case": "GDP_squared",
+    "rule": "instant_margin",
+    "success": true,
+    "status": 3,
+    "message": "`xtol` termination condition is satisfied.",
+    "nfev": 8,
+    "actual_training_executions": 28,
+    "best": {
+      "trial": 177,
+      "case": "GDP_squared",
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.18381505146816401,
+        "solar_stock_expansion_rate": 0.4219680421812826,
+        "oil_residual_elasticity": 0.6021641539615055,
+        "gas_residual_elasticity": 1.9999999999999984
+      },
+      "status": "valid",
+      "loss": 0.16283632455871208
+    }
+  },
+  {
+    "case": "technology_frontiers",
+    "rule": "adaptive_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "nfev": 7,
+    "actual_training_executions": 35,
+    "best": {
+      "trial": 215,
+      "case": "technology_frontiers",
+      "rule": "adaptive_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.383816297989833,
+        "solar_stock_expansion_rate": 0.6572807722363548,
+        "oil_residual_elasticity": 0.5944543808827295,
+        "gas_residual_elasticity": 1.9999999999998954
+      },
+      "status": "valid",
+      "loss": 0.6548223114828844
+    }
+  },
+  {
+    "case": "technology_frontiers",
+    "rule": "instant_margin",
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "nfev": 6,
+    "actual_training_executions": 30,
+    "best": {
+      "trial": 245,
+      "case": "technology_frontiers",
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.183814801221835,
+        "solar_stock_expansion_rate": 0.42196778120524536,
+        "oil_residual_elasticity": 0.602164106012413,
+        "gas_residual_elasticity": 1.9999999999999998
+      },
+      "status": "valid",
+      "loss": 0.16283632457096295
+    }
+  }
+]

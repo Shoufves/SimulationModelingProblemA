@@ -1,0 +1,179 @@
+{
+  "windows": {
+    "train": [
+      2015,
+      2021
+    ],
+    "already_seen_holdout": [
+      2022,
+      2024
+    ]
+  },
+  "parameters": [
+    {
+      "id": "residual_elasticity",
+      "grid": [
+        0.2,
+        0.4,
+        0.6
+      ],
+      "bounds": [
+        0.2,
+        0.6
+      ],
+      "paths": [
+        [
+          "demand_drivers",
+          "coal_residual",
+          "gdp_elasticity"
+        ],
+        [
+          "demand_drivers",
+          "oil_residual",
+          "gdp_elasticity"
+        ],
+        [
+          "demand_drivers",
+          "gas_residual",
+          "gdp_elasticity"
+        ]
+      ]
+    },
+    {
+      "id": "electricity_elasticity",
+      "grid": [
+        0.7,
+        1.0,
+        1.3
+      ],
+      "bounds": [
+        0.7,
+        1.3
+      ],
+      "paths": [
+        [
+          "demand_drivers",
+          "industrial_electricity",
+          "gdp_elasticity"
+        ],
+        [
+          "demand_drivers",
+          "other_electricity",
+          "gdp_elasticity"
+        ]
+      ]
+    },
+    {
+      "id": "investment_adjustment",
+      "grid": [
+        0.25,
+        0.6,
+        1.0
+      ],
+      "bounds": [
+        0.25,
+        1.0
+      ],
+      "paths": [
+        [
+          "behavior",
+          "investment_adjustment"
+        ]
+      ]
+    },
+    {
+      "id": "solar_capex_million_USD2008_per_MW",
+      "grid": [
+        1.2048918960551036,
+        2.0127171445465937,
+        2.8205423930380835
+      ],
+      "bounds": [
+        1.2048918960551036,
+        2.8205423930380835
+      ],
+      "paths": [
+        [
+          "investment_options",
+          6,
+          "capex_per_unit"
+        ]
+      ]
+    }
+  ],
+  "maximum_evaluations": 81,
+  "equivalent_loss_absolute_tolerance": 0.001,
+  "targets": [
+    {
+      "id": "consumption_10ktce",
+      "family": "energy_consumption",
+      "scale": 428334.0,
+      "weight": 0.25,
+      "metric_type": "total"
+    },
+    {
+      "id": "consumption_coal_share",
+      "family": "primary_mix",
+      "scale": 0.6579999999999999,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "consumption_oil_share",
+      "family": "primary_mix",
+      "scale": 0.17300000000000001,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "consumption_gas_share",
+      "family": "primary_mix",
+      "scale": 0.055999999999999994,
+      "weight": 0.08333333333333333,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "wind_10kW",
+      "family": "capacity_or_generation",
+      "scale": 9657.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "solar_10kW",
+      "family": "capacity_or_generation",
+      "scale": 2486.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "nuclear_10kW",
+      "family": "capacity_or_generation",
+      "scale": 2008.0,
+      "weight": 0.08333333333333333,
+      "metric_type": "total"
+    },
+    {
+      "id": "gcb_fuel_co2",
+      "family": "co2",
+      "scale": 9051.061952,
+      "weight": 0.25,
+      "metric_type": "total"
+    }
+  ],
+  "rule_alternatives": [
+    "adaptive_margin",
+    "instant_margin",
+    "no_investment"
+  ],
+  "selection": "Minimum2015-2021 loss over4 frozen initial-queue hypotheses x3 rules x81vectors; construction hypothesis inherited from v3 training only.",
+  "future_use": "No S0 until structural accounting, policy and quality gates are resolved",
+  "structural_alternatives": [
+    "empty_queue_control",
+    "stage_schedule",
+    "stage_plus_one_year",
+    "stage_plus_two_years"
+  ],
+  "development_information": "Exploratory iteration after v1-v3 already-seen holdout; no independent validation claim. Sequential structure selection is additional model search and must not be hidden by counting only four grid parameters.",
+  "source_publication_convention": "IRENA2015 cost/CF enters decisions from2016. Revised price index used for retrospective constant-unit normalization only."
+}

@@ -1,0 +1,1038 @@
+{
+  "scope": "historical_aggregate_candidate_not_admitted",
+  "seed": 17,
+  "start_year": 2014,
+  "end_year": 2024,
+  "operation": {
+    "energy_unit": "MWh_LHV",
+    "currency_unit": "constant_currency",
+    "hours": [
+      6.0,
+      6.0,
+      6.0,
+      6.0
+    ],
+    "annual_weights": [
+      365.0,
+      365.0,
+      365.0,
+      365.0
+    ],
+    "information_mode": "announced_window",
+    "nodes": [
+      "coal",
+      "gas",
+      "oil",
+      "hydro_resource",
+      "nuclear_resource",
+      "wind_resource",
+      "solar_resource",
+      "electricity_bus",
+      "electricity"
+    ],
+    "spill_nodes": [
+      "electricity_bus"
+    ],
+    "sources": [
+      {
+        "id": "coal_supply",
+        "node": "coal",
+        "limit_mw": [
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548
+        ],
+        "window_budget_mwh": 139482683760.0,
+        "resource_cost_per_mwh": 1.0620000000000002e-05,
+        "primary_factor": 1.0,
+        "nonfossil": false
+      },
+      {
+        "id": "gas_supply",
+        "node": "gas",
+        "limit_mw": [
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548
+        ],
+        "window_budget_mwh": 139482683760.0,
+        "resource_cost_per_mwh": 1.6308e-05,
+        "primary_factor": 1.0,
+        "nonfossil": false
+      },
+      {
+        "id": "oil_supply",
+        "node": "oil",
+        "limit_mw": [
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548
+        ],
+        "window_budget_mwh": 139482683760.0,
+        "resource_cost_per_mwh": 2.2e-05,
+        "primary_factor": 1.0,
+        "nonfossil": false
+      },
+      {
+        "id": "hydro_resource_supply",
+        "node": "hydro_resource",
+        "limit_mw": [
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548
+        ],
+        "window_budget_mwh": 139482683760.0,
+        "resource_cost_per_mwh": 0.0,
+        "primary_factor": 1.0,
+        "nonfossil": true
+      },
+      {
+        "id": "nuclear_resource_supply",
+        "node": "nuclear_resource",
+        "limit_mw": [
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548
+        ],
+        "window_budget_mwh": 139482683760.0,
+        "resource_cost_per_mwh": 9.33e-06,
+        "primary_factor": 1.0,
+        "nonfossil": true
+      },
+      {
+        "id": "wind_resource_supply",
+        "node": "wind_resource",
+        "limit_mw": [
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548
+        ],
+        "window_budget_mwh": 139482683760.0,
+        "resource_cost_per_mwh": 0.0,
+        "primary_factor": 1.0,
+        "nonfossil": true
+      },
+      {
+        "id": "solar_resource_supply",
+        "node": "solar_resource",
+        "limit_mw": [
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548,
+          15922680.794520548
+        ],
+        "window_budget_mwh": 139482683760.0,
+        "resource_cost_per_mwh": 0.0,
+        "primary_factor": 1.0,
+        "nonfossil": true
+      }
+    ],
+    "processes": [
+      {
+        "id": "coal_power",
+        "inputs": {
+          "coal": 2.5
+        },
+        "outputs": {
+          "electricity_bus": 1.0
+        },
+        "capacity_mw": 1.0,
+        "availability": [
+          0.85,
+          0.85,
+          0.85,
+          0.85
+        ],
+        "minimum_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "initial_rate_mw": 0.0,
+        "ramp_mw_per_hour": 1.0,
+        "window_budget_mwh": 8760.0,
+        "resource_cost_per_mwh": 1.64e-06,
+        "gross_co2_t_per_mwh": 0.8090284866717746,
+        "captured_co2_t_per_mwh": 0.0,
+        "liability_co2_t_per_mwh": 0.8090284866717746
+      },
+      {
+        "id": "gas_power",
+        "inputs": {
+          "gas": 2.0
+        },
+        "outputs": {
+          "electricity_bus": 1.0
+        },
+        "capacity_mw": 1.0,
+        "availability": [
+          0.85,
+          0.85,
+          0.85,
+          0.85
+        ],
+        "minimum_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "initial_rate_mw": 0.0,
+        "ramp_mw_per_hour": 1.0,
+        "window_budget_mwh": 8760.0,
+        "resource_cost_per_mwh": 2.81e-06,
+        "gross_co2_t_per_mwh": 0.37917820131608526,
+        "captured_co2_t_per_mwh": 0.0,
+        "liability_co2_t_per_mwh": 0.37917820131608526
+      },
+      {
+        "id": "hydro_power",
+        "inputs": {
+          "hydro_resource": 1.0
+        },
+        "outputs": {
+          "electricity_bus": 1.0
+        },
+        "capacity_mw": 1.0,
+        "availability": [
+          0.39920262822938113,
+          0.39920262822938113,
+          0.39920262822938113,
+          0.39920262822938113
+        ],
+        "minimum_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "initial_rate_mw": 0.0,
+        "ramp_mw_per_hour": 1.0,
+        "window_budget_mwh": 8760.0,
+        "resource_cost_per_mwh": 2.5400000000000002e-06,
+        "gross_co2_t_per_mwh": 0.0,
+        "captured_co2_t_per_mwh": 0.0,
+        "liability_co2_t_per_mwh": 0.0
+      },
+      {
+        "id": "nuclear_power",
+        "inputs": {
+          "nuclear_resource": 1.0
+        },
+        "outputs": {
+          "electricity_bus": 1.0
+        },
+        "capacity_mw": 1.0,
+        "availability": [
+          0.7174498353617493,
+          0.7174498353617493,
+          0.7174498353617493,
+          0.7174498353617493
+        ],
+        "minimum_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "initial_rate_mw": 0.0,
+        "ramp_mw_per_hour": 1.0,
+        "window_budget_mwh": 8760.0,
+        "resource_cost_per_mwh": 7.1e-06,
+        "gross_co2_t_per_mwh": 0.0,
+        "captured_co2_t_per_mwh": 0.0,
+        "liability_co2_t_per_mwh": 0.0
+      },
+      {
+        "id": "wind_power",
+        "inputs": {
+          "wind_resource": 1.0
+        },
+        "outputs": {
+          "electricity_bus": 1.0
+        },
+        "capacity_mw": 1.0,
+        "availability": [
+          0.18476199392590512,
+          0.18476199392590512,
+          0.18476199392590512,
+          0.18476199392590512
+        ],
+        "minimum_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "initial_rate_mw": 0.0,
+        "ramp_mw_per_hour": 1.0,
+        "window_budget_mwh": 8760.0,
+        "resource_cost_per_mwh": 1.551e-05,
+        "gross_co2_t_per_mwh": 0.0,
+        "captured_co2_t_per_mwh": 0.0,
+        "liability_co2_t_per_mwh": 0.0
+      },
+      {
+        "id": "solar_power",
+        "inputs": {
+          "solar_resource": 1.0
+        },
+        "outputs": {
+          "electricity_bus": 1.0
+        },
+        "capacity_mw": 1.0,
+        "availability": [
+          0.0,
+          0.21214692690023032,
+          0.21214692690023032,
+          0.0
+        ],
+        "minimum_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "initial_rate_mw": 0.0,
+        "ramp_mw_per_hour": 1.0,
+        "window_budget_mwh": 8760.0,
+        "resource_cost_per_mwh": 1.565e-05,
+        "gross_co2_t_per_mwh": 0.0,
+        "captured_co2_t_per_mwh": 0.0,
+        "liability_co2_t_per_mwh": 0.0
+      },
+      {
+        "id": "aggregate_grid",
+        "inputs": {
+          "electricity_bus": 1.0
+        },
+        "outputs": {
+          "electricity": 0.9366
+        },
+        "capacity_mw": 3980670.198630137,
+        "availability": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "minimum_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "initial_rate_mw": 0.0,
+        "ramp_mw_per_hour": 3980670.198630137,
+        "window_budget_mwh": 34870670940.0,
+        "resource_cost_per_mwh": 0.0,
+        "gross_co2_t_per_mwh": 0.0,
+        "captured_co2_t_per_mwh": 0.0,
+        "liability_co2_t_per_mwh": 0.0
+      },
+      {
+        "id": "solar_new_power",
+        "inputs": {
+          "solar_resource": 1.0
+        },
+        "outputs": {
+          "electricity_bus": 1.0
+        },
+        "capacity_mw": 1.0,
+        "availability": [
+          0.0,
+          0.34,
+          0.34,
+          0.0
+        ],
+        "minimum_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "initial_rate_mw": 0.0,
+        "ramp_mw_per_hour": 1.0,
+        "window_budget_mwh": 8760.0,
+        "resource_cost_per_mwh": 1.565e-05,
+        "gross_co2_t_per_mwh": 0.0,
+        "captured_co2_t_per_mwh": 0.0,
+        "liability_co2_t_per_mwh": 0.0
+      }
+    ],
+    "services": [
+      {
+        "id": "industrial_electricity",
+        "demand": [
+          2288778.7522485736,
+          2543087.502498415,
+          2797396.2527482565,
+          2543087.502498415
+        ],
+        "unit": "MWh_reconstructed_residual_or_electric_load",
+        "priority": 0,
+        "shortfall_weight": 1.0
+      },
+      {
+        "id": "other_electricity",
+        "demand": [
+          821032.5157512596,
+          912258.3508347329,
+          1003484.1859182062,
+          912258.3508347329
+        ],
+        "unit": "MWh_reconstructed_residual_or_electric_load",
+        "priority": 0,
+        "shortfall_weight": 1.0
+      },
+      {
+        "id": "coal_residual",
+        "demand": [
+          8348225.765209605,
+          9275806.40578845,
+          10203387.046367295,
+          9275806.40578845
+        ],
+        "unit": "MWh_reconstructed_residual_or_electric_load",
+        "priority": 0,
+        "shortfall_weight": 1.0
+      },
+      {
+        "id": "oil_residual",
+        "demand": [
+          3718742.099560274,
+          4131935.666178082,
+          4545129.23279589,
+          4131935.666178082
+        ],
+        "unit": "MWh_reconstructed_residual_or_electric_load",
+        "priority": 0,
+        "shortfall_weight": 1.0
+      },
+      {
+        "id": "gas_residual",
+        "demand": [
+          890965.8701280655,
+          989962.0779200727,
+          1088958.28571208,
+          989962.0779200727
+        ],
+        "unit": "MWh_reconstructed_residual_or_electric_load",
+        "priority": 0,
+        "shortfall_weight": 1.0
+      }
+    ],
+    "devices": [
+      {
+        "id": "industrial_electricity_device",
+        "node": "electricity",
+        "service": "industrial_electricity",
+        "service_per_mwh": 1.0,
+        "input_capacity_mw": 15922680.794520548,
+        "resource_cost_per_mwh": 0.0,
+        "gross_co2_t_per_mwh": 0.0,
+        "liability_co2_t_per_mwh": 0.0
+      },
+      {
+        "id": "other_electricity_device",
+        "node": "electricity",
+        "service": "other_electricity",
+        "service_per_mwh": 1.0,
+        "input_capacity_mw": 15922680.794520548,
+        "resource_cost_per_mwh": 0.0,
+        "gross_co2_t_per_mwh": 0.0,
+        "liability_co2_t_per_mwh": 0.0
+      },
+      {
+        "id": "coal_residual_device",
+        "node": "coal",
+        "service": "coal_residual",
+        "service_per_mwh": 1.0,
+        "input_capacity_mw": 15922680.794520548,
+        "resource_cost_per_mwh": 0.0,
+        "gross_co2_t_per_mwh": 0.32361139466870986,
+        "liability_co2_t_per_mwh": 0.32361139466870986
+      },
+      {
+        "id": "oil_residual_device",
+        "node": "oil",
+        "service": "oil_residual",
+        "service_per_mwh": 1.0,
+        "input_capacity_mw": 15922680.794520548,
+        "resource_cost_per_mwh": 0.0,
+        "gross_co2_t_per_mwh": 0.20813636000062619,
+        "liability_co2_t_per_mwh": 0.20813636000062619
+      },
+      {
+        "id": "gas_residual_device",
+        "node": "gas",
+        "service": "gas_residual",
+        "service_per_mwh": 1.0,
+        "input_capacity_mw": 15922680.794520548,
+        "resource_cost_per_mwh": 0.0,
+        "gross_co2_t_per_mwh": 0.18958910065804263,
+        "liability_co2_t_per_mwh": 0.18958910065804263
+      }
+    ],
+    "stores": [],
+    "stock_boundary": "cyclic",
+    "financial_limits": [],
+    "capture_storage_budget_t": 0.0,
+    "carbon_price_per_t": 0.0,
+    "solver_time_limit_s": 30.0
+  },
+  "agents": [
+    {
+      "id": "fuel",
+      "role": "fuel_supplier",
+      "cash": 10000000.0,
+      "credit_limit": 0.0,
+      "initial_margins": {}
+    },
+    {
+      "id": "generation",
+      "role": "generator",
+      "cash": 10000000.0,
+      "credit_limit": 0.0,
+      "initial_margins": {
+        "coal_build": 0.0,
+        "gas_build": 0.0,
+        "hydro_build": 0.0,
+        "nuclear_build": 0.0,
+        "wind_build": 0.0,
+        "solar_build": 0.0,
+        "solar_new_build": 0.0
+      }
+    },
+    {
+      "id": "industrial",
+      "role": "industry",
+      "cash": 10000000.0,
+      "credit_limit": 0.0,
+      "initial_margins": {}
+    },
+    {
+      "id": "transport",
+      "role": "transport",
+      "cash": 10000000.0,
+      "credit_limit": 0.0,
+      "initial_margins": {}
+    },
+    {
+      "id": "buildings",
+      "role": "building",
+      "cash": 10000000.0,
+      "credit_limit": 0.0,
+      "initial_margins": {}
+    },
+    {
+      "id": "grid",
+      "role": "grid_storage",
+      "cash": 10000000.0,
+      "credit_limit": 0.0,
+      "initial_margins": {}
+    },
+    {
+      "id": "government",
+      "role": "government",
+      "cash": 10000000.0,
+      "credit_limit": 0.0,
+      "initial_margins": {}
+    }
+  ],
+  "assets": [
+    {
+      "id": "coal_supply_opening",
+      "owner": "fuel",
+      "kind": "source",
+      "component": "coal_supply",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "gas_supply_opening",
+      "owner": "fuel",
+      "kind": "source",
+      "component": "gas_supply",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "oil_supply_opening",
+      "owner": "fuel",
+      "kind": "source",
+      "component": "oil_supply",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "hydro_resource_supply_opening",
+      "owner": "fuel",
+      "kind": "source",
+      "component": "hydro_resource_supply",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "nuclear_resource_supply_opening",
+      "owner": "fuel",
+      "kind": "source",
+      "component": "nuclear_resource_supply",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "wind_resource_supply_opening",
+      "owner": "fuel",
+      "kind": "source",
+      "component": "wind_resource_supply",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "solar_resource_supply_opening",
+      "owner": "fuel",
+      "kind": "source",
+      "component": "solar_resource_supply",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "coal_power_opening",
+      "owner": "generation",
+      "kind": "process",
+      "component": "coal_power",
+      "quantity": 840227.3223470825,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "gas_power_opening",
+      "owner": "generation",
+      "kind": "process",
+      "component": "gas_power",
+      "quantity": 56681.03222706374,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "hydro_power_opening",
+      "owner": "generation",
+      "kind": "process",
+      "component": "hydro_power",
+      "quantity": 304860.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "nuclear_power_opening",
+      "owner": "generation",
+      "kind": "process",
+      "component": "nuclear_power",
+      "quantity": 20080.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "wind_power_opening",
+      "owner": "generation",
+      "kind": "process",
+      "component": "wind_power",
+      "quantity": 96570.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "solar_power_opening",
+      "owner": "generation",
+      "kind": "process",
+      "component": "solar_power",
+      "quantity": 24860.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "aggregate_grid_opening",
+      "owner": "grid",
+      "kind": "process",
+      "component": "aggregate_grid",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "industrial_electricity_device_opening",
+      "owner": "industrial",
+      "kind": "device",
+      "component": "industrial_electricity_device",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "other_electricity_device_opening",
+      "owner": "buildings",
+      "kind": "device",
+      "component": "other_electricity_device",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "coal_residual_device_opening",
+      "owner": "industrial",
+      "kind": "device",
+      "component": "coal_residual_device",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "oil_residual_device_opening",
+      "owner": "transport",
+      "kind": "device",
+      "component": "oil_residual_device",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    },
+    {
+      "id": "gas_residual_device_opening",
+      "owner": "industrial",
+      "kind": "device",
+      "component": "gas_residual_device",
+      "quantity": 1.0,
+      "online_year": 2014,
+      "state": "operating",
+      "fixed_om_per_unit": 0.0
+    }
+  ],
+  "initial_projects": [],
+  "investment_options": [
+    {
+      "id": "coal_build",
+      "owner": "generation",
+      "kind": "process",
+      "component": "coal_power",
+      "capex_per_unit": 0.656,
+      "annual_installation_units": 42618.78976509517,
+      "maximum_total_units": 16804546.44694165,
+      "fixed_om_per_unit": 0.0,
+      "discount_rate": 0.05,
+      "economic_life": 40.0,
+      "expected_utilisation": 0.85,
+      "replacement_ratio": 1.0,
+      "connection_per_unit": 1.0,
+      "subsidy_per_unit": 0.0,
+      "lead_years": 4,
+      "construction_fractions": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "expected_terminal_value_per_unit": 0.0,
+      "funding_convention": "fully_funded_nonremunerated_escrow",
+      "known_year": 2014,
+      "permit_known_year": 2014,
+      "permit_effective_year": 2014,
+      "cost_reference_year": 2014,
+      "replaces": null
+    },
+    {
+      "id": "gas_build",
+      "owner": "generation",
+      "kind": "process",
+      "component": "gas_power",
+      "capex_per_unit": 0.538,
+      "annual_installation_units": 2875.027902456071,
+      "maximum_total_units": 1133620.6445412748,
+      "fixed_om_per_unit": 0.0,
+      "discount_rate": 0.05,
+      "economic_life": 30.0,
+      "expected_utilisation": 0.85,
+      "replacement_ratio": 1.0,
+      "connection_per_unit": 1.0,
+      "subsidy_per_unit": 0.0,
+      "lead_years": 2,
+      "construction_fractions": [
+        0.5,
+        0.5
+      ],
+      "expected_terminal_value_per_unit": 0.0,
+      "funding_convention": "fully_funded_nonremunerated_escrow",
+      "known_year": 2014,
+      "permit_known_year": 2014,
+      "permit_effective_year": 2014,
+      "cost_reference_year": 2014,
+      "replaces": null
+    },
+    {
+      "id": "hydro_build",
+      "owner": "generation",
+      "kind": "process",
+      "component": "hydro_power",
+      "capex_per_unit": 0.757,
+      "annual_installation_units": 21850.0,
+      "maximum_total_units": 6097200.0,
+      "fixed_om_per_unit": 0.0,
+      "discount_rate": 0.05,
+      "economic_life": 80.0,
+      "expected_utilisation": 0.39920262822938113,
+      "replacement_ratio": 1.0,
+      "connection_per_unit": 1.0,
+      "subsidy_per_unit": 0.0,
+      "lead_years": 5,
+      "construction_fractions": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "expected_terminal_value_per_unit": 0.0,
+      "funding_convention": "fully_funded_nonremunerated_escrow",
+      "known_year": 2014,
+      "permit_known_year": 2014,
+      "permit_effective_year": 2014,
+      "cost_reference_year": 2014,
+      "replaces": null
+    },
+    {
+      "id": "nuclear_build",
+      "owner": "generation",
+      "kind": "process",
+      "component": "nuclear_power",
+      "capex_per_unit": 1.763,
+      "annual_installation_units": 5470.0,
+      "maximum_total_units": 401600.0,
+      "fixed_om_per_unit": 0.0,
+      "discount_rate": 0.05,
+      "economic_life": 60.0,
+      "expected_utilisation": 0.7174498353617493,
+      "replacement_ratio": 1.0,
+      "connection_per_unit": 1.0,
+      "subsidy_per_unit": 0.0,
+      "lead_years": 7,
+      "construction_fractions": [
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285
+      ],
+      "expected_terminal_value_per_unit": 0.0,
+      "funding_convention": "fully_funded_nonremunerated_escrow",
+      "known_year": 2014,
+      "permit_known_year": 2014,
+      "permit_effective_year": 2014,
+      "cost_reference_year": 2014,
+      "replaces": null
+    },
+    {
+      "id": "wind_build",
+      "owner": "generation",
+      "kind": "process",
+      "component": "wind_power",
+      "capex_per_unit": 1.223,
+      "annual_installation_units": 20720.0,
+      "maximum_total_units": 1931400.0,
+      "fixed_om_per_unit": 0.0,
+      "discount_rate": 0.05,
+      "economic_life": 25.0,
+      "expected_utilisation": 0.18476199392590512,
+      "replacement_ratio": 1.0,
+      "connection_per_unit": 1.0,
+      "subsidy_per_unit": 0.0,
+      "lead_years": 1,
+      "construction_fractions": [
+        1.0
+      ],
+      "expected_terminal_value_per_unit": 0.0,
+      "funding_convention": "fully_funded_nonremunerated_escrow",
+      "known_year": 2014,
+      "permit_known_year": 2014,
+      "permit_effective_year": 2014,
+      "cost_reference_year": 2014,
+      "replaces": null
+    },
+    {
+      "id": "solar_build",
+      "owner": "generation",
+      "kind": "process",
+      "component": "solar_power",
+      "capex_per_unit": 2.878,
+      "annual_installation_units": 8170.0,
+      "maximum_total_units": 497200.0,
+      "fixed_om_per_unit": 0.0,
+      "discount_rate": 0.05,
+      "economic_life": 25.0,
+      "expected_utilisation": 0.10607346345011516,
+      "replacement_ratio": 1.0,
+      "connection_per_unit": 1.0,
+      "subsidy_per_unit": 0.0,
+      "lead_years": 1,
+      "construction_fractions": [
+        1.0
+      ],
+      "expected_terminal_value_per_unit": 0.0,
+      "funding_convention": "fully_funded_nonremunerated_escrow",
+      "known_year": 2014,
+      "permit_known_year": 2014,
+      "permit_effective_year": 2014,
+      "cost_reference_year": 2014,
+      "replaces": null
+    },
+    {
+      "id": "solar_new_build",
+      "owner": "generation",
+      "kind": "process",
+      "component": "solar_new_power",
+      "capex_per_unit": 2.0127171445465937,
+      "annual_installation_units": 8170.0,
+      "maximum_total_units": 497200.0,
+      "fixed_om_per_unit": 0.0,
+      "discount_rate": 0.05,
+      "economic_life": 25.0,
+      "expected_utilisation": 0.17,
+      "replacement_ratio": 1.0,
+      "connection_per_unit": 1.0,
+      "subsidy_per_unit": 0.0,
+      "lead_years": 1,
+      "construction_fractions": [
+        1.0
+      ],
+      "expected_terminal_value_per_unit": 0.0,
+      "funding_convention": "fully_funded_nonremunerated_escrow",
+      "known_year": 2016,
+      "permit_known_year": 2014,
+      "permit_effective_year": 2014,
+      "cost_reference_year": 2014,
+      "replaces": null
+    }
+  ],
+  "asset_events": [],
+  "other_accounts": {
+    "clearing": 100000000.0,
+    "external_economy": 1000000000.0,
+    "construction": 0.0,
+    "escrow": 0.0,
+    "carbon_market": 0.0
+  },
+  "behavior": {
+    "expectation_update": 0.5,
+    "investment_adjustment": 0.6
+  },
+  "demand_drivers": {
+    "industrial_electricity": {
+      "gdp_elasticity": 1.0,
+      "annual_intensity_improvement": 0.0
+    },
+    "other_electricity": {
+      "gdp_elasticity": 1.0,
+      "annual_intensity_improvement": 0.0
+    },
+    "coal_residual": {
+      "gdp_elasticity": 0.4,
+      "annual_intensity_improvement": 0.0
+    },
+    "oil_residual": {
+      "gdp_elasticity": 0.4,
+      "annual_intensity_improvement": 0.0
+    },
+    "gas_residual": {
+      "gdp_elasticity": 0.4,
+      "annual_intensity_improvement": 0.0
+    }
+  },
+  "gdp_growth": {
+    "2015": 0.07,
+    "2016": 0.068,
+    "2017": 0.069,
+    "2018": 0.068,
+    "2019": 0.061,
+    "2020": 0.023,
+    "2021": 0.086,
+    "2022": 0.031,
+    "2023": 0.054000000000000006,
+    "2024": 0.05
+  },
+  "cost_decline": {
+    "coal_build": 0.0,
+    "gas_build": 0.0,
+    "hydro_build": 0.0,
+    "nuclear_build": 0.0,
+    "wind_build": 0.03,
+    "solar_build": 0.1,
+    "solar_new_build": 0.1
+  },
+  "mechanisms": {
+    "investment": true,
+    "replacement": false,
+    "expectation_learning": true
+  },
+  "policies": [
+    {
+      "id": "constant_research_prices_not_actual_historical_policy",
+      "known_year": 2014,
+      "effective_year": 2014,
+      "node_prices": {
+        "coal": 1.0620000000000002e-05,
+        "gas": 1.6308e-05,
+        "oil": 2.2e-05,
+        "hydro_resource": 0.0,
+        "nuclear_resource": 9.33e-06,
+        "wind_resource": 0.0,
+        "solar_resource": 0.0,
+        "electricity_bus": 7e-05,
+        "electricity": 8e-05
+      },
+      "service_prices": {
+        "industrial_electricity": 0.0002,
+        "other_electricity": 0.0002,
+        "coal_residual": 0.0002,
+        "oil_residual": 0.0002,
+        "gas_residual": 0.0002
+      },
+      "carbon_price_per_t": 0.0,
+      "government_agent": "government",
+      "subsidy_budget": 0.0,
+      "construction_units_limit": 150000.0,
+      "connection_limit": 150000.0
+    }
+  ]
+}

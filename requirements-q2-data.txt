@@ -1,0 +1,5 @@
+# Optional offline extraction of the existing CEADs BIFF .xls originals.
+# Install alongside requirements-q2.txt; not required by the model runner.
+xlrd==2.0.1
+# Unchanged CEADs national OOXML workbook; optional extraction only.
+openpyxl==3.1.5

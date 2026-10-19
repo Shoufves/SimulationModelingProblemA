@@ -1,0 +1,119 @@
+{
+  "scope": "rejected_sector_model_diagnostics",
+  "cases": 6,
+  "comparisons": [
+    {
+      "structure": "shared_construction_connection",
+      "training_loss": 0.24390204797871404,
+      "parent_training_loss": 0.2357603114879326,
+      "increase": 0.008141736490781426,
+      "parameters": {
+        "industry_gdp_response": 0.0,
+        "transport_gdp_response": 0.0,
+        "other_gdp_response": 2.0
+      },
+      "failed_numeric_targets": [
+        "consumption_coal_share",
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ],
+      "selected_overall": false
+    },
+    {
+      "structure": "technology_frontiers",
+      "training_loss": 0.40749780667409813,
+      "parent_training_loss": 0.3993364743934041,
+      "increase": 0.008161332280694045,
+      "parameters": {
+        "industry_gdp_response": 0.0,
+        "transport_gdp_response": 0.0,
+        "other_gdp_response": 2.0
+      },
+      "failed_numeric_targets": [
+        "consumption_coal_share",
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "solar_10kW"
+      ],
+      "selected_overall": false
+    },
+    {
+      "structure": "shared_construction_connection_pvqueue_1",
+      "training_loss": 0.20390116810484105,
+      "parent_training_loss": 0.19577414924298217,
+      "increase": 0.008127018861858876,
+      "parameters": {
+        "industry_gdp_response": 0.0,
+        "transport_gdp_response": 0.0,
+        "other_gdp_response": 2.0
+      },
+      "failed_numeric_targets": [
+        "consumption_coal_share",
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ],
+      "selected_overall": false
+    },
+    {
+      "structure": "technology_frontiers_pvqueue_1",
+      "training_loss": 0.2709912246496339,
+      "parent_training_loss": 0.2628297988269793,
+      "increase": 0.008161425822654556,
+      "parameters": {
+        "industry_gdp_response": 0.0,
+        "transport_gdp_response": 0.0,
+        "other_gdp_response": 2.0
+      },
+      "failed_numeric_targets": [
+        "consumption_coal_share",
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "solar_10kW"
+      ],
+      "selected_overall": false
+    },
+    {
+      "structure": "shared_construction_connection_pvqueue_2",
+      "training_loss": 0.1696301882890362,
+      "parent_training_loss": 0.1615137337952601,
+      "increase": 0.008116454493776099,
+      "parameters": {
+        "industry_gdp_response": 0.0,
+        "transport_gdp_response": 0.0,
+        "other_gdp_response": 2.0
+      },
+      "failed_numeric_targets": [
+        "consumption_coal_share",
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ],
+      "selected_overall": false
+    },
+    {
+      "structure": "technology_frontiers_pvqueue_2",
+      "training_loss": 0.18072454090077095,
+      "parent_training_loss": 0.17254144329219598,
+      "increase": 0.008183097608574968,
+      "parameters": {
+        "industry_gdp_response": 0.0,
+        "transport_gdp_response": 0.0,
+        "other_gdp_response": 2.0
+      },
+      "failed_numeric_targets": [
+        "consumption_oil_share",
+        "consumption_gas_share"
+      ],
+      "selected_overall": false
+    }
+  ],
+  "sector_account_rows": 594,
+  "all_losses_worse_than_parent": true,
+  "national_acceptance": false,
+  "interpretation": "All six sector responses selected on training, including rejected ones. No switching to a lower holdout error model; useful services and true carbon boundary remain unresolved."
+}

@@ -1,0 +1,57 @@
+{
+  "config_path": "workflow/q2_candidates/v11_sector_diagnostics.json",
+  "config_sha256": "e9db66aaece6259bc605afd91664179447b877891142ae80bef8afd8762e5f34",
+  "bindings": {
+    "manifest": {
+      "path": "workflow/q2_candidates/v11/manifest.json",
+      "sha256": "32d97265fb6fbf2634358945df7a775dc8abf4a970ee17a5cec2c29cd016857a"
+    },
+    "trials": {
+      "path": "outputs/q2/historical_candidate_v11/training_trials.json",
+      "sha256": "e2467c78177201ff57dc303f56c3fb0144f17bca4e7fd006e9a6162ec3b7b51c"
+    },
+    "selection": {
+      "path": "outputs/q2/historical_candidate_v11/training_selection.json",
+      "sha256": "730226aa0965f3c82ef5d71a613f480f13d5a00d04c00065c1d5f8a5b8432bcf"
+    }
+  },
+  "code_hashes": {
+    "scripts/run_q2_sector_diagnostics.py": "f307af62d6323a33f076378024118d7aa2a03a41fb09a643ffe3fb7c0d06133a",
+    "scripts/run_q2_sector_candidate.py": "f44bacd9b4d456f874ce477bad127014b4183ca21ec79978f847c5a3bff061c4",
+    "scripts/build_q2_sector_candidate.py": "51ac7434b6044f37279be2b6447bf5715118a4c4b6b70b5af982e2ec6391abc7",
+    "scripts/run_q2_nonenergy_episode.py": "939b524686c3c3b55e9d0f5aa7b6e56a688b1d1dafd365dfe7fe445113341fd9",
+    "scripts/build_q2_nonenergy_episode.py": "474fe30eb98864f1601aa599360c26349ec47a3307af52c118cd271d2b09b325",
+    "scripts/run_q2_joint_deployment_comparison.py": "bcb6d6a17a32d107190203971a1bcd5f3c48725bbe117febbf8b29e751ce43c6",
+    "scripts/run_q2_historical_candidate.py": "2413adff86d25a48fda7824110120b7b596761269ae6990456a252b92f65c91a",
+    "scripts/run_q2_deployment_ablation.py": "5beb9be9c97a04c6fdef6972958706bba4d70656cdc79fb51fc1a746ecd22820",
+    "scripts/run_q2_solar_ablation.py": "e254f80194d93f975a200666294b58ce243d8e2ce7853b58e116e5de9b2519af",
+    "scripts/prepare_q2_apec_balance.py": "cd33811c1b2c8a243356e1054cb0d64ed1c356767487bcd6239f17a38a5e4c48",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/annual.py": "3b3788ee5332bf5d1b758cded1a9ce5445d54e57065fb74386466d286ec3d94a",
+    "src/energy_model/q2/approvals.py": "0e6cf2f7903e76d8490c52daed1648d407e44dcf3562e674ee2eaa6496e969c9",
+    "src/energy_model/q2/contracts.py": "ac00ba2450fc0ff01060ef846b700c0f5ed9e481acb9a6577aa067a39a155ee2",
+    "src/energy_model/q2/demand.py": "7584277e1dcc87f815f090b3506ff3f4a00660815f5cef006cec47d59a9f0fc1",
+    "src/energy_model/q2/deployment.py": "2ec6fe0a88a43bb1c1ae0284c6e6f6bf1e768609c0a3894f13dc7046a67e33f7",
+    "src/energy_model/q2/experiments.py": "b6432f11758893710dbe20296657313eeb5c70238978f774604513453ff4eb8f",
+    "src/energy_model/q2/finance.py": "6724e4a9a37411cc12565fdb36086bca37de49dc1f245b5aec4548a64a39e22e",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32",
+    "src/energy_model/q2/lifecycle.py": "77c1908aa1cca437f72674b3ac88873206f07188f1e3eae6d2f8504aec86c403",
+    "src/energy_model/q2/operations.py": "95b0999dfdcb57b46046178c93c7a07facd7a16a1da4f0407bd93e1658bd2bb2",
+    "src/energy_model/q2/quality.py": "a1176bc537f7bbddcc664ed697ac9bbac8f8f347097a5650e06cd1f978cd370d",
+    "src/energy_model/q2/targets.py": "2e67cd5f0996f4e1a20c836ecc2a300f48ffdddbd058f620f7312634f72ce064"
+  },
+  "outputs": {
+    "loss_decomposition.csv": "7df50a2b9a03c3700e857cd3c35d56c36ca6b6ae282ab71a44d8b0e5c3cbef4d",
+    "metrics.csv": "2f491cf5240f00a8c591798b7a752b0cc9d9babcb2292feb6dcb6f1f3b647db2",
+    "quality.csv": "5686c287400f0f7517f76c016910ed16c6748f63d149ae527010ea368ed7970b",
+    "sector_accounts.csv": "04e1dc1a0d8540f5c6f9493a81665f2870128ecfcb2c27e7ac90bef19e3e4114",
+    "shared_construction_connection.json": "0eb09c9cb9bbb59cff6ba699a1a0ea8717b66aa4b9dea5696cd1f0b09532ff12",
+    "shared_construction_connection_pvqueue_1.json": "400db2062a1d22bfe27868560510b695ef95a086224cac4a6050a2f5c9cd7144",
+    "shared_construction_connection_pvqueue_2.json": "9be4f924fc819c0ac06aea13e3be24629e35aa2254bb6347aab3a2b98bbfe41e",
+    "summary.json": "7447640242e6676510d7fe33e2a53b25a0502fe0b7976cb94959772de19b78db",
+    "technology_frontiers.json": "6c89582bbf93e6f57e3d7e179014c4b34298c4a6d0137ebbe9a4e4becb10748b",
+    "technology_frontiers_pvqueue_1.json": "009d75fc6f2e19f6480d08fe13791e3c5e3cd263a5f61673632f6a797077193d",
+    "technology_frontiers_pvqueue_2.json": "7ddee6a01db848ce1c9969ea7f9cc0fd3ea9f489cd39db3e42439445cfa28bc7"
+  },
+  "national_acceptance": false
+}

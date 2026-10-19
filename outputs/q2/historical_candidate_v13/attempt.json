@@ -1,0 +1,33 @@
+{
+  "status": "diagnostic_executed",
+  "selected": {
+    "trial": 219,
+    "case": "fixed_150GW__proportional_requests",
+    "rule": "instant_margin",
+    "parameters": {
+      "wind_stock_expansion_rate": 0.24183444314471036,
+      "solar_stock_expansion_rate": 0.5082671370268271,
+      "oil_residual_elasticity": 0.7105777108855307,
+      "gas_residual_elasticity": 1.9343189347712555,
+      "coal_residual_intensity_improvement": 0.029999999999999624,
+      "electricity_elasticity": 0.7168458276073418
+    },
+    "status": "valid",
+    "loss": 0.07621858174497165
+  },
+  "training_executions": 653,
+  "previous_cumulative_executions": 5995,
+  "cumulative_executions": 6648,
+  "numeric_quality_passed": false,
+  "failed_indicators": [
+    "consumption_coal_share",
+    "consumption_oil_share",
+    "consumption_gas_share",
+    "solar_10kW",
+    "gcb_fuel_co2"
+  ],
+  "equivalent_candidate_count": 1,
+  "full_v12_ledger_equal": true,
+  "national_acceptance": false,
+  "previous_holdout_already_seen": true
+}

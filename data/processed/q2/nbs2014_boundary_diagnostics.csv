@@ -1,0 +1,5 @@
+﻿comparison,left_value,right_value,difference_left_minus_right,unit,left_source,right_source,status,implication
+"NBS edition revision, 2014 consumption",428334.0,425806.07,2527.93,10^4 tce,yx:NBS_2025_C09-02,lb/base:NBS_ARCHIVE_2016_0909CH,vintage_difference_not_reconciled,Do not scale 2016 sector cells to 2025 total without a separate statistical bridge.
+"30-province vs national final electricity, 2014",53453.9,53283.8,170.1,10^8 kWh,data/raw/lb/base/ceads/Province_energy_inventory_2014.xls,lb/base:NBS_ARCHIVE_2016_0906CH,geography_and_vintage_difference_not_reconciled,A larger 30-province total cannot be explained by adding missing Tibet alone; do not force residual allocation.
+Generation total minus four reported technology subtotals,56495.8,56216.1,279.7,10^8 kWh,lb/base:NBS_ARCHIVE_2016_0906CH,same table,unclassified_generation_residual,Do not label the residual solar or zero.
+Electricity supply minus consumption,56381.8,56383.7,-1.9,10^8 kWh,lb/base:NBS_ARCHIVE_2016_0906CH,same table,published_balance_discrepancy,Preserve published discrepancy; do not modify original consumption or generation.

@@ -1,0 +1,355 @@
+{
+  "reference_date": "2024-12-31",
+  "scope": "partial_current_state_not_admitted",
+  "capacity_vintage": "NBS_2025_C09-15",
+  "national_generation_capacity_mw": {
+    "total": 3349220.0,
+    "thermal": 1444620.0,
+    "hydro": 435520.0,
+    "nuclear": 60830.0,
+    "wind": 520780.0,
+    "solar": 887420.0,
+    "other": 50.0
+  },
+  "components": [
+    {
+      "id": "wind_power",
+      "kind": "process",
+      "capacity_mw": 520780.0,
+      "evidence": [
+        "NBS:wind"
+      ],
+      "operating_availability": null,
+      "age_distribution": null,
+      "missing_fields": [
+        "operating_availability",
+        "age_distribution"
+      ]
+    },
+    {
+      "id": "nuclear_power",
+      "kind": "process",
+      "capacity_mw": 60830.0,
+      "evidence": [
+        "NBS:nuclear"
+      ],
+      "operating_availability": null,
+      "age_distribution": null,
+      "missing_fields": [
+        "operating_availability",
+        "age_distribution",
+        "unit_identity_and_licensing"
+      ]
+    },
+    {
+      "id": "coal_power",
+      "kind": "process",
+      "capacity_mw": null,
+      "evidence": [],
+      "operating_availability": null,
+      "age_distribution": null,
+      "missing_fields": [
+        "thermal_fuel_partition",
+        "capacity_mw",
+        "operating_availability",
+        "age_distribution"
+      ]
+    },
+    {
+      "id": "gas_power",
+      "kind": "process",
+      "capacity_mw": null,
+      "evidence": [],
+      "operating_availability": null,
+      "age_distribution": null,
+      "missing_fields": [
+        "thermal_fuel_partition",
+        "capacity_mw",
+        "operating_availability",
+        "age_distribution"
+      ]
+    },
+    {
+      "id": "conventional_hydro",
+      "kind": "process",
+      "capacity_mw": null,
+      "evidence": [],
+      "operating_availability": null,
+      "age_distribution": null,
+      "missing_fields": [
+        "same_vintage_hydro_partition",
+        "capacity_mw",
+        "operating_availability",
+        "age_distribution"
+      ]
+    },
+    {
+      "id": "solar_PV",
+      "kind": "process",
+      "capacity_mw": null,
+      "evidence": [],
+      "operating_availability": null,
+      "age_distribution": null,
+      "missing_fields": [
+        "same_vintage_solar_partition",
+        "capacity_mw",
+        "operating_availability",
+        "age_distribution"
+      ]
+    },
+    {
+      "id": "other_generation",
+      "kind": "process",
+      "capacity_mw": null,
+      "evidence": [],
+      "operating_availability": null,
+      "age_distribution": null,
+      "missing_fields": [
+        "technology_and_fuel_identity",
+        "capacity_mw",
+        "operating_availability",
+        "age_distribution"
+      ]
+    },
+    {
+      "id": "pumped_hydro",
+      "kind": "store",
+      "capacity_mw": 58690.0,
+      "evidence": [
+        "RENEW:pumped_hydro_capacity"
+      ],
+      "operating_availability": null,
+      "age_distribution": null,
+      "missing_fields": [
+        "same_vintage_hydro_partition",
+        "energy_capacity_mwh",
+        "initial_soc_mwh",
+        "efficiency",
+        "operating_availability",
+        "age_distribution"
+      ],
+      "energy_capacity_mwh": null,
+      "initial_soc_mwh": null,
+      "efficiency": null,
+      "status": "separate_NEA_release_not_added_to_NBS_hydro"
+    },
+    {
+      "id": "new_storage",
+      "kind": "store",
+      "capacity_mw": 73760.0,
+      "evidence": [
+        "STORAGE:power",
+        "STORAGE:energy"
+      ],
+      "operating_availability": null,
+      "age_distribution": null,
+      "missing_fields": [
+        "technology_composition",
+        "initial_soc_mwh",
+        "efficiency",
+        "operating_availability",
+        "age_distribution"
+      ],
+      "energy_capacity_mwh": 168200.0,
+      "initial_soc_mwh": null,
+      "efficiency": null,
+      "status": "nameplate_only_excludes_pumped_hydro"
+    }
+  ],
+  "electricity_annual_mwh": {
+    "total": 9852100000.0,
+    "primary": 135700000.0,
+    "secondary": 6387400000.0,
+    "tertiary": 1834800000.0,
+    "household": 1494200000.0
+  },
+  "gas_annual_use_shares": {
+    "city": 0.34,
+    "industrial": 0.41000000000000003,
+    "power": 0.18,
+    "chemical": 0.07
+  },
+  "initialization_complete": false,
+  "national_acceptance": false,
+  "unresolved_fields": [
+    {
+      "component": "wind_power",
+      "field": "operating_availability"
+    },
+    {
+      "component": "wind_power",
+      "field": "age_distribution"
+    },
+    {
+      "component": "nuclear_power",
+      "field": "operating_availability"
+    },
+    {
+      "component": "nuclear_power",
+      "field": "age_distribution"
+    },
+    {
+      "component": "nuclear_power",
+      "field": "unit_identity_and_licensing"
+    },
+    {
+      "component": "coal_power",
+      "field": "thermal_fuel_partition"
+    },
+    {
+      "component": "coal_power",
+      "field": "capacity_mw"
+    },
+    {
+      "component": "coal_power",
+      "field": "operating_availability"
+    },
+    {
+      "component": "coal_power",
+      "field": "age_distribution"
+    },
+    {
+      "component": "gas_power",
+      "field": "thermal_fuel_partition"
+    },
+    {
+      "component": "gas_power",
+      "field": "capacity_mw"
+    },
+    {
+      "component": "gas_power",
+      "field": "operating_availability"
+    },
+    {
+      "component": "gas_power",
+      "field": "age_distribution"
+    },
+    {
+      "component": "conventional_hydro",
+      "field": "same_vintage_hydro_partition"
+    },
+    {
+      "component": "conventional_hydro",
+      "field": "capacity_mw"
+    },
+    {
+      "component": "conventional_hydro",
+      "field": "operating_availability"
+    },
+    {
+      "component": "conventional_hydro",
+      "field": "age_distribution"
+    },
+    {
+      "component": "solar_PV",
+      "field": "same_vintage_solar_partition"
+    },
+    {
+      "component": "solar_PV",
+      "field": "capacity_mw"
+    },
+    {
+      "component": "solar_PV",
+      "field": "operating_availability"
+    },
+    {
+      "component": "solar_PV",
+      "field": "age_distribution"
+    },
+    {
+      "component": "other_generation",
+      "field": "technology_and_fuel_identity"
+    },
+    {
+      "component": "other_generation",
+      "field": "capacity_mw"
+    },
+    {
+      "component": "other_generation",
+      "field": "operating_availability"
+    },
+    {
+      "component": "other_generation",
+      "field": "age_distribution"
+    },
+    {
+      "component": "pumped_hydro",
+      "field": "same_vintage_hydro_partition"
+    },
+    {
+      "component": "pumped_hydro",
+      "field": "energy_capacity_mwh"
+    },
+    {
+      "component": "pumped_hydro",
+      "field": "initial_soc_mwh"
+    },
+    {
+      "component": "pumped_hydro",
+      "field": "efficiency"
+    },
+    {
+      "component": "pumped_hydro",
+      "field": "operating_availability"
+    },
+    {
+      "component": "pumped_hydro",
+      "field": "age_distribution"
+    },
+    {
+      "component": "new_storage",
+      "field": "technology_composition"
+    },
+    {
+      "component": "new_storage",
+      "field": "initial_soc_mwh"
+    },
+    {
+      "component": "new_storage",
+      "field": "efficiency"
+    },
+    {
+      "component": "new_storage",
+      "field": "operating_availability"
+    },
+    {
+      "component": "new_storage",
+      "field": "age_distribution"
+    },
+    {
+      "component": "fuel_supply",
+      "field": "dated_supply_inventory_and_withdrawal"
+    },
+    {
+      "component": "end_use",
+      "field": "useful_services_device_capacity_efficiency_and_age"
+    },
+    {
+      "component": "project_queue",
+      "field": "identity_status_remaining_cost_and_schedule"
+    },
+    {
+      "component": "finance",
+      "field": "opening_cash_credit_and_commitments"
+    },
+    {
+      "component": "chronology",
+      "field": "matched_load_weather_and_operating_profiles"
+    }
+  ],
+  "checks": {
+    "capacity_sum_residual_mw": 0.0,
+    "electricity_category_residual_mwh": 0.0,
+    "gas_share_sum": 1.0
+  },
+  "restrictions": [
+    "Year-end nameplate never becomes annual effective capacity or an availability curve.",
+    "Reliability reporting fleets cannot supply national coal/gas capacities or extrapolation weights.",
+    "Hydro already includes pumped storage; solar includes more than PV. No mixed-vintage subtraction.",
+    "New storage power and energy are known, but SOC/efficiency/age and technology composition are unknown.",
+    "All-society electricity use is not delivered useful service; do not apply a second unreviewed loss factor.",
+    "Gas use shares do not provide a matched physical consumption denominator or hourly supply.",
+    "A historical fitted 2024 endpoint is not an observed 2024 initialization."
+  ],
+  "source_review_sha256": "fa51ac97a1def8fa3df30a0695aaada7939f136859a9b67528edc994c91e20c5"
+}

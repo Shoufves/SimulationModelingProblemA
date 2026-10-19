@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "status": "author_proposal_not_team_consensus",
+  "task": "P2/Q2; GitHub Issue #7",
+  "working_start": "af930750a57144324995142a75e47ce3cdae1fd8",
+  "shared_base": "804ec15ee43874303986a7ad91b2cde05c65b124",
+  "date": "2026-10-18",
+  "historical_windows": {"train": [2015, 2021], "already_seen_holdout": [2022, 2024]},
+  "engineering": {
+    "absolute_balance_tolerance": 0.000001,
+    "relative_balance_tolerance": 0.00000001,
+    "negative_cases_must_fail": true,
+    "same_scientific_outputs_across_two_runs": true,
+    "protected_source_bytes_unchanged": true,
+    "q1_scientific_regression_unchanged": true
+  },
+  "historical_quality": {
+    "status": "proposed_before_q2_fit",
+    "reason": "Author's explicit research tolerance, not an official contest or team threshold. No Q2 fit has been evaluated when frozen.",
+    "maximum_holdout_mape_each_target": 0.15,
+    "maximum_holdout_share_absolute_error": 0.05,
+    "maximum_holdout_normalized_rmse_ratio_to_persistence": 1.0,
+    "target_families": ["energy_consumption", "primary_mix", "capacity_or_generation", "co2"],
+    "all_families_required": true,
+    "no_holdout_retuning": true
+  },
+  "peak": {"minimum_following_years": 5, "maximum_rebound_fraction": 0.0, "minimum_final_decline_fraction": 0.01},
+  "gates": {
+    "B1": "Actual annual Mesa agents, queue, operations and feedback; mechanism ablations",
+    "B2": "Physical and financial conservation; constraints tested with hand-solvable counterexamples",
+    "B3": "Q2-specific substantive input review and pinned provenance, not Q1 permission inheritance",
+    "B4": "Multi-target calibration, already-seen holdout, simple baselines, alternative rules and equivalent candidates",
+    "B5": "2024 initialization and 2025-2060 S0; all required national indicators and coherent net CO2 boundary",
+    "B6": "Executed GDP, cost decline and carbon price sensitivity; explicit assumptions and stability",
+    "B7": "Missing, invalid, unreviewed and tampered inputs; infeasible/failed solver; stale results rejected",
+    "B8": "Regression, audits, scanner, nine legacy input contracts, dependency installation and independent reproduction",
+    "B9": "Two other human reviewers approve the same final SHA; cannot self-certify"
+  },
+  "completion_rule": "All B1-B8 require actual evidence. B9 is external review. No synthetic fixture or missing national target can satisfy B4/B5."
+}

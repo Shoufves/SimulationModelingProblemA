@@ -1,0 +1,283 @@
+{
+  "scope": "nonenergy_partition_diagnostic_not_national_history",
+  "cases": [
+    {
+      "id": "v10_control",
+      "kind": "unchanged_parent",
+      "material_elasticities": null
+    },
+    {
+      "id": "same_growth_split",
+      "kind": "classification_and_owner_mapping_control",
+      "material_elasticities": {
+        "coal": 0.0,
+        "oil": 0.5,
+        "gas": 2.0
+      }
+    },
+    {
+      "id": "material_response_0_0_0",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 0.0,
+        "oil": 0.0,
+        "gas": 0.0
+      }
+    },
+    {
+      "id": "material_response_0_0_1",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 0.0,
+        "oil": 0.0,
+        "gas": 1.0
+      }
+    },
+    {
+      "id": "material_response_0_0_2",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 0.0,
+        "oil": 0.0,
+        "gas": 2.0
+      }
+    },
+    {
+      "id": "material_response_0_1_0",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 0.0,
+        "oil": 1.0,
+        "gas": 0.0
+      }
+    },
+    {
+      "id": "material_response_0_1_1",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 0.0,
+        "oil": 1.0,
+        "gas": 1.0
+      }
+    },
+    {
+      "id": "material_response_0_1_2",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 0.0,
+        "oil": 1.0,
+        "gas": 2.0
+      }
+    },
+    {
+      "id": "material_response_0_2_0",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 0.0,
+        "oil": 2.0,
+        "gas": 0.0
+      }
+    },
+    {
+      "id": "material_response_0_2_1",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 0.0,
+        "oil": 2.0,
+        "gas": 1.0
+      }
+    },
+    {
+      "id": "material_response_0_2_2",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 0.0,
+        "oil": 2.0,
+        "gas": 2.0
+      }
+    },
+    {
+      "id": "material_response_1_0_0",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 1.0,
+        "oil": 0.0,
+        "gas": 0.0
+      }
+    },
+    {
+      "id": "material_response_1_0_1",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 1.0,
+        "oil": 0.0,
+        "gas": 1.0
+      }
+    },
+    {
+      "id": "material_response_1_0_2",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 1.0,
+        "oil": 0.0,
+        "gas": 2.0
+      }
+    },
+    {
+      "id": "material_response_1_1_0",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 1.0,
+        "oil": 1.0,
+        "gas": 0.0
+      }
+    },
+    {
+      "id": "material_response_1_1_1",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 1.0,
+        "oil": 1.0,
+        "gas": 1.0
+      }
+    },
+    {
+      "id": "material_response_1_1_2",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 1.0,
+        "oil": 1.0,
+        "gas": 2.0
+      }
+    },
+    {
+      "id": "material_response_1_2_0",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 1.0,
+        "oil": 2.0,
+        "gas": 0.0
+      }
+    },
+    {
+      "id": "material_response_1_2_1",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 1.0,
+        "oil": 2.0,
+        "gas": 1.0
+      }
+    },
+    {
+      "id": "material_response_1_2_2",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 1.0,
+        "oil": 2.0,
+        "gas": 2.0
+      }
+    },
+    {
+      "id": "material_response_2_0_0",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 2.0,
+        "oil": 0.0,
+        "gas": 0.0
+      }
+    },
+    {
+      "id": "material_response_2_0_1",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 2.0,
+        "oil": 0.0,
+        "gas": 1.0
+      }
+    },
+    {
+      "id": "material_response_2_0_2",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 2.0,
+        "oil": 0.0,
+        "gas": 2.0
+      }
+    },
+    {
+      "id": "material_response_2_1_0",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 2.0,
+        "oil": 1.0,
+        "gas": 0.0
+      }
+    },
+    {
+      "id": "material_response_2_1_1",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 2.0,
+        "oil": 1.0,
+        "gas": 1.0
+      }
+    },
+    {
+      "id": "material_response_2_1_2",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 2.0,
+        "oil": 1.0,
+        "gas": 2.0
+      }
+    },
+    {
+      "id": "material_response_2_2_0",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 2.0,
+        "oil": 2.0,
+        "gas": 0.0
+      }
+    },
+    {
+      "id": "material_response_2_2_1",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 2.0,
+        "oil": 2.0,
+        "gas": 1.0
+      }
+    },
+    {
+      "id": "material_response_2_2_2",
+      "kind": "unfitted_conditional_response",
+      "material_elasticities": {
+        "coal": 2.0,
+        "oil": 2.0,
+        "gas": 2.0
+      }
+    }
+  ],
+  "mapping_assumptions": [
+    {
+      "id": "NEM01",
+      "statement": "Subtract reported2014APEC materialenergycentres from inherited2014NBS/GCB residual proxy, separately bycoal/oil/gas. Preserve openingfuel demand and allocate existinginputcapacity, do not create fuel or cash. Differentenergybasis/vintages and unassigned0..5.5ktoe remain unresolved; not a national initialization."
+    },
+    {
+      "id": "NEM02",
+      "statement": "Use same inherited four-block profile and material1MWhLHVcontent/MWhfuel,not thermal efficiency. Assign reportedindustry toindustrialagent,transformation toexistingfuelagent andtransport totransportagent. Existingprice/cash assumptions retained,not observedmaterialmarkets."
+    },
+    {
+      "id": "NEM03",
+      "statement": "Materialdevices carry0in the partial energy-combustion proxy only. Their actual oxidation,industrialprocess emissions,byproduct recovery and later disposal are unresolved,notzero. No removal or capturecredit,carbon-tax coverage or claim of avoidedreal emissions. Exclude the oldGCB carbon target from comparisons forsplitcases."
+    },
+    {
+      "id": "NEM04",
+      "statement": "Samegrowthcontrol uses inheritedcarrierGDPelasticities0/0.5/2. Other27cases use eachmaterialcarrierelasticity0/1/2 as declaredresearchrange,not empiricalprior. Existingnonmaterialresponses andallgenerationparameters fixed. No observedfuturefeedstock consumption or targeted2060trajectory."
+    }
+  ],
+  "national_acceptance": false,
+  "carbon_target_comparison_admitted": false,
+  "reason": "Model now excludes declared material from direct energy-combustion proxy. Process oxidation, end-of-life release and full GCB boundary remain unresolved; do not rank models against the old aggregate carbon target."
+}

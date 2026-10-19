@@ -1,0 +1,10 @@
+{
+  "reason": "Original control has no residential subaccount. Remove its misleading zero-valued scoped service row; no model input, simulated result, or selection changed.",
+  "original_locations": {
+    "results": "outputs/q2/residential_heat_episode_final",
+    "checks.json": "outputs/q2/device_mapping_checks.json",
+    "reproduction.json": "outputs/q2/device_mapping_reproduction.json"
+  },
+  "active_paths_rebuilt": true,
+  "raw_source_files_moved": false
+}

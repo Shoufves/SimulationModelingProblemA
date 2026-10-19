@@ -1,0 +1,2167 @@
+[
+  {
+    "trial": {
+      "trial": 219,
+      "case": "fixed_150GW__proportional_requests",
+      "rule": "instant_margin",
+      "parameters": {
+        "wind_stock_expansion_rate": 0.24183444314471036,
+        "solar_stock_expansion_rate": 0.5082671370268271,
+        "oil_residual_elasticity": 0.7105777108855307,
+        "gas_residual_elasticity": 1.9343189347712555,
+        "coal_residual_intensity_improvement": 0.029999999999999624,
+        "electricity_elasticity": 0.7168458276073418
+      },
+      "status": "valid",
+      "loss": 0.07621858174497165
+    },
+    "model": {
+      "scope": "historical_aggregate_candidate_not_admitted",
+      "seed": 17,
+      "start_year": 2014,
+      "end_year": 2024,
+      "operation": {
+        "energy_unit": "MWh_LHV",
+        "currency_unit": "constant_currency",
+        "hours": [
+          6.0,
+          6.0,
+          6.0,
+          6.0
+        ],
+        "annual_weights": [
+          365.0,
+          365.0,
+          365.0,
+          365.0
+        ],
+        "information_mode": "announced_window",
+        "nodes": [
+          "coal",
+          "gas",
+          "oil",
+          "hydro_resource",
+          "nuclear_resource",
+          "wind_resource",
+          "solar_resource",
+          "electricity_bus",
+          "electricity"
+        ],
+        "spill_nodes": [
+          "electricity_bus"
+        ],
+        "sources": [
+          {
+            "id": "coal_supply",
+            "node": "coal",
+            "limit_mw": [
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548
+            ],
+            "window_budget_mwh": 139482683760.0,
+            "resource_cost_per_mwh": 1.0620000000000002e-05,
+            "primary_factor": 1.0,
+            "nonfossil": false
+          },
+          {
+            "id": "gas_supply",
+            "node": "gas",
+            "limit_mw": [
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548
+            ],
+            "window_budget_mwh": 139482683760.0,
+            "resource_cost_per_mwh": 1.6308e-05,
+            "primary_factor": 1.0,
+            "nonfossil": false
+          },
+          {
+            "id": "oil_supply",
+            "node": "oil",
+            "limit_mw": [
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548
+            ],
+            "window_budget_mwh": 139482683760.0,
+            "resource_cost_per_mwh": 2.2e-05,
+            "primary_factor": 1.0,
+            "nonfossil": false
+          },
+          {
+            "id": "hydro_resource_supply",
+            "node": "hydro_resource",
+            "limit_mw": [
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548
+            ],
+            "window_budget_mwh": 139482683760.0,
+            "resource_cost_per_mwh": 0.0,
+            "primary_factor": 1.0,
+            "nonfossil": true
+          },
+          {
+            "id": "nuclear_resource_supply",
+            "node": "nuclear_resource",
+            "limit_mw": [
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548
+            ],
+            "window_budget_mwh": 139482683760.0,
+            "resource_cost_per_mwh": 9.33e-06,
+            "primary_factor": 1.0,
+            "nonfossil": true
+          },
+          {
+            "id": "wind_resource_supply",
+            "node": "wind_resource",
+            "limit_mw": [
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548
+            ],
+            "window_budget_mwh": 139482683760.0,
+            "resource_cost_per_mwh": 0.0,
+            "primary_factor": 1.0,
+            "nonfossil": true
+          },
+          {
+            "id": "solar_resource_supply",
+            "node": "solar_resource",
+            "limit_mw": [
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548,
+              15922680.794520548
+            ],
+            "window_budget_mwh": 139482683760.0,
+            "resource_cost_per_mwh": 0.0,
+            "primary_factor": 1.0,
+            "nonfossil": true
+          }
+        ],
+        "processes": [
+          {
+            "id": "coal_power",
+            "inputs": {
+              "coal": 2.5
+            },
+            "outputs": {
+              "electricity_bus": 1.0
+            },
+            "capacity_mw": 1.0,
+            "availability": [
+              0.85,
+              0.85,
+              0.85,
+              0.85
+            ],
+            "minimum_fraction": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "initial_rate_mw": 0.0,
+            "ramp_mw_per_hour": 1.0,
+            "window_budget_mwh": 8760.0,
+            "resource_cost_per_mwh": 1.64e-06,
+            "gross_co2_t_per_mwh": 0.8090284866717746,
+            "captured_co2_t_per_mwh": 0.0,
+            "liability_co2_t_per_mwh": 0.8090284866717746
+          },
+          {
+            "id": "gas_power",
+            "inputs": {
+              "gas": 2.0
+            },
+            "outputs": {
+              "electricity_bus": 1.0
+            },
+            "capacity_mw": 1.0,
+            "availability": [
+              0.85,
+              0.85,
+              0.85,
+              0.85
+            ],
+            "minimum_fraction": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "initial_rate_mw": 0.0,
+            "ramp_mw_per_hour": 1.0,
+            "window_budget_mwh": 8760.0,
+            "resource_cost_per_mwh": 2.81e-06,
+            "gross_co2_t_per_mwh": 0.37917820131608526,
+            "captured_co2_t_per_mwh": 0.0,
+            "liability_co2_t_per_mwh": 0.37917820131608526
+          },
+          {
+            "id": "hydro_power",
+            "inputs": {
+              "hydro_resource": 1.0
+            },
+            "outputs": {
+              "electricity_bus": 1.0
+            },
+            "capacity_mw": 1.0,
+            "availability": [
+              0.39920262822938113,
+              0.39920262822938113,
+              0.39920262822938113,
+              0.39920262822938113
+            ],
+            "minimum_fraction": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "initial_rate_mw": 0.0,
+            "ramp_mw_per_hour": 1.0,
+            "window_budget_mwh": 8760.0,
+            "resource_cost_per_mwh": 2.5400000000000002e-06,
+            "gross_co2_t_per_mwh": 0.0,
+            "captured_co2_t_per_mwh": 0.0,
+            "liability_co2_t_per_mwh": 0.0
+          },
+          {
+            "id": "nuclear_power",
+            "inputs": {
+              "nuclear_resource": 1.0
+            },
+            "outputs": {
+              "electricity_bus": 1.0
+            },
+            "capacity_mw": 1.0,
+            "availability": [
+              0.7174498353617493,
+              0.7174498353617493,
+              0.7174498353617493,
+              0.7174498353617493
+            ],
+            "minimum_fraction": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "initial_rate_mw": 0.0,
+            "ramp_mw_per_hour": 1.0,
+            "window_budget_mwh": 8760.0,
+            "resource_cost_per_mwh": 7.1e-06,
+            "gross_co2_t_per_mwh": 0.0,
+            "captured_co2_t_per_mwh": 0.0,
+            "liability_co2_t_per_mwh": 0.0
+          },
+          {
+            "id": "wind_power",
+            "inputs": {
+              "wind_resource": 1.0
+            },
+            "outputs": {
+              "electricity_bus": 1.0
+            },
+            "capacity_mw": 1.0,
+            "availability": [
+              0.18476199392590512,
+              0.18476199392590512,
+              0.18476199392590512,
+              0.18476199392590512
+            ],
+            "minimum_fraction": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "initial_rate_mw": 0.0,
+            "ramp_mw_per_hour": 1.0,
+            "window_budget_mwh": 8760.0,
+            "resource_cost_per_mwh": 1.551e-05,
+            "gross_co2_t_per_mwh": 0.0,
+            "captured_co2_t_per_mwh": 0.0,
+            "liability_co2_t_per_mwh": 0.0
+          },
+          {
+            "id": "solar_power",
+            "inputs": {
+              "solar_resource": 1.0
+            },
+            "outputs": {
+              "electricity_bus": 1.0
+            },
+            "capacity_mw": 1.0,
+            "availability": [
+              0.0,
+              0.21214692690023032,
+              0.21214692690023032,
+              0.0
+            ],
+            "minimum_fraction": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "initial_rate_mw": 0.0,
+            "ramp_mw_per_hour": 1.0,
+            "window_budget_mwh": 8760.0,
+            "resource_cost_per_mwh": 1.565e-05,
+            "gross_co2_t_per_mwh": 0.0,
+            "captured_co2_t_per_mwh": 0.0,
+            "liability_co2_t_per_mwh": 0.0
+          },
+          {
+            "id": "aggregate_grid",
+            "inputs": {
+              "electricity_bus": 1.0
+            },
+            "outputs": {
+              "electricity": 0.9366
+            },
+            "capacity_mw": 3980670.198630137,
+            "availability": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "minimum_fraction": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "initial_rate_mw": 0.0,
+            "ramp_mw_per_hour": 3980670.198630137,
+            "window_budget_mwh": 34870670940.0,
+            "resource_cost_per_mwh": 0.0,
+            "gross_co2_t_per_mwh": 0.0,
+            "captured_co2_t_per_mwh": 0.0,
+            "liability_co2_t_per_mwh": 0.0
+          },
+          {
+            "id": "solar_new_power",
+            "inputs": {
+              "solar_resource": 1.0
+            },
+            "outputs": {
+              "electricity_bus": 1.0
+            },
+            "capacity_mw": 1.0,
+            "availability": [
+              0.0,
+              0.34,
+              0.34,
+              0.0
+            ],
+            "minimum_fraction": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "initial_rate_mw": 0.0,
+            "ramp_mw_per_hour": 1.0,
+            "window_budget_mwh": 8760.0,
+            "resource_cost_per_mwh": 1.565e-05,
+            "gross_co2_t_per_mwh": 0.0,
+            "captured_co2_t_per_mwh": 0.0,
+            "liability_co2_t_per_mwh": 0.0
+          }
+        ],
+        "services": [
+          {
+            "id": "industrial_electricity",
+            "demand": [
+              2288778.7522485736,
+              2543087.502498415,
+              2797396.2527482565,
+              2543087.502498415
+            ],
+            "unit": "MWh_reconstructed_residual_or_electric_load",
+            "priority": 0,
+            "shortfall_weight": 1.0
+          },
+          {
+            "id": "other_electricity",
+            "demand": [
+              821032.5157512596,
+              912258.3508347329,
+              1003484.1859182062,
+              912258.3508347329
+            ],
+            "unit": "MWh_reconstructed_residual_or_electric_load",
+            "priority": 0,
+            "shortfall_weight": 1.0
+          },
+          {
+            "id": "coal_residual",
+            "demand": [
+              8348225.765209605,
+              9275806.40578845,
+              10203387.046367295,
+              9275806.40578845
+            ],
+            "unit": "MWh_reconstructed_residual_or_electric_load",
+            "priority": 0,
+            "shortfall_weight": 1.0
+          },
+          {
+            "id": "oil_residual",
+            "demand": [
+              3718742.099560274,
+              4131935.666178082,
+              4545129.23279589,
+              4131935.666178082
+            ],
+            "unit": "MWh_reconstructed_residual_or_electric_load",
+            "priority": 0,
+            "shortfall_weight": 1.0
+          },
+          {
+            "id": "gas_residual",
+            "demand": [
+              1051630.4523123289,
+              1168478.2803470322,
+              1285326.1083817354,
+              1168478.2803470322
+            ],
+            "unit": "MWh_reconstructed_residual_or_electric_load",
+            "priority": 0,
+            "shortfall_weight": 1.0
+          }
+        ],
+        "devices": [
+          {
+            "id": "industrial_electricity_device",
+            "node": "electricity",
+            "service": "industrial_electricity",
+            "service_per_mwh": 1.0,
+            "input_capacity_mw": 15922680.794520548,
+            "resource_cost_per_mwh": 0.0,
+            "gross_co2_t_per_mwh": 0.0,
+            "liability_co2_t_per_mwh": 0.0
+          },
+          {
+            "id": "other_electricity_device",
+            "node": "electricity",
+            "service": "other_electricity",
+            "service_per_mwh": 1.0,
+            "input_capacity_mw": 15922680.794520548,
+            "resource_cost_per_mwh": 0.0,
+            "gross_co2_t_per_mwh": 0.0,
+            "liability_co2_t_per_mwh": 0.0
+          },
+          {
+            "id": "coal_residual_device",
+            "node": "coal",
+            "service": "coal_residual",
+            "service_per_mwh": 1.0,
+            "input_capacity_mw": 15922680.794520548,
+            "resource_cost_per_mwh": 0.0,
+            "gross_co2_t_per_mwh": 0.32361139466870986,
+            "liability_co2_t_per_mwh": 0.32361139466870986
+          },
+          {
+            "id": "oil_residual_device",
+            "node": "oil",
+            "service": "oil_residual",
+            "service_per_mwh": 1.0,
+            "input_capacity_mw": 15922680.794520548,
+            "resource_cost_per_mwh": 0.0,
+            "gross_co2_t_per_mwh": 0.20813636000062619,
+            "liability_co2_t_per_mwh": 0.20813636000062619
+          },
+          {
+            "id": "gas_residual_device",
+            "node": "gas",
+            "service": "gas_residual",
+            "service_per_mwh": 1.0,
+            "input_capacity_mw": 15922680.794520548,
+            "resource_cost_per_mwh": 0.0,
+            "gross_co2_t_per_mwh": 0.18958910065804263,
+            "liability_co2_t_per_mwh": 0.18958910065804263
+          }
+        ],
+        "stores": [],
+        "stock_boundary": "cyclic",
+        "financial_limits": [],
+        "capture_storage_budget_t": 0.0,
+        "carbon_price_per_t": 0.0,
+        "solver_time_limit_s": 30.0
+      },
+      "agents": [
+        {
+          "id": "fuel",
+          "role": "fuel_supplier",
+          "cash": 10000000.0,
+          "credit_limit": 0.0,
+          "initial_margins": {}
+        },
+        {
+          "id": "generation",
+          "role": "generator",
+          "cash": 9954839.26177381,
+          "credit_limit": 0.0,
+          "initial_margins": {
+            "coal_build": 0.0,
+            "gas_build": 0.0,
+            "hydro_build": 0.0,
+            "nuclear_build": 0.0,
+            "wind_build": 0.0,
+            "solar_build": 0.0,
+            "solar_new_build": 0.0
+          }
+        },
+        {
+          "id": "industrial",
+          "role": "industry",
+          "cash": 10000000.0,
+          "credit_limit": 0.0,
+          "initial_margins": {}
+        },
+        {
+          "id": "transport",
+          "role": "transport",
+          "cash": 10000000.0,
+          "credit_limit": 0.0,
+          "initial_margins": {}
+        },
+        {
+          "id": "buildings",
+          "role": "building",
+          "cash": 10000000.0,
+          "credit_limit": 0.0,
+          "initial_margins": {}
+        },
+        {
+          "id": "grid",
+          "role": "grid_storage",
+          "cash": 10000000.0,
+          "credit_limit": 0.0,
+          "initial_margins": {}
+        },
+        {
+          "id": "government",
+          "role": "government",
+          "cash": 10000000.0,
+          "credit_limit": 0.0,
+          "initial_margins": {}
+        }
+      ],
+      "assets": [
+        {
+          "id": "coal_supply_opening",
+          "owner": "fuel",
+          "kind": "source",
+          "component": "coal_supply",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "gas_supply_opening",
+          "owner": "fuel",
+          "kind": "source",
+          "component": "gas_supply",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "oil_supply_opening",
+          "owner": "fuel",
+          "kind": "source",
+          "component": "oil_supply",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "hydro_resource_supply_opening",
+          "owner": "fuel",
+          "kind": "source",
+          "component": "hydro_resource_supply",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "nuclear_resource_supply_opening",
+          "owner": "fuel",
+          "kind": "source",
+          "component": "nuclear_resource_supply",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "wind_resource_supply_opening",
+          "owner": "fuel",
+          "kind": "source",
+          "component": "wind_resource_supply",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "solar_resource_supply_opening",
+          "owner": "fuel",
+          "kind": "source",
+          "component": "solar_resource_supply",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "coal_power_opening",
+          "owner": "generation",
+          "kind": "process",
+          "component": "coal_power",
+          "quantity": 840227.3223470825,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "gas_power_opening",
+          "owner": "generation",
+          "kind": "process",
+          "component": "gas_power",
+          "quantity": 56681.03222706374,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "hydro_power_opening",
+          "owner": "generation",
+          "kind": "process",
+          "component": "hydro_power",
+          "quantity": 304860.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "nuclear_power_opening",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 20080.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "wind_power_opening",
+          "owner": "generation",
+          "kind": "process",
+          "component": "wind_power",
+          "quantity": 96570.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "solar_power_opening",
+          "owner": "generation",
+          "kind": "process",
+          "component": "solar_power",
+          "quantity": 24860.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "aggregate_grid_opening",
+          "owner": "grid",
+          "kind": "process",
+          "component": "aggregate_grid",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "industrial_electricity_device_opening",
+          "owner": "industrial",
+          "kind": "device",
+          "component": "industrial_electricity_device",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "other_electricity_device_opening",
+          "owner": "buildings",
+          "kind": "device",
+          "component": "other_electricity_device",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "coal_residual_device_opening",
+          "owner": "industrial",
+          "kind": "device",
+          "component": "coal_residual_device",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "oil_residual_device_opening",
+          "owner": "transport",
+          "kind": "device",
+          "component": "oil_residual_device",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        },
+        {
+          "id": "gas_residual_device_opening",
+          "owner": "industrial",
+          "kind": "device",
+          "component": "gas_residual_device",
+          "quantity": 1.0,
+          "online_year": 2014,
+          "state": "operating",
+          "fixed_om_per_unit": 0.0
+        }
+      ],
+      "initial_projects": [
+        {
+          "id": "opening_queue:hongyanhe_3",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2009,
+          "online_year": 2015,
+          "lead_years": 6,
+          "cost": 1904.04,
+          "remaining_cost": 317.34,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "hongyanhe_3",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:hongyanhe_4",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2009,
+          "online_year": 2016,
+          "lead_years": 7,
+          "cost": 1904.04,
+          "remaining_cost": 544.0114285714285,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "hongyanhe_4",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:ningde_3",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2010,
+          "online_year": 2015,
+          "lead_years": 5,
+          "cost": 1904.04,
+          "remaining_cost": 380.808,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "ningde_3",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:ningde_4",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2010,
+          "online_year": 2016,
+          "lead_years": 6,
+          "cost": 1904.04,
+          "remaining_cost": 634.68,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "ningde_4",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:fuqing_2",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2009,
+          "online_year": 2015,
+          "lead_years": 6,
+          "cost": 1904.04,
+          "remaining_cost": 317.34,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "fuqing_2",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:fuqing_3",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2010,
+          "online_year": 2017,
+          "lead_years": 7,
+          "cost": 1904.04,
+          "remaining_cost": 816.0171428571427,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "fuqing_3",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:fuqing_4",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2012,
+          "online_year": 2017,
+          "lead_years": 5,
+          "cost": 1904.04,
+          "remaining_cost": 1142.4240000000002,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "fuqing_4",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:yangjiang_2",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2009,
+          "online_year": 2015,
+          "lead_years": 6,
+          "cost": 1904.04,
+          "remaining_cost": 317.34,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "yangjiang_2",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:yangjiang_3",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2010,
+          "online_year": 2016,
+          "lead_years": 6,
+          "cost": 1904.04,
+          "remaining_cost": 634.68,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "yangjiang_3",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:yangjiang_4",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2012,
+          "online_year": 2017,
+          "lead_years": 5,
+          "cost": 1904.04,
+          "remaining_cost": 1142.4240000000002,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "yangjiang_4",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:yangjiang_5",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2013,
+          "online_year": 2019,
+          "lead_years": 6,
+          "cost": 1904.04,
+          "remaining_cost": 1586.6999999999998,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "yangjiang_5",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:yangjiang_6",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2013,
+          "online_year": 2019,
+          "lead_years": 6,
+          "cost": 1904.04,
+          "remaining_cost": 1586.6999999999998,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "yangjiang_6",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:fangjiashan_2",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2009,
+          "online_year": 2015,
+          "lead_years": 6,
+          "cost": 1904.04,
+          "remaining_cost": 317.34,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "fangjiashan_2",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:sanmen_1",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1250.0,
+          "applied_year": 2009,
+          "online_year": 2018,
+          "lead_years": 9,
+          "cost": 2203.75,
+          "remaining_cost": 979.4444444444443,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "sanmen_1",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:sanmen_2",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1250.0,
+          "applied_year": 2009,
+          "online_year": 2018,
+          "lead_years": 9,
+          "cost": 2203.75,
+          "remaining_cost": 979.4444444444443,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "sanmen_2",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:haiyang_1",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1250.0,
+          "applied_year": 2009,
+          "online_year": 2018,
+          "lead_years": 9,
+          "cost": 2203.75,
+          "remaining_cost": 979.4444444444443,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "haiyang_1",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:haiyang_2",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1250.0,
+          "applied_year": 2010,
+          "online_year": 2018,
+          "lead_years": 8,
+          "cost": 2203.75,
+          "remaining_cost": 1101.875,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "haiyang_2",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:taishan_1",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1750.0,
+          "applied_year": 2009,
+          "online_year": 2017,
+          "lead_years": 8,
+          "cost": 3085.25,
+          "remaining_cost": 1156.96875,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125,
+            0.125
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "taishan_1",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:taishan_2",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1750.0,
+          "applied_year": 2010,
+          "online_year": 2017,
+          "lead_years": 7,
+          "cost": 3085.25,
+          "remaining_cost": 1322.25,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "taishan_2",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:changjiang_1",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 650.0,
+          "applied_year": 2010,
+          "online_year": 2016,
+          "lead_years": 6,
+          "cost": 1145.95,
+          "remaining_cost": 381.98333333333335,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "changjiang_1",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:changjiang_2",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 650.0,
+          "applied_year": 2010,
+          "online_year": 2017,
+          "lead_years": 7,
+          "cost": 1145.95,
+          "remaining_cost": 491.12142857142857,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "changjiang_2",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:fangchenggang_1",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2010,
+          "online_year": 2015,
+          "lead_years": 5,
+          "cost": 1904.04,
+          "remaining_cost": 380.808,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "fangchenggang_1",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:fangchenggang_2",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1080.0,
+          "applied_year": 2010,
+          "online_year": 2017,
+          "lead_years": 7,
+          "cost": 1904.04,
+          "remaining_cost": 816.0171428571427,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "fangchenggang_2",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:shidaowan_1",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 210.0,
+          "applied_year": 2012,
+          "online_year": 2019,
+          "lead_years": 7,
+          "cost": 370.22999999999996,
+          "remaining_cost": 264.44999999999993,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "shidaowan_1",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:tianwan_3",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1120.0,
+          "applied_year": 2012,
+          "online_year": 2019,
+          "lead_years": 7,
+          "cost": 1974.56,
+          "remaining_cost": 1410.3999999999999,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "tianwan_3",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:tianwan_4",
+          "option": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "quantity": 1120.0,
+          "applied_year": 2013,
+          "online_year": 2019,
+          "lead_years": 6,
+          "cost": 1974.56,
+          "remaining_cost": 1645.4666666666665,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "reference_unit": "tianwan_4",
+          "schedule_basis": "assumed_stage_duration_plus_common_delay",
+          "cost_basis": "IEA2010_nuclear_sample_proxy_uniform_construction_spending_not_observed_project_budget"
+        },
+        {
+          "id": "opening_queue:latent_solar_2013",
+          "option": "solar_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "solar_power",
+          "quantity": 16340.0,
+          "applied_year": 2013,
+          "online_year": 2015,
+          "lead_years": 2,
+          "cost": 47026.520000000004,
+          "remaining_cost": 23513.260000000002,
+          "state": "building",
+          "replaces": null,
+          "construction_fractions": [
+            0.5,
+            0.5
+          ],
+          "fixed_om_per_unit": 0.0,
+          "replacement_units": 0.0,
+          "state_basis": "latent_initialization_hypothesis_not_observed_project",
+          "schedule_basis": "assumed_2013_application_2015_commissioning_half_cost_unpaid",
+          "cost_basis": "inherited_old_PV_reference_not_actual_project_budget",
+          "information_limitation": "2014 retrospective state reconstruction; not a replay of a documented 2013 decision"
+        }
+      ],
+      "investment_options": [
+        {
+          "id": "coal_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "coal_power",
+          "capex_per_unit": 0.656,
+          "annual_installation_units": 42618.78976509517,
+          "maximum_total_units": 16804546.44694165,
+          "fixed_om_per_unit": 0.0,
+          "discount_rate": 0.05,
+          "economic_life": 40.0,
+          "expected_utilisation": 0.85,
+          "replacement_ratio": 1.0,
+          "connection_per_unit": 1.0,
+          "subsidy_per_unit": 0.0,
+          "lead_years": 4,
+          "construction_fractions": [
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "expected_terminal_value_per_unit": 0.0,
+          "funding_convention": "fully_funded_nonremunerated_escrow",
+          "known_year": 2014,
+          "permit_known_year": 2014,
+          "permit_effective_year": 2014,
+          "cost_reference_year": 2014,
+          "replaces": null
+        },
+        {
+          "id": "gas_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "gas_power",
+          "capex_per_unit": 0.538,
+          "annual_installation_units": 2875.027902456071,
+          "maximum_total_units": 1133620.6445412748,
+          "fixed_om_per_unit": 0.0,
+          "discount_rate": 0.05,
+          "economic_life": 30.0,
+          "expected_utilisation": 0.85,
+          "replacement_ratio": 1.0,
+          "connection_per_unit": 1.0,
+          "subsidy_per_unit": 0.0,
+          "lead_years": 2,
+          "construction_fractions": [
+            0.5,
+            0.5
+          ],
+          "expected_terminal_value_per_unit": 0.0,
+          "funding_convention": "fully_funded_nonremunerated_escrow",
+          "known_year": 2014,
+          "permit_known_year": 2014,
+          "permit_effective_year": 2014,
+          "cost_reference_year": 2014,
+          "replaces": null
+        },
+        {
+          "id": "hydro_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "hydro_power",
+          "capex_per_unit": 0.757,
+          "annual_installation_units": 21850.0,
+          "maximum_total_units": 6097200.0,
+          "fixed_om_per_unit": 0.0,
+          "discount_rate": 0.05,
+          "economic_life": 80.0,
+          "expected_utilisation": 0.39920262822938113,
+          "replacement_ratio": 1.0,
+          "connection_per_unit": 1.0,
+          "subsidy_per_unit": 0.0,
+          "lead_years": 5,
+          "construction_fractions": [
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2
+          ],
+          "expected_terminal_value_per_unit": 0.0,
+          "funding_convention": "fully_funded_nonremunerated_escrow",
+          "known_year": 2014,
+          "permit_known_year": 2014,
+          "permit_effective_year": 2014,
+          "cost_reference_year": 2014,
+          "replaces": null
+        },
+        {
+          "id": "nuclear_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "nuclear_power",
+          "capex_per_unit": 1.763,
+          "annual_installation_units": 5470.0,
+          "maximum_total_units": 401600.0,
+          "fixed_om_per_unit": 0.0,
+          "discount_rate": 0.05,
+          "economic_life": 60.0,
+          "expected_utilisation": 0.7174498353617493,
+          "replacement_ratio": 1.0,
+          "connection_per_unit": 1.0,
+          "subsidy_per_unit": 0.0,
+          "lead_years": 7,
+          "construction_fractions": [
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285
+          ],
+          "expected_terminal_value_per_unit": 0.0,
+          "funding_convention": "fully_funded_nonremunerated_escrow",
+          "known_year": 2014,
+          "permit_known_year": 2014,
+          "permit_effective_year": 2014,
+          "cost_reference_year": 2014,
+          "replaces": null
+        },
+        {
+          "id": "wind_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "wind_power",
+          "capex_per_unit": 1.223,
+          "annual_installation_units": 20720.0,
+          "maximum_total_units": 1931400.0,
+          "fixed_om_per_unit": 0.0,
+          "discount_rate": 0.05,
+          "economic_life": 25.0,
+          "expected_utilisation": 0.18476199392590512,
+          "replacement_ratio": 1.0,
+          "connection_per_unit": 1.0,
+          "subsidy_per_unit": 0.0,
+          "lead_years": 1,
+          "construction_fractions": [
+            1.0
+          ],
+          "expected_terminal_value_per_unit": 0.0,
+          "funding_convention": "fully_funded_nonremunerated_escrow",
+          "known_year": 2014,
+          "permit_known_year": 2014,
+          "permit_effective_year": 2014,
+          "cost_reference_year": 2014,
+          "replaces": null,
+          "investment_group": "wind_construction"
+        },
+        {
+          "id": "solar_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "solar_power",
+          "capex_per_unit": 2.878,
+          "annual_installation_units": 8170.0,
+          "maximum_total_units": 2200000.0,
+          "fixed_om_per_unit": 0.0,
+          "discount_rate": 0.05,
+          "economic_life": 25.0,
+          "expected_utilisation": 0.10607346345011516,
+          "replacement_ratio": 1.0,
+          "connection_per_unit": 1.0,
+          "subsidy_per_unit": 0.0,
+          "lead_years": 1,
+          "construction_fractions": [
+            1.0
+          ],
+          "expected_terminal_value_per_unit": 0.0,
+          "funding_convention": "fully_funded_nonremunerated_escrow",
+          "known_year": 2014,
+          "permit_known_year": 2014,
+          "permit_effective_year": 2014,
+          "cost_reference_year": 2014,
+          "replaces": null,
+          "investment_group": "solar_construction"
+        },
+        {
+          "id": "solar_new_build",
+          "owner": "generation",
+          "kind": "process",
+          "component": "solar_new_power",
+          "capex_per_unit": 1.2048918960551036,
+          "annual_installation_units": 8170.0,
+          "maximum_total_units": 2200000.0,
+          "fixed_om_per_unit": 0.0,
+          "discount_rate": 0.05,
+          "economic_life": 25.0,
+          "expected_utilisation": 0.17,
+          "replacement_ratio": 1.0,
+          "connection_per_unit": 1.0,
+          "subsidy_per_unit": 0.0,
+          "lead_years": 1,
+          "construction_fractions": [
+            1.0
+          ],
+          "expected_terminal_value_per_unit": 0.0,
+          "funding_convention": "fully_funded_nonremunerated_escrow",
+          "known_year": 2015,
+          "permit_known_year": 2014,
+          "permit_effective_year": 2014,
+          "cost_reference_year": 2014,
+          "replaces": null,
+          "investment_group": "solar_construction"
+        }
+      ],
+      "asset_events": [],
+      "other_accounts": {
+        "clearing": 100000000.0,
+        "external_economy": 1000000000.0,
+        "construction": 0.0,
+        "escrow": 45160.73822619048,
+        "carbon_market": 0.0
+      },
+      "behavior": {
+        "expectation_update": 1.0,
+        "investment_adjustment": 1.0
+      },
+      "demand_drivers": {
+        "industrial_electricity": {
+          "gdp_elasticity": 0.7168458276073418,
+          "annual_intensity_improvement": 0.0
+        },
+        "other_electricity": {
+          "gdp_elasticity": 0.7168458276073418,
+          "annual_intensity_improvement": 0.0
+        },
+        "coal_residual": {
+          "gdp_elasticity": 0.0,
+          "annual_intensity_improvement": 0.029999999999999624
+        },
+        "oil_residual": {
+          "gdp_elasticity": 0.7105777108855307,
+          "annual_intensity_improvement": 0.0
+        },
+        "gas_residual": {
+          "gdp_elasticity": 1.9343189347712555,
+          "annual_intensity_improvement": 0.0
+        }
+      },
+      "gdp_growth": {
+        "2015": 0.07,
+        "2016": 0.068,
+        "2017": 0.069,
+        "2018": 0.068,
+        "2019": 0.061,
+        "2020": 0.023,
+        "2021": 0.086,
+        "2022": 0.031,
+        "2023": 0.054000000000000006,
+        "2024": 0.05
+      },
+      "cost_decline": {
+        "coal_build": 0.0,
+        "gas_build": 0.0,
+        "hydro_build": 0.0,
+        "nuclear_build": 0.0,
+        "wind_build": 0.03,
+        "solar_build": 0.1,
+        "solar_new_build": 0.1
+      },
+      "mechanisms": {
+        "investment": true,
+        "replacement": false,
+        "expectation_learning": true
+      },
+      "policies": [
+        {
+          "id": "research_GDP_envelope_0.0_2014",
+          "known_year": 2014,
+          "effective_year": 2014,
+          "node_prices": {
+            "coal": 1.0620000000000002e-05,
+            "gas": 1.6308e-05,
+            "oil": 2.2e-05,
+            "hydro_resource": 0.0,
+            "nuclear_resource": 9.33e-06,
+            "wind_resource": 0.0,
+            "solar_resource": 0.0,
+            "electricity_bus": 7e-05,
+            "electricity": 8e-05
+          },
+          "service_prices": {
+            "industrial_electricity": 0.0002,
+            "other_electricity": 0.0002,
+            "coal_residual": 0.0002,
+            "oil_residual": 0.0002,
+            "gas_residual": 0.0002
+          },
+          "carbon_price_per_t": 0.0,
+          "government_agent": "government",
+          "subsidy_budget": 0.0,
+          "construction_units_limit": 150000.0,
+          "connection_limit": 150000.0,
+          "approval_allocation": "proportional_requests"
+        },
+        {
+          "id": "research_GDP_envelope_0.0_2015",
+          "known_year": 2015,
+          "effective_year": 2015,
+          "node_prices": {
+            "coal": 1.0620000000000002e-05,
+            "gas": 1.6308e-05,
+            "oil": 2.2e-05,
+            "hydro_resource": 0.0,
+            "nuclear_resource": 9.33e-06,
+            "wind_resource": 0.0,
+            "solar_resource": 0.0,
+            "electricity_bus": 7e-05,
+            "electricity": 8e-05
+          },
+          "service_prices": {
+            "industrial_electricity": 0.0002,
+            "other_electricity": 0.0002,
+            "coal_residual": 0.0002,
+            "oil_residual": 0.0002,
+            "gas_residual": 0.0002
+          },
+          "carbon_price_per_t": 0.0,
+          "government_agent": "government",
+          "subsidy_budget": 0.0,
+          "construction_units_limit": 150000.0,
+          "connection_limit": 150000.0,
+          "approval_allocation": "proportional_requests"
+        },
+        {
+          "id": "research_GDP_envelope_0.0_2016",
+          "known_year": 2016,
+          "effective_year": 2016,
+          "node_prices": {
+            "coal": 1.0620000000000002e-05,
+            "gas": 1.6308e-05,
+            "oil": 2.2e-05,
+            "hydro_resource": 0.0,
+            "nuclear_resource": 9.33e-06,
+            "wind_resource": 0.0,
+            "solar_resource": 0.0,
+            "electricity_bus": 7e-05,
+            "electricity": 8e-05
+          },
+          "service_prices": {
+            "industrial_electricity": 0.0002,
+            "other_electricity": 0.0002,
+            "coal_residual": 0.0002,
+            "oil_residual": 0.0002,
+            "gas_residual": 0.0002
+          },
+          "carbon_price_per_t": 0.0,
+          "government_agent": "government",
+          "subsidy_budget": 0.0,
+          "construction_units_limit": 150000.0,
+          "connection_limit": 150000.0,
+          "approval_allocation": "proportional_requests"
+        },
+        {
+          "id": "research_GDP_envelope_0.0_2017",
+          "known_year": 2017,
+          "effective_year": 2017,
+          "node_prices": {
+            "coal": 1.0620000000000002e-05,
+            "gas": 1.6308e-05,
+            "oil": 2.2e-05,
+            "hydro_resource": 0.0,
+            "nuclear_resource": 9.33e-06,
+            "wind_resource": 0.0,
+            "solar_resource": 0.0,
+            "electricity_bus": 7e-05,
+            "electricity": 8e-05
+          },
+          "service_prices": {
+            "industrial_electricity": 0.0002,
+            "other_electricity": 0.0002,
+            "coal_residual": 0.0002,
+            "oil_residual": 0.0002,
+            "gas_residual": 0.0002
+          },
+          "carbon_price_per_t": 0.0,
+          "government_agent": "government",
+          "subsidy_budget": 0.0,
+          "construction_units_limit": 150000.0,
+          "connection_limit": 150000.0,
+          "approval_allocation": "proportional_requests"
+        },
+        {
+          "id": "research_GDP_envelope_0.0_2018",
+          "known_year": 2018,
+          "effective_year": 2018,
+          "node_prices": {
+            "coal": 1.0620000000000002e-05,
+            "gas": 1.6308e-05,
+            "oil": 2.2e-05,
+            "hydro_resource": 0.0,
+            "nuclear_resource": 9.33e-06,
+            "wind_resource": 0.0,
+            "solar_resource": 0.0,
+            "electricity_bus": 7e-05,
+            "electricity": 8e-05
+          },
+          "service_prices": {
+            "industrial_electricity": 0.0002,
+            "other_electricity": 0.0002,
+            "coal_residual": 0.0002,
+            "oil_residual": 0.0002,
+            "gas_residual": 0.0002
+          },
+          "carbon_price_per_t": 0.0,
+          "government_agent": "government",
+          "subsidy_budget": 0.0,
+          "construction_units_limit": 150000.0,
+          "connection_limit": 150000.0,
+          "approval_allocation": "proportional_requests"
+        },
+        {
+          "id": "research_GDP_envelope_0.0_2019",
+          "known_year": 2019,
+          "effective_year": 2019,
+          "node_prices": {
+            "coal": 1.0620000000000002e-05,
+            "gas": 1.6308e-05,
+            "oil": 2.2e-05,
+            "hydro_resource": 0.0,
+            "nuclear_resource": 9.33e-06,
+            "wind_resource": 0.0,
+            "solar_resource": 0.0,
+            "electricity_bus": 7e-05,
+            "electricity": 8e-05
+          },
+          "service_prices": {
+            "industrial_electricity": 0.0002,
+            "other_electricity": 0.0002,
+            "coal_residual": 0.0002,
+            "oil_residual": 0.0002,
+            "gas_residual": 0.0002
+          },
+          "carbon_price_per_t": 0.0,
+          "government_agent": "government",
+          "subsidy_budget": 0.0,
+          "construction_units_limit": 150000.0,
+          "connection_limit": 150000.0,
+          "approval_allocation": "proportional_requests"
+        },
+        {
+          "id": "research_GDP_envelope_0.0_2020",
+          "known_year": 2020,
+          "effective_year": 2020,
+          "node_prices": {
+            "coal": 1.0620000000000002e-05,
+            "gas": 1.6308e-05,
+            "oil": 2.2e-05,
+            "hydro_resource": 0.0,
+            "nuclear_resource": 9.33e-06,
+            "wind_resource": 0.0,
+            "solar_resource": 0.0,
+            "electricity_bus": 7e-05,
+            "electricity": 8e-05
+          },
+          "service_prices": {
+            "industrial_electricity": 0.0002,
+            "other_electricity": 0.0002,
+            "coal_residual": 0.0002,
+            "oil_residual": 0.0002,
+            "gas_residual": 0.0002
+          },
+          "carbon_price_per_t": 0.0,
+          "government_agent": "government",
+          "subsidy_budget": 0.0,
+          "construction_units_limit": 150000.0,
+          "connection_limit": 150000.0,
+          "approval_allocation": "proportional_requests"
+        },
+        {
+          "id": "research_GDP_envelope_0.0_2021",
+          "known_year": 2021,
+          "effective_year": 2021,
+          "node_prices": {
+            "coal": 1.0620000000000002e-05,
+            "gas": 1.6308e-05,
+            "oil": 2.2e-05,
+            "hydro_resource": 0.0,
+            "nuclear_resource": 9.33e-06,
+            "wind_resource": 0.0,
+            "solar_resource": 0.0,
+            "electricity_bus": 7e-05,
+            "electricity": 8e-05
+          },
+          "service_prices": {
+            "industrial_electricity": 0.0002,
+            "other_electricity": 0.0002,
+            "coal_residual": 0.0002,
+            "oil_residual": 0.0002,
+            "gas_residual": 0.0002
+          },
+          "carbon_price_per_t": 0.0,
+          "government_agent": "government",
+          "subsidy_budget": 0.0,
+          "construction_units_limit": 150000.0,
+          "connection_limit": 150000.0,
+          "approval_allocation": "proportional_requests"
+        },
+        {
+          "id": "research_GDP_envelope_0.0_2022",
+          "known_year": 2022,
+          "effective_year": 2022,
+          "node_prices": {
+            "coal": 1.0620000000000002e-05,
+            "gas": 1.6308e-05,
+            "oil": 2.2e-05,
+            "hydro_resource": 0.0,
+            "nuclear_resource": 9.33e-06,
+            "wind_resource": 0.0,
+            "solar_resource": 0.0,
+            "electricity_bus": 7e-05,
+            "electricity": 8e-05
+          },
+          "service_prices": {
+            "industrial_electricity": 0.0002,
+            "other_electricity": 0.0002,
+            "coal_residual": 0.0002,
+            "oil_residual": 0.0002,
+            "gas_residual": 0.0002
+          },
+          "carbon_price_per_t": 0.0,
+          "government_agent": "government",
+          "subsidy_budget": 0.0,
+          "construction_units_limit": 150000.0,
+          "connection_limit": 150000.0,
+          "approval_allocation": "proportional_requests"
+        },
+        {
+          "id": "research_GDP_envelope_0.0_2023",
+          "known_year": 2023,
+          "effective_year": 2023,
+          "node_prices": {
+            "coal": 1.0620000000000002e-05,
+            "gas": 1.6308e-05,
+            "oil": 2.2e-05,
+            "hydro_resource": 0.0,
+            "nuclear_resource": 9.33e-06,
+            "wind_resource": 0.0,
+            "solar_resource": 0.0,
+            "electricity_bus": 7e-05,
+            "electricity": 8e-05
+          },
+          "service_prices": {
+            "industrial_electricity": 0.0002,
+            "other_electricity": 0.0002,
+            "coal_residual": 0.0002,
+            "oil_residual": 0.0002,
+            "gas_residual": 0.0002
+          },
+          "carbon_price_per_t": 0.0,
+          "government_agent": "government",
+          "subsidy_budget": 0.0,
+          "construction_units_limit": 150000.0,
+          "connection_limit": 150000.0,
+          "approval_allocation": "proportional_requests"
+        },
+        {
+          "id": "research_GDP_envelope_0.0_2024",
+          "known_year": 2024,
+          "effective_year": 2024,
+          "node_prices": {
+            "coal": 1.0620000000000002e-05,
+            "gas": 1.6308e-05,
+            "oil": 2.2e-05,
+            "hydro_resource": 0.0,
+            "nuclear_resource": 9.33e-06,
+            "wind_resource": 0.0,
+            "solar_resource": 0.0,
+            "electricity_bus": 7e-05,
+            "electricity": 8e-05
+          },
+          "service_prices": {
+            "industrial_electricity": 0.0002,
+            "other_electricity": 0.0002,
+            "coal_residual": 0.0002,
+            "oil_residual": 0.0002,
+            "gas_residual": 0.0002
+          },
+          "carbon_price_per_t": 0.0,
+          "government_agent": "government",
+          "subsidy_budget": 0.0,
+          "construction_units_limit": 150000.0,
+          "connection_limit": 150000.0,
+          "approval_allocation": "proportional_requests"
+        }
+      ],
+      "investment_groups": [
+        {
+          "id": "wind_construction",
+          "kind": "process",
+          "components": [
+            "wind_power"
+          ],
+          "annual_installation_floor": 20720.0,
+          "stock_expansion_rate": 0.24183444314471036,
+          "maximum_total_units": 1931400.0
+        },
+        {
+          "id": "solar_construction",
+          "kind": "process",
+          "components": [
+            "solar_power",
+            "solar_new_power"
+          ],
+          "annual_installation_floor": 8170.0,
+          "stock_expansion_rate": 0.5082671370268271,
+          "maximum_total_units": 2200000.0
+        }
+      ],
+      "approval_blocks": [
+        {
+          "id": "nuclear_no_issuance_2016",
+          "year": 2016,
+          "option": "nuclear_build",
+          "basis": "realized_administrative_outcome",
+          "evidence": "data/catalog/q2_nuclear_nonissuance_2016_2018_review.json#physical41-printed36-section6.1"
+        },
+        {
+          "id": "nuclear_no_issuance_2017",
+          "year": 2017,
+          "option": "nuclear_build",
+          "basis": "realized_administrative_outcome",
+          "evidence": "data/catalog/q2_nuclear_nonissuance_2016_2018_review.json#physical41-printed36-section6.1"
+        },
+        {
+          "id": "nuclear_no_issuance_2018",
+          "year": 2018,
+          "option": "nuclear_build",
+          "basis": "realized_administrative_outcome",
+          "evidence": "data/catalog/q2_nuclear_nonissuance_2016_2018_review.json#physical41-printed36-section6.1"
+        }
+      ]
+    }
+  }
+]

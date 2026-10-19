@@ -1,0 +1,436 @@
+{
+  "version": 1,
+  "review_date": "2026-10-19",
+  "reviewer": "same_author_scoped_mapping_review",
+  "decision": "limited_sector_final_energy_partition_hypothesis",
+  "team_approval": false,
+  "national_admission": false,
+  "fingerprints": [
+    {
+      "path": "data/catalog/q2_apec_balance_review.json",
+      "sha256": "124f937c91da2ce1994f7a1d4eaf3161540eb8122efcc272ee8bcedead767e78"
+    },
+    {
+      "path": "data/raw/q2/apec_balance_download.json",
+      "sha256": "cbb346c7962328325cd8c0033396f809f1f8f7e86ca8ac745ee18cf276e2113d"
+    },
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_PJ.html",
+      "sha256": "241a2431a9daded1cf834383cfc356aa36a817dfa9b1a4b86169ad190403718c"
+    },
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_PJ.txt",
+      "sha256": "a3a5a52c84ea8af433573fbe697c9fb63078a6da30bb9eb57fd2dadfbd9f95fd"
+    },
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_ktoe.html",
+      "sha256": "c2e04292c041272eff6d435f8ac8a41035928c70f67d17931b381c1f304c800b"
+    },
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_ktoe.txt",
+      "sha256": "065763527587c3717c7aa922f51cd77f348a190102012031576f65dc2dadde6e"
+    },
+    {
+      "path": "data/raw/q2/apec_ktoe_download.json",
+      "sha256": "149badf5056fdbea230e5059a59e8afdc3ae3c1d94136cf896e6932aef93a06c"
+    },
+    {
+      "path": "data/raw/q2/apec_processing_information.html",
+      "sha256": "b00b1e3221079a7bfcb1f86ea0dabe3b0e4fc3686fd4553e02d171ea09c99b30"
+    },
+    {
+      "path": "data/raw/q2/apec_revised_definitions.pdf",
+      "sha256": "a08b4cac76b4184420248840d9559606592f66f48538662ebd7c2e3596b6ea33"
+    },
+    {
+      "path": "data/raw/q2/apec_standardisation.html",
+      "sha256": "f61155b11909bf528c6784f8febf8e7b9142cfa97ec4d2fbe982d3b40900b4c3"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v10/training_selection.json",
+      "sha256": "3cf70f668c146aac84fac4e4b48b464e439289d137c885e2877a40d45929b4e6"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v10/training_trials.json",
+      "sha256": "781eb23adf15f4eeb90f9658ae0b9b463d0d93fe39a31260819bfe9b9cdf05cc"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v10_comparison/shared_construction_connection.json",
+      "sha256": "0730bc38676f060e4f0dbacc1bec4dd99dbd3eee3bb23c260499c27f0be3d29c"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v10_comparison/shared_construction_connection_pvqueue_1.json",
+      "sha256": "3bcd9da54e8e8a3a6c31a59417781db9d693c279c424b00f30278fe5e1b31dac"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v10_comparison/shared_construction_connection_pvqueue_2.json",
+      "sha256": "8467549a9eb38da953ba2e29348b30336222cb0abe13028b1d9610eebb186262"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v10_comparison/technology_frontiers.json",
+      "sha256": "16d925d3c053c160cc68e30e9d2f2eafd80a96a1b82f0d446e707b77151ccc7b"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v10_comparison/technology_frontiers_pvqueue_1.json",
+      "sha256": "7bfc6c1d33dfaa3e7bcda2f6b84d0bcec34a2cc69685572d9eb25ce1c21bec2a"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v10_comparison/technology_frontiers_pvqueue_2.json",
+      "sha256": "85ce894d47b029c40f6cb5ab06b73c6b4880254e3a9413881f9a6e83bd3f328d"
+    },
+    {
+      "path": "workflow/q2_candidates/v10/manifest.json",
+      "sha256": "af7533e51f622db9d1c932c9fbe73096cec1529bc92696fd416ac6cedfa7b192"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_KTOE_HTML",
+      "record_sha256": "3bf95f01a285a6c5ad2037c094481795512f8916a8935cb3bc5749e008665e57"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_KTOE_TSV",
+      "record_sha256": "3435fd85f73f227fcde75fce1b2423ac2baebd4e7101ce148b15d2cfa98be81d"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_PJ_HTML",
+      "record_sha256": "4683a2d4d54620c9636724e6530ef2badde2f4b83c9cd453a5858d54d7002f2a"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_PJ_TSV",
+      "record_sha256": "5559e1f4f699c536afd64771d3a121077f0ed43b6396825879c15b77d3bc9ac4"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_BALANCE_STANDARDISATION",
+      "record_sha256": "36083d60f23cceb4014dbdbb6825dcc1fa656424b34ebf3625e2ce8444fada27"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_BALANCE_PROCESSING",
+      "record_sha256": "ae77b71d223fd610dee654a758f575e94f1f01f0a3e2886846dc1c385e22b877"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_REVISED_DEFINITIONS",
+      "record_sha256": "513931163292eb5ee81de4f4885a044a7a55a01de4cf5a9121a485c80b7a425e"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_KTOE_QUERY",
+      "record_sha256": "692d5828212485d296c164d32e3646853681dfc4b6262221c7d027e80e1921be"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_PJ_QUERY",
+      "record_sha256": "e598b490a4c9efcb7910d54674d6fb76c46defe7afa418b25224d20c101883fb"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Original native APEC China2014 KTOE export read at rows14/15/16. Coal+coalproducts,crudeoil+petroleumproducts,gas are top-level disjoint columns; product children and nonenergy row17 excluded."
+    },
+    {
+      "passed": true,
+      "evidence": "Nine reported groups independently transcribed: industry567527/50933/45462;transport3086/229170/17949;other110973/80204/40917ktoe. Othercrudeoil is printed0;transportcrudeoil isdash and remains missing."
+    },
+    {
+      "passed": true,
+      "evidence": "Three reported totals and nearest-integer rounding preserve joint unknown intervals0-5.5/0-3.5/0-5.5ktoe. No missing cell filledzero and no rest-of-sector biomass/electricity/heat assigned tofossilfuel."
+    },
+    {
+      "passed": true,
+      "evidence": "Existing APEC review verifies NCV basis and1toe41.868GJ;1ktoe11630MWh used. Countrycode005 excludes separatelyselectedHongKong/Taipei; sourcevintage unknown and no claimof2014real-timeavailability."
+    },
+    {
+      "passed": true,
+      "evidence": "Each v10 structure retains its own2015-2021selected wind/PV rates andbehavior. Newsector grid and alloriginaltargets/scales/weights/acceptance frozenbefore newtraining. No holdout values used to constructmodelorselectaresponse."
+    },
+    {
+      "passed": true,
+      "evidence": "Explicit diagnostic carbon boundary remains originalv10effectivecoefficientproxy acrossallfueluses, including unresolvedmaterial. No physicalcombustion ornetnationalCO2claim. This doesnotreuse the nonenergyepisode partialcarbon output or compare that partialoutputwithGCB."
+    }
+  ],
+  "mapping_assumptions": [
+    "APEC2014reported finalenergy centres are carvedfromNBS-derived residual proxy withoutrescaling. Crosssource/year/vintage equivalence is a hypothesis, not confirmednationalenergybalance.",
+    "Eachcarrierdemand keepsitsfour-block shape andtotalinputcapacity. Newsector groups are deliveredfinalenergy proxies, not measuredheat/mobility orsubstitutable physicalservices;efficiency1is bookkeeping.",
+    "Othersector includesagriculture,commercial/residential andotheruses. Existingbuildingsagent is onlyitscash-account proxy; do not interpret entireothersectorasbuildings.",
+    "Allinitialcash,supply,projects,pricesandtechnology retained. Sectorpurchase/revenuemoveswithaccountownership; totalsconserved, pricesnotclaimedobserved sectorprices.",
+    "Unresolvedremainder retainsinheritedcarrierGDPresponse andincludesmaterial,transformation,ownuse,lossandcrosssourcegap. Itisnotarealservice orpurecombustion.",
+    "GDPresponses0/0.5/1/1.5/2forindustry/transport/other are author-declared searchbounds, notobservedelasticities. No commonunits are inferredfromcommercial-only passenger/freight activity.",
+    "Sixv10best-per-structure controls plus125sectorvectors perstructure=756trainingexecutions. Exactcontrolsremaineligible; retainedfailures andties use trialorder. Existing v10wind/PV rates/rules areheld, so no claimofjointglobaloptimum.",
+    "Already-seenholdout remainsalready-seen; publishedafterhistory sourceis retrospective. No2024initialization,S0orcarbonremovalpaths inferred."
+  ],
+  "mapped_groups": [
+    {
+      "id": "final_industry_coal",
+      "sector": "industry",
+      "owner": "industrial",
+      "carrier": "coal",
+      "cells": [
+        {
+          "flow": "14. Industry sector",
+          "product": "1. Coal",
+          "tsv_line": 65,
+          "column": 2,
+          "raw_token": "399006",
+          "value_ktoe": 399006.0
+        },
+        {
+          "flow": "14. Industry sector",
+          "product": "2. Coal products",
+          "tsv_line": 65,
+          "column": 8,
+          "raw_token": "168521",
+          "value_ktoe": 168521.0
+        }
+      ],
+      "unresolved_product_cells": [],
+      "value_ktoe": 567527.0,
+      "input_MWh_LHV": 6600339010.0,
+      "meaning": "Reported delivered final energy, not useful heat/mobility or equipment stock"
+    },
+    {
+      "id": "final_industry_oil",
+      "sector": "industry",
+      "owner": "industrial",
+      "carrier": "oil",
+      "cells": [
+        {
+          "flow": "14. Industry sector",
+          "product": "6. Crude oil & NGL",
+          "tsv_line": 65,
+          "column": 19,
+          "raw_token": "238",
+          "value_ktoe": 238.0
+        },
+        {
+          "flow": "14. Industry sector",
+          "product": "7. Petroleum products",
+          "tsv_line": 65,
+          "column": 25,
+          "raw_token": "50695",
+          "value_ktoe": 50695.0
+        }
+      ],
+      "unresolved_product_cells": [],
+      "value_ktoe": 50933.0,
+      "input_MWh_LHV": 592350790.0,
+      "meaning": "Reported delivered final energy, not useful heat/mobility or equipment stock"
+    },
+    {
+      "id": "final_industry_gas",
+      "sector": "industry",
+      "owner": "industrial",
+      "carrier": "gas",
+      "cells": [
+        {
+          "flow": "14. Industry sector",
+          "product": "8. Gas",
+          "tsv_line": 65,
+          "column": 43,
+          "raw_token": "45462",
+          "value_ktoe": 45462.0
+        }
+      ],
+      "unresolved_product_cells": [],
+      "value_ktoe": 45462.0,
+      "input_MWh_LHV": 528723060.0,
+      "meaning": "Reported delivered final energy, not useful heat/mobility or equipment stock"
+    },
+    {
+      "id": "final_transport_coal",
+      "sector": "transport",
+      "owner": "transport",
+      "carrier": "coal",
+      "cells": [
+        {
+          "flow": "15. Transport sector",
+          "product": "1. Coal",
+          "tsv_line": 79,
+          "column": 2,
+          "raw_token": "3068",
+          "value_ktoe": 3068.0
+        },
+        {
+          "flow": "15. Transport sector",
+          "product": "2. Coal products",
+          "tsv_line": 79,
+          "column": 8,
+          "raw_token": "18",
+          "value_ktoe": 18.0
+        }
+      ],
+      "unresolved_product_cells": [],
+      "value_ktoe": 3086.0,
+      "input_MWh_LHV": 35890180.0,
+      "meaning": "Reported delivered final energy, not useful heat/mobility or equipment stock"
+    },
+    {
+      "id": "final_transport_oil",
+      "sector": "transport",
+      "owner": "transport",
+      "carrier": "oil",
+      "cells": [
+        {
+          "flow": "15. Transport sector",
+          "product": "7. Petroleum products",
+          "tsv_line": 79,
+          "column": 25,
+          "raw_token": "229170",
+          "value_ktoe": 229170.0
+        }
+      ],
+      "unresolved_product_cells": [
+        {
+          "flow": "15. Transport sector",
+          "product": "6. Crude oil & NGL",
+          "tsv_line": 79,
+          "column": 19,
+          "raw_token": "-"
+        }
+      ],
+      "value_ktoe": 229170.0,
+      "input_MWh_LHV": 2665247100.0,
+      "meaning": "Reported delivered final energy, not useful heat/mobility or equipment stock"
+    },
+    {
+      "id": "final_transport_gas",
+      "sector": "transport",
+      "owner": "transport",
+      "carrier": "gas",
+      "cells": [
+        {
+          "flow": "15. Transport sector",
+          "product": "8. Gas",
+          "tsv_line": 79,
+          "column": 43,
+          "raw_token": "17949",
+          "value_ktoe": 17949.0
+        }
+      ],
+      "unresolved_product_cells": [],
+      "value_ktoe": 17949.0,
+      "input_MWh_LHV": 208746870.0,
+      "meaning": "Reported delivered final energy, not useful heat/mobility or equipment stock"
+    },
+    {
+      "id": "final_other_coal",
+      "sector": "other",
+      "owner": "buildings",
+      "carrier": "coal",
+      "cells": [
+        {
+          "flow": "16. Other sector",
+          "product": "1. Coal",
+          "tsv_line": 86,
+          "column": 2,
+          "raw_token": "108196",
+          "value_ktoe": 108196.0
+        },
+        {
+          "flow": "16. Other sector",
+          "product": "2. Coal products",
+          "tsv_line": 86,
+          "column": 8,
+          "raw_token": "2777",
+          "value_ktoe": 2777.0
+        }
+      ],
+      "unresolved_product_cells": [],
+      "value_ktoe": 110973.0,
+      "input_MWh_LHV": 1290615990.0,
+      "meaning": "Reported delivered final energy, not useful heat/mobility or equipment stock"
+    },
+    {
+      "id": "final_other_oil",
+      "sector": "other",
+      "owner": "buildings",
+      "carrier": "oil",
+      "cells": [
+        {
+          "flow": "16. Other sector",
+          "product": "6. Crude oil & NGL",
+          "tsv_line": 86,
+          "column": 19,
+          "raw_token": "0",
+          "value_ktoe": 0.0
+        },
+        {
+          "flow": "16. Other sector",
+          "product": "7. Petroleum products",
+          "tsv_line": 86,
+          "column": 25,
+          "raw_token": "80204",
+          "value_ktoe": 80204.0
+        }
+      ],
+      "unresolved_product_cells": [],
+      "value_ktoe": 80204.0,
+      "input_MWh_LHV": 932772520.0,
+      "meaning": "Reported delivered final energy, not useful heat/mobility or equipment stock"
+    },
+    {
+      "id": "final_other_gas",
+      "sector": "other",
+      "owner": "buildings",
+      "carrier": "gas",
+      "cells": [
+        {
+          "flow": "16. Other sector",
+          "product": "8. Gas",
+          "tsv_line": 86,
+          "column": 43,
+          "raw_token": "40917",
+          "value_ktoe": 40917.0
+        }
+      ],
+      "unresolved_product_cells": [],
+      "value_ktoe": 40917.0,
+      "input_MWh_LHV": 475864710.0,
+      "meaning": "Reported delivered final energy, not useful heat/mobility or equipment stock"
+    }
+  ],
+  "sector_missing_bounds": [
+    {
+      "sector": "industry",
+      "total_ktoe": 1010271.0,
+      "reported_top_sum_ktoe": 1010270.0,
+      "missing_top_cells": 10,
+      "joint_missing_lower_ktoe": 0.0,
+      "joint_missing_upper_ktoe": 5.5,
+      "assumption": "Nonnegative inputs; nearest integer rounding. One joint interval per sector, not per missing cell."
+    },
+    {
+      "sector": "transport",
+      "total_ktoe": 268669.0,
+      "reported_top_sum_ktoe": 268669.0,
+      "missing_top_cells": 12,
+      "joint_missing_lower_ktoe": 0.0,
+      "joint_missing_upper_ktoe": 3.5,
+      "assumption": "Nonnegative inputs; nearest integer rounding. One joint interval per sector, not per missing cell."
+    },
+    {
+      "sector": "other",
+      "total_ktoe": 397798.0,
+      "reported_top_sum_ktoe": 397797.0,
+      "missing_top_cells": 9,
+      "joint_missing_lower_ktoe": 0.0,
+      "joint_missing_upper_ktoe": 5.5,
+      "assumption": "Nonnegative inputs; nearest integer rounding. One joint interval per sector, not per missing cell."
+    }
+  ],
+  "allowed_use": "Exploratory historical final-energy partition and training-only sector-GDP response comparison.",
+  "prohibited_uses": [
+    "National model admission",
+    "Measured useful services ordeviceefficiencies",
+    "Fullindustrialcarbonaccounting",
+    "Future target fulfillment",
+    "Freshblindvalidation"
+  ]
+}

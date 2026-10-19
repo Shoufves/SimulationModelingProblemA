@@ -1,0 +1,94 @@
+{
+  "id": "Q2_CURRENT_STATE_2024",
+  "review_date": "2026-10-19",
+  "reviewer": "same_author_source_and_visual_review",
+  "team_approval": false,
+  "decision": "partial_state_only_not_national_admission",
+  "candidate_model": "outputs/q2/historical_candidate_v12/selected_model.json",
+  "candidate_result": "outputs/q2/historical_candidate_v12/result.json",
+  "fingerprints": [
+    {
+      "path": "data/catalog/q2_current_state_transcription.json",
+      "sha256": "1c270735be5d3a3589f9228d65b94ae4a033ffb166e543f149e63606892c2483"
+    },
+    {
+      "path": "data/processed/unified/nbs_history.csv",
+      "sha256": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb"
+    },
+    {
+      "path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+      "sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b"
+    },
+    {
+      "path": "data/raw/batch1_national/nea_renewable_2024.html",
+      "sha256": "13fabe3f96b292ab2aab7ab2332541d8839fe21e1f144b2f56184f65fbe552cd"
+    },
+    {
+      "path": "data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf",
+      "sha256": "6e46cb5edb3bec945c45871750b7c35b267341fbce37745200414993106fea5d"
+    },
+    {
+      "path": "data/raw/lb/base/reports/power_reliability_2024.pdf",
+      "sha256": "af0c088a6c25511ec9fa9f758af374c5a22d0002e2c507a9450f2d64c85e5e95"
+    },
+    {
+      "path": "data/raw/lb/base/reports/storage_2025.pdf",
+      "sha256": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3"
+    },
+    {
+      "path": "data/raw/official/S17_page_capture.txt",
+      "sha256": "160fd1ffe6021dcc42484216a8fbea09ad9108bcea66f137dc41f0a3fdab3163"
+    },
+    {
+      "path": "data/raw/official/S24_page_capture.txt",
+      "sha256": "e07931550e610bab31ea3d82934c22fa4e60637f477ad30783726a75a8c8fb9a"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v12/result.json",
+      "sha256": "6ae1a1fd06466b4355f50c76855c99ecfd3fdab71d3ef72d9f00da70c8b28eb5"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v12/selected_model.json",
+      "sha256": "022d14840a8ac2991508f9357e4d4af7068cd9bc9a1717847b16f58eda462edb"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "NBS2025C09-15 original image visually inspected: all seven2024 cells match. Same vintage aggregates sum exactly; thermal is not coal, hydro includes pumped storage."
+    },
+    {
+      "passed": true,
+      "evidence": "S17 and S24 retained official page captures reread, including date, capacity headings, utilization threshold and full consumption paragraph. Four demand categories sum98521; all-society use is not delivered service."
+    },
+    {
+      "passed": true,
+      "evidence": "NEA2024 renewable original HTML and retained extracted paragraph reviewed; PV and solar, conventional and pumped hydro, biomass, annual generation and utilization are distinct."
+    },
+    {
+      "passed": true,
+      "evidence": "Storage2025 original PDF physical21 rendered and visually reviewed. Figure1 energy16820(10^4kWh) gives168.2GWh, not rounded body168GWh. Power7376(10^4kW) gives73.76GW. Duration2.3h is rounded, not initialSOC or a dispatch guarantee."
+    },
+    {
+      "passed": true,
+      "evidence": "Gas2025 original PDF physical10-11 rendered and visually reviewed. City/industrial/power/chemical34/41/18/7 percent categories preserved. No conversion of apparent consumption into matched use or hourly supply."
+    },
+    {
+      "passed": true,
+      "evidence": "Reliability2024 original PDF physical7 rendered and visually reviewed. Coal917GW and gas82GW are covered reporting fleets; reported coverage percentages are not proven2024year-end denominators. No national scaling or partition is admitted."
+    },
+    {
+      "passed": true,
+      "evidence": "Historical endpoint comparison reuses pinnedv12 result, does not feed2024observations back into calibration or replace historical model states. Full state remains incomplete."
+    }
+  ],
+  "not_admitted": [
+    "thermal_fuel_partition",
+    "cross_vintage_technology_partition",
+    "asset_ages_and_availability",
+    "inventory_and_withdrawal",
+    "service_and_device_mapping",
+    "project_queue_and_finance",
+    "matched_chronology"
+  ]
+}

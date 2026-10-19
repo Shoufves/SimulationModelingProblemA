@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-19",
+  "superseded_frozen_inputs": "workflow/q2_candidates/nonenergy_episode",
+  "replacement": "workflow/q2_candidates/nonenergy_episode_v2",
+  "reason": "Negative test found extract_material_reference silently replaced duplicate row labels; missing rows raised an unclassified KeyError. The full source parser already rejects changed table labels, but the extraction function needed its own explicit guard.",
+  "retained": ["Original builder", "Original frozen inputs in their original directory", "Actual 12-test failure log"],
+  "scientific_parameters_or_cases_changed": false,
+  "source_values_changed": false,
+  "complete_29_case_episode_executed_before_fix": false,
+  "note": "The test setup executed parent/same-growth controls and a future-growth perturbation. Their numeric reconciliation passed; no fitting or case selection occurred. Initial runner syntax typo was fixed before these tests could import it."
+}

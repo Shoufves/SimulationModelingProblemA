@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "scope": "six_selected_historical_tariff_schedules_not_complete_policy_calendar",
+  "note": "Hand transcription after visual review of all four one-page original PDF tables and full three notice bodies. 23 price cells include4 withdrawn announcements; do not sum or average. Offshore rates and distributed-PV mode-switching text are outside this extraction.",
+  "schedules": [
+    {
+      "id": "wind_2015_3008",
+      "technology": "onshore_wind",
+      "issued_date": "2014-12-31",
+      "web_publication_date": "2015-01-09",
+      "information_date_basis": "verified_web_publication_conservative_cutoff",
+      "nominal_cohort_start": "2015-01-01",
+      "eligibility": "2015年1月1日以后核准；或2015年1月1日前核准但于2016年1月1日以后投运。原文“前/以后”保留，不推定边界日项目权利。",
+      "prices": [
+        {
+          "zone": "I",
+          "CNY_nominal_per_kWh": 0.49,
+          "region_description": "本通知继续按资源区定价，但未重刊地区表；旧分区另见2009原件，不在本通知推断。"
+        },
+        {
+          "zone": "II",
+          "CNY_nominal_per_kWh": 0.52,
+          "region_description": "本通知继续按资源区定价，但未重刊地区表；旧分区另见2009原件，不在本通知推断。"
+        },
+        {
+          "zone": "III",
+          "CNY_nominal_per_kWh": 0.56,
+          "region_description": "本通知继续按资源区定价，但未重刊地区表；旧分区另见2009原件，不在本通知推断。"
+        },
+        {
+          "zone": "IV",
+          "CNY_nominal_per_kWh": 0.61,
+          "region_description": "本通知继续按资源区定价，但未重刊地区表；旧分区另见2009原件，不在本通知推断。"
+        }
+      ],
+      "tax_basis": "not_explicit_in_this_notice",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "funding": "Grid settles up to local coal benchmark; renewable development fund covers excess, not another full tariff.",
+      "support_years": null,
+      "support_duration_status": "not_established_by_this_notice_alone",
+      "competition": "Competitive tariff may not exceed applicable benchmark; benchmark is not an observed project payment.",
+      "superseded_by": null,
+      "supersession_evidence": null,
+      "source_ids": [
+        "NDRC_WIND_PRICE_2014_3008"
+      ],
+      "source_locator": "HTML正文第一、三、五条；落款及页面发布时间"
+    },
+    {
+      "id": "wind_2016_3044",
+      "technology": "onshore_wind",
+      "issued_date": "2015-12-22",
+      "web_publication_date": "2015-12-24",
+      "information_date_basis": "verified_web_publication_conservative_cutoff",
+      "nominal_cohort_start": "2016-01-01",
+      "eligibility": "2016年、2018年等年份1月1日以后核准分别执行对应标杆电价；2年核准期内未开工不得执行该核准期电价；2016年前核准但2017年底前仍未开工的执行2016年电价。2018年前成本较大变化可调整。",
+      "prices": [
+        {
+          "zone": "I",
+          "CNY_nominal_per_kWh": 0.47,
+          "region_description": "内蒙古自治区除赤峰市、通辽市、兴安盟、呼伦贝尔市以外其他地区；新疆维吾尔自治区乌鲁木齐市、伊犁哈萨克自治州、克拉玛依市、石河子市"
+        },
+        {
+          "zone": "II",
+          "CNY_nominal_per_kWh": 0.5,
+          "region_description": "河北省张家口市、承德市；内蒙古自治区赤峰市、通辽市、兴安盟、呼伦贝尔市；甘肃省嘉峪关市、酒泉市"
+        },
+        {
+          "zone": "III",
+          "CNY_nominal_per_kWh": 0.54,
+          "region_description": "吉林省白城市、松原市；黑龙江省鸡西市、双鸭山市、七台河市、绥化市、伊春市，大兴安岭地区；甘肃省除嘉峪关市、酒泉市以外其他地区；新疆维吾尔自治区除乌鲁木齐市、伊犁哈萨克自治州、克拉玛依市、石河子市以外其他地区；宁夏回族自治区"
+        },
+        {
+          "zone": "IV",
+          "CNY_nominal_per_kWh": 0.6,
+          "region_description": "除Ⅰ类、Ⅱ类、Ⅲ类资源区以外的其他地区"
+        }
+      ],
+      "tax_basis": "tax_inclusive",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "funding": "Grid settles up to local coal benchmark; renewable development fund covers excess, not another full tariff.",
+      "support_years": null,
+      "support_duration_status": "not_established_by_this_notice_alone",
+      "competition": "Competitive tariff may not exceed applicable benchmark; benchmark is not an observed project payment.",
+      "superseded_by": null,
+      "supersession_evidence": null,
+      "source_ids": [
+        "NDRC_RENEWABLE_PRICE_2015_3044",
+        "NDRC_RENEWABLE_PRICE_2015_3044_TABLE1"
+      ],
+      "source_locator": "正文第一、三、六条；附件1物理第1页及注1/2"
+    },
+    {
+      "id": "wind_2018_announced_3044",
+      "technology": "onshore_wind",
+      "issued_date": "2015-12-22",
+      "web_publication_date": "2015-12-24",
+      "information_date_basis": "verified_web_publication_conservative_cutoff",
+      "nominal_cohort_start": "2018-01-01",
+      "eligibility": "2016年、2018年等年份1月1日以后核准分别执行对应标杆电价；2年核准期内未开工不得执行该核准期电价；2016年前核准但2017年底前仍未开工的执行2016年电价。2018年前成本较大变化可调整。",
+      "prices": [
+        {
+          "zone": "I",
+          "CNY_nominal_per_kWh": 0.44,
+          "region_description": "内蒙古自治区除赤峰市、通辽市、兴安盟、呼伦贝尔市以外其他地区；新疆维吾尔自治区乌鲁木齐市、伊犁哈萨克自治州、克拉玛依市、石河子市"
+        },
+        {
+          "zone": "II",
+          "CNY_nominal_per_kWh": 0.47,
+          "region_description": "河北省张家口市、承德市；内蒙古自治区赤峰市、通辽市、兴安盟、呼伦贝尔市；甘肃省嘉峪关市、酒泉市"
+        },
+        {
+          "zone": "III",
+          "CNY_nominal_per_kWh": 0.51,
+          "region_description": "吉林省白城市、松原市；黑龙江省鸡西市、双鸭山市、七台河市、绥化市、伊春市，大兴安岭地区；甘肃省除嘉峪关市、酒泉市以外其他地区；新疆维吾尔自治区除乌鲁木齐市、伊犁哈萨克自治州、克拉玛依市、石河子市以外其他地区；宁夏回族自治区"
+        },
+        {
+          "zone": "IV",
+          "CNY_nominal_per_kWh": 0.58,
+          "region_description": "除Ⅰ类、Ⅱ类、Ⅲ类资源区以外的其他地区"
+        }
+      ],
+      "tax_basis": "tax_inclusive",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "funding": "Grid settles up to local coal benchmark; renewable development fund covers excess, not another full tariff.",
+      "support_years": null,
+      "support_duration_status": "not_established_by_this_notice_alone",
+      "competition": "Competitive tariff may not exceed applicable benchmark; benchmark is not an observed project payment.",
+      "superseded_by": "wind_2018_revised_2729",
+      "supersession_evidence": "2729号正文第一条明确：之前发布的上述年份新建陆上风电标杆上网电价政策不再执行。",
+      "source_ids": [
+        "NDRC_RENEWABLE_PRICE_2015_3044",
+        "NDRC_RENEWABLE_PRICE_2015_3044_TABLE1"
+      ],
+      "source_locator": "正文第一条；附件1物理第1页2018年列及注释"
+    },
+    {
+      "id": "pv_2016_3044",
+      "technology": "utility_pv",
+      "issued_date": "2015-12-22",
+      "web_publication_date": "2015-12-24",
+      "information_date_basis": "verified_web_publication_conservative_cutoff",
+      "nominal_cohort_start": "2016-01-01",
+      "eligibility": "2016年1月1日以后备案并纳入年度规模管理；2016年前备案并纳入年度规模管理但2016年6月30日以前仍未全部投运的执行2016年电价。西藏另行制定；未给出值不填零。",
+      "prices": [
+        {
+          "zone": "I",
+          "CNY_nominal_per_kWh": 0.8,
+          "region_description": "宁夏，青海海西，甘肃嘉峪关、武威、张掖、酒泉、敦煌、金昌，新疆哈密、塔城、阿勒泰、克拉玛依，内蒙古除赤峰、通辽、兴安盟、呼伦贝尔以外地区"
+        },
+        {
+          "zone": "II",
+          "CNY_nominal_per_kWh": 0.88,
+          "region_description": "北京，天津，黑龙江，吉林，辽宁，四川，云南，内蒙古赤峰、通辽、兴安盟、呼伦贝尔，河北承德、张家口、唐山、秦皇岛，山西大同、朔州、忻州，陕西榆林、延安，青海、甘肃、新疆除Ⅰ类外其他地区"
+        },
+        {
+          "zone": "III",
+          "CNY_nominal_per_kWh": 0.98,
+          "region_description": "除Ⅰ类、Ⅱ类资源区以外的其他地区；西藏按本附件注释单列处理"
+        }
+      ],
+      "tax_basis": "tax_inclusive",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "funding": "Grid settles up to local coal benchmark; renewable development fund covers excess, not another full tariff.",
+      "support_years": null,
+      "support_duration_status": "not_established_by_this_notice_alone",
+      "competition": "Competitive tariff may not exceed applicable benchmark; benchmark is not an observed project payment.",
+      "superseded_by": null,
+      "supersession_evidence": null,
+      "source_ids": [
+        "NDRC_RENEWABLE_PRICE_2015_3044",
+        "NDRC_RENEWABLE_PRICE_2015_3044_TABLE2"
+      ],
+      "source_locator": "正文第三、六条；附件2物理第1页及注1/2"
+    },
+    {
+      "id": "pv_2017_2729",
+      "technology": "utility_pv",
+      "issued_date": "2016-12-26",
+      "web_publication_date": "2016-12-28",
+      "information_date_basis": "verified_web_publication_conservative_cutoff",
+      "nominal_cohort_start": "2017-01-01",
+      "eligibility": "2017年1月1日以后纳入财政补贴年度规模管理；2017年前备案并纳入以前年份财政补贴规模管理但2017年6月30日以前仍未投运的执行2017年电价。西藏1.05；今后暂定每年调一次。",
+      "prices": [
+        {
+          "zone": "I",
+          "CNY_nominal_per_kWh": 0.65,
+          "region_description": "宁夏，青海海西，甘肃嘉峪关、武威、张掖、酒泉、敦煌、金昌，新疆哈密、塔城、阿勒泰、克拉玛依，内蒙古除赤峰、通辽、兴安盟、呼伦贝尔以外地区"
+        },
+        {
+          "zone": "II",
+          "CNY_nominal_per_kWh": 0.75,
+          "region_description": "北京，天津，黑龙江，吉林，辽宁，四川，云南，内蒙古赤峰、通辽、兴安盟、呼伦贝尔，河北承德、张家口、唐山、秦皇岛，山西大同、朔州、忻州、阳泉，陕西榆林、延安，青海、甘肃、新疆除Ⅰ类外其他地区"
+        },
+        {
+          "zone": "III",
+          "CNY_nominal_per_kWh": 0.85,
+          "region_description": "除Ⅰ类、Ⅱ类资源区以外的其他地区；西藏按本附件注释单列处理"
+        },
+        {
+          "zone": "Tibet",
+          "CNY_nominal_per_kWh": 1.05,
+          "region_description": "西藏自治区；附件1注1单列1.05元/千瓦时"
+        }
+      ],
+      "tax_basis": "tax_inclusive",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "funding": "Grid settles up to local coal benchmark; renewable development fund covers excess, not another full tariff.",
+      "support_years": null,
+      "support_duration_status": "not_established_by_this_notice_alone",
+      "competition": "Competitive tariff may not exceed applicable benchmark; benchmark is not an observed project payment.",
+      "superseded_by": null,
+      "supersession_evidence": null,
+      "source_ids": [
+        "NDRC_RENEWABLE_PRICE_2016_2729",
+        "NDRC_RENEWABLE_PRICE_2016_2729_TABLE1"
+      ],
+      "source_locator": "正文第一、四条；附件1物理第1页及注1—4"
+    },
+    {
+      "id": "wind_2018_revised_2729",
+      "technology": "onshore_wind",
+      "issued_date": "2016-12-26",
+      "web_publication_date": "2016-12-28",
+      "information_date_basis": "verified_web_publication_conservative_cutoff",
+      "nominal_cohort_start": "2018-01-01",
+      "eligibility": "2018年1月1日以后核准并纳入财政补贴年度规模管理；2年核准期内未开工不得执行该期电价；2018年前核准并纳入以前年份财政补贴规模管理但2019年底前仍未开工的执行2018年电价；2018年前核准但纳入2018年1月1日之后财政补贴年度规模管理的也执行2018年电价。",
+      "prices": [
+        {
+          "zone": "I",
+          "CNY_nominal_per_kWh": 0.4,
+          "region_description": "内蒙古自治区除赤峰市、通辽市、兴安盟、呼伦贝尔市以外其他地区；新疆维吾尔自治区乌鲁木齐市、伊犁哈萨克自治州、克拉玛依市、石河子市"
+        },
+        {
+          "zone": "II",
+          "CNY_nominal_per_kWh": 0.45,
+          "region_description": "河北省张家口市、承德市；内蒙古自治区赤峰市、通辽市、兴安盟、呼伦贝尔市；甘肃省嘉峪关市、酒泉市；云南省"
+        },
+        {
+          "zone": "III",
+          "CNY_nominal_per_kWh": 0.49,
+          "region_description": "吉林省白城市、松原市；黑龙江省鸡西市、双鸭山市、七台河市、绥化市、伊春市，大兴安岭地区；甘肃省除嘉峪关市、酒泉市以外其他地区；新疆维吾尔自治区除乌鲁木齐市、伊犁哈萨克自治州、克拉玛依市、石河子市以外其他地区；宁夏回族自治区"
+        },
+        {
+          "zone": "IV",
+          "CNY_nominal_per_kWh": 0.57,
+          "region_description": "除Ⅰ类、Ⅱ类、Ⅲ类资源区以外的其他地区"
+        }
+      ],
+      "tax_basis": "tax_inclusive",
+      "payment_kind": "total_benchmark_tariff_not_additional_premium",
+      "funding": "Grid settles up to local coal benchmark; renewable development fund covers excess, not another full tariff.",
+      "support_years": null,
+      "support_duration_status": "not_established_by_this_notice_alone",
+      "competition": "Competitive tariff may not exceed applicable benchmark; benchmark is not an observed project payment.",
+      "superseded_by": null,
+      "supersession_evidence": null,
+      "source_ids": [
+        "NDRC_RENEWABLE_PRICE_2016_2729",
+        "NDRC_RENEWABLE_PRICE_2016_2729_TABLE2"
+      ],
+      "source_locator": "正文第一条及附件2物理第1页和注释；2018年前重大造价变化仍可调整"
+    }
+  ],
+  "geography_cautions": [
+    "3044附件1相较旧2009分区不再将昌吉列Ⅰ类、不再将张掖列Ⅱ类；必须按各版表，不能沿用同一zone字段做全国权重。",
+    "2729风电2018表新增云南为Ⅱ类；3044风电表云南未列Ⅰ/Ⅱ/Ⅲ，对应其其他地区行。",
+    "2729光伏2017表Ⅱ类新增阳泉；西藏单列1.05，不能延用3044西藏价格缺失。",
+    "附件中的2019上传路径标识不作为2015/2016政策发布日期。"
+  ]
+}

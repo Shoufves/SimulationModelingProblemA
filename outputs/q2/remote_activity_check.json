@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-10-19T12:25:58.616231+08:00",
+  "issue": 7,
+  "status": "current_issue_fetch_failed_main_verified",
+  "remote_writes_performed": false,
+  "attempts": [
+    {
+      "method": "PowerShell Invoke-RestMethod",
+      "result": "TLS authentication failure"
+    },
+    {
+      "method": "Python urllib HTTPS GET",
+      "result": "HTTP403 rate limit exceeded"
+    },
+    {
+      "method": "git ls-remote origin refs/heads/main",
+      "result": "success",
+      "sha": "804ec15ee43874303986a7ad91b2cde05c65b124"
+    }
+  ],
+  "main_sha_read_via_ssh": "804ec15ee43874303986a7ad91b2cde05c65b124",
+  "latest_successful_issue_check": "outputs/q2/remote_pv_queue_check.json",
+  "latest_successful_issue_checked_at": "2026-10-19T11:38:28.688583+08:00",
+  "note": "Current Issue state not refreshed; preserve last successful retrieval without presenting it as this attempt."
+}

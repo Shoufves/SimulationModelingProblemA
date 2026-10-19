@@ -1,0 +1,81 @@
+{
+  "parent_training_selection": {
+    "trial": 134,
+    "rule": "instant_margin",
+    "parameters": {
+      "wind_stock_expansion_rate": 0.2681992337164751,
+      "solar_stock_expansion_rate": 0.6572807723250201
+    },
+    "structure": "shared_construction_connection",
+    "status": "valid",
+    "loss": 0.2357603114879326,
+    "parts": [
+      {
+        "indicator": "consumption_10ktce",
+        "n": 7,
+        "scale": 428334.0,
+        "weight": 0.25,
+        "normalized_mse": 0.0023383575748656157,
+        "weighted_loss": 0.0005845893937164039
+      },
+      {
+        "indicator": "consumption_coal_share",
+        "n": 7,
+        "scale": 0.6579999999999999,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.0016595435914201469,
+        "weighted_loss": 0.00013829529928501222
+      },
+      {
+        "indicator": "consumption_oil_share",
+        "n": 7,
+        "scale": 0.17300000000000001,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.010041968122284807,
+        "weighted_loss": 0.0008368306768570672
+      },
+      {
+        "indicator": "consumption_gas_share",
+        "n": 7,
+        "scale": 0.055999999999999994,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.003206306803789108,
+        "weighted_loss": 0.00026719223364909234
+      },
+      {
+        "indicator": "wind_10kW",
+        "n": 7,
+        "scale": 9657.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.2015005508914794,
+        "weighted_loss": 0.01679171257428995
+      },
+      {
+        "indicator": "solar_10kW",
+        "n": 7,
+        "scale": 2486.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 2.584562503550526,
+        "weighted_loss": 0.2153802086292105
+      },
+      {
+        "indicator": "nuclear_10kW",
+        "n": 7,
+        "scale": 2008.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.008201081558796118,
+        "weighted_loss": 0.0006834234632330097
+      },
+      {
+        "indicator": "gcb_fuel_co2",
+        "n": 7,
+        "scale": 9051.061952,
+        "weight": 0.25,
+        "normalized_mse": 0.004312236870766271,
+        "weighted_loss": 0.0010780592176915678
+      }
+    ]
+  },
+  "currency": "million_USD_2008",
+  "opening_state_and_cash_unchanged": true
+}

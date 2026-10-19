@@ -1,0 +1,174 @@
+{
+  "id": "Q2_NOMINAL_PV_2015_EPISODE",
+  "decision": "limited_nominal_policy_episode_research",
+  "review_date": "2026-10-19",
+  "reviewer": "same_author_mapping_review",
+  "team_approval": false,
+  "national_model_admission": false,
+  "fingerprints": [
+    {
+      "path": "data/catalog/q2_policy_review.json",
+      "sha256": "b99b8368239a39f5446d42c101bc5661250167f863cb6e37bf0dc1be9230a07d"
+    },
+    {
+      "path": "data/catalog/q2_policy_transcription.json",
+      "sha256": "e9b70349cb97c5a6720252fee13faffac2bafe090b8f0b686f74b41325b63389"
+    },
+    {
+      "path": "data/processed/q2/policy_reference.csv",
+      "sha256": "0d264191638244363249619f450673e56c534f3c7bf4167aec6d159468194150"
+    },
+    {
+      "path": "data/catalog/q2_currency_bridge_review.json",
+      "sha256": "08e6bd2848bdd14eff0c1ac48d8d27fd8bf41f8f1460e82bbc0987b503b9fe16"
+    },
+    {
+      "path": "data/processed/q2/currency_bridge_2008_2024.csv",
+      "sha256": "2e4a4db04780413aa8bfd3320291b1c9e8fcbf6c984d685ddefede84a4d2de63"
+    },
+    {
+      "path": "workflow/q2_candidates/v9/manifest.json",
+      "sha256": "c6c03181a7da1927d5922b988fabf57688204c495552a47b8eab0a3b9f842cbf"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v9/training_selection.json",
+      "sha256": "f7e0fc0b6d926c06a18ff888bf52c98032b3dfc4921f5d9dc88ca0eb0d20b92f"
+    },
+    {
+      "path": "data/raw/q2/ndrc_wind_price_2009_1906.html",
+      "sha256": "fc27cf01ee9db65f526e3a869e7b36e388939fcbb6ac8d8cb20d710c464276af"
+    },
+    {
+      "path": "data/raw/q2/ndrc_wind_price_2009_table.pdf",
+      "sha256": "a5087a17fb8ccf048c0394d1a8dee170f4bb0636ba0139e26f054f6fea6bd0d7"
+    },
+    {
+      "path": "data/raw/q2/ndrc_pv_price_2013_1638.pdf",
+      "sha256": "c8b4f3d85c1055a3107ec6348eb20356225ac4e30f98848ed9a69c18c132b4ff"
+    },
+    {
+      "path": "data/raw/batch1_national/wdi_china_macro_2005_2025.json",
+      "sha256": "8ee1bc173ee4bda7975a045b791c8b3f6af3ee8d0f9995ce52d23f896d0a3200"
+    },
+    {
+      "path": "data/raw/q2/wdi_us_gdp_deflator_2008_2024.json",
+      "sha256": "52cff7d5e6280ad659dae91f548eb81d03c830d0191deffa92367c95f52cc1b2"
+    },
+    {
+      "path": "data/raw/q2/wdi_us_gdp_deflator_2008_2014.json",
+      "sha256": "e850330ba82805e4f34a548eb53f7b691b4bc75a639f416c0ce3411f1dd89962"
+    },
+    {
+      "path": "data/raw/q2/wdi_fx_indicator_definition.json",
+      "sha256": "879ac40c1e115d0575c0ac1d26a45b68432303927ea163be9c80e7f47c739b12"
+    },
+    {
+      "path": "data/raw/q2/wdi_deflator_indicator_definition.json",
+      "sha256": "d16ffd97064b47e9d2d822bda7be773a6218ade7502f8e8cca07b7cb9c918182"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_WIND_PRICE_2009_1906",
+      "record_sha256": "2293dbb5aeb05575bffccbb5ac0709bcfc1230b35e716402ea48467d73ec9a71"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_WIND_PRICE_2009_TABLE",
+      "record_sha256": "2fdddbd7321e01d529ff900c14adf1f4c6ae023b34abbf9956319895c379e0c2"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_PV_PRICE_2013_1638",
+      "record_sha256": "e727c0187a86d5eb65db78a13a883b2e505194cba6998e5e9913b44ccfba48cd"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "WDI_CHINA_FX_Q2_2008_2024",
+      "record_sha256": "5d4d1d23ba3c72c27adce9dd22c954202da8998f721eb33d43cb6ab3a87e4442"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "WDI_US_GDP_DEFLATOR_2008_2024",
+      "record_sha256": "3a7684de5eacf3414963f8e0272f16856a229fc36eb09b5827e7e4ba146b901a"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "WDI_US_GDP_DEFLATOR_2008_2014",
+      "record_sha256": "2c8e8dfc5e3f875c198d7e4b99cd042b9843b714943e965b2dbd2cd0f8a07d13"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "WDI_FX_INDICATOR_DEFINITION",
+      "record_sha256": "0420eed8860d3743d781aca93e862444a903c1e6c3787ba9099921a7eb031013"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "WDI_DEFLATOR_INDICATOR_DEFINITION",
+      "record_sha256": "514e4eda4673cd130383ea83d55037a1ea7419de347b71cf06b890016e3d481a"
+    }
+  ],
+  "mapping_assumptions": [
+    {
+      "id": "NP01",
+      "topic": "Limited eligible cohort",
+      "statement": "Apply only to solar_new_build applications in2015, assumed to satisfy2013utility-PV filing/scalemanagement eligibility and commission in2016 beforeJune30. Modelyear2016doesnotprove anactualdate;earlycommissioning is explicitly imposed for thismechanism study. Existingstock andotherapplicationyears receive noepisodeaward. Thisis apartial conditionalintervention,not completeactualChinesehistoricalpolicy."
+    },
+    {
+      "id": "NP02",
+      "topic": "Geographic brackets",
+      "statement": "Use2013I/II/IIIzonebenchmarks900/950/1000nominalCNYperMWh as3separatehypotheses for theeligiblemodelcohort. No regionalweights,nationalaverage,actualzoneassignmentorbestzone selection. WindanddistributedPV notcovered."
+    },
+    {
+      "id": "NP03",
+      "topic": "Currency and investor information",
+      "statement": "Convert nominalquote by the actualyear annualFXandUSgeneraldeflator bridge. Treat revisedannualfactor as currentyear-end snapshot forretrospectiveaccounting;not proven contemporaneousrelease. Investors holdtodayfactor constant overfutureoperatingyears. Future realizedannualfactors never enter earlierNPV. Fixedrealcontrols lock the2015factor and thereby representdifferent contractterms,notan equallycorrect nominalconversion."
+    },
+    {
+      "id": "NP04",
+      "topic": "Fiscal and tax mapping",
+      "statement": "Keep inheritedgovernmentcash and allopeningfunds. Annualgrosssupportceiling equals inheritedgovernmentopeningcash;this amplefiniteceiling is a diagnosticassumption,notobservedChinese subsidybudget. Modelbasebusprice70constant2008USD/MWh substitutes forcoalbenchmark solelyinthisconditionalmechanism;actualregionalcoalbenchmark isnotreviewed. Nominaltariffs retaintaxinclusivebasis;VATremittance/credits arenot modeled,so reportedcash/NPVisnotactualprojectprofit."
+    },
+    {
+      "id": "NP05",
+      "topic": "Support and dispatch",
+      "statement": "2013in-principle20yearsupport mappedto20modeloperatingyears forassumedeligiblecohort;notindividualentitlement. SamephysicalPVcohorts sharedispatch pro-rata byoperatingcapacity. Fulltariffisnot paidasecondpremium:onlydifferencefromcommoncarriersalerevenue settles throughgovernmentpayer;negative differencesclawback. Allnominalandfixedrealcases retainoriginalphysicalparameters,sourcecorrections and2015-2021selectedv9behavior/rates."
+    },
+    {
+      "id": "NP06",
+      "topic": "Evaluation scope",
+      "statement": "Sevenpredeclaredcases:control,3annualnominalcurrency,3fixedreal2015conversion. No fitting orselecting bytraining/holdout;reporteverypath andall8qualitymetrics. Already-seenholdout remains exploratory. ThiscannotcloseB3/B4/B5/B6,doesnotadd3531trainingcount,anddoesnotestablish policycausality."
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "2013utilityPV source terms verified:3zones0.90/0.95/1.00nominaltaxinclusiveCNY/kWh;fulltariff notpremium;inprinciple20yearsfromoperation. Distributed0.42excluded."
+    },
+    {
+      "passed": true,
+      "evidence": "3044transition review retained separately:pre2016filed/scalemanagedprojects notfullyonlinebefore2016-06-30move tonewprice. Episode explicitlyassumeseligible2015applicationandearly2016commissioning;this is notverifiednationalcohortmapping."
+    },
+    {
+      "passed": true,
+      "evidence": "Currencybridge2008-2024has17annualfactors,exactoldoverlap,unitdirectionandmillionconversion checked. Models retain quoted nominalCNY/MWh and explicit targetcurrency;noVATconversion orforecastinferred."
+    },
+    {
+      "passed": true,
+      "evidence": "ModelmappingassumptionsNP01-NP06recordremainingeligibility,geography,fiscal,tax,informationdateandbenchmark gaps;allowlimitedmechanismstudyonly,notnationaladmission."
+    },
+    {
+      "passed": true,
+      "evidence": "V9trainingselection isfixedbeforethisepisode;all7cases predefined and retained. No newtrainingparameters orholdoutselection. Sameinitialstate andprivate/publicfunds;actualgovernmentbalance constrains support."
+    }
+  ],
+  "allowed_uses": [
+    "Seven-case conditional historical mechanism study with complete ledgers and explicit hypotheses."
+  ],
+  "prohibited_uses": [
+    "Nationwide subsidy effect, actual project profitability, calibrated national history or S0forecast.",
+    "Selecting a geographic price on holdout performance.",
+    "Using future realized currency factors in earlier investor information."
+  ]
+}

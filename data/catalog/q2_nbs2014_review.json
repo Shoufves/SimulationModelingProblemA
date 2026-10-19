@@ -1,0 +1,70 @@
+{
+  "reviewer": "yx_assisted_local_review",
+  "review_date": "2026-10-19",
+  "team_approval": false,
+  "decision": "historical_accounts_and_boundary_diagnostics_only",
+  "fingerprints": [
+    {
+      "path": "data/raw/lb/base/nbs/archive/2016/0903CH.jpg",
+      "sha256": "4317db197e7dbe0c2a52035d4d0f694c5b31b2120e8ff58e75a769a1927d9987"
+    },
+    {
+      "path": "data/raw/lb/base/nbs/archive/2016/0904CH.jpg",
+      "sha256": "1c48bf738f3de96abce0702a88f4e3fe9e6398f5e2323301065465f3b872933f"
+    },
+    {
+      "path": "data/raw/lb/base/nbs/archive/2016/0905CH.jpg",
+      "sha256": "49258e2158ad376d5bce37aca3f474d9fb236435b3647c3b84335100c753f075"
+    },
+    {
+      "path": "data/raw/lb/base/nbs/archive/2016/0906CH.jpg",
+      "sha256": "6e5452bd056f2c92e0de5f86e5d0eef172cdde6b5598849c6d985b612628c3a2"
+    },
+    {
+      "path": "data/raw/lb/base/nbs/archive/2016/0910CH.jpg",
+      "sha256": "2affcaa25ebd878214cb88077a6b3a9fdfa70369996102d4932f47252b21ece8"
+    },
+    {
+      "path": "data/raw/lb/base/nbs/archive/2016/0909CH.jpg",
+      "sha256": "f25059d69c17f2a8d6ead9b6285231803b654103825aa3fad77391201517bbfb"
+    },
+    {
+      "path": "data/catalog/q2_nbs2014_transcription.json",
+      "sha256": "94a36d88ac99e40f763e7667516e698c0728c72f85b93218b606f39206bb19a0"
+    },
+    {
+      "path": "data/processed/unified/nbs_history.csv",
+      "sha256": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb"
+    },
+    {
+      "path": "data/processed/q2/sector_balance_2014_30province.csv",
+      "sha256": "dbeb5039977eabd6a56703a3ed8392be0858348014c8a4d04bbc93f2999523ba"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Direct visual reading of six full original table images; 2014 column/row and all units checked."
+    },
+    {
+      "passed": true,
+      "evidence": "0906CH industrial final electricity is 37702.8; corrected a provisional reading before encoding."
+    },
+    {
+      "passed": true,
+      "evidence": "Original missing cells and 2016 edition retained; no forced balancing or synthetic energy conversions."
+    }
+  ],
+  "allowed_uses": [
+    "2014 national accounting anchors",
+    "retrospective historical initialization design",
+    "explicit national/provincial and vintage discrepancies"
+  ],
+  "prohibited_uses": [
+    "2014 agent knowledge of a later publication",
+    "combining national and provincial totals as independent observations",
+    "2016 edition sector shares silently applied to revised 2025 totals",
+    "treating industrial transformation inputs as final service",
+    "national ABM admission without additional technology/service/finance mapping"
+  ]
+}

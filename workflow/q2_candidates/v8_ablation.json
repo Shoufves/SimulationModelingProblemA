@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "scope": "fixed_rule_paired_historical_approval_replay",
+  "bindings": {
+    "manifest": {
+      "path": "workflow/q2_candidates/v8/manifest.json",
+      "sha256": "2dbc5636a662f038fb1cd58fbfa50b04d76f41aa495eec459287f6d6310dae82"
+    },
+    "selection": {
+      "path": "outputs/q2/historical_candidate_v8/training_selection.json",
+      "sha256": "9334545f290b37375de05099c00513483d5a8d93b91242648336011d3c436759"
+    },
+    "parent_manifest": {
+      "path": "workflow/q2_candidates/v7/manifest.json",
+      "sha256": "53d5d6a42c6e67caa2c8380ff8e2f9b660a163540143040ce2bb2cb930762200"
+    },
+    "parent_selection": {
+      "path": "outputs/q2/historical_candidate_v7/training_selection.json",
+      "sha256": "e21d3c7cf6ebd65af2c1bd82b053d73cbe44d095982d42b84b70b328fff5d9db"
+    }
+  },
+  "new_parameters": 0,
+  "rule": "v8 training-selected rule for both paths; no selection using holdout",
+  "national_acceptance": false
+}

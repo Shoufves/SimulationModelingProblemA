@@ -1,0 +1,9 @@
+﻿id,left,right,difference,unit,interpretation,resolved
+coal_heat_price_main_vs_annex,2.95,3.876268294872946,-0.9262682948729459,USD_2008/GJ,Main p43 heat price versus annex p206 mass price/NCV; do not mix the pairs or declare rounding.,False
+gas_price_main_vs_shanghai,4.78,4.67,0.11000000000000032,USD_2008/reported_million_Btu,"Main study assumption versus Shanghai power-sector quote; different scope, not interchangeable observations.",False
+wind_yumen_main_vs_annex_cost,1223,1200,23,USD_2008/kWe,"Main p63 cost1223 versus annex A.2 cost1200; annex1700MCNY /6.95 /200MW implies1223.02, but original1200 is retained.",False
+fuel_component:chn-c1,23.06,23.086956521739133,-0.026956521739133876,USD_2008/MWh_electricity,"Main heat price and rounded net efficiency; agreement within published rounding is a diagnostic, not a new data point.",True
+fuel_component:chn-c2,23.06,23.086956521739133,-0.026956521739133876,USD_2008/MWh_electricity,"Main heat price and rounded net efficiency; agreement within published rounding is a diagnostic, not a new data point.",True
+fuel_component:chn-c3,23.06,23.086956521739133,-0.026956521739133876,USD_2008/MWh_electricity,"Main heat price and rounded net efficiency; agreement within published rounding is a diagnostic, not a new data point.",True
+fuel_component:chn-g1,28.14,28.117241379310347,0.022758620689653952,USD_2008/MWh_electricity,"Main heat price and rounded net efficiency; agreement within published rounding is a diagnostic, not a new data point.",True
+fuel_component:chn-g2,28.14,28.117241379310347,0.022758620689653952,USD_2008/MWh_electricity,"Main heat price and rounded net efficiency; agreement within published rounding is a diagnostic, not a new data point.",True

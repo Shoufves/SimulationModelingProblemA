@@ -1,0 +1,28 @@
+{
+  "status": "diagnostic_executed",
+  "training_executions": 250,
+  "previous_cumulative_executions": 5745,
+  "cumulative_executions": 5995,
+  "selected": {
+    "trial": 52,
+    "case": "fixed_150GW",
+    "rule": "instant_margin",
+    "parameters": {
+      "wind_stock_expansion_rate": 0.23964410660736596,
+      "solar_stock_expansion_rate": 0.45748987283728887,
+      "oil_residual_elasticity": 0.6022340335535771,
+      "gas_residual_elasticity": 1.9999834066680309
+    },
+    "status": "valid",
+    "loss": 0.1377543447385913
+  },
+  "numeric_quality_passed": false,
+  "failed_indicators": [
+    "consumption_oil_share",
+    "consumption_gas_share",
+    "wind_10kW",
+    "solar_10kW"
+  ],
+  "national_acceptance": false,
+  "previous_holdout_already_seen": true
+}

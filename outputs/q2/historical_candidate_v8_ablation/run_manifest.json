@@ -1,0 +1,50 @@
+{
+  "status": "ablation_executed",
+  "bindings": {
+    "manifest": {
+      "path": "workflow/q2_candidates/v8/manifest.json",
+      "sha256": "2dbc5636a662f038fb1cd58fbfa50b04d76f41aa495eec459287f6d6310dae82"
+    },
+    "selection": {
+      "path": "outputs/q2/historical_candidate_v8/training_selection.json",
+      "sha256": "9334545f290b37375de05099c00513483d5a8d93b91242648336011d3c436759"
+    },
+    "parent_manifest": {
+      "path": "workflow/q2_candidates/v7/manifest.json",
+      "sha256": "53d5d6a42c6e67caa2c8380ff8e2f9b660a163540143040ce2bb2cb930762200"
+    },
+    "parent_selection": {
+      "path": "outputs/q2/historical_candidate_v7/training_selection.json",
+      "sha256": "e21d3c7cf6ebd65af2c1bd82b053d73cbe44d095982d42b84b70b328fff5d9db"
+    }
+  },
+  "code_hashes": {
+    "scripts/run_q2_permit_ablation.py": "faaeeafa072a3dd3b6a25f14a7f875a5ed11cc24c51e8abb5a7f7885efd95940",
+    "scripts/run_q2_deployment_ablation.py": "5beb9be9c97a04c6fdef6972958706bba4d70656cdc79fb51fc1a746ecd22820",
+    "scripts/run_q2_solar_ablation.py": "e254f80194d93f975a200666294b58ce243d8e2ce7853b58e116e5de9b2519af",
+    "scripts/run_q2_historical_candidate.py": "8319d294dff187d706c6160c4773db455940cb8decaa4179c85052c722612723",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/annual.py": "4acd3144f1110b784614b4d681dd8e1584f72d15a93b89d6c4b0e4b616f73d48",
+    "src/energy_model/q2/approvals.py": "0e6cf2f7903e76d8490c52daed1648d407e44dcf3562e674ee2eaa6496e969c9",
+    "src/energy_model/q2/contracts.py": "5c7497f1ff8786851a99e228a2f71e945e115a31d2240b68606a016e7d79a8fc",
+    "src/energy_model/q2/deployment.py": "2ec6fe0a88a43bb1c1ae0284c6e6f6bf1e768609c0a3894f13dc7046a67e33f7",
+    "src/energy_model/q2/experiments.py": "b6432f11758893710dbe20296657313eeb5c70238978f774604513453ff4eb8f",
+    "src/energy_model/q2/finance.py": "6724e4a9a37411cc12565fdb36086bca37de49dc1f245b5aec4548a64a39e22e",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32",
+    "src/energy_model/q2/lifecycle.py": "77c1908aa1cca437f72674b3ac88873206f07188f1e3eae6d2f8504aec86c403",
+    "src/energy_model/q2/operations.py": "95b0999dfdcb57b46046178c93c7a07facd7a16a1da4f0407bd93e1658bd2bb2",
+    "src/energy_model/q2/quality.py": "a1176bc537f7bbddcc664ed697ac9bbac8f8f347097a5650e06cd1f978cd370d",
+    "src/energy_model/q2/targets.py": "2e67cd5f0996f4e1a20c836ecc2a300f48ffdddbd058f620f7312634f72ce064"
+  },
+  "outputs": {
+    "constraint_usage.csv": "9588f454584a01b1602b34658d054cefbb468b37250709f889975a32b7193192",
+    "metrics.csv": "b208c5947922f9050faa0b5fec4eeb61d07bf9ffa9a42e4dfd3f67339bfe559b",
+    "nuclear_approvals.csv": "e7c8a48cf660ca9469aaae591aa93fd0d1be5454eddc73ef470b55169c66031b",
+    "observed_nuclear_nonissuance.json": "1e481181448bbdeb48b4e43074288b5eaffc77379a07cef0f5861bcb6e470825",
+    "quality.csv": "50d398d5cf2a39f649f4bcab4a1fc533c0d7b5113e74a7d8cc9154e7f55e4c1d",
+    "summary.json": "7ce5013810c88b9284ba9e29a69af93033b718c487814ed18c947304b273c829",
+    "technology_activity.csv": "2920ba611d400f69c1f1d393ecb6a6bc013068c2df62573b2713cbc51834d426",
+    "unconditioned_v7_control.json": "04351f904c0e6858ecd5a08d80ab89bc3cad5079f49061400e35dfb969eba777"
+  },
+  "national_acceptance": false
+}

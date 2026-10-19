@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "reviewer": "yx_assisted_local_review",
+  "review_date": "2026-10-19",
+  "team_approval": false,
+  "decision": "scoped_historical_technology_reference",
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/iea_nea_cost_2010.pdf",
+      "sha256": "830e0e9f116d40462d94571d8772a1803c53859c255c224ac0b0d7da9a823ac0"
+    },
+    {
+      "path": "data/catalog/q2_technology_2010_transcription.json",
+      "sha256": "126c6cc95526f538b6ac0df0f38d3471f1aefeb63980fe2a1f7dc0828d27b324"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "IEA_NEA_GENERATING_COSTS_2010",
+      "record_sha256": "89d04f85b7d449f6201b413b7a160eb3266586d6ac74fc8e27c9b0669850e459"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Physical pp39,43-46,60-63,205-206 rendered and visually checked including complete table headers and footnotes; method p42 and China descriptions pp207-208 read as text."
+    },
+    {
+      "passed": true,
+      "evidence": "19 main-table samples separately preserved from 20 project-level Annex A.2 records. Gas main-table capacity is 1358 MWe, not 358/340 MWe. Nuclear main-table sample can represent one reactor while annex represents multiple reactors."
+    },
+    {
+      "passed": true,
+      "evidence": "Coal main heat price 2.95 USD/GJ differs from 86.34 USD/t divided by annex22.274GJ/t; discrepancy is explicit and is not repaired by changing fuel heat."
+    },
+    {
+      "passed": true,
+      "evidence": "IEA Secretariat compilation rather than officially submitted national plant data confirmed on p205. Main costs, aggregate O&M and study assumptions are not reclassified as fleet observations."
+    }
+  ],
+  "allowed_uses": [
+    "Historical-vintage literature priors with explicit price basis and sample/model mapping",
+    "Published China sample range comparison and internal source discrepancy diagnostics",
+    "Generic life/construction reference where national specification is missing, labeled assumption"
+  ],
+  "prohibited_uses": [
+    "Historical or future national parameter admission without model-specific review",
+    "Mixing 2008 costs with nominal2014 finance without explicit price conversion",
+    "Treating aggregate levelized O&M as identified variable dispatch cost",
+    "Using sample load factors as measured national hourly availability",
+    "Inventing plant permits, retirement events or queues from expected study life",
+    "Silently reconciling main/annex conflicting fuel data",
+    "Turning report zero-carbon-price convention into a verified Chinese policy"
+  ]
+}

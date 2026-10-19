@@ -1,0 +1,952 @@
+{
+  "historical": {
+    "scope": "synthetic_engineering_only",
+    "seed": 17,
+    "start_year": 2014,
+    "end_year": 2024,
+    "operation": {
+      "energy_unit": "MWh_LHV",
+      "currency_unit": "constant_currency",
+      "hours": [
+        1.0
+      ],
+      "annual_weights": [
+        1.0
+      ],
+      "information_mode": "announced_window",
+      "nodes": [
+        "electricity",
+        "gas",
+        "sunlight",
+        "oil"
+      ],
+      "spill_nodes": [
+        "electricity"
+      ],
+      "sources": [
+        {
+          "id": "gas_supply",
+          "node": "gas",
+          "limit_mw": [
+            10.0
+          ],
+          "window_budget_mwh": 100000.0,
+          "resource_cost_per_mwh": 1.0,
+          "primary_factor": 1.0,
+          "nonfossil": false
+        },
+        {
+          "id": "sun",
+          "node": "sunlight",
+          "limit_mw": [
+            100.0
+          ],
+          "window_budget_mwh": 100000.0,
+          "resource_cost_per_mwh": 0.0,
+          "primary_factor": 1.0,
+          "nonfossil": true
+        },
+        {
+          "id": "oil_supply",
+          "node": "oil",
+          "limit_mw": [
+            10.0
+          ],
+          "window_budget_mwh": 100000.0,
+          "resource_cost_per_mwh": 2.0,
+          "primary_factor": 1.0,
+          "nonfossil": false
+        }
+      ],
+      "processes": [
+        {
+          "id": "gas_power",
+          "inputs": {
+            "gas": 2.0
+          },
+          "outputs": {
+            "electricity": 1.0
+          },
+          "capacity_mw": 10.0,
+          "availability": [
+            1.0
+          ],
+          "minimum_fraction": [
+            0.0
+          ],
+          "initial_rate_mw": 0.0,
+          "ramp_mw_per_hour": 10000.0,
+          "window_budget_mwh": 100000.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.4,
+          "captured_co2_t_per_mwh": 0.0,
+          "liability_co2_t_per_mwh": 0.4
+        },
+        {
+          "id": "solar_power",
+          "inputs": {
+            "sunlight": 1.0
+          },
+          "outputs": {
+            "electricity": 1.0
+          },
+          "capacity_mw": 1.0,
+          "availability": [
+            1.0
+          ],
+          "minimum_fraction": [
+            0.0
+          ],
+          "initial_rate_mw": 0.0,
+          "ramp_mw_per_hour": 10000.0,
+          "window_budget_mwh": 100000.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.0,
+          "captured_co2_t_per_mwh": 0.0,
+          "liability_co2_t_per_mwh": 0.0
+        }
+      ],
+      "services": [
+        {
+          "id": "industry",
+          "demand": [
+            6.0
+          ],
+          "unit": "MWh_useful_service",
+          "priority": 0,
+          "shortfall_weight": 1.0
+        },
+        {
+          "id": "building",
+          "demand": [
+            5.0
+          ],
+          "unit": "MWh_useful_service",
+          "priority": 1,
+          "shortfall_weight": 1.0
+        },
+        {
+          "id": "mobility",
+          "demand": [
+            2.0
+          ],
+          "unit": "MWh_useful_service",
+          "priority": 0,
+          "shortfall_weight": 1.0
+        }
+      ],
+      "devices": [
+        {
+          "id": "gas_heat",
+          "node": "gas",
+          "service": "industry",
+          "service_per_mwh": 1.0,
+          "input_capacity_mw": 1000.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.2,
+          "liability_co2_t_per_mwh": 0.2
+        },
+        {
+          "id": "appliance",
+          "node": "electricity",
+          "service": "building",
+          "service_per_mwh": 1.0,
+          "input_capacity_mw": 1000.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.0,
+          "liability_co2_t_per_mwh": 0.0
+        },
+        {
+          "id": "car",
+          "node": "oil",
+          "service": "mobility",
+          "service_per_mwh": 1.0,
+          "input_capacity_mw": 1000.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.3,
+          "liability_co2_t_per_mwh": 0.3
+        },
+        {
+          "id": "heat_pump",
+          "node": "electricity",
+          "service": "industry",
+          "service_per_mwh": 2.0,
+          "input_capacity_mw": 1.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.0,
+          "liability_co2_t_per_mwh": 0.0
+        }
+      ],
+      "stores": [],
+      "stock_boundary": "carry",
+      "financial_limits": [],
+      "capture_storage_budget_t": 0.0,
+      "carbon_price_per_t": 0.0,
+      "solver_time_limit_s": 30.0
+    },
+    "agents": [
+      {
+        "id": "fuel",
+        "role": "fuel_supplier",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {}
+      },
+      {
+        "id": "generation",
+        "role": "generator",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {
+          "solar_build": 0.0
+        }
+      },
+      {
+        "id": "industrial",
+        "role": "industry",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {
+          "heat_upgrade": 0.0
+        }
+      },
+      {
+        "id": "transport",
+        "role": "transport",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {}
+      },
+      {
+        "id": "buildings",
+        "role": "building",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {}
+      },
+      {
+        "id": "grid",
+        "role": "grid_storage",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {}
+      },
+      {
+        "id": "government",
+        "role": "government",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {}
+      }
+    ],
+    "assets": [
+      {
+        "id": "gas_supply_asset",
+        "owner": "fuel",
+        "kind": "source",
+        "component": "gas_supply",
+        "quantity": 1.0,
+        "online_year": 2014,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "sun_asset",
+        "owner": "fuel",
+        "kind": "source",
+        "component": "sun",
+        "quantity": 1.0,
+        "online_year": 2014,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "oil_supply_asset",
+        "owner": "fuel",
+        "kind": "source",
+        "component": "oil_supply",
+        "quantity": 1.0,
+        "online_year": 2014,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "gas_power_asset",
+        "owner": "generation",
+        "kind": "process",
+        "component": "gas_power",
+        "quantity": 1.0,
+        "online_year": 2014,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "solar_power_asset",
+        "owner": "generation",
+        "kind": "process",
+        "component": "solar_power",
+        "quantity": 0.0,
+        "online_year": 2014,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "gas_heat_asset",
+        "owner": "industrial",
+        "kind": "device",
+        "component": "gas_heat",
+        "quantity": 1.0,
+        "online_year": 2014,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "appliance_asset",
+        "owner": "buildings",
+        "kind": "device",
+        "component": "appliance",
+        "quantity": 1.0,
+        "online_year": 2014,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "car_asset",
+        "owner": "transport",
+        "kind": "device",
+        "component": "car",
+        "quantity": 1.0,
+        "online_year": 2014,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "heat_pump_asset",
+        "owner": "industrial",
+        "kind": "device",
+        "component": "heat_pump",
+        "quantity": 0.0,
+        "online_year": 2014,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      }
+    ],
+    "initial_projects": [],
+    "investment_options": [
+      {
+        "id": "solar_build",
+        "owner": "generation",
+        "kind": "process",
+        "component": "solar_power",
+        "capex_per_unit": 0.1,
+        "annual_installation_units": 3.0,
+        "maximum_total_units": 6.0,
+        "fixed_om_per_unit": 0.0,
+        "discount_rate": 0.05,
+        "economic_life": 20.0,
+        "expected_utilisation": 1.0,
+        "replacement_ratio": 1.0,
+        "connection_per_unit": 1.0,
+        "subsidy_per_unit": 0.0,
+        "lead_years": 2,
+        "construction_fractions": [
+          0.5,
+          0.5
+        ],
+        "expected_terminal_value_per_unit": 0.0,
+        "funding_convention": "fully_funded_nonremunerated_escrow",
+        "known_year": 2014,
+        "permit_known_year": 2014,
+        "permit_effective_year": 2014,
+        "cost_reference_year": 2014,
+        "replaces": null
+      },
+      {
+        "id": "heat_upgrade",
+        "owner": "industrial",
+        "kind": "device",
+        "component": "heat_pump",
+        "capex_per_unit": 0.1,
+        "annual_installation_units": 1.0,
+        "maximum_total_units": 2.0,
+        "fixed_om_per_unit": 0.0,
+        "discount_rate": 0.05,
+        "economic_life": 20.0,
+        "expected_utilisation": 1.0,
+        "replacement_ratio": 0.002,
+        "connection_per_unit": 1.0,
+        "subsidy_per_unit": 0.0,
+        "lead_years": 2,
+        "construction_fractions": [
+          0.5,
+          0.5
+        ],
+        "expected_terminal_value_per_unit": 0.0,
+        "funding_convention": "fully_funded_nonremunerated_escrow",
+        "known_year": 2014,
+        "permit_known_year": 2014,
+        "permit_effective_year": 2014,
+        "cost_reference_year": 2014,
+        "replaces": "gas_heat_asset"
+      }
+    ],
+    "asset_events": [],
+    "other_accounts": {
+      "clearing": 1000.0,
+      "external_economy": 100000.0,
+      "construction": 0.0,
+      "escrow": 0.0,
+      "carbon_market": 0.0
+    },
+    "behavior": {
+      "expectation_update": 0.5,
+      "investment_adjustment": 1.0
+    },
+    "demand_drivers": {
+      "industry": {
+        "gdp_elasticity": 1.0,
+        "annual_intensity_improvement": 0.0
+      },
+      "building": {
+        "gdp_elasticity": 1.0,
+        "annual_intensity_improvement": 0.0
+      },
+      "mobility": {
+        "gdp_elasticity": 1.0,
+        "annual_intensity_improvement": 0.0
+      }
+    },
+    "gdp_growth": {
+      "2015": 0.02,
+      "2016": 0.02,
+      "2017": 0.02,
+      "2018": 0.02,
+      "2019": 0.02,
+      "2020": 0.02,
+      "2021": 0.02,
+      "2022": 0.02,
+      "2023": 0.02,
+      "2024": 0.02
+    },
+    "cost_decline": {
+      "solar_build": 0.02,
+      "heat_upgrade": 0.02
+    },
+    "mechanisms": {
+      "investment": true,
+      "replacement": true,
+      "expectation_learning": true
+    },
+    "policies": [
+      {
+        "id": "fixture_policy",
+        "known_year": 2014,
+        "effective_year": 2014,
+        "node_prices": {
+          "gas": 2.0,
+          "oil": 3.0,
+          "sunlight": 0.0,
+          "electricity": 6.0
+        },
+        "service_prices": {
+          "industry": 10.0,
+          "building": 10.0,
+          "mobility": 10.0
+        },
+        "carbon_price_per_t": 0.0,
+        "government_agent": "government",
+        "subsidy_budget": 0.0,
+        "construction_units_limit": 5.0,
+        "connection_limit": 5.0
+      }
+    ]
+  },
+  "baseline": {
+    "scope": "synthetic_engineering_only",
+    "seed": 17,
+    "start_year": 2024,
+    "end_year": 2060,
+    "operation": {
+      "energy_unit": "MWh_LHV",
+      "currency_unit": "constant_currency",
+      "hours": [
+        1.0
+      ],
+      "annual_weights": [
+        1.0
+      ],
+      "information_mode": "announced_window",
+      "nodes": [
+        "electricity",
+        "gas",
+        "sunlight",
+        "oil"
+      ],
+      "spill_nodes": [
+        "electricity"
+      ],
+      "sources": [
+        {
+          "id": "gas_supply",
+          "node": "gas",
+          "limit_mw": [
+            10.0
+          ],
+          "window_budget_mwh": 100000.0,
+          "resource_cost_per_mwh": 1.0,
+          "primary_factor": 1.0,
+          "nonfossil": false
+        },
+        {
+          "id": "sun",
+          "node": "sunlight",
+          "limit_mw": [
+            100.0
+          ],
+          "window_budget_mwh": 100000.0,
+          "resource_cost_per_mwh": 0.0,
+          "primary_factor": 1.0,
+          "nonfossil": true
+        },
+        {
+          "id": "oil_supply",
+          "node": "oil",
+          "limit_mw": [
+            10.0
+          ],
+          "window_budget_mwh": 100000.0,
+          "resource_cost_per_mwh": 2.0,
+          "primary_factor": 1.0,
+          "nonfossil": false
+        }
+      ],
+      "processes": [
+        {
+          "id": "gas_power",
+          "inputs": {
+            "gas": 2.0
+          },
+          "outputs": {
+            "electricity": 1.0
+          },
+          "capacity_mw": 10.0,
+          "availability": [
+            1.0
+          ],
+          "minimum_fraction": [
+            0.0
+          ],
+          "initial_rate_mw": 0.0,
+          "ramp_mw_per_hour": 10000.0,
+          "window_budget_mwh": 100000.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.4,
+          "captured_co2_t_per_mwh": 0.0,
+          "liability_co2_t_per_mwh": 0.4
+        },
+        {
+          "id": "solar_power",
+          "inputs": {
+            "sunlight": 1.0
+          },
+          "outputs": {
+            "electricity": 1.0
+          },
+          "capacity_mw": 1.0,
+          "availability": [
+            1.0
+          ],
+          "minimum_fraction": [
+            0.0
+          ],
+          "initial_rate_mw": 0.0,
+          "ramp_mw_per_hour": 10000.0,
+          "window_budget_mwh": 100000.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.0,
+          "captured_co2_t_per_mwh": 0.0,
+          "liability_co2_t_per_mwh": 0.0
+        }
+      ],
+      "services": [
+        {
+          "id": "industry",
+          "demand": [
+            6.0
+          ],
+          "unit": "MWh_useful_service",
+          "priority": 0,
+          "shortfall_weight": 1.0
+        },
+        {
+          "id": "building",
+          "demand": [
+            5.0
+          ],
+          "unit": "MWh_useful_service",
+          "priority": 1,
+          "shortfall_weight": 1.0
+        },
+        {
+          "id": "mobility",
+          "demand": [
+            2.0
+          ],
+          "unit": "MWh_useful_service",
+          "priority": 0,
+          "shortfall_weight": 1.0
+        }
+      ],
+      "devices": [
+        {
+          "id": "gas_heat",
+          "node": "gas",
+          "service": "industry",
+          "service_per_mwh": 1.0,
+          "input_capacity_mw": 1000.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.2,
+          "liability_co2_t_per_mwh": 0.2
+        },
+        {
+          "id": "appliance",
+          "node": "electricity",
+          "service": "building",
+          "service_per_mwh": 1.0,
+          "input_capacity_mw": 1000.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.0,
+          "liability_co2_t_per_mwh": 0.0
+        },
+        {
+          "id": "car",
+          "node": "oil",
+          "service": "mobility",
+          "service_per_mwh": 1.0,
+          "input_capacity_mw": 1000.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.3,
+          "liability_co2_t_per_mwh": 0.3
+        },
+        {
+          "id": "heat_pump",
+          "node": "electricity",
+          "service": "industry",
+          "service_per_mwh": 2.0,
+          "input_capacity_mw": 1.0,
+          "resource_cost_per_mwh": 0.0,
+          "gross_co2_t_per_mwh": 0.0,
+          "liability_co2_t_per_mwh": 0.0
+        }
+      ],
+      "stores": [],
+      "stock_boundary": "carry",
+      "financial_limits": [],
+      "capture_storage_budget_t": 0.0,
+      "carbon_price_per_t": 0.0,
+      "solver_time_limit_s": 30.0
+    },
+    "agents": [
+      {
+        "id": "fuel",
+        "role": "fuel_supplier",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {}
+      },
+      {
+        "id": "generation",
+        "role": "generator",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {
+          "solar_build": 0.0
+        }
+      },
+      {
+        "id": "industrial",
+        "role": "industry",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {
+          "heat_upgrade": 0.0
+        }
+      },
+      {
+        "id": "transport",
+        "role": "transport",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {}
+      },
+      {
+        "id": "buildings",
+        "role": "building",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {}
+      },
+      {
+        "id": "grid",
+        "role": "grid_storage",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {}
+      },
+      {
+        "id": "government",
+        "role": "government",
+        "cash": 100.0,
+        "credit_limit": 0.0,
+        "initial_margins": {}
+      }
+    ],
+    "assets": [
+      {
+        "id": "gas_supply_asset",
+        "owner": "fuel",
+        "kind": "source",
+        "component": "gas_supply",
+        "quantity": 1.0,
+        "online_year": 2024,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "sun_asset",
+        "owner": "fuel",
+        "kind": "source",
+        "component": "sun",
+        "quantity": 1.0,
+        "online_year": 2024,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "oil_supply_asset",
+        "owner": "fuel",
+        "kind": "source",
+        "component": "oil_supply",
+        "quantity": 1.0,
+        "online_year": 2024,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "gas_power_asset",
+        "owner": "generation",
+        "kind": "process",
+        "component": "gas_power",
+        "quantity": 1.0,
+        "online_year": 2024,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "solar_power_asset",
+        "owner": "generation",
+        "kind": "process",
+        "component": "solar_power",
+        "quantity": 0.0,
+        "online_year": 2024,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "gas_heat_asset",
+        "owner": "industrial",
+        "kind": "device",
+        "component": "gas_heat",
+        "quantity": 1.0,
+        "online_year": 2024,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "appliance_asset",
+        "owner": "buildings",
+        "kind": "device",
+        "component": "appliance",
+        "quantity": 1.0,
+        "online_year": 2024,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "car_asset",
+        "owner": "transport",
+        "kind": "device",
+        "component": "car",
+        "quantity": 1.0,
+        "online_year": 2024,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      },
+      {
+        "id": "heat_pump_asset",
+        "owner": "industrial",
+        "kind": "device",
+        "component": "heat_pump",
+        "quantity": 0.0,
+        "online_year": 2024,
+        "state": "operating",
+        "fixed_om_per_unit": 0.0
+      }
+    ],
+    "initial_projects": [],
+    "investment_options": [
+      {
+        "id": "solar_build",
+        "owner": "generation",
+        "kind": "process",
+        "component": "solar_power",
+        "capex_per_unit": 0.1,
+        "annual_installation_units": 3.0,
+        "maximum_total_units": 6.0,
+        "fixed_om_per_unit": 0.0,
+        "discount_rate": 0.05,
+        "economic_life": 20.0,
+        "expected_utilisation": 1.0,
+        "replacement_ratio": 1.0,
+        "connection_per_unit": 1.0,
+        "subsidy_per_unit": 0.0,
+        "lead_years": 2,
+        "construction_fractions": [
+          0.5,
+          0.5
+        ],
+        "expected_terminal_value_per_unit": 0.0,
+        "funding_convention": "fully_funded_nonremunerated_escrow",
+        "known_year": 2024,
+        "permit_known_year": 2024,
+        "permit_effective_year": 2024,
+        "cost_reference_year": 2024,
+        "replaces": null
+      },
+      {
+        "id": "heat_upgrade",
+        "owner": "industrial",
+        "kind": "device",
+        "component": "heat_pump",
+        "capex_per_unit": 0.1,
+        "annual_installation_units": 1.0,
+        "maximum_total_units": 2.0,
+        "fixed_om_per_unit": 0.0,
+        "discount_rate": 0.05,
+        "economic_life": 20.0,
+        "expected_utilisation": 1.0,
+        "replacement_ratio": 0.002,
+        "connection_per_unit": 1.0,
+        "subsidy_per_unit": 0.0,
+        "lead_years": 2,
+        "construction_fractions": [
+          0.5,
+          0.5
+        ],
+        "expected_terminal_value_per_unit": 0.0,
+        "funding_convention": "fully_funded_nonremunerated_escrow",
+        "known_year": 2024,
+        "permit_known_year": 2024,
+        "permit_effective_year": 2024,
+        "cost_reference_year": 2024,
+        "replaces": "gas_heat_asset"
+      }
+    ],
+    "asset_events": [],
+    "other_accounts": {
+      "clearing": 1000.0,
+      "external_economy": 100000.0,
+      "construction": 0.0,
+      "escrow": 0.0,
+      "carbon_market": 0.0
+    },
+    "behavior": {
+      "expectation_update": 0.5,
+      "investment_adjustment": 1.0
+    },
+    "demand_drivers": {
+      "industry": {
+        "gdp_elasticity": 1.0,
+        "annual_intensity_improvement": 0.0
+      },
+      "building": {
+        "gdp_elasticity": 1.0,
+        "annual_intensity_improvement": 0.0
+      },
+      "mobility": {
+        "gdp_elasticity": 1.0,
+        "annual_intensity_improvement": 0.0
+      }
+    },
+    "gdp_growth": {
+      "2025": 0.02,
+      "2026": 0.02,
+      "2027": 0.02,
+      "2028": 0.02,
+      "2029": 0.02,
+      "2030": 0.02,
+      "2031": 0.02,
+      "2032": 0.02,
+      "2033": 0.02,
+      "2034": 0.02,
+      "2035": 0.02,
+      "2036": 0.02,
+      "2037": 0.02,
+      "2038": 0.02,
+      "2039": 0.02,
+      "2040": 0.02,
+      "2041": 0.02,
+      "2042": 0.02,
+      "2043": 0.02,
+      "2044": 0.02,
+      "2045": 0.02,
+      "2046": 0.02,
+      "2047": 0.02,
+      "2048": 0.02,
+      "2049": 0.02,
+      "2050": 0.02,
+      "2051": 0.02,
+      "2052": 0.02,
+      "2053": 0.02,
+      "2054": 0.02,
+      "2055": 0.02,
+      "2056": 0.02,
+      "2057": 0.02,
+      "2058": 0.02,
+      "2059": 0.02,
+      "2060": 0.02
+    },
+    "cost_decline": {
+      "solar_build": 0.02,
+      "heat_upgrade": 0.02
+    },
+    "mechanisms": {
+      "investment": true,
+      "replacement": true,
+      "expectation_learning": true
+    },
+    "policies": [
+      {
+        "id": "fixture_policy",
+        "known_year": 2024,
+        "effective_year": 2024,
+        "node_prices": {
+          "gas": 2.0,
+          "oil": 3.0,
+          "sunlight": 0.0,
+          "electricity": 6.0
+        },
+        "service_prices": {
+          "industry": 10.0,
+          "building": 10.0,
+          "mobility": 10.0
+        },
+        "carbon_price_per_t": 0.0,
+        "government_agent": "government",
+        "subsidy_budget": 0.0,
+        "construction_units_limit": 5.0,
+        "connection_limit": 5.0
+      }
+    ]
+  }
+}

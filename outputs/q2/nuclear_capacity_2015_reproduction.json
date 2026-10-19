@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-19",
+  "scope": "same-author independent offline extraction; not national acceptance or external review",
+  "independent_copy_files": 13,
+  "copied_inputs": {
+    "data/catalog/q2_nuclear_capacity_2015_review.json": "6be90d12d0b9ca25813e185406152319d5af51bcec56cd1c473eb0a032d5b29a",
+    "data/catalog/q2_nuclear_capacity_2015_transcription.json": "a069143c95f45ccbbc3338126176bfd92c1738e326f2c43139d5a9607d1e201c",
+    "data/catalog/q2_nuclear_permit_2015_review.json": "81174438426d3033832f6c0f18f446d97915d4315045605f4bc0f4e32fc10fd4",
+    "data/catalog/q2_nuclear_permit_2015_supplement_review.json": "b32beecfe8bcb68fbaf0e637ef9d01e4779aa75e8ae457bb20e17c09eab8d89b",
+    "data/catalog/q2_nuclear_permit_2015_transcription.json": "ef1c80064d92aaf91c6cf1e8a5cd3da8e560df64af4f52422dc31c6e09dde27d",
+    "data/catalog/q2_sources.json": "07ff38b9acc47ab5c249790fe37df68b3ea7f42924ffd82be7bd179a962fbeed",
+    "data/raw/q2/china_cns_7_2016.pdf": "55623e45ce7665cbda06b7d6b43fc893e85533e6e6f4a1f74c5ae96df202218b",
+    "data/raw/q2/nnsa_annual_2015.pdf": "9d6530386eea51b1d72b3f4c631f87a96308926b6b9f4e8412bf42a44cdfee9a",
+    "data/raw/q2/nnsa_tianwan56_notice_2015.html": "5ea14562b0f4c51e1ab92cb2e027a5005028594663eeda7cdf5025b33eb99a31",
+    "data/raw/q2/nnsa_tianwan5_permit_2015.pdf": "d363d6904a0a343b81a1d45b564d3ae05ca3318f890a137e98df7e89eccff99b",
+    "data/raw/q2/nnsa_tianwan6_permit_2015.pdf": "369cfdbc27e25f0f97dd59651bd666361565e520098b2aa53e0cf9d4884636bf",
+    "scripts/prepare_q2_nuclear_capacity.py": "e7baac12339572332868f6acb9a3c9f5e24a46a2298ee04257b73e71ab952590",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32"
+  },
+  "runs": [
+    {
+      "environment": "clean",
+      "python_version": "Python 3.13.9",
+      "entry": "scripts/prepare_q2_nuclear_capacity.py",
+      "exit_code": 0,
+      "comparisons": [
+        {
+          "artifact": "nuclear_capacity_2015_checks.json",
+          "original_sha256": "41c41c172b99ef20b4e4b26ac49e006b15dce81048d9b7c271fcace22b6cbc2b",
+          "reproduced_sha256": "41c41c172b99ef20b4e4b26ac49e006b15dce81048d9b7c271fcace22b6cbc2b",
+          "identical": true
+        },
+        {
+          "artifact": "nuclear_capacity_2015_conflicts.csv",
+          "original_sha256": "e969c0ddc4457d35348451de34f0d455763e0456827510ea2ea27e9c29833fd9",
+          "reproduced_sha256": "e969c0ddc4457d35348451de34f0d455763e0456827510ea2ea27e9c29833fd9",
+          "identical": true
+        },
+        {
+          "artifact": "nuclear_capacity_2015_reference.csv",
+          "original_sha256": "ad7e5e52bfd7b6bcaf295809f3ddd733805fe59a7a910befc6c96fbb3134d799",
+          "reproduced_sha256": "ad7e5e52bfd7b6bcaf295809f3ddd733805fe59a7a910befc6c96fbb3134d799",
+          "identical": true
+        }
+      ],
+      "all_identical": true
+    },
+    {
+      "environment": "alternate",
+      "python_version": "Python 3.13.9",
+      "entry": "scripts/prepare_q2_nuclear_capacity.py",
+      "exit_code": 0,
+      "comparisons": [
+        {
+          "artifact": "nuclear_capacity_2015_checks.json",
+          "original_sha256": "41c41c172b99ef20b4e4b26ac49e006b15dce81048d9b7c271fcace22b6cbc2b",
+          "reproduced_sha256": "41c41c172b99ef20b4e4b26ac49e006b15dce81048d9b7c271fcace22b6cbc2b",
+          "identical": true
+        },
+        {
+          "artifact": "nuclear_capacity_2015_conflicts.csv",
+          "original_sha256": "e969c0ddc4457d35348451de34f0d455763e0456827510ea2ea27e9c29833fd9",
+          "reproduced_sha256": "e969c0ddc4457d35348451de34f0d455763e0456827510ea2ea27e9c29833fd9",
+          "identical": true
+        },
+        {
+          "artifact": "nuclear_capacity_2015_reference.csv",
+          "original_sha256": "ad7e5e52bfd7b6bcaf295809f3ddd733805fe59a7a910befc6c96fbb3134d799",
+          "reproduced_sha256": "ad7e5e52bfd7b6bcaf295809f3ddd733805fe59a7a910befc6c96fbb3134d799",
+          "identical": true
+        }
+      ],
+      "all_identical": true
+    }
+  ],
+  "all_identical": true,
+  "source_originals_unchanged": true,
+  "initial_sandbox_test_issue": "One tempfile corruption test hit Windows ACL denial; full suite rerun with normal local permissions:319tests pass."
+}

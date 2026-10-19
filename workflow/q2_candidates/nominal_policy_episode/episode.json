@@ -1,0 +1,98 @@
+{
+  "scope": "limited_2015_pv_policy_episode_not_national_history",
+  "cases": [
+    {
+      "id": "v9_control",
+      "quote_mode": "no_episode_contract",
+      "zone": null
+    },
+    {
+      "id": "nominal_zone_I",
+      "quote_mode": "nominal",
+      "zone": "I",
+      "policy_record": "pv2013:I",
+      "nominal_CNY_per_MWh": 900.0,
+      "fixed_quote_if_used": 900.0,
+      "inherited_annual_support_ceiling": 10000000.0
+    },
+    {
+      "id": "fixed_real_2015_zone_I",
+      "quote_mode": "fixed_real_2015",
+      "zone": "I",
+      "policy_record": "pv2013:I",
+      "nominal_CNY_per_MWh": 900.0,
+      "fixed_quote_if_used": 0.00013070489840460637,
+      "inherited_annual_support_ceiling": 10000000.0
+    },
+    {
+      "id": "nominal_zone_II",
+      "quote_mode": "nominal",
+      "zone": "II",
+      "policy_record": "pv2013:II",
+      "nominal_CNY_per_MWh": 950.0,
+      "fixed_quote_if_used": 950.0,
+      "inherited_annual_support_ceiling": 10000000.0
+    },
+    {
+      "id": "fixed_real_2015_zone_II",
+      "quote_mode": "fixed_real_2015",
+      "zone": "II",
+      "policy_record": "pv2013:II",
+      "nominal_CNY_per_MWh": 950.0,
+      "fixed_quote_if_used": 0.00013796628164930671,
+      "inherited_annual_support_ceiling": 10000000.0
+    },
+    {
+      "id": "nominal_zone_III",
+      "quote_mode": "nominal",
+      "zone": "III",
+      "policy_record": "pv2013:III",
+      "nominal_CNY_per_MWh": 1000.0,
+      "fixed_quote_if_used": 1000.0,
+      "inherited_annual_support_ceiling": 10000000.0
+    },
+    {
+      "id": "fixed_real_2015_zone_III",
+      "quote_mode": "fixed_real_2015",
+      "zone": "III",
+      "policy_record": "pv2013:III",
+      "nominal_CNY_per_MWh": 1000.0,
+      "fixed_quote_if_used": 0.00014522766489400706,
+      "inherited_annual_support_ceiling": 10000000.0
+    }
+  ],
+  "source_review": "data/catalog/q2_nominal_policy_episode_review.json",
+  "assumptions": [
+    {
+      "id": "NP01",
+      "topic": "Limited eligible cohort",
+      "statement": "Apply only to solar_new_build applications in2015, assumed to satisfy2013utility-PV filing/scalemanagement eligibility and commission in2016 beforeJune30. Modelyear2016doesnotprove anactualdate;earlycommissioning is explicitly imposed for thismechanism study. Existingstock andotherapplicationyears receive noepisodeaward. Thisis apartial conditionalintervention,not completeactualChinesehistoricalpolicy."
+    },
+    {
+      "id": "NP02",
+      "topic": "Geographic brackets",
+      "statement": "Use2013I/II/IIIzonebenchmarks900/950/1000nominalCNYperMWh as3separatehypotheses for theeligiblemodelcohort. No regionalweights,nationalaverage,actualzoneassignmentorbestzone selection. WindanddistributedPV notcovered."
+    },
+    {
+      "id": "NP03",
+      "topic": "Currency and investor information",
+      "statement": "Convert nominalquote by the actualyear annualFXandUSgeneraldeflator bridge. Treat revisedannualfactor as currentyear-end snapshot forretrospectiveaccounting;not proven contemporaneousrelease. Investors holdtodayfactor constant overfutureoperatingyears. Future realizedannualfactors never enter earlierNPV. Fixedrealcontrols lock the2015factor and thereby representdifferent contractterms,notan equallycorrect nominalconversion."
+    },
+    {
+      "id": "NP04",
+      "topic": "Fiscal and tax mapping",
+      "statement": "Keep inheritedgovernmentcash and allopeningfunds. Annualgrosssupportceiling equals inheritedgovernmentopeningcash;this amplefiniteceiling is a diagnosticassumption,notobservedChinese subsidybudget. Modelbasebusprice70constant2008USD/MWh substitutes forcoalbenchmark solelyinthisconditionalmechanism;actualregionalcoalbenchmark isnotreviewed. Nominaltariffs retaintaxinclusivebasis;VATremittance/credits arenot modeled,so reportedcash/NPVisnotactualprojectprofit."
+    },
+    {
+      "id": "NP05",
+      "topic": "Support and dispatch",
+      "statement": "2013in-principle20yearsupport mappedto20modeloperatingyears forassumedeligiblecohort;notindividualentitlement. SamephysicalPVcohorts sharedispatch pro-rata byoperatingcapacity. Fulltariffisnot paidasecondpremium:onlydifferencefromcommoncarriersalerevenue settles throughgovernmentpayer;negative differencesclawback. Allnominalandfixedrealcases retainoriginalphysicalparameters,sourcecorrections and2015-2021selectedv9behavior/rates."
+    },
+    {
+      "id": "NP06",
+      "topic": "Evaluation scope",
+      "statement": "Sevenpredeclaredcases:control,3annualnominalcurrency,3fixedreal2015conversion. No fitting orselecting bytraining/holdout;reporteverypath andall8qualitymetrics. Already-seenholdout remains exploratory. ThiscannotcloseB3/B4/B5/B6,doesnotadd3531trainingcount,anddoesnotestablish policycausality."
+    }
+  ],
+  "national_acceptance": false
+}

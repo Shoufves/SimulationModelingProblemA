@@ -1,0 +1,297 @@
+{
+  "status": "conditional_service_episode_executed",
+  "cases": 16,
+  "records": [
+    {
+      "case": "v12_control",
+      "mapping": {},
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_5_classification",
+      "mapping": {
+        "eligible_fraction_assumption": 0.05,
+        "eligible_fuel_input_MWh": 15337062.5,
+        "useful_heat_MWh": 13036503.125,
+        "initial_input_capacity_MW": 40481.068704304904,
+        "initial_rated_heat_MW": 34408.908398659165,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true
+      },
+      "classification_matches_parent": true,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_5_declared_offer_0.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.05,
+        "eligible_fuel_input_MWh": 15337062.5,
+        "useful_heat_MWh": 13036503.125,
+        "initial_input_capacity_MW": 40481.068704304904,
+        "initial_rated_heat_MW": 34408.908398659165,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 0.5,
+        "hypothetical_capex": 0.007141851881059346,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_5_declared_offer_1.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.05,
+        "eligible_fuel_input_MWh": 15337062.5,
+        "useful_heat_MWh": 13036503.125,
+        "initial_input_capacity_MW": 40481.068704304904,
+        "initial_rated_heat_MW": 34408.908398659165,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 1.5,
+        "hypothetical_capex": 0.021425555643178038,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_5_replaced_device_observed_offer_0.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.05,
+        "eligible_fuel_input_MWh": 15337062.5,
+        "useful_heat_MWh": 13036503.125,
+        "initial_input_capacity_MW": 40481.068704304904,
+        "initial_rated_heat_MW": 34408.908398659165,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 0.5,
+        "hypothetical_capex": 0.007141851881059346,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_5_replaced_device_observed_offer_1.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.05,
+        "eligible_fuel_input_MWh": 15337062.5,
+        "useful_heat_MWh": 13036503.125,
+        "initial_input_capacity_MW": 40481.068704304904,
+        "initial_rated_heat_MW": 34408.908398659165,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 1.5,
+        "hypothetical_capex": 0.021425555643178038,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_10_classification",
+      "mapping": {
+        "eligible_fraction_assumption": 0.1,
+        "eligible_fuel_input_MWh": 30674125.0,
+        "useful_heat_MWh": 26073006.25,
+        "initial_input_capacity_MW": 80962.13740860981,
+        "initial_rated_heat_MW": 68817.81679731833,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true
+      },
+      "classification_matches_parent": true,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_10_declared_offer_0.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.1,
+        "eligible_fuel_input_MWh": 30674125.0,
+        "useful_heat_MWh": 26073006.25,
+        "initial_input_capacity_MW": 80962.13740860981,
+        "initial_rated_heat_MW": 68817.81679731833,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 0.5,
+        "hypothetical_capex": 0.007141851881059346,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_10_declared_offer_1.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.1,
+        "eligible_fuel_input_MWh": 30674125.0,
+        "useful_heat_MWh": 26073006.25,
+        "initial_input_capacity_MW": 80962.13740860981,
+        "initial_rated_heat_MW": 68817.81679731833,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 1.5,
+        "hypothetical_capex": 0.021425555643178038,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_10_replaced_device_observed_offer_0.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.1,
+        "eligible_fuel_input_MWh": 30674125.0,
+        "useful_heat_MWh": 26073006.25,
+        "initial_input_capacity_MW": 80962.13740860981,
+        "initial_rated_heat_MW": 68817.81679731833,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 0.5,
+        "hypothetical_capex": 0.007141851881059346,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_10_replaced_device_observed_offer_1.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.1,
+        "eligible_fuel_input_MWh": 30674125.0,
+        "useful_heat_MWh": 26073006.25,
+        "initial_input_capacity_MW": 80962.13740860981,
+        "initial_rated_heat_MW": 68817.81679731833,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 1.5,
+        "hypothetical_capex": 0.021425555643178038,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_20_classification",
+      "mapping": {
+        "eligible_fraction_assumption": 0.2,
+        "eligible_fuel_input_MWh": 61348250.0,
+        "useful_heat_MWh": 52146012.5,
+        "initial_input_capacity_MW": 161924.27481721962,
+        "initial_rated_heat_MW": 137635.63359463666,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true
+      },
+      "classification_matches_parent": true,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_20_declared_offer_0.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.2,
+        "eligible_fuel_input_MWh": 61348250.0,
+        "useful_heat_MWh": 52146012.5,
+        "initial_input_capacity_MW": 161924.27481721962,
+        "initial_rated_heat_MW": 137635.63359463666,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 0.5,
+        "hypothetical_capex": 0.007141851881059346,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_20_declared_offer_1.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.2,
+        "eligible_fuel_input_MWh": 61348250.0,
+        "useful_heat_MWh": 52146012.5,
+        "initial_input_capacity_MW": 161924.27481721962,
+        "initial_rated_heat_MW": 137635.63359463666,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 1.5,
+        "hypothetical_capex": 0.021425555643178038,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_20_replaced_device_observed_offer_0.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.2,
+        "eligible_fuel_input_MWh": 61348250.0,
+        "useful_heat_MWh": 52146012.5,
+        "initial_input_capacity_MW": 161924.27481721962,
+        "initial_rated_heat_MW": 137635.63359463666,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 0.5,
+        "hypothetical_capex": 0.007141851881059346,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    },
+    {
+      "case": "eligible_20_replaced_device_observed_offer_1.5",
+      "mapping": {
+        "eligible_fraction_assumption": 0.2,
+        "eligible_fuel_input_MWh": 61348250.0,
+        "useful_heat_MWh": 52146012.5,
+        "initial_input_capacity_MW": 161924.27481721962,
+        "initial_rated_heat_MW": 137635.63359463666,
+        "boiler_efficiency_reference": 0.85,
+        "inherited_spare_capacity_is_not_observed_fleet": true,
+        "observed_utilisation": 0.043250000000000004,
+        "initial_annual_margin_per_MW_heat": 0.0011461613445378153,
+        "break_even_capex_million_USD2008_per_MW_heat": 0.014283703762118693,
+        "hypothetical_offer_multiplier": 1.5,
+        "hypothetical_capex": 0.021425555643178038,
+        "cost_is_not_an_observation": true
+      },
+      "classification_matches_parent": null,
+      "national_acceptance": false
+    }
+  ],
+  "additional_calibration_executions": 0,
+  "changes_v12_selection": false,
+  "national_acceptance": false
+}

@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "reference_year": 2014,
+  "solar": [
+    {
+      "id": "pv_typical_low",
+      "value": 1320,
+      "unit": "USD_2014/kW",
+      "physical_page": 93,
+      "printed_page": 91,
+      "source_id": "IRENA_COST_2014",
+      "meaning": "Lower end of typical China utility-scale installed-cost range; outliers remain; not minimum or fleet mean"
+    },
+    {
+      "id": "pv_typical_high",
+      "value": 3090,
+      "unit": "USD_2014/kW",
+      "physical_page": 93,
+      "printed_page": 91,
+      "source_id": "IRENA_COST_2014",
+      "meaning": "Upper end of typical China utility-scale installed-cost range; outliers remain; not maximum or fleet mean"
+    },
+    {
+      "id": "pv_new_project_cf",
+      "value": 0.17,
+      "unit": "fraction",
+      "physical_page": 94,
+      "printed_page": 92,
+      "source_id": "IRENA_COST_2014",
+      "meaning": "Around17% weighted-average utility project CF for China; indicative site-dependent literature reference, not measured national time series"
+    }
+  ],
+  "nuclear_status_records": [
+    {
+      "id": "hongyanhe_3",
+      "physical_page": 23,
+      "status": "first_critical",
+      "event_date": "2014-10-24",
+      "queue_eligible_candidate": true,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    },
+    {
+      "id": "hongyanhe_4",
+      "physical_page": 23,
+      "status": "preparing_hot_test",
+      "event_date": null,
+      "queue_eligible_candidate": true,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    },
+    {
+      "id": "fuqing_1",
+      "physical_page": 25,
+      "status": "grid_connected_and_168h_trial_complete",
+      "event_date": "2014-11-22",
+      "queue_eligible_candidate": false,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    },
+    {
+      "id": "fuqing_2",
+      "physical_page": 25,
+      "status": "hot_test_started",
+      "event_date": "2014-11-20",
+      "queue_eligible_candidate": true,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    },
+    {
+      "id": "fuqing_3",
+      "physical_page": 25,
+      "status": "installation_peak",
+      "event_date": null,
+      "queue_eligible_candidate": true,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    },
+    {
+      "id": "fuqing_4",
+      "physical_page": 25,
+      "status": "dome_installed_equipment_installation",
+      "event_date": "2014-06-24",
+      "queue_eligible_candidate": true,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    },
+    {
+      "id": "yangjiang_1",
+      "physical_page": 27,
+      "status": "commercial",
+      "event_date": "2014-03-25",
+      "queue_eligible_candidate": false,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    },
+    {
+      "id": "yangjiang_2",
+      "physical_page": 27,
+      "status": "hot_test_complete",
+      "event_date": "2014-12-01",
+      "queue_eligible_candidate": true,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    },
+    {
+      "id": "yangjiang_3",
+      "physical_page": 27,
+      "status": "cold_test_complete",
+      "event_date": "2014-11-25",
+      "queue_eligible_candidate": true,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    },
+    {
+      "id": "yangjiang_4",
+      "physical_page": 27,
+      "status": "dome_installed",
+      "event_date": "2014-06-09",
+      "queue_eligible_candidate": true,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    },
+    {
+      "id": "yangjiang_5",
+      "physical_page": 27,
+      "status": "civil_construction",
+      "event_date": null,
+      "queue_eligible_candidate": true,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    },
+    {
+      "id": "yangjiang_6",
+      "physical_page": 27,
+      "status": "civil_construction",
+      "event_date": null,
+      "queue_eligible_candidate": true,
+      "source_id": "NNSA_ANNUAL_2014",
+      "capacity_MW": null,
+      "remaining_years": null,
+      "remaining_cost": null,
+      "online_year": null
+    }
+  ],
+  "nuclear_limitations": "Selected verified paragraphs only, not complete national queue. No rated capacity, remaining duration/cost, permit horizon or actual online dates inferred from status. Report section includes commercial units. NBS/NEA opening stock may use grid-connected rather than commercial definition; eligibility is provisional.",
+  "deflator": {
+    "source_id": "WDI_US_GDP_DEFLATOR_2008_2014",
+    "country": "USA",
+    "indicator": "NY.GDP.DEFL.ZS",
+    "values": {
+      "2014": 91.5006903474734,
+      "2013": 89.9343770048922,
+      "2012": 88.4294141679155,
+      "2011": 86.8128163508019,
+      "2010": 85.0579771623642,
+      "2009": 84.0366904577565,
+      "2008": 83.5215456690289
+    },
+    "mapping": "USD_2008 = USD_2014 * D2008 / D2014; general purchasing-power normalization assumption, not Chinese sector-specific inflation or real technical change."
+  }
+}

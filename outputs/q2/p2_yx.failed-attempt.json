@@ -1,0 +1,55 @@
+{
+  "run_id": "f29dda359f77408c9b6340e304807470",
+  "status": "failed",
+  "output_valid_for_this_attempt": false,
+  "national_acceptance": false,
+  "error": "Required national inputs are not yet admitted",
+  "exception": "AdmissionError",
+  "config_path": "workflow/q2_inputs.json",
+  "config_sha256": "e3a99ad915fa164e2fe312d145e7cd3f51c7acee5af8710cea7459f0f28a4e66",
+  "seconds": 0.000814300001366064,
+  "gaps": [
+    {
+      "id": "historical_initialization",
+      "gate": "B3/B4",
+      "required": "2014 end / 2015 start sector service, technology, finance and project queues with causal information dates",
+      "available_evidence": "data/processed/q2/history_observations.csv; data/processed/q2/sector_balance_2014_30province.csv; data/processed/q2/nbs2014_accounts.csv; data/processed/q2/nbs2014_boundary_diagnostics.csv; data/processed/q2/initialization_2014_capacity.csv; data/processed/q2/power_2014_reference.csv; data/processed/q2/initialization_2014_fuel_normalization.csv; workflow/q2_candidates/v1/initialization.json; workflow/q2_candidates/v1/assumptions.json; data/processed/q2/nuclear_queue_2014_reference.csv; data/catalog/q2_nuclear_queue_review.json; workflow/q2_candidates/v4/initialization.json",
+      "remaining": "26NEA2014year-end units28450MW and NNSA statuses now reviewed; v4 applies explicit duration/funding hypotheses rather than observed future dates. NEA/NBS20MW stock difference retained. Full sector services/nonenergy/ages/finance and national statistical bridge still need substantive mapping."
+    },
+    {
+      "id": "current_initialization",
+      "gate": "B3/B5",
+      "required": "2024 asset, fuel, service, storage and queue state on one consistent boundary",
+      "available_evidence": "outputs/q1/p1_yx/model_handoff.csv",
+      "remaining": "Candidate totals do not uniquely determine service/efficiency, inventory or asset age"
+    },
+    {
+      "id": "technology_and_prices",
+      "gate": "B2/B3/B6",
+      "required": "Matched CAPEX/OPEX, lifetimes, fuel energy factors, prices, price year, policy coverage and allocation rules",
+      "available_evidence": "data/processed/q2/technology_reference.csv; data/catalog/q2_technology_review.json; data/processed/technology_accounting_parameters.csv; data/processed/q2/fuel_reference.csv; data/processed/q2/technology_2010_samples.csv; data/processed/q2/technology_2010_annex.csv; data/processed/q2/technology_2010_parameters.csv; data/processed/q2/technology_2010_diagnostics.csv; data/processed/q2/policy_reference.csv; data/catalog/q2_policy_review.json; data/catalog/q2_mapping_2014_review.json; data/catalog/q2_mapping_2014_transcription.json",
+      "remaining": "Historical-vintage IEA2010 references and22 WRI2013 named-fuel defaults now reviewed. Still need model-specific parameter selection, matched price year, fixed/variable O&M split, service conversion and liability coverage. Three IEA main/annex comparisons remain unresolved; do not silently mix coal mass price and heat basis or treat samples as observed national fleet. IRENA2014cost range/indicative new-projectCF and US GDP deflator rebasing now tested as explicit research assumptions; no certification of Chinese price index or national fleet sample."
+    },
+    {
+      "id": "operation_chronology",
+      "gate": "B2/B3",
+      "required": "Matched load/wind/PV/hydro profiles, fuel supply and withdrawal bounds, inventory conditions",
+      "available_evidence": "data/processed/province_load_2018_MWh.csv",
+      "remaining": "2018 reconstructed shape is not 2024 measured chronology; representative-year hypothesis and robustness need review"
+    },
+    {
+      "id": "carbon_boundary",
+      "gate": "B3/B5",
+      "required": "One reviewed gross CO2/process/waste/net land or engineered removal boundary and 2024-2060 assumptions",
+      "available_evidence": "data/processed/q2/btr_co2_anchors.csv; data/processed/q2/inventory_boundary_checks.csv",
+      "remaining": "BTR/GCB disagree; sparse official anchors are not a future removal forecast"
+    },
+    {
+      "id": "frozen_experiment",
+      "gate": "B4/B6",
+      "required": "Reviewed bounds/scales/weights and GDP/cost/carbon ranges, information dates and policy target comparisons",
+      "available_evidence": "workflow/q2_acceptance.json; workflow/q2_candidates/v1/experiment.json; outputs/q2/historical_candidate_v1/historical_quality.json; workflow/q2_candidates/v4/experiment.json; outputs/q2/historical_candidate_v4/historical_quality.json; outputs/q2/iteration4_reproduction.json",
+      "remaining": "Four exploratory versions executed81/486/729/972valid training cases; v4 still fails6of8numeric targets under unchanged thresholds. Sequential structure search and already-seen holdout fully disclosed. Shared fuel-residual growth and initial fuel/power split remain structural gaps. National S0 and empirical sensitivity still required."
+    }
+  ]
+}

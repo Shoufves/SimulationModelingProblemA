@@ -1,0 +1,629 @@
+{
+  "parent_selection": {
+    "trial": 1104,
+    "rule": "instant_margin",
+    "parameters": {
+      "wind_stock_expansion_rate": 0.2681992337164751,
+      "solar_stock_expansion_rate": 0.49296057924376513
+    },
+    "structure": "shared_construction_connection_pvqueue_2",
+    "status": "valid",
+    "loss": 0.1615137337952601,
+    "parts": [
+      {
+        "indicator": "consumption_10ktce",
+        "n": 7,
+        "scale": 428334.0,
+        "weight": 0.25,
+        "normalized_mse": 0.002363476972367886,
+        "weighted_loss": 0.0005908692430919715
+      },
+      {
+        "indicator": "consumption_coal_share",
+        "n": 7,
+        "scale": 0.6579999999999999,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.0014655306599482313,
+        "weighted_loss": 0.00012212755499568594
+      },
+      {
+        "indicator": "consumption_oil_share",
+        "n": 7,
+        "scale": 0.17300000000000001,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.010086225481269846,
+        "weighted_loss": 0.0008405187901058205
+      },
+      {
+        "indicator": "consumption_gas_share",
+        "n": 7,
+        "scale": 0.055999999999999994,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.003224329919944102,
+        "weighted_loss": 0.00026869415999534183
+      },
+      {
+        "indicator": "wind_10kW",
+        "n": 7,
+        "scale": 9657.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.1883969231842216,
+        "weighted_loss": 0.01569974359868513
+      },
+      {
+        "indicator": "solar_10kW",
+        "n": 7,
+        "scale": 2486.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 1.7075362227265853,
+        "weighted_loss": 0.14229468522721544
+      },
+      {
+        "indicator": "nuclear_10kW",
+        "n": 7,
+        "scale": 2008.0,
+        "weight": 0.08333333333333333,
+        "normalized_mse": 0.008201081558796118,
+        "weighted_loss": 0.0006834234632330097
+      },
+      {
+        "indicator": "gcb_fuel_co2",
+        "n": 7,
+        "scale": 9051.061952,
+        "weight": 0.25,
+        "normalized_mse": 0.004054687031750724,
+        "weighted_loss": 0.001013671757937681
+      }
+    ]
+  },
+  "material_mappings": [
+    {
+      "id": "nonenergy_industry_coal",
+      "sector": "industry",
+      "owner": "industrial",
+      "carrier": "coal",
+      "cells": [
+        {
+          "flow": "17.2 Industry sector",
+          "product": "1. Coal",
+          "raw_token": "54334",
+          "value_ktoe": 54334.0,
+          "tsv_line": 94,
+          "column": 2
+        },
+        {
+          "flow": "17.2 Industry sector",
+          "product": "2. Coal products",
+          "raw_token": "17411",
+          "value_ktoe": 17411.0,
+          "tsv_line": 94,
+          "column": 8
+        }
+      ],
+      "value_ktoe": 71745.0,
+      "input_MWh_LHV": 834394350.0,
+      "use": "reported_material_input_not_useful_energy_service",
+      "inherited_residual_service": "coal_residual",
+      "inherited_residual_MWh": 13542677352.451138,
+      "fraction_of_inherited_residual": 0.06161221509489628,
+      "material_gdp_elasticity": 0.0,
+      "excluded_combustion_proxy_t_per_MWh": 0.32361139466870986,
+      "industrial_process_release_or_retention": "not modeled; no removal credit"
+    },
+    {
+      "id": "nonenergy_transformation_oil",
+      "sector": "transformation",
+      "owner": "fuel",
+      "carrier": "oil",
+      "cells": [
+        {
+          "flow": "17.1 Transformation sector",
+          "product": "6. Crude oil & NGL",
+          "raw_token": "722",
+          "value_ktoe": 722.0,
+          "tsv_line": 93,
+          "column": 19
+        },
+        {
+          "flow": "17.1 Transformation sector",
+          "product": "7. Petroleum products",
+          "raw_token": "13171",
+          "value_ktoe": 13171.0,
+          "tsv_line": 93,
+          "column": 25
+        }
+      ],
+      "value_ktoe": 13893.0,
+      "input_MWh_LHV": 161575590.0,
+      "use": "reported_material_input_not_useful_energy_service",
+      "inherited_residual_service": "oil_residual",
+      "inherited_residual_MWh": 6032626072.62,
+      "fraction_of_inherited_residual": 0.026783624255004905,
+      "material_gdp_elasticity": 0.5,
+      "excluded_combustion_proxy_t_per_MWh": 0.20813636000062619,
+      "industrial_process_release_or_retention": "not modeled; no removal credit"
+    },
+    {
+      "id": "nonenergy_industry_oil",
+      "sector": "industry",
+      "owner": "industrial",
+      "carrier": "oil",
+      "cells": [
+        {
+          "flow": "17.2 Industry sector",
+          "product": "6. Crude oil & NGL",
+          "raw_token": "2908",
+          "value_ktoe": 2908.0,
+          "tsv_line": 94,
+          "column": 19
+        },
+        {
+          "flow": "17.2 Industry sector",
+          "product": "7. Petroleum products",
+          "raw_token": "80782",
+          "value_ktoe": 80782.0,
+          "tsv_line": 94,
+          "column": 25
+        }
+      ],
+      "value_ktoe": 83690.0,
+      "input_MWh_LHV": 973314700.0,
+      "use": "reported_material_input_not_useful_energy_service",
+      "inherited_residual_service": "oil_residual",
+      "inherited_residual_MWh": 6032626072.62,
+      "fraction_of_inherited_residual": 0.1613417918305161,
+      "material_gdp_elasticity": 0.5,
+      "excluded_combustion_proxy_t_per_MWh": 0.20813636000062619,
+      "industrial_process_release_or_retention": "not modeled; no removal credit"
+    },
+    {
+      "id": "nonenergy_transport_oil",
+      "sector": "transport",
+      "owner": "transport",
+      "carrier": "oil",
+      "cells": [
+        {
+          "flow": "17.3 Transport sector",
+          "product": "7. Petroleum products",
+          "raw_token": "519",
+          "value_ktoe": 519.0,
+          "tsv_line": 95,
+          "column": 25
+        }
+      ],
+      "value_ktoe": 519.0,
+      "input_MWh_LHV": 6035970.0,
+      "use": "reported_material_input_not_useful_energy_service",
+      "inherited_residual_service": "oil_residual",
+      "inherited_residual_MWh": 6032626072.62,
+      "fraction_of_inherited_residual": 0.0010005543070861257,
+      "material_gdp_elasticity": 0.5,
+      "excluded_combustion_proxy_t_per_MWh": 0.20813636000062619,
+      "industrial_process_release_or_retention": "not modeled; no removal credit"
+    },
+    {
+      "id": "nonenergy_industry_gas",
+      "sector": "industry",
+      "owner": "industrial",
+      "carrier": "gas",
+      "cells": [
+        {
+          "flow": "17.2 Industry sector",
+          "product": "8. Gas",
+          "raw_token": "13107",
+          "value_ktoe": 13107.0,
+          "tsv_line": 94,
+          "column": 43
+        }
+      ],
+      "value_ktoe": 13107.0,
+      "input_MWh_LHV": 152434410.0,
+      "use": "reported_material_input_not_useful_energy_service",
+      "inherited_residual_service": "gas_residual",
+      "inherited_residual_MWh": 1705978289.306667,
+      "fraction_of_inherited_residual": 0.08935307732547489,
+      "material_gdp_elasticity": 2.0,
+      "excluded_combustion_proxy_t_per_MWh": 0.18958910065804263,
+      "industrial_process_release_or_retention": "not modeled; no removal credit"
+    }
+  ],
+  "source_bounds": {
+    "year": 2014,
+    "geography": "APEC_China_code_005",
+    "unit": "ktoe",
+    "total_nonenergy_control": 182955.0,
+    "reported_cells": 8,
+    "mapped_centres_ktoe": 182954.0,
+    "unresolved_cells": 64,
+    "missing_cells": [
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "1. Coal",
+        "tsv_line": 93,
+        "column": 2
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "2. Coal products",
+        "tsv_line": 93,
+        "column": 8
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "3. Peat",
+        "tsv_line": 93,
+        "column": 16
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "4. Peat products",
+        "tsv_line": 93,
+        "column": 17
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "5. Oil shale and oil sands",
+        "tsv_line": 93,
+        "column": 18
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "8. Gas",
+        "tsv_line": 93,
+        "column": 43
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "9. Nuclear",
+        "tsv_line": 93,
+        "column": 47
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "10. Hydro",
+        "tsv_line": 93,
+        "column": 48
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "11. Geothermal",
+        "tsv_line": 93,
+        "column": 49
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "12. Solar",
+        "tsv_line": 93,
+        "column": 50
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "13. Tide, wave, ocean",
+        "tsv_line": 93,
+        "column": 52
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "14. Wind",
+        "tsv_line": 93,
+        "column": 53
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "15. Solid biomass",
+        "tsv_line": 93,
+        "column": 54
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "16. Others",
+        "tsv_line": 93,
+        "column": 60
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "17. Electricity",
+        "tsv_line": 93,
+        "column": 70
+      },
+      {
+        "flow": "17.1 Transformation sector",
+        "product": "18. Heat",
+        "tsv_line": 93,
+        "column": 71
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "3. Peat",
+        "tsv_line": 94,
+        "column": 16
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "4. Peat products",
+        "tsv_line": 94,
+        "column": 17
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "5. Oil shale and oil sands",
+        "tsv_line": 94,
+        "column": 18
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "9. Nuclear",
+        "tsv_line": 94,
+        "column": 47
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "10. Hydro",
+        "tsv_line": 94,
+        "column": 48
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "11. Geothermal",
+        "tsv_line": 94,
+        "column": 49
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "12. Solar",
+        "tsv_line": 94,
+        "column": 50
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "13. Tide, wave, ocean",
+        "tsv_line": 94,
+        "column": 52
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "14. Wind",
+        "tsv_line": 94,
+        "column": 53
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "15. Solid biomass",
+        "tsv_line": 94,
+        "column": 54
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "16. Others",
+        "tsv_line": 94,
+        "column": 60
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "17. Electricity",
+        "tsv_line": 94,
+        "column": 70
+      },
+      {
+        "flow": "17.2 Industry sector",
+        "product": "18. Heat",
+        "tsv_line": 94,
+        "column": 71
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "1. Coal",
+        "tsv_line": 95,
+        "column": 2
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "2. Coal products",
+        "tsv_line": 95,
+        "column": 8
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "3. Peat",
+        "tsv_line": 95,
+        "column": 16
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "4. Peat products",
+        "tsv_line": 95,
+        "column": 17
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "5. Oil shale and oil sands",
+        "tsv_line": 95,
+        "column": 18
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "6. Crude oil & NGL",
+        "tsv_line": 95,
+        "column": 19
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "8. Gas",
+        "tsv_line": 95,
+        "column": 43
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "9. Nuclear",
+        "tsv_line": 95,
+        "column": 47
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "10. Hydro",
+        "tsv_line": 95,
+        "column": 48
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "11. Geothermal",
+        "tsv_line": 95,
+        "column": 49
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "12. Solar",
+        "tsv_line": 95,
+        "column": 50
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "13. Tide, wave, ocean",
+        "tsv_line": 95,
+        "column": 52
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "14. Wind",
+        "tsv_line": 95,
+        "column": 53
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "15. Solid biomass",
+        "tsv_line": 95,
+        "column": 54
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "16. Others",
+        "tsv_line": 95,
+        "column": 60
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "17. Electricity",
+        "tsv_line": 95,
+        "column": 70
+      },
+      {
+        "flow": "17.3 Transport sector",
+        "product": "18. Heat",
+        "tsv_line": 95,
+        "column": 71
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "1. Coal",
+        "tsv_line": 96,
+        "column": 2
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "2. Coal products",
+        "tsv_line": 96,
+        "column": 8
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "3. Peat",
+        "tsv_line": 96,
+        "column": 16
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "4. Peat products",
+        "tsv_line": 96,
+        "column": 17
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "5. Oil shale and oil sands",
+        "tsv_line": 96,
+        "column": 18
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "6. Crude oil & NGL",
+        "tsv_line": 96,
+        "column": 19
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "7. Petroleum products",
+        "tsv_line": 96,
+        "column": 25
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "8. Gas",
+        "tsv_line": 96,
+        "column": 43
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "9. Nuclear",
+        "tsv_line": 96,
+        "column": 47
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "10. Hydro",
+        "tsv_line": 96,
+        "column": 48
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "11. Geothermal",
+        "tsv_line": 96,
+        "column": 49
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "12. Solar",
+        "tsv_line": 96,
+        "column": 50
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "13. Tide, wave, ocean",
+        "tsv_line": 96,
+        "column": 52
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "14. Wind",
+        "tsv_line": 96,
+        "column": 53
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "15. Solid biomass",
+        "tsv_line": 96,
+        "column": 54
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "16. Others",
+        "tsv_line": 96,
+        "column": 60
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "17. Electricity",
+        "tsv_line": 96,
+        "column": 70
+      },
+      {
+        "flow": "17.4 Other sector",
+        "product": "18. Heat",
+        "tsv_line": 96,
+        "column": 71
+      }
+    ],
+    "unassigned_joint_lower_ktoe": 0.0,
+    "unassigned_joint_upper_ktoe": 5.5,
+    "assumption": "Nonnegative gross inputs and independent nearest-integer rounding. Joint bound, not one bound per blank. Model maps reported centres only; unknown cells are not imputed zero.",
+    "national_admission": false
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "scope": "limited_2015_pv_policy_episode_not_national_history",
+  "cases": [
+    {
+      "case": "v9_control",
+      "training_loss": 0.2357603114879326,
+      "selected_for_national_use": false,
+      "awarded_project_ids": [],
+      "cumulative_support": 0,
+      "maximum_cohort_cash_residual": 0.0,
+      "failed_numeric_indicators": [
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ]
+    },
+    {
+      "case": "nominal_zone_I",
+      "training_loss": 0.2357603114879326,
+      "selected_for_national_use": false,
+      "awarded_project_ids": [
+        "solar_new_build@2015"
+      ],
+      "cumulative_support": 8151.580916029723,
+      "maximum_cohort_cash_residual": 2.2737367544323206e-13,
+      "failed_numeric_indicators": [
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ]
+    },
+    {
+      "case": "fixed_real_2015_zone_I",
+      "training_loss": 0.2357603114879326,
+      "selected_for_national_use": false,
+      "awarded_project_ids": [
+        "solar_new_build@2015"
+      ],
+      "cumulative_support": 13294.4791055908,
+      "maximum_cohort_cash_residual": 2.2737367544323206e-13,
+      "failed_numeric_indicators": [
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ]
+    },
+    {
+      "case": "nominal_zone_II",
+      "training_loss": 0.2357603114879326,
+      "selected_for_national_use": false,
+      "awarded_project_ids": [
+        "solar_new_build@2015"
+      ],
+      "cumulative_support": 9456.120002475818,
+      "maximum_cohort_cash_residual": 2.2737367544323206e-13,
+      "failed_numeric_indicators": [
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ]
+    },
+    {
+      "case": "fixed_real_2015_zone_II",
+      "training_loss": 0.2357603114879326,
+      "selected_for_national_use": false,
+      "awarded_project_ids": [
+        "solar_new_build@2015"
+      ],
+      "cumulative_support": 14884.734758123623,
+      "maximum_cohort_cash_residual": 2.2737367544323206e-13,
+      "failed_numeric_indicators": [
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ]
+    },
+    {
+      "case": "nominal_zone_III",
+      "training_loss": 0.2357603114879326,
+      "selected_for_national_use": false,
+      "awarded_project_ids": [
+        "solar_new_build@2015"
+      ],
+      "cumulative_support": 10760.659088921913,
+      "maximum_cohort_cash_residual": 2.2737367544323206e-13,
+      "failed_numeric_indicators": [
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ]
+    },
+    {
+      "case": "fixed_real_2015_zone_III",
+      "training_loss": 0.2357603114879326,
+      "selected_for_national_use": false,
+      "awarded_project_ids": [
+        "solar_new_build@2015"
+      ],
+      "cumulative_support": 16474.990410656443,
+      "maximum_cohort_cash_residual": 4.547473508864641e-13,
+      "failed_numeric_indicators": [
+        "consumption_oil_share",
+        "consumption_gas_share",
+        "wind_10kW",
+        "solar_10kW"
+      ]
+    }
+  ],
+  "national_acceptance": false,
+  "no_calibration_or_case_selection": true,
+  "all_cases_executed": true,
+  "interpretation": "Only a hypothetical eligible 2015 PV application cohort changes. Each geographic tariff is a separate conditional assignment; none is a national average. Realized currency factors enter current-year snapshots; current conversion is held constant in investment valuation. Partial historical episode cannot establish the complete policy effect or solve national input gaps."
+}

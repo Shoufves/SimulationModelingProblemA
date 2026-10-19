@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "owner": "p2/yx",
+  "scope": "historical_aggregate_candidate_not_admitted",
+  "national_admission": false,
+  "frozen_before_first_fit": true,
+  "builder_sha256": "740cd77b6cd5ec78c242b2d51b44bba2cd1597a40c785b221d5ba3b3bfccd244",
+  "inputs": {
+    "model": {
+      "path": "workflow/q2_candidates/v1/model.json",
+      "sha256": "43854a486a2aec835b3eda36c38065bd5fa2791aaac205b5e78edc35dbd16fb3"
+    },
+    "experiment": {
+      "path": "workflow/q2_candidates/v1/experiment.json",
+      "sha256": "c4c5db327603e0731f215e738cd0367d655a12f8de8da391944cb3502b273b0a"
+    },
+    "definitions": {
+      "path": "workflow/q2_candidates/v1/definitions.json",
+      "sha256": "1d6ce58fe6b544d706462b20b092fc916898057e3c7e5beacf98c6a663335b3f"
+    },
+    "observations": {
+      "path": "workflow/q2_candidates/v1/observations.json",
+      "sha256": "214aec6b74d770d609e1989a4bd619eb82e32c6d77aff692d57ba22fc136ce28"
+    },
+    "initialization": {
+      "path": "workflow/q2_candidates/v1/initialization.json",
+      "sha256": "b4a87bb2093fc5fea6d516aedb097a44e2235cc73cb20d405c356ac702300c14"
+    },
+    "assumptions": {
+      "path": "workflow/q2_candidates/v1/assumptions.json",
+      "sha256": "f35078384834cf1c8478df44155e36f6f1e447d91c73ab801709ef88dbd7277e"
+    },
+    "acceptance": {
+      "path": "workflow/q2_candidates/v1/acceptance.json",
+      "sha256": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8"
+    }
+  },
+  "source_artifacts": {
+    "data/processed/q2/history_observations.csv": "b3f8e393eff571271acda1d016a75b12637179dda4e57728085fd4b24174e9f9",
+    "data/processed/q2/power_2014_reference.csv": "9e17d5f48182e1529dbcd0fcd32593d135dcc9175b800e06f3d94fc27170c929",
+    "data/processed/q2/technology_2010_samples.csv": "37f4a5646816e1224e7658eeeb734f9b18e78641fc3cd148763eca8e5b43b85e",
+    "data/processed/q2/technology_2010_parameters.csv": "ec2e6e25eedfa97d731dcfc921701a9f184694a4939389f5cd1838e43722dc86",
+    "data/catalog/q2_history_review.json": "b8e2d13e4bd22b41c67d2681629fbb405d8c57af468504ff9b875bea07358cc3",
+    "data/catalog/q2_initialization_reference_review.json": "9eb5502f440dedc9b4520aa6109fc07c04943f677879614e3ba79b2598cb64ad",
+    "data/catalog/q2_technology_2010_review.json": "cf2223ebae5430e1990bc5c9f592665708b42258dd90fa701364ec80b99dc0ea",
+    "data/raw/batch1_national/nbs_2025_C09-02.jpg": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+    "data/raw/batch1_national/nbs_2025_C09-15.jpg": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+    "data/raw/lb/base/nbs/yearbook2025/C09-08.jpg": "3620c3720491426d14de105b545f190c3d0b57cf3e05f29d4745519b19e218cf",
+    "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+    "data/raw/q2/nea_power_2014_review.html": "fc18bb249596948c7af5cc1d0bc8826646affff76955614592ab9f143babd10d",
+    "data/raw/q2/iea_nea_cost_2010.pdf": "830e0e9f116d40462d94571d8772a1803c53859c255c224ac0b0d7da9a823ac0"
+  },
+  "admission_limitation": "Real observations and literature; proxy accounting, assumptions and incomplete mechanisms must not pass national acceptance."
+}

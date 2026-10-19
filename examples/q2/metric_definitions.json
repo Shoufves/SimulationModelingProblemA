@@ -1,0 +1,63 @@
+[
+  {
+    "denominator": null,
+    "unit": "fixture_unit",
+    "boundary": "synthetic_engineering_only",
+    "id": "energy",
+    "numerator": [
+      {
+        "kind": "annual",
+        "field": "primary_mwh",
+        "coefficient": 1.0
+      }
+    ]
+  },
+  {
+    "denominator": [
+      {
+        "kind": "annual",
+        "field": "primary_mwh",
+        "coefficient": 1.0
+      }
+    ],
+    "unit": "fixture_unit",
+    "boundary": "synthetic_engineering_only",
+    "id": "nonfossil_share",
+    "numerator": [
+      {
+        "kind": "annual",
+        "field": "nonfossil_primary_mwh",
+        "coefficient": 1.0
+      }
+    ]
+  },
+  {
+    "denominator": null,
+    "unit": "fixture_unit",
+    "boundary": "synthetic_engineering_only",
+    "id": "capacity",
+    "numerator": [
+      {
+        "kind": "capacity",
+        "asset_kind": "process",
+        "ids": [
+          "solar_power"
+        ],
+        "coefficient": 1.0
+      }
+    ]
+  },
+  {
+    "denominator": null,
+    "unit": "fixture_unit",
+    "boundary": "synthetic_engineering_only",
+    "id": "co2",
+    "numerator": [
+      {
+        "kind": "annual",
+        "field": "positive_energy_co2_t",
+        "coefficient": 1.0
+      }
+    ]
+  }
+]

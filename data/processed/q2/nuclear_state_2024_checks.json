@@ -1,0 +1,39 @@
+{
+  "reference_date": "2024-12-31",
+  "publication_date": "2025-01-07",
+  "source_rows": 85,
+  "operating_source_rows": 58,
+  "construction_source_rows": 27,
+  "rated_operating_MW": 60880.94,
+  "rated_under_construction_MW": 32309.1,
+  "missing_construction_start_rows": [
+    "operating:57",
+    "construction:12"
+  ],
+  "missing_operating_first_grid_rows": [
+    "operating:57"
+  ],
+  "after_cutoff_commercial_rows": [
+    "operating:58"
+  ],
+  "identity_ambiguous_rows": [
+    "operating:48",
+    "operating:49"
+  ],
+  "identity_context_required_rows": [
+    "operating:56",
+    "construction:07"
+  ],
+  "reported_approved_not_started_count": 17,
+  "approved_not_started_capacity_MW": null,
+  "approved_not_started_note": "17 is a difference of reported counts; the rounded1.13e8kW total does not identify17project capacities or permissions.",
+  "national_model_admission": false,
+  "historical_models_changed": false,
+  "remaining": [
+    "Resolve source identity and gross/net capacity boundaries before national asset mapping.",
+    "No operating availability, remaining cash, full permits, retirement or future commissioning dates.",
+    "Published after reference cutoff; not a contemporaneously known2024information set.",
+    "Reported2024generation and2025online forecasts in body are not adopted as observations."
+  ],
+  "review_sha256": "5d500608f7efa88164b8ed0a428e45be18cd1041c8a0b8fd680aec832546a68f"
+}

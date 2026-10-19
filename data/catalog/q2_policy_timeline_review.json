@@ -1,0 +1,114 @@
+{
+  "id": "Q2_POLICY_TIMELINE_2014_2016",
+  "decision": "scoped_policy_vintage_reference",
+  "review_date": "2026-10-19",
+  "team_approval": false,
+  "reviewer": "same_author_original_document_review",
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/ndrc_wind2014_3008.html",
+      "sha256": "ca55af93bf61c6baf5e1a928b79fcf721b731bceaa04ef5b0997eeb6ae6a7979"
+    },
+    {
+      "path": "data/raw/q2/ndrc_renewables2015_3044.html",
+      "sha256": "3dff896038fc950c5293262428d4567f79fd02400c822a520610a20e323fd57e"
+    },
+    {
+      "path": "data/raw/q2/ndrc_renewables2015_3044_table1.pdf",
+      "sha256": "0403ab67cba06ad681f8733b86e0221a023610c21cc6dcf20ff0237237cb6e13"
+    },
+    {
+      "path": "data/raw/q2/ndrc_renewables2015_3044_table2.pdf",
+      "sha256": "7589aa8d58d29112c5a3806310277b371f6f7706162bf9f2e78fa0499686f13d"
+    },
+    {
+      "path": "data/raw/q2/ndrc_renewables2016_2729.html",
+      "sha256": "e280d9f695210d782b1e5bfd578e315fb090836fbab2226a29bf2f9b38df050b"
+    },
+    {
+      "path": "data/raw/q2/ndrc_renewables2016_2729_table1.pdf",
+      "sha256": "84dd10c23d6ec6597621aab7dcffa77a4c2da9716b98aed50d30451e4d7f76a7"
+    },
+    {
+      "path": "data/raw/q2/ndrc_renewables2016_2729_table2.pdf",
+      "sha256": "373b7b7208cea458c526c4dbc9b62f76c1829367a1f0ba6fe7c4ffe25082145e"
+    },
+    {
+      "path": "data/catalog/q2_policy_timeline_transcription.json",
+      "sha256": "a9fe25a2686599efb01af90fdbf9e90880b1970bc07aa4953bd1e9f726036737"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_WIND_PRICE_2014_3008",
+      "record_sha256": "c4fabfb653c1c198ed3cf9402db4822fc293cf90ac930d9c5e2585be4ad6c97f"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_RENEWABLE_PRICE_2015_3044",
+      "record_sha256": "dd9b2372b8641d293d98793a3ce9b86e099d7f95b0ee19dcb3d9f87799862fcd"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_RENEWABLE_PRICE_2015_3044_TABLE1",
+      "record_sha256": "2ad7d29ac977e5b9ceb024301275fee5b87928b37ddc0741d38d08165b79d0d4"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_RENEWABLE_PRICE_2015_3044_TABLE2",
+      "record_sha256": "3800245a1d2aa91a6c62b9c61387ee9bbb9ad441623d07b09fb157b58c8b8d8d"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_RENEWABLE_PRICE_2016_2729",
+      "record_sha256": "a476a6fe9349f176f14e69e52a7b0689b45b58f9504c4aea076c99e56310a599"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_RENEWABLE_PRICE_2016_2729_TABLE1",
+      "record_sha256": "b36ce5a1ea066815e5ae4eb08a2cefdc792613f5a52ad4354304782c4806e9ae"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_RENEWABLE_PRICE_2016_2729_TABLE2",
+      "record_sha256": "b00fab7dc774a18f0d4d78ba7815556ca3c58adf17e84a20a7b31fd252c82711"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Three full notice bodies read; signed dates distinguished from visible webpage publication and PubDate metadata:2014-12-31/2015-01-09;2015-12-22/24;2016-12-26/28."
+    },
+    {
+      "passed": true,
+      "evidence": "All four one-page PDF attachments rendered and visually checked:headers,tax,23 relevant tariff cells across notice/table,region names and complete eligibility footnotes."
+    },
+    {
+      "passed": true,
+      "evidence": "3044 announced2018wind schedule retained;2729 expressly withdraws it. Public-information cancellation starts2016-12-28,not retroactively2015."
+    },
+    {
+      "passed": true,
+      "evidence": "Verified geometry changes:windYunnan tozoneII in2729;PVYangquan addedtozoneII;Tibet2017price1.05. Old2009Changji/Zhangye lists are not silently reused."
+    },
+    {
+      "passed": true,
+      "evidence": "PV2016 requires allunitscommissioned bycutoff;PV2017footnote sayscommissioned. Windconstruction deadlines are not commissioningdates. Subsidyscale participation is a separate eligibility condition."
+    },
+    {
+      "passed": true,
+      "evidence": "Fullbenchmark prices are nominalCNY,not extra premiums. Tariffcaps are not observed payments;duration,regionalweights,taxconversion,FX/deflation and fiscalcash remain unadmitted."
+    }
+  ],
+  "allowed_uses": [
+    "Dated historical policy-reference and information-visibility tests.",
+    "Future model mapping after explicit cohort,zone,priceyear,liability and eligibility review."
+  ],
+  "prohibited_uses": [
+    "National average tariff without geographic/cohort weights.",
+    "Using final2018rate as knowledge in2015.",
+    "Treating publication as projectentitlement or enacted tariff as measuredcashreceipt.",
+    "Automatically creating nationalconstantreal contracts or replacing the old frozen model."
+  ]
+}

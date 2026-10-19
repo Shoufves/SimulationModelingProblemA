@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "review_date": "2026-10-19",
+  "reviewer": "yx_assisted_local_review",
+  "team_approval": false,
+  "decision": "scoped_positive_construction_permit_identities_only",
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/nnsa_annual_2015.pdf",
+      "sha256": "9d6530386eea51b1d72b3f4c631f87a96308926b6b9f4e8412bf42a44cdfee9a"
+    },
+    {
+      "path": "data/catalog/q2_nuclear_permit_2015_transcription.json",
+      "sha256": "ef1c80064d92aaf91c6cf1e8a5cd3da8e560df64af4f52422dc31c6e09dde27d"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NNSA_ANNUAL_2015",
+      "record_sha256": "574456929285cab9f94bb3427f4a7fc3be1bb572d6d72ed5252222284c529ddf"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Full physical pages23,29,39 rendered and visually read. Three dated notices explicitly issue construction permits for Hongyanhe5/6,Fuqing5/6,Fangchenggang3/4. All dates/document numbers/table locators transcribed."
+    },
+    {
+      "passed": true,
+      "evidence": "Tianwan5/6 consultation letter on physicalp22 not promoted to permit issuance. No capacities, expiry, operating permission or future commissioning dates inferred."
+    },
+    {
+      "passed": true,
+      "evidence": "Reportyear2015 verified on original pages; publication date not independently confirmed and remains null. The201608URL directory is recorded separately, not certified as a publication date."
+    }
+  ],
+  "allowed_uses": [
+    "Positive dated construction-permit identity references for future historical mapping."
+  ],
+  "prohibited_uses": [
+    "Assuming zero approvals in unreviewed years.",
+    "Interpreting construction permit as operating permission or measured completion.",
+    "Inventing reactor capacities from fleet averages."
+  ],
+  "model_admission": false
+}

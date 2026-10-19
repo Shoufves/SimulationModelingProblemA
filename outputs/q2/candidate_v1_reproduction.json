@@ -1,0 +1,87 @@
+{
+  "independent_directory": {
+    "scientific_files": 17,
+    "different_files": [],
+    "canonical_svg_identical": true,
+    "code_hashes_equal": true,
+    "config_hash_equal": true,
+    "environment": {
+      "dependencies": {
+        "mesa": "3.3.1",
+        "numpy": "2.3.5",
+        "scipy": "1.16.3",
+        "matplotlib": "3.10.6",
+        "pillow": "13.0.0"
+      },
+      "freetype": "2.6.1"
+    },
+    "output_hashes": {
+      "actions.csv": "af9d3c6c795b91c0406445bc200cdacfbef9be58e70ec26dd103c859506b8578",
+      "annual_path.csv": "3b97a4592d46ccd8e75d8a2a402a6b2e1be9d19ed118446d67077f71fc7c4f42",
+      "assets.csv": "1e1533f49732b92de03e3b6c11c8bb21649c4b4c1376e34a610cc70c1ab8eb9e",
+      "cash.csv": "ea76129682507b51a48d2c6ea1e1bdac6d8db8741ac60819abfd2e1b9eff007f",
+      "historical_fit.png": "03af745b1b30f53264da6cd12248f8662843619ea2f79b2979c1eecbefcb31fb",
+      "historical_fit.svg": "9756424d902aa5f4ba3238d0ca07dc6b8e2c841f7d2b40bb9bfa0ac42e83dc2c",
+      "historical_quality.json": "a8748624b32edab6e3f59393fc2604eca0e8d9424bc8ef9e2a3e18bfddec7ef6",
+      "history_baselines.csv": "084ed5c65bd72b1b5733dc562a9c66866910782f8f96cf61e428fd725047d298",
+      "history_fit.csv": "9ad36f0d3b2226833a18f917540b209117c0060b7c8612fe28e43e768e25f316",
+      "information.csv": "e44da52923b45babef90fed020177cb78e1b259744ad7a4e5a312440cbcb6a1b",
+      "metrics.csv": "22fcc356b8d7185360a9f9c48d76aa5a521e644e255bf538ff68712f76a5bbee",
+      "operations.json": "f76f5a30de7d807aa2005af5441e78bd1b4e48b461e712a09a7a4867ecc3a911",
+      "projects.json": "3af3374291b6b7cb125349d403b1ea702c270ccb350afb067374faee689950e3",
+      "report.md": "acb87b3acde77121644cb3fd708453cf9a4c45faaa9d2ca2140d5c23b09dd3cf",
+      "rule_comparison.csv": "b6165c911ed825beae3d8024b2116e4855734f1ea60bc1bfc5b834384b640a6e",
+      "training_selection.json": "19bf8f41f1838b8cb459b2b059e85783ee11230e8830c5da862a9eeec2694953",
+      "training_trials.json": "64a773695ae4a6daf4545927f8cd1c94e03aca648614db741f6fec4380109373"
+    }
+  },
+  "alternate_environment": {
+    "scientific_files": 17,
+    "different_files": [
+      "historical_fit.png"
+    ],
+    "canonical_svg_identical": true,
+    "code_hashes_equal": true,
+    "config_hash_equal": true,
+    "environment": {
+      "dependencies": {
+        "mesa": "3.3.1",
+        "numpy": "2.3.5",
+        "scipy": "1.16.3",
+        "matplotlib": "3.10.6",
+        "pillow": "12.0.0"
+      },
+      "freetype": "2.13.3"
+    },
+    "output_hashes": {
+      "actions.csv": "af9d3c6c795b91c0406445bc200cdacfbef9be58e70ec26dd103c859506b8578",
+      "annual_path.csv": "3b97a4592d46ccd8e75d8a2a402a6b2e1be9d19ed118446d67077f71fc7c4f42",
+      "assets.csv": "1e1533f49732b92de03e3b6c11c8bb21649c4b4c1376e34a610cc70c1ab8eb9e",
+      "cash.csv": "ea76129682507b51a48d2c6ea1e1bdac6d8db8741ac60819abfd2e1b9eff007f",
+      "historical_fit.png": "5d5a49c4a617f3d638c66461054e9e2cac61b01b24323f1b7b2ec96a2ebddb5c",
+      "historical_fit.svg": "9756424d902aa5f4ba3238d0ca07dc6b8e2c841f7d2b40bb9bfa0ac42e83dc2c",
+      "historical_quality.json": "a8748624b32edab6e3f59393fc2604eca0e8d9424bc8ef9e2a3e18bfddec7ef6",
+      "history_baselines.csv": "084ed5c65bd72b1b5733dc562a9c66866910782f8f96cf61e428fd725047d298",
+      "history_fit.csv": "9ad36f0d3b2226833a18f917540b209117c0060b7c8612fe28e43e768e25f316",
+      "information.csv": "e44da52923b45babef90fed020177cb78e1b259744ad7a4e5a312440cbcb6a1b",
+      "metrics.csv": "22fcc356b8d7185360a9f9c48d76aa5a521e644e255bf538ff68712f76a5bbee",
+      "operations.json": "f76f5a30de7d807aa2005af5441e78bd1b4e48b461e712a09a7a4867ecc3a911",
+      "projects.json": "3af3374291b6b7cb125349d403b1ea702c270ccb350afb067374faee689950e3",
+      "report.md": "acb87b3acde77121644cb3fd708453cf9a4c45faaa9d2ca2140d5c23b09dd3cf",
+      "rule_comparison.csv": "b6165c911ed825beae3d8024b2116e4855734f1ea60bc1bfc5b834384b640a6e",
+      "training_selection.json": "19bf8f41f1838b8cb459b2b059e85783ee11230e8830c5da862a9eeec2694953",
+      "training_trials.json": "64a773695ae4a6daf4545927f8cd1c94e03aca648614db741f6fec4380109373"
+    }
+  },
+  "canonical_environment": {
+    "dependencies": {
+      "mesa": "3.3.1",
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "matplotlib": "3.10.6",
+      "pillow": "13.0.0"
+    },
+    "freetype": "2.6.1"
+  },
+  "interpretation": "Independent directory with same pinned environment reproduces17/17files. Alternate build reproduces16/17including all numerical ledgers and canonicalSVG; PNG raster differs with Pillow/FreeType. No pixel-identity claim across different rasterizers."
+}

@@ -1,0 +1,67 @@
+{
+  "config_path": "workflow/q2_candidates/v8_sensitivity.json",
+  "config_sha256": "55ee377f4357aacd2850982ae7589c1c9fe8e55c053eac3f4010ab4f6db8fe41",
+  "bindings": {
+    "manifest": {
+      "path": "workflow/q2_candidates/v8/manifest.json",
+      "sha256": "2dbc5636a662f038fb1cd58fbfa50b04d76f41aa495eec459287f6d6310dae82"
+    },
+    "training_selection": {
+      "path": "outputs/q2/historical_candidate_v8/training_selection.json",
+      "sha256": "9334545f290b37375de05099c00513483d5a8d93b91242648336011d3c436759"
+    }
+  },
+  "status": "response_diagnostic_executed",
+  "code_hashes": {
+    "scripts/run_q2_candidate_sensitivity.py": "c61be5f1553ad83bb7a52d0ce9de143f135577fda2df1b5917c4291037b5809f",
+    "scripts/run_q2_historical_candidate.py": "8319d294dff187d706c6160c4773db455940cb8decaa4179c85052c722612723",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/annual.py": "4acd3144f1110b784614b4d681dd8e1584f72d15a93b89d6c4b0e4b616f73d48",
+    "src/energy_model/q2/approvals.py": "0e6cf2f7903e76d8490c52daed1648d407e44dcf3562e674ee2eaa6496e969c9",
+    "src/energy_model/q2/contracts.py": "5c7497f1ff8786851a99e228a2f71e945e115a31d2240b68606a016e7d79a8fc",
+    "src/energy_model/q2/deployment.py": "2ec6fe0a88a43bb1c1ae0284c6e6f6bf1e768609c0a3894f13dc7046a67e33f7",
+    "src/energy_model/q2/experiments.py": "b6432f11758893710dbe20296657313eeb5c70238978f774604513453ff4eb8f",
+    "src/energy_model/q2/finance.py": "6724e4a9a37411cc12565fdb36086bca37de49dc1f245b5aec4548a64a39e22e",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32",
+    "src/energy_model/q2/lifecycle.py": "77c1908aa1cca437f72674b3ac88873206f07188f1e3eae6d2f8504aec86c403",
+    "src/energy_model/q2/operations.py": "95b0999dfdcb57b46046178c93c7a07facd7a16a1da4f0407bd93e1658bd2bb2",
+    "src/energy_model/q2/quality.py": "a1176bc537f7bbddcc664ed697ac9bbac8f8f347097a5650e06cd1f978cd370d",
+    "src/energy_model/q2/targets.py": "2e67cd5f0996f4e1a20c836ecc2a300f48ffdddbd058f620f7312634f72ce064"
+  },
+  "outputs": {
+    "action_ledger.csv": "4f6a0bd115041b2c3fd03b25f717a4b00d353aabef314a694c2ac8edbae9eec0",
+    "annual_paths.csv": "61171f2ab766917a02021b9e4d8870c8d4ff0d80ed9925b33be66c4b69c4dee9",
+    "case_00.json": "37a5bcb2c2ef8e2c3bdf85e7be9e4c05523dfa5c16702c9d1b46691a460616eb",
+    "case_01.json": "34050992e02a4cda3e5e49b0705d7ba3bb594398cb4c2d31f0fce4f4a8337087",
+    "case_02.json": "a69fd17c4833f51d5e50c32fcdb32d2c25322f0be89939aadac0bd9fcbbaa32f",
+    "case_03.json": "690af02fcc6830ae34e9e86f413cef36a0feba0c3d402d923fd99e63c4c1038f",
+    "case_04.json": "e554df25131e6344ed7b991b580ad3e99fd91341ff683ddf38a56d1b06836e77",
+    "case_05.json": "85ef49b4ad798e525b87bd8637ba8be9503b10ab435460212125d58989dcc8b2",
+    "case_06.json": "08f34e1ed0008d9d37a6a1b822246efde5e19d8e420e0124c84b81ae344752a7",
+    "case_07.json": "31427649947e51924fbbeae9cd46dfb16780005493002ea81d77d26c8554f273",
+    "case_08.json": "ff09b9678b7265ebd29fcac4b766dbf3848eb702877c69d547ded297658d27ca",
+    "case_09.json": "00970200ece074320d1c7070915954750c7edfca782f9f22c129d50fc503f2f1",
+    "case_10.json": "98b0d2ae4adb4659404155d9bb8bf867c156e8ff3c52464e6693fb1c02d1b272",
+    "case_11.json": "34d0528c10d741fa9a149a430eeeb86e7f7a2d3b581f0e91a4a8e81aeb2e1223",
+    "case_12.json": "60e7a25917a1c3fe609cdb006d72424d5f6d97c07fd334498f00289dc9a31c46",
+    "case_13.json": "babb9d17b6316bf194d32b995ec177e6f1ae8d3cb1c0a87259588ddcde338e67",
+    "case_14.json": "c6de370d45d1caed8c5c9d40e3af4de1c7b2c486f93c2d25934b5a2224772c3a",
+    "case_15.json": "bbb3614b68cc926c1cfb0716dc8fc90990dad92c181910e8e2917de3c6bb53b1",
+    "case_16.json": "179952fcc014af7d3da3bb86147608cb652d02b7792793a3650c0fb6bf03e97a",
+    "case_17.json": "b366b73bcaeaf38fcdd660163491015cfc4c947c7359399b4f1e908da869e97c",
+    "case_18.json": "8efd4674ab1deaa4cc908ff1d5c364852ec7191e715913fc513724b61a480228",
+    "case_19.json": "600a45cf334f3b2705bade4a196bac55373e265f22e71535e1cce112c92441ed",
+    "case_20.json": "4718844d2ab7770e98b7befd1b5999717b5bffc2d152d0f8e3a141bea3167ce8",
+    "case_21.json": "2692beaa7e117410994a72722511c4d7b9afc14ed03f39c78127635bade99afe",
+    "case_22.json": "8cd99995742a5dc576dba1c1c6f0b955c4d21c741fa4e955ad215dee973d8d6d",
+    "case_23.json": "0120351b47679e603ebcf2819b95de709020aa85c1ee97286733d64bf9af818f",
+    "case_24.json": "3ae0bc756c87eaa6ec33fa2f3b75630cf515dc59223708b757d806b52966fae4",
+    "case_25.json": "462c0def69c5073a55068d00ace38176e078f650214994d2fe2a8977b851433c",
+    "case_26.json": "ca110162cf8ec012237f34d4b4c95c626ef815a53c19bbe2576899530fb6de9f",
+    "cases.csv": "20492454a2f8efb16eb1d4dfe410e894caaa06d3133b3f48dc20de6d8b4e0eae",
+    "one_factor_2024.csv": "8c52b258f46b9a8111874b34e43f4adaa020db7bd9e951f02941b8ac030cabb5",
+    "paired_metrics.csv": "33901486667bce17b37d48afb5ba43167239a16d217b627aff1121332085b8a1",
+    "summary.json": "6f46d028598154e641bdf10fcbbde763337aa84d284c2afd7ea66fe557bba90e"
+  },
+  "national_acceptance": false
+}

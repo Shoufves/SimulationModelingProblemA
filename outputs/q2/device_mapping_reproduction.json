@@ -1,0 +1,284 @@
+{
+  "snapshot_files": {
+    "data/catalog/q2_apec_balance_review.json": "124f937c91da2ce1994f7a1d4eaf3161540eb8122efcc272ee8bcedead767e78",
+    "data/catalog/q2_end_use_review.json": "3080d6aafc40c34f37a8c52a3ac6d761fcfff52c3436e13f92b5b0dfe0eb95db",
+    "data/catalog/q2_end_use_transcription.json": "81f47a51104f53bd8ee9f69d7e2ff3939f69a7f53c7a854329028ea69d049905",
+    "data/catalog/q2_sources.json": "74d675cc67b9e22b922321dd8b4b3918f3c18adadcb0da9ea8d0e98a51cd146a",
+    "data/processed/q2/end_use_reference.csv": "a214be3505c0c30b18166993305060c7740878c1373cbade3d65e487c57c1820",
+    "data/raw/q2/apec_balance_download.json": "cbb346c7962328325cd8c0033396f809f1f8f7e86ca8ac745ee18cf276e2113d",
+    "data/raw/q2/apec_china_balance_2014_detailed_PJ.html": "241a2431a9daded1cf834383cfc356aa36a817dfa9b1a4b86169ad190403718c",
+    "data/raw/q2/apec_china_balance_2014_detailed_PJ.txt": "a3a5a52c84ea8af433573fbe697c9fb63078a6da30bb9eb57fd2dadfbd9f95fd",
+    "data/raw/q2/apec_china_balance_2014_detailed_ktoe.html": "c2e04292c041272eff6d435f8ac8a41035928c70f67d17931b381c1f304c800b",
+    "data/raw/q2/apec_china_balance_2014_detailed_ktoe.txt": "065763527587c3717c7aa922f51cd77f348a190102012031576f65dc2dadde6e",
+    "data/raw/q2/apec_ktoe_download.json": "149badf5056fdbea230e5059a59e8afdc3ae3c1d94136cf896e6932aef93a06c",
+    "data/raw/q2/apec_processing_information.html": "b00b1e3221079a7bfcb1f86ea0dabe3b0e4fc3686fd4553e02d171ea09c99b30",
+    "data/raw/q2/apec_revised_definitions.pdf": "a08b4cac76b4184420248840d9559606592f66f48538662ebd7c2e3596b6ea33",
+    "data/raw/q2/apec_standardisation.html": "f61155b11909bf528c6784f8febf8e7b9142cfa97ec4d2fbe982d3b40900b4c3",
+    "data/raw/q2/irena_remap_china_2014.pdf": "5dd5f991adcbb14a4ebf36d1c26200a359ccf5ccd9991d83edf7f81df98a30bf",
+    "outputs/q2/historical_candidate_v12/selected_model.json": "022d14840a8ac2991508f9357e4d4af7068cd9bc9a1717847b16f58eda462edb",
+    "scripts/prepare_q2_apec_balance.py": "cd33811c1b2c8a243356e1054cb0d64ed1c356767487bcd6239f17a38a5e4c48",
+    "scripts/prepare_q2_end_use.py": "ece2f5943a3404e83ee528b84694771ef1e3172d4d113ae4703bf810687690cc",
+    "scripts/run_q2_device_mapping.py": "86925f9a4a3aa9892cbd609bffcfc7c9279bcbc86e7522506979d5ab4dc0b51b",
+    "scripts/run_q2_historical_candidate.py": "2413adff86d25a48fda7824110120b7b596761269ae6990456a252b92f65c91a",
+    "src/energy_model/__init__.py": "6918004f3238cce27b61c55a1423d9eaad5dc7028b711d138ba10db47d91ecbe",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/annual.py": "f794fc86ca960fb4a6405b4c0eeeaf4cd5b2a2491f6de01d19045a85be7c88fa",
+    "src/energy_model/q2/approvals.py": "0e6cf2f7903e76d8490c52daed1648d407e44dcf3562e674ee2eaa6496e969c9",
+    "src/energy_model/q2/contracts.py": "ac00ba2450fc0ff01060ef846b700c0f5ed9e481acb9a6577aa067a39a155ee2",
+    "src/energy_model/q2/demand.py": "7584277e1dcc87f815f090b3506ff3f4a00660815f5cef006cec47d59a9f0fc1",
+    "src/energy_model/q2/deployment.py": "2ec6fe0a88a43bb1c1ae0284c6e6f6bf1e768609c0a3894f13dc7046a67e33f7",
+    "src/energy_model/q2/experiments.py": "b6432f11758893710dbe20296657313eeb5c70238978f774604513453ff4eb8f",
+    "src/energy_model/q2/finance.py": "6724e4a9a37411cc12565fdb36086bca37de49dc1f245b5aec4548a64a39e22e",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32",
+    "src/energy_model/q2/lifecycle.py": "77c1908aa1cca437f72674b3ac88873206f07188f1e3eae6d2f8504aec86c403",
+    "src/energy_model/q2/operations.py": "95b0999dfdcb57b46046178c93c7a07facd7a16a1da4f0407bd93e1658bd2bb2",
+    "src/energy_model/q2/quality.py": "a1176bc537f7bbddcc664ed697ac9bbac8f8f347097a5650e06cd1f978cd370d",
+    "src/energy_model/q2/targets.py": "2e67cd5f0996f4e1a20c836ecc2a300f48ffdddbd058f620f7312634f72ce064",
+    "workflow/q2_candidates/residential_heat_episode_v2.json": "550125569510cdc81b3c0e6b310a2a6014a94a036925610d23c77cb69a75dd44",
+    "workflow/q2_candidates/v10/definitions.json": "30d62bcfe498137089a55826fef5ee3aa3218cfdebcceca7618260cc681bdf64"
+  },
+  "runs": [
+    {
+      "environment": "clean",
+      "command": [
+        "D:\\仿真建模资料\\2026年仿真建模挑战赛赛题\\A题\\tmp\\q2\\clean_env\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/run_q2_device_mapping.py",
+        "--output-dir",
+        "outputs/q2/clean"
+      ],
+      "exit_code": 0,
+      "comparisons": [
+        {
+          "file": "attempt.json",
+          "byte_identical": true,
+          "sha256": "1be34d146c742fc03de3fe385f81ee8825c0f32cdf51e8d1f3adb9498bd7ac04"
+        },
+        {
+          "file": "eligible_10_classification.json",
+          "byte_identical": true,
+          "sha256": "b529452fe61cacd537ef8990660beec5e2095c048b16bc3fc35eae667e1d44a0"
+        },
+        {
+          "file": "eligible_10_declared_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "5cf2060e76c235cf460b03f3e18c7c38e9a9e737ae3fc5cb0043b490ac66197e"
+        },
+        {
+          "file": "eligible_10_declared_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "0777663c932bf7cf4d6d765c7af936b2b843cb0e4692ff0d71a0a6ba872acc31"
+        },
+        {
+          "file": "eligible_10_replaced_device_observed_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "6e6af9a77d5ca8921d6319d8bff0b3a1e9fb12e551f7fde19db9d91c5fbaba32"
+        },
+        {
+          "file": "eligible_10_replaced_device_observed_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "eb5f22e3c9f28a1b0d547de97f4cea358d2516d89a36e20cc3199233a1de11af"
+        },
+        {
+          "file": "eligible_20_classification.json",
+          "byte_identical": true,
+          "sha256": "815b55aac87e2239946e76b6ac3c522a47cfdf92e147609cd532e4caf01cec16"
+        },
+        {
+          "file": "eligible_20_declared_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "2039537202a6dc70d0351fa5cc9ca8d94667ce52ac0a02514436f3534eb68289"
+        },
+        {
+          "file": "eligible_20_declared_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "bf0d15ff3947423264c694d8a96c007d430fb9575756873aeed8a14f9adb33af"
+        },
+        {
+          "file": "eligible_20_replaced_device_observed_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "2d0dfeaded2027d5f1277a61ee4cf541afae701e28beb814ce6f96d9beba5b97"
+        },
+        {
+          "file": "eligible_20_replaced_device_observed_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "d4e2108df47942d424bc423fe45d03a91bbdefe52d71dd1799fe2a886a67efe4"
+        },
+        {
+          "file": "eligible_5_classification.json",
+          "byte_identical": true,
+          "sha256": "e8581ca8f21e30021f89c6aab6fc28371428c8901897b4c74c66e39516f4b2cb"
+        },
+        {
+          "file": "eligible_5_declared_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "f3f8207da9a3ac9311cd132a8dec8e835b3e6c9153d48da6a8e9cba90f662f00"
+        },
+        {
+          "file": "eligible_5_declared_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "47c065a36f1e60527a597bc06e49a287d97cb7a70afe6cac456f97e66487ba87"
+        },
+        {
+          "file": "eligible_5_replaced_device_observed_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "64c8dab15f1a90c24b275ee213eaab731a295d5605491e9e437e0aa1b18163f0"
+        },
+        {
+          "file": "eligible_5_replaced_device_observed_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "1400ed2eb4593ce3619d89df184bd5e44da663f0b4014dc0f83e1a56ec2ed4af"
+        },
+        {
+          "file": "proxy_metrics.csv",
+          "byte_identical": true,
+          "sha256": "efe1ee386d7aae9fde197bef86a144317fb8200ca75b6902d01528833f9a4278"
+        },
+        {
+          "file": "run_manifest.json",
+          "byte_identical": true,
+          "sha256": "3eb275702baf46e2eb63cbb06a52033ae184d3856874c5876a9b77ba7740db8a"
+        },
+        {
+          "file": "service_accounts.csv",
+          "byte_identical": true,
+          "sha256": "11d6d616ef9d12cb7f4821bd424c7bce46a87402da3cb96efaa74bf1517a53dc"
+        },
+        {
+          "file": "summary.json",
+          "byte_identical": true,
+          "sha256": "1be34d146c742fc03de3fe385f81ee8825c0f32cdf51e8d1f3adb9498bd7ac04"
+        },
+        {
+          "file": "v12_control.json",
+          "byte_identical": true,
+          "sha256": "12df281948aa49b8299589fadadc377e776642d793a26636e436798eee759921"
+        }
+      ]
+    },
+    {
+      "environment": "alternate",
+      "command": [
+        "D:\\仿真建模资料\\2026年仿真建模挑战赛赛题\\A题\\tmp\\q2\\venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/run_q2_device_mapping.py",
+        "--output-dir",
+        "outputs/q2/alternate"
+      ],
+      "exit_code": 0,
+      "comparisons": [
+        {
+          "file": "attempt.json",
+          "byte_identical": true,
+          "sha256": "1be34d146c742fc03de3fe385f81ee8825c0f32cdf51e8d1f3adb9498bd7ac04"
+        },
+        {
+          "file": "eligible_10_classification.json",
+          "byte_identical": true,
+          "sha256": "b529452fe61cacd537ef8990660beec5e2095c048b16bc3fc35eae667e1d44a0"
+        },
+        {
+          "file": "eligible_10_declared_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "5cf2060e76c235cf460b03f3e18c7c38e9a9e737ae3fc5cb0043b490ac66197e"
+        },
+        {
+          "file": "eligible_10_declared_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "0777663c932bf7cf4d6d765c7af936b2b843cb0e4692ff0d71a0a6ba872acc31"
+        },
+        {
+          "file": "eligible_10_replaced_device_observed_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "6e6af9a77d5ca8921d6319d8bff0b3a1e9fb12e551f7fde19db9d91c5fbaba32"
+        },
+        {
+          "file": "eligible_10_replaced_device_observed_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "eb5f22e3c9f28a1b0d547de97f4cea358d2516d89a36e20cc3199233a1de11af"
+        },
+        {
+          "file": "eligible_20_classification.json",
+          "byte_identical": true,
+          "sha256": "815b55aac87e2239946e76b6ac3c522a47cfdf92e147609cd532e4caf01cec16"
+        },
+        {
+          "file": "eligible_20_declared_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "2039537202a6dc70d0351fa5cc9ca8d94667ce52ac0a02514436f3534eb68289"
+        },
+        {
+          "file": "eligible_20_declared_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "bf0d15ff3947423264c694d8a96c007d430fb9575756873aeed8a14f9adb33af"
+        },
+        {
+          "file": "eligible_20_replaced_device_observed_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "2d0dfeaded2027d5f1277a61ee4cf541afae701e28beb814ce6f96d9beba5b97"
+        },
+        {
+          "file": "eligible_20_replaced_device_observed_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "d4e2108df47942d424bc423fe45d03a91bbdefe52d71dd1799fe2a886a67efe4"
+        },
+        {
+          "file": "eligible_5_classification.json",
+          "byte_identical": true,
+          "sha256": "e8581ca8f21e30021f89c6aab6fc28371428c8901897b4c74c66e39516f4b2cb"
+        },
+        {
+          "file": "eligible_5_declared_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "f3f8207da9a3ac9311cd132a8dec8e835b3e6c9153d48da6a8e9cba90f662f00"
+        },
+        {
+          "file": "eligible_5_declared_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "47c065a36f1e60527a597bc06e49a287d97cb7a70afe6cac456f97e66487ba87"
+        },
+        {
+          "file": "eligible_5_replaced_device_observed_offer_0.5.json",
+          "byte_identical": true,
+          "sha256": "64c8dab15f1a90c24b275ee213eaab731a295d5605491e9e437e0aa1b18163f0"
+        },
+        {
+          "file": "eligible_5_replaced_device_observed_offer_1.5.json",
+          "byte_identical": true,
+          "sha256": "1400ed2eb4593ce3619d89df184bd5e44da663f0b4014dc0f83e1a56ec2ed4af"
+        },
+        {
+          "file": "proxy_metrics.csv",
+          "byte_identical": true,
+          "sha256": "efe1ee386d7aae9fde197bef86a144317fb8200ca75b6902d01528833f9a4278"
+        },
+        {
+          "file": "run_manifest.json",
+          "byte_identical": true,
+          "sha256": "3eb275702baf46e2eb63cbb06a52033ae184d3856874c5876a9b77ba7740db8a"
+        },
+        {
+          "file": "service_accounts.csv",
+          "byte_identical": true,
+          "sha256": "11d6d616ef9d12cb7f4821bd424c7bce46a87402da3cb96efaa74bf1517a53dc"
+        },
+        {
+          "file": "summary.json",
+          "byte_identical": true,
+          "sha256": "1be34d146c742fc03de3fe385f81ee8825c0f32cdf51e8d1f3adb9498bd7ac04"
+        },
+        {
+          "file": "v12_control.json",
+          "byte_identical": true,
+          "sha256": "12df281948aa49b8299589fadadc377e776642d793a26636e436798eee759921"
+        }
+      ]
+    }
+  ],
+  "all_outputs_byte_identical": true,
+  "national_acceptance": false
+}

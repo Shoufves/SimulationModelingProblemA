@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "scope": "national_q2",
+  "status": "input_admission_in_progress",
+  "task": "P2/Q2; GitHub Issue #7",
+  "working_start": "af930750a57144324995142a75e47ce3cdae1fd8",
+  "shared_base": "804ec15ee43874303986a7ad91b2cde05c65b124",
+  "inputs": [],
+  "sources": [],
+  "assumptions": [],
+  "evidence_review": null,
+  "unresolved_required_inputs": [
+    {
+      "id": "historical_initialization",
+      "gate": "B3/B4",
+      "required": "2014 end / 2015 start sector service, technology, finance and project queues with causal information dates",
+      "available_evidence": "data/processed/q2/history_observations.csv; data/processed/q2/sector_balance_2014_30province.csv; data/processed/q2/nbs2014_accounts.csv; data/processed/q2/nbs2014_boundary_diagnostics.csv; data/processed/q2/initialization_2014_capacity.csv; data/processed/q2/power_2014_reference.csv; data/processed/q2/initialization_2014_fuel_normalization.csv; workflow/q2_candidates/v1/initialization.json; workflow/q2_candidates/v1/assumptions.json; data/processed/q2/nuclear_queue_2014_reference.csv; data/catalog/q2_nuclear_queue_review.json; workflow/q2_candidates/v4/initialization.json; data/processed/q2/national_balance_2014_reference.csv; data/catalog/q2_national_balance_review.json; data/catalog/q2_nuclear_permit_2015_review.json; workflow/q2_candidates/v5/initialization.json; data/processed/q2/coal_bridge_2014.csv; data/catalog/q2_coal_bridge_review.json; data/processed/q2/apec_balance_2014.csv; data/processed/q2/apec_balance_2014_sector_bounds.csv; data/catalog/q2_apec_balance_review.json; data/catalog/q2_nuclear_permit_2015_supplement_review.json; data/catalog/q2_nuclear_capacity_2015_review.json; data/processed/q2/nuclear_capacity_2015_reference.csv; data/processed/q2/nuclear_capacity_2015_conflicts.csv; data/catalog/q2_nuclear_nonissuance_2016_2018_review.json; workflow/q2_candidates/v8/manifest.json; workflow/q2_candidates/v10/initialization.json; data/processed/q2/transport_activity_2014_2024.csv; data/catalog/q2_transport_activity_review.json; data/processed/q2/transport_activity_series.json; data/catalog/q2_nonenergy_mapping_review.json; outputs/q2/nonenergy_episode_v2/summary.json; data/catalog/q2_sector_partition_review.json; workflow/q2_candidates/v11/manifest.json; outputs/q2/historical_candidate_v11_sector_diagnostics/summary.json; outputs/q2/residential_heat_episode_final/summary.json; outputs/q2/device_mapping_checks.json",
+      "remaining": "26NEA2014year-end units28450MW and NNSA statuses now reviewed; v4 applies explicit duration/funding hypotheses rather than observed future dates. NEA/NBS20MW stock difference retained. Full sector services/nonenergy/ages/finance and national statistical bridge still need substantive mapping. National CEADs2014 cells1260 and60identities reviewed, gas total/transport differences remain unresolved. Coal-power category mismatch is explained by B54+C54+D54;15coal aggregates agree within rounding. APEC2014 supplies separate finalenergy/nonenergy and explicit statisticaldiscrepancy;6840cells transcribed,5539dashes retained,54sector/product conditional intervals. Database revision unknown and physical-use/equipment2024 bridge still incomplete. Four positive2015construction-permit records now cover8named units, matching annualreportcount after verifyingTianwan5/6onphysical96. CNS7now supplies8980MWe across8licensedunits:6startdates and2approved-without-date. ItsJune2016reportdate is not2015real-timeavailability. Tianwanunit5firstconcrete release verified;unit6separate-release date unknown. OriginalCNcodes conflict withCNS7and are kept separately. Other-yearcalendar,operatingpermission,exactpublication and gross/net ratingbasis remain unresolved. CNS8section6.1explicitly reportszero2016-2018constructionpermits;v8replayscurrent-yearnewapprovalblocks withoutstoppingexistingqueue. Fullother-year/discrete-unit calendar remains unresolved. V10 tests0/8170/16340MW latent PV queues with hypothetical2013-2015 schedule and conserved escrow; this is not an observed queue. Best training queue hits upper bound; all national initialization limitations remain. Activity-driver interface now separates dated activity/GDP and device efficiency. NBS2025transport132cells/22arithmeticchecks reviewed. MOT2019/2020notes document roadfreight/water scope changes;6scoped series exported,6totals/subsets/unbridged series withheld. No national useful-service/fuel/efficiency mapping; observed activity used only in a synthetic interface test. APEC2014reported materialuse now partitioned in29fixeddiagnostics (8cells,5groups,64unknowncells;jointunassigned0-5.5ktoeunderroundinghypothesis). Initialfuel/capacity/cash conserved. Crosssource residual partition is a hypothesis, not measured useful-service/equipment mapping. V11partitionsnineAPEC2014sector/fossil finalenergygroups withoutchanginginitialfuel/capacity/money. Unresolved remainder retained; theseare deliveredfinalenergy proxies, not usefulheat/mobility or actualdevices. Samegrowth classification controls reconcile; nationalservice/equipmentmapping remains incomplete. Residentialpetroleum26375ktoe nowmappedin16conditionalheat/replacementpaths with5/10/20percenthypothesizedeligibility. Same-serviceconversion,actual-usagevaluation,capacity/cashchecksverified. Actualeligibility,boilerstock/agesandnationalservicecoverage remainunknown;notnationalinitialization."
+    },
+    {
+      "id": "current_initialization",
+      "gate": "B3/B5",
+      "required": "2024 asset, fuel, service, storage and queue state on one consistent boundary",
+      "available_evidence": "outputs/q1/p1_yx/model_handoff.csv; data/processed/q2/nuclear_state_2024_reference.csv; data/processed/q2/nuclear_state_2024_diagnostics.csv; data/catalog/q2_nuclear_state_2024_review.json; outputs/q2/nuclear_state_2024_reproduction.json; data/processed/q2/current_state_2024.json; data/catalog/q2_current_state_review.json; outputs/q2/current_state_reproduction.json",
+      "remaining": "Candidate totals do not uniquely determine service/efficiency, inventory or asset age Nuclear2024reference now85source rows (58operating,27construction), with dates and rated capacity. Duplicate Fangchenggang label, Shidaowan technology/unit collision, missing dates, gross/net ambiguity and NBS50.94MW discrepancy remain. No current availability, remaining cash, permits, retirement or future commissioning inferred. Current-state review now pins45observations with same-vintage NBScapacity totals, four annual electricity categories, gasuse shares and storage power/energy. Nine partial modelcomponents retain unknowncoal/gas capacity, ages, availability,SOC,efficiency, service, inventory, queue andfinance. Reliabilityreporting fleet is explicitly excluded from nationalcoal/gas partition. V12endpoint wind/solar capacity deficits50.99/33.94percent andzerogaspower remain; no historical reset or nationaladmission."
+    },
+    {
+      "id": "technology_and_prices",
+      "gate": "B2/B3/B6",
+      "required": "Matched CAPEX/OPEX, lifetimes, fuel energy factors, prices, price year, policy coverage and allocation rules",
+      "available_evidence": "data/processed/q2/technology_reference.csv; data/catalog/q2_technology_review.json; data/processed/technology_accounting_parameters.csv; data/processed/q2/fuel_reference.csv; data/processed/q2/technology_2010_samples.csv; data/processed/q2/technology_2010_annex.csv; data/processed/q2/technology_2010_parameters.csv; data/processed/q2/technology_2010_diagnostics.csv; data/processed/q2/policy_reference.csv; data/catalog/q2_policy_review.json; data/catalog/q2_mapping_2014_review.json; data/catalog/q2_mapping_2014_transcription.json; data/catalog/q2_solar_timing_ceiling_review.json; data/catalog/q2_policy_timeline_review.json; data/processed/q2/policy_timeline_reference.csv; outputs/q2/policy_timeline_reproduction.json; data/catalog/q2_currency_bridge_review.json; data/processed/q2/currency_bridge_2008_2024.csv; outputs/q2/currency_bridge_reproduction.json; data/catalog/q2_nominal_policy_episode_review.json; outputs/q2/nominal_policy_episode/summary.json; data/catalog/q2_end_use_review.json; data/processed/q2/end_use_reference.csv",
+      "remaining": "Historical-vintage IEA2010 references and22 WRI2013 named-fuel defaults now reviewed. Still need model-specific parameter selection, matched price year, fixed/variable O&M split, service conversion and liability coverage. Three IEA main/annex comparisons remain unresolved; do not silently mix coal mass price and heat basis or treat samples as observed national fleet. IRENA2014cost range/indicative new-projectCF and US GDP deflator rebasing now tested as explicit research assumptions; no certification of Chinese price index or national fleet sample. V6correctsJanuary2015sourceavailability and compares2200GWutilitytechnicalpotential with20xopeningstock; aggregate mapping is still hypothetical, not an annual deployment allowance. ThreeNDRCnotices3008/3044/2729 andfourPDFtablesnowverified:6schedules,23prices,oneexplicit2018windannouncementwithdrawal. Publication/cohort/construction/commissioning andchanginggeography preserved. No nationalzone/cohortweight,priceyear/VATconversion,fiscalcashorfullsubsequentcalendar;notappliedtov9. WDI2008-2024annualFX/USGDPdeflator currencybridge nowreviewedwith17matchedyears and7exactoldoverlaps. Retrospectiveaccountingonly,annualaverageFXandUSgeneraldeflator assumptions;taxunchanged. No futureFX/deflatorforesight,contractmappingornationaladmission. Optionalnominalcontract engine nowconvertscurrent-yearquotes and holds currentfactor infutureNPV;7limited2015PVcohortcases executed. Cash/NPVchanges but allphysicalmetrics equalv9dueassumeddeploymentbound. Regionaleligibility/coalbenchmark/VAT/fiscalbudget andcompletecalendar remainunadmitted;notnationalpolicycalibration. SevenREmapprospectiveend-useperformancerowsvisuallyreviewed;COPversusMJ/passenger-kmunitsnormalized.2030costsnotusedashistoricalquotes. Episodepricesstraddlemodelbreak-evenasexplicitdiagnostichypotheses;notactualCAPEXadmission."
+    },
+    {
+      "id": "operation_chronology",
+      "gate": "B2/B3",
+      "required": "Matched load/wind/PV/hydro profiles, fuel supply and withdrawal bounds, inventory conditions",
+      "available_evidence": "data/processed/province_load_2018_MWh.csv",
+      "remaining": "2018 reconstructed shape is not 2024 measured chronology; representative-year hypothesis and robustness need review"
+    },
+    {
+      "id": "carbon_boundary",
+      "gate": "B3/B5",
+      "required": "One reviewed gross CO2/process/waste/net land or engineered removal boundary and 2024-2060 assumptions",
+      "available_evidence": "data/processed/q2/btr_co2_anchors.csv; data/processed/q2/inventory_boundary_checks.csv; data/catalog/q2_nonenergy_mapping_review.json; outputs/q2/nonenergy_episode_v2/summary.json",
+      "remaining": "BTR/GCB disagree; sparse official anchors are not a future removal forecast IPCC2006V3Ch1pp7-8 reviewed: materialuse may oxidize or generate combustiblebyproducts. Newdiagnostics exclude reportedmaterial from partialcombustionproxy, keepactualmaterialemissions unknown, grantnoremovalcredit and do notcomparepartialcarbon againstGCB. Fullprocess/disposal/netboundary remains unresolved."
+    },
+    {
+      "id": "frozen_experiment",
+      "gate": "B4/B6",
+      "required": "Reviewed bounds/scales/weights and GDP/cost/carbon ranges, information dates and policy target comparisons",
+      "available_evidence": "workflow/q2_acceptance.json; workflow/q2_candidates/v1/experiment.json; outputs/q2/historical_candidate_v1/historical_quality.json; workflow/q2_candidates/v4/experiment.json; outputs/q2/historical_candidate_v4/historical_quality.json; outputs/q2/iteration4_reproduction.json; workflow/q2_candidates/v5/experiment.json; outputs/q2/historical_candidate_v5/historical_quality.json; outputs/q2/iteration5_reproduction.json; workflow/q2_candidates/v5_sensitivity.json; outputs/q2/historical_candidate_v5_sensitivity/summary.json; workflow/q2_candidates/v6/manifest.json; outputs/q2/historical_candidate_v6/historical_quality.json; outputs/q2/iteration6_reproduction.json; outputs/q2/historical_candidate_v6_ablation/constraint_usage.csv; workflow/q2_candidates/v7/manifest.json; outputs/q2/historical_candidate_v7/historical_quality.json; outputs/q2/historical_candidate_v7_ablation/technology_activity.csv; outputs/q2/iteration7_reproduction.json; workflow/q2_candidates/v8/manifest.json; outputs/q2/historical_candidate_v8/historical_quality.json; outputs/q2/iteration8_reproduction.json; workflow/q2_candidates/v8_sensitivity.json; outputs/q2/historical_candidate_v8_sensitivity/summary.json; workflow/q2_candidates/v9/manifest.json; outputs/q2/historical_candidate_v9/historical_quality.json; outputs/q2/iteration9_reproduction.json; outputs/q2/historical_candidate_v9_comparison/summary.json; outputs/q2/historical_candidate_v9_sensitivity/summary.json; workflow/q2_candidates/v10/manifest.json; outputs/q2/historical_candidate_v10/historical_quality.json; outputs/q2/iteration10_reproduction.json; outputs/q2/historical_candidate_v10_comparison/summary.json; outputs/q2/historical_candidate_v10_sensitivity/summary.json; data/catalog/q2_nonenergy_mapping_review.json; outputs/q2/nonenergy_episode_v2/summary.json; data/catalog/q2_sector_partition_review.json; workflow/q2_candidates/v11/manifest.json; outputs/q2/historical_candidate_v11_sector_diagnostics/summary.json; workflow/q2_candidates/v12_joint_response.json; outputs/q2/historical_candidate_v12/summary.json; workflow/q2_candidates/v13_allocation.json; outputs/q2/historical_candidate_v13/summary.json; outputs/q2/allocation_checks.json",
+      "remaining": "Nine exploratory versions executed81/486/729/972/750/12/12/3/486validtrainingcases;3531total. V9jointstructure/wind/PVrate calibration selectssharedconstruction/connection,instant_margin,loss0.2357603115. Four numericgates stillfail(oil,gas,wind,solar);windholdoutMAPE worsens29.07to42.61percent. Technologyfrontier structure refittedloss0.399336;cannot use inherited-rate v7failure as generalrejection. V5/V6/V8/V9each27historicalresponses,notnationalS0/B6. Allfrozenfailures retained. Service/equipment,policy,accounting,currentstate andnetCO2 gapsremain. V10 adds1458 valid executions including486 exactv9 controls,4989 total executions. Selected shared limits with16340MW latent PV queue;loss0.1615137338;oil/gas/wind/solar still fail. Technology-frontier/queue2 model passes wind/PV but coal/oil/gas fail and it was not selected by training. No holdout-based model switching or national admission. 29nonenergy paths are fixed diagnostic hypotheses (control,samegrowth,27responses), nofitting orselection; cumulativevalidtrainingexecutions remain4989. NotnationalS0/B6. V11adds756validtrainingexecutions (6exactparentcontrols+750sectorGDPvectors), 5745cumulativeincludingcontrols. Allsixstructures selectunchangedv10controls; no holdout-basedswitch. Bestrejectedsectorresponses0/0/2 hitboundsand worsenmostlygasshare. 594sectoraccounts reconciled. Originaleightproxy metricdefinitions retained,notpartialnonenergycarbon. Fourv10numericfailures remain. V12adds250validtrain-onlyexecutions,5995cumulativeincludingcontrols. Fourjointparametersandfourdeploymentenvelopes retainoriginal150GWstructure;loss0.1377543447,oil/gas/wind/solarstillfail. No nationalS0/sensitivityorinputadmission. V13executes653trainingcases,6648cumulativeprimarytrainingexecutions. Jointsixparameterfit andproportionalrequestapproval selectedontrainingloss0.07621858. Windholdout6.57percent passes;coal/oil/gas/solar/effectiveCO2fail. Coalstatisticalintensity3percent hitsresearchbound. Allthresholdsunchanged;noholdoutbasedswitch orcombinedmetrics. NationalS0andB6remainincomplete."
+    }
+  ],
+  "diagnostic_candidate": {
+    "protocol": "workflow/q2_candidates/v13_allocation.json",
+    "runner": "scripts/run_q2_allocation_candidate.py",
+    "report": "docs/solutions/p2-iteration-v13.md",
+    "scope": "historical_aggregate_candidate_not_admitted",
+    "training_executions": 653,
+    "cumulative_valid_training_executions": 6648,
+    "numeric_targets_failed": 5,
+    "national_admission": false,
+    "summary": "outputs/q2/historical_candidate_v13/summary.json",
+    "reproduction": "outputs/q2/iteration13_reproduction.json",
+    "sensitivity_executed_for_this_version": false,
+    "note": "Training selectsproportionalallocation;windpasses butcoal/CO2regress,oil/gas/solarstillfail. No nationalS0oradmission."
+  },
+  "accounting_bridge": {
+    "report": "docs/solutions/p2-balance-bridge.md",
+    "reproduction": "outputs/q2/balance_bridge_reproduction.json",
+    "changes_historical_model": false,
+    "national_admission": false
+  },
+  "nominal_policy_episode": {
+    "manifest": "workflow/q2_candidates/nominal_policy_episode/manifest.json",
+    "report": "docs/solutions/p2-nominal-contracts.md",
+    "summary": "outputs/q2/nominal_policy_episode/summary.json",
+    "reproduction": "outputs/q2/nominal_policy_episode_reproduction.json",
+    "cases": 7,
+    "additional_fitted_parameters": 0,
+    "changes_v9_training_selection": false,
+    "physical_metric_paths_equal_to_v9": true,
+    "national_admission": false
+  },
+  "current_nuclear_reference": {
+    "report": "docs/solutions/p2-nuclear-state-2024.md",
+    "review": "data/catalog/q2_nuclear_state_2024_review.json",
+    "reference_date": "2024-12-31",
+    "publication_date": "2025-01-07",
+    "source_rows": 85,
+    "national_admission": false
+  },
+  "activity_reference": {
+    "report": "docs/solutions/p2-activity-drivers.md",
+    "review": "data/catalog/q2_transport_activity_review.json",
+    "reproduction": "outputs/q2/transport_activity_reproduction.json",
+    "source_cells": 132,
+    "arithmetic_checks": 22,
+    "exported_series": 6,
+    "withheld_series": 6,
+    "national_service_energy_mapping_admitted": false,
+    "changes_v10_model": false
+  },
+  "nonenergy_episode": {
+    "manifest": "workflow/q2_candidates/nonenergy_episode_v2/manifest.json",
+    "report": "docs/solutions/p2-nonenergy-partition.md",
+    "review": "data/catalog/q2_nonenergy_mapping_review.json",
+    "summary": "outputs/q2/nonenergy_episode_v2/summary.json",
+    "reproduction": "outputs/q2/nonenergy_episode_reproduction.json",
+    "cases": 29,
+    "fitted_parameters_added": 0,
+    "training_executions_added": 0,
+    "national_admission": false,
+    "changes_v10_training_selection": false,
+    "original_v10_control_ledger_equal": true,
+    "partial_carbon_compared_to_gcb_target": false,
+    "actual_material_emissions_t": null
+  },
+  "sector_partition_trial": {
+    "manifest": "workflow/q2_candidates/v11/manifest.json",
+    "report": "docs/solutions/p2-iteration-v11.md",
+    "review": "data/catalog/q2_sector_partition_review.json",
+    "summary": "outputs/q2/historical_candidate_v11/summary.json",
+    "rejected_diagnostics": "outputs/q2/historical_candidate_v11_sector_diagnostics/summary.json",
+    "reproduction": "outputs/q2/iteration11_reproduction.json",
+    "training_executions": 756,
+    "cumulative_valid_training_executions": 5745,
+    "original_controls_retained_for_all_structures": true,
+    "changes_v10_selected_model": false,
+    "national_admission": false
+  },
+  "prior_diagnostic_candidate_v10": {
+    "manifest": "workflow/q2_candidates/v10/manifest.json",
+    "report": "outputs/q2/historical_candidate_v10/report.md",
+    "scope": "historical_aggregate_candidate_not_admitted",
+    "training_candidates": 1458,
+    "numeric_targets_failed": 4,
+    "national_admission": false,
+    "prior_versions": [
+      "v1",
+      "v2r1",
+      "v3",
+      "v4",
+      "v5",
+      "v6",
+      "v7",
+      "v8",
+      "v9"
+    ],
+    "iteration_notes": "docs/solutions/p2-iteration-v10.md",
+    "historical_response_cases": 27,
+    "response_summary": "outputs/q2/historical_candidate_v10_sensitivity/summary.json",
+    "structural_ablation": "outputs/q2/historical_candidate_v10_comparison/summary.json",
+    "response_note": "V10 has27 historical responses on the training-selected latent-PV-queue model, not national B6. Comparison uses six structures each with its own training-fitted rates/rule plus originalv9 control; not a single-factor causal ablation."
+  },
+  "joint_response_trial": {
+    "protocol": "workflow/q2_candidates/v12_joint_response.json",
+    "runner": "scripts/run_q2_joint_response.py",
+    "report": "docs/solutions/p2-iteration-v12.md",
+    "scope": "historical_aggregate_candidate_not_admitted",
+    "training_executions": 250,
+    "cumulative_valid_training_executions": 5995,
+    "numeric_targets_failed": 4,
+    "national_admission": false,
+    "summary": "outputs/q2/historical_candidate_v12/summary.json",
+    "reproduction": "outputs/q2/iteration12_reproduction.json",
+    "sensitivity_executed_for_this_version": false,
+    "note": "Training-selected four-parameter joint fit improves loss but retains all four failures. Not national S0."
+  },
+  "end_use_device_episode": {
+    "protocol": "workflow/q2_candidates/residential_heat_episode_v2.json",
+    "report": "docs/solutions/p2-device-service-mapping.md",
+    "review": "data/catalog/q2_end_use_review.json",
+    "summary": "outputs/q2/residential_heat_episode_final/summary.json",
+    "checks": "outputs/q2/device_mapping_checks.json",
+    "reproduction": "outputs/q2/device_mapping_reproduction.json",
+    "cases": 16,
+    "new_training_executions": 0,
+    "changes_v12_selected_model": false,
+    "national_admission": false
+  },
+  "current_state_reference": {
+    "review": "data/catalog/q2_current_state_review.json",
+    "state": "data/processed/q2/current_state_2024.json",
+    "report": "docs/solutions/p2-current-state-2024.md",
+    "reproduction": "outputs/q2/current_state_reproduction.json",
+    "observations": 45,
+    "initialization_complete": false,
+    "national_admission": false
+  },
+  "prior_v12_diagnostic_candidate": {
+    "protocol": "workflow/q2_candidates/v12_joint_response.json",
+    "runner": "scripts/run_q2_joint_response.py",
+    "report": "docs/solutions/p2-iteration-v12.md",
+    "scope": "historical_aggregate_candidate_not_admitted",
+    "training_executions": 250,
+    "cumulative_valid_training_executions": 5995,
+    "numeric_targets_failed": 4,
+    "national_admission": false,
+    "summary": "outputs/q2/historical_candidate_v12/summary.json",
+    "reproduction": "outputs/q2/iteration12_reproduction.json",
+    "sensitivity_executed_for_this_version": false,
+    "note": "Training-selected four-parameter joint fit improves loss but retains all four failures. Not national S0."
+  }
+}

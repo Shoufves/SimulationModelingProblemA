@@ -1,0 +1,270 @@
+{
+  "windows": {
+    "train": [
+      2015,
+      2021
+    ],
+    "already_seen_holdout": [
+      2022,
+      2024
+    ]
+  },
+  "parameters": [
+    {
+      "id": "elasticity",
+      "bounds": [
+        0.5,
+        1.5
+      ],
+      "grid": [
+        0.5,
+        1.0,
+        1.5
+      ],
+      "paths": [
+        [
+          "demand_drivers",
+          "industry",
+          "gdp_elasticity"
+        ],
+        [
+          "demand_drivers",
+          "building",
+          "gdp_elasticity"
+        ],
+        [
+          "demand_drivers",
+          "mobility",
+          "gdp_elasticity"
+        ]
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "energy",
+      "family": "energy_consumption",
+      "scale": 1.0,
+      "weight": 0.25,
+      "metric_type": "total"
+    },
+    {
+      "id": "nonfossil_share",
+      "family": "primary_mix",
+      "scale": 1.0,
+      "weight": 0.25,
+      "metric_type": "share_fraction"
+    },
+    {
+      "id": "capacity",
+      "family": "capacity_or_generation",
+      "scale": 1.0,
+      "weight": 0.25,
+      "metric_type": "total"
+    },
+    {
+      "id": "co2",
+      "family": "co2",
+      "scale": 1.0,
+      "weight": 0.25,
+      "metric_type": "total"
+    }
+  ],
+  "maximum_evaluations": 3,
+  "equivalent_loss_absolute_tolerance": 1e-12,
+  "sensitivity": [
+    {
+      "id": "gdp_growth",
+      "values": [
+        0.0,
+        0.02,
+        0.04
+      ],
+      "paths": [
+        [
+          "gdp_growth",
+          "2025"
+        ],
+        [
+          "gdp_growth",
+          "2026"
+        ],
+        [
+          "gdp_growth",
+          "2027"
+        ],
+        [
+          "gdp_growth",
+          "2028"
+        ],
+        [
+          "gdp_growth",
+          "2029"
+        ],
+        [
+          "gdp_growth",
+          "2030"
+        ],
+        [
+          "gdp_growth",
+          "2031"
+        ],
+        [
+          "gdp_growth",
+          "2032"
+        ],
+        [
+          "gdp_growth",
+          "2033"
+        ],
+        [
+          "gdp_growth",
+          "2034"
+        ],
+        [
+          "gdp_growth",
+          "2035"
+        ],
+        [
+          "gdp_growth",
+          "2036"
+        ],
+        [
+          "gdp_growth",
+          "2037"
+        ],
+        [
+          "gdp_growth",
+          "2038"
+        ],
+        [
+          "gdp_growth",
+          "2039"
+        ],
+        [
+          "gdp_growth",
+          "2040"
+        ],
+        [
+          "gdp_growth",
+          "2041"
+        ],
+        [
+          "gdp_growth",
+          "2042"
+        ],
+        [
+          "gdp_growth",
+          "2043"
+        ],
+        [
+          "gdp_growth",
+          "2044"
+        ],
+        [
+          "gdp_growth",
+          "2045"
+        ],
+        [
+          "gdp_growth",
+          "2046"
+        ],
+        [
+          "gdp_growth",
+          "2047"
+        ],
+        [
+          "gdp_growth",
+          "2048"
+        ],
+        [
+          "gdp_growth",
+          "2049"
+        ],
+        [
+          "gdp_growth",
+          "2050"
+        ],
+        [
+          "gdp_growth",
+          "2051"
+        ],
+        [
+          "gdp_growth",
+          "2052"
+        ],
+        [
+          "gdp_growth",
+          "2053"
+        ],
+        [
+          "gdp_growth",
+          "2054"
+        ],
+        [
+          "gdp_growth",
+          "2055"
+        ],
+        [
+          "gdp_growth",
+          "2056"
+        ],
+        [
+          "gdp_growth",
+          "2057"
+        ],
+        [
+          "gdp_growth",
+          "2058"
+        ],
+        [
+          "gdp_growth",
+          "2059"
+        ],
+        [
+          "gdp_growth",
+          "2060"
+        ]
+      ],
+      "rationale": "Engineering response levels, not a national GDP forecast range",
+      "source_or_assumption": "synthetic fixture"
+    },
+    {
+      "id": "technology_cost_decline",
+      "values": [
+        0.0,
+        0.05,
+        0.1
+      ],
+      "paths": [
+        [
+          "cost_decline",
+          "solar_build"
+        ],
+        [
+          "cost_decline",
+          "heat_upgrade"
+        ]
+      ],
+      "rationale": "Engineering cost-path perturbation, not an empirical learning distribution",
+      "source_or_assumption": "synthetic fixture"
+    },
+    {
+      "id": "carbon_price",
+      "values": [
+        0.0,
+        10.0,
+        20.0
+      ],
+      "paths": [
+        [
+          "policies",
+          0,
+          "carbon_price_per_t"
+        ]
+      ],
+      "rationale": "Engineering liability-price perturbation, not Chinese ETS scope or price forecast",
+      "source_or_assumption": "synthetic fixture"
+    }
+  ]
+}

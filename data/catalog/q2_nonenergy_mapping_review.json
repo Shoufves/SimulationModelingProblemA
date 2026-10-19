@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "review_date": "2026-10-19",
+  "reviewer": "same_author_scoped_source_and_mapping_review",
+  "team_approval": false,
+  "decision": "limited_nonenergy_partition_hypothesis",
+  "fingerprints": [
+    {
+      "path": "data/catalog/q2_apec_balance_review.json",
+      "sha256": "124f937c91da2ce1994f7a1d4eaf3161540eb8122efcc272ee8bcedead767e78"
+    },
+    {
+      "path": "workflow/q2_candidates/v10/manifest.json",
+      "sha256": "af7533e51f622db9d1c932c9fbe73096cec1529bc92696fd416ac6cedfa7b192"
+    },
+    {
+      "path": "outputs/q2/historical_candidate_v10/training_selection.json",
+      "sha256": "3cf70f668c146aac84fac4e4b48b464e439289d137c885e2877a40d45929b4e6"
+    },
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_ktoe.html",
+      "sha256": "c2e04292c041272eff6d435f8ac8a41035928c70f67d17931b381c1f304c800b"
+    },
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_ktoe.txt",
+      "sha256": "065763527587c3717c7aa922f51cd77f348a190102012031576f65dc2dadde6e"
+    },
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_PJ.html",
+      "sha256": "241a2431a9daded1cf834383cfc356aa36a817dfa9b1a4b86169ad190403718c"
+    },
+    {
+      "path": "data/raw/q2/apec_china_balance_2014_detailed_PJ.txt",
+      "sha256": "a3a5a52c84ea8af433573fbe697c9fb63078a6da30bb9eb57fd2dadfbd9f95fd"
+    },
+    {
+      "path": "data/raw/q2/apec_standardisation.html",
+      "sha256": "f61155b11909bf528c6784f8febf8e7b9142cfa97ec4d2fbe982d3b40900b4c3"
+    },
+    {
+      "path": "data/raw/q2/apec_processing_information.html",
+      "sha256": "b00b1e3221079a7bfcb1f86ea0dabe3b0e4fc3686fd4553e02d171ea09c99b30"
+    },
+    {
+      "path": "data/raw/q2/apec_revised_definitions.pdf",
+      "sha256": "a08b4cac76b4184420248840d9559606592f66f48538662ebd7c2e3596b6ea33"
+    },
+    {
+      "path": "data/raw/q2/apec_ktoe_download.json",
+      "sha256": "149badf5056fdbea230e5059a59e8afdc3ae3c1d94136cf896e6932aef93a06c"
+    },
+    {
+      "path": "data/raw/q2/apec_balance_download.json",
+      "sha256": "cbb346c7962328325cd8c0033396f809f1f8f7e86ca8ac745ee18cf276e2113d"
+    },
+    {
+      "path": "data/raw/q2/ipcc2006_ippu_intro.pdf",
+      "sha256": "33f003fd2431f957fde77808c0cb5cd8c07a44b5962d536af1e36df7fa32d293"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_KTOE_HTML",
+      "record_sha256": "3bf95f01a285a6c5ad2037c094481795512f8916a8935cb3bc5749e008665e57"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_KTOE_TSV",
+      "record_sha256": "3435fd85f73f227fcde75fce1b2423ac2baebd4e7101ce148b15d2cfa98be81d"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_PJ_HTML",
+      "record_sha256": "4683a2d4d54620c9636724e6530ef2badde2f4b83c9cd453a5858d54d7002f2a"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_PJ_TSV",
+      "record_sha256": "5559e1f4f699c536afd64771d3a121077f0ed43b6396825879c15b77d3bc9ac4"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_BALANCE_STANDARDISATION",
+      "record_sha256": "36083d60f23cceb4014dbdbb6825dcc1fa656424b34ebf3625e2ce8444fada27"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_BALANCE_PROCESSING",
+      "record_sha256": "ae77b71d223fd610dee654a758f575e94f1f01f0a3e2886846dc1c385e22b877"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_REVISED_DEFINITIONS",
+      "record_sha256": "513931163292eb5ee81de4f4885a044a7a55a01de4cf5a9121a485c80b7a425e"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_KTOE_QUERY",
+      "record_sha256": "692d5828212485d296c164d32e3646853681dfc4b6262221c7d027e80e1921be"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "APEC_CHINA_2014_PJ_QUERY",
+      "record_sha256": "e598b490a4c9efcb7910d54674d6fb76c46defe7afa418b25224d20c101883fb"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "IPCC2006_IPPU_ENERGY_ALLOCATION",
+      "record_sha256": "870d61dc2bbc91d58c4520c25aaf7fd61e42ed512fb53109a7a37110ab22769f"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "APEC2014ktoe source read at rows17/17.1-17.4 and five fossilproductcolumns. Reportedsector8positivecells sum182954; totalcontrol182955. Industry coal54334+coalproducts17411; oil2908+80782; gas13107. Transformationoil722+13171; transportoil519. No post2014 source used."
+    },
+    {
+      "passed": true,
+      "evidence": "All72sector/topproductslots inspected:8reported,64dash unresolved. Under nonnegative inputs and nearest1ktoe rounding, global unassigned bound0..5.5ktoe. Mapping reportedcentres is a partial reference,not zero imputation or full accounting closure."
+    },
+    {
+      "passed": true,
+      "evidence": "APECdefinition1toe=41.868GJ and1MWh=3.6GJ imply11630MWh/ktoe. Materialenergycontent is not usefulenergy output. Parentcoal/oil/gas residuals are broad proxies; subtraction is explicitly a crosssource hypothesis."
+    },
+    {
+      "passed": true,
+      "evidence": "IPCC2006Volume3Chapter1 physical/printed7-8 rendered and read. Section1.2.1 andBox1.1 distinguish Energy/IPPU allocation; feedstocks can combust or yield combustiblegases. Removing a component from the energy proxy is not eliminating its actual CO2; shorttermretention is not CCS."
+    },
+    {
+      "passed": true,
+      "evidence": "V10selection read and retained; no target,weight,threshold or behavior search changed. TwentysevenmaterialGDPresponsevectors0/1/2 plus exactparent and samegrowth splitcontrol frozen before execution; no fitting or winningcase selection."
+    }
+  ],
+  "mapping_assumptions": [
+    {
+      "id": "NEM01",
+      "statement": "Subtract reported2014APEC materialenergycentres from inherited2014NBS/GCB residual proxy, separately bycoal/oil/gas. Preserve openingfuel demand and allocate existinginputcapacity, do not create fuel or cash. Differentenergybasis/vintages and unassigned0..5.5ktoe remain unresolved; not a national initialization."
+    },
+    {
+      "id": "NEM02",
+      "statement": "Use same inherited four-block profile and material1MWhLHVcontent/MWhfuel,not thermal efficiency. Assign reportedindustry toindustrialagent,transformation toexistingfuelagent andtransport totransportagent. Existingprice/cash assumptions retained,not observedmaterialmarkets."
+    },
+    {
+      "id": "NEM03",
+      "statement": "Materialdevices carry0in the partial energy-combustion proxy only. Their actual oxidation,industrialprocess emissions,byproduct recovery and later disposal are unresolved,notzero. No removal or capturecredit,carbon-tax coverage or claim of avoidedreal emissions. Exclude the oldGCB carbon target from comparisons forsplitcases."
+    },
+    {
+      "id": "NEM04",
+      "statement": "Samegrowthcontrol uses inheritedcarrierGDPelasticities0/0.5/2. Other27cases use eachmaterialcarrierelasticity0/1/2 as declaredresearchrange,not empiricalprior. Existingnonmaterialresponses andallgenerationparameters fixed. No observedfuturefeedstock consumption or targeted2060trajectory."
+    }
+  ],
+  "allowed_uses": [
+    "Bounded nonenergy source reference and conditional source/use/finance accounting episode."
+  ],
+  "prohibited_uses": [
+    "National S0 admission",
+    "Claiming nonenergy use is nonemitting or permanent carbon sequestration",
+    "Ranking splitcases against unreconciled oldGCBfuelCO2 target",
+    "Treating APPEC/NBS crosssource subtraction as a measured service/equipment state"
+  ],
+  "national_admission": false
+}

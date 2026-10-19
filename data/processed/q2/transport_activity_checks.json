@@ -1,0 +1,93 @@
+{
+  "source_cells": 132,
+  "arithmetic_checks": 22,
+  "arithmetic_passed": true,
+  "exported_activity_series": [
+    "C16-06:rail",
+    "C16-06:road",
+    "C16-06:civil_aviation",
+    "C16-08:rail",
+    "C16-08:civil_aviation",
+    "C16-08:pipeline"
+  ],
+  "withheld": [
+    {
+      "series": "C16-06:total",
+      "reason": "Use a distinct service, not a mixed-mode total or overlapping subset"
+    },
+    {
+      "series": "C16-06:water",
+      "reason": "Transport activity transition remains unbridged"
+    },
+    {
+      "series": "C16-08:total",
+      "reason": "Use a distinct service, not a mixed-mode total or overlapping subset"
+    },
+    {
+      "series": "C16-08:road",
+      "reason": "Transport activity transition remains unbridged"
+    },
+    {
+      "series": "C16-08:water",
+      "reason": "Transport activity transition remains unbridged"
+    },
+    {
+      "series": "C16-08:ocean_subset",
+      "reason": "Use a distinct service, not a mixed-mode total or overlapping subset"
+    }
+  ],
+  "unresolved_transitions": [
+    {
+      "table": "C16-08",
+      "mode": "road",
+      "from_year": 2018,
+      "to_year": 2019,
+      "source_id": "MOT_TRANSPORT_SCOPE_2019_Q2",
+      "locator": "注4；二、公路（三）运输服务",
+      "status": "documented_scope_change_no_backcast",
+      "reason": "MOT2019 note4 explicitly adjusts road freight scope after2019special survey and computes growth on comparable base. Printed2018/2019levels71249.2/59636.4 are not a homogeneous change; exact2014-2018bridge absent."
+    },
+    {
+      "table": "C16-06",
+      "mode": "water",
+      "from_year": 2019,
+      "to_year": 2020,
+      "source_id": "MOT_TRANSPORT_SCOPE_2020_Q2",
+      "locator": "注3",
+      "status": "documented_method_change_no_backcast",
+      "reason": "MOT2020 note3 changes maritime reporting from authority returns to enterprise online reporting; water passenger and freight growth are explicitly comparable-scope rates. Full homogeneous2014-2024levels not established."
+    },
+    {
+      "table": "C16-08",
+      "mode": "water",
+      "from_year": 2019,
+      "to_year": 2020,
+      "source_id": "MOT_TRANSPORT_SCOPE_2020_Q2",
+      "locator": "注3；三、水路（三）运输服务",
+      "status": "documented_method_change_no_backcast",
+      "reason": "MOT2020waterfreightturnover105834.44 is reported down2.5percent on comparable scope; direct NBS2019/2020level ratio instead rises. Keep actual levels and do not infer an exact retrospective bridge from rounded growth."
+    },
+    {
+      "table": "C16-08",
+      "mode": "ocean_subset",
+      "from_year": 2019,
+      "to_year": 2020,
+      "source_id": "MOT_TRANSPORT_SCOPE_2020_Q2",
+      "locator": "三、水路（三）运输服务；另见MOT2019同节",
+      "status": "source_label_equivalence_unresolved",
+      "reason": "NBScolumn远洋 prints54057/89897. MOT2019 reports远洋54057.47 separately from沿海33603.56; MOT2020 reports海洋89896.90. Rounded values coincide but category labels differ; no homogeneous远洋growth claim and no silent relabeling. Subset never added towater."
+    }
+  ],
+  "source_review_sha256": "d745c54fb387e3b2744eb4d0523b3ea5a92faa5a77fb7d918e9cfd67d6c68bc2",
+  "national_model_admission": false,
+  "model_energy_intensities_or_future_paths_supplied": false,
+  "scope_notes": [
+    "Passenger-km and tonne-km are different services; do not add them or convert without explicit mass/load assumptions.",
+    "Road/water cover registered commercial vehicles/vessels; road passenger is not private-car travel or all national mobility.",
+    "Rail excludes military and non-public dedicated lines; civil aviation covers domestic-registered carriers including domestic,HongKong/Macao/Taiwan and international operations, not a territorial fuel boundary.",
+    "Pipeline includes crude/refinedoil,naturalgas andothergas, not directly energy consumed transporting them.",
+    "NBS2025 is retrospective data. Precise public availability of each historical revision not established. Given realized activity is not an investor forecast.",
+    "Mode totals are arithmetic checks only; no energy intensities,equipment fuel shares or future2060activity supplied.",
+    "MOT2019note4 and2020note3 document survey/reporting changes. MOTbulletin freight aggregate excludes pipeline, unlike the NBSall-mode freight total; totals cannot be swapped. MOTmonitored-operator energy intensities are not nationalfleet intensities."
+  ]
+}

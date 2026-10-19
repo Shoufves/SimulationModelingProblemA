@@ -1,0 +1,74 @@
+{
+  "reviewer": "yx_assisted_local_review",
+  "review_date": "2026-10-19",
+  "team_approval": false,
+  "decision": "scoped_initialization_references",
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/nbs_energy_faq_20231009.html",
+      "sha256": "fbec9ef9a49821afa38219577d35655c14d466777cf6c03a96fc6942286d2cbe"
+    },
+    {
+      "path": "data/raw/q2/nea_power_2014_review.html",
+      "sha256": "fc18bb249596948c7af5cc1d0bc8826646affff76955614592ab9f143babd10d"
+    },
+    {
+      "path": "data/raw/q2/nbs_2016_energy_definitions.html",
+      "sha256": "7d167fa3bea83c9223246ce984138874d5d061a32e9694fb28ed1c852d092494"
+    },
+    {
+      "path": "data/raw/q2/wri_china_energy_guide_2013_v21.pdf",
+      "sha256": "d745b096ad6a76f2ddf0a21ccafeefb898149de8c70744fe7e88bbc16f803497"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "sha256": "46ab0ea9a31b1e59f804246a5e69a878e1af0925a1125599610c3acfdd4c1e43"
+    },
+    {
+      "path": "data/catalog/q2_fuel_reference_transcription.json",
+      "sha256": "1c2b7a558e6e9d3c4e8ede8f09fad22d243fea32df5d7e2e9e6077e029b500be"
+    },
+    {
+      "path": "data/processed/q2/nbs2014_accounts.csv",
+      "sha256": "906aa8825738437673a56a4ca64872f9d99082b1e9775fb0b47c582ca9280993"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "NEA original body read in full; publication body states 2015-03-16 despite migrated URL containing 202310. Values describe 2014, not 2023."
+    },
+    {
+      "passed": true,
+      "evidence": "NEA thermal contains coal and gas; hydro contains pumped storage. Disjoint partition retains unclassified residuals, without relabeling them oil/biomass."
+    },
+    {
+      "passed": true,
+      "evidence": "Spending is annual construction expenditure of major power enterprises, not cash balance or unit overnight CAPEX. Utilization/net supply coal rate/line losses are not all-plant hourly availability or gross generation efficiency."
+    },
+    {
+      "passed": true,
+      "evidence": "WRI physical PDF cover p1 confirms July 2013 v2.1. Physical p55 Table B.1 read visually; formulas and NCV consistency on physical pp32-34 checked."
+    },
+    {
+      "passed": true,
+      "evidence": "NBS FAQ questions 2,4,10,11,14,16,17 distinguish transformation net use, legal-enterprise sector attribution, regional aggregation, measured/reference calorific factors and feedstock use. NBS 2016 definitions distinguish equivalent electricity conversion and original fuel inputs."
+    }
+  ],
+  "allowed_uses": [
+    "Q2 2014 aggregate electricity capacity candidate on NEA 2015 vintage",
+    "named-fuel NCV/combustion coefficient reference after explicit physical-unit match",
+    "separate historical investment-flow and generation anchors",
+    "accounting boundary rules and gross fuel normalization diagnostics"
+  ],
+  "prohibited_uses": [
+    "silently scaling NEA technology shares to NBS totals",
+    "using construction expenditure as firm cash or per-commissioned-kW CAPEX",
+    "assuming unknown asset age/permission/queue or pumped-storage GWh",
+    "treating utilization hours as hourly measured availability",
+    "applying raw-coal/crude coefficients to unspecified coal/oil mixtures",
+    "summing gross carrier uses as primary energy or burning all feedstocks",
+    "regarding 2013 literature defaults as measured 2014 national fuel quality",
+    "calling the reference packet complete national model admission"
+  ]
+}

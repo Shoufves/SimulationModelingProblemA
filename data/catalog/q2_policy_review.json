@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "decision": "scoped_historical_policy_reference",
+  "reviewer": "yx_assisted_local_review",
+  "review_date": "2026-10-19",
+  "team_approval": false,
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/ndrc_wind_price_2009_1906.html",
+      "sha256": "fc27cf01ee9db65f526e3a869e7b36e388939fcbb6ac8d8cb20d710c464276af"
+    },
+    {
+      "path": "data/raw/q2/ndrc_wind_price_2009_table.pdf",
+      "sha256": "a5087a17fb8ccf048c0394d1a8dee170f4bb0636ba0139e26f054f6fea6bd0d7"
+    },
+    {
+      "path": "data/raw/q2/ndrc_pv_price_2013_1638.pdf",
+      "sha256": "c8b4f3d85c1055a3107ec6348eb20356225ac4e30f98848ed9a69c18c132b4ff"
+    },
+    {
+      "path": "data/catalog/q2_policy_transcription.json",
+      "sha256": "e9b70349cb97c5a6720252fee13faffac2bafe090b8f0b686f74b41325b63389"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_WIND_PRICE_2009_1906",
+      "record_sha256": "2293dbb5aeb05575bffccbb5ac0709bcfc1230b35e716402ea48467d73ec9a71"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_WIND_PRICE_2009_TABLE",
+      "record_sha256": "2fdddbd7321e01d529ff900c14adf1f4c6ae023b34abbf9956319895c379e0c2"
+    },
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NDRC_PV_PRICE_2013_1638",
+      "record_sha256": "e727c0187a86d5eb65db78a13a883b2e505194cba6998e5e9913b44ccfba48cd"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Wind notice full body read; issue date2009-07-20 differs from web publication2009-07-27; policy starts2009-08-01 and excludes earlier approvals/offshore."
+    },
+    {
+      "passed": true,
+      "evidence": "Wind one-page attachment and PV four-page official PDF rendered and visually checked including region rows, tax note and Tibet exclusion."
+    },
+    {
+      "passed": true,
+      "evidence": "PV0.90/0.95/1.00 are full utility tariffs; distributed0.42 is an all-generation premium with central capital-subsidy exclusion. No double full-tariff payment."
+    },
+    {
+      "passed": true,
+      "evidence": "PV support duration is in principle20years from operation; wind duration absent in this notice remains null."
+    },
+    {
+      "passed": true,
+      "evidence": "Nominal currency, VAT, regional composition and eligibility are preserved; no nationwide constant-real tariff or budget has been inferred."
+    }
+  ],
+  "allowed_uses": [
+    "Dated policy-reference candidates and tests of contract implementation",
+    "Model-specific future mapping after explicit nominal/real price, tax, region, approval and funding review"
+  ],
+  "prohibited_uses": [
+    "Unreviewed national annual tariff averaging",
+    "Retroactive repricing of already commissioned cohorts",
+    "Assuming all2014PV is eligible at the same rate",
+    "Using the full tariff as a premium above ordinary sale revenue",
+    "Treating these two policies as the complete historical or present policy sequence"
+  ]
+}

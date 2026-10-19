@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "scope": "historical_deployment_diagnostic",
+  "frozen_before_ablation": true,
+  "national_acceptance": false,
+  "case_count": 4,
+  "fixed_rule": "v7trainingselection",
+  "bindings": {
+    "manifest": {
+      "path": "workflow/q2_candidates/v7/manifest.json",
+      "sha256": "53d5d6a42c6e67caa2c8380ff8e2f9b660a163540143040ce2bb2cb930762200"
+    },
+    "training_selection": {
+      "path": "outputs/q2/historical_candidate_v7/training_selection.json",
+      "sha256": "e21d3c7cf6ebd65af2c1bd82b053d73cbe44d095982d42b84b70b328fff5d9db"
+    }
+  },
+  "interpretation": "Keep all four structures under the same training-selected rule; no holdout reselection or cap fitting."
+}

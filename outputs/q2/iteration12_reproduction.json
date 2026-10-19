@@ -1,0 +1,471 @@
+{
+  "independent_snapshot_files": 147,
+  "snapshot_hashes": {
+    "data/catalog/q2_fuel_reference_transcription.json": "1c2b7a558e6e9d3c4e8ede8f09fad22d243fea32df5d7e2e9e6077e029b500be",
+    "data/catalog/q2_history_review.json": "b8e2d13e4bd22b41c67d2681629fbb405d8c57af468504ff9b875bea07358cc3",
+    "data/catalog/q2_initialization_reference_review.json": "9eb5502f440dedc9b4520aa6109fc07c04943f677879614e3ba79b2598cb64ad",
+    "data/catalog/q2_mapping_2014_review.json": "5c540d2d6b266373b226713af9931bf9e7f56ca303f1c485feb6f7d76b6e61dd",
+    "data/catalog/q2_mapping_2014_transcription.json": "ed7bf23fa313fbbec4b088153a7828f607b2119913ebab02d216e6e1677949c6",
+    "data/catalog/q2_national_balance_review.json": "75f476ae40847a3b074607116c08ddc76b3b1869bf0ad6fca1e5bc055104d145",
+    "data/catalog/q2_nbs2014_review.json": "239ffad4e945c785803d8a0b5173195ac8ecdaa66feedcbdd7efbdcca5f59be7",
+    "data/catalog/q2_nbs2014_transcription.json": "94a36d88ac99e40f763e7667516e698c0728c72f85b93218b606f39206bb19a0",
+    "data/catalog/q2_nuclear_nonissuance_2016_2018_review.json": "2b7e6fad75ec4797f54e4b29192236b78908db8b36c5d7067d87e7026fb3c35f",
+    "data/catalog/q2_nuclear_queue_review.json": "4c49a76748a3a675f5f20d69baeaf983347743ba91a25475f1c1e87a030a68e6",
+    "data/catalog/q2_nuclear_queue_status_transcription.json": "a46e402f166c909d86c8169681d34d6e7f4ac4f3a78de5b2c3f769d26a21d287",
+    "data/catalog/q2_solar_timing_ceiling_review.json": "9da25d26c8b82950d6f0077147b7b6e25775d5ed83d205349b5f7fb982554c67",
+    "data/catalog/q2_solar_timing_ceiling_transcription.json": "4bc7c8904be623f6055018f04657d96252839b5ee396214ba39f42883be44587",
+    "data/catalog/q2_source_transcription.json": "4c7561144c25a9bfcba74dff06a8ae895255442f87ac9fb4c73e962b0b2dcb2d",
+    "data/catalog/q2_sources.json": "74d675cc67b9e22b922321dd8b4b3918f3c18adadcb0da9ea8d0e98a51cd146a",
+    "data/catalog/q2_technology_2010_review.json": "cf2223ebae5430e1990bc5c9f592665708b42258dd90fa701364ec80b99dc0ea",
+    "data/catalog/q2_technology_2010_transcription.json": "126c6cc95526f538b6ac0df0f38d3471f1aefeb63980fe2a1f7dc0828d27b324",
+    "data/processed/china_co2_gcb_annual.csv": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
+    "data/processed/q2/fuel_reference.csv": "4c5f6c204160530b1a96c8fa64c872530a1af06e3c0eb7ba897c960800e026af",
+    "data/processed/q2/history_observations.csv": "b3f8e393eff571271acda1d016a75b12637179dda4e57728085fd4b24174e9f9",
+    "data/processed/q2/national_balance_2014_checks.json": "559027d230153de8d53674e7d71e2e35f7a09fcb89dd83c36676a66263e5b568",
+    "data/processed/q2/national_balance_2014_reference.csv": "6035f3c203583217b1b2047497c20c7bd9437553992e613d6cbea822ce583fa6",
+    "data/processed/q2/nbs2014_accounts.csv": "906aa8825738437673a56a4ca64872f9d99082b1e9775fb0b47c582ca9280993",
+    "data/processed/q2/nuclear_queue_2014_reference.csv": "93b853b19dda574ea438d1a1eeab7c2ef9ad042ff4aafb5b59eea03c1a2daf31",
+    "data/processed/q2/power_2014_reference.csv": "9e17d5f48182e1529dbcd0fcd32593d135dcc9175b800e06f3d94fc27170c929",
+    "data/processed/q2/sector_balance_2014_30province.csv": "dbeb5039977eabd6a56703a3ed8392be0858348014c8a4d04bbc93f2999523ba",
+    "data/processed/q2/technology_2010_parameters.csv": "ec2e6e25eedfa97d731dcfc921701a9f184694a4939389f5cd1838e43722dc86",
+    "data/processed/q2/technology_2010_samples.csv": "37f4a5646816e1224e7658eeeb734f9b18e78641fc3cd148763eca8e5b43b85e",
+    "data/processed/unified/nbs_history.csv": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+    "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+    "data/raw/batch1_national/nbs_2025_C09-02.jpg": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+    "data/raw/batch1_national/nbs_2025_C09-15.jpg": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+    "data/raw/lb/base/nbs/archive/2016/0903CH.jpg": "4317db197e7dbe0c2a52035d4d0f694c5b31b2120e8ff58e75a769a1927d9987",
+    "data/raw/lb/base/nbs/archive/2016/0904CH.jpg": "1c48bf738f3de96abce0702a88f4e3fe9e6398f5e2323301065465f3b872933f",
+    "data/raw/lb/base/nbs/archive/2016/0905CH.jpg": "49258e2158ad376d5bce37aca3f474d9fb236435b3647c3b84335100c753f075",
+    "data/raw/lb/base/nbs/archive/2016/0906CH.jpg": "6e5452bd056f2c92e0de5f86e5d0eef172cdde6b5598849c6d985b612628c3a2",
+    "data/raw/lb/base/nbs/archive/2016/0909CH.jpg": "f25059d69c17f2a8d6ead9b6285231803b654103825aa3fad77391201517bbfb",
+    "data/raw/lb/base/nbs/archive/2016/0910CH.jpg": "2affcaa25ebd878214cb88077a6b3a9fdfa70369996102d4932f47252b21ece8",
+    "data/raw/lb/base/nbs/yearbook2025/C09-08.jpg": "3620c3720491426d14de105b545f190c3d0b57cf3e05f29d4745519b19e218cf",
+    "data/raw/lb/base/reports/china_btr1_2024.pdf": "3864e6e16e03517946907f518b9843bd8e5934f72a36e4ee78e8e0212f90a5cb",
+    "data/raw/q2/ceads_national5425546_v1.json": "18e7c3e0cb2bc108e1a10e678c58510dd460f6da84b5d006af756a51087f18f2",
+    "data/raw/q2/ceads_national_energy_inventory_2000_2015_v1.xlsx": "541f53af9bad48184aa87f7378a229cba765de6b9157b08f0411461a9c86a237",
+    "data/raw/q2/ceads_national_methods_2018.html": "cacdccec66be189048de41644a6cb5bb514b1ff9eaeadad43a2fa65b30222793",
+    "data/raw/q2/china_cns_8_2019.pdf": "1e4cab0943dc66ba82bf50239163bf48be67801495ef3cb0e90004f0a5e9acac",
+    "data/raw/q2/iea_nea_cost_2010.pdf": "830e0e9f116d40462d94571d8772a1803c53859c255c224ac0b0d7da9a823ac0",
+    "data/raw/q2/irena_cost_2012.pdf": "44a97e22a705d1d4795b7aa911328b7d7eaf46a8c273918ea15bcd7974f97e48",
+    "data/raw/q2/irena_cost_2014.pdf": "44a322c00349c74cac94a890ccefc334cc300053e94ac03022a9507cf84d1b37",
+    "data/raw/q2/irena_remap_china_2014.pdf": "5dd5f991adcbb14a4ebf36d1c26200a359ccf5ccd9991d83edf7f81df98a30bf",
+    "data/raw/q2/nbs_2016_energy_definitions.html": "7d167fa3bea83c9223246ce984138874d5d061a32e9694fb28ed1c852d092494",
+    "data/raw/q2/nbs_energy_faq_20231009.html": "fbec9ef9a49821afa38219577d35655c14d466777cf6c03a96fc6942286d2cbe",
+    "data/raw/q2/nea_nuclear_2014_qa.html": "b2270e467bdb636c12d65ad6ab40bc99a3494be63d416a9e0e70679ad8c8e4fa",
+    "data/raw/q2/nea_power_2014_review.html": "fc18bb249596948c7af5cc1d0bc8826646affff76955614592ab9f143babd10d",
+    "data/raw/q2/nnsa_annual_2014.pdf": "d834ac16ddc2f623a3c435a0b9b3770033c65694b1debcde7461b37b7e0e478d",
+    "data/raw/q2/wdi_us_gdp_deflator_2008_2014.json": "e850330ba82805e4f34a548eb53f7b691b4bc75a639f416c0ce3411f1dd89962",
+    "data/raw/q2/wri_china_energy_guide_2013_v21.pdf": "d745b096ad6a76f2ddf0a21ccafeefb898149de8c70744fe7e88bbc16f803497",
+    "outputs/q2/historical_candidate_v10/training_selection.json": "3cf70f668c146aac84fac4e4b48b464e439289d137c885e2877a40d45929b4e6",
+    "outputs/q2/historical_candidate_v3/training_selection.json": "7812072ef21d1b8a3d4db523f70901a40ca42e2331d0539736893ba10beeccd6",
+    "outputs/q2/historical_candidate_v4/training_selection.json": "d487c26f457d9fd71ff009c90f50180abe4d5889d2c3bf0015b24bbf70c1dfa0",
+    "outputs/q2/historical_candidate_v5/training_selection.json": "23d49b67167cd9296fcb2bbbf5f0cdeb05dbb785cbccc7d19d6f715b852fac9f",
+    "outputs/q2/historical_candidate_v6/training_selection.json": "ba044694d2e9f10ada0e0ae8db1e18b57f644ad7ba0ada5581181c5e5228a84f",
+    "outputs/q2/historical_candidate_v7/training_selection.json": "e21d3c7cf6ebd65af2c1bd82b053d73cbe44d095982d42b84b70b328fff5d9db",
+    "outputs/q2/historical_candidate_v8/training_selection.json": "9334545f290b37375de05099c00513483d5a8d93b91242648336011d3c436759",
+    "outputs/q2/historical_candidate_v9/training_trials.json": "250d8808636026a399549fedfde21209291573256d146d0a6c5a23e724fd6c89",
+    "outputs/q2/nominal_policy_episode/summary.json": "44e998c04170aba7ec9437fc1f44661a9058c95950b4d8ef15b4449f11349a76",
+    "scripts/run_q2_deployment_ablation.py": "5beb9be9c97a04c6fdef6972958706bba4d70656cdc79fb51fc1a746ecd22820",
+    "scripts/run_q2_historical_candidate.py": "2413adff86d25a48fda7824110120b7b596761269ae6990456a252b92f65c91a",
+    "scripts/run_q2_joint_response.py": "bc99e717bca45a7ac21cdaaec70df9f98da69c57a7a3a5c5980d3fc477aa6903",
+    "scripts/run_q2_solar_ablation.py": "e254f80194d93f975a200666294b58ce243d8e2ce7853b58e116e5de9b2519af",
+    "src/energy_model/__init__.py": "6918004f3238cce27b61c55a1423d9eaad5dc7028b711d138ba10db47d91ecbe",
+    "src/energy_model/q2/__init__.py": "c7937e638a6e8d5f2a80d2d84fae8b9aa1c7769d5511278a5c36862abe113208",
+    "src/energy_model/q2/annual.py": "3b3788ee5332bf5d1b758cded1a9ce5445d54e57065fb74386466d286ec3d94a",
+    "src/energy_model/q2/approvals.py": "0e6cf2f7903e76d8490c52daed1648d407e44dcf3562e674ee2eaa6496e969c9",
+    "src/energy_model/q2/contracts.py": "ac00ba2450fc0ff01060ef846b700c0f5ed9e481acb9a6577aa067a39a155ee2",
+    "src/energy_model/q2/demand.py": "7584277e1dcc87f815f090b3506ff3f4a00660815f5cef006cec47d59a9f0fc1",
+    "src/energy_model/q2/deployment.py": "2ec6fe0a88a43bb1c1ae0284c6e6f6bf1e768609c0a3894f13dc7046a67e33f7",
+    "src/energy_model/q2/experiments.py": "b6432f11758893710dbe20296657313eeb5c70238978f774604513453ff4eb8f",
+    "src/energy_model/q2/finance.py": "6724e4a9a37411cc12565fdb36086bca37de49dc1f245b5aec4548a64a39e22e",
+    "src/energy_model/q2/io.py": "447dea3d010937f7db2975605dbc0551831889864064372116a631a4f89e9b32",
+    "src/energy_model/q2/lifecycle.py": "77c1908aa1cca437f72674b3ac88873206f07188f1e3eae6d2f8504aec86c403",
+    "src/energy_model/q2/operations.py": "95b0999dfdcb57b46046178c93c7a07facd7a16a1da4f0407bd93e1658bd2bb2",
+    "src/energy_model/q2/quality.py": "a1176bc537f7bbddcc664ed697ac9bbac8f8f347097a5650e06cd1f978cd370d",
+    "src/energy_model/q2/targets.py": "2e67cd5f0996f4e1a20c836ecc2a300f48ffdddbd058f620f7312634f72ce064",
+    "workflow/q2_candidates/v10/acceptance.json": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8",
+    "workflow/q2_candidates/v10/assumptions.json": "081548d542cd6f04de72a08d9947307ee9b22fa82aca11a67f71a29d865720b8",
+    "workflow/q2_candidates/v10/definitions.json": "30d62bcfe498137089a55826fef5ee3aa3218cfdebcceca7618260cc681bdf64",
+    "workflow/q2_candidates/v10/experiment.json": "392aea8c233b562771f5bb4875377f3f2bd8a9dd70d7b553060f745bca356381",
+    "workflow/q2_candidates/v10/initialization.json": "7349fb83e5b6bf7a0f456da57d99cada3b46f3ae53c4c9efddd2cc2102261f04",
+    "workflow/q2_candidates/v10/manifest.json": "af7533e51f622db9d1c932c9fbe73096cec1529bc92696fd416ac6cedfa7b192",
+    "workflow/q2_candidates/v10/model.json": "d1d59e80680de463da80a8f14cef06c45a3f66445bdcd39880754733877683e8",
+    "workflow/q2_candidates/v10/observations.json": "214aec6b74d770d609e1989a4bd619eb82e32c6d77aff692d57ba22fc136ce28",
+    "workflow/q2_candidates/v10/structural_models.json": "314af958cd92237fee7a1424822a65f2b5fe7ee28b54df4050eb5dd368709d84",
+    "workflow/q2_candidates/v12_joint_response.json": "9234146cf9a8a9cb020ebd231cecee2d9f9491c75f90eddf57b4d69de97dcd71",
+    "workflow/q2_candidates/v4/acceptance.json": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8",
+    "workflow/q2_candidates/v4/assumptions.json": "675bd00495ba5277942ccbf70378530dda133840e8464cc7aa4d81beae677570",
+    "workflow/q2_candidates/v4/definitions.json": "30d62bcfe498137089a55826fef5ee3aa3218cfdebcceca7618260cc681bdf64",
+    "workflow/q2_candidates/v4/experiment.json": "633c650fc155425ccdec9f7a7ea3f0174670004ddd459fc4a4898a02f7727136",
+    "workflow/q2_candidates/v4/initialization.json": "60e15f01b13000e0938d4db038d533641a29bed372b03cf7ee0d77d99abc920b",
+    "workflow/q2_candidates/v4/manifest.json": "ef5cc5d33ddf6edb4b52bc549ff95bea04c46e3309075defbf81d00f35ccaa10",
+    "workflow/q2_candidates/v4/model.json": "87e96057b183e0a912b0fbdf4add4439f1a79706fa78fbd63259a61123a637be",
+    "workflow/q2_candidates/v4/observations.json": "214aec6b74d770d609e1989a4bd619eb82e32c6d77aff692d57ba22fc136ce28",
+    "workflow/q2_candidates/v4/structural_models.json": "b5d86f8ab5de212570452059b6b5a460f0f3cce9e60a86160679d32abd93ced9",
+    "workflow/q2_candidates/v5/acceptance.json": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8",
+    "workflow/q2_candidates/v5/assumptions.json": "9760d38421df41737df1c6a72328fac69fd5edbe839fd60ac2df6f5c92349151",
+    "workflow/q2_candidates/v5/definitions.json": "30d62bcfe498137089a55826fef5ee3aa3218cfdebcceca7618260cc681bdf64",
+    "workflow/q2_candidates/v5/experiment.json": "1d47cd051725c81b99c2956ce93fbae3cbf03972dc389a68415e11b488b18dd5",
+    "workflow/q2_candidates/v5/initialization.json": "7eb0c355179615e2dbbd41719fa6607e3bf3af93ce3ea18655a00f09eee8f44b",
+    "workflow/q2_candidates/v5/manifest.json": "b65d159b2a276fbbd829c07eae1d5a29574700f3b4a31407289e9806239e0d13",
+    "workflow/q2_candidates/v5/model.json": "4de86c7f5c79436be620d2d476ed6c1d9664bc52e37764c1214865429759d9bd",
+    "workflow/q2_candidates/v5/observations.json": "214aec6b74d770d609e1989a4bd619eb82e32c6d77aff692d57ba22fc136ce28",
+    "workflow/q2_candidates/v5/structural_models.json": "5aabe340be81cb53321443d9bb17134e3a4e12d03a5e5fc82d948d378555242b",
+    "workflow/q2_candidates/v6/acceptance.json": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8",
+    "workflow/q2_candidates/v6/assumptions.json": "e2a10c63c46f0a996e00fde0ad3bce65ede11c2f857ffc3ea5e0259b1b18e7b5",
+    "workflow/q2_candidates/v6/definitions.json": "30d62bcfe498137089a55826fef5ee3aa3218cfdebcceca7618260cc681bdf64",
+    "workflow/q2_candidates/v6/experiment.json": "ac012d6819bb16d9d7d85302494d0251c10c8ed3c8f6fba3bbeb786ec94a8ffd",
+    "workflow/q2_candidates/v6/initialization.json": "5b455ce196fde246183d196e821de6e5420fd9fb3a6c6015ea065c64e63a12de",
+    "workflow/q2_candidates/v6/manifest.json": "356ab84f8b5bdc57bd73933f9b4b7bb2392c812171c0f1968e0485289b459068",
+    "workflow/q2_candidates/v6/model.json": "a8a7cec0a7d9bd7b8b599254183d2be1b81a4bfb29302af0f7acdd82a7559072",
+    "workflow/q2_candidates/v6/observations.json": "214aec6b74d770d609e1989a4bd619eb82e32c6d77aff692d57ba22fc136ce28",
+    "workflow/q2_candidates/v6/structural_models.json": "062f3204b34714ab540a3f5e33d32450964a849758d12cde2c50722aee7b52fd",
+    "workflow/q2_candidates/v6_sensitivity.json": "b9b7fcad2b038af4e1db7fb01738b01c79322de887cd890e9eeae82dd70f5bbc",
+    "workflow/q2_candidates/v7/acceptance.json": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8",
+    "workflow/q2_candidates/v7/assumptions.json": "bb3965175c52f04934c2ac11a0492181b3290ec3b2c28dc6d6290d7d63f407ea",
+    "workflow/q2_candidates/v7/definitions.json": "30d62bcfe498137089a55826fef5ee3aa3218cfdebcceca7618260cc681bdf64",
+    "workflow/q2_candidates/v7/experiment.json": "7934f2758d3e8883573a1e2cd2fff9cf7477a53345e434e7f24ae99641fd4da3",
+    "workflow/q2_candidates/v7/initialization.json": "d8f2f07b44d2a039e218dfde0b5b9bab66a258b361d94c87eeac2dd13b009188",
+    "workflow/q2_candidates/v7/manifest.json": "53d5d6a42c6e67caa2c8380ff8e2f9b660a163540143040ce2bb2cb930762200",
+    "workflow/q2_candidates/v7/model.json": "a8a7cec0a7d9bd7b8b599254183d2be1b81a4bfb29302af0f7acdd82a7559072",
+    "workflow/q2_candidates/v7/observations.json": "214aec6b74d770d609e1989a4bd619eb82e32c6d77aff692d57ba22fc136ce28",
+    "workflow/q2_candidates/v7/structural_models.json": "8442c19fc81fb96f710464503447c1b7860b8b550800918ef5f70605317e2ecd",
+    "workflow/q2_candidates/v8/acceptance.json": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8",
+    "workflow/q2_candidates/v8/assumptions.json": "cea5e75ba710bca8d368357db0f296be671de5acc79d779953adde83b460d616",
+    "workflow/q2_candidates/v8/definitions.json": "30d62bcfe498137089a55826fef5ee3aa3218cfdebcceca7618260cc681bdf64",
+    "workflow/q2_candidates/v8/experiment.json": "85bc46b974943162cfac1bc347b82dd05a46c39bd8d8052ec0b363a918b4fa0f",
+    "workflow/q2_candidates/v8/initialization.json": "53dc297672a391f62dad3dad8677fa7ea05ed3ed2cc0fc94ef96c69741b1b0d1",
+    "workflow/q2_candidates/v8/manifest.json": "2dbc5636a662f038fb1cd58fbfa50b04d76f41aa495eec459287f6d6310dae82",
+    "workflow/q2_candidates/v8/model.json": "d1d59e80680de463da80a8f14cef06c45a3f66445bdcd39880754733877683e8",
+    "workflow/q2_candidates/v8/observations.json": "214aec6b74d770d609e1989a4bd619eb82e32c6d77aff692d57ba22fc136ce28",
+    "workflow/q2_candidates/v8/structural_models.json": "881297099a73fcbc46e040d4ae794d6efc835d4955548414006cd7f26cbf146f",
+    "workflow/q2_candidates/v9/acceptance.json": "4b7c0acadd4921e5013d276681258ebbb75fd0eeaab74699620999d0545546c8",
+    "workflow/q2_candidates/v9/assumptions.json": "ac842f1344b2be8a1ef4f612b56fbe91d762587f03c685c0e9fa0123bc585264",
+    "workflow/q2_candidates/v9/definitions.json": "30d62bcfe498137089a55826fef5ee3aa3218cfdebcceca7618260cc681bdf64",
+    "workflow/q2_candidates/v9/experiment.json": "c3a90cc4cdd6673f9fdf1d525689a41de931be7b814ad41bbae94d66d763c0ab",
+    "workflow/q2_candidates/v9/initialization.json": "8d66adcdce879dd310ff02551abe387769283cf2ffbfed551989204178d9f50c",
+    "workflow/q2_candidates/v9/manifest.json": "c6c03181a7da1927d5922b988fabf57688204c495552a47b8eab0a3b9f842cbf",
+    "workflow/q2_candidates/v9/model.json": "d1d59e80680de463da80a8f14cef06c45a3f66445bdcd39880754733877683e8",
+    "workflow/q2_candidates/v9/observations.json": "214aec6b74d770d609e1989a4bd619eb82e32c6d77aff692d57ba22fc136ce28",
+    "workflow/q2_candidates/v9/structural_models.json": "b7a1b360ad33deddade076c27a0921418ead9fcde6e3807fcb882c46643c854c"
+  },
+  "runs": [
+    {
+      "environment": "clean",
+      "versions": {
+        "python": "3.13.9",
+        "packages": {
+          "mesa": "3.3.1",
+          "numpy": "2.3.5",
+          "scipy": "1.16.3",
+          "matplotlib": "3.10.6",
+          "pillow": "13.0.0"
+        }
+      },
+      "exit_code": 0,
+      "comparisons": [
+        {
+          "file": "attempt.json",
+          "sha256": "e9c3ea316ecef08fb304384850105b103295a3dc346f78489e29882614dcda6f",
+          "byte_identical": true
+        },
+        {
+          "file": "constraint_usage.csv",
+          "sha256": "de8b2848ccb01a1815631ddb9bf5b698d1167224257abe2eacb8ad02da0a3d0d",
+          "byte_identical": true
+        },
+        {
+          "file": "historical_fit.png",
+          "sha256": "1c5d8e8f4afa3f125567fc622baf7c7560f306ca2a053efd56aa8044adc8e1c0",
+          "byte_identical": true
+        },
+        {
+          "file": "historical_fit.svg",
+          "sha256": "80f49d10c31df080df559ad4c9e2ec8af4fa1a2fdbe359f0e1cc27f3dad1fb1a",
+          "byte_identical": true
+        },
+        {
+          "file": "historical_quality.json",
+          "sha256": "6e4b654fb22d25f51b79724f6f3413ec2231f6eb440b212713aa7e09f408732e",
+          "byte_identical": true
+        },
+        {
+          "file": "history_baselines.csv",
+          "sha256": "084ed5c65bd72b1b5733dc562a9c66866910782f8f96cf61e428fd725047d298",
+          "byte_identical": true
+        },
+        {
+          "file": "history_fit.csv",
+          "sha256": "3468a0f82eb8376b232d24630b96267db78282c354a0e4f1d8bd39bb3ed04c1c",
+          "byte_identical": true
+        },
+        {
+          "file": "metrics.csv",
+          "sha256": "123ca0a579adc202d7b53792cf15e7ce642c4d9ccb1ac18530d3176fc65820bb",
+          "byte_identical": true
+        },
+        {
+          "file": "optimizer_status.json",
+          "sha256": "ed7066f09dc0a598e3efc7dde78b683a3ff707b9b87aa1f77e2427c73da7f09d",
+          "byte_identical": true
+        },
+        {
+          "file": "result.json",
+          "sha256": "6ae1a1fd06466b4355f50c76855c99ecfd3fdab71d3ef72d9f00da70c8b28eb5",
+          "byte_identical": true
+        },
+        {
+          "file": "run_manifest.json",
+          "sha256": "82e19c6b13c102cc9ac3bcf785e2cad64d6cdbdd5b12962bdbbcfe1ec9a9d432",
+          "byte_identical": true
+        },
+        {
+          "file": "selected_model.json",
+          "sha256": "022d14840a8ac2991508f9357e4d4af7068cd9bc9a1717847b16f58eda462edb",
+          "byte_identical": true
+        },
+        {
+          "file": "summary.json",
+          "sha256": "e9c3ea316ecef08fb304384850105b103295a3dc346f78489e29882614dcda6f",
+          "byte_identical": true
+        },
+        {
+          "file": "technology_activity.csv",
+          "sha256": "742f51d426edab3d4213d5234b9e322717bdc190ef8a482054eed7512597ef07",
+          "byte_identical": true
+        },
+        {
+          "file": "training_selection.json",
+          "sha256": "77cefbb2f0ff85660ed88e44e551034c1ec5c2f39ab2d5c1c35a61fa16a57253",
+          "byte_identical": true
+        },
+        {
+          "file": "training_trials.jsonl",
+          "sha256": "ac9a670347285e5281548b4e3fe38e24cc025d9f45c8eaa8bd46c9c45b88860a",
+          "byte_identical": true
+        }
+      ],
+      "numeric_comparisons": {
+        "summary.json": {
+          "numeric_cells": 9,
+          "different_numeric_cells": 0,
+          "maximum_absolute_difference": 0.0,
+          "maximum_scaled_difference": 0.0,
+          "structural_or_categorical_differences": []
+        },
+        "selected_model.json": {
+          "numeric_cells": 1126,
+          "different_numeric_cells": 0,
+          "maximum_absolute_difference": 0.0,
+          "maximum_scaled_difference": 0.0,
+          "structural_or_categorical_differences": []
+        },
+        "result.json": {
+          "numeric_cells": 23206,
+          "different_numeric_cells": 0,
+          "maximum_absolute_difference": 0.0,
+          "maximum_scaled_difference": 0.0,
+          "structural_or_categorical_differences": []
+        },
+        "historical_quality.json": {
+          "numeric_cells": 62,
+          "different_numeric_cells": 0,
+          "maximum_absolute_difference": 0.0,
+          "maximum_scaled_difference": 0.0,
+          "structural_or_categorical_differences": []
+        },
+        "training_selection.json": {
+          "numeric_cells": 58,
+          "different_numeric_cells": 0,
+          "maximum_absolute_difference": 0.0,
+          "maximum_scaled_difference": 0.0,
+          "structural_or_categorical_differences": []
+        },
+        "optimizer_status.json": {
+          "numeric_cells": 72,
+          "different_numeric_cells": 0,
+          "maximum_absolute_difference": 0.0,
+          "maximum_scaled_difference": 0.0,
+          "structural_or_categorical_differences": []
+        },
+        "training_trials.jsonl": {
+          "numeric_cells": 1492,
+          "different_numeric_cells": 0,
+          "maximum_absolute_difference": 0.0,
+          "maximum_scaled_difference": 0.0,
+          "structural_or_categorical_differences": []
+        },
+        "metrics.csv": {
+          "numeric_cells": 88,
+          "different_numeric_cells": 0,
+          "maximum_absolute_difference": 0.0,
+          "maximum_scaled_difference": 0.0,
+          "structural_or_categorical_differences": []
+        }
+      },
+      "same_selected_case_rule_trial_and_quality_decisions": true,
+      "byte_identical_artifacts": 16
+    },
+    {
+      "environment": "alternate",
+      "versions": {
+        "python": "3.13.9",
+        "packages": {
+          "mesa": "3.3.1",
+          "numpy": "2.3.5",
+          "scipy": "1.16.3",
+          "matplotlib": "3.10.6",
+          "pillow": "12.0.0"
+        }
+      },
+      "exit_code": 0,
+      "comparisons": [
+        {
+          "file": "attempt.json",
+          "sha256": "3d08ff021ed18e820d5ea363ac315330714b128f9fe160a32962b1a9def5a421",
+          "byte_identical": false
+        },
+        {
+          "file": "constraint_usage.csv",
+          "sha256": "7937beb77e5ab23097bebaa9a2d5b720ebfc46e3c1e8cdc8c9aa098f6c4d5097",
+          "byte_identical": false
+        },
+        {
+          "file": "historical_fit.png",
+          "sha256": "20ffa0bda7010d9073e3470f7a7271d81ca8df1aa27b2f1bfc44411120e7858a",
+          "byte_identical": false
+        },
+        {
+          "file": "historical_fit.svg",
+          "sha256": "e86a577074bf05a82c15675c6261ddc6c72e6c04b4c1fe5e1a8c1f2aa688d477",
+          "byte_identical": false
+        },
+        {
+          "file": "historical_quality.json",
+          "sha256": "e4867d803aaf2796f434636f5eea9bd6acd8a4398445f8b85759576ef0a32141",
+          "byte_identical": false
+        },
+        {
+          "file": "history_baselines.csv",
+          "sha256": "084ed5c65bd72b1b5733dc562a9c66866910782f8f96cf61e428fd725047d298",
+          "byte_identical": true
+        },
+        {
+          "file": "history_fit.csv",
+          "sha256": "2fa33e4fb057aadd196fae362771ad809b29b0201bdd0e2c731aa60575aabb85",
+          "byte_identical": false
+        },
+        {
+          "file": "metrics.csv",
+          "sha256": "147e74953282736f801cd1130b7ed4a3e2e975e1d508f0d2b47e323c2f67c6ce",
+          "byte_identical": false
+        },
+        {
+          "file": "optimizer_status.json",
+          "sha256": "2463c3d7c8383407894f03e4b5f14790032f30d5a3a499eb3b25e8848b422b53",
+          "byte_identical": false
+        },
+        {
+          "file": "result.json",
+          "sha256": "b82f53298d22419670ee1b30b364981c0bb13dc46979d6d1af394240a4283558",
+          "byte_identical": false
+        },
+        {
+          "file": "run_manifest.json",
+          "sha256": "880c65a3c6a669cd26107ceb78ef90e7c50b3ab08d34dff66a19bf62d8b67ff5",
+          "byte_identical": false
+        },
+        {
+          "file": "selected_model.json",
+          "sha256": "e980c4aa80b9fd1746940b7348aeb6f72886fba5210702d4539e9e2767b28345",
+          "byte_identical": false
+        },
+        {
+          "file": "summary.json",
+          "sha256": "3d08ff021ed18e820d5ea363ac315330714b128f9fe160a32962b1a9def5a421",
+          "byte_identical": false
+        },
+        {
+          "file": "technology_activity.csv",
+          "sha256": "e87be8bb8eb633750c96b93e047306834b06191d73f315ca45250ba002fae1bf",
+          "byte_identical": false
+        },
+        {
+          "file": "training_selection.json",
+          "sha256": "621eaf8b8c53b642a627f63fe80242a145870c66935e476f12743d4087a80ca1",
+          "byte_identical": false
+        },
+        {
+          "file": "training_trials.jsonl",
+          "sha256": "a64a261d198103c3da7d35465773ce16fea65d52bff04e313125bdc8dff4a3fc",
+          "byte_identical": false
+        }
+      ],
+      "numeric_comparisons": {
+        "summary.json": {
+          "numeric_cells": 9,
+          "different_numeric_cells": 5,
+          "maximum_absolute_difference": 5.45963274589667e-12,
+          "maximum_scaled_difference": 5.45963274589667e-12,
+          "structural_or_categorical_differences": []
+        },
+        "selected_model.json": {
+          "numeric_cells": 1126,
+          "different_numeric_cells": 4,
+          "maximum_absolute_difference": 5.45963274589667e-12,
+          "maximum_scaled_difference": 5.45963274589667e-12,
+          "structural_or_categorical_differences": []
+        },
+        "result.json": {
+          "numeric_cells": 23206,
+          "different_numeric_cells": 1350,
+          "maximum_absolute_difference": 0.02611541748046875,
+          "maximum_scaled_difference": 4.76837158203125e-07,
+          "structural_or_categorical_differences": []
+        },
+        "historical_quality.json": {
+          "numeric_cells": 62,
+          "different_numeric_cells": 31,
+          "maximum_absolute_difference": 2.471497282385826e-07,
+          "maximum_scaled_difference": 3.954378215829501e-11,
+          "structural_or_categorical_differences": []
+        },
+        "training_selection.json": {
+          "numeric_cells": 58,
+          "different_numeric_cells": 30,
+          "maximum_absolute_difference": 7.916556299392141e-12,
+          "maximum_scaled_difference": 7.916556299392141e-12,
+          "structural_or_categorical_differences": []
+        },
+        "optimizer_status.json": {
+          "numeric_cells": 72,
+          "different_numeric_cells": 25,
+          "maximum_absolute_difference": 7.916556299392141e-12,
+          "maximum_scaled_difference": 7.916556299392141e-12,
+          "structural_or_categorical_differences": []
+        },
+        "training_trials.jsonl": {
+          "numeric_cells": 1492,
+          "different_numeric_cells": 844,
+          "maximum_absolute_difference": 8.55859827453287e-12,
+          "maximum_scaled_difference": 8.55859827453287e-12,
+          "structural_or_categorical_differences": []
+        },
+        "metrics.csv": {
+          "numeric_cells": 88,
+          "different_numeric_cells": 69,
+          "maximum_absolute_difference": 3.207242116332054e-07,
+          "maximum_scaled_difference": 5.394826679920147e-13,
+          "structural_or_categorical_differences": []
+        }
+      },
+      "same_selected_case_rule_trial_and_quality_decisions": true,
+      "byte_identical_artifacts": 1
+    }
+  ],
+  "fixed_environment_byte_reproduction_passed": true,
+  "alternate_environment_byte_reproduction_passed": false,
+  "interpretation": "Fixed dependency environment reproduces all 16 files exactly. Alternate build has floating-point and renderer differences; measured drift is reported, not called byte-identical.",
+  "previous_strict_failure": "outputs/q2/iteration12_reproduction.first-attempt.json",
+  "national_acceptance": false
+}

@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "review_date": "2026-10-19",
+  "reviewer": "yx_assisted_local_review",
+  "team_approval": false,
+  "decision": "scoped_2015_construction_permit_identity_count_reconciled",
+  "source_path": "data/raw/q2/nnsa_annual_2015.pdf",
+  "source_sha256": "9d6530386eea51b1d72b3f4c631f87a96308926b6b9f4e8412bf42a44cdfee9a",
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/nnsa_annual_2015.pdf",
+      "sha256": "9d6530386eea51b1d72b3f4c631f87a96308926b6b9f4e8412bf42a44cdfee9a"
+    },
+    {
+      "path": "data/catalog/q2_nuclear_permit_2015_transcription.json",
+      "sha256": "ef1c80064d92aaf91c6cf1e8a5cd3da8e560df64af4f52422dc31c6e09dde27d"
+    },
+    {
+      "path": "data/catalog/q2_nuclear_permit_2015_review.json",
+      "sha256": "81174438426d3033832f6c0f18f446d97915d4315045605f4bc0f4e32fc10fd4"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "NNSA_ANNUAL_2015",
+      "record_sha256": "574456929285cab9f94bb3427f4a7fc3be1bb572d6d72ed5252222284c529ddf"
+    }
+  ],
+  "records": [
+    {
+      "id": "nnsa2015_58",
+      "plant": "辽宁红沿河核电厂",
+      "units": [
+        5,
+        6
+      ],
+      "approval_date": "2015-03-13",
+      "document": "国核安发〔2015〕58号",
+      "title": "关于颁发辽宁红沿河核电厂5、6号机组建造许可证的通知",
+      "physical_page": 23,
+      "printed_page": 21,
+      "table": 35,
+      "capacity_MW": null,
+      "valid_through": null,
+      "operating_permission": null,
+      "actual_commissioning_date": null
+    },
+    {
+      "id": "nnsa2015_95",
+      "plant": "福清核电厂",
+      "units": [
+        5,
+        6
+      ],
+      "approval_date": "2015-05-05",
+      "document": "国核安发〔2015〕95号",
+      "title": "关于颁发福清核电厂5、6号机组建造许可证的通知",
+      "physical_page": 29,
+      "printed_page": 27,
+      "table": "44 continued",
+      "capacity_MW": null,
+      "valid_through": null,
+      "operating_permission": null,
+      "actual_commissioning_date": null
+    },
+    {
+      "id": "nnsa2015_274",
+      "plant": "防城港核电厂",
+      "units": [
+        3,
+        4
+      ],
+      "approval_date": "2015-12-23",
+      "document": "国核安发〔2015〕274号",
+      "title": "关于颁发防城港核电厂3、4号机组建造许可证的通知",
+      "physical_page": 39,
+      "printed_page": 37,
+      "table": "64 continued",
+      "capacity_MW": null,
+      "valid_through": null,
+      "operating_permission": null,
+      "actual_commissioning_date": null
+    },
+    {
+      "id": "nnsa2015_tianwan56_chronology",
+      "plant": "田湾核电厂",
+      "units": [
+        5,
+        6
+      ],
+      "approval_date": "2015-12-23",
+      "document": null,
+      "title": "2015年12月23日，颁发田湾核电厂5、6号机组建造许可证。",
+      "physical_page": 96,
+      "printed_page": 94,
+      "section": "十七、大事记",
+      "capacity_MW": null,
+      "valid_through": null,
+      "operating_permission": null,
+      "actual_commissioning_date": null
+    }
+  ],
+  "reported_year_total_units": 8,
+  "year_total_locator": {
+    "physical_page": 4,
+    "printed_page": 2,
+    "section": "一、综述／强化监管"
+  },
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "PDF physical4/printed2 visually read: explicitly批准了8台核电机组的建造许可. Distinct from6units firstfuel loading and12units site-approval applications."
+    },
+    {
+      "passed": true,
+      "evidence": "PDF physical96/printed94 visually read:2015-12-23 issuedTianwan5/6constructionpermits. This is an affirmative issuance record; prior physical22consultation letter remains excluded."
+    },
+    {
+      "passed": true,
+      "evidence": "Four named plant/unit pairs are disjoint and total8units, matching same-report2015annual count. Prior three dated approvals remain unchanged. No capacity, operatingpermit, expiry or actualcommissioning inferred."
+    }
+  ],
+  "allowed_uses": [
+    "2015 retrospective issued-construction-permit unit identities and dates reconciled to same-reportannual count."
+  ],
+  "prohibited_uses": [
+    "Infer zero approvals in other unreviewed years.",
+    "Turn constructionpermission into operatingpermission.",
+    "Assign generic unitcapacity or commissiondate as an observation.",
+    "Treat retrospective report release as real-time eventpublication evidence."
+  ],
+  "unresolved": [
+    "Electriccapacities and ratingbasis of8units.",
+    "Originalnotice forTianwan5/6documentnumber/publication.",
+    "Permit calendar forother years and operatingpermission."
+  ],
+  "model_admission": false,
+  "supersedes": "Expands prior3positive records/6units; old review remains frozen."
+}

@@ -1,0 +1,46 @@
+﻿id,value,unit,basis,year,geography,source,vintage,locator,normalized_value,normalized_unit
+NBS:total,334922,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nbs_2025_C09-15.jpg,NBS_2025_C09-15,2024 row; total,3349220.0,MW
+NBS:thermal,144462,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nbs_2025_C09-15.jpg,NBS_2025_C09-15,2024 row; thermal,1444620.0,MW
+NBS:hydro,43552,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nbs_2025_C09-15.jpg,NBS_2025_C09-15,2024 row; hydro,435520.0,MW
+NBS:nuclear,6083,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nbs_2025_C09-15.jpg,NBS_2025_C09-15,2024 row; nuclear,60830.0,MW
+NBS:wind,52078,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nbs_2025_C09-15.jpg,NBS_2025_C09-15,2024 row; wind,520780.0,MW
+NBS:solar,88742,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nbs_2025_C09-15.jpg,NBS_2025_C09-15,2024 row; solar,887420.0,MW
+NBS:other,5,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nbs_2025_C09-15.jpg,NBS_2025_C09-15,2024 row; other,50.0,MW
+NEA:total,334862,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/official/S17_page_capture.txt,NEA_2025-01-21,L14-L19; total,3348620.0,MW
+NEA:thermal,144445,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/official/S17_page_capture.txt,NEA_2025-01-21,L14-L19; thermal,1444450.0,MW
+NEA:hydro,43595,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/official/S17_page_capture.txt,NEA_2025-01-21,L14-L19; hydro,435950.0,MW
+NEA:nuclear,6083,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/official/S17_page_capture.txt,NEA_2025-01-21,L14-L19; nuclear,60830.0,MW
+NEA:wind,52068,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/official/S17_page_capture.txt,NEA_2025-01-21,L14-L19; wind,520680.0,MW
+NEA:solar,88666,10^4 kW,year_end_nameplate,2024,China_mainland,data/raw/official/S17_page_capture.txt,NEA_2025-01-21,L14-L19; solar,886660.0,MW
+DEMAND:total,98521,10^8 kWh,annual_flow,2024,China_mainland,data/raw/official/S24_page_capture.txt,NEA_2025-01-20,L10; total,9852100000.0,MWh
+DEMAND:primary,1357,10^8 kWh,annual_flow,2024,China_mainland,data/raw/official/S24_page_capture.txt,NEA_2025-01-20,L10; primary,135700000.0,MWh
+DEMAND:secondary,63874,10^8 kWh,annual_flow,2024,China_mainland,data/raw/official/S24_page_capture.txt,NEA_2025-01-20,L10; secondary,6387400000.0,MWh
+DEMAND:tertiary,18348,10^8 kWh,annual_flow,2024,China_mainland,data/raw/official/S24_page_capture.txt,NEA_2025-01-20,L10; tertiary,1834800000.0,MWh
+DEMAND:household,14942,10^8 kWh,annual_flow,2024,China_mainland,data/raw/official/S24_page_capture.txt,NEA_2025-01-20,L10; household,1494200000.0,MWh
+RENEW:conventional_hydro_capacity,377.0,GW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nea_renewable_2024.html,NEA_2025-01-27,technology subsection; conventional_hydro_capacity,377000.0,MW
+RENEW:pumped_hydro_capacity,58.69,GW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nea_renewable_2024.html,NEA_2025-01-27,technology subsection; pumped_hydro_capacity,58690.0,MW
+RENEW:wind_capacity,521.0,GW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nea_renewable_2024.html,NEA_2025-01-27,technology subsection; wind_capacity,521000.0,MW
+RENEW:solar_PV_capacity,886.0,GW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nea_renewable_2024.html,NEA_2025-01-27,technology subsection; solar_PV_capacity,886000.0,MW
+RENEW:biomass_capacity,45.99,GW,year_end_nameplate,2024,China_mainland,data/raw/batch1_national/nea_renewable_2024.html,NEA_2025-01-27,technology subsection; biomass_capacity,45990.0,MW
+GENERATION:hydro,1423.9,TWh,annual_flow,2024,China_mainland,data/raw/batch1_national/nea_renewable_2024.html,NEA_2025-01-27,technology subsection; hydro,1423900000.0,MWh
+GENERATION:wind,991.6,TWh,annual_flow,2024,China_mainland,data/raw/batch1_national/nea_renewable_2024.html,NEA_2025-01-27,technology subsection; wind,991600000.0,MWh
+GENERATION:solar_PV,834.1,TWh,annual_flow,2024,China_mainland,data/raw/batch1_national/nea_renewable_2024.html,NEA_2025-01-27,technology subsection; solar_PV,834100000.0,MWh
+GENERATION:biomass,208.3,TWh,annual_flow,2024,China_mainland,data/raw/batch1_national/nea_renewable_2024.html,NEA_2025-01-27,technology subsection; biomass,208300000.0,MWh
+STORAGE:power,73.76,GW,year_end_nameplate,2024,China_mainland,data/raw/lb/base/reports/storage_2025.pdf,NEA_STORAGE_REPORT_2025,physical21/printed011 Figure1; 2024 power,73760.0,MW
+STORAGE:energy,168.2,GWh,year_end_nameplate,2024,China_mainland,data/raw/lb/base/reports/storage_2025.pdf,NEA_STORAGE_REPORT_2025,physical21/printed011 Figure1; 2024 energy,168200.0,MWh
+GAS:city,34.0,%,annual_use_share,2024,China_mainland,data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf,CHINA_GAS_REPORT_2025,physical10-11/printed5-6; city,0.34,fraction
+GAS:industrial,41.0,%,annual_use_share,2024,China_mainland,data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf,CHINA_GAS_REPORT_2025,physical10-11/printed5-6; industrial,0.41000000000000003,fraction
+GAS:power,18.0,%,annual_use_share,2024,China_mainland,data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf,CHINA_GAS_REPORT_2025,physical10-11/printed5-6; power,0.18,fraction
+GAS:chemical,7.0,%,annual_use_share,2024,China_mainland,data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf,CHINA_GAS_REPORT_2025,physical10-11/printed5-6; chemical,0.07,fraction
+RELIABILITY:thermal,999.0,GW,reporting_fleet_capacity,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; reporting fleet thermal,999000.0,MW
+RELIABILITY:hydro,283.0,GW,reporting_fleet_capacity,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; reporting fleet hydro,283000.0,MW
+RELIABILITY:nuclear,54.0,GW,reporting_fleet_capacity,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; reporting fleet nuclear,54000.0,MW
+RELIABILITY:wind,159.0,GW,reporting_fleet_capacity,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; reporting fleet wind,159000.0,MW
+RELIABILITY:solar,82.0,GW,reporting_fleet_capacity,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; reporting fleet solar,82000.0,MW
+RELIABILITY:coal,917.0,GW,reporting_fleet_capacity,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; reporting fleet coal,917000.0,MW
+RELIABILITY:gas,82.0,GW,reporting_fleet_capacity,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; reporting fleet gas,82000.0,MW
+COVERAGE:thermal,69.16,%,reporting_coverage,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; published coverage thermal,0.6916,fraction
+COVERAGE:hydro,67.14,%,reporting_coverage,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; published coverage hydro,0.6714,fraction
+COVERAGE:nuclear,94.89,%,reporting_coverage,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; published coverage nuclear,0.9489000000000001,fraction
+COVERAGE:wind,36.14,%,reporting_coverage,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; published coverage wind,0.3614,fraction
+COVERAGE:solar,13.46,%,reporting_coverage,2024,China_mainland,data/raw/lb/base/reports/power_reliability_2024.pdf,RELIABILITY_REPORT_2024,physical7/printed1; published coverage solar,0.13460000000000003,fraction

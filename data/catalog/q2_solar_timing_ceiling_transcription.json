@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "scope": "dated_solar_reference_not_national_admission",
+  "cost2014_publication": {
+    "source_id": "IRENA_COST_2014",
+    "physical_page": 1,
+    "published_month": "2015-01",
+    "model_decision_convention": "Annual end-of-year decision may use a report published that January; known_year2015. No use in2014, no asset before subsequent-year commissioning."
+  },
+  "resource_reference": {
+    "source_id": "IRENA_REMAP_CHINA_2014",
+    "physical_page": 59,
+    "printed_page": 47,
+    "table": "13",
+    "published_month": "2014-11",
+    "reported_underlying_source": "CNREC(2012)",
+    "geography": "China",
+    "unit": "GWe",
+    "utility_pv_technical_potential": 2200.0,
+    "rooftop_pv_technical_potential": 500.0,
+    "model_ceiling_MW": 2200000.0,
+    "model_mapping": "Conservative diagnostic bound for both modelled solar vintages together. Opening aggregate PV is counted against utility potential although its actual utility/rooftop split is unknown. Rooftop500GW is NOT added. This is a coarse mapping assumption, not empirical deployable/economic potential or a trajectory/target."
+  },
+  "earlier_cost_reference_not_used": {
+    "source_id": "IRENA_COST_2012",
+    "published_year": 2013,
+    "cost_physical_page": 20,
+    "cost_printed_page": 18,
+    "china_utility_installed_cost_estimate_USD_per_kW": 2160.0,
+    "cost_observation_year": 2012,
+    "text_underlying_source": "Photon Consulting(2012)",
+    "price_year": "Unqualified USD in paragraph; adjacent Figure2.2 explicitly2011USD. No silent assignment to2012USD or model price conversion.",
+    "cf_physical_page": 58,
+    "cf_printed_page": 56,
+    "china_utility_project_weighted_average_cf_approximate": 0.18,
+    "model_used": false,
+    "reason": "Reference enrichment only. No opening queue, observed national fleet CF, or price-year equivalence inferred."
+  }
+}

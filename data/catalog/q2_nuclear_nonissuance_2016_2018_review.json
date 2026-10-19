@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "review_date": "2026-10-19",
+  "reviewer": "yx_assisted_local_review",
+  "team_approval": false,
+  "decision": "scoped_realized_nuclear_nonissuance_2016_2018",
+  "model_admission": false,
+  "fingerprints": [
+    {
+      "path": "data/raw/q2/china_cns_8_2019.pdf",
+      "sha256": "1e4cab0943dc66ba82bf50239163bf48be67801495ef3cb0e90004f0a5e9acac"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "data/catalog/q2_sources.json",
+      "id": "CHINA_CNS8_2019",
+      "record_sha256": "25b3c313fc0712225121dc0c1f5e9ac89c0a60b62d28bdd36a4667c6ad055c1e"
+    }
+  ],
+  "physical_page": 41,
+  "printed_page": 36,
+  "section": "6.1 List of Existing NPPs",
+  "report_date": "2019-08",
+  "period": [
+    2016,
+    2018
+  ],
+  "reported_construction_permits_issued": 0,
+  "checks": [
+    {
+      "passed": true,
+      "evidence": "Cover physical1 visually checked:August2019; exact public release unknown."
+    },
+    {
+      "passed": true,
+      "evidence": "Physical41/printed36 visually read:2016-2018no construction permit issued; distinct14initial-fuel-loading permissions and15units put into operation. Zero is explicit, not inferred from absent search hits."
+    },
+    {
+      "passed": true,
+      "evidence": "Nonnegative issuance count ofzero over2016-2018 implieszero ineach ofthose3years. This does not implyzero construction work, fuel-loadingpermission or commissioning of alreadylicensed projects."
+    },
+    {
+      "passed": true,
+      "evidence": "Report45operating/11underconstruction classification differs from2018NNSA44commercial/12building. Do not splice these status counts or treat as independent confirmation; only explicitnonissuance statement is admitted here."
+    }
+  ],
+  "allowed_uses": [
+    "Conditional historical government-action replay: block new generic nuclear-build approvals only in2016,2017,2018. Preserve alreadylicensed initial projects."
+  ],
+  "prohibited_uses": [
+    "Claim actors foresaw three-year nonissuance before2016.",
+    "Call reportpublication2019 contemporaneous2016information.",
+    "Infer no issuedpermits outside2016-2018.",
+    "Treat applicationreview as issuance, or constructionpermit as operatingpermission.",
+    "Claim absence of all nuclearconstruction activity or stop existing projects."
+  ],
+  "mapping": {
+    "option": "nuclear_build",
+    "years": [
+      2016,
+      2017,
+      2018
+    ],
+    "annual_action": "reject_new_application_without_spending_or_queue_entry",
+    "information": "Realized year-endgovernment action conditioned on retrospective observations; not an ex-ante policy forecast. Firms retain unchanged valuation, costs and expected utilization."
+  },
+  "unresolved": [
+    "No2014/2015orpost2018full approval mapping.",
+    "Generic newbuild has not been replaced by discrete licensedunit projects.",
+    "Endogenous government policy and real-time expectations remain uncalibrated."
+  ]
+}

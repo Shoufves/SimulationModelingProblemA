@@ -1,0 +1,9 @@
+﻿check,value,reference,difference,unit,decision,detail
+operating_table_vs_body,6088.094,6088.094,0.0,10^4 kW,same_source_arithmetic_within_printed_rounding,Not independent validation
+construction_table_vs_body,3230.91,3230.9,0.01,10^4 kW,same_source_arithmetic_within_printed_rounding,Not independent validation
+2024_start_capacity,740.8,740.8,0.0,10^4 kW,same_source_arithmetic_match,6 construction rows; not a commissioning schedule
+operating_vs_nbs_2024,6088.094,6083.0,5.094,10^4 kW,unresolved_boundary_and_capacity_difference,Do not replace NBS6083 or rescale source units; cause not established
+source_identity:operating:48,,,,label,ambiguous_duplicate_source_label,防城港核电站 / 3号机组 / 华龙一号
+source_identity:operating:49,,,,label,ambiguous_duplicate_source_label,防城港核电站 / 3号机组 / 华龙一号
+source_identity:operating:56,,,,label,technology_context_required,石岛湾核电站 / 1号机组 / HTR-PM
+source_identity:construction:07,,,,label,technology_context_required,石岛湾核电站 / 1号机组 / 华龙一号
