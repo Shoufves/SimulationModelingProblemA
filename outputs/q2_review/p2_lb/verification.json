@@ -1,0 +1,330 @@
+{
+  "passed": true,
+  "status": "engineering_passed_national_blocked",
+  "q2_scientific_complete": false,
+  "checks": [
+    {
+      "name": "all_tests",
+      "passed": true,
+      "detail": "ndidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.\nQ2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.\n{\"status\": \"success_conditional_candidate\", \"elapsed_seconds\": 0.03313530000013998}\n{\"status\": \"success_conditional_candidate\", \"elapsed_seconds\": 0.034295099998416845}\n{\"passed\": false, \"status\": \"failed\", \"checks\": 0, \"error\": \"ValueError: injected audit failure\"}\n.......................................................................................................Q1 FAILED: Input hash mismatch: cost\n......................................Q1 FAILED: [Errno 2] No such file or directory: 'E:\\\\Team\\\\2026JM\\\\SimulationModelingProblemA\\\\tmp\\\\tests\\\\tmpn8g7l3qr\\\\missing.csv'\n............................................................................................................................................................\n----------------------------------------------------------------------\nRan 297 tests in 66.155s\n\nOK\n"
+    },
+    {
+      "name": "q2_tests_not_skipped",
+      "passed": true,
+      "detail": {
+        "tests": 297,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": true,
+        "seconds": 66.15541900000244,
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+      }
+    },
+    {
+      "name": "audit",
+      "passed": true,
+      "detail": "\": \"all_final_references_resolve\",\n      \"passed\": true,\n      \"detail\": {\n        \"count\": 118,\n        \"missing\": []\n      }\n    },\n    {\n      \"check\": \"final_reader_links_resolve\",\n      \"passed\": true,\n      \"detail\": []\n    },\n    {\n      \"check\": \"retained_python_syntax\",\n      \"passed\": true,\n      \"detail\": []\n    },\n    {\n      \"check\": \"unified_data_keys_unique\",\n      \"passed\": true,\n      \"detail\": 362\n    },\n    {\n      \"check\": \"unified_rows_trace_to_files\",\n      \"passed\": true,\n      \"detail\": 362\n    },\n    {\n      \"check\": \"scope_not_promoted\",\n      \"passed\": true,\n      \"detail\": \"formal admission still governed by model_inputs and evidence_reviews\"\n    },\n    {\n      \"check\": \"known_quarantine_preserved\",\n      \"passed\": true,\n      \"detail\": [\n        \"data/processed/lb/base/prices/worldbank_energy_annual_2000_latest.csv\",\n        \"data/processed/lb/base/prices/worldbank_energy_monthly_2000_latest.csv\",\n        \"data/processed/transmission_lines_candidate.csv\"\n      ]\n    },\n    {\n      \"check\": \"raw_exact_duplicates_removed\",\n      \"passed\": true,\n      \"detail\": []\n    }\n  ],\n  \"original_files\": 5846,\n  \"removed_files\": 4776,\n  \"removed_bytes\": 296840178\n}\n"
+    },
+    {
+      "name": "key_scan",
+      "passed": true,
+      "detail": "{\n  \"working_tree\": {\n    \"scope\": \"working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening\",\n    \"excluded_directories\": [\n      \".git\",\n      \"__pycache__\",\n      \"tmp\",\n      \"data/restricted\",\n      \"scripts/__pycache__\",\n      \"src/energy_model/__pycache__\",\n      \"tests/__pycache__\"\n    ],\n    \"pattern\": \"Google API key format only; not an exhaustive credential audit\",\n    \"passed\": true,\n    \"findings\": [],\n    \"errors\": [],\n    \"files_scanned\": 1858,\n    \"payloads_scanned\": 4532,\n    \"zip_members_scanned\": 2674\n  }\n}\n"
+    },
+    {
+      "name": "nine_original_subsets",
+      "passed": true,
+      "detail": "已生成 outputs/workflow/；提示词阶段 W2。\n结构检查通过。正式输入检查：通过。\n"
+    },
+    {
+      "name": "candidate_review",
+      "passed": true,
+      "detail": "{\"candidate_files\": 19, \"gcb_cells\": 140, \"coverage_groups\": 80}\n"
+    },
+    {
+      "name": "q1_regression",
+      "passed": true,
+      "detail": "{\"status\": \"success\", \"output\": \"E:\\\\Team\\\\2026JM\\\\SimulationModelingProblemA\\\\outputs\\\\q1\\\\q2_lb_regression\", \"counts\": {\"history\": 2176, \"indicators\": 212, \"regions\": 31}}\n"
+    },
+    {
+      "name": "q1_scientific_outputs_unchanged",
+      "passed": true,
+      "detail": [
+        "cost_sensitivity.svg",
+        "coverage.csv",
+        "demand_trends.svg",
+        "energy_assessment.csv",
+        "energy_roles.csv",
+        "gaps_and_conflicts.csv",
+        "history.csv",
+        "import_origins.csv",
+        "indicators.csv",
+        "model_handoff.csv",
+        "price_trends.svg",
+        "regional_comparison.csv",
+        "regional_shares.svg",
+        "renewable_regions.csv",
+        "report.md",
+        "static_balance.json",
+        "synergy_assessment.csv",
+        "technology_region_capacities.csv"
+      ]
+    },
+    {
+      "name": "national_expected_block",
+      "passed": true,
+      "detail": "{\"status\": \"blocked_national_inputs\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb.attempts/20261019T173506Z-db38ec9e\", \"q2_scientific_complete\": false, \"error\": \"National historical/current initialization and common scientific design not admitted; see gaps_and_conflicts.csv\"}\n"
+    },
+    {
+      "name": "national_status_honest",
+      "passed": true,
+      "detail": {
+        "run_id": "20261019T173506Z-db38ec9e",
+        "owner": "p2/lb",
+        "status": "blocked_national_inputs",
+        "output_valid_for_this_attempt": false,
+        "attempt_path": "outputs/q2/p2_lb.attempts/20261019T173506Z-db38ec9e",
+        "error": "National historical/current initialization and common scientific design not admitted; see gaps_and_conflicts.csv",
+        "manifest_sha256": "48f0a06203725baf34e2ae1954711b135b097e3e1c9d3b6caa456b489ae959bf"
+      }
+    },
+    {
+      "name": "engineering",
+      "passed": true,
+      "detail": "{\"status\": \"success_engineering\", \"exit_code\": 0, \"artifact_path\": \"outputs/q2/p2_lb_engineering\", \"q2_scientific_complete\": false, \"error\": null}\n"
+    },
+    {
+      "name": "engineering_reproduction",
+      "passed": true,
+      "detail": "{\"status\": \"success_engineering\", \"exit_code\": 0, \"artifact_path\": \"outputs/q2/p2_lb_reproduction\", \"q2_scientific_complete\": false, \"error\": null}\n"
+    },
+    {
+      "name": "engineering_outputs_identical",
+      "passed": true,
+      "detail": [
+        "accounts.csv",
+        "assets.csv",
+        "balances.csv",
+        "baseline_path.csv",
+        "behavior.csv",
+        "calibration.json",
+        "engineering_paths.png",
+        "frozen_experiment.json",
+        "gaps_and_conflicts.csv",
+        "history_fit.csv",
+        "operations.csv",
+        "peak.json",
+        "project_queue.json",
+        "report.md",
+        "sensitivity.csv",
+        "solver_stages.csv",
+        "targets_2030_2060.csv"
+      ]
+    },
+    {
+      "name": "engineering_not_national_acceptance",
+      "passed": true,
+      "detail": "success_engineering"
+    },
+    {
+      "name": "changed_input_expected_failure",
+      "passed": true,
+      "detail": "{\"status\": \"invalid_input\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb_reproduction.attempts/20261019T173529Z-95c5130d\", \"q2_scientific_complete\": false, \"error\": \"ValueError: Missing/changed input: examples/q2/history_model.json\"}\n"
+    },
+    {
+      "name": "old_success_preserved",
+      "passed": true,
+      "detail": "4c54a920ccc7de27ed06daf28bd9fc1a4c29eecf39dfa87efabfd36f4eba8a58"
+    },
+    {
+      "name": "stale_success_rejected",
+      "passed": true,
+      "detail": "Latest failure invalidates preserved success"
+    },
+    {
+      "name": "missing_input_expected_failure",
+      "passed": true,
+      "detail": "{\"status\": \"invalid_input\", \"exit_code\": 2, \"artifact_path\": \"outputs/q2/p2_lb_reproduction.attempts/20261019T173530Z-df8e373e\", \"q2_scientific_complete\": false, \"error\": \"FileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\\\\\Team\\\\\\\\2026JM\\\\\\\\SimulationModelingProblemA\\\\\\\\tmp\\\\\\\\q2-config-does-not-exist.json'\"}\n"
+    },
+    {
+      "name": "protected_contracts_unchanged",
+      "passed": true,
+      "detail": {
+        "data/sources.json": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f",
+        "data/evidence_reviews.json": "6043473c2192dc4c91d47c521bea5adb15b0b07197ad6c421b9216a6f207f376",
+        "workflow/model_inputs.json": "adcdca7ed33dc4048761a220c7a00b6585733117321ed1ce8571dd521c0520b0",
+        "只读工作区/final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+        "只读工作区/gemini_final_idea.md": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+        "只读工作区/README.md": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af"
+      }
+    },
+    {
+      "name": "original_q1_folder_untouched",
+      "passed": true,
+      "detail": 19
+    }
+  ],
+  "commands": [
+    {
+      "label": "all_tests",
+      "args": [
+        "run.py",
+        "test"
+      ],
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "label": "audit",
+      "args": [
+        "run.py",
+        "audit"
+      ],
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "label": "key_scan",
+      "args": [
+        "scripts/scan_google_keys.py"
+      ],
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "label": "nine_original_subsets",
+      "args": [
+        "scripts/workflow_status.py",
+        "--check-formal-inputs"
+      ],
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "label": "candidate_review",
+      "args": [
+        "scripts/review_q2_candidates.py"
+      ],
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "label": "q1_regression",
+      "args": [
+        "run.py",
+        "q1",
+        "--output-dir",
+        "outputs/q1/q2_lb_regression"
+      ],
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "label": "national_expected_block",
+      "args": [
+        "scripts/run_q2.py",
+        "--config",
+        "workflow/q2_inputs.json",
+        "--output-dir",
+        "outputs/q2/p2_lb"
+      ],
+      "returncode": 2,
+      "expected": 2
+    },
+    {
+      "label": "engineering",
+      "args": [
+        "run.py",
+        "q2",
+        "--config",
+        "examples/q2/config.json",
+        "--output-dir",
+        "outputs/q2/p2_lb_engineering"
+      ],
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "label": "engineering_reproduction",
+      "args": [
+        "run.py",
+        "q2",
+        "--config",
+        "examples/q2/config.json",
+        "--output-dir",
+        "outputs/q2/p2_lb_reproduction"
+      ],
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "label": "changed_input_expected_failure",
+      "args": [
+        "run.py",
+        "q2",
+        "--config",
+        "tmp/q2-bad-config.json",
+        "--output-dir",
+        "outputs/q2/p2_lb_reproduction"
+      ],
+      "returncode": 2,
+      "expected": 2
+    },
+    {
+      "label": "missing_input_expected_failure",
+      "args": [
+        "run.py",
+        "q2",
+        "--config",
+        "tmp/q2-config-does-not-exist.json",
+        "--output-dir",
+        "outputs/q2/p2_lb_reproduction"
+      ],
+      "returncode": 2,
+      "expected": 2
+    }
+  ],
+  "seconds": 119.77918940000018,
+  "code_hashes": {
+    "run.py": "f650af45e441255037ab977e600da804cee11a39bb7345301ebe947c68ccf473",
+    "scripts/run_q2.py": "1f8e35da98626d5f3fda5061edc91c50ae639f672292d45b2613ff60132b15c7",
+    "src/energy_model/q2_operations.py": "1a36532a8258821c592e186e97e5973de5301da38ec6e94f63a6a0e7dde1d181",
+    "src/energy_model/q2_agents.py": "1f0a4465183916ab475447736c3923e540fd0d82a7408b7cd2bfc00116da5290",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0",
+    "tests/test_q2.py": "327065b5796a02aa917de714f788cf507bb1310e6242924fffddb40e5dc6be4d",
+    "tests/test_q2_national.py": "89887feb248fa4cf27b2ee5e34e7698438663b30fde3bbc4536d90f136b0a4ef",
+    "tests/test_q2_operations.py": "78a87e377b40f1bd73661352eabcb55dc156d004a6b760bc8a13c7a791a5803c",
+    "src/energy_model/q2_national.py": "15745cbeb61df7d3bfcb03e15c00883438f5674c2c88f82aa6c5800c48d1ae0a",
+    "src/energy_model/q2_statistics.py": "43e58dfd42234d30c33278a4c4c485b96105c6d575e864fb7cc265b5116c8120",
+    "src/energy_model/q2_identification.py": "116e8f1b3b13794a32009ca4c00822d70cedca249605b236bafe530af7124899",
+    "src/energy_model/q2_finance.py": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
+    "src/energy_model/q2_admission.py": "e6f06e18b8d49ef9acb69eed12e2ed747ace88ec794535dc0c1d4d16c50a0941",
+    "scripts/run_q2_national.py": "bb1eb105368d8d8a229e2175ad2870b31e38e4f05f4bed5a5610cd7d38fbabbe",
+    "scripts/review_q2_candidates.py": "bf4232a9e9cc4c2ca29bb69b26c7aee1a29f6e0042096054cb53708af73664e5",
+    "scripts/review_q2_delivery.py": "42952edd050efd67991163f5ce12d6ed92403372801d23146ca948ffe92e90ea"
+  },
+  "dependencies": {
+    "mesa": "3.3.1",
+    "scipy": "1.16.3",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.7",
+    "reportlab": "4.5.1"
+  },
+  "evidence_hashes": {
+    "all_tests.log": "4556edd33b4408356eb7e56704c6a587241c4458c1060423955391db73c2f21b",
+    "audit.log": "e4485cbf8b6b4f0951d31f50888fee69eea90d49025779278ecfe04d2847d5c2",
+    "candidate_review.log": "bde70dff9cb6ca1d82fe1209cf21f51483f19402f8d7ea8eb99b8e878a5fc55f",
+    "changed_input_expected_failure.log": "ad61d8bbb162e5c372296e0dbbf63eb5d1b60bf9a0ff8496e76cff61f5368fea",
+    "engineering.log": "f38fc675e7a6e6d103351b169361e05c4ec95b08d13fb1950cd2c2f3b57fad84",
+    "engineering_reproduction.log": "da9513c8935f019e707f30d45eee026c566c38aec0c7abe14f8857d37e47d760",
+    "key_scan.log": "de4c7addba7ef489a8b4d7ab0e1d7b428a230ce2fba8d0bf25de290b4d8503b7",
+    "missing_input_expected_failure.log": "b4e8b7d0d0c550f4a1ff21bb29bad95fdab06754e08c94d2052a38e6101eb7dc",
+    "national_expected_block.log": "83fb1ae99e83c77217e8d6c0d0cc9e64035d9f21606b6043ee5b2745a5663cee",
+    "nine_original_subsets.log": "5da9e52f12f5a13032091f0101f886b08fc98e3ff44ded4148416f3f2fa4e8f2",
+    "q1_regression.log": "7d9963144043a75459a52a0ffae1afe168b5dbabf2937dcb9bf6335dd480f201",
+    "tests.json": "b97ae8f781f387ba3a78d83f75536cee1977d359a4ec0eaef6b8c02417ac8ccd",
+    "workspace_audit.json": "e4485cbf8b6b4f0951d31f50888fee69eea90d49025779278ecfe04d2847d5c2"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "identity": "Post-freeze 2025 extension check; previously available observations, not a blind test or independent source family",
+  "run_id": "20261019T061618016081Z",
+  "used_for_fitting": false,
+  "limits": "2025 capacity mainly checks reconstructed initial construction queue, not new investment behaviour. Annual initial-state and statistical energy boundaries remain approximate. One year cannot validate a 36-year extrapolation. GDP remains the frozen 4.5 percent scenario, not updated to realised 5 percent.",
+  "observations": [
+    {
+      "metric": "total_capacity_mw",
+      "raw_value": 389134,
+      "raw_unit": "10^4 kW",
+      "multiplier": 10,
+      "unit": "MW",
+      "source_key": "yx:NEA_ELECTRICITY_2025_TABLE",
+      "locator": "total row",
+      "observed": 3891340,
+      "model": 3649740.7987651513,
+      "relative_error": -0.06208637673265471
+    },
+    {
+      "metric": "wind_capacity_mw",
+      "raw_value": 64001,
+      "raw_unit": "10^4 kW",
+      "multiplier": 10,
+      "unit": "MW",
+      "source_key": "yx:NEA_ELECTRICITY_2025_TABLE",
+      "locator": "wind row",
+      "observed": 640010,
+      "model": 584084.7626775379,
+      "relative_error": -0.0873818179754412
+    },
+    {
+      "metric": "solar_capacity_mw",
+      "raw_value": 120173,
+      "raw_unit": "10^4 kW",
+      "multiplier": 10,
+      "unit": "MW",
+      "source_key": "yx:NEA_ELECTRICITY_2025_TABLE",
+      "locator": "solar row",
+      "observed": 1201730,
+      "model": 1081045.466642326,
+      "relative_error": -0.10042566413227094
+    },
+    {
+      "metric": "primary_energy_tce",
+      "raw_value": 61.7,
+      "raw_unit": "10^8 tce",
+      "multiplier": 100000000,
+      "unit": "tce",
+      "source_key": "yx:NBS_COMMUNIQUE_2025",
+      "locator": "section XII preliminary energy consumption",
+      "observed": 6170000000.0,
+      "model": 6130092094.454309,
+      "relative_error": -0.00646805600416378
+    }
+  ],
+  "review_sha256": "e68213ecde1bca22e9e5dc29d69b621b4e8f88befdd8ebcf98c2fcd8672b7125"
+}

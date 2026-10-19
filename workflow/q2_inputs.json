@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "owner": "p2/lb",
+  "base_sha": "804ec15ee43874303986a7ad91b2cde05c65b124",
+  "mode": "national_pending_review",
+  "warning": "Candidate inventory only; Q1 contracts remain unchanged; no national defaults or automatic repinning",
+  "inputs": [
+    {
+      "role": "national_history",
+      "path": "data/processed/unified/nbs_history.csv",
+      "sha256": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "nbs_lineage",
+      "path": "data/catalog/nbs_record_provenance.csv",
+      "sha256": "6dc5bad2fb8c555759921824a8e4eeef80053fe32c8f47535fde2e635673d95f",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "gcb_history",
+      "path": "data/processed/china_co2_gcb_annual.csv",
+      "sha256": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "technology_parameters",
+      "path": "data/processed/technology_accounting_parameters.csv",
+      "sha256": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "policy_targets",
+      "path": "data/processed/policy_target_reference.csv",
+      "sha256": "c29fba83db1cd477f279a10cc58338f923b51a4e711a48cb9b93bdae20ee39f9",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "macro",
+      "path": "data/processed/china_macro_annual.csv",
+      "sha256": "5b033c6e8593031ff5c223dda4f2e7de42a2d9b77030bed85018f82c5969b1d8",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "sector_2023",
+      "path": "data/processed/nbs_sector_use_2023.csv",
+      "sha256": "2ac1f2fc7dd3f77ed25c46956c0f29be744a3b24d9737fe49c15ec565dfefc9b",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "q1_handoff",
+      "path": "outputs/q1/p1_yx/model_handoff.csv",
+      "sha256": "763e59930721e8b1b665a0e7648c8fa1975516edcb2803844f91a3250d488541",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "storage_nonfossil",
+      "path": "data/processed/q1/reviewed_2024_additions.csv",
+      "sha256": "60e91cb161df7f33da4ca89c7b83b02619c6e44defa5d6f2781f83673d3f8fbd",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "generation_history",
+      "path": "data/observations/power_generation_2015_2024.json",
+      "sha256": "a6aae99a8d04304f29ccb291cabb6dab06ac208493cb498cb1fc149223738e11",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "carbon_market",
+      "path": "data/processed/cea_market_annual.csv",
+      "sha256": "fbc8ce418c2457ae124123d3614fe2c2b58f34054c12833e489aab07fbf275fd",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "fuel_storage",
+      "path": "data/processed/fuel_storage_hydrogen_snapshots.csv",
+      "sha256": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "original/yx:GCB_GCB2025v15_MtCO2_flat",
+      "path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+      "sha256": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:IPCC_ENERGY_STATIONARY",
+      "path": "data/raw/batch3_scenarios/ipcc_2006_stationary_combustion.pdf",
+      "sha256": "a25d9f96d7672df391b328de79d4cfd812c07fe79d5cf4a30d23d82d8f02985b",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:IRENA_COST_2024_PDF",
+      "path": "data/raw/batch3_scenarios/irena_power_costs_2024.pdf",
+      "sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:POLICY_CARBON_2021",
+      "path": "data/raw/batch3_scenarios/policy_carbon_2021.html",
+      "sha256": "e55cb582d619200931087b3b957beb20f795d5ce38caa79ee4f724fa3027bde6",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:POLICY_CARBON_2026",
+      "path": "data/raw/batch3_scenarios/policy_carbon_2026.html",
+      "sha256": "4255be5af1310a854134f52b7ac03ceca142f08b675c6fcefb2a9570653ff83f",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:NBS_2025_C09-02",
+      "path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+      "sha256": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:NBS_2025_C09-15",
+      "path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+      "sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G01_history_initial_state",
+      "available": "2015全国规模和装机、GDP序列已存",
+      "required": "2015部门设备/燃料用途/库存/在建资产、同口径主体现金与政策初态；不能倒用2024"
+    },
+    {
+      "id": "G02_current_initial_state",
+      "available": "2024全国规模、2021—2024新型储能功率能量、471条Q1交接",
+      "required": "2024实际可用设备、期初SOC/库存、年龄及在建队列；功率能量不自动提供SOC"
+    },
+    {
+      "id": "G03_cost_efficiency",
+      "available": "风光CAPEX和部分IPCC默认因子；其他技术报告原文",
+      "required": "逐技术统一价年CAPEX/OPEX、效率、寿命、融资；热值及用途匹配；不是继续增加LCOE表"
+    },
+    {
+      "id": "G04_chronology",
+      "available": "2018重建负荷和年度燃料/发电统计",
+      "required": "明确代表窗口/同期供需/来水与进口提取约束的研究假设；年度进口量不能直接改小时能力"
+    },
+    {
+      "id": "G05_policy_settlement",
+      "available": "ETS年度交易和政策原文、2030/2060目标",
+      "required": "历史可知覆盖、免费配额、净履约与真实结算；目标仅比较，不强迫模型达标"
+    },
+    {
+      "id": "G06_calibration_design",
+      "available": "总量/结构/装机/GCB候选历史；工程损失函数已实现",
+      "required": "三人共同冻结误差尺度、权重、参数界、阈值与情景范围；合成配置不升级为正式设置"
+    },
+    {
+      "id": "G07_primary_carbon_bridge",
+      "available": "NBS一次电力及其他、2024初步非化石19.8%、GCB原始行已复核",
+      "required": "一次能源官方折算与非化石口径桥接；总量/行业正排放与净移除同边界，物理MWh不直接比较官方占比"
+    },
+    {
+      "id": "G08_future_paths",
+      "available": "既有政策目标、技术报告和宏观历史",
+      "required": "到2060的GDP/成本/净移除条件路径与合理范围：属于明确研究假设，不能等待或冒充未来实测"
+    },
+    {
+      "id": "G09_model_extensions",
+      "available": "本分支Mesa/LP工程闭环与反例",
+      "required": "部门设备年龄退出、全国初态桥接、ETS/统计口径；多区/季节与CCUS未实现，不声称已满足"
+    }
+  ],
+  "scientific_acceptance": false
+}

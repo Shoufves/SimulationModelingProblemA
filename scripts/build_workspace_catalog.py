@@ -57,6 +57,8 @@ def sources(aliases):
            ('mmj','A题_mmj/data/sources.json','data/sources.json')]
     if (CAT/'q1_sources.json').is_file():
         specs.append(('q1','data/catalog/q1_sources.json','data/catalog/q1_sources.json'))
+    if (CAT/'q2_national_input_review.json').is_file():
+        specs.append(('q2','data/catalog/q2_national_input_review.json','data/catalog/q2_national_input_review.json'))
     specs.extend(('lb/'+('base' if Path(r['path'][len(LIB):]).parent.as_posix()=='.' else Path(r['path'][len(LIB):]).parent.as_posix()),r['path'],r['target']) for r in manifests)
     evidence=defaultdict(list)
     for review in load(ROOT/'data/evidence_reviews.json')['reviews']:
@@ -67,7 +69,7 @@ def sources(aliases):
         entries=obj if isinstance(obj,list) else obj.get('sources',[])
         for row in entries:
             if not isinstance(row,dict): continue
-            sid=row.get('id',row.get('source_id',''))
+            sid=row.get('id',row.get('source_id',row.get('path','') if namespace=='q2' else ''))
             oldfile=str(row.get('file',row.get('path',''))).replace('\\','/')
             attempts=[]
             if oldfile:
@@ -80,14 +82,19 @@ def sources(aliases):
                 candidate=(ROOT/oldfile).resolve()
                 if not candidate.is_relative_to(ROOT/'data/raw/q1'):raise ValueError('Q1 original outside dedicated source directory')
                 canonical=candidate.relative_to(ROOT).as_posix()
+            elif namespace=='q2':
+                candidate=(ROOT/oldfile).resolve()
+                if not candidate.is_relative_to(ROOT/'data') or candidate.is_relative_to(ROOT/'data/restricted'):
+                    raise ValueError('Q2 reference outside public data directory')
+                canonical=candidate.relative_to(ROOT).as_posix()
             exists=bool(canonical and (ROOT/canonical).is_file())
             filehash=sha(ROOT/canonical) if exists else ''
             registry.append(dict(source_key=namespace+':'+sid,namespace=namespace,original_source_id=sid,
-                title=row.get('title',''),publisher=row.get('agency',row.get('publisher','')),
+                title=row.get('title',row.get('allowed_use','')),publisher=row.get('agency',row.get('publisher','')),
                 url=row.get('url',''),canonical_path=canonical,sha256=filehash,
                 content_group=('sha256:'+filehash) if filehash else '',
                 original_path=oldfile,registry_path=manifest,status=row.get('status','registered'),
-                file_available=exists,notes=row.get('notes',row.get('note','')),
+                file_available=exists,notes=row.get('notes',row.get('note',row.get('review',''))),
                 original_record=row,evidence_files=evidence[sid] if namespace=='mmj' else [],
                 evidence_available=bool(evidence[sid]) if namespace=='mmj' else exists))
             if canonical in representations:
@@ -105,6 +112,7 @@ def datasets(refs):
     rows=[]
     paths=sorted((ROOT/'data/processed').rglob('*.csv'))+sorted((ROOT/'data/observations').glob('*.json'))
     paths += [ROOT/'data/processed/attachment_assets.json']
+    paths += sorted((ROOT/'data/processed/q2').glob('*.json')) if (ROOT/'data/processed/q2').is_dir() else []
     for p in paths:
         rel=p.relative_to(ROOT).as_posix()
         if '/unified/' in rel: continue
@@ -127,6 +135,10 @@ def datasets(refs):
             status='q1_descriptive_transcription_reviewed'
             use='Q1描述/可比案例；审查见docs/solutions/p1-lb-input-review.md及p1-lb-additional-review.md；非ABM准入'
             boundary='共同base原件转录及另行核验的公开补充；未获三人共同输入更新批准。逐行区分年份、来源及用途：旧成本投影、多年样本、2024实测和12月价格不混用；发用差非潮流。'
+        if rel.startswith('data/processed/q2/'):
+            status='q2_author_reviewed_conditional_research'
+            use='Q2全国聚合条件模型；逐用途审查data/catalog/q2_national_input_review.json；不替代原契约或团队批准'
+            boundary='原图复核的NBS值、原始API/CSV匹配、BTR CO2分项和IEA技术参照；重建及外推另列假设；PEO代理/CO2/已接触验证边界必须保留。'
         if rel == 'data/processed/q1/cost_method_parameters.csv':
             use='mmj baf1975原参数；Q1风电统一融资条件成本；见docs/solutions/p1-yx-integration.md'
             boundary='2024 USD、25年、3/5/7%实际WACC研究假设；国家新项目均值未配对；CF通常事前估计，O&M为报告假设；非保供系统成本或全国在运成本。'

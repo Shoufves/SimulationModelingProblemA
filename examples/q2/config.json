@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "mode": "synthetic_engineering",
+  "base_sha": "804ec15ee43874303986a7ad91b2cde05c65b124",
+  "owner": "p2/lb",
+  "warning": "All values are synthetic. Calibration to own generated series proves plumbing only, NOT empirical validity.",
+  "inputs": [
+    {
+      "role": "history_model",
+      "path": "examples/q2/history_model.json",
+      "sha256": "1aa118a661bad62e5e39fdf7f11db12b61c18fa6b0484f262cb500e77a8d9fec",
+      "allowed_use": "synthetic_engineering",
+      "review": "Explicit synthetic self-generated fixture; no national data admitted"
+    },
+    {
+      "role": "forecast_model",
+      "path": "examples/q2/forecast_model.json",
+      "sha256": "06788a212eb8953a6f602ddeca35cca9bc2a174d3e843ded9eb06d9af6a4cd4a",
+      "allowed_use": "synthetic_engineering",
+      "review": "Explicit synthetic self-generated fixture; no national data admitted"
+    },
+    {
+      "role": "design",
+      "path": "examples/q2/design.json",
+      "sha256": "504711dc44972976da6f0286e723cdcf2ced05ccce1cb2fc73219fbe4c4ce9d8",
+      "allowed_use": "synthetic_engineering",
+      "review": "Explicit synthetic self-generated fixture; no national data admitted"
+    },
+    {
+      "role": "observations",
+      "path": "examples/q2/observations.json",
+      "sha256": "901908158e22f36114e36ea55e4cc51b879262719cf573305f0e339e46c4032f",
+      "allowed_use": "synthetic_engineering",
+      "review": "Explicit synthetic self-generated fixture; no national data admitted"
+    }
+  ],
+  "gaps": [],
+  "scientific_acceptance": false
+}

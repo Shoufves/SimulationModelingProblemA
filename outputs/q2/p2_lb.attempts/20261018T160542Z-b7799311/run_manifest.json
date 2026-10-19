@@ -1,0 +1,171 @@
+{
+  "run_id": "20261018T160542Z-b7799311",
+  "owner": "p2/lb",
+  "command": [
+    "E:\\Team\\2026JM\\SimulationModelingProblemA\\tmp\\q2-venv\\Scripts\\python.exe",
+    "E:\\Team\\2026JM\\SimulationModelingProblemA\\scripts\\run_q2.py",
+    "--config",
+    "workflow/q2_inputs.json",
+    "--output-dir",
+    "outputs/q2/p2_lb"
+  ],
+  "git_sha": "b22c14dd4dd558e26baed73d4c5219162e08e2e6",
+  "dirty": true,
+  "utc_started": "2026-10-18T16:05:42.690078+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "code_hashes": {
+    "run.py": "3d427aae2aad978374ad751e99c7992c6edf9a7aabf85e40674c8cc28ba8722e",
+    "scripts/run_q2.py": "1f8e35da98626d5f3fda5061edc91c50ae639f672292d45b2613ff60132b15c7",
+    "src/energy_model/q2_operations.py": "065a3c7ad575badb49cc3e5442fe009b88f6ede54dd877c25871b0a56fdaaa52",
+    "src/energy_model/q2_agents.py": "1f0a4465183916ab475447736c3923e540fd0d82a7408b7cd2bfc00116da5290",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
+  },
+  "status": "blocked_national_inputs",
+  "q2_scientific_complete": false,
+  "config_path": "workflow/q2_inputs.json",
+  "config_sha256": "c96702e59568be4762b76774fa4b41dc0bd5c9931ce569f9abc93cff1d90947c",
+  "inputs": [
+    {
+      "role": "national_history",
+      "path": "data/processed/unified/nbs_history.csv",
+      "sha256": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "nbs_lineage",
+      "path": "data/catalog/nbs_record_provenance.csv",
+      "sha256": "6dc5bad2fb8c555759921824a8e4eeef80053fe32c8f47535fde2e635673d95f",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "gcb_history",
+      "path": "data/processed/china_co2_gcb_annual.csv",
+      "sha256": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "technology_parameters",
+      "path": "data/processed/technology_accounting_parameters.csv",
+      "sha256": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "policy_targets",
+      "path": "data/processed/policy_target_reference.csv",
+      "sha256": "c29fba83db1cd477f279a10cc58338f923b51a4e711a48cb9b93bdae20ee39f9",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "macro",
+      "path": "data/processed/china_macro_annual.csv",
+      "sha256": "5b033c6e8593031ff5c223dda4f2e7de42a2d9b77030bed85018f82c5969b1d8",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "sector_2023",
+      "path": "data/processed/nbs_sector_use_2023.csv",
+      "sha256": "2ac1f2fc7dd3f77ed25c46956c0f29be744a3b24d9737fe49c15ec565dfefc9b",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "q1_handoff",
+      "path": "outputs/q1/p1_yx/model_handoff.csv",
+      "sha256": "763e59930721e8b1b665a0e7648c8fa1975516edcb2803844f91a3250d488541",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "storage_nonfossil",
+      "path": "data/processed/q1/reviewed_2024_additions.csv",
+      "sha256": "60e91cb161df7f33da4ca89c7b83b02619c6e44defa5d6f2781f83673d3f8fbd",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "generation_history",
+      "path": "data/observations/power_generation_2015_2024.json",
+      "sha256": "a6aae99a8d04304f29ccb291cabb6dab06ac208493cb498cb1fc149223738e11",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "carbon_market",
+      "path": "data/processed/cea_market_annual.csv",
+      "sha256": "fbc8ce418c2457ae124123d3614fe2c2b58f34054c12833e489aab07fbf275fd",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "fuel_storage",
+      "path": "data/processed/fuel_storage_hydrogen_snapshots.csv",
+      "sha256": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
+      "allowed_use": "candidate_inventory_only",
+      "review": "Existing candidate checked for schema/coverage; no national initialization/calibration admission. See outputs/q2/p2_lb_input_review."
+    },
+    {
+      "role": "original/yx:GCB_GCB2025v15_MtCO2_flat",
+      "path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
+      "sha256": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:IPCC_ENERGY_STATIONARY",
+      "path": "data/raw/batch3_scenarios/ipcc_2006_stationary_combustion.pdf",
+      "sha256": "a25d9f96d7672df391b328de79d4cfd812c07fe79d5cf4a30d23d82d8f02985b",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:IRENA_COST_2024_PDF",
+      "path": "data/raw/batch3_scenarios/irena_power_costs_2024.pdf",
+      "sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:POLICY_CARBON_2021",
+      "path": "data/raw/batch3_scenarios/policy_carbon_2021.html",
+      "sha256": "e55cb582d619200931087b3b957beb20f795d5ce38caa79ee4f724fa3027bde6",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:POLICY_CARBON_2026",
+      "path": "data/raw/batch3_scenarios/policy_carbon_2026.html",
+      "sha256": "4255be5af1310a854134f52b7ac03ceca142f08b675c6fcefb2a9570653ff83f",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:NBS_2025_C09-02",
+      "path": "data/raw/batch1_national/nbs_2025_C09-02.jpg",
+      "sha256": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    },
+    {
+      "role": "original/yx:NBS_2025_C09-15",
+      "path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
+      "sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
+      "allowed_use": "candidate_inventory_only",
+      "review": "identity only; numeric original-page verification not claimed except GCB rows below"
+    }
+  ],
+  "base_sha": "804ec15ee43874303986a7ad91b2cde05c65b124",
+  "mode": "national_pending_review",
+  "error": "National historical/current initialization and common scientific design not admitted; see gaps_and_conflicts.csv",
+  "seconds": 0.09914160001790151,
+  "outputs": {
+    "gaps_and_conflicts.csv": "a2129ca3f3a886194b678e85ef532de28d33b5bb4edf984e4d0846d09060ace7",
+    "report.md": "2b0ffd033a398caf83de53a6353cc6a1608204140db8f3bc391194c67854d08f"
+  }
+}

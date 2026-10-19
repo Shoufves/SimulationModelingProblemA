@@ -1,0 +1,863 @@
+{
+  "reviewed_head": "b1a03c6f636d5067838e43908b51cfc371b9fe29",
+  "purpose": "Independent mechanism diagnostics; no calibration or production output replacement",
+  "carbon_same_state": {
+    "prices_cny_per_t": [
+      0.0,
+      9793.922394
+    ],
+    "lp_inputs_exactly_equal": true,
+    "dispatch_exactly_equal": true,
+    "device_proposals_exactly_equal": true,
+    "coal_margin_cny_per_mw": [
+      605080.4788030079,
+      1569606.5121280376
+    ],
+    "interpretation": "Price reaches generator settlement, but not dispatch or device choice. Resource-cost dispatch may be deliberate; no conclusion that carbon has zero effect at all prices."
+  },
+  "carbon_published_sensitivity": {
+    "carbon_price_multiplier=0.5": {
+      "rows": 34,
+      "max_abs_delta": 175731397.15963745
+    },
+    "carbon_price_multiplier=1.5": {
+      "rows": 34,
+      "max_abs_delta": 98318191.0916481
+    }
+  },
+  "cash_counterexample": {
+    "initial_cash_per_generator_cny": [
+      1000000000000000.0,
+      -1000000000000000.0
+    ],
+    "approved_projects_exactly_equal": true,
+    "approved_capacity_mw": [
+      679124.0617961709,
+      679124.0617961709
+    ],
+    "approved_cost_cny": [
+      3275937954132.338,
+      3275937954132.338
+    ]
+  },
+  "grid_counterexample": {
+    "added_solar_mw": 1000000,
+    "grid_limit_delta_mw": 999999.9999999995,
+    "construction_cost_cny": 0,
+    "note": "State perturbation isolates mapping; no commissioned grid asset was added."
+  },
+  "baseline_reproduction_max_relative_difference": 0.0,
+  "snapshots": {
+    "2025": {
+      "year": 2025,
+      "gdp_index": 1.045,
+      "primary_energy_tce": 6131204870.221632,
+      "peo_share": 0.2000877659031051,
+      "nonfossil_share_proxy": 0.2000877659031051,
+      "combustion_co2_t": 11398608500.5165,
+      "other_positive_co2_t": 1544035460.4274817,
+      "positive_co2_t": 12942643960.943981,
+      "net_removals_t": 1346499000.0,
+      "net_co2_t": 11596144960.943981,
+      "neutralisation_ratio": 0.10403585264828626,
+      "energy_intensity": 5867181693.991993,
+      "carbon_intensity": 12385305225.783714,
+      "total_capacity_mw": 3649740.7987651513,
+      "wind_solar_capacity_mw": 1665130.229319864,
+      "electricity_generation_mwh": 10476342161.7139,
+      "unmet_service_mwh": 0.0,
+      "requested_service_mwh": 25612983176.940968,
+      "operating_resource_cost_cny": 7604491653036.521,
+      "ets_net_transfer_cny": -12279690796.056732,
+      "ets_balance_cny": 0.0,
+      "cash_balance_residual_cny": -0.001953125,
+      "external_service_income_cny": 23051684859246.867,
+      "max_residual": 2.7284841053187847e-09,
+      "scope": "mainland_conditional_CO2_not_all_GHG",
+      "coal_generation_mwh": 6474319496.230311,
+      "coal_capacity_mw": 1273132.126224184,
+      "gas_generation_mwh": 0.0,
+      "gas_capacity_mw": 97834.01819975222,
+      "oil_generation_mwh": 0.0,
+      "oil_capacity_mw": 58752.69151717634,
+      "biomass_generation_mwh": 0.0,
+      "biomass_capacity_mw": 43838.512744809545,
+      "hydro_generation_mwh": 1392123375.61238,
+      "hydro_capacity_mw": 447699.887426032,
+      "nuclear_generation_mwh": 469552035.7279852,
+      "nuclear_capacity_mw": 63353.333333333336,
+      "wind_generation_mwh": 1118237781.3664355,
+      "wind_capacity_mw": 584084.7626775379,
+      "solar_generation_mwh": 1022109472.7767879,
+      "solar_capacity_mw": 1081045.466642326,
+      "construction_cost_cny": 3692026315650.834,
+      "resource_cost_cny": 11296517968687.355,
+      "queue_mw": 884901.8129476082,
+      "reserved_construction_fund_cny": 924547829208.4402,
+      "construction_fund_residual_cny": 0.001220703125,
+      "wind_available_generation_mwh": 1118237781.3664358,
+      "wind_unused_available_fraction": 2.220446049250313e-16,
+      "wind_realised_cf": 0.21855169476203676,
+      "solar_available_generation_mwh": 1022109472.7767879,
+      "solar_unused_available_fraction": 0.0,
+      "solar_realised_cf": 0.10793178192716889,
+      "unmet_share": 0.0
+    },
+    "2030": {
+      "year": 2030,
+      "gdp_index": 1.3022601248475152,
+      "primary_energy_tce": 6976804183.253144,
+      "peo_share": 0.38821513738557417,
+      "nonfossil_share_proxy": 0.38821513738557417,
+      "combustion_co2_t": 9594561442.413502,
+      "other_positive_co2_t": 1558039180.2084403,
+      "positive_co2_t": 11152600622.621943,
+      "net_removals_t": 1346499000.0,
+      "net_co2_t": 9806101622.621943,
+      "neutralisation_ratio": 0.12073408217171881,
+      "energy_intensity": 5357458199.121374,
+      "carbon_intensity": 8564034488.829816,
+      "total_capacity_mw": 8074789.922043889,
+      "wind_solar_capacity_mw": 5916914.038627691,
+      "electricity_generation_mwh": 12980126440.32041,
+      "unmet_service_mwh": 0.0,
+      "requested_service_mwh": 28638502113.998127,
+      "operating_resource_cost_cny": 7209036528404.757,
+      "ets_net_transfer_cny": 18478910551.47136,
+      "ets_balance_cny": 0.0,
+      "cash_balance_residual_cny": 0.0,
+      "external_service_income_cny": 25774651902598.312,
+      "max_residual": 1.8189894035458565e-09,
+      "scope": "mainland_conditional_CO2_not_all_GHG",
+      "coal_generation_mwh": 4144401651.6957865,
+      "coal_capacity_mw": 1356263.4240366092,
+      "gas_generation_mwh": 0.0,
+      "gas_capacity_mw": 101679.77157712406,
+      "oil_generation_mwh": 0.0,
+      "oil_capacity_mw": 63909.46823085982,
+      "biomass_generation_mwh": 0.0,
+      "biomass_capacity_mw": 51453.89501541291,
+      "hydro_generation_mwh": 1581490253.6742816,
+      "hydro_capacity_mw": 508599.32455619215,
+      "nuclear_generation_mwh": 563062214.3679106,
+      "nuclear_capacity_mw": 75970.0,
+      "wind_generation_mwh": 2167014619.822886,
+      "wind_capacity_mw": 1131888.262969753,
+      "solar_generation_mwh": 4524157700.759545,
+      "solar_capacity_mw": 4785025.775657938,
+      "construction_cost_cny": 4684100847438.526,
+      "resource_cost_cny": 11893137375843.283,
+      "queue_mw": 1300563.879120228,
+      "reserved_construction_fund_cny": 507146513613.6465,
+      "construction_fund_residual_cny": -0.00634765625,
+      "wind_available_generation_mwh": 2167014619.8228865,
+      "wind_unused_available_fraction": 2.220446049250313e-16,
+      "wind_realised_cf": 0.21855169476203679,
+      "solar_available_generation_mwh": 4524157700.759545,
+      "solar_unused_available_fraction": 0.0,
+      "solar_realised_cf": 0.10793178192716889,
+      "unmet_share": 0.0
+    },
+    "2040": {
+      "year": 2040,
+      "gdp_index": 1.8369665181162114,
+      "primary_energy_tce": 8399964493.035282,
+      "peo_share": 0.47417333298155323,
+      "nonfossil_share_proxy": 0.47417333298155323,
+      "combustion_co2_t": 9919261200.846237,
+      "other_positive_co2_t": 1511962015.3258262,
+      "positive_co2_t": 11431223216.172064,
+      "net_removals_t": 1346499000.0,
+      "net_co2_t": 10084724216.172064,
+      "neutralisation_ratio": 0.11779133121073788,
+      "energy_intensity": 4572736851.866714,
+      "carbon_intensity": 6222880549.77434,
+      "total_capacity_mw": 24410849.659568846,
+      "wind_solar_capacity_mw": 22289586.256711774,
+      "electricity_generation_mwh": 17466349277.22825,
+      "unmet_service_mwh": 0.0,
+      "requested_service_mwh": 33635516937.802258,
+      "operating_resource_cost_cny": 8391562027881.225,
+      "ets_net_transfer_cny": 24570297339.675747,
+      "ets_balance_cny": -4.76837158203125e-07,
+      "cash_balance_residual_cny": 0.0,
+      "external_service_income_cny": 30271965244022.027,
+      "max_residual": 7.275957614183426e-09,
+      "scope": "mainland_conditional_CO2_not_all_GHG",
+      "coal_generation_mwh": 4276487882.324787,
+      "coal_capacity_mw": 1297243.0530090122,
+      "gas_generation_mwh": 168918342.19716966,
+      "gas_capacity_mw": 90743.1330632123,
+      "oil_generation_mwh": 27394991.780598216,
+      "oil_capacity_mw": 49677.53485785072,
+      "biomass_generation_mwh": 80294241.30484971,
+      "biomass_capacity_mw": 43134.161324120185,
+      "hydro_generation_mwh": 853502222.3780196,
+      "hydro_capacity_mw": 548964.0581725311,
+      "nuclear_generation_mwh": 339087903.4746134,
+      "nuclear_capacity_mw": 91501.46243034593,
+      "wind_generation_mwh": 1805842704.6202152,
+      "wind_capacity_mw": 1676868.8896237144,
+      "solar_generation_mwh": 9914820989.147997,
+      "solar_capacity_mw": 20612717.36708806,
+      "construction_cost_cny": 6701613239380.697,
+      "resource_cost_cny": 15093175267261.922,
+      "queue_mw": 2370496.0846039336,
+      "reserved_construction_fund_cny": 0.0,
+      "construction_fund_residual_cny": -9.822845458984375e-05,
+      "wind_available_generation_mwh": 3210387030.435939,
+      "wind_unused_available_fraction": 0.4375000000000001,
+      "wind_realised_cf": 0.12293532830364566,
+      "solar_available_generation_mwh": 19488961686.32842,
+      "solar_unused_available_fraction": 0.49125966027716694,
+      "solar_realised_cf": 0.05490925140451863,
+      "unmet_share": 0.0
+    },
+    "2050": {
+      "year": 2050,
+      "gdp_index": 2.3514724480467586,
+      "primary_energy_tce": 9446426080.094652,
+      "peo_share": 0.5436769274233687,
+      "nonfossil_share_proxy": 0.5436769274233687,
+      "combustion_co2_t": 9600981940.914532,
+      "other_positive_co2_t": 1397722526.3124042,
+      "positive_co2_t": 10998704467.226936,
+      "net_removals_t": 1346499000.0,
+      "net_co2_t": 9652205467.226936,
+      "neutralisation_ratio": 0.12242341850462393,
+      "energy_intensity": 4017238682.91176,
+      "carbon_intensity": 4677369057.146711,
+      "total_capacity_mw": 32106157.22545244,
+      "wind_solar_capacity_mw": 30183271.399277873,
+      "electricity_generation_mwh": 20608993042.81638,
+      "unmet_service_mwh": 0.0,
+      "requested_service_mwh": 36928741586.53177,
+      "operating_resource_cost_cny": 8956770809673.121,
+      "ets_net_transfer_cny": 25512677793.237785,
+      "ets_balance_cny": -1.0728836059570312e-06,
+      "cash_balance_residual_cny": 0.00390625,
+      "external_service_income_cny": 33235867427878.59,
+      "max_residual": 7.275957614183426e-09,
+      "scope": "mainland_conditional_CO2_not_all_GHG",
+      "coal_generation_mwh": 3767972877.714324,
+      "coal_capacity_mw": 1238329.0118103211,
+      "gas_generation_mwh": 57239555.65136163,
+      "gas_capacity_mw": 30749.156944056747,
+      "oil_generation_mwh": 29660903.81409456,
+      "oil_capacity_mw": 31657.38036263112,
+      "biomass_generation_mwh": 15796469.704799684,
+      "biomass_capacity_mw": 8485.88219435922,
+      "hydro_generation_mwh": 811833154.9035509,
+      "hydro_capacity_mw": 522162.9324328514,
+      "nuclear_generation_mwh": 339087903.4746134,
+      "nuclear_capacity_mw": 91501.46243034593,
+      "wind_generation_mwh": 3541742969.9990664,
+      "wind_capacity_mw": 3288790.6495067417,
+      "solar_generation_mwh": 12045659207.55457,
+      "solar_capacity_mw": 26894480.749771133,
+      "construction_cost_cny": 1279268998606.9673,
+      "resource_cost_cny": 10236039808280.088,
+      "queue_mw": 373091.6395471373,
+      "reserved_construction_fund_cny": 52729337623.04224,
+      "construction_fund_residual_cny": 0.00154876708984375,
+      "wind_available_generation_mwh": 6296431946.665007,
+      "wind_unused_available_fraction": 0.4375,
+      "wind_realised_cf": 0.1229353283036457,
+      "solar_available_generation_mwh": 25428258466.43976,
+      "solar_unused_available_fraction": 0.5262884706220663,
+      "solar_realised_cf": 0.0511285294852048,
+      "unmet_share": 0.0
+    },
+    "2060": {
+      "year": 2060,
+      "gdp_index": 2.7289797748800915,
+      "primary_energy_tce": 9654257181.142881,
+      "peo_share": 0.6120213822138868,
+      "nonfossil_share_proxy": 0.6120213822138868,
+      "combustion_co2_t": 8115735776.005929,
+      "other_positive_co2_t": 1230302574.1458564,
+      "positive_co2_t": 9346038350.151785,
+      "net_removals_t": 1346499000.0,
+      "net_co2_t": 7999539350.151785,
+      "neutralisation_ratio": 0.14407163223101177,
+      "energy_intensity": 3537680004.083973,
+      "carbon_intensity": 3424737125.639724,
+      "total_capacity_mw": 36079375.44743432,
+      "wind_solar_capacity_mw": 34734623.74877305,
+      "electricity_generation_mwh": 21505712871.624126,
+      "unmet_service_mwh": 325353981.06159776,
+      "requested_service_mwh": 37637189173.47489,
+      "operating_resource_cost_cny": 8733921151655.903,
+      "ets_net_transfer_cny": 18014681892.49192,
+      "ets_balance_cny": 0.0,
+      "cash_balance_residual_cny": 0.0,
+      "external_service_income_cny": 33580651673171.97,
+      "max_residual": 1.8189894035458565e-09,
+      "scope": "mainland_conditional_CO2_not_all_GHG",
+      "coal_generation_mwh": 2230524098.334045,
+      "coal_capacity_mw": 762667.3769061749,
+      "gas_generation_mwh": 0.0,
+      "gas_capacity_mw": 0,
+      "oil_generation_mwh": 0.0,
+      "oil_capacity_mw": 0,
+      "biomass_generation_mwh": 0.0,
+      "biomass_capacity_mw": 0,
+      "hydro_generation_mwh": 770164087.4290819,
+      "hydro_capacity_mw": 495361.8066931716,
+      "nuclear_generation_mwh": 321377987.141779,
+      "nuclear_capacity_mw": 86722.51506192487,
+      "wind_generation_mwh": 5339891752.2342615,
+      "wind_capacity_mw": 4958515.118936155,
+      "solar_generation_mwh": 12843754946.48496,
+      "solar_capacity_mw": 29776108.6298369,
+      "construction_cost_cny": 1330054100942.0132,
+      "resource_cost_cny": 10063975252597.916,
+      "queue_mw": 348193.5313547032,
+      "reserved_construction_fund_cny": 0.001953125,
+      "construction_fund_residual_cny": 0.0018510818481445312,
+      "wind_available_generation_mwh": 9493140892.86091,
+      "wind_unused_available_fraction": 0.4375000000000001,
+      "wind_realised_cf": 0.12293532830364572,
+      "solar_available_generation_mwh": 28152786938.29117,
+      "solar_unused_available_fraction": 0.5437838898636386,
+      "solar_realised_cf": 0.04924021771089902,
+      "unmet_share": 0.008644481381486734
+    }
+  },
+  "storage_boundary_gaps": [
+    {
+      "year": 2026,
+      "opening_minus_prior_close_mwh": -2665.3007088464656
+    },
+    {
+      "year": 2027,
+      "opening_minus_prior_close_mwh": -510.8149831561459
+    },
+    {
+      "year": 2028,
+      "opening_minus_prior_close_mwh": 2128.3180585074006
+    },
+    {
+      "year": 2029,
+      "opening_minus_prior_close_mwh": 5093.296696233694
+    },
+    {
+      "year": 2030,
+      "opening_minus_prior_close_mwh": 8383.07637474648
+    },
+    {
+      "year": 2031,
+      "opening_minus_prior_close_mwh": 12003.353433265525
+    },
+    {
+      "year": 2032,
+      "opening_minus_prior_close_mwh": 15965.587632637267
+    },
+    {
+      "year": 2033,
+      "opening_minus_prior_close_mwh": 20245.43020952212
+    },
+    {
+      "year": 2034,
+      "opening_minus_prior_close_mwh": 24855.696093139093
+    },
+    {
+      "year": 2035,
+      "opening_minus_prior_close_mwh": 38239.13220308261
+    },
+    {
+      "year": 2036,
+      "opening_minus_prior_close_mwh": 37951.25525383884
+    },
+    {
+      "year": 2037,
+      "opening_minus_prior_close_mwh": 41611.07999688614
+    },
+    {
+      "year": 2038,
+      "opening_minus_prior_close_mwh": 45197.05749508354
+    },
+    {
+      "year": 2039,
+      "opening_minus_prior_close_mwh": 48848.652287174074
+    },
+    {
+      "year": 2040,
+      "opening_minus_prior_close_mwh": 52627.82823678554
+    },
+    {
+      "year": 2041,
+      "opening_minus_prior_close_mwh": 56485.719152390084
+    },
+    {
+      "year": 2042,
+      "opening_minus_prior_close_mwh": 60525.067673390324
+    },
+    {
+      "year": 2043,
+      "opening_minus_prior_close_mwh": 64588.33240192081
+    },
+    {
+      "year": 2044,
+      "opening_minus_prior_close_mwh": 68828.4712064868
+    },
+    {
+      "year": 2045,
+      "opening_minus_prior_close_mwh": 64534.84621142619
+    },
+    {
+      "year": 2046,
+      "opening_minus_prior_close_mwh": 59545.294545057346
+    },
+    {
+      "year": 2047,
+      "opening_minus_prior_close_mwh": 54297.35345874552
+    },
+    {
+      "year": 2048,
+      "opening_minus_prior_close_mwh": 48582.75159292738
+    },
+    {
+      "year": 2049,
+      "opening_minus_prior_close_mwh": 41909.01721028355
+    },
+    {
+      "year": 2050,
+      "opening_minus_prior_close_mwh": 34590.4273875691
+    },
+    {
+      "year": 2051,
+      "opening_minus_prior_close_mwh": 27233.21374185302
+    },
+    {
+      "year": 2052,
+      "opening_minus_prior_close_mwh": 18109.755086061894
+    },
+    {
+      "year": 2053,
+      "opening_minus_prior_close_mwh": 21627.184680155595
+    },
+    {
+      "year": 2054,
+      "opening_minus_prior_close_mwh": 10875.696830415749
+    },
+    {
+      "year": 2055,
+      "opening_minus_prior_close_mwh": 7985.9971934647765
+    },
+    {
+      "year": 2056,
+      "opening_minus_prior_close_mwh": 4994.576231329003
+    },
+    {
+      "year": 2057,
+      "opening_minus_prior_close_mwh": 1578.578571167076
+    },
+    {
+      "year": 2058,
+      "opening_minus_prior_close_mwh": 12394.576554321451
+    },
+    {
+      "year": 2059,
+      "opening_minus_prior_close_mwh": 23699.66779345274
+    },
+    {
+      "year": 2060,
+      "opening_minus_prior_close_mwh": 20139.407259195345
+    }
+  ],
+  "solar_requests": [
+    {
+      "year": 2025,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1010721.694865759,
+      "expected_margin_cny_per_mw": 361387.73144721775,
+      "capacity_mw": 1081045.466642326,
+      "requested_mw": 491875.6873222583,
+      "capex_cny_per_mw": 4082656.9589999993
+    },
+    {
+      "year": 2026,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1133201.4036357594,
+      "expected_margin_cny_per_mw": 361387.73144721775,
+      "capacity_mw": 1572919.9539402437,
+      "requested_mw": 715678.579042811,
+      "capex_cny_per_mw": 3960177.250229999
+    },
+    {
+      "year": 2027,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1252006.721142659,
+      "expected_margin_cny_per_mw": 361387.73144721775,
+      "capacity_mw": 2213828.4205622496,
+      "requested_mw": 1007291.9313558235,
+      "capex_cny_per_mw": 3841371.9327230994
+    },
+    {
+      "year": 2028,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1367247.8791243522,
+      "expected_margin_cny_per_mw": 361387.73144721775,
+      "capacity_mw": 2965332.107753204,
+      "requested_mw": 1349226.1090277077,
+      "capex_cny_per_mw": 3726130.774741406
+    },
+    {
+      "year": 2029,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1479031.8023665948,
+      "expected_margin_cny_per_mw": 361387.73144721775,
+      "capacity_mw": 3822900.2963972893,
+      "requested_mw": 1739419.6348607666,
+      "capex_cny_per_mw": 3614346.8514991635
+    },
+    {
+      "year": 2030,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1587462.20791157,
+      "expected_margin_cny_per_mw": 361387.73144721775,
+      "capacity_mw": 4785025.775657938,
+      "requested_mw": 2177186.727924362,
+      "capex_cny_per_mw": 3505916.4459541882
+    },
+    {
+      "year": 2031,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1692639.7012901958,
+      "expected_margin_cny_per_mw": 361387.73144721775,
+      "capacity_mw": 5852733.470643118,
+      "requested_mw": 2662993.7291426184,
+      "capex_cny_per_mw": 3400738.9525755625
+    },
+    {
+      "year": 2032,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1657018.4071481163,
+      "expected_margin_cny_per_mw": 351621.5895361052,
+      "capacity_mw": 7018690.239476237,
+      "requested_mw": 3193504.058961688,
+      "capex_cny_per_mw": 3298716.7839982957
+    },
+    {
+      "year": 2033,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1652337.9867343996,
+      "expected_margin_cny_per_mw": 344267.9403537918,
+      "capacity_mw": 8285132.018645957,
+      "requested_mw": 3769735.0684839105,
+      "capex_cny_per_mw": 3199755.280478347
+    },
+    {
+      "year": 2034,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1551577.999037921,
+      "expected_margin_cny_per_mw": 330307.8566321028,
+      "capacity_mw": 9660227.465700062,
+      "requested_mw": 4395403.496893528,
+      "capex_cny_per_mw": 3103762.6220639967
+    },
+    {
+      "year": 2035,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1363347.0996400737,
+      "expected_margin_cny_per_mw": 310345.8242329132,
+      "capacity_mw": 11187865.475044094,
+      "requested_mw": 5090478.791145063,
+      "capex_cny_per_mw": 3010649.7434020764
+    },
+    {
+      "year": 2036,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 1133448.5624830327,
+      "expected_margin_cny_per_mw": 287625.56817127275,
+      "capacity_mw": 12826567.915588774,
+      "requested_mw": 5836088.401592892,
+      "capex_cny_per_mw": 2920330.251100014
+    },
+    {
+      "year": 2037,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 963342.2130004461,
+      "expected_margin_cny_per_mw": 269339.96645005705,
+      "capacity_mw": 14584870.632052489,
+      "requested_mw": 6636116.137583883,
+      "capex_cny_per_mw": 2832720.3435670137
+    },
+    {
+      "year": 2038,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 772299.7070550029,
+      "expected_margin_cny_per_mw": 249755.3771280972,
+      "capacity_mw": 16458061.238961602,
+      "requested_mw": 7488417.863727529,
+      "capex_cny_per_mw": 2747738.733260003
+    },
+    {
+      "year": 2039,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 576530.1012694826,
+      "expected_margin_cny_per_mw": 230016.278078881,
+      "capacity_mw": 18468495.839881632,
+      "requested_mw": 8403165.607146142,
+      "capex_cny_per_mw": 2665306.571262203
+    },
+    {
+      "year": 2040,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 384550.56815631734,
+      "expected_margin_cny_per_mw": 210721.55693273796,
+      "capacity_mw": 20612717.36708806,
+      "requested_mw": 9378786.402025068,
+      "capex_cny_per_mw": 2585347.374124337
+    },
+    {
+      "year": 2041,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 196333.48226673715,
+      "expected_margin_cny_per_mw": 191863.98970818514,
+      "capacity_mw": 22891287.21239268,
+      "requested_mw": 10415535.68163867,
+      "capex_cny_per_mw": 2507786.9529006067
+    },
+    {
+      "year": 2042,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 19410.448223109357,
+      "expected_margin_cny_per_mw": 173972.8562892171,
+      "capacity_mw": 25269603.564013556,
+      "requested_mw": 11497669.621626167,
+      "capex_cny_per_mw": 2432553.3443135885
+    },
+    {
+      "year": 2043,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -143451.97034032177,
+      "expected_margin_cny_per_mw": 157239.4983717308,
+      "capacity_mw": 27801211.8807054,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 2359576.743984181
+    },
+    {
+      "year": 2044,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -236402.86974014482,
+      "expected_margin_cny_per_mw": 145621.87060598604,
+      "capacity_mw": 27771251.272998862,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 2288789.441664655
+    },
+    {
+      "year": 2045,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -276972.1195905192,
+      "expected_margin_cny_per_mw": 137871.5255845164,
+      "capacity_mw": 27721980.273609634,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 2220125.7584147155
+    },
+    {
+      "year": 2046,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -278651.77845529024,
+      "expected_margin_cny_per_mw": 133026.64831845128,
+      "capacity_mw": 27668999.198967025,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 2153521.985662274
+    },
+    {
+      "year": 2047,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -250851.99808836915,
+      "expected_margin_cny_per_mw": 130415.18074594354,
+      "capacity_mw": 27582857.4517093,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 2088916.3260924055
+    },
+    {
+      "year": 2048,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -198165.68966994318,
+      "expected_margin_cny_per_mw": 129706.9914013939,
+      "capacity_mw": 27365053.033869356,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 2026248.8363096335
+    },
+    {
+      "year": 2049,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -125586.08699105168,
+      "expected_margin_cny_per_mw": 130543.67254018682,
+      "capacity_mw": 27088107.416437797,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 1965461.3712203444
+    },
+    {
+      "year": 2050,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -40466.58277115296,
+      "expected_margin_cny_per_mw": 132399.48110823685,
+      "capacity_mw": 26894480.749771133,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 1906497.5300837338
+    },
+    {
+      "year": 2051,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 10086.127752669854,
+      "expected_margin_cny_per_mw": 135100.7330722761,
+      "capacity_mw": 26402605.062448874,
+      "requested_mw": 12013185.303414237,
+      "capex_cny_per_mw": 1894016.1149999998
+    },
+    {
+      "year": 2052,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -41283.9267963497,
+      "expected_margin_cny_per_mw": 131455.9014704277,
+      "capacity_mw": 29861295.53465112,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 1894016.1149999998
+    },
+    {
+      "year": 2053,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -58535.75264332048,
+      "expected_margin_cny_per_mw": 130231.84203368676,
+      "capacity_mw": 29109790.64743582,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 1894016.1149999998
+    },
+    {
+      "year": 2054,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -46930.82161595789,
+      "expected_margin_cny_per_mw": 131055.2404068662,
+      "capacity_mw": 28252221.258767396,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 1894016.1149999998
+    },
+    {
+      "year": 2055,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -9499.760188777931,
+      "expected_margin_cny_per_mw": 133711.06619444303,
+      "capacity_mw": 27290094.579482406,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 1894016.1149999998
+    },
+    {
+      "year": 2056,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 52313.388196155196,
+      "expected_margin_cny_per_mw": 138096.86096575594,
+      "capacity_mw": 26222385.68447289,
+      "requested_mw": 11931185.486435164,
+      "capex_cny_per_mw": 1894016.1149999998
+    },
+    {
+      "year": 2057,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": 19419.679892087355,
+      "expected_margin_cny_per_mw": 135762.97153189825,
+      "capacity_mw": 29459654.888599034,
+      "requested_mw": 13404142.974312559,
+      "capex_cny_per_mw": 1894016.1149999998
+    },
+    {
+      "year": 2058,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -68040.32131121936,
+      "expected_margin_cny_per_mw": 129557.46953113007,
+      "capacity_mw": 32679073.290924683,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 1894016.1149999998
+    },
+    {
+      "year": 2059,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -102229.1329594513,
+      "expected_margin_cny_per_mw": 127131.68933254748,
+      "capacity_mw": 31303976.643846236,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 1894016.1149999998
+    },
+    {
+      "year": 2060,
+      "actor": "solar",
+      "kind": "investment_proposal",
+      "npv_cny_per_mw": -90220.97212051018,
+      "expected_margin_cny_per_mw": 127983.69785171474,
+      "capacity_mw": 29776108.6298369,
+      "requested_mw": 0.0,
+      "capex_cny_per_mw": 1894016.1149999998
+    }
+  ],
+  "loss_making_generators_2060": [],
+  "storage_curtailment_feedback_all_zero": true,
+  "unmet_by_sector_2060_mwh": {
+    "building_heat_proxy": 0.0,
+    "electricity_exports": 0.0,
+    "existing_electric_services": 224584996.21545023,
+    "industrial_heat_proxy": 0.0,
+    "nonenergy_feedstock": 0.0,
+    "transport_proxy": 100768984.84614755
+  },
+  "demand_extrapolation": {
+    "electricity_elasticity": 1.090516150808413,
+    "gdp_ratio_2060_vs_2024": 2.7289797748800915,
+    "existing_electricity_multiplier_2060": 2.0812890195371097,
+    "constant_elasticity_0_7_multiplier_only": 1.406265192734549,
+    "note": "Formula-only counterfactual; 0.7 is a diagnostic value, not calibrated or recommended."
+  },
+  "bridge": {
+    "peo_mwh_per_clean_mwh": 2.495540221524906,
+    "historical_2024_gcb_btr_bridge_t": 12663235581.012012,
+    "forecast_2025_positive_co2_t": 12942643960.943981,
+    "initial_2024_formula_positive_co2_t": 12517385103.34519
+  },
+  "sha256": {
+    "src/energy_model/q2_national.py": "c83bf39a8398d9c1d2513e5c73a8aafea620ee2ffc2edd57b15ffdda44f6e532",
+    "src/energy_model/q2_operations.py": "065a3c7ad575badb49cc3e5442fe009b88f6ede54dd877c25871b0a56fdaaa52",
+    "workflow/q2_national_design.json": "4746f93c131724b487cff4450d5d70fd8710431fce9eafd1e743c7074ee06b7e",
+    "data/processed/q2/national_observations.csv": "1c2efa84913dc07e25862ae307a38d12ce87819d9e51edfb967a41b090fc8954",
+    "outputs/q2/p2_lb_national/calibration.json": "adcfdbe68d3cdc64e456b7eddf2448974fd0658204f751a58e70e3721dc020e5",
+    "outputs/q2/p2_lb_national/baseline_path.csv": "5a37db529b80eb3b3067c81d16a8f703c564699347e1ddb4da17e12daf5434e5",
+    "scripts/diagnose_q2_national_mechanisms.py": "1c9b56a33d85949d4cf4c169911159789db79cc51b7074123e4a5f4f0d9f4f56"
+  }
+}

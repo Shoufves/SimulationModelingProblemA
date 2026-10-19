@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checks": {
+    "evaluation_data_never_changes_demand_fit": true,
+    "postinitial_physical_observations_never_enter_state": true,
+    "2024_pipeline_ignores_2014_inferred_multiplier": true,
+    "hydro_2014_pipeline_matches_inferred_multiplier": true,
+    "nuclear_2014_pipeline_matches_inferred_multiplier": true,
+    "every_initial_commitment_paid_exactly_before_commissioning": true,
+    "initial_reserved_fund_equals_initial_remaining": true,
+    "all_year_cash_and_escrow_balances_close": true,
+    "all_initial_projects_mature_once": true,
+    "actual_fuel_price_shock_preserved": true,
+    "initial_score_cost_not_refit_to_price_shock": true,
+    "national_wrapper_restores_cost_score_identity": true,
+    "national_wrapper_restores_reference_fossil_mwh": true
+  },
+  "demand_parameters": {
+    "activity_elasticity": -0.2630338162680476,
+    "oil_activity_elasticity": 0.8407667837806919,
+    "gas_activity_elasticity": 1.5949742951774175
+  },
+  "limitation": "No final empirical acceptance, national calibration or official certification tested"
+}

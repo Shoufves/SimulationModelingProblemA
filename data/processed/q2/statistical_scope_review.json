@@ -1,0 +1,47 @@
+{
+  "status": "author_reviewed_category_mapping_conditional_quantity",
+  "team_approved": false,
+  "sources": [
+    {
+      "path": "data/raw/q2_scope/nbs_fossil_nonfossil_20260417.html",
+      "sha256": "c69981a88456264889ddde4f106686ce62854bb8332459a763c87bc30a90ba11",
+      "url": "https://www.stats.gov.cn/hd/lyzx/zxgk/202605/t20260509_1963653.html",
+      "locator": "Energy Statistics Department reply dated 2026-04-17, reply content",
+      "phrases": [
+        "两个分类涵盖了所有能源品种",
+        "一次能源、二次能源消费不能重复计算"
+      ]
+    },
+    {
+      "path": "data/raw/q2_scope/nbs_energy_transition_20260604.html",
+      "sha256": "9317cdf48fb0267baa1b7dd41f13aa0d7e83feb7f687310b5b656785e5767990",
+      "url": "https://www.stats.gov.cn/sj/sjjd/202606/t20260604_1963892.html",
+      "locator": "2026-06-04, section 3(2); category explanation only, no 2025 observations enter model",
+      "phrases": [
+        "煤、油、气、非化石能源四足鼎立",
+        "一次电力及其他能源占比由",
+        "顺利实现非化石能源消费比重"
+      ]
+    },
+    {
+      "path": "data/raw/lb/base/nbs/yearbook2025/sm09.txt",
+      "sha256": "5eedb701372fa0cb89433ac01e27848ce579324f616bfa600a3a016d0efacc42",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/sm09.htm",
+      "locator": "Energy chapter methodological notes, section 4 items 3 and 4",
+      "phrases": [
+        "电力折算标准煤系数按平均发电煤耗计算",
+        "每千瓦小时折0.1229千克标准煤"
+      ]
+    }
+  ],
+  "category_mapping": "NBS coal/oil/gas and PEO four-part composition corresponds to fossil/nonfossil categories",
+  "quantity_method": "Effective composite coefficient fit only on 2015-2021, anchored separately in 2014 and 2024; not measured average generation coal consumption",
+  "classification_evidence_2025_quantities_used": false,
+  "official_attainment_certified": false,
+  "excluded_claims": [
+    "complete primary non-electric physical balance",
+    "pumped-hydro/biomass/trade individually resolved",
+    "official target achievement certification"
+  ],
+  "validation": "2015-2021 training and 2022-2024 already-seen conversion backtest; constant anchor comparator; unchanged 3 percentage point structural tolerance"
+}
