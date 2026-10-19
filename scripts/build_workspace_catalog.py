@@ -105,6 +105,7 @@ def datasets(refs):
     rows=[]
     paths=sorted((ROOT/'data/processed').rglob('*.csv'))+sorted((ROOT/'data/observations').glob('*.json'))
     paths += [ROOT/'data/processed/attachment_assets.json']
+    paths += sorted((ROOT/'data/processed/q2').glob('*.json')) if (ROOT/'data/processed/q2').is_dir() else []
     for p in paths:
         rel=p.relative_to(ROOT).as_posix()
         if '/unified/' in rel: continue
@@ -127,6 +128,10 @@ def datasets(refs):
             status='q1_descriptive_transcription_reviewed'
             use='Q1描述/可比案例；审查见docs/solutions/p1-lb-input-review.md及p1-lb-additional-review.md；非ABM准入'
             boundary='共同base原件转录及另行核验的公开补充；未获三人共同输入更新批准。逐行区分年份、来源及用途：旧成本投影、多年样本、2024实测和12月价格不混用；发用差非潮流。'
+        if rel.startswith('data/processed/q2/'):
+            status='q2_author_reviewed_conditional_research'
+            use='Q2全国聚合条件模型；逐用途审查data/catalog/q2_national_input_review.json；不替代原契约或团队批准'
+            boundary='原图复核的NBS值、原始API/CSV匹配、BTR CO2分项和IEA技术参照；重建及外推另列假设；PEO代理/CO2/已接触验证边界必须保留。'
         if rel == 'data/processed/q1/cost_method_parameters.csv':
             use='mmj baf1975原参数；Q1风电统一融资条件成本；见docs/solutions/p1-yx-integration.md'
             boundary='2024 USD、25年、3/5/7%实际WACC研究假设；国家新项目均值未配对；CF通常事前估计，O&M为报告假设；非保供系统成本或全国在运成本。'

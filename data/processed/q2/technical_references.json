@@ -1,0 +1,26 @@
+{
+  "coal": {
+    "overnight_usd2018_kw": 800,
+    "efficiency": 0.45,
+    "om_usd2018_mwh": 14.97,
+    "life": 40,
+    "lead": 4
+  },
+  "gas": {
+    "overnight_usd2018_kw": 560,
+    "efficiency": 0.58,
+    "om_usd2018_mwh": 13.49,
+    "life": 30,
+    "lead": 3
+  },
+  "nuclear": {
+    "overnight_usd2018_kw": 2500,
+    "efficiency": 0.33,
+    "om_usd2018_mwh": 26.42,
+    "fuel_usd2018_mwh": 10,
+    "life": 60,
+    "lead": 7
+  },
+  "source": "data/raw/lb/base/reports/iea_oecd_generation_cost_2020.pdf",
+  "price_conversion": "2018USD x6.62 CNY/USD (report Table2.2) x WDI CPI2024/CPI2018; broad deflator proxy"
+}

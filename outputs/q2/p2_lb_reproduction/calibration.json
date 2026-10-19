@@ -1,0 +1,1576 @@
+{
+  "best": {
+    "parameters": {
+      "activity_elasticity": 1,
+      "expectation_rate": 0.5,
+      "investment_rate": 0.5,
+      "replacement_rate": 0.25
+    },
+    "loss": 0.0,
+    "status": "success",
+    "components": [
+      {
+        "metric": "primary_energy_mwh",
+        "n": 7,
+        "missing_years": [],
+        "scale": 400000,
+        "weight": 0.25,
+        "weighted_loss": 0.0
+      },
+      {
+        "metric": "nonfossil_primary_share",
+        "n": 7,
+        "missing_years": [],
+        "scale": 0.5,
+        "weight": 0.25,
+        "weighted_loss": 0.0
+      },
+      {
+        "metric": "capacity_mw",
+        "n": 7,
+        "missing_years": [],
+        "scale": 50,
+        "weight": 0.125,
+        "weighted_loss": 0.0
+      },
+      {
+        "metric": "generation_mwh",
+        "n": 7,
+        "missing_years": [],
+        "scale": 200000,
+        "weight": 0.125,
+        "weighted_loss": 0.0
+      },
+      {
+        "metric": "combustion_co2_t",
+        "n": 7,
+        "missing_years": [],
+        "scale": 100000,
+        "weight": 0.25,
+        "weighted_loss": 0.0
+      }
+    ]
+  },
+  "quality": {
+    "training": {
+      "loss": 0.0,
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        }
+      ]
+    },
+    "already_seen_evaluation": {
+      "loss": 0.0,
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 3,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 3,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 3,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 3,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 3,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        }
+      ]
+    }
+  },
+  "trials": [
+    {
+      "parameters": {
+        "activity_elasticity": 0.9,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.25,
+        "replacement_rate": 0.25
+      },
+      "loss": 0.00014299946453270393,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2309717600077818e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 3.3015941903781184e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.182693828343017e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 8.97133881856882e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 0.9,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.25,
+        "replacement_rate": 0.5
+      },
+      "loss": 0.00014299946453270393,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2309717600077818e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 3.3015941903781184e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.182693828343017e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 8.97133881856882e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 0.9,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.25,
+        "replacement_rate": 0.75
+      },
+      "loss": 0.00014299946453270393,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2309717600077818e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 3.3015941903781184e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.182693828343017e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 8.97133881856882e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 0.9,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.5,
+        "replacement_rate": 0.25
+      },
+      "loss": 2.2463750246989657e-05,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2309717600077818e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 3.3015941903781184e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.182693828343017e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 8.97133881856882e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 0.9,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.5,
+        "replacement_rate": 0.5
+      },
+      "loss": 2.2463750246989657e-05,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2309717600077818e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 3.3015941903781184e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.182693828343017e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 8.97133881856882e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 0.9,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.5,
+        "replacement_rate": 0.75
+      },
+      "loss": 2.2463750246989657e-05,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2309717600077818e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 3.3015941903781184e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.182693828343017e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 8.97133881856882e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 0.9,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.75,
+        "replacement_rate": 0.25
+      },
+      "loss": 0.00014299946453270393,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2309717600077818e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 3.3015941903781184e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.182693828343017e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 8.97133881856882e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 0.9,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.75,
+        "replacement_rate": 0.5
+      },
+      "loss": 0.00014299946453270393,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2309717600077818e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 3.3015941903781184e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.182693828343017e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 8.97133881856882e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 0.9,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.75,
+        "replacement_rate": 0.75
+      },
+      "loss": 0.00014299946453270393,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2309717600077818e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 3.3015941903781184e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.182693828343017e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 8.97133881856882e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.25,
+        "replacement_rate": 0.25
+      },
+      "loss": 0.00012053571428571429,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.5125588343826794e-33
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.8906985429783493e-34
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.25,
+        "replacement_rate": 0.5
+      },
+      "loss": 0.00012053571428571429,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.5125588343826794e-33
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.8906985429783493e-34
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.25,
+        "replacement_rate": 0.75
+      },
+      "loss": 0.00012053571428571429,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.5125588343826794e-33
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.8906985429783493e-34
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.5,
+        "replacement_rate": 0.25
+      },
+      "loss": 0.0,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.5,
+        "replacement_rate": 0.5
+      },
+      "loss": 0.0,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.5,
+        "replacement_rate": 0.75
+      },
+      "loss": 0.0,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.75,
+        "replacement_rate": 0.25
+      },
+      "loss": 0.00012053571428571429,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 7.562794171913397e-34
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.8906985429783493e-34
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.75,
+        "replacement_rate": 0.5
+      },
+      "loss": 0.00012053571428571429,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 7.562794171913397e-34
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.8906985429783493e-34
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.75,
+        "replacement_rate": 0.75
+      },
+      "loss": 0.00012053571428571429,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 7.562794171913397e-34
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.8906985429783493e-34
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 0.0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1.1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.25,
+        "replacement_rate": 0.25
+      },
+      "loss": 0.00014355019265498283,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2611506374665228e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 9.904782571134357e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.2116891093692045e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 9.191282885234118e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1.1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.25,
+        "replacement_rate": 0.5
+      },
+      "loss": 0.00014355019265498283,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2611506374665228e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 9.904782571134357e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.2116891093692045e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 9.191282885234118e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1.1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.25,
+        "replacement_rate": 0.75
+      },
+      "loss": 0.00014355019265498283,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2611506374665228e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 9.904782571134357e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.2116891093692045e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 9.191282885234118e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1.1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.5,
+        "replacement_rate": 0.25
+      },
+      "loss": 2.3014478369268565e-05,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2611506374665228e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 9.904782571134357e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.2116891093692182e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 9.191282885234118e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1.1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.5,
+        "replacement_rate": 0.5
+      },
+      "loss": 2.3014478369268565e-05,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2611506374665228e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 9.904782571134357e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.2116891093692182e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 9.191282885234118e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1.1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.5,
+        "replacement_rate": 0.75
+      },
+      "loss": 2.3014478369268565e-05,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2611506374665228e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 9.904782571134357e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.0
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.2116891093692182e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 9.191282885234118e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1.1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.75,
+        "replacement_rate": 0.25
+      },
+      "loss": 0.00014355019265498286,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2611506374665228e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 9.904782571134357e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.211689109369216e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 9.191282885234118e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1.1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.75,
+        "replacement_rate": 0.5
+      },
+      "loss": 0.00014355019265498286,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2611506374665228e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 9.904782571134357e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.211689109369216e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 9.191282885234118e-06
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "activity_elasticity": 1.1,
+        "expectation_rate": 0.5,
+        "investment_rate": 0.75,
+        "replacement_rate": 0.75
+      },
+      "loss": 0.00014355019265498286,
+      "status": "success",
+      "components": [
+        {
+          "metric": "primary_energy_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 400000,
+          "weight": 0.25,
+          "weighted_loss": 1.2611506374665228e-05
+        },
+        {
+          "metric": "nonfossil_primary_share",
+          "n": 7,
+          "missing_years": [],
+          "scale": 0.5,
+          "weight": 0.25,
+          "weighted_loss": 9.904782571134357e-34
+        },
+        {
+          "metric": "capacity_mw",
+          "n": 7,
+          "missing_years": [],
+          "scale": 50,
+          "weight": 0.125,
+          "weighted_loss": 0.00012053571428571429
+        },
+        {
+          "metric": "generation_mwh",
+          "n": 7,
+          "missing_years": [],
+          "scale": 200000,
+          "weight": 0.125,
+          "weighted_loss": 1.211689109369216e-06
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 7,
+          "missing_years": [],
+          "scale": 100000,
+          "weight": 0.25,
+          "weighted_loss": 9.191282885234118e-06
+        }
+      ]
+    }
+  ],
+  "equivalent_parameters": [
+    {
+      "activity_elasticity": 1,
+      "expectation_rate": 0.5,
+      "investment_rate": 0.5,
+      "replacement_rate": 0.25
+    },
+    {
+      "activity_elasticity": 1,
+      "expectation_rate": 0.5,
+      "investment_rate": 0.5,
+      "replacement_rate": 0.5
+    },
+    {
+      "activity_elasticity": 1,
+      "expectation_rate": 0.5,
+      "investment_rate": 0.5,
+      "replacement_rate": 0.75
+    }
+  ],
+  "baseline_loss": 0.0010179536349516044,
+  "alternative_rule_loss": 0.004124999999999999,
+  "evaluation_identity": "already_seen_not_blind",
+  "acceptance": "engineering_only"
+}

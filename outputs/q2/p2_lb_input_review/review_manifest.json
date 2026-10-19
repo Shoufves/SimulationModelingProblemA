@@ -1,0 +1,33 @@
+{
+  "status": "candidate_inventory_checked_not_admitted",
+  "source_hashes": {
+    "data/processed/unified/nbs_history.csv": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+    "data/catalog/nbs_record_provenance.csv": "6dc5bad2fb8c555759921824a8e4eeef80053fe32c8f47535fde2e635673d95f",
+    "data/processed/china_co2_gcb_annual.csv": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98",
+    "data/processed/technology_accounting_parameters.csv": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
+    "data/processed/policy_target_reference.csv": "c29fba83db1cd477f279a10cc58338f923b51a4e711a48cb9b93bdae20ee39f9",
+    "data/processed/china_macro_annual.csv": "5b033c6e8593031ff5c223dda4f2e7de42a2d9b77030bed85018f82c5969b1d8",
+    "data/processed/nbs_sector_use_2023.csv": "2ac1f2fc7dd3f77ed25c46956c0f29be744a3b24d9737fe49c15ec565dfefc9b",
+    "outputs/q1/p1_yx/model_handoff.csv": "763e59930721e8b1b665a0e7648c8fa1975516edcb2803844f91a3250d488541",
+    "data/processed/q1/reviewed_2024_additions.csv": "60e91cb161df7f33da4ca89c7b83b02619c6e44defa5d6f2781f83673d3f8fbd",
+    "data/observations/power_generation_2015_2024.json": "a6aae99a8d04304f29ccb291cabb6dab06ac208493cb498cb1fc149223738e11",
+    "data/processed/cea_market_annual.csv": "fbc8ce418c2457ae124123d3614fe2c2b58f34054c12833e489aab07fbf275fd",
+    "data/processed/fuel_storage_hydrogen_snapshots.csv": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
+    "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+    "data/raw/batch3_scenarios/ipcc_2006_stationary_combustion.pdf": "a25d9f96d7672df391b328de79d4cfd812c07fe79d5cf4a30d23d82d8f02985b",
+    "data/raw/batch3_scenarios/irena_power_costs_2024.pdf": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
+    "data/raw/batch3_scenarios/policy_carbon_2021.html": "e55cb582d619200931087b3b957beb20f795d5ce38caa79ee4f724fa3027bde6",
+    "data/raw/batch3_scenarios/policy_carbon_2026.html": "4255be5af1310a854134f52b7ac03ceca142f08b675c6fcefb2a9570653ff83f",
+    "data/raw/batch1_national/nbs_2025_C09-02.jpg": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
+    "data/raw/batch1_national/nbs_2025_C09-15.jpg": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b"
+  },
+  "code_sha256": "bf4232a9e9cc4c2ca29bb69b26c7aee1a29f6e0042096054cb53708af73664e5",
+  "outputs": {
+    "candidate_coverage.csv": "662d00b6bcc477fe4ff2344d0fa7aebf943b0ed7763a50f3f2fd2da9a7018f10",
+    "gaps_and_conflicts.csv": "a2129ca3f3a886194b678e85ef532de28d33b5bb4edf984e4d0846d09060ace7",
+    "gcb_transcription_checks.csv": "1c88eefff1de9667839ee85e0e3a4d87dc5bdd61982409dd78e07af724ad4ca9",
+    "report.md": "7d67514e9c8fa1e8cbc204d39f65b4ea1d75c6fab0bc921fd314324a26a830e6",
+    "source_identity_checks.json": "1ce44f66f07d9abc58b289f8b96805b0892ef80c621d483d1a02c3cd63c2991e"
+  },
+  "raw_numeric_check": "GCB CSV rows only; other original pages are not newly numerically verified"
+}

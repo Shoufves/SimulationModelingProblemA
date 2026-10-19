@@ -1,0 +1,543 @@
+{
+  "passed": true,
+  "status": "repaired_conditional_Q2_candidate_review_ready",
+  "checks": [
+    {
+      "name": "latest_national_results_match_code_inputs_sources",
+      "passed": true,
+      "detail": "20261019T061618016081Z"
+    },
+    {
+      "name": "full_regression_tests_no_skip",
+      "passed": true,
+      "detail": {
+        "tests": 257,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": true,
+        "seconds": 19.67093580000801,
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+      }
+    },
+    {
+      "name": "regression_covers_current_mechanisms",
+      "passed": true,
+      "detail": "Fresh full regression includes mechanism counterexamples"
+    },
+    {
+      "name": "frozen_dependency_versions",
+      "passed": true,
+      "detail": {
+        "numpy": "2.3.5",
+        "scipy": "1.16.3",
+        "mesa": "3.3.1",
+        "pandas": "3.0.1",
+        "matplotlib": "3.10.7"
+      }
+    },
+    {
+      "name": "official_originals_and_Q1_contracts_equal_common_base",
+      "passed": true,
+      "detail": {
+        "data/sources.json": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f",
+        "data/evidence_reviews.json": "6043473c2192dc4c91d47c521bea5adb15b0b07197ad6c421b9216a6f207f376",
+        "workflow/model_inputs.json": "adcdca7ed33dc4048761a220c7a00b6585733117321ed1ce8571dd521c0520b0",
+        "只读工作区/final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+        "只读工作区/gemini_final_idea.md": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+        "只读工作区/README.md": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af",
+        "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf": "a892165c851da77c916d6f2dd7a9cf7062c1e37698a88641b3a3105bef90c963",
+        "附件1.xlsx": "4cd3f519f72d18869d33713fc9dd2ec7a3ba83d5178ee6d4170d37adf45ea1cd",
+        "附件2.xlsx": "7a35204be5db7e8cbfddf77a8a36604fafa87dabbf80c69c752b8b8f0d97a330",
+        "附件3.xlsx": "df616d471bd31fe865ad9d509ea3fc1fa68d8bd172af7c10bb15ffba7a74987e",
+        "附件4.xlsx": "a7945ce8d6c279ecb695c3e56b7d331c1d3f098a282b59a8d1826a69b8736eaf"
+      }
+    },
+    {
+      "name": "q1_18_scientific_outputs_preserved",
+      "passed": true,
+      "detail": [
+        "cost_sensitivity.svg",
+        "coverage.csv",
+        "demand_trends.svg",
+        "energy_assessment.csv",
+        "energy_roles.csv",
+        "gaps_and_conflicts.csv",
+        "history.csv",
+        "import_origins.csv",
+        "indicators.csv",
+        "model_handoff.csv",
+        "price_trends.svg",
+        "regional_comparison.csv",
+        "regional_shares.svg",
+        "renewable_regions.csv",
+        "report.md",
+        "static_balance.json",
+        "synergy_assessment.csv",
+        "technology_region_capacities.csv"
+      ]
+    },
+    {
+      "name": "frozen_empirical_thresholds_passed",
+      "passed": true,
+      "detail": {
+        "checks": {
+          "energy": true,
+          "generation": true,
+          "capacity": true,
+          "wind_capacity": true,
+          "solar_capacity": true,
+          "structure": true,
+          "sparse_training_combustion": true
+        },
+        "all_thresholds_passed": true,
+        "emissions_holdout": "No same-scope BTR 2022-2024 observation; not evaluated as zero error",
+        "team_approved": false
+      }
+    },
+    {
+      "name": "all_grid_trials_accounted",
+      "passed": true,
+      "detail": 2250
+    },
+    {
+      "name": "missing_emissions_holdout_not_fabricated",
+      "passed": true,
+      "detail": {
+        "metric": "combustion_co2_t",
+        "n": 0,
+        "loss": null,
+        "mape": null,
+        "mae": null,
+        "missing_years": [
+          2022,
+          2023,
+          2024
+        ]
+      }
+    },
+    {
+      "name": "full_2025_2060_path",
+      "passed": true,
+      "detail": 36
+    },
+    {
+      "name": "exported_combustion_and_net_CO2_reconcile",
+      "passed": true,
+      "detail": [
+        {
+          "year": 2025,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2026,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2027,
+          "combustion_residual_t": -1.9073486328125e-06,
+          "LP_max_residual_mwh": 7.275957614183426e-09,
+          "cash_residual_cny": 0.00390625
+        },
+        {
+          "year": 2028,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2029,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": 0.005859375
+        },
+        {
+          "year": 2030,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2031,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2032,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 3.05000469325023e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2033,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2034,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 3.637978807091713e-09,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2035,
+          "combustion_residual_t": -1.9073486328125e-06,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2036,
+          "combustion_residual_t": -1.9073486328125e-06,
+          "LP_max_residual_mwh": 2.1600499167107046e-09,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2037,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 4.547473508864641e-09,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2038,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.0913936421275139e-08,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2039,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2040,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 7.275957614183426e-09,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2041,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 5.4569682106375694e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2042,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.5916157281026244e-09,
+          "cash_residual_cny": -0.00390625
+        },
+        {
+          "year": 2043,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2044,
+          "combustion_residual_t": -1.9073486328125e-06,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2045,
+          "combustion_residual_t": -1.9073486328125e-06,
+          "LP_max_residual_mwh": 5.4569682106375694e-09,
+          "cash_residual_cny": 0.0
+        },
+        {
+          "year": 2046,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2047,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 3.637978807091713e-09,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2048,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": 0.00390625
+        },
+        {
+          "year": 2049,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 2.1827872842550278e-08,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2050,
+          "combustion_residual_t": -1.9073486328125e-06,
+          "LP_max_residual_mwh": 5.4569682106375694e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2051,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": 0.00390625
+        },
+        {
+          "year": 2052,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 2.7284841053187847e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2053,
+          "combustion_residual_t": -9.5367431640625e-07,
+          "LP_max_residual_mwh": 1.4551915228366852e-08,
+          "cash_residual_cny": -0.0078125
+        },
+        {
+          "year": 2054,
+          "combustion_residual_t": 1.9073486328125e-06,
+          "LP_max_residual_mwh": 5.4569682106375694e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2055,
+          "combustion_residual_t": 9.5367431640625e-07,
+          "LP_max_residual_mwh": 2.4442670110147446e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2056,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2057,
+          "combustion_residual_t": 9.5367431640625e-07,
+          "LP_max_residual_mwh": 3.637978807091713e-09,
+          "cash_residual_cny": -0.005859375
+        },
+        {
+          "year": 2058,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.4551915228366852e-08,
+          "cash_residual_cny": 0.001953125
+        },
+        {
+          "year": 2059,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 7.275957614183426e-09,
+          "cash_residual_cny": -0.001953125
+        },
+        {
+          "year": 2060,
+          "combustion_residual_t": 0.0,
+          "LP_max_residual_mwh": 1.8189894035458565e-09,
+          "cash_residual_cny": -0.00390625
+        }
+      ]
+    },
+    {
+      "name": "small_physical_residuals",
+      "passed": true,
+      "detail": 2.1827872842550278e-08
+    },
+    {
+      "name": "cash_and_ETS_transfers_reconcile",
+      "passed": true,
+      "detail": "National annual CNY residual < 0.1; ETS residual < 0.001"
+    },
+    {
+      "name": "construction_commitments_funded",
+      "passed": true,
+      "detail": "Reserved funding equals sum of unpaid project commitments"
+    },
+    {
+      "name": "infrastructure_and_financing_ledgers",
+      "passed": true,
+      "detail": "Independent infrastructure escrow and sponsor/shareholder/lender transfers"
+    },
+    {
+      "name": "cross_year_storage_continuity",
+      "passed": true,
+      "detail": "New storage enters empty; retirement disposal explicitly deducted"
+    },
+    {
+      "name": "all_four_service_budgets_fund_energy",
+      "passed": true,
+      "detail": {
+        "rows": 144,
+        "cash_tolerance_cny": 0.1,
+        "basis": "Same absolute roundoff bound as national cash ledger; multi-trillion CNY balances"
+      }
+    },
+    {
+      "name": "device_payments_and_retained_cash_reconcile",
+      "passed": true,
+      "detail": 144
+    },
+    {
+      "name": "all_service_device_queues_paid_and_delayed",
+      "passed": true,
+      "detail": 216
+    },
+    {
+      "name": "hard_construction_ceiling_all_annual_approvals",
+      "passed": true,
+      "detail": {
+        "approvals": 95,
+        "exceedances": 0,
+        "max_ratio": 1.0
+      }
+    },
+    {
+      "name": "renewable_approvals_match_final_joint_sales_audit",
+      "passed": true,
+      "detail": "Every approved project checked with the other same-batch projects present"
+    },
+    {
+      "name": "every_new_generator_has_equity_and_loan_funding",
+      "passed": true,
+      "detail": 95
+    },
+    {
+      "name": "no_pre1991_nuclear_cohort",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "question2_all_target_metrics",
+      "passed": true,
+      "detail": [
+        "carbon_intensity_reduction_vs_2005",
+        "carbon_intensity_reduction_vs_2025",
+        "energy_intensity_reduction_vs_2005",
+        "net_co2_t",
+        "neutralisation_ratio",
+        "nonfossil_share_proxy",
+        "peak_value",
+        "peak_year",
+        "positive_co2_t",
+        "primary_energy_tce"
+      ]
+    },
+    {
+      "name": "all_sensitivity_runs_successful",
+      "passed": true,
+      "detail": {
+        "executed": 91,
+        "successful": 91,
+        "failures": 0,
+        "joint_sample_size": 12,
+        "morris_trajectories": 6,
+        "probabilistic_claim": false,
+        "range_interpretation": "Tested conditional domain, not confidence interval or real-world probability"
+      }
+    },
+    {
+      "name": "all_three_required_factors_two_sides",
+      "passed": true,
+      "detail": [
+        "carbon_price_multiplier=0.5",
+        "carbon_price_multiplier=1.5",
+        "cost_decline_delta=-0.01",
+        "cost_decline_delta=0.01",
+        "gdp_growth_delta=-0.01",
+        "gdp_growth_delta=0.01"
+      ]
+    },
+    {
+      "name": "Morris_and_joint_sampling_executed",
+      "passed": true,
+      "detail": {
+        "morris": 612,
+        "joint_samples": 12
+      }
+    },
+    {
+      "name": "fresh_process_reproduction",
+      "passed": true,
+      "detail": {
+        "returncode": 0,
+        "expected": 0,
+        "tail": "Training 2050/2250\nTraining 2100/2250\nTraining 2150/2250\nTraining 2200/2250\nTraining 2250/2250\nSensitivity 5/91\nSensitivity 10/91\nSensitivity 15/91\nSensitivity 20/91\nSensitivity 25/91\nSensitivity 30/91\nSensitivity 35/91\nSensitivity 40/91\nSensitivity 45/91\nSensitivity 50/91\nSensitivity 55/91\nSensitivity 60/91\nSensitivity 65/91\nSensitivity 70/91\nSensitivity 75/91\nSensitivity 80/91\nSensitivity 85/91\nSensitivity 90/91\n{\"status\": \"success_conditional_candidate\", \"elapsed_seconds\": 583.7941784000141}\n"
+      }
+    },
+    {
+      "name": "all_scientific_artifacts_byte_identical",
+      "passed": true,
+      "detail": {
+        "artifacts": 26,
+        "hash_seed": 7919
+      }
+    },
+    {
+      "name": "admission_failure_probe",
+      "passed": true,
+      "detail": {
+        "returncode": 1,
+        "expected": 1,
+        "tail": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"E:\\Team\\2026JM\\SimulationModelingProblemA\\scripts\\run_q2_national.py\", line 422, in main\n    data,design,_=preflight(); dump(out/\"frozen_design.json\",design)\n                  ^^^^^^^^^^^\n  File \"<string>\", line 1, in <lambda>\n  File \"<string>\", line 1, in <genexpr>\nValueError: injected admission failure\n"
+      }
+    },
+    {
+      "name": "latest_failure_not_hidden_by_old_success",
+      "passed": true,
+      "detail": "Original success preserved under probe .attempts; primary delivery untouched"
+    }
+  ],
+  "team_approved": false,
+  "completion_scope": "Q2 author conditional aggregate research candidate; no official/all-GHG/probabilistic certification",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "mesa": "3.3.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.7"
+  },
+  "implementation_and_declared_checks_complete": true,
+  "closed_implementation_gaps": [
+    "Finite paid equipment for all four service proxies",
+    "Consumer energy budgets and retained cash constrain device purchases",
+    "Shared demand elasticity schedule and final joint renewable approval",
+    "Audit running/failure state replaces stale success before checks",
+    "Hard annual construction cap enforced at request and final approval including repeat requests",
+    "Missing input before preflight records failed ownership and permits retry",
+    "Required source/status/allowed-use/operations and observation lineage fail closed",
+    "Common Issue7 entry invokes the separately admitted national candidate"
+  ],
+  "independent_review_still_required": true,
+  "scientific_limits": [
+    "Already-seen evaluation reused for disclosed model revisions",
+    "No same-scope emissions holdout",
+    "PEO/nonfossil and process/sink bridges conditional",
+    "Representative day does not validate annual reliability",
+    "Not all-GHG neutrality",
+    "Aggregate grid and finance parameters are explicit research assumptions; no independent national mechanism certification"
+  ],
+  "elapsed_seconds": 587.263600300008,
+  "current_hashes": {
+    "run.py": "f650af45e441255037ab977e600da804cee11a39bb7345301ebe947c68ccf473",
+    "scripts/run_q2_national.py": "5ad7599c49207bc7ec62942c4a6a7a96fbfdc8fc0823349326d9adfe32e82ae2",
+    "scripts/build_q2_national_inputs.py": "df2c1ffbf7df8571aa0b2f8bc021927ffc0b3cc05e134a6edcb11e99411dd98c",
+    "src/energy_model/q2_national.py": "2fb74c91e0475f1c5e38b9306f83f6f7a47c801c8ba662233c70edbc29e18454",
+    "src/energy_model/q2_finance.py": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
+    "src/energy_model/q2_admission.py": "0c47b5ac765bf30cb403608b6acf83ff154dd570c64f7d364381a853871b6a01",
+    "src/energy_model/q2_operations.py": "38758b7e525b64f9036233b4a5ac54c1e43182c588a4a03da95bc6cbd819fcfd",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0",
+    "data/catalog/q2_national_input_review.json": "ed0ce0f9de695e4aa7d10c4ea6a1fedeb58368043bd479a1e8feb81df366c833",
+    "data/processed/q2/national_observations.csv": "4d0462cfddcf51ff42e2f4e489437380e18f08b90c76df3ff7a71684856792c5",
+    "data/processed/q2/technical_references.json": "af38ccd89ece76b7e37f929ec8056acd1cc6bcba47a2e403589766afb16ca62f",
+    "workflow/q2_national_design.json": "618b0c97938dbe7b7f8149f12d1dbbdffe06cdbe7e55bdb6530c9d7c79142ee0",
+    "data/processed/q2/gcb_peak_bridge_review.json": "dd3a278703ab2c0ef2374d5d0613188dbf822d38d3f238ff8f4a24f3e3865a13",
+    "tests/test_q2_national.py": "a39675a1c3b504e839ae5d35f3bc6e88aee0cdd4739dc1da0039e3e1930ce743",
+    "scripts/review_q2_national_delivery.py": "8dc0ec61a9b1230ead1acdb85e7aeaa1ca17d9622da75e82e26aed9566ed86dc"
+  }
+}

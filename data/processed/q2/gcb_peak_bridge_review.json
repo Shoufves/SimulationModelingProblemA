@@ -1,0 +1,67 @@
+{
+  "status": "author_reviewed_conditional_bridge_not_empirical_equivalence",
+  "team_approved": false,
+  "reviewer": "lb author; independent team review still required",
+  "source_hashes": {
+    "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
+    "data/raw/lb/base/reports/china_btr1_2024.pdf": "3864e6e16e03517946907f518b9843bd8e5934f72a36e4ee78e8e0212f90a5cb"
+  },
+  "checked_years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "scale_btr2021_over_gcb2021": 1.0304498093277947,
+  "formula": "GCB_t[y] * BTR_positive_CO2_t[2021] / GCB_t[2021]; retain direct BTR observations in 2005/2020/2021",
+  "allowed_operations": [
+    "external_diagnostic",
+    "conditional_peak_bridge"
+  ],
+  "excluded_operations": [
+    "initialization",
+    "calibration",
+    "same_scope_evaluation",
+    "official_peak_certification"
+  ],
+  "limitations": "Single-anchor proportional movement is a research assumption; residual differences at 2005/2020 remain. No process CO2 added to GCB, no LULUCF/net/all-GHG equivalence, no additional observations imputed for training.",
+  "common_year_checks": [
+    {
+      "year": 2005,
+      "gcb_t": 5881990923.0,
+      "btr_positive_t": 6533452000.0,
+      "scaled_gcb_t": 6061096425.07317,
+      "relative_gap_to_btr": -0.07229800952495413
+    },
+    {
+      "year": 2020,
+      "gcb_t": 10896520400.0,
+      "btr_positive_t": 11201668000.0,
+      "scaled_gcb_t": 11228317368.516426,
+      "relative_gap_to_btr": 0.0023790535941992097
+    },
+    {
+      "year": 2021,
+      "gcb_t": 11284401137.0,
+      "btr_positive_t": 11628009000.0,
+      "scaled_gcb_t": 11628009000.0,
+      "relative_gap_to_btr": 0.0
+    }
+  ]
+}

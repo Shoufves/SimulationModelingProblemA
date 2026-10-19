@@ -11,7 +11,7 @@ python -m venv .venv
 .\.venv\Scripts\python -B -X utf8 run.py test
 ```
 
-新环境安装命令供迁移到其他机器时使用。本轮未重新安装依赖；精确实际版本见 `outputs/validation/environment.json`。旧 `.venv-workbench` 已移除，不作为数据或提交材料。未来Mesa/SciPy正式模型尚未实现，不能据现有依赖清单宣称全国模型环境已验收。
+新环境安装命令供迁移到其他机器时使用。通用依赖记录见 `outputs/validation/environment.json`；全国聚合条件模型已接入Mesa/SciPy，其实际冻结版本与验收见 `outputs/q2_review/p2_lb_national/verification.json`。旧 `.venv-workbench` 不作为数据或提交材料。
 
 | 命令 | 做什么 | 输出/边界 |
 |---|---|---|
@@ -51,6 +51,25 @@ Python3.11及以上；初次安装`python -m pip install -r requirements-q1.txt`
 ```
 
 界面依赖清单沿用原mmj版本。操作手册与截图保留；本次整理以命令行数据/模块复现为验收，未宣称重新完成浏览器交互验收。界面仍显示合成实验和局部证据，不能当全国预测演示。
+
+## P2/lb 全国聚合条件模型
+
+安装 `requirements-q2.txt`，数据审查和Q1回归还需已有的 `requirements-data.txt`、`requirements-q1.txt`。当前实测环境为Python3.12、Mesa3.3.1、SciPy1.16.3，原环境不自动升级依赖。
+
+```powershell
+python -B -X utf8 scripts/build_q2_national_inputs.py
+python -B -X utf8 run.py q2
+python -B -X utf8 scripts/review_q2_delivery.py
+python -B -X utf8 scripts/review_q2_national_delivery.py
+```
+
+第一条按原图复核转录、原始API/CSV和报告页表重建511条观测、技术参考及GCB条件峰值专项审查，不变更原Q1契约。第二条执行2250组训练搜索、已接触评估、独立2024初态及条件试验；结果见 `outputs/q2/p2_lb_national/`。第三条保留工程夹具和原Q1回归，包括故意拒绝未准入首轮配置的测试；其旧状态名称 `engineering_passed_national_blocked` 仅指这个旧配置，不能替代第四条的全国候选验收结论。第四条执行独立进程、不同哈希种子的复现及来源/结果/账本/失败语义核查。
+
+V7统一Issue #7共同入口：`python -B -X utf8 run.py q2 --config workflow/q2_inputs.json --output-dir outputs/q2/review_pr9_common_entry`。该配置名为明确提示的兼容别名，实际使用全国专用设计及用途审查；`q2_inputs.json`原字节和候选用途不升级。若仅检查旧候选清单，用`python scripts/run_q2.py --config workflow/q2_inputs.json`，仍按旧契约阻断。独立复现使用共同配置入口。
+
+每次运行保留旧输出于同名 `.attempts/`；`latest-attempt.json`决定当前有效性。先前成功不能掩盖新失败。读取全国结果前调用 `scripts/run_q2_national.py` 中的 `verify_latest`，核对当前代码、输入、原件和全部结果哈希。`q2_scientific_complete=false` 是执行器不自行签发研究验收的约定；四任务交付结论见独立审查的 `outputs/q2_review/p2_lb_national/verification.json`，不代表团队批准。
+
+复现只承诺冻结假设内的确定性结果；碳排放留出缺测、统计桥接、代表日和反复使用评估窗口的限制见[模型修订记录](solutions/p2-lb-national-review.md)。
 
 ## 版本与恢复
 

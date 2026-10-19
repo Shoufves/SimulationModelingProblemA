@@ -2,9 +2,11 @@
 
 以 `只读工作区/final.md` 为唯一研究主线。本工程已将 yx 的数学与数据准备、mmj 的可运行模块和证据核验、lb 的贸易及社会扩展资料按用途合并。仅研究 A 题。
 
-**先看路线，再选数据，再运行。** 当前能够复现附件处理、限定数据初评、需求统计回算、许可案例与合成机制实验。全国多智能体历史校准、年度与运行层耦合、2030/2060预测及政策优化仍需实施；整理完成不等于这些研究已完成。
+**先看路线，再选数据，再运行。** 本分支新增问题二全国聚合条件模型：真实历史多目标校准、年度主体与连续运行、2030/2060条件推演和三因素灵敏度。入口见[Q2候选与自检](docs/solutions/p2-lb.md)。官方统计衔接、逐厂状态及全年网络可靠性仍有限制，不能将研究候选称为官方预测；问题三政策优化未在本轮完成。
 
-**当前 Q1 交付：lb 主线、mmj 补强。** 两份原候选已通过 yx 侧本地技术复审，尚未正式批准或合并；本次以 lb `353cca7` 为基础，接入 mmj `baf1975` 的统一风电成本、用途审查绑定与 GDP 外生驱动标识。见[整合与逐项来源](docs/solutions/p1-yx-integration.md)和[当前完整报告](outputs/q1/p1_yx/report.md)。默认 `run.py q1` 写入 `outputs/q1/p1_yx/`；整合 PR 须由 mmj、lb 针对同一最终提交评审批准。
+2026-10-19 V7评审修复已验证：施工硬上限、输入缺失后的失败状态及恢复、逐来源用途准入均已修订，共同入口已接通。257项全量测试、2250组训练、91组条件试验及31项验收通过；26份科学产物独立进程复现一致。详见[修复报告](docs/solutions/p2-lb-repaired.md)与[review(7)响应](docs/solutions/p2-lb-review7-response.md)。原误差门槛、已接触评估身份及研究假设限制保留；等待mmj、yx评审新SHA。
+
+**Q1 已由 PR #6 合并。** 合并 SHA 为 `804ec15ee43874303986a7ad91b2cde05c65b124`，采用 lb 主线及 mmj 补强。见[整合与逐项来源](docs/solutions/p1-yx-integration.md)和[完整报告](outputs/q1/p1_yx/report.md)。省级份额分母的31省来源血缘为保留的P3可选补强；本轮不改Q1原成果。
 
 ## 阅读入口
 
@@ -50,6 +52,8 @@ A题/
 
 ## 常用命令
 
+`run.py q2` 默认执行本分支全国聚合条件模型，写入 `outputs/q2/p2_lb_national/`。工程夹具需显式指定 `--config examples/q2/config.json`；首轮候选盘点/拒绝演示保留在 `workflow/q2_inputs.json`，不再是默认入口。共同起点为用户指定的 `804ec15ee43874303986a7ad91b2cde05c65b124`，尚不替代其他两人的交叉评审。
+
 在本目录用 Python 3.11 及以上运行（本轮复现环境记录在 `outputs/validation/`）：
 
 ```powershell
@@ -57,6 +61,8 @@ python -B -X utf8 run.py audit          # 原件、文件去留、链接、去�
 python -B -X utf8 scripts/scan_google_keys.py # 扫描工作树及 ZIP 内的 Google API key
 python -B -X utf8 run.py test           # 全部现有测试，实际数量见validation结果
 python -B -X utf8 run.py q1 --output-dir outputs/q1/p1_yx # lb主线与mmj补强；先安装requirements-q1.txt
+python -B -X utf8 run.py q2             # 全国聚合条件模型；先安装requirements-q2.txt
+python -B -X utf8 scripts/review_q2_national_delivery.py # 独立进程复现及第二次自检
 python -B -X utf8 run.py attachments    # 官方附件标准化，保留890条记录及重复组
 python -B -X utf8 run.py verify         # 准入检查及限定初评/需求回算/许可案例
 python -B -X utf8 run.py prototype      # 合成年度主体及连续储能窗口

@@ -1,0 +1,104 @@
+{
+  "run_id": "20261019T061819Z-55507a35",
+  "owner": "p2/lb",
+  "command": [
+    "E:\\Team\\2026JM\\SimulationModelingProblemA\\tmp\\q2-venv\\Scripts\\python.exe",
+    "E:\\Team\\2026JM\\SimulationModelingProblemA\\scripts\\run_q2.py",
+    "--config",
+    "examples/q2/config.json",
+    "--output-dir",
+    "outputs/q2/p2_lb_engineering"
+  ],
+  "git_sha": "dd3cff550d63fa137bcf6082ea3e94d0ce0d5115",
+  "dirty": true,
+  "utc_started": "2026-10-19T06:18:19.261375+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "code_hashes": {
+    "run.py": "f650af45e441255037ab977e600da804cee11a39bb7345301ebe947c68ccf473",
+    "scripts/run_q2.py": "1f8e35da98626d5f3fda5061edc91c50ae639f672292d45b2613ff60132b15c7",
+    "src/energy_model/q2_operations.py": "38758b7e525b64f9036233b4a5ac54c1e43182c588a4a03da95bc6cbd819fcfd",
+    "src/energy_model/q2_agents.py": "1f0a4465183916ab475447736c3923e540fd0d82a7408b7cd2bfc00116da5290",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
+  },
+  "status": "success_engineering",
+  "q2_scientific_complete": false,
+  "config_path": "examples/q2/config.json",
+  "config_sha256": "cbf3ffa1d8f34c5cc448136f819ad70e0ede3331f6f244c677264026acb303e4",
+  "inputs": [
+    {
+      "role": "history_model",
+      "path": "examples/q2/history_model.json",
+      "sha256": "1aa118a661bad62e5e39fdf7f11db12b61c18fa6b0484f262cb500e77a8d9fec",
+      "allowed_use": "synthetic_engineering",
+      "review": "Explicit synthetic self-generated fixture; no national data admitted"
+    },
+    {
+      "role": "forecast_model",
+      "path": "examples/q2/forecast_model.json",
+      "sha256": "06788a212eb8953a6f602ddeca35cca9bc2a174d3e843ded9eb06d9af6a4cd4a",
+      "allowed_use": "synthetic_engineering",
+      "review": "Explicit synthetic self-generated fixture; no national data admitted"
+    },
+    {
+      "role": "design",
+      "path": "examples/q2/design.json",
+      "sha256": "504711dc44972976da6f0286e723cdcf2ced05ccce1cb2fc73219fbe4c4ce9d8",
+      "allowed_use": "synthetic_engineering",
+      "review": "Explicit synthetic self-generated fixture; no national data admitted"
+    },
+    {
+      "role": "observations",
+      "path": "examples/q2/observations.json",
+      "sha256": "901908158e22f36114e36ea55e4cc51b879262719cf573305f0e339e46c4032f",
+      "allowed_use": "synthetic_engineering",
+      "review": "Explicit synthetic self-generated fixture; no national data admitted"
+    }
+  ],
+  "base_sha": "804ec15ee43874303986a7ad91b2cde05c65b124",
+  "mode": "synthetic_engineering",
+  "dependencies": {
+    "mesa": "3.3.1",
+    "scipy": "1.16.3",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.7"
+  },
+  "seed": 20261018,
+  "solver": "SciPy linprog / HiGHS",
+  "solver_tolerance": 1e-08,
+  "max_residual": 1.7763568394002505e-14,
+  "forecast_years": [
+    2024,
+    2060
+  ],
+  "training_years": [
+    2015,
+    2021
+  ],
+  "evaluation_years": [
+    2022,
+    2024
+  ],
+  "sensitivity_failed_records": 0,
+  "seconds": 9.94412729999749,
+  "outputs": {
+    "accounts.csv": "2eff0a3e9798e85dec7d85fb5bc9834daf9a5db198f6a8ad6f57414a5f2b765a",
+    "assets.csv": "b7adfe959323be065c305465e187bf5b610d7e671dbc8d9a9c6ed4bdf4d0ad4d",
+    "balances.csv": "35f058c8d48b957f1e072d607d6e3f6265904cd52f37f2af5f42c68b842d6b97",
+    "baseline_path.csv": "a7fa5bbc5c8e0b8fb2321184e556f3a8587ddd3071c112337156ba48e5744859",
+    "behavior.csv": "d05c952cf9d84dcbfd1a9dc986194d2a78b12a607a4601a0a06f52c3048de9e3",
+    "calibration.json": "6c3d89b43b1fa9c6d3a4bb7c7120f8867c70931efe5e8f0345753ba0c75a89a8",
+    "engineering_paths.png": "9b7088873d76479bcc27fa8fe725cff8764158a9b70880fd10cdba9abd4f58f4",
+    "frozen_experiment.json": "504711dc44972976da6f0286e723cdcf2ced05ccce1cb2fc73219fbe4c4ce9d8",
+    "gaps_and_conflicts.csv": "d787beddebfc097dc9adea1e21363acdda00172797a1b8a1721970827e236efd",
+    "history_fit.csv": "02a4a459c566614007ddeea78261caceaa62ca071320dd2fe8b8743181a1a26b",
+    "operations.csv": "5a783b3c2bbf0573d6b796303f4859e242180641803bc2eb7c45b2de8aa63415",
+    "peak.json": "b256b729e7db6487c086ee7a26f1e660010cdbc7b3d367b85b8534f5d9136337",
+    "project_queue.json": "bde1adbaa745ad4e2b934ac1618ee567e4fb097fb355fcf922009f12ec9abde2",
+    "report.md": "8e471259093a3272708773c3e2f7d0aabbbbfd76114a43b04d8cb4037bd953fe",
+    "sensitivity.csv": "cafb95c786c5030c67a586cf81cff385f2743ee95a9e80346f11eda53baa11ea",
+    "solver_stages.csv": "c6e3fbd901cdb42f6873c0dc12c2fe9c3310474d0d1132fc096bada27236dafc",
+    "targets_2030_2060.csv": "cc32caa5fe5d078eca820e2d012863971776a4efaddf957e35b509ae376eba15"
+  }
+}

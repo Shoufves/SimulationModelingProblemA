@@ -1,0 +1,98 @@
+{
+  "best": {
+    "index": 15,
+    "parameters": {
+      "activity_elasticity": 0.5,
+      "expectation_rate": 0.25,
+      "investment_response": 1.0,
+      "renewable_mix_response": 0.7,
+      "replacement_adoption": 0.2
+    },
+    "status": "success",
+    "loss": 2.0497940846777993,
+    "components": [
+      {
+        "metric": "primary_energy_tce",
+        "n": 7,
+        "loss": 0.3464352744284037,
+        "mape": 0.056612129370256434,
+        "mae": 269788459.0197025,
+        "missing_years": []
+      },
+      {
+        "metric": "peo_share",
+        "n": 7,
+        "loss": 0.1018979445577209,
+        "mape": 0.06414921850859945,
+        "mae": 0.009251346219578077,
+        "missing_years": []
+      },
+      {
+        "metric": "total_capacity_mw",
+        "n": 7,
+        "loss": 0.06651185965654362,
+        "mape": 0.0531782358960466,
+        "mae": 102735.6497040706,
+        "missing_years": []
+      },
+      {
+        "metric": "wind_capacity_mw",
+        "n": 7,
+        "loss": 0.06721434813443836,
+        "mape": 0.07681468835513364,
+        "mae": 16966.711617792454,
+        "missing_years": []
+      },
+      {
+        "metric": "solar_capacity_mw",
+        "n": 7,
+        "loss": 0.47880898618475015,
+        "mape": 0.2809826952138524,
+        "mae": 39456.215773401185,
+        "missing_years": []
+      },
+      {
+        "metric": "electricity_generation_mwh",
+        "n": 7,
+        "loss": 0.37724960827334236,
+        "mape": 0.06191460582854421,
+        "mae": 428935315.31383544,
+        "missing_years": []
+      },
+      {
+        "metric": "combustion_co2_t",
+        "n": 2,
+        "loss": 0.6116760634426004,
+        "mape": 0.11711528474680909,
+        "mae": 1157514224.1052465,
+        "missing_years": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019
+        ]
+      }
+    ]
+  },
+  "equivalent_parameters": [
+    {
+      "activity_elasticity": 0.5,
+      "expectation_rate": 0.25,
+      "investment_response": 1.0,
+      "renewable_mix_response": 0.7,
+      "replacement_adoption": 0.2
+    },
+    {
+      "activity_elasticity": 0.5,
+      "expectation_rate": 0.75,
+      "investment_response": 1.0,
+      "renewable_mix_response": 0.7,
+      "replacement_adoption": 0.2
+    }
+  ],
+  "search_budget": 216,
+  "successful_trials": 216,
+  "selection": "training loss only; no holdout retuning",
+  "evaluation_identity": "already_seen_not_blind"
+}

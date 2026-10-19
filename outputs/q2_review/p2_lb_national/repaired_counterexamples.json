@@ -1,0 +1,37 @@
+{
+  "run_id": "20261019T061618016081Z",
+  "cash_probe_initial_cny": [
+    1000000000000000.0,
+    -1000000000000000.0
+  ],
+  "approved_new_generation_mw": [
+    648998.2386166628,
+    0
+  ],
+  "grid_increment_after_1TW_source_added_mw": 0.0,
+  "max_cross_year_soc_residual_mwh": 0.0,
+  "max_financing_transfer_residual_cny": 0.0003662109375,
+  "zero_consumer_funding": {
+    "requested_service_mwh": 22113960566.528267,
+    "served_service_mwh": 0.0,
+    "unmet_service_mwh": 22113960566.528267,
+    "new_devices": 0
+  },
+  "electric_device_capacity_increment_after_10x_demand_mw": 0.0,
+  "max_consumer_spending_over_budget_cny": 0,
+  "joint_renewable_audit_rounds": 63,
+  "joint_renewable_rejected_rounds": 27,
+  "script_sha256": "64c072e9931437c5acf1576684775ba08dee4cae3f0fce379fc0b02f5ed244bb",
+  "model_hashes": {
+    "run.py": "f650af45e441255037ab977e600da804cee11a39bb7345301ebe947c68ccf473",
+    "scripts/run_q2_national.py": "5ad7599c49207bc7ec62942c4a6a7a96fbfdc8fc0823349326d9adfe32e82ae2",
+    "scripts/build_q2_national_inputs.py": "df2c1ffbf7df8571aa0b2f8bc021927ffc0b3cc05e134a6edcb11e99411dd98c",
+    "src/energy_model/q2_national.py": "2fb74c91e0475f1c5e38b9306f83f6f7a47c801c8ba662233c70edbc29e18454",
+    "src/energy_model/q2_finance.py": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
+    "src/energy_model/q2_admission.py": "0c47b5ac765bf30cb403608b6acf83ff154dd570c64f7d364381a853871b6a01",
+    "src/energy_model/q2_operations.py": "38758b7e525b64f9036233b4a5ac54c1e43182c588a4a03da95bc6cbd819fcfd",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
+  },
+  "passed": true
+}

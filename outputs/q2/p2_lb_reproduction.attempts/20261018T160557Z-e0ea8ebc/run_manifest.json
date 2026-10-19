@@ -1,0 +1,31 @@
+{
+  "run_id": "20261018T160557Z-e0ea8ebc",
+  "owner": "p2/lb",
+  "command": [
+    "E:\\Team\\2026JM\\SimulationModelingProblemA\\tmp\\q2-venv\\Scripts\\python.exe",
+    "E:\\Team\\2026JM\\SimulationModelingProblemA\\scripts\\run_q2.py",
+    "--config",
+    "tmp/q2-config-does-not-exist.json",
+    "--output-dir",
+    "outputs/q2/p2_lb_reproduction"
+  ],
+  "git_sha": "b22c14dd4dd558e26baed73d4c5219162e08e2e6",
+  "dirty": true,
+  "utc_started": "2026-10-18T16:05:57.386541+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "code_hashes": {
+    "run.py": "3d427aae2aad978374ad751e99c7992c6edf9a7aabf85e40674c8cc28ba8722e",
+    "scripts/run_q2.py": "1f8e35da98626d5f3fda5061edc91c50ae639f672292d45b2613ff60132b15c7",
+    "src/energy_model/q2_operations.py": "065a3c7ad575badb49cc3e5442fe009b88f6ede54dd877c25871b0a56fdaaa52",
+    "src/energy_model/q2_agents.py": "1f0a4465183916ab475447736c3923e540fd0d82a7408b7cd2bfc00116da5290",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
+  },
+  "status": "invalid_input",
+  "q2_scientific_complete": false,
+  "error": "FileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\Team\\\\2026JM\\\\SimulationModelingProblemA\\\\tmp\\\\q2-config-does-not-exist.json'",
+  "seconds": 0.06635899998946115,
+  "outputs": {
+    "report.md": "23e4aea54d25cc7352f49371f1d163c571e491d597e98324ac8ebdc60bc35bfb"
+  }
+}

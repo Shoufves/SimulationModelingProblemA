@@ -1,0 +1,27 @@
+{
+  "identity": "Post-freeze 2025 extension check; previously available observations, not a blind test or independent source family",
+  "review_date": "2026-10-19",
+  "reviewer": "p2/lb author",
+  "allowed_use": "Crosscheck only after frozen training selection; forbidden for parameter or structure selection",
+  "limits": "2025 capacity mainly checks reconstructed initial construction queue, not new investment behaviour. Annual initial-state and statistical energy boundaries remain approximate. One year cannot validate a 36-year extrapolation. GDP remains the frozen 4.5 percent scenario, not updated to realised 5 percent.",
+  "sources": [
+    {
+      "source_key": "yx:NEA_ELECTRICITY_2025_TABLE",
+      "path": "data/raw/batch1_national/nea_electricity_2025_table.png",
+      "sha256": "a1dc2ff09094a09e988ba1696ed753f2aaf52bf1e04fc934f98997f1d7b9646e",
+      "review": "Original table image visually read: year-end 2025; capacity unit 10^4 kW; total 389134, wind 64001, solar 120173. Matches existing processed table. Hydro includes pumped storage; no new hydro decomposition asserted."
+    },
+    {
+      "source_key": "yx:NBS_COMMUNIQUE_2025",
+      "path": "data/raw/batch1_national/nbs_communique_2025.html",
+      "sha256": "f506d4632a3275247c28bcd311a876cf1c03e0663c4898da75dff7210a3df3e5",
+      "review": "Original HTML section XII explicitly reports preliminary annual total energy consumption of 61.7 亿吨标准煤, converted as 61.7 x 1e8 tce. Passage and multiplier checked. Clean energy including gas is deliberately excluded from nonfossil validation."
+    }
+  ],
+  "observations": [
+    {"metric":"total_capacity_mw","raw_value":389134,"raw_unit":"10^4 kW","multiplier":10,"unit":"MW","source_key":"yx:NEA_ELECTRICITY_2025_TABLE","locator":"total row"},
+    {"metric":"wind_capacity_mw","raw_value":64001,"raw_unit":"10^4 kW","multiplier":10,"unit":"MW","source_key":"yx:NEA_ELECTRICITY_2025_TABLE","locator":"wind row"},
+    {"metric":"solar_capacity_mw","raw_value":120173,"raw_unit":"10^4 kW","multiplier":10,"unit":"MW","source_key":"yx:NEA_ELECTRICITY_2025_TABLE","locator":"solar row"},
+    {"metric":"primary_energy_tce","raw_value":61.7,"raw_unit":"10^8 tce","multiplier":100000000,"unit":"tce","source_key":"yx:NBS_COMMUNIQUE_2025","locator":"section XII preliminary energy consumption"}
+  ]
+}
