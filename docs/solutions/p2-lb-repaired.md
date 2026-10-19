@@ -1,5 +1,7 @@
 # 问题二：V7 评审修复与复现结果
 
+> 2026-10-20更新：本文保留较早版本记录。当前review(9)修复、数据口径和实际验收以[本轮说明](p2-lb-review9-response.md)及[本轮结果](p2-lb-review9-results.md)为准。
+
 2026-10-19；分支 `p2/lb`；共同 base `804ec15ee43874303986a7ad91b2cde05c65b124`。
 
 本轮落实 review(7) 的三项 P2 修复，并统一共同入口。逐项依据、GCB 用途核查及反例见[评审响应](p2-lb-review7-response.md)。V6 的 198 份代码、配置、结果和验收文件完整保存在 `archive/q2_national_v6_before_review7.zip`，不是删除历史结果。

@@ -47,7 +47,7 @@ def main():
         tests=load(ROOT/"outputs/q2_review/p2_lb/tests.json")
         check("full_regression_tests_no_skip",regression["passed"] and tests["passed"] and tests["skipped"]==0,tests)
         check("regression_covers_current_mechanisms",all(regression["code_hashes"].get(p)==sha(ROOT/p) for p in
-            ("tests/test_q2_national.py","src/energy_model/q2_national.py","src/energy_model/q2_finance.py","src/energy_model/q2_operations.py","src/energy_model/q2_admission.py")),"Fresh full regression includes mechanism counterexamples")
+            ("tests/test_q2_national.py","tests/test_q2_operations.py","src/energy_model/q2_national.py","src/energy_model/q2_statistics.py","src/energy_model/q2_identification.py","scripts/run_q2_national.py","src/energy_model/q2_finance.py","src/energy_model/q2_operations.py","src/energy_model/q2_admission.py")),"Fresh full regression includes mechanism counterexamples")
         import importlib.metadata
         expected=dict(numpy="2.3.5",scipy="1.16.3",mesa="3.3.1",pandas="3.0.1",matplotlib="3.10.7")
         report["dependencies"]={p:importlib.metadata.version(p) for p in expected}
@@ -70,6 +70,53 @@ def main():
         # independent replication and accounting checks from being executed.
         check("frozen_empirical_thresholds_passed",calibration["quality"]["acceptance"]["all_thresholds_passed"],calibration["quality"]["acceptance"],blocking=False)
         check("all_grid_trials_accounted",calibration["successful_trials"]==calibration["search_budget"]==load(folder/"frozen_design.json")["search_budget"],calibration["search_budget"])
+        fuel_validation=read(folder/"fuel_share_validation.csv")
+        design=load(folder/"frozen_design.json")
+        history=read(folder/"historical_path.csv")
+        raw_observations={(int(r["year"]),r["metric"]):float(r["value"]) for r in read(ROOT/"data/processed/q2/national_observations.csv")}
+        for fuel in ("coal","oil","gas"):
+            for method,years in (("national_candidate",range(2015,2025)),("training_last_value",range(2022,2025)),("no_new_investment_or_substitution",range(2022,2025))):
+                selected=[r for r in fuel_validation if r["method"]==method and r["metric"]==fuel+"_share"]
+                if [int(r["year"]) for r in selected]!=list(years):raise ValueError("Fuel validation/baseline coverage: "+fuel)
+                for r in selected:
+                    y=int(r["year"]);obs=raw_observations[y,"consumption_"+fuel+"_pct"]*.01
+                    if abs(float(r["observed"])-obs)>1e-12 or abs(float(r["residual"])-(float(r["simulated"])-obs))>1e-12:
+                        raise ValueError("Fuel residual/source mismatch")
+                    if method=="national_candidate" and abs(float(r["simulated"])-float(next(p for p in history if int(p["year"])==y)[fuel+"_share"]))>1e-12:
+                        raise ValueError("Fuel fit does not match simulated path")
+            if fuel+"_share" not in calibration["quality"]["acceptance"]["checks"]:raise ValueError("Fuel gate omitted")
+        check("fuel_shares_calibrated_and_evaluated_against_baselines",True,dict(rows=len(fuel_validation),metrics=["coal_share","oil_share","gas_share"]))
+        generation=read(folder/"generation_validation.csv")
+        from energy_model.q2_national import TECHS
+        expected_cells={(y,t) for y in range(2015,2025) for t in TECHS}
+        if len(generation)!=80 or {(int(r["year"]),r["technology"]) for r in generation}!=expected_cells:
+            raise ValueError("Incomplete generation mix diagnostic")
+        for r in generation:
+            year=int(r["year"]);tech=r["technology"]
+            obs=raw_observations[year,("biofuel" if tech=="biomass" else tech)+"_electricity_mwh"]
+            predicted=float(next(p for p in history if int(p["year"])==year)[tech+"_generation_mwh"])
+            if abs(float(r["observed_mwh"])-obs)>1e-5 or abs(float(r["simulated_mwh"])-predicted)>1e-5 or abs(float(r["residual_mwh"])-(predicted-obs))>1e-5:
+                raise ValueError("Generation diagnostic differs from source/path")
+            if (r["zero_model_with_positive_observation"]=="True") != (predicted<=1e-6 and obs>1e-6):
+                raise ValueError("Hidden zero-output generation diagnostic")
+        check("all_technology_generation_residuals_disclosed",True,calibration["quality"]["generation_diagnostic"])
+        from energy_model.q2_identification import fit_nonpower,identified_parameters
+        identified=fit_nonpower(raw_observations,design)
+        check("nonpower_parameters_independently_identified_on_training_only",
+            identified==load(folder/"demand_identification.json")==calibration["demand_identification"] and
+            all(calibration["best"]["parameters"][k]==v for k,v in identified_parameters(identified).items()),identified)
+        generation_targets=[t for t in design["targets"] if t["metric"].endswith("_generation_mwh")]
+        check("generation_training_family_preserves_total_weight",
+            len(generation_targets)==9 and abs(sum(t["weight"] for t in generation_targets)-1)<1e-12 and
+            calibration["quality"]["generation_diagnostic"]["used_as_additional_calibration_target"],generation_targets)
+        bridge=read(folder/"statistical_bridge_backtest.csv")
+        check("statistical_bridge_has_frozen_fit_and_constant_baseline",len(bridge)==20 and
+            {r["method"] for r in bridge}=={"training_damped_trend","constant_initial_anchor"} and
+            design["statistical_bridge"]["fitted"]["training_years"]==list(range(2015,2022)) and
+            not load(folder/"statistical_bridge.json")["official_attainment_certified"],dict(rows=len(bridge),fit=design["statistical_bridge"]["fitted"]))
+        trials=load(folder/"training_trials.json")
+        check("selected_parameters_minimise_executed_training_loss",len(trials)==design["search_budget"] and
+            calibration["best"]["loss"]==min(t["loss"] for t in trials if t["loss"] is not None),calibration["stages"])
         eval_emission=next(r for r in calibration["quality"]["already_seen_evaluation"]["components"] if r["metric"]=="combustion_co2_t")
         check("missing_emissions_holdout_not_fabricated",eval_emission["n"]==0 and eval_emission["mape"] is None,eval_emission)
         baseline=read(folder/"baseline_path.csv")
@@ -83,6 +130,13 @@ def main():
             scale=max(1,float(row["combustion_co2_t"]))
             if abs(expected-float(row["combustion_co2_t"]))/scale>1e-10:raise ValueError("Exported emissions ledger "+str(year))
             if abs(float(row["positive_co2_t"])-float(row["net_removals_t"])-float(row["net_co2_t"]))>1e-4:raise ValueError("Net CO2 "+str(year))
+            if abs(sum(float(row[f+"_share"]) for f in ("coal","oil","gas"))+float(row["nonfossil_share"])-1)>1e-10:
+                raise ValueError("Primary-energy shares do not close")
+            from energy_model.q2_national import TCE_MWH
+            for carrier in ("coal","oil","gas"):
+                carrier_primary=sum((float(r["direct_mwh"])+float(r["conversion_mwh"]))*365 for r in fuel if r["fuel"]==carrier)/TCE_MWH
+                if abs(carrier_primary-float(row[carrier+"_primary_tce"]))/max(1,carrier_primary)>1e-10 or abs(carrier_primary/float(row["primary_energy_tce"])-float(row[carrier+"_share"]))>1e-10:
+                    raise ValueError("Fuel share does not match physical ledger")
             physical.append(dict(year=year,combustion_residual_t=expected-float(row["combustion_co2_t"]),
                 LP_max_residual_mwh=float(row["max_residual"]),cash_residual_cny=float(row["cash_balance_residual_cny"])))
         check("exported_combustion_and_net_CO2_reconcile",True,physical)
@@ -92,6 +146,16 @@ def main():
         check("infrastructure_and_financing_ledgers",all(abs(float(r["infrastructure_fund_residual_cny"]))<.1 and abs(float(r["financing_transfer_residual_cny"]))<.1 for r in baseline),"Independent infrastructure escrow and sponsor/shareholder/lender transfers")
         check("cross_year_storage_continuity",all(abs(float(a["storage_closing_mwh"])-float(b["storage_retirement_loss_mwh"])-float(b["storage_opening_mwh"]))<1e-4 for a,b in zip(baseline,baseline[1:])),"New storage enters empty; retirement disposal explicitly deducted")
         accounts=read(folder/"accounts.csv")
+        resource_checks=[]
+        for row in baseline:
+            year=int(row["year"])
+            actual=sum(float(r["resource_cost_cny"]) for r in accounts if int(r["year"])==year and
+                       r["kind"] in {"generator_operation","supplier_operation","grid_operation"})
+            residual=actual-float(row["operating_resource_cost_cny"])
+            if abs(residual)>max(.1,abs(actual)*1e-12):
+                raise ValueError("Behavioral score leaked into money/resource ledger")
+            resource_checks.append(dict(year=year,real_resource_residual_cny=residual,behavioral_score=float(row["dispatch_behavioral_score"])))
+        check("behavioral_score_excluded_from_actual_resource_and_cash_accounts",True,resource_checks)
         consumer_rows=[r for r in accounts if r["kind"]=="consumer_operation" and r.get("energy_budget_cny")]
         check("all_four_service_budgets_fund_energy",len(consumer_rows)==36*4 and all(
             float(r["energy_bill_cny"])<=float(r["energy_budget_cny"])+.01 and
@@ -149,9 +213,12 @@ def main():
         pre1991=[r for r in assets if r.get("tech")=="nuclear" and int(r["online_year"])<1991]
         check("no_pre1991_nuclear_cohort",not pre1991,len(pre1991))
         target=read(folder/"targets_2030_2060.csv")
-        required={"primary_energy_tce","nonfossil_share_proxy","positive_co2_t","peak_year","peak_value","energy_intensity_reduction_vs_2005",
+        required={"primary_energy_tce","nonfossil_share","positive_co2_t","peak_year","peak_value","energy_intensity_reduction_vs_2005",
             "carbon_intensity_reduction_vs_2005","carbon_intensity_reduction_vs_2025","neutralisation_ratio","net_co2_t"}
         check("question2_all_target_metrics",all(required.issubset({r["metric"] for r in target if int(r["year"])==y}) for y in (2030,2060)),sorted(required))
+        nonfossil=[r for r in target if r["metric"]=="nonfossil_share"]
+        check("nonfossil_comparison_is_conditional_not_certification",len(nonfossil)==2 and all(
+            r["official_attainment_certified"]=="False" and r["judgement"].startswith("conditional_") for r in nonfossil),nonfossil)
         coverage=load(folder/"experiment_coverage.json")
         check("all_sensitivity_runs_successful",coverage["executed"]==coverage["successful"] and not load(folder/"sensitivity_failures.json"),coverage)
         sensitivity=read(folder/"sensitivity.csv")
@@ -184,6 +251,8 @@ def main():
         verify_latest(folder)
         all_passed=all(c["passed"] for c in report["checks"])
         report.update(passed=all_passed,status="repaired_conditional_Q2_candidate_review_ready" if all_passed else "implementation_verified_empirical_acceptance_failed",implementation_and_declared_checks_complete=all_passed,
+            implementation_checks_passed=all(c["passed"] for c in report["checks"] if c["name"]!="frozen_empirical_thresholds_passed"),
+            empirical_acceptance_passed=calibration["quality"]["acceptance"]["all_thresholds_passed"],
             closed_implementation_gaps=["Finite paid equipment for all four service proxies",
                 "Consumer energy budgets and retained cash constrain device purchases",
                 "Shared demand elasticity schedule and final joint renewable approval",

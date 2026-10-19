@@ -84,9 +84,9 @@ def build():
             raise ValueError("Source-use contract differs from reviewed builder: "+path)
         return path
     nbs_e = source("data/raw/batch1_national/nbs_2025_C09-02.jpg", "energy_observations_and_initial_scale",
-        "Full image visually read; 100 literal cells checked against unified CSV; PEO is not automatically nonfossil", "Table 9-2; 2005-2024")
+        "Full image visually read; 100 literal cells checked against unified CSV. Admits coal/oil/gas share calibration, pre-training supply CAGR and statistical bridge. V10 permits conditional nonpower residual identification with assumed conversion efficiencies, not new final-energy observations; category correspondence reviewed separately, quantity bridge remains empirical", "Table 9-2; 2005-2024")
     nbs_k = source("data/raw/batch1_national/nbs_2025_C09-15.jpg", "capacity_observations_and_initial_scale",
-        "Full image visually read; 112 literal cells checked against unified CSV; thermal includes biomass; hydro includes pumped", "Table 9-15; 2009-2024")
+        "Full image visually read; 112 literal cells checked against unified CSV; thermal includes biomass; hydro includes pumped. V10 initial CF uses initial-year and previous-year mean capacity as an approximate commissioning correction; 2014 hidden pipeline is training-inferred, never an observed project census", "Table 9-15; 2009-2024")
     records = []
     def add(year, metric, value, unit, path, locator, boundary, use="observation"):
         if value is None:
@@ -100,7 +100,7 @@ def build():
             if unified[year,field] != value and (year,field,unified[year,field],value) != (2006,"consumption_10ktce",284647,286467):
                 raise ValueError(f"NBS energy original/CSV conflict {year} {field}")
             add(year,field,value,"10^4 tce" if field.endswith("10ktce") else "%",nbs_e,
-                f"year={year}; column={field}","Mainland NBS statistical equivalent; PEO != proven nonfossil")
+                f"year={year}; column={field}","Mainland NBS statistical equivalent; nonfossil category mapping reviewed in statistical_scope_review.json; quantities are not direct heat equivalents")
     for year, values in CAPACITY.items():
         for field,value in zip(["total","thermal","hydro","nuclear","wind","solar","other"],values):
             if unified[year,field+"_10kW"] != value:
@@ -108,7 +108,7 @@ def build():
             add(year,field+"_capacity_mw",value*10,"MW",nbs_k,f"year={year}; column={field}; x10 MW",
                 "Mainland year-end stock; hydro includes pumped; thermal includes bioenergy")
     owid = source("data/raw/batch1_national/owid_energy_data.csv", "generation_observations_initial_decomposition_crosscheck",
-        "CHN rows machine-matched to processed transcription; secondary compilation (EI/Ember); not independent of their upstream", "iso_code=CHN; years 2005-2024")
+        "CHN rows machine-matched to processed transcription; secondary compilation (EI/Ember); not independent of their upstream. Also admits covered clean generation as denominator of effective statistical coefficient, not a complete physical primary-energy balance", "iso_code=CHN; years 2005-2024")
     raw = {int(r["year"]):r for r in read(owid) if r["iso_code"] == "CHN" and 2005 <= int(r["year"]) <= 2024}
     cols = ["electricity_generation","electricity_demand","coal_electricity","gas_electricity","oil_electricity",
             "hydro_electricity","nuclear_electricity","wind_electricity","solar_electricity","biofuel_electricity","net_elec_imports"]
@@ -186,6 +186,39 @@ def build():
                       ("data/raw/lb/international/cn_ets_notice.txt","publication date 2026-09-02; no retrospective information"),
                       ("data/processed/policy_target_reference.csv","source-specific target comparison only, no forced attainment")]:
         source(path,use,"Scoped reference; exact implemented assumptions are separately declared",use)
+    from energy_model.q2_statistics import SCOPE_EVIDENCE
+    import re
+    from html import unescape
+    evidence = []
+    for path,spec in SCOPE_EVIDENCE.items():
+        content = (ROOT/path).read_text(encoding="utf-8-sig")
+        plain = re.sub(r"\s+","",unescape(re.sub(r"<[^>]+>","",content)))
+        if any(phrase not in plain for phrase in spec["phrases"]):
+            raise ValueError("Reviewed statistical definition absent: "+path)
+        source(path,"statistical_category_and_conversion_method_review",
+            "Original full text read and scoped: categories/definition only; no future observed quantities injected; composite coefficient is not the official physical conversion formula",spec["locator"])
+        sources[path]["url"] = spec["url"]
+        evidence.append(dict(path=path,sha256=sha(path),**spec))
+    scope = dict(status="author_reviewed_category_mapping_conditional_quantity",team_approved=False,
+        sources=evidence,category_mapping="NBS coal/oil/gas and PEO four-part composition corresponds to fossil/nonfossil categories",
+        quantity_method="Effective composite coefficient fit only on 2015-2021, anchored separately in 2014 and 2024; not measured average generation coal consumption",
+        classification_evidence_2025_quantities_used=False,official_attainment_certified=False,
+        excluded_claims=["complete primary non-electric physical balance","pumped-hydro/biomass/trade individually resolved","official target achievement certification"],
+        validation="2015-2021 training and 2022-2024 already-seen conversion backtest; constant anchor comparator; unchanged 3 percentage point structural tolerance")
+    dump(DEST/"statistical_scope_review.json",scope)
+    from energy_model.q2_admission import DISPATCH_EVIDENCE
+    for path,spec in DISPATCH_EVIDENCE.items():
+        plain = re.sub(r"\s+","",unescape(re.sub(r"<[^>]+>","",(ROOT/path).read_text(encoding="utf-8-sig"))))
+        if any(phrase not in plain for phrase in spec["phrases"]):
+            raise ValueError("Reviewed dispatch policy passage absent: "+path)
+        source(path,"nonfossil_priority_policy_motivation_and_scope_limit",
+            "Original articles read. Supports policy motivation only: minimising fossil displacement is a national aggregate approximation, also benefits nuclear, and does not replicate eligible project-level contracts. 2024 guaranteed/market distinction prevents unconditional legal extrapolation; continuation is a scenario assumption with cost-only sensitivity. No empirical heat, waste or must-run quantities inferred.",spec["locator"])
+        sources[path]["url"] = spec["url"]
+    from energy_model.q2_admission import STRUCTURE_EVIDENCE
+    for path,spec in STRUCTURE_EVIDENCE.items():
+        source(path,"aggregate_dispatch_method_motivation_not_measured_parameters",spec["review"],spec["locator"])
+        sources[path]["url"] = spec["url"]
+    sources[owid]["review"] += "; V10 explicitly admits all eight generation targets inside one dependent loss family, conditional nonpower residual fitting, and pretraining biofuel-generation growth as a delivery-capacity proxy, not measured feedstock."
     with (DEST/"national_observations.csv").open("w",encoding="utf-8",newline="") as f:
         w=csv.DictWriter(f,fieldnames=list(records[0])); w.writeheader(); w.writerows(records)
     dump(DEST/"technical_references.json",tech)
@@ -195,8 +228,8 @@ def build():
         transcription_conflicts=[dict(year=2006,metric="consumption_10ktce",unified_csv=284647,
             original_image=286467,decision="Q2 uses visually verified original; Q1 files unchanged; outside training window")],
         exclusions=["data/restricted", "WDI exchange rate", "OWID other_renewable duplicated with biofuel",
-            "NBS PEO as automatic official nonfossil", "GCB+BTR process double addition", "2026 policies before publication"],
-        products={p.relative_to(ROOT).as_posix():sha(p.relative_to(ROOT)) for p in (DEST/"national_observations.csv",DEST/"technical_references.json",DEST/"gcb_peak_bridge_review.json")})
+            "effective coefficient as official physical conversion formula", "GCB+BTR process double addition", "2026 policies before publication"],
+        products={p.relative_to(ROOT).as_posix():sha(p.relative_to(ROOT)) for p in (DEST/"national_observations.csv",DEST/"technical_references.json",DEST/"gcb_peak_bridge_review.json",DEST/"statistical_scope_review.json")})
     dump(ROOT/"data/catalog/q2_national_input_review.json",review)
     print(json.dumps(dict(observations=len(records),source_files=len(sources),status=review["status"])))
 

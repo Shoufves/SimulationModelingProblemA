@@ -4,6 +4,29 @@ This is an execution contract, not evidence that a source has been reviewed.
 The separate review must explicitly admit every required operation.
 """
 import math
+from .q2_statistics import SCOPE_EVIDENCE
+
+DISPATCH_EVIDENCE = {
+    "data/raw/q2_scope/ndrc_renewable_purchase_2016_625.html": dict(
+        url="https://zfxxgk.ndrc.gov.cn/web/iteminfo.jsp?id=19721",
+        locator="2016 NDRC 625, articles 2-4, 8 and 15; eligibility, safety, biomass purchase and priority",
+        phrases=["生物质能", "最高优先调度等级", "暂时不参与市场竞争"]),
+    "data/raw/q2_scope/ndrc_renewable_purchase_2024_order15.html": dict(
+        url="https://zfxxgk.ndrc.gov.cn/web/iteminfo.jsp?id=20348",
+        locator="2024 Order15, articles 3-6 and 24; guaranteed/market volumes, exclusions, effective 2024-04-01",
+        phrases=["市场交易电量", "不计入全额保障性收购范围", "2024年4月1日起施行"]),
+}
+
+STRUCTURE_EVIDENCE = {
+    "data/raw/q2_structure/howitt_positive_mathematical_programming_1995.pdf": dict(
+        url="https://watershed.ucdavis.edu/sites/g/files/dgvnsk8531/files/products/2021-12/Positive%20Math%20Programing.pdf",
+        locator="AJAE 77(2), pp329-342; opening calibration/nonlinear response method",
+        review="Read methodological motivation for base-allocation calibration. Agriculture paper does not estimate Chinese electricity frictions; implementation is a disclosed PMP-inspired convex allocation score, not a replication or measured welfare cost."),
+    "data/raw/q2_structure/iea_china_power_system_transformation_2019.pdf": dict(
+        url="https://iea.blob.core.windows.net/assets/fd886bb9-27d8-4d5d-a03f-38cb34b77ed7/China_Power_System_Transformation.pdf",
+        locator="Printed pp14-15; fair/economic dispatch and gas allocation in IEA scenarios",
+        review="Read historical institutional/scenario discussion. Supports rejecting universal perfect substitutability as the only model; does not identify current hourly allocations, justify hard gas minima or certify the assumed score curvature."),
+}
 
 SOURCE_REQUIREMENTS = {'data/raw/batch1_national/nbs_2025_C09-02.jpg': {'allowed_use': 'energy_observations_and_initial_scale',
                                                   'operations': ['initialization',
@@ -135,10 +158,26 @@ SOURCE_REQUIREMENTS = {'data/raw/batch1_national/nbs_2025_C09-02.jpg': {'allowed
 
 # These metrics alone enter the frozen training/evaluation loss. Adding a target
 # requires an explicit source-use review, not just a new name in the design.
+for _path in SCOPE_EVIDENCE:
+    SOURCE_REQUIREMENTS[_path] = dict(allowed_use="statistical_category_and_conversion_method_review",
+        operations=["statistical_bridge", "target_comparison"],metrics=[],row_use="reference_only")
+for _path in DISPATCH_EVIDENCE:
+    SOURCE_REQUIREMENTS[_path] = dict(allowed_use="nonfossil_priority_policy_motivation_and_scope_limit",
+        operations=["policy_reference"],metrics=[],row_use="reference_only")
+for _path in STRUCTURE_EVIDENCE:
+    SOURCE_REQUIREMENTS[_path] = dict(allowed_use="aggregate_dispatch_method_motivation_not_measured_parameters",
+        operations=["method_reference"],metrics=[],row_use="reference_only")
+for _path in ("data/raw/batch1_national/nbs_2025_C09-02.jpg","data/raw/batch1_national/owid_energy_data.csv"):
+    SOURCE_REQUIREMENTS[_path]["operations"].append("statistical_bridge")
+    SOURCE_REQUIREMENTS[_path]["operations"].append("conditional_nonpower_identification")
+
 CALIBRATION_METRICS = {
     "consumption_10ktce", "consumption_primary_electricity_other_pct",
-    "total_capacity_mw", "wind_capacity_mw", "solar_capacity_mw",
+    "total_capacity_mw", "wind_capacity_mw", "solar_capacity_mw", "hydro_capacity_mw", "nuclear_capacity_mw",
     "electricity_generation_mwh", "btr_combustion_co2_t",
+    "consumption_coal_pct", "consumption_oil_pct", "consumption_gas_pct",
+    "coal_electricity_mwh", "oil_electricity_mwh", "gas_electricity_mwh", "biofuel_electricity_mwh",
+    "hydro_electricity_mwh", "nuclear_electricity_mwh", "wind_electricity_mwh", "solar_electricity_mwh",
 }
 
 
@@ -172,6 +211,14 @@ def validate_admission(review, rows, design):
         raise ValueError("Missing required observation metric")
     if review.get("observations") != len(rows):
         raise ValueError("Observation count differs from scoped review")
+    required_targets={fuel+"_share":"consumption_"+fuel+"_pct" for fuel in ("coal","oil","gas")}
+    if design.get("model_revision",0)>=10:
+        required_targets.update({t+"_capacity_mw":t+"_capacity_mw" for t in ("hydro","nuclear")})
+        required_targets.update({t+"_generation_mwh":("biofuel" if t=="biomass" else t)+"_electricity_mwh"
+                                 for t in ("coal","oil","gas","biomass","hydro","nuclear","wind","solar")})
+    indexed_targets={t["metric"]:t for t in design["targets"]}
+    if len(indexed_targets)!=len(design["targets"]) or any(indexed_targets.get(k,{}).get("observation")!=v for k,v in required_targets.items()):
+        raise ValueError("Required calibration target absent or remapped")
     for target in design["targets"]:
         metric = target["observation"]
         if metric not in CALIBRATION_METRICS:

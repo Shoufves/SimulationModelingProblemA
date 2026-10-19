@@ -1,47 +1,53 @@
 {
   "best": {
-    "index": 184,
+    "index": 396,
     "parameters": {
-      "activity_elasticity": 0.5,
+      "activity_elasticity": -0.2630338162680476,
       "expectation_rate": 0.25,
-      "investment_response": 1.25,
-      "renewable_mix_response": 0.7,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
     },
     "status": "success",
-    "loss": 2.2513790759704735,
+    "loss": 2.1288757629583803,
     "components": [
       {
         "metric": "primary_energy_tce",
         "n": 7,
-        "loss": 0.32850214508595516,
-        "mape": 0.054971582765955984,
-        "mae": 262280954.04140568,
+        "loss": 0.036927586467992726,
+        "mape": 0.017520639368495704,
+        "mae": 81121252.70941994,
         "missing_years": []
       },
       {
         "metric": "peo_share",
         "n": 7,
-        "loss": 0.07014892630465781,
-        "mape": 0.0531817531267862,
-        "mae": 0.007597961405563296,
+        "loss": 0.0055213610341308395,
+        "mape": 0.021878410223550027,
+        "mae": 0.0032506583149311203,
         "missing_years": []
       },
       {
         "metric": "total_capacity_mw",
         "n": 7,
-        "loss": 0.05340589668119779,
-        "mape": 0.04829332166662248,
-        "mae": 92629.54708846755,
+        "loss": 0.05499518210691011,
+        "mape": 0.06767695952658782,
+        "mae": 131462.9014332073,
         "missing_years": []
       },
       {
         "metric": "wind_capacity_mw",
         "n": 7,
-        "loss": 0.06312330374211171,
-        "mape": 0.08973510868249344,
-        "mae": 16336.664205289379,
+        "loss": 0.04418221799774903,
+        "mape": 0.07858130470193733,
+        "mae": 14346.417090011993,
         "missing_years": []
       },
       {
@@ -55,17 +61,17 @@
       {
         "metric": "electricity_generation_mwh",
         "n": 7,
-        "loss": 0.33135667450594614,
-        "mape": 0.05777067749803518,
-        "mae": 400859509.3867994,
+        "loss": 0.08669697536480848,
+        "mape": 0.04100654394102,
+        "mae": 274299422.642537,
         "missing_years": []
       },
       {
         "metric": "combustion_co2_t",
         "n": 2,
-        "loss": 0.5777116412580419,
-        "mape": 0.11382134277602701,
-        "mae": 1124945812.7775145,
+        "loss": 0.0155170803234377,
+        "mape": 0.01855066934415046,
+        "mae": 182556652.5205183,
         "missing_years": [
           2015,
           2016,
@@ -73,189 +79,686 @@
           2018,
           2019
         ]
+      },
+      {
+        "metric": "coal_share",
+        "n": 7,
+        "loss": 0.046690989868709495,
+        "mape": 0.020433507918946818,
+        "mae": 0.011976754951201556,
+        "missing_years": []
+      },
+      {
+        "metric": "oil_share",
+        "n": 7,
+        "loss": 0.009083303875927656,
+        "mape": 0.02728447302683587,
+        "mae": 0.005117224735655318,
+        "missing_years": []
+      },
+      {
+        "metric": "gas_share",
+        "n": 7,
+        "loss": 0.00800423097240668,
+        "mape": 0.059549665462699665,
+        "mae": 0.004654585427410694,
+        "missing_years": []
+      },
+      {
+        "metric": "coal_generation_mwh",
+        "n": 7,
+        "loss": 0.010433319496489901,
+        "mape": 0.08122855060220283,
+        "mae": 371666184.0815641,
+        "missing_years": []
+      },
+      {
+        "metric": "gas_generation_mwh",
+        "n": 7,
+        "loss": 0.18508945630036552,
+        "mape": 0.2886701563702888,
+        "mae": 67492310.65283552,
+        "missing_years": []
+      },
+      {
+        "metric": "oil_generation_mwh",
+        "n": 7,
+        "loss": 0.16747126237427495,
+        "mape": 0.2861228246515375,
+        "mae": 15679942.125472384,
+        "missing_years": []
+      },
+      {
+        "metric": "biomass_generation_mwh",
+        "n": 7,
+        "loss": 0.44783049414259907,
+        "mape": 0.4320341730760218,
+        "mae": 44384410.98021619,
+        "missing_years": []
+      },
+      {
+        "metric": "hydro_generation_mwh",
+        "n": 7,
+        "loss": 0.0041432777690431485,
+        "mape": 0.0357573408542517,
+        "mae": 44479942.099218674,
+        "missing_years": []
+      },
+      {
+        "metric": "nuclear_generation_mwh",
+        "n": 7,
+        "loss": 0.0050200608271485665,
+        "mape": 0.06115332344263667,
+        "mae": 15505964.306275185,
+        "missing_years": []
+      },
+      {
+        "metric": "wind_generation_mwh",
+        "n": 7,
+        "loss": 0.016116896867419208,
+        "mape": 0.08653035962875374,
+        "mae": 33015060.619793084,
+        "missing_years": []
+      },
+      {
+        "metric": "solar_generation_mwh",
+        "n": 7,
+        "loss": 0.1303451747795634,
+        "mape": 0.24537341389613201,
+        "mae": 42577050.03333994,
+        "missing_years": []
+      },
+      {
+        "metric": "hydro_capacity_mw",
+        "n": 7,
+        "loss": 0.0028555911665708576,
+        "mape": 0.021885447286218135,
+        "mae": 7696.811844029705,
+        "missing_years": []
+      },
+      {
+        "metric": "nuclear_capacity_mw",
+        "n": 7,
+        "loss": 0.024820812830270118,
+        "mape": 0.05974721847896682,
+        "mae": 2375.238095238096,
+        "missing_years": []
       }
     ]
   },
   "equivalent_parameters": [
     {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.25,
-      "investment_response": 1.25,
-      "renewable_mix_response": 0.7,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
-    },
-    {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.75,
-      "investment_response": 1.25,
-      "renewable_mix_response": 0.7,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
-    },
-    {
-      "activity_elasticity": 0.5,
+      "activity_elasticity": -0.2630338162680476,
       "expectation_rate": 0.25,
       "investment_response": 1.5,
       "renewable_mix_response": 0.55,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
     },
     {
-      "activity_elasticity": 0.5,
+      "activity_elasticity": -0.2630338162680476,
       "expectation_rate": 0.75,
       "investment_response": 1.5,
       "renewable_mix_response": 0.55,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
     },
     {
-      "activity_elasticity": 0.5,
+      "activity_elasticity": -0.2630338162680476,
       "expectation_rate": 0.25,
-      "investment_response": 1.75,
-      "renewable_mix_response": 0.55,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "investment_response": 1.25,
+      "renewable_mix_response": 0.7,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
     },
     {
-      "activity_elasticity": 0.5,
+      "activity_elasticity": -0.2630338162680476,
       "expectation_rate": 0.75,
-      "investment_response": 1.75,
-      "renewable_mix_response": 0.55,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "investment_response": 1.25,
+      "renewable_mix_response": 0.7,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
     },
     {
-      "activity_elasticity": 0.5,
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.25,
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 0.5
+    },
+    {
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.25,
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 0.25
+    },
+    {
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.25,
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 1,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 0.25
+    },
+    {
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.25,
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 1,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 0.5
+    },
+    {
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.25,
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 300,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
+    },
+    {
+      "activity_elasticity": -0.2630338162680476,
       "expectation_rate": 0.25,
       "investment_response": 1,
-      "renewable_mix_response": 1,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "renewable_mix_response": 0.7,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
     },
     {
-      "activity_elasticity": 0.5,
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.25,
+      "investment_response": 1.75,
+      "renewable_mix_response": 0.4,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
+    },
+    {
+      "activity_elasticity": -0.2630338162680476,
       "expectation_rate": 0.75,
       "investment_response": 1,
-      "renewable_mix_response": 1,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "renewable_mix_response": 0.7,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
     },
     {
-      "activity_elasticity": 0.5,
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.75,
+      "investment_response": 1.75,
+      "renewable_mix_response": 0.4,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
+    },
+    {
+      "activity_elasticity": -0.2630338162680476,
       "expectation_rate": 0.25,
       "investment_response": 1.25,
-      "renewable_mix_response": 1,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
     },
     {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.25,
-      "investment_response": 1.5,
-      "renewable_mix_response": 0.7,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
-    },
-    {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.25,
-      "investment_response": 1.5,
-      "renewable_mix_response": 1,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
-    },
-    {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.25,
-      "investment_response": 1.5,
-      "renewable_mix_response": 1.3,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
-    },
-    {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.25,
-      "investment_response": 1.75,
-      "renewable_mix_response": 0.7,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
-    },
-    {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.25,
-      "investment_response": 1.75,
-      "renewable_mix_response": 1,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
-    },
-    {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.25,
-      "investment_response": 1.75,
-      "renewable_mix_response": 1.3,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
-    },
-    {
-      "activity_elasticity": 0.5,
+      "activity_elasticity": -0.2630338162680476,
       "expectation_rate": 0.75,
       "investment_response": 1.25,
-      "renewable_mix_response": 1,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
     },
     {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.75,
-      "investment_response": 1.5,
-      "renewable_mix_response": 0.7,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.25,
+      "investment_response": 1.75,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
     },
     {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.75,
-      "investment_response": 1.5,
-      "renewable_mix_response": 1,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
-    },
-    {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.75,
-      "investment_response": 1.5,
-      "renewable_mix_response": 1.3,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
-    },
-    {
-      "activity_elasticity": 0.5,
+      "activity_elasticity": -0.2630338162680476,
       "expectation_rate": 0.75,
       "investment_response": 1.75,
-      "renewable_mix_response": 0.7,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 1
     },
     {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.75,
-      "investment_response": 1.75,
-      "renewable_mix_response": 1,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.25,
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2.5,
+      "hydro_construction_response": 0.5
     },
     {
-      "activity_elasticity": 0.5,
-      "expectation_rate": 0.75,
-      "investment_response": 1.75,
-      "renewable_mix_response": 1.3,
-      "replacement_adoption": 0.2,
-      "solar_construction_growth": 0.3
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.25,
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2.5,
+      "hydro_construction_response": 1
+    },
+    {
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.25,
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 1000,
+      "hydro_initial_pipeline_multiplier": 0.5,
+      "nuclear_initial_pipeline_multiplier": 2.5,
+      "hydro_construction_response": 0.25
+    },
+    {
+      "activity_elasticity": -0.2630338162680476,
+      "expectation_rate": 0.25,
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0,
+      "solar_construction_growth": 0.3,
+      "oil_activity_elasticity": 0.8407667837806919,
+      "gas_activity_elasticity": 1.5949742951774175,
+      "dispatch_kappa": 300,
+      "hydro_initial_pipeline_multiplier": 1,
+      "nuclear_initial_pipeline_multiplier": 2,
+      "hydro_construction_response": 0.25
     }
   ],
-  "search_budget": 2250,
-  "successful_trials": 2250,
-  "selection": "training loss only; no holdout retuning",
-  "evaluation_identity": "already_seen_not_blind"
+  "search_budget": 1012,
+  "successful_trials": 1012,
+  "selection": "frozen alternating finite grids; training loss only; not global exhaustive search",
+  "stages": [
+    {
+      "sweep": 0,
+      "block": [
+        "hydro_construction_response",
+        "hydro_initial_pipeline_multiplier",
+        "nuclear_initial_pipeline_multiplier"
+      ],
+      "start_index": 1,
+      "trials": 75,
+      "best_index": 14,
+      "best_loss": 2.5581374475208043
+    },
+    {
+      "sweep": 0,
+      "block": [
+        "expectation_rate",
+        "investment_response",
+        "renewable_mix_response",
+        "solar_construction_growth"
+      ],
+      "start_index": 76,
+      "trials": 250,
+      "best_index": 160,
+      "best_loss": 2.5494199408443894
+    },
+    {
+      "sweep": 0,
+      "block": [
+        "dispatch_kappa",
+        "replacement_adoption"
+      ],
+      "start_index": 326,
+      "trials": 12,
+      "best_index": 334,
+      "best_loss": 2.1868046652453157
+    },
+    {
+      "sweep": 1,
+      "block": [
+        "hydro_construction_response",
+        "hydro_initial_pipeline_multiplier",
+        "nuclear_initial_pipeline_multiplier"
+      ],
+      "start_index": 338,
+      "trials": 75,
+      "best_index": 396,
+      "best_loss": 2.1288757629583803
+    },
+    {
+      "sweep": 1,
+      "block": [
+        "expectation_rate",
+        "investment_response",
+        "renewable_mix_response",
+        "solar_construction_growth"
+      ],
+      "start_index": 413,
+      "trials": 250,
+      "best_index": 396,
+      "best_loss": 2.1288757629583803
+    },
+    {
+      "sweep": 1,
+      "block": [
+        "dispatch_kappa",
+        "replacement_adoption"
+      ],
+      "start_index": 663,
+      "trials": 12,
+      "best_index": 396,
+      "best_loss": 2.1288757629583803
+    },
+    {
+      "sweep": 2,
+      "block": [
+        "hydro_construction_response",
+        "hydro_initial_pipeline_multiplier",
+        "nuclear_initial_pipeline_multiplier"
+      ],
+      "start_index": 675,
+      "trials": 75,
+      "best_index": 396,
+      "best_loss": 2.1288757629583803
+    },
+    {
+      "sweep": 2,
+      "block": [
+        "expectation_rate",
+        "investment_response",
+        "renewable_mix_response",
+        "solar_construction_growth"
+      ],
+      "start_index": 750,
+      "trials": 250,
+      "best_index": 396,
+      "best_loss": 2.1288757629583803
+    },
+    {
+      "sweep": 2,
+      "block": [
+        "dispatch_kappa",
+        "replacement_adoption"
+      ],
+      "start_index": 1000,
+      "trials": 12,
+      "best_index": 396,
+      "best_loss": 2.1288757629583803
+    }
+  ],
+  "evaluation_identity": "already_seen_not_blind",
+  "demand_identification": {
+    "anchor_year": 2014,
+    "training_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "fits": {
+      "coal": {
+        "alpha": -0.2630338162680476,
+        "assumed_efficiency": 0.41,
+        "training": [
+          {
+            "year": 2015,
+            "conditional_residual_mwh": 12678939575.46683,
+            "fitted_mwh": 12345494639.668402,
+            "relative_error": -0.02629911861427503
+          },
+          {
+            "year": 2016,
+            "conditional_residual_mwh": 12218400209.449755,
+            "fitted_mwh": 12013142548.501833,
+            "relative_error": -0.01679906185992952
+          },
+          {
+            "year": 2017,
+            "conditional_residual_mwh": 11683027678.907803,
+            "fitted_mwh": 11686354894.421734,
+            "relative_error": 0.0002847905188085864
+          },
+          {
+            "year": 2018,
+            "conditional_residual_mwh": 11048308066.036585,
+            "fitted_mwh": 11372192427.354284,
+            "relative_error": 0.02931529057497473
+          },
+          {
+            "year": 2019,
+            "conditional_residual_mwh": 10888795130.439024,
+            "fitted_mwh": 11085378008.824078,
+            "relative_error": 0.01805368509831884
+          },
+          {
+            "year": 2020,
+            "conditional_residual_mwh": 10914213331.48244,
+            "fitted_mwh": 10907970939.208138,
+            "relative_error": -0.0005719507292657466
+          },
+          {
+            "year": 2021,
+            "conditional_residual_mwh": 10798275282.307074,
+            "fitted_mwh": 10567831201.04533,
+            "relative_error": -0.021340822977473528
+          }
+        ],
+        "training_mape": 0.016094960053292282
+      },
+      "oil": {
+        "alpha": 0.8407667837806919,
+        "assumed_efficiency": 0.38,
+        "training": [
+          {
+            "year": 2015,
+            "conditional_residual_mwh": 6406822268.298947,
+            "fitted_mwh": 6222643309.876338,
+            "relative_error": -0.028747318203897976
+          },
+          {
+            "year": 2016,
+            "conditional_residual_mwh": 6582812726.166316,
+            "fitted_mwh": 6509414019.115007,
+            "relative_error": -0.011150052432686186
+          },
+          {
+            "year": 2017,
+            "conditional_residual_mwh": 6866077577.23,
+            "fitted_mwh": 6815702973.638653,
+            "relative_error": -0.0073367367357461966
+          },
+          {
+            "year": 2018,
+            "conditional_residual_mwh": 7112848240.618421,
+            "fitted_mwh": 7128913165.256652,
+            "relative_error": 0.0022585782930797382
+          },
+          {
+            "year": 2019,
+            "conditional_residual_mwh": 7372885806.23158,
+            "fitted_mwh": 7415951402.500102,
+            "relative_error": 0.005841077347505275
+          },
+          {
+            "year": 2020,
+            "conditional_residual_mwh": 7498897169.54421,
+            "fitted_mwh": 7485936671.730021,
+            "relative_error": -0.00172832051449201
+          },
+          {
+            "year": 2021,
+            "conditional_residual_mwh": 7885422342.423158,
+            "fitted_mwh": 7941568401.689675,
+            "relative_error": 0.007120234887667998
+          }
+        ],
+        "training_mape": 0.009168902630725053
+      },
+      "gas": {
+        "alpha": 1.5949742951774175,
+        "assumed_efficiency": 0.52,
+        "training": [
+          {
+            "year": 2015,
+            "conditional_residual_mwh": 1728805311.909231,
+            "fitted_mwh": 1870353158.5458646,
+            "relative_error": 0.08187610580645033
+          },
+          {
+            "year": 2016,
+            "conditional_residual_mwh": 1830376763.843077,
+            "fitted_mwh": 2055694402.9824102,
+            "relative_error": 0.12309904910847647
+          },
+          {
+            "year": 2017,
+            "conditional_residual_mwh": 2169743218.060769,
+            "fitted_mwh": 2263370610.621753,
+            "relative_error": 0.043151370070724226
+          },
+          {
+            "year": 2018,
+            "conditional_residual_mwh": 2505452406.076923,
+            "fitted_mwh": 2487067449.7706075,
+            "relative_error": -0.0073379786667362445
+          },
+          {
+            "year": 2019,
+            "conditional_residual_mwh": 2715396090.584615,
+            "fitted_mwh": 2704737515.870969,
+            "relative_error": -0.003925237555804095
+          },
+          {
+            "year": 2020,
+            "conditional_residual_mwh": 2909804275.083077,
+            "fitted_mwh": 2778299983.021071,
+            "relative_error": -0.04519351806170935
+          },
+          {
+            "year": 2021,
+            "conditional_residual_mwh": 3209220045.5446153,
+            "fitted_mwh": 3135978345.922575,
+            "relative_error": -0.022822274129728926
+          }
+        ],
+        "training_mape": 0.04677221905708995
+      }
+    },
+    "observed_final_energy": false,
+    "nonenergy_included": true,
+    "method": "anchored log-GDP least squares on conditional nonpower residual",
+    "limitation": "Depends on fixed conversion efficiencies; includes other transformation/statistical differences"
+  }
 }

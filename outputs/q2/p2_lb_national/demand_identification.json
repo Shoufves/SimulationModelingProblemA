@@ -1,0 +1,165 @@
+{
+  "anchor_year": 2014,
+  "training_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "fits": {
+    "coal": {
+      "alpha": -0.2630338162680476,
+      "assumed_efficiency": 0.41,
+      "training": [
+        {
+          "year": 2015,
+          "conditional_residual_mwh": 12678939575.46683,
+          "fitted_mwh": 12345494639.668402,
+          "relative_error": -0.02629911861427503
+        },
+        {
+          "year": 2016,
+          "conditional_residual_mwh": 12218400209.449755,
+          "fitted_mwh": 12013142548.501833,
+          "relative_error": -0.01679906185992952
+        },
+        {
+          "year": 2017,
+          "conditional_residual_mwh": 11683027678.907803,
+          "fitted_mwh": 11686354894.421734,
+          "relative_error": 0.0002847905188085864
+        },
+        {
+          "year": 2018,
+          "conditional_residual_mwh": 11048308066.036585,
+          "fitted_mwh": 11372192427.354284,
+          "relative_error": 0.02931529057497473
+        },
+        {
+          "year": 2019,
+          "conditional_residual_mwh": 10888795130.439024,
+          "fitted_mwh": 11085378008.824078,
+          "relative_error": 0.01805368509831884
+        },
+        {
+          "year": 2020,
+          "conditional_residual_mwh": 10914213331.48244,
+          "fitted_mwh": 10907970939.208138,
+          "relative_error": -0.0005719507292657466
+        },
+        {
+          "year": 2021,
+          "conditional_residual_mwh": 10798275282.307074,
+          "fitted_mwh": 10567831201.04533,
+          "relative_error": -0.021340822977473528
+        }
+      ],
+      "training_mape": 0.016094960053292282
+    },
+    "oil": {
+      "alpha": 0.8407667837806919,
+      "assumed_efficiency": 0.38,
+      "training": [
+        {
+          "year": 2015,
+          "conditional_residual_mwh": 6406822268.298947,
+          "fitted_mwh": 6222643309.876338,
+          "relative_error": -0.028747318203897976
+        },
+        {
+          "year": 2016,
+          "conditional_residual_mwh": 6582812726.166316,
+          "fitted_mwh": 6509414019.115007,
+          "relative_error": -0.011150052432686186
+        },
+        {
+          "year": 2017,
+          "conditional_residual_mwh": 6866077577.23,
+          "fitted_mwh": 6815702973.638653,
+          "relative_error": -0.0073367367357461966
+        },
+        {
+          "year": 2018,
+          "conditional_residual_mwh": 7112848240.618421,
+          "fitted_mwh": 7128913165.256652,
+          "relative_error": 0.0022585782930797382
+        },
+        {
+          "year": 2019,
+          "conditional_residual_mwh": 7372885806.23158,
+          "fitted_mwh": 7415951402.500102,
+          "relative_error": 0.005841077347505275
+        },
+        {
+          "year": 2020,
+          "conditional_residual_mwh": 7498897169.54421,
+          "fitted_mwh": 7485936671.730021,
+          "relative_error": -0.00172832051449201
+        },
+        {
+          "year": 2021,
+          "conditional_residual_mwh": 7885422342.423158,
+          "fitted_mwh": 7941568401.689675,
+          "relative_error": 0.007120234887667998
+        }
+      ],
+      "training_mape": 0.009168902630725053
+    },
+    "gas": {
+      "alpha": 1.5949742951774175,
+      "assumed_efficiency": 0.52,
+      "training": [
+        {
+          "year": 2015,
+          "conditional_residual_mwh": 1728805311.909231,
+          "fitted_mwh": 1870353158.5458646,
+          "relative_error": 0.08187610580645033
+        },
+        {
+          "year": 2016,
+          "conditional_residual_mwh": 1830376763.843077,
+          "fitted_mwh": 2055694402.9824102,
+          "relative_error": 0.12309904910847647
+        },
+        {
+          "year": 2017,
+          "conditional_residual_mwh": 2169743218.060769,
+          "fitted_mwh": 2263370610.621753,
+          "relative_error": 0.043151370070724226
+        },
+        {
+          "year": 2018,
+          "conditional_residual_mwh": 2505452406.076923,
+          "fitted_mwh": 2487067449.7706075,
+          "relative_error": -0.0073379786667362445
+        },
+        {
+          "year": 2019,
+          "conditional_residual_mwh": 2715396090.584615,
+          "fitted_mwh": 2704737515.870969,
+          "relative_error": -0.003925237555804095
+        },
+        {
+          "year": 2020,
+          "conditional_residual_mwh": 2909804275.083077,
+          "fitted_mwh": 2778299983.021071,
+          "relative_error": -0.04519351806170935
+        },
+        {
+          "year": 2021,
+          "conditional_residual_mwh": 3209220045.5446153,
+          "fitted_mwh": 3135978345.922575,
+          "relative_error": -0.022822274129728926
+        }
+      ],
+      "training_mape": 0.04677221905708995
+    }
+  },
+  "observed_final_energy": false,
+  "nonenergy_included": true,
+  "method": "anchored log-GDP least squares on conditional nonpower residual",
+  "limitation": "Depends on fixed conversion efficiencies; includes other transformation/statistical differences"
+}

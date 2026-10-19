@@ -1,0 +1,23 @@
+{
+  "fit": {
+    "log_rate": -0.019254140050869333,
+    "anchor_year": 2014,
+    "anchor_tce_per_mwh": 0.3402702520299483,
+    "training_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "trend_decay_years": 10,
+    "interpretation": "effective statistical coefficient, not physical generation coal rate"
+  },
+  "formula": "nonfossil_tce = covered_clean_generation_MWh * effective_coefficient_tce_per_MWh",
+  "scope": "reviewed NBS category mapping; effective coefficient includes non-electric/bioenergy/trade/pumped-hydro boundary differences",
+  "assumption": "past aggregate mapping may not transfer to future technology mixes",
+  "official_attainment_certified": false,
+  "anchor_2024_is_independent_validation": false
+}

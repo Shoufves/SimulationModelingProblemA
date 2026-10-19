@@ -4,7 +4,7 @@
 
 **先看路线，再选数据，再运行。** 本分支新增问题二全国聚合条件模型：真实历史多目标校准、年度主体与连续运行、2030/2060条件推演和三因素灵敏度。入口见[Q2候选与自检](docs/solutions/p2-lb.md)。官方统计衔接、逐厂状态及全年网络可靠性仍有限制，不能将研究候选称为官方预测；问题三政策优化未在本轮完成。
 
-2026-10-19 V7评审修复已验证：施工硬上限、输入缺失后的失败状态及恢复、逐来源用途准入均已修订，共同入口已接通。257项全量测试、2250组训练、91组条件试验及31项验收通过；26份科学产物独立进程复现一致。详见[修复报告](docs/solutions/p2-lb-repaired.md)与[review(7)响应](docs/solutions/p2-lb-review7-response.md)。原误差门槛、已接触评估身份及研究假设限制保留；等待mmj、yx评审新SHA。
+2026-10-20：当前版本继续修复 review(9)，增加煤油气分项校准验收、官方类别衔接与动态统计桥回测，修正规划供给路径不一致、非化石优先调度遗漏和独立审查器变量覆盖错误。详见[本轮方法与范围](docs/solutions/p2-lb-review9-response.md)、[V10结构修复](docs/solutions/p2-lb-review10-structure.md)和[本轮实际结果](docs/solutions/p2-lb-review9-results.md)。V7 的257项测试、2250组训练等记录保存在[历史修复报告](docs/solutions/p2-lb-repaired.md)及归档中，不能作为新代码的通过证明。原误差门槛、已接触评估身份和团队审批要求保留。
 
 **Q1 已由 PR #6 合并。** 合并 SHA 为 `804ec15ee43874303986a7ad91b2cde05c65b124`，采用 lb 主线及 mmj 补强。见[整合与逐项来源](docs/solutions/p1-yx-integration.md)和[完整报告](outputs/q1/p1_yx/report.md)。省级份额分母的31省来源血缘为保留的P3可选补强；本轮不改Q1原成果。
 

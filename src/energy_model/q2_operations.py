@@ -81,6 +81,9 @@ def operate(config, *, solver=linprog):
     Each demand has a fixed device input carrier/efficiency/capacity. Investment
     changes next year's devices, never LP fuel switching. Fuel supply and tanks
     are shared by all direct users and converters, including hydrogen facilities.
+    Optional fossil allocation first preserves the original total fossil output,
+    then uses a convex behavioural score to allocate it among selected plants.
+    The score is neither a resource expense nor a cash payment.
     """
     periods = config["periods"]
     if not periods:
@@ -96,6 +99,35 @@ def operate(config, *, solver=linprog):
     fuels, plants, demands = config["fuels"], config["plants"], config["demands"]
     if not plants or not demands:
         raise Q2Error("missing_input", "Plants and devices are required")
+    displacement = config.get("fossil_displacement_priority_plants", [])
+    if (type(displacement) is not list or
+            any(type(name) is not str for name in displacement) or
+            len(set(displacement)) != len(displacement)):
+        raise Q2Error("invalid_input", "Fossil displacement plants must be distinct plant names")
+    if any(name not in plants or plants[name]["input"] not in fuels or
+           plants[name]["output"] != "electricity" for name in displacement):
+        raise Q2Error("invalid_input", "Fossil displacement requires declared fuelled electricity plants")
+    allocation = config.get("fossil_allocation_score")
+    allocation_specs = {}
+    if allocation is not None:
+        if (type(allocation) is not dict or
+                not {"kappa", "plants"}.issubset(allocation) or
+                set(allocation) - {"kappa", "plants", "ratio_step"}):
+            raise Q2Error("invalid_input", "Fossil allocation requires kappa and plants")
+        kappa = number(allocation["kappa"], "allocation curvature", 1e-9)
+        ratio_step = number(allocation.get("ratio_step", .1), "allocation ratio step", .01, 1)
+        allocation_specs = allocation["plants"]
+        if type(allocation_specs) is not dict or len(allocation_specs) < 2:
+            raise Q2Error("invalid_input", "Fossil allocation requires at least two plants")
+        for name, spec in allocation_specs.items():
+            if (type(name) is not str or name not in plants or
+                    plants[name]["input"] not in {"coal", "oil", "gas"} or
+                    plants[name]["input"] not in fuels or plants[name]["output"] != "electricity"):
+                raise Q2Error("invalid_input", "Allocation requires declared fossil electricity plants")
+            if type(spec) is not dict or set(spec) != {"reference_cf", "initial_marginal_cost"}:
+                raise Q2Error("invalid_input", "Invalid fossil allocation plant fields")
+            number(spec["reference_cf"], name + ".reference CF", 1e-9, 1)
+            number(spec["initial_marginal_cost"], name + ".initial marginal cost")
     # A set here changes HiGHS row order with PYTHONHASHSEED and can perturb
     # degenerate optima/roundoff across otherwise identical processes.
     carriers = sorted({"electricity", "hydrogen", *fuels})
@@ -225,6 +257,31 @@ def operate(config, *, solver=linprog):
         lp.eq({s[n-1]: 1}, number(store["terminal_mwh"], "terminal SOC", 0, ecap), "terminal-SOC")
     for (carrier, t), terms in bal.items():
         lp.eq(terms, 0, f"carrier/{carrier}/{t}")
+    behavioral = []
+    for name, spec in sorted(allocation_specs.items()):
+        anchor = plants[name]["capacity_mw"] * sum(hours) * spec["reference_cf"]
+        maximum = min(sum(lp.bounds[g[name, t]][1] for t in range(n)),
+                      plants[name]["window_energy_budget_mwh"])
+        terms = {g[name, t]: -1 for t in range(n)}
+        if anchor > 0 and maximum > 0:
+            last = maximum / anchor
+            # Fine segments around the anchor; geometric tails bound the number
+            # of columns even when the initial observed utilisation is tiny.
+            ratios = {0.0, last}
+            ratios.update(round(k * ratio_step, 12)
+                          for k in range(1, int(min(4, last) / ratio_step) + 1))
+            ratios.update(r for r in (1.0, 2.0, 4.0) if r < last)
+            tail = 8.0
+            while tail < last:
+                ratios.add(tail)
+                tail *= 2
+            knots = sorted(r for r in ratios if r <= last)
+            for k, (left, right) in enumerate(zip(knots, knots[1:])):
+                j = lp.var(f"allocation/{name}/{k}", anchor * (right - left))
+                terms[j] = 1
+                slope = -spec["initial_marginal_cost"] + kappa * ((left + right) / 2 - 1)
+                behavioral.append((j, slope * weight))
+        lp.eq(terms, 0, f"allocation-segments/{name}")
     stages = []
     for priority, indices in sorted(shortages.items()):
         objective = np.zeros(len(lp.names))
@@ -234,9 +291,35 @@ def operate(config, *, solver=linprog):
         lp.eq({j: 1 for j in indices}, optimum, f"fixed-shortage/{priority}")
         stages.append({"stage": f"service-priority-{priority}", "objective": optimum,
                        "status": int(result.status), "max_residual": residual})
-    result, residual = lp.solve(lp.cost, solver)
+    if displacement:
+        # Minimising fossil output rewards actual substitution, not extra
+        # renewable production dissipated through storage losses.
+        indices = [g[name, t] for name in sorted(displacement) for t in range(n)]
+        objective = np.zeros(len(lp.names))
+        objective[indices] = 1
+        result, residual = lp.solve(objective, solver)
+        optimum = float(sum(result.x[j] for j in indices))
+        lp.eq({j: 1 for j in indices}, optimum, "fixed-fossil-displacement")
+        stages.append({"stage": "fossil-displacement-priority", "objective": optimum,
+                       "plants": sorted(displacement), "status": int(result.status),
+                       "max_residual": residual})
+    reference_fossil = None
+    if allocation_specs:
+        reference, reference_residual = lp.solve(lp.cost, solver)
+        indices = [g[name, t] for name in sorted(allocation_specs) for t in range(n)]
+        reference_fossil = float(sum(reference.x[j] for j in indices))
+        lp.eq({j: 1 for j in indices}, reference_fossil, "fixed-reference-fossil-total")
+        stages.append({"stage": "reference-resource-cost", "objective": float(reference.fun),
+                       "status": int(reference.status), "max_residual": reference_residual})
+        generalized = np.array(lp.cost, dtype=float)
+        for j, slope in behavioral:
+            generalized[j] += slope
+        result, residual = lp.solve(generalized, solver)
+    else:
+        result, residual = lp.solve(lp.cost, solver)
     x = result.x
-    stages.append({"stage": "resource-cost", "objective": float(result.fun),
+    stages.append({"stage": "fossil-allocation-score" if allocation_specs else "resource-cost",
+                   "objective": float(result.fun),
                    "status": int(result.status), "max_residual": residual})
     if any(min(x[c[t]], x[d[t]]) > 1e-6 for t in range(n)):
         raise Q2Error("unsupported_operation", "Simultaneous battery charge/discharge; requires MILP")
@@ -265,7 +348,12 @@ def operate(config, *, solver=linprog):
     for terms, rhs, name in lp.equalities:
         balance_rows.append(dict(constraint=name, residual=float(sum(x[i]*v for i,v in terms.items())-rhs)))
     policy_cost = sum(x[i]*v for i,v in policy_terms.items())
-    return dict(status="optimal", annual_repeats=weight, resource_cost=float(result.fun)-policy_cost,
+    actual_objective = float(np.dot(lp.cost, x)) if allocation_specs else float(result.fun)
+    allocation_result = dict(actual_dispatch_cost=actual_objective,
+        behavioral_score=float(sum(x[j] * slope for j, slope in behavioral)),
+        reference_fossil_mwh=reference_fossil) if allocation_specs else {}
+    return dict(status="optimal", annual_repeats=weight, resource_cost=actual_objective-policy_cost,
                 dispatch_objective=float(result.fun), policy_signal_cost=policy_cost,
+                **allocation_result,
                 fuel=fuel_rows, generation=generation_rows, demand=demand_rows, storage=storage_rows,
                 balances=balance_rows, stages=stages, max_residual=residual)

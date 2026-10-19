@@ -11,18 +11,21 @@
       "sha256": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708",
       "source_keys": [
         "yx:NBS_2025_C09-02",
+        "q2:data/raw/batch1_national/nbs_2025_C09-02.jpg",
         "lb/base:NBS_2025_C09-02"
       ],
       "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-02.jpg",
       "allowed_use": "energy_observations_and_initial_scale",
-      "review": "Full image visually read; 100 literal cells checked against unified CSV; PEO is not automatically nonfossil",
+      "review": "Full image visually read; 100 literal cells checked against unified CSV. Admits coal/oil/gas share calibration, pre-training supply CAGR and statistical bridge. V10 permits conditional nonpower residual identification with assumed conversion efficiencies, not new final-energy observations; category correspondence reviewed separately, quantity bridge remains empirical",
       "locator": "Table 9-2; 2005-2024",
       "status": "author_scoped_review_not_team_approval",
       "allowed_operations": [
         "initialization",
         "calibration",
         "evaluation",
-        "target_comparison"
+        "target_comparison",
+        "statistical_bridge",
+        "conditional_nonpower_identification"
       ]
     },
     {
@@ -30,11 +33,12 @@
       "sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b",
       "source_keys": [
         "yx:NBS_2025_C09-15",
+        "q2:data/raw/batch1_national/nbs_2025_C09-15.jpg",
         "lb/base:NBS_2025_C09-15"
       ],
       "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C09-15.jpg",
       "allowed_use": "capacity_observations_and_initial_scale",
-      "review": "Full image visually read; 112 literal cells checked against unified CSV; thermal includes biomass; hydro includes pumped",
+      "review": "Full image visually read; 112 literal cells checked against unified CSV; thermal includes biomass; hydro includes pumped. V10 initial CF uses initial-year and previous-year mean capacity as an approximate commissioning correction; 2014 hidden pipeline is training-inferred, never an observed project census",
       "locator": "Table 9-15; 2009-2024",
       "status": "author_scoped_review_not_team_approval",
       "allowed_operations": [
@@ -48,24 +52,28 @@
       "sha256": "266f2e2baad7975351bc9bb4aa061d22b1da9fe4c47d51d2ac6071e01e171f76",
       "source_keys": [
         "yx:OWID_ENERGY_CHINA_ARCHIVE",
+        "q2:data/raw/batch1_national/owid_energy_data.csv",
         "lb/base:OWID_ENERGY"
       ],
       "url": "https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv",
       "allowed_use": "generation_observations_initial_decomposition_crosscheck",
-      "review": "CHN rows machine-matched to processed transcription; secondary compilation (EI/Ember); not independent of their upstream",
+      "review": "CHN rows machine-matched to processed transcription; secondary compilation (EI/Ember); not independent of their upstream. Also admits covered clean generation as denominator of effective statistical coefficient, not a complete physical primary-energy balance; V10 explicitly admits all eight generation targets inside one dependent loss family, conditional nonpower residual fitting, and pretraining biofuel-generation growth as a delivery-capacity proxy, not measured feedstock.",
       "locator": "iso_code=CHN; years 2005-2024",
       "status": "author_scoped_review_not_team_approval",
       "allowed_operations": [
         "initialization",
         "calibration",
-        "evaluation"
+        "evaluation",
+        "statistical_bridge",
+        "conditional_nonpower_identification"
       ]
     },
     {
       "path": "data/raw/batch1_national/wdi_china_macro_2005_2025.json",
       "sha256": "8ee1bc173ee4bda7975a045b791c8b3f6af3ee8d0f9995ce52d23f896d0a3200",
       "source_keys": [
-        "yx:WDI_CHINA_MACRO"
+        "yx:WDI_CHINA_MACRO",
+        "q2:data/raw/batch1_national/wdi_china_macro_2005_2025.json"
       ],
       "url": "https://api.worldbank.org/v2/country/CHN/indicator/NY.GDP.MKTP.KN;NY.GDP.MKTP.CN;SP.POP.TOTL;NY.GDP.MKTP.KD.ZG;FP.CPI.TOTL;PA.NUS.FCRF?source=2&date=2005:2025&format=json&per_page=1000",
       "allowed_use": "constant_GDP_ratios_and_CPI_deflation",
@@ -82,6 +90,7 @@
       "path": "data/raw/lb/base/reports/china_btr1_2024.pdf",
       "sha256": "3864e6e16e03517946907f518b9843bd8e5934f72a36e4ee78e8e0212f90a5cb",
       "source_keys": [
+        "q2:data/raw/lb/base/reports/china_btr1_2024.pdf",
         "lb/base:CHINA_BTR1_2024"
       ],
       "url": "https://unfccc.int/sites/default/files/resource/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E6%B0%94%E5%80%99%E5%8F%98%E5%8C%96%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8F%8C%E5%B9%B4%E9%80%8F%E6%98%8E%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
@@ -100,7 +109,8 @@
       "path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
       "sha256": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff",
       "source_keys": [
-        "yx:GCB_GCB2025v15_MtCO2_flat"
+        "yx:GCB_GCB2025v15_MtCO2_flat",
+        "q2:data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv"
       ],
       "url": "https://zenodo.org/api/records/17417124/files/GCB2025v15_MtCO2_flat.csv/content",
       "allowed_use": "external_diagnostic_and_conditional_peak_bridge",
@@ -115,7 +125,9 @@
     {
       "path": "data/raw/lb/ai_social/nbs_bulletin_2024.txt",
       "sha256": "10553a3413362b56c1b2f9ec5c7a2fddf723d0d8a58293ef580fb1ced5643bfb",
-      "source_keys": [],
+      "source_keys": [
+        "q2:data/raw/lb/ai_social/nbs_bulletin_2024.txt"
+      ],
       "url": null,
       "allowed_use": "2024_currency_conversion",
       "review": "Text explicitly reports annual mean 1 USD = 7.1217 CNY; WDI 7.197491 excluded, no averaging",
@@ -129,6 +141,7 @@
       "path": "data/raw/lb/base/reports/iea_oecd_generation_cost_2020.pdf",
       "sha256": "7471000f732fb256bb9c2ebfbaa74285ea4736e980983b10201e0fdbf71d0b7a",
       "source_keys": [
+        "q2:data/raw/lb/base/reports/iea_oecd_generation_cost_2020.pdf",
         "lb/base:IEA_NEA_GENERATION_COST_2020"
       ],
       "url": "https://oecd-nea.org/upload/docs/application/pdf/2026-09/egc-2020_2020-12-09_18-26-46_781.pdf",
@@ -145,6 +158,7 @@
       "sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada",
       "source_keys": [
         "yx:IRENA_COST_2024_PDF",
+        "q2:data/raw/batch3_scenarios/irena_power_costs_2024.pdf",
         "lb/base:IRENA_COST_2024_FULL"
       ],
       "url": "https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2025/Jul/IRENA_TEC_RPGC_in_2024_2025.pdf",
@@ -159,7 +173,9 @@
     {
       "path": "data/processed/technology_accounting_parameters.csv",
       "sha256": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f",
-      "source_keys": [],
+      "source_keys": [
+        "q2:data/processed/technology_accounting_parameters.csv"
+      ],
       "url": null,
       "allowed_use": "IPCC and IRENA source-located reference cells",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
@@ -172,7 +188,9 @@
     {
       "path": "data/processed/q1/cost_method_parameters.csv",
       "sha256": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9",
-      "source_keys": [],
+      "source_keys": [
+        "q2:data/processed/q1/cost_method_parameters.csv"
+      ],
       "url": null,
       "allowed_use": "Q1 reviewed O&M cells; new Q2 conditional use",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
@@ -185,7 +203,9 @@
     {
       "path": "data/processed/q1/reviewed_2024_additions.csv",
       "sha256": "60e91cb161df7f33da4ca89c7b83b02619c6e44defa5d6f2781f83673d3f8fbd",
-      "source_keys": [],
+      "source_keys": [
+        "q2:data/processed/q1/reviewed_2024_additions.csv"
+      ],
       "url": null,
       "allowed_use": "Q1 reviewed 2024 storage power/energy and nonfossil anchor, new scoped Q2 use",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
@@ -199,7 +219,9 @@
     {
       "path": "data/raw/official/S28_qinshan_design_life_capture.txt",
       "sha256": "cc6bbf21c20636fa131a2e3105bf9222aec3e64e6eb77d6000d385fdb224780d",
-      "source_keys": [],
+      "source_keys": [
+        "q2:data/raw/official/S28_qinshan_design_life_capture.txt"
+      ],
       "url": null,
       "allowed_use": "First Chinese nuclear unit grid date 1991-12-15; restrict reconstructed nuclear age; not a national licence database",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
@@ -214,6 +236,7 @@
       "sha256": "a25d9f96d7672df391b328de79d4cfd812c07fe79d5cf4a30d23d82d8f02985b",
       "source_keys": [
         "yx:IPCC_ENERGY_STATIONARY",
+        "q2:data/raw/batch3_scenarios/ipcc_2006_stationary_combustion.pdf",
         "lb/base:IPCC_COMBUSTION"
       ],
       "url": "https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/2_Volume2/V2_2_Ch2_Stationary_Combustion.pdf",
@@ -228,7 +251,9 @@
     {
       "path": "data/processed/fuel_storage_hydrogen_snapshots.csv",
       "sha256": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc",
-      "source_keys": [],
+      "source_keys": [
+        "q2:data/processed/fuel_storage_hydrogen_snapshots.csv"
+      ],
       "url": null,
       "allowed_use": "reported snapshots, not inferred inventory",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
@@ -241,7 +266,9 @@
     {
       "path": "data/processed/cea_market_annual.csv",
       "sha256": "fbc8ce418c2457ae124123d3614fe2c2b58f34054c12833e489aab07fbf275fd",
-      "source_keys": [],
+      "source_keys": [
+        "q2:data/processed/cea_market_annual.csv"
+      ],
       "url": null,
       "allowed_use": "2024 annual turnover/volume, not universal compliance price",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
@@ -255,6 +282,7 @@
       "path": "data/raw/lb/international/cn_ets_allocation_2026.pdf",
       "sha256": "091fd2d14b975e42da6f68d0f7659cb817cdf76530fe57e77038434a3d464935",
       "source_keys": [
+        "q2:data/raw/lb/international/cn_ets_allocation_2026.pdf",
         "lb/补充收集_20261017:CN_ETS_ALLOCATION",
         "lb/补充收集_20261017/international:CN_ETS_ALLOCATION"
       ],
@@ -270,7 +298,9 @@
     {
       "path": "data/raw/lb/international/cn_ets_notice.txt",
       "sha256": "be0454ca34684ca2eb52bf4c835c6d52e45759798b108d0d9e4a633fd135b992",
-      "source_keys": [],
+      "source_keys": [
+        "q2:data/raw/lb/international/cn_ets_notice.txt"
+      ],
       "url": null,
       "allowed_use": "publication date 2026-09-02; no retrospective information",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
@@ -283,7 +313,9 @@
     {
       "path": "data/processed/policy_target_reference.csv",
       "sha256": "c29fba83db1cd477f279a10cc58338f923b51a4e711a48cb9b93bdae20ee39f9",
-      "source_keys": [],
+      "source_keys": [
+        "q2:data/processed/policy_target_reference.csv"
+      ],
       "url": null,
       "allowed_use": "source-specific target comparison only, no forced attainment",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
@@ -291,6 +323,114 @@
       "status": "author_scoped_review_not_team_approval",
       "allowed_operations": [
         "target_comparison"
+      ]
+    },
+    {
+      "path": "data/raw/q2_scope/nbs_fossil_nonfossil_20260417.html",
+      "sha256": "c69981a88456264889ddde4f106686ce62854bb8332459a763c87bc30a90ba11",
+      "source_keys": [
+        "q2:data/raw/q2_scope/nbs_fossil_nonfossil_20260417.html"
+      ],
+      "url": "https://www.stats.gov.cn/hd/lyzx/zxgk/202605/t20260509_1963653.html",
+      "allowed_use": "statistical_category_and_conversion_method_review",
+      "review": "Original full text read and scoped: categories/definition only; no future observed quantities injected; composite coefficient is not the official physical conversion formula",
+      "locator": "Energy Statistics Department reply dated 2026-04-17, reply content",
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "statistical_bridge",
+        "target_comparison"
+      ]
+    },
+    {
+      "path": "data/raw/q2_scope/nbs_energy_transition_20260604.html",
+      "sha256": "9317cdf48fb0267baa1b7dd41f13aa0d7e83feb7f687310b5b656785e5767990",
+      "source_keys": [
+        "q2:data/raw/q2_scope/nbs_energy_transition_20260604.html"
+      ],
+      "url": "https://www.stats.gov.cn/sj/sjjd/202606/t20260604_1963892.html",
+      "allowed_use": "statistical_category_and_conversion_method_review",
+      "review": "Original full text read and scoped: categories/definition only; no future observed quantities injected; composite coefficient is not the official physical conversion formula",
+      "locator": "2026-06-04, section 3(2); category explanation only, no 2025 observations enter model",
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "statistical_bridge",
+        "target_comparison"
+      ]
+    },
+    {
+      "path": "data/raw/lb/base/nbs/yearbook2025/sm09.txt",
+      "sha256": "5eedb701372fa0cb89433ac01e27848ce579324f616bfa600a3a016d0efacc42",
+      "source_keys": [
+        "q2:data/raw/lb/base/nbs/yearbook2025/sm09.txt"
+      ],
+      "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/sm09.htm",
+      "allowed_use": "statistical_category_and_conversion_method_review",
+      "review": "Original full text read and scoped: categories/definition only; no future observed quantities injected; composite coefficient is not the official physical conversion formula",
+      "locator": "Energy chapter methodological notes, section 4 items 3 and 4",
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "statistical_bridge",
+        "target_comparison"
+      ]
+    },
+    {
+      "path": "data/raw/q2_scope/ndrc_renewable_purchase_2016_625.html",
+      "sha256": "ed29c1d46b380a90cf0a246a8de49cbb5cd7f6df93a52890bae888264fa914dd",
+      "source_keys": [
+        "q2:data/raw/q2_scope/ndrc_renewable_purchase_2016_625.html"
+      ],
+      "url": "https://zfxxgk.ndrc.gov.cn/web/iteminfo.jsp?id=19721",
+      "allowed_use": "nonfossil_priority_policy_motivation_and_scope_limit",
+      "review": "Original articles read. Supports policy motivation only: minimising fossil displacement is a national aggregate approximation, also benefits nuclear, and does not replicate eligible project-level contracts. 2024 guaranteed/market distinction prevents unconditional legal extrapolation; continuation is a scenario assumption with cost-only sensitivity. No empirical heat, waste or must-run quantities inferred.",
+      "locator": "2016 NDRC 625, articles 2-4, 8 and 15; eligibility, safety, biomass purchase and priority",
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "policy_reference"
+      ]
+    },
+    {
+      "path": "data/raw/q2_scope/ndrc_renewable_purchase_2024_order15.html",
+      "sha256": "4f2dc9a2b942a704155c341ad4f84d0e125d3adb90a8f79e87af485ce5181fe6",
+      "source_keys": [
+        "q2:data/raw/q2_scope/ndrc_renewable_purchase_2024_order15.html"
+      ],
+      "url": "https://zfxxgk.ndrc.gov.cn/web/iteminfo.jsp?id=20348",
+      "allowed_use": "nonfossil_priority_policy_motivation_and_scope_limit",
+      "review": "Original articles read. Supports policy motivation only: minimising fossil displacement is a national aggregate approximation, also benefits nuclear, and does not replicate eligible project-level contracts. 2024 guaranteed/market distinction prevents unconditional legal extrapolation; continuation is a scenario assumption with cost-only sensitivity. No empirical heat, waste or must-run quantities inferred.",
+      "locator": "2024 Order15, articles 3-6 and 24; guaranteed/market volumes, exclusions, effective 2024-04-01",
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "policy_reference"
+      ]
+    },
+    {
+      "path": "data/raw/q2_structure/howitt_positive_mathematical_programming_1995.pdf",
+      "sha256": "c5b4153c5c1704c9a240cd7778ad6601be47fd1a6db8d1d751f059b78111b441",
+      "source_keys": [
+        "q2:data/raw/q2_structure/howitt_positive_mathematical_programming_1995.pdf"
+      ],
+      "url": "https://watershed.ucdavis.edu/sites/g/files/dgvnsk8531/files/products/2021-12/Positive%20Math%20Programing.pdf",
+      "allowed_use": "aggregate_dispatch_method_motivation_not_measured_parameters",
+      "review": "Read methodological motivation for base-allocation calibration. Agriculture paper does not estimate Chinese electricity frictions; implementation is a disclosed PMP-inspired convex allocation score, not a replication or measured welfare cost.",
+      "locator": "AJAE 77(2), pp329-342; opening calibration/nonlinear response method",
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "method_reference"
+      ]
+    },
+    {
+      "path": "data/raw/q2_structure/iea_china_power_system_transformation_2019.pdf",
+      "sha256": "836e7714460aff2a8acc71df050c59ada283a56c4a15043acca453745ac076a0",
+      "source_keys": [
+        "q2:data/raw/q2_structure/iea_china_power_system_transformation_2019.pdf"
+      ],
+      "url": "https://iea.blob.core.windows.net/assets/fd886bb9-27d8-4d5d-a03f-38cb34b77ed7/China_Power_System_Transformation.pdf",
+      "allowed_use": "aggregate_dispatch_method_motivation_not_measured_parameters",
+      "review": "Read historical institutional/scenario discussion. Supports rejecting universal perfect substitutability as the only model; does not identify current hourly allocations, justify hard gas minima or certify the assumed score curvature.",
+      "locator": "Printed pp14-15; fair/economic dispatch and gas allocation in IEA scenarios",
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "method_reference"
       ]
     }
   ],
@@ -307,13 +447,14 @@
     "data/restricted",
     "WDI exchange rate",
     "OWID other_renewable duplicated with biofuel",
-    "NBS PEO as automatic official nonfossil",
+    "effective coefficient as official physical conversion formula",
     "GCB+BTR process double addition",
     "2026 policies before publication"
   ],
   "products": {
-    "data/processed/q2/national_observations.csv": "4d0462cfddcf51ff42e2f4e489437380e18f08b90c76df3ff7a71684856792c5",
+    "data/processed/q2/national_observations.csv": "ef6893ccbc52d9bb829c2bc6b9e0451b133800a56bfa114fd09bc47b45a6f505",
     "data/processed/q2/technical_references.json": "af38ccd89ece76b7e37f929ec8056acd1cc6bcba47a2e403589766afb16ca62f",
-    "data/processed/q2/gcb_peak_bridge_review.json": "dd3a278703ab2c0ef2374d5d0613188dbf822d38d3f238ff8f4a24f3e3865a13"
+    "data/processed/q2/gcb_peak_bridge_review.json": "dd3a278703ab2c0ef2374d5d0613188dbf822d38d3f238ff8f4a24f3e3865a13",
+    "data/processed/q2/statistical_scope_review.json": "b00f8338ed2b16160827fba4305a77601f7fb645079ccbe4110db4fe40715b12"
   }
 }

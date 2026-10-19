@@ -12,6 +12,8 @@ from mesa import Agent, Model
 
 from .q2_operations import Q2Error, operate
 from .q2_finance import financing_limit, fund_project, service_debt, debt
+from .q2_statistics import coefficient
+from .q2_identification import FUEL_EFFICIENCIES
 
 TCE_MWH = 29.3076 / 3.6
 FUELS = ("coal", "oil", "gas")
@@ -43,6 +45,9 @@ def operate_national(operation):
     result = operate(scaled(operation))
     for key in ("resource_cost","max_residual","dispatch_objective","policy_signal_cost"):
         result[key] *= scale
+    for key in ("actual_dispatch_cost","behavioral_score","reference_fossil_mwh"):
+        if result.get(key) is not None:
+            result[key] *= scale
     for group in ("fuel","generation","demand","storage","balances","stages"):
         for row in result[group]:
             for key,value in list(row.items()):
@@ -83,16 +88,26 @@ class NationalSupplier(NationalActor):
         self.annual, self.price = annual,price
         self.utilisation = .7
 
-    def offer(self):
+    def offer(self, year=None, *, record=True):
         m,a = self.model,self.model.a
+        year = m.year if year is None else year
         # Finite delivery envelope follows an explicit exogenous development path.
         # The headroom converts an annual average into a RESEARCH peak bound.
-        growth = (1+a["fuel_supply_annual_growth"])**(m.year-m.initial_year)
+        # Carrier-specific expansion estimated before the training window;
+        # future growth decays to the disclosed common long-run assumption.
+        rate = m.supply_growth.get(self.name,a["fuel_supply_annual_growth"])*m.variant.get("supply_growth_multiplier",1)
+        historical = max(0,min(year,2024)-m.initial_year)
+        future = max(0,year-max(2024,m.initial_year))
+        tau = a["supply_growth_decay_years"]
+        longrun = log(1+a["fuel_supply_annual_growth"])
+        growth = exp(log(1+rate)*historical + longrun*future +
+                     (log(1+rate)-longrun)*tau*(1-exp(-future/tau)))
         power = self.annual/8760*growth*a["fuel_supply_headroom"]
         imported = a["fuel_import_fraction"][self.name]
         tank = self.annual/365*a["fuel_inventory_days"]
-        self.log("offer",price_cny_per_mwh=self.price,domestic_mw=power*(1-imported),
-                 import_mw=power*imported,lagged_utilisation=self.utilisation)
+        if record:
+            self.log("offer",price_cny_per_mwh=self.price,domestic_mw=power*(1-imported),
+                     import_mw=power*imported,lagged_utilisation=self.utilisation)
         return dict(domestic_mw=[power*(1-imported)]*4,import_mw=[power*imported]*4,
             domestic_cost_per_mwh=self.price,import_cost_per_mwh=self.price*1.05,
             tank_mwh=tank,initial_mwh=tank*a["fuel_inventory_initial_fraction"],
@@ -125,6 +140,8 @@ class NationalGenerator(NationalActor):
         m,a = self.model,self.model.a
         limit = max(m.initial_additions[self.name],self.initial_capacity*(.35 if self.name in {"wind","solar"} else .025))
         limit *= (m.gdp/m.gdp0)**m.variant.get("construction_elasticity",a["construction_gdp_elasticity"])
+        if self.name=="hydro":
+            limit *= m.theta.get("hydro_construction_response",1)
         if self.name == "solar":
             tau = a["manufacturing_growth_decay_years"]
             years = max(0,min(m.year,2024)-m.initial_year)
@@ -189,7 +206,7 @@ class NationalConsumer(NationalActor):
         self.cash = service/8760/.6*a["device_capex_cny_per_service_mw"]*a["consumer_initial_cash_fraction"]
 
     def service_request(self):
-        return self.base_service*(self.model.electric_activity if self.fuel == "electricity" else self.model.activity_factor())
+        return self.base_service*(self.model.electric_activity if self.fuel == "electricity" else self.model.fuel_activity[self.fuel])
 
     def endowment(self, requested):
         return requested*self.income_per_service*self.model.variant.get("consumer_income_multiplier",1)
@@ -401,7 +418,7 @@ class NationalModel(Model):
         self.fuel_stocks = {}
         self.gdp0 = get(data,initial_year,"real_gdp")
         self.gdp = self.gdp0
-        self.efficiency = dict(coal=.41,gas=.52,oil=.38,biomass=.30)
+        self.efficiency = {**FUEL_EFFICIENCIES,"biomass":.30}
         self.cost_conversion = 6.62*get(data,2024,"cpi")/get(data,2018,"cpi")
         self.fx = get(data,2024,"cny_per_usd")
         total_primary = get(data,initial_year,"consumption_10ktce")*1e4*TCE_MWH
@@ -409,6 +426,7 @@ class NationalModel(Model):
         fuel_energy["biomass"] = get(data,initial_year,"biofuel_electricity_mwh")/.3*1.10
         prices = dict(coal=88*self.cost_conversion/(6000*4.1868/3600),
                       gas=9.1*self.cost_conversion/.293071,oil=self.a["oil_cost_cny_per_mwh"],biomass=self.a["biomass_cost_cny_per_mwh"])
+        self.reference_fuel_prices = dict(prices)
         self.suppliers = {f:NationalSupplier(self,f,e,prices[f]*self.variant.get("fuel_price_multiplier",1)) for f,e in fuel_energy.items()}
         self.initial_generation = {t:get(data,initial_year,("biofuel" if t == "biomass" else t)+"_electricity_mwh") for t in TECHS}
         self.initial_capacities = self.capacity_split(initial_year)
@@ -421,7 +439,13 @@ class NationalModel(Model):
         om = dict(coal=14.97*self.cost_conversion,gas=13.49*self.cost_conversion,
             nuclear=(26.42+10)*self.cost_conversion,wind=0,solar=0,hydro=10,oil=100,biomass=100)
         for t in TECHS:
-            cf = min(.9,self.initial_generation[t]/(self.initial_capacities[t]*8760))
+            denominator = self.initial_capacities[t]
+            if t in {"hydro","nuclear","wind","solar"}:
+                # Initial-year generation is a flow; year-end capacity alone
+                # understates utilisation in rapidly expanding technologies.
+                # Midyear commissioning is an explicit aggregate approximation.
+                denominator = (denominator+get(data,initial_year-1,t+"_capacity_mw"))/2
+            cf = min(.9,self.initial_generation[t]/(denominator*8760))
             self.generators[t] = NationalGenerator(self,t,self.initial_capacities[t],cf,capex[t],om[t])
         self.build_initial_cohorts()
         self.construction_fund = sum(p["remaining"] for p in self.projects)
@@ -444,10 +468,14 @@ class NationalModel(Model):
         z = [log(get(data,y,"electricity_generation_mwh")/get(data,2005,"electricity_generation_mwh"))
              -(y-2005)*log(1-self.a["service_intensity_decline"]) for y in range(2005,2015)]
         self.electric_elasticity = sum(a*b for a,b in zip(x,z))/sum(a*a for a in x)
+        self.supply_growth = {f:exp(log(
+            get(data,2014,"consumption_10ktce")*get(data,2014,"consumption_"+f+"_pct") /
+            (get(data,2005,"consumption_10ktce")*get(data,2005,"consumption_"+f+"_pct")))/9)-1 for f in FUELS}
+        # Generation growth only proxies delivery capability; never forces
+        # biomass generation or claims measured feedstock availability.
+        self.supply_growth["biomass"] = exp(log(get(data,2014,"biofuel_electricity_mwh") /
+                                                    get(data,2005,"biofuel_electricity_mwh"))/9)-1
         self.government,self.grid = NationalGovernment(self,"government"),NationalGrid(self,"grid")
-        peo = total_primary*get(data,initial_year,"consumption_primary_electricity_other_pct")/100
-        clean_generation = sum(self.initial_generation[t] for t in ("hydro","nuclear","wind","solar","biomass"))
-        self.peo_coefficient = peo/clean_generation
         storage_power = self.a["new_storage_2024_power_mw"] if initial_year == 2024 else self.a["new_storage_2014_power_mw"]
         storage_energy = self.a["new_storage_2024_energy_mwh"] if initial_year == 2024 else 0
         for age in range(self.a["storage_lifetime_years"]):
@@ -457,6 +485,7 @@ class NationalModel(Model):
         self.storage_soc = storage_energy*self.a["storage_initial_fraction"]
         self.previous_storage_energy = storage_energy
         self.electric_activity = 1.0
+        self.fuel_activity = {f:1.0 for f in FUELS}
 
     def direct_carbon_cost(self,fuel):
         coverage = self.variant.get("direct_carbon_coverage",self.a["direct_carbon_coverage"][fuel]) if self.year>=2025 else 0
@@ -467,12 +496,18 @@ class NationalModel(Model):
         mix = min(1,max(0,(year-2024)/36))
         return self.electric_elasticity*(1-mix)+terminal*mix
 
+    def fuel_elasticity(self, fuel, year):
+        historical = self.theta.get(fuel+"_activity_elasticity",self.theta["activity_elasticity"])
+        terminal = self.a["fuel_terminal_activity_elasticity"][fuel]+self.variant.get("fuel_terminal_elasticity_delta",0)
+        mix = min(1,max(0,(year-2024)/36))
+        return historical*(1-mix)+terminal*mix
+
     def expected_service_growth(self, carrier, lead):
         # Persistence forecast of GDP growth, with the SAME announced elasticity
         # schedule as actual demand. Never read future realised historical GDP.
         factor = 1.0
         for year in range(self.year+1,self.year+lead+1):
-            elasticity = self.electricity_elasticity(year) if carrier=="electricity" else self.theta["activity_elasticity"]
+            elasticity = self.electricity_elasticity(year) if carrier=="electricity" else self.fuel_elasticity(carrier,year)
             factor *= (1+self.current_growth)**elasticity*(1-self.a["service_intensity_decline"])
         return factor
 
@@ -480,6 +515,11 @@ class NationalModel(Model):
         future = self.year+lead
         if lead not in self.planning_cache:
             op = deepcopy(self.last_operation)
+            for fuel,supplier in self.suppliers.items():
+                # Announced capacity path, not future realised observations.
+                opening = self.fuel_stocks.get(fuel,op["fuels"][fuel]["initial_mwh"])
+                op["fuels"][fuel] = supplier.offer(future,record=False)
+                op["fuels"][fuel]["initial_mwh"] = opening
             for name,d in op["demands"].items():
                 if d["sector"] in self.consumer_by_name:
                     continue
@@ -597,7 +637,11 @@ class NationalModel(Model):
                     historical = (1-self.a["historical_wind_solar_real_cost_decline"])**(self.initial_year-2024) if t in {"wind","solar"} else 1
                     c["book_cost_cny_per_mw"] = self.generators[t].capex_2024*historical
             for k in range(1,LEAD[t]+1):
-                amount = self.initial_additions[t]
+                # Only the 2014 latent queue is inferred from the training
+                # window. The distinct 2024 state uses its own prior snapshots.
+                factor = (self.theta.get(t+"_initial_pipeline_multiplier",1) if self.initial_year==2014 else
+                          self.variant.get("future_initial_pipeline_multiplier",1))
+                amount = self.initial_additions[t]*factor
                 cost = amount*self.generators[t].capex_2024
                 self.projects.append(dict(id=f"pipeline/{t}/{k}",tech=t,capacity_mw=amount,
                     decision_year=self.initial_year+k-LEAD[t],online_year=self.initial_year+k,
@@ -634,6 +678,8 @@ class NationalModel(Model):
         self.current_growth = self.gdp/previous-1
         elasticity = self.electricity_elasticity(self.year)
         self.electric_activity *= (1+self.current_growth)**elasticity*(1-self.a["service_intensity_decline"])
+        for fuel in FUELS:
+            self.fuel_activity[fuel] *= (1+self.current_growth)**self.fuel_elasticity(fuel,self.year)*(1-self.a["service_intensity_decline"])
         self.gdp_cny = self.gdp/get(self.data,2024,"real_gdp")*self.a["gdp_2024_price_level_cny"]
         if self.year < 2021:
             self.carbon = 0
@@ -668,6 +714,13 @@ class NationalModel(Model):
         op = dict(periods=[dict(hours=h) for h in a["operation_period_hours"]],annual_repeats=365,cyclic=True,
             fuels={f:s.offer() for f,s in self.suppliers.items()},plants={},demands={},
             grid=dict(efficiency=a["grid_efficiency"],power_mw=self.grid.network_power()),storage={})
+        # 2016 renewable priority motivates a reduced-form nonfossil displacement
+        # stage, not a plant-level legal dispatch replica or a generation quota.
+        # Nuclear also benefits in this aggregate approximation. From 2024 the
+        # guarantee/market split is unknown: continuation is a scenario assumption.
+        # Planning inherits today's announced rule, never an unpublished future rule.
+        if self.year >= a["nonfossil_priority_start_year"] and self.variant.get("nonfossil_dispatch_priority",1):
+            op["fossil_displacement_priority_plants"] = list(FUELS)
         for f in op["fuels"]:
             op["fuels"][f]["initial_mwh"] = self.fuel_stocks.get(f,op["fuels"][f]["initial_mwh"])
         power,energy = self.grid.capacity()
@@ -683,6 +736,12 @@ class NationalModel(Model):
                 capacity_mw=g.capacity,availability=availability,variable_cost_per_mwh=g.om,
                 minimum_fraction=0,ramp_mw_per_hour=g.capacity*.2,window_energy_budget_mwh=budget)
             op["plants"][t]["policy_cost_per_mwh"] = self.generator_carbon_cost(t)
+        kappa = self.theta.get("dispatch_kappa",a.get("dispatch_kappa_default",0))*self.variant.get("dispatch_kappa_multiplier",1)
+        if kappa > 0:
+            op["fossil_allocation_score"] = dict(kappa=kappa,
+                ratio_step=self.variant.get("dispatch_ratio_step",a.get("dispatch_ratio_step",.1)),plants={f:dict(
+                reference_cf=self.generators[f].reference_cf,
+                initial_marginal_cost=self.generators[f].om+self.reference_fuel_prices[f]/self.efficiency[f]) for f in FUELS})
         for c in self.consumers.values():
             op["demands"].update(c.demand())
         op["spending_limits"] = {c.name:dict(budget_cny=max(0,c.cash+c.endowment(c.requested))/365)
@@ -691,7 +750,7 @@ class NationalModel(Model):
             d["policy_cost_per_mwh"] = self.direct_carbon_cost(d["carrier"]) if d["carrier"] in FUELS else 0
         # Non-energy material inputs do not emit in the combustion ledger.
         for f,value in self.feedstock.items():
-            demand = value*self.activity_factor()
+            demand = value*self.fuel_activity[f]
             op["demands"]["feedstock/"+f] = dict(sector="nonenergy_feedstock",carrier=f,efficiency=1,
                 input_capacity_mw=demand/8760*2,priority=0,service_mwh=[demand/365/4]*4)
         op["demands"]["exports"] = dict(sector="electricity_exports",carrier="electricity",efficiency=1,
@@ -709,7 +768,8 @@ class NationalModel(Model):
             r["nonenergy_mwh"] = nonenergy
             r["combustion_co2_t"] -= nonenergy*EF[r["fuel"]]
         combustion = sum((fuel_use[f]-materials[f])*EF[f] for f in FUELS)
-        peo = sum(outputs[t] for t in ("hydro","nuclear","wind","solar","biomass"))*self.peo_coefficient*self.variant.get("primary_bridge_multiplier",1)
+        bridge = coefficient(self.data,self.design,self.initial_year,self.year,self.variant)
+        peo = sum(outputs[t] for t in ("hydro","nuclear","wind","solar","biomass"))*bridge*TCE_MWH
         # Bioenergy is included in the initial PEO bridge; never add its fuel again.
         primary_mwh = sum(fuel_use[f] for f in FUELS)+peo
         ets_total,net_transfers,resource = 0.0,0.0,result["resource_cost"]
@@ -798,7 +858,9 @@ class NationalModel(Model):
         removal = get(self.data,2021,"btr_removals_co2_t")*(1+a["removals_annual_growth"])**(self.year-2021)*self.variant.get("removals_multiplier",1)
         positive = combustion+process
         row = dict(year=self.year,gdp_index=self.gdp/get(self.data,2024,"real_gdp"),primary_energy_tce=primary_mwh/TCE_MWH,
-            peo_share=peo/primary_mwh,nonfossil_share_proxy=peo/primary_mwh,combustion_co2_t=combustion,
+            peo_share=peo/primary_mwh,nonfossil_share=peo/primary_mwh,nonfossil_share_proxy=peo/primary_mwh,
+            primary_bridge_tce_per_mwh=bridge,nonfossil_primary_tce=peo/TCE_MWH,
+            statistical_bridge_status="reviewed_category_mapping_conditional_quantity",combustion_co2_t=combustion,
             other_positive_co2_t=process,positive_co2_t=positive,net_removals_t=removal,net_co2_t=positive-removal,
             neutralisation_ratio=removal/positive,energy_intensity=primary_mwh/TCE_MWH/(self.gdp/get(self.data,2024,"real_gdp")),
             carbon_intensity=positive/(self.gdp/get(self.data,2024,"real_gdp")),
@@ -812,11 +874,16 @@ class NationalModel(Model):
         for t,value in outputs.items():
             row[t+"_generation_mwh"] = value
             row[t+"_capacity_mw"] = self.generators[t].capacity
+        for fuel in FUELS:
+            row[fuel+"_primary_tce"] = fuel_use[fuel]/TCE_MWH
+            row[fuel+"_share"] = fuel_use[fuel]/primary_mwh
         clean = sum(outputs[t] for t in ("hydro","nuclear","wind","solar","biomass"))
         direct_equivalent = sum(fuel_use[f] for f in FUELS)+clean
         row.update(clean_generation_mwh=clean,primary_direct_equivalent_tce=direct_equivalent/TCE_MWH,
                    clean_share_direct_equivalent=clean/direct_equivalent,
-                   dispatch_policy_signal_cny=result["policy_signal_cost"])
+                   dispatch_policy_signal_cny=result["policy_signal_cost"],
+                   dispatch_behavioral_score=result.get("behavioral_score",0),
+                   dispatch_actual_cost_cny=result.get("actual_dispatch_cost",result["dispatch_objective"]))
         return row,margins
 
     def step(self):

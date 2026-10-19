@@ -1,5 +1,5 @@
 {
-  "run_id": "20261019T061829Z-3ed7e571",
+  "run_id": "20261019T173520Z-5334ecea",
   "owner": "p2/lb",
   "command": [
     "E:\\Team\\2026JM\\SimulationModelingProblemA\\tmp\\q2-venv\\Scripts\\python.exe",
@@ -9,14 +9,14 @@
     "--output-dir",
     "outputs/q2/p2_lb_reproduction"
   ],
-  "git_sha": "dd3cff550d63fa137bcf6082ea3e94d0ce0d5115",
+  "git_sha": "dbb582c5fc887b800e857342665407d9d3a3bfdd",
   "dirty": true,
-  "utc_started": "2026-10-19T06:18:29.950503+00:00",
+  "utc_started": "2026-10-19T17:35:20.652460+00:00",
   "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "code_hashes": {
     "run.py": "f650af45e441255037ab977e600da804cee11a39bb7345301ebe947c68ccf473",
     "scripts/run_q2.py": "1f8e35da98626d5f3fda5061edc91c50ae639f672292d45b2613ff60132b15c7",
-    "src/energy_model/q2_operations.py": "38758b7e525b64f9036233b4a5ac54c1e43182c588a4a03da95bc6cbd819fcfd",
+    "src/energy_model/q2_operations.py": "1a36532a8258821c592e186e97e5973de5301da38ec6e94f63a6a0e7dde1d181",
     "src/energy_model/q2_agents.py": "1f0a4465183916ab475447736c3923e540fd0d82a7408b7cd2bfc00116da5290",
     "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
     "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
@@ -81,7 +81,7 @@
     2024
   ],
   "sensitivity_failed_records": 0,
-  "seconds": 9.423289700003807,
+  "seconds": 8.523506100002123,
   "outputs": {
     "accounts.csv": "2eff0a3e9798e85dec7d85fb5bc9834daf9a5db198f6a8ad6f57414a5f2b765a",
     "assets.csv": "b7adfe959323be065c305465e187bf5b610d7e671dbc8d9a9c6ed4bdf4d0ad4d",

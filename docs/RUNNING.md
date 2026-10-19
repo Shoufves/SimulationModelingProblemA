@@ -63,7 +63,9 @@ python -B -X utf8 scripts/review_q2_delivery.py
 python -B -X utf8 scripts/review_q2_national_delivery.py
 ```
 
-第一条按原图复核转录、原始API/CSV和报告页表重建511条观测、技术参考及GCB条件峰值专项审查，不变更原Q1契约。第二条执行2250组训练搜索、已接触评估、独立2024初态及条件试验；结果见 `outputs/q2/p2_lb_national/`。第三条保留工程夹具和原Q1回归，包括故意拒绝未准入首轮配置的测试；其旧状态名称 `engineering_passed_national_blocked` 仅指这个旧配置，不能替代第四条的全国候选验收结论。第四条执行独立进程、不同哈希种子的复现及来源/结果/账本/失败语义核查。
+第一条按26项已审查原件/参考重建511条观测、技术参考、GCB条件峰值与统计类别专项审查，不变更原Q1契约。第二条执行1012次交替有限网格训练、已接触评估、独立2024初态及条件试验；不宣称全联合网格最优。结果见 `outputs/q2/p2_lb_national/`。第三条保留工程夹具和原Q1回归，包括故意拒绝未准入首轮配置的测试；其旧状态名称 `engineering_passed_national_blocked` 仅指这个旧配置，不能替代第四条的全国候选验收结论。第四条执行独立进程、不同哈希种子的完整训练和推演复现，以及来源/结果/账本/失败语义核查。拟合不合格时仍完成独立复现并返回失败，不能把执行成功当科学验收通过。
+
+当前结果入口为[review(9)修复结果](solutions/p2-lb-review9-results.md)。`fuel_share_validation.csv`覆盖煤油气及两个基线；`generation_validation.csv`覆盖八种发电技术；`demand_identification.json`记录仅由训练数据识别的条件非电需求，V10方法见[结构修复](solutions/p2-lb-review10-structure.md)；`statistical_bridge_backtest.csv`隔离统计转换误差。后续交叉检查入口为 `scripts/check_q2_repaired_mechanisms.py` 和 `scripts/check_q2_2025_extension.py`；2025观测不参与选参。
 
 V7统一Issue #7共同入口：`python -B -X utf8 run.py q2 --config workflow/q2_inputs.json --output-dir outputs/q2/review_pr9_common_entry`。该配置名为明确提示的兼容别名，实际使用全国专用设计及用途审查；`q2_inputs.json`原字节和候选用途不升级。若仅检查旧候选清单，用`python scripts/run_q2.py --config workflow/q2_inputs.json`，仍按旧契约阻断。独立复现使用共同配置入口。
 

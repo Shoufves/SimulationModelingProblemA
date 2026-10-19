@@ -57,6 +57,8 @@ def sources(aliases):
            ('mmj','A题_mmj/data/sources.json','data/sources.json')]
     if (CAT/'q1_sources.json').is_file():
         specs.append(('q1','data/catalog/q1_sources.json','data/catalog/q1_sources.json'))
+    if (CAT/'q2_national_input_review.json').is_file():
+        specs.append(('q2','data/catalog/q2_national_input_review.json','data/catalog/q2_national_input_review.json'))
     specs.extend(('lb/'+('base' if Path(r['path'][len(LIB):]).parent.as_posix()=='.' else Path(r['path'][len(LIB):]).parent.as_posix()),r['path'],r['target']) for r in manifests)
     evidence=defaultdict(list)
     for review in load(ROOT/'data/evidence_reviews.json')['reviews']:
@@ -67,7 +69,7 @@ def sources(aliases):
         entries=obj if isinstance(obj,list) else obj.get('sources',[])
         for row in entries:
             if not isinstance(row,dict): continue
-            sid=row.get('id',row.get('source_id',''))
+            sid=row.get('id',row.get('source_id',row.get('path','') if namespace=='q2' else ''))
             oldfile=str(row.get('file',row.get('path',''))).replace('\\','/')
             attempts=[]
             if oldfile:
@@ -80,14 +82,19 @@ def sources(aliases):
                 candidate=(ROOT/oldfile).resolve()
                 if not candidate.is_relative_to(ROOT/'data/raw/q1'):raise ValueError('Q1 original outside dedicated source directory')
                 canonical=candidate.relative_to(ROOT).as_posix()
+            elif namespace=='q2':
+                candidate=(ROOT/oldfile).resolve()
+                if not candidate.is_relative_to(ROOT/'data') or candidate.is_relative_to(ROOT/'data/restricted'):
+                    raise ValueError('Q2 reference outside public data directory')
+                canonical=candidate.relative_to(ROOT).as_posix()
             exists=bool(canonical and (ROOT/canonical).is_file())
             filehash=sha(ROOT/canonical) if exists else ''
             registry.append(dict(source_key=namespace+':'+sid,namespace=namespace,original_source_id=sid,
-                title=row.get('title',''),publisher=row.get('agency',row.get('publisher','')),
+                title=row.get('title',row.get('allowed_use','')),publisher=row.get('agency',row.get('publisher','')),
                 url=row.get('url',''),canonical_path=canonical,sha256=filehash,
                 content_group=('sha256:'+filehash) if filehash else '',
                 original_path=oldfile,registry_path=manifest,status=row.get('status','registered'),
-                file_available=exists,notes=row.get('notes',row.get('note','')),
+                file_available=exists,notes=row.get('notes',row.get('note',row.get('review',''))),
                 original_record=row,evidence_files=evidence[sid] if namespace=='mmj' else [],
                 evidence_available=bool(evidence[sid]) if namespace=='mmj' else exists))
             if canonical in representations:

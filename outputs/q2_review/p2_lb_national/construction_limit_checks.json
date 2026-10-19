@@ -1,13 +1,15 @@
 {
-  "run_id": "20261019T061618016081Z",
+  "run_id": "20261019T173346617925Z",
   "code_hashes": {
     "run.py": "f650af45e441255037ab977e600da804cee11a39bb7345301ebe947c68ccf473",
-    "scripts/run_q2_national.py": "5ad7599c49207bc7ec62942c4a6a7a96fbfdc8fc0823349326d9adfe32e82ae2",
-    "scripts/build_q2_national_inputs.py": "df2c1ffbf7df8571aa0b2f8bc021927ffc0b3cc05e134a6edcb11e99411dd98c",
-    "src/energy_model/q2_national.py": "2fb74c91e0475f1c5e38b9306f83f6f7a47c801c8ba662233c70edbc29e18454",
+    "scripts/run_q2_national.py": "bb1eb105368d8d8a229e2175ad2870b31e38e4f05f4bed5a5610cd7d38fbabbe",
+    "scripts/build_q2_national_inputs.py": "39bad2e449a2ee1e4595422c16194a0ce0d3d80c40d75adf7a4095970412f488",
+    "src/energy_model/q2_national.py": "15745cbeb61df7d3bfcb03e15c00883438f5674c2c88f82aa6c5800c48d1ae0a",
+    "src/energy_model/q2_statistics.py": "43e58dfd42234d30c33278a4c4c485b96105c6d575e864fb7cc265b5116c8120",
+    "src/energy_model/q2_identification.py": "116e8f1b3b13794a32009ca4c00822d70cedca249605b236bafe530af7124899",
     "src/energy_model/q2_finance.py": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
-    "src/energy_model/q2_admission.py": "0c47b5ac765bf30cb403608b6acf83ff154dd570c64f7d364381a853871b6a01",
-    "src/energy_model/q2_operations.py": "38758b7e525b64f9036233b4a5ac54c1e43182c588a4a03da95bc6cbd819fcfd",
+    "src/energy_model/q2_admission.py": "e6f06e18b8d49ef9acb69eed12e2ed747ace88ec794535dc0c1d4d16c50a0941",
+    "src/energy_model/q2_operations.py": "1a36532a8258821c592e186e97e5973de5301da38ec6e94f63a6a0e7dde1d181",
     "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
     "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
   },
@@ -39,9 +41,9 @@
     {
       "year": 2025,
       "tech": "wind",
-      "approved_mw": 166665.87437499996,
+      "approved_mw": 157142.110125,
       "construction_limit_mw": 190475.28499999997,
-      "ratio": 0.8749999999999999,
+      "ratio": 0.8250000000000002,
       "exceeds": false
     },
     {
@@ -55,209 +57,201 @@
     {
       "year": 2026,
       "tech": "coal",
-      "approved_mw": 39446.052843491794,
+      "approved_mw": 39894.23038005358,
       "construction_limit_mw": 39894.23038005358,
-      "ratio": 0.9887658558069121,
-      "exceeds": false
-    },
-    {
-      "year": 2026,
-      "tech": "hydro",
-      "approved_mw": 16045.189520596889,
-      "construction_limit_mw": 16227.491499999996,
-      "ratio": 0.9887658558069121,
-      "exceeds": false
-    },
-    {
-      "year": 2026,
-      "tech": "nuclear",
-      "approved_mw": 2724.5869150049,
-      "construction_limit_mw": 2755.543083333333,
-      "ratio": 0.988765855806912,
-      "exceeds": false
-    },
-    {
-      "year": 2026,
-      "tech": "wind",
-      "approved_mw": 172209.23457616332,
-      "construction_limit_mw": 199046.67282499996,
-      "ratio": 0.8651701238310481,
-      "exceeds": false
-    },
-    {
-      "year": 2026,
-      "tech": "solar",
-      "approved_mw": 549908.6810069575,
-      "construction_limit_mw": 556156.6247230372,
-      "ratio": 0.9887658558069121,
-      "exceeds": false
-    },
-    {
-      "year": 2027,
-      "tech": "coal",
-      "approved_mw": 37856.31610375372,
-      "construction_limit_mw": 41689.470747155996,
-      "ratio": 0.9080546100800819,
-      "exceeds": false
-    },
-    {
-      "year": 2027,
-      "tech": "hydro",
-      "approved_mw": 15398.543647607808,
-      "construction_limit_mw": 16957.728617499997,
-      "ratio": 0.908054610080082,
-      "exceeds": false
-    },
-    {
-      "year": 2027,
-      "tech": "nuclear",
-      "approved_mw": 2614.781862099397,
-      "construction_limit_mw": 2879.542522083333,
-      "ratio": 0.908054610080082,
-      "exceeds": false
-    },
-    {
-      "year": 2027,
-      "tech": "wind",
-      "approved_mw": 165268.93694450645,
-      "construction_limit_mw": 208003.77310212498,
-      "ratio": 0.7945477838200717,
-      "exceeds": false
-    },
-    {
-      "year": 2027,
-      "tech": "solar",
-      "approved_mw": 633258.48955903,
-      "construction_limit_mw": 697379.3013431014,
-      "ratio": 0.9080546100800821,
-      "exceeds": false
-    },
-    {
-      "year": 2028,
-      "tech": "coal",
-      "approved_mw": 36884.43193134984,
-      "construction_limit_mw": 43565.49693077801,
-      "ratio": 0.8466432045973484,
-      "exceeds": false
-    },
-    {
-      "year": 2028,
-      "tech": "hydro",
-      "approved_mw": 15003.217255885913,
-      "construction_limit_mw": 17720.826405287495,
-      "ratio": 0.8466432045973483,
-      "exceeds": false
-    },
-    {
-      "year": 2028,
-      "tech": "nuclear",
-      "approved_mw": 2547.652638561157,
-      "construction_limit_mw": 3009.1219355770827,
-      "ratio": 0.8466432045973483,
-      "exceeds": false
-    },
-    {
-      "year": 2028,
-      "tech": "wind",
-      "approved_mw": 161025.99202704115,
-      "construction_limit_mw": 217363.94289172057,
-      "ratio": 0.7408128040226798,
-      "exceeds": false
-    },
-    {
-      "year": 2028,
-      "tech": "solar",
-      "approved_mw": 716296.6725697641,
-      "construction_limit_mw": 846043.1368021489,
-      "ratio": 0.8466432045973483,
-      "exceeds": false
-    },
-    {
-      "year": 2029,
-      "tech": "coal",
-      "approved_mw": 36456.775599247536,
-      "construction_limit_mw": 45525.94429266302,
-      "ratio": 0.8007912008345299,
-      "exceeds": false
-    },
-    {
-      "year": 2029,
-      "tech": "hydro",
-      "approved_mw": 14829.262540429589,
-      "construction_limit_mw": 18518.263593525433,
-      "ratio": 0.8007912008345299,
-      "exceeds": false
-    },
-    {
-      "year": 2029,
-      "tech": "nuclear",
-      "approved_mw": 2518.1138948194703,
-      "construction_limit_mw": 3144.5324226780513,
-      "ratio": 0.8007912008345299,
-      "exceeds": false
-    },
-    {
-      "year": 2029,
-      "tech": "wind",
-      "approved_mw": 159158.97709641696,
-      "construction_limit_mw": 227145.320321848,
-      "ratio": 0.7006923007302134,
-      "exceeds": false
-    },
-    {
-      "year": 2029,
-      "tech": "solar",
-      "approved_mw": 799995.8004840707,
-      "construction_limit_mw": 999006.7319051079,
-      "ratio": 0.8007912008345299,
-      "exceeds": false
-    },
-    {
-      "year": 2030,
-      "tech": "coal",
-      "approved_mw": 36505.099156333556,
-      "construction_limit_mw": 47574.61178583285,
-      "ratio": 0.7673231117611419,
-      "exceeds": false
-    },
-    {
-      "year": 2030,
-      "tech": "hydro",
-      "approved_mw": 14848.918769021862,
-      "construction_limit_mw": 19351.585455234075,
-      "ratio": 0.7673231117611418,
-      "exceeds": false
-    },
-    {
-      "year": 2030,
-      "tech": "nuclear",
-      "approved_mw": 2521.451661765265,
-      "construction_limit_mw": 3286.0363816985637,
-      "ratio": 0.7673231117611418,
-      "exceeds": false
-    },
-    {
-      "year": 2030,
-      "tech": "wind",
-      "approved_mw": 159369.94276162054,
-      "construction_limit_mw": 237366.85973633113,
-      "ratio": 0.6714077227909989,
-      "exceeds": false
-    },
-    {
-      "year": 2030,
-      "tech": "solar",
-      "approved_mw": 885328.6634671178,
-      "construction_limit_mw": 1153788.6059956313,
-      "ratio": 0.7673231117611418,
-      "exceeds": false
-    },
-    {
-      "year": 2031,
-      "tech": "coal",
-      "approved_mw": 49239.723198337,
-      "construction_limit_mw": 49239.723198337,
       "ratio": 1.0,
+      "exceeds": false
+    },
+    {
+      "year": 2026,
+      "tech": "hydro",
+      "approved_mw": 16227.491499999996,
+      "construction_limit_mw": 16227.491499999996,
+      "ratio": 1.0,
+      "exceeds": false
+    },
+    {
+      "year": 2026,
+      "tech": "nuclear",
+      "approved_mw": 2755.543083333333,
+      "construction_limit_mw": 2755.543083333333,
+      "ratio": 1.0,
+      "exceeds": false
+    },
+    {
+      "year": 2026,
+      "tech": "wind",
+      "approved_mw": 164213.50508062495,
+      "construction_limit_mw": 199046.67282499996,
+      "ratio": 0.825,
+      "exceeds": false
+    },
+    {
+      "year": 2026,
+      "tech": "solar",
+      "approved_mw": 556156.6247230372,
+      "construction_limit_mw": 556156.6247230372,
+      "ratio": 1.0,
+      "exceeds": false
+    },
+    {
+      "year": 2027,
+      "tech": "coal",
+      "approved_mw": 38380.28578776315,
+      "construction_limit_mw": 41689.470747155996,
+      "ratio": 0.9206230038403979,
+      "exceeds": false
+    },
+    {
+      "year": 2027,
+      "tech": "hydro",
+      "approved_mw": 15611.675058153125,
+      "construction_limit_mw": 16957.728617499997,
+      "ratio": 0.9206230038403979,
+      "exceeds": false
+    },
+    {
+      "year": 2027,
+      "tech": "nuclear",
+      "approved_mw": 2650.973086366513,
+      "construction_limit_mw": 2879.542522083333,
+      "ratio": 0.9206230038403979,
+      "exceeds": false
+    },
+    {
+      "year": 2027,
+      "tech": "wind",
+      "approved_mw": 157981.77318281727,
+      "construction_limit_mw": 208003.77310212498,
+      "ratio": 0.7595139781683283,
+      "exceeds": false
+    },
+    {
+      "year": 2027,
+      "tech": "solar",
+      "approved_mw": 642023.427218604,
+      "construction_limit_mw": 697379.3013431014,
+      "ratio": 0.9206230038403979,
+      "exceeds": false
+    },
+    {
+      "year": 2028,
+      "tech": "coal",
+      "approved_mw": 37345.53373410616,
+      "construction_limit_mw": 43565.49693077801,
+      "ratio": 0.8572273098008073,
+      "exceeds": false
+    },
+    {
+      "year": 2028,
+      "tech": "hydro",
+      "approved_mw": 15190.776346851708,
+      "construction_limit_mw": 17720.826405287495,
+      "ratio": 0.8572273098008072,
+      "exceeds": false
+    },
+    {
+      "year": 2028,
+      "tech": "nuclear",
+      "approved_mw": 2579.5015016973402,
+      "construction_limit_mw": 3009.1219355770827,
+      "ratio": 0.8572273098008071,
+      "exceeds": false
+    },
+    {
+      "year": 2028,
+      "tech": "wind",
+      "approved_mw": 153722.50411053188,
+      "construction_limit_mw": 217363.94289172057,
+      "ratio": 0.707212530585666,
+      "exceeds": false
+    },
+    {
+      "year": 2028,
+      "tech": "solar",
+      "approved_mw": 725251.2821363424,
+      "construction_limit_mw": 846043.1368021489,
+      "ratio": 0.8572273098008072,
+      "exceeds": false
+    },
+    {
+      "year": 2029,
+      "tech": "coal",
+      "approved_mw": 36874.485450825276,
+      "construction_limit_mw": 45525.94429266302,
+      "ratio": 0.8099664053924518,
+      "exceeds": false
+    },
+    {
+      "year": 2029,
+      "tech": "hydro",
+      "approved_mw": 14999.171396957701,
+      "construction_limit_mw": 18518.263593525433,
+      "ratio": 0.8099664053924518,
+      "exceeds": false
+    },
+    {
+      "year": 2029,
+      "tech": "nuclear",
+      "approved_mw": 2546.965623036559,
+      "construction_limit_mw": 3144.5324226780513,
+      "ratio": 0.8099664053924518,
+      "exceeds": false
+    },
+    {
+      "year": 2029,
+      "tech": "wind",
+      "approved_mw": 151783.5648473135,
+      "construction_limit_mw": 227145.320321848,
+      "ratio": 0.6682222844487727,
+      "exceeds": false
+    },
+    {
+      "year": 2029,
+      "tech": "solar",
+      "approved_mw": 809161.891604041,
+      "construction_limit_mw": 999006.7319051079,
+      "ratio": 0.8099664053924518,
+      "exceeds": false
+    },
+    {
+      "year": 2030,
+      "tech": "coal",
+      "approved_mw": 47574.61178583285,
+      "construction_limit_mw": 47574.61178583285,
+      "ratio": 1.0,
+      "exceeds": false
+    },
+    {
+      "year": 2030,
+      "tech": "hydro",
+      "approved_mw": 19351.585455234075,
+      "construction_limit_mw": 19351.585455234075,
+      "ratio": 1.0,
+      "exceeds": false
+    },
+    {
+      "year": 2030,
+      "tech": "nuclear",
+      "approved_mw": 3286.0363816985637,
+      "construction_limit_mw": 3286.0363816985637,
+      "ratio": 1.0,
+      "exceeds": false
+    },
+    {
+      "year": 2030,
+      "tech": "wind",
+      "approved_mw": 97913.82964123655,
+      "construction_limit_mw": 237366.85973633113,
+      "ratio": 0.4124999999999998,
+      "exceeds": false
+    },
+    {
+      "year": 2030,
+      "tech": "solar",
+      "approved_mw": 288447.1514989078,
+      "construction_limit_mw": 1153788.6059956313,
+      "ratio": 0.25,
       "exceeds": false
     },
     {
@@ -279,25 +273,17 @@
     {
       "year": 2031,
       "tech": "wind",
-      "approved_mw": 214965.36234871487,
+      "approved_mw": 50670.4068393399,
       "construction_limit_mw": 245674.6998271027,
-      "ratio": 0.875,
+      "ratio": 0.20624999999999985,
       "exceeds": false
     },
     {
       "year": 2031,
       "tech": "solar",
-      "approved_mw": 648042.5544791097,
+      "approved_mw": 20251.32982747218,
       "construction_limit_mw": 1296085.1089582194,
-      "ratio": 0.5,
-      "exceeds": false
-    },
-    {
-      "year": 2032,
-      "tech": "coal",
-      "approved_mw": 50963.11351027879,
-      "construction_limit_mw": 50963.11351027879,
-      "ratio": 1.0,
+      "ratio": 0.015625,
       "exceeds": false
     },
     {
@@ -319,9 +305,17 @@
     {
       "year": 2032,
       "tech": "wind",
-      "approved_mw": 222489.15003091985,
+      "approved_mw": 104887.74215743366,
       "construction_limit_mw": 254273.31432105126,
-      "ratio": 0.875,
+      "ratio": 0.4125000000000001,
+      "exceeds": false
+    },
+    {
+      "year": 2032,
+      "tech": "solar",
+      "approved_mw": 179309.63200284322,
+      "construction_limit_mw": 1434477.0560227458,
+      "ratio": 0.125,
       "exceeds": false
     },
     {
@@ -343,9 +337,9 @@
     {
       "year": 2033,
       "tech": "wind",
-      "approved_mw": 57569.06757050051,
+      "approved_mw": 54279.40656647191,
       "construction_limit_mw": 263172.8803222881,
-      "ratio": 0.21874999999999997,
+      "ratio": 0.20624999999999996,
       "exceeds": false
     },
     {
@@ -375,9 +369,9 @@
     {
       "year": 2034,
       "tech": "wind",
-      "approved_mw": 119167.96987093608,
+      "approved_mw": 112358.37159259689,
       "construction_limit_mw": 272383.93113356817,
-      "ratio": 0.4375,
+      "ratio": 0.41250000000000003,
       "exceeds": false
     },
     {
@@ -407,17 +401,9 @@
     {
       "year": 2035,
       "tech": "wind",
-      "approved_mw": 123338.8488164188,
+      "approved_mw": 232581.8291966755,
       "construction_limit_mw": 281917.368723243,
-      "ratio": 0.43749999999999994,
-      "exceeds": false
-    },
-    {
-      "year": 2035,
-      "tech": "solar",
-      "approved_mw": 227911.73317636005,
-      "construction_limit_mw": 1823293.8654108804,
-      "ratio": 0.125,
+      "ratio": 0.8250000000000001,
       "exceeds": false
     },
     {
@@ -430,18 +416,26 @@
     },
     {
       "year": 2036,
+      "tech": "nuclear",
+      "approved_mw": 4039.3777247648177,
+      "construction_limit_mw": 4039.3777247648177,
+      "ratio": 1.0,
+      "exceeds": false
+    },
+    {
+      "year": 2036,
       "tech": "wind",
-      "approved_mw": 63827.85426249672,
+      "approved_mw": 120361.09660927957,
       "construction_limit_mw": 291784.4766285565,
-      "ratio": 0.21874999999999997,
+      "ratio": 0.41250000000000003,
       "exceeds": false
     },
     {
       "year": 2036,
       "tech": "solar",
-      "approved_mw": 60775.89776347469,
+      "approved_mw": 121551.79552694938,
       "construction_limit_mw": 1944828.7284311901,
-      "ratio": 0.03125,
+      "ratio": 0.0625,
       "exceeds": false
     },
     {
@@ -455,321 +449,305 @@
     {
       "year": 2037,
       "tech": "wind",
-      "approved_mw": 132123.65832336823,
+      "approved_mw": 62286.86749530218,
       "construction_limit_mw": 301996.933310556,
-      "ratio": 0.43749999999999994,
+      "ratio": 0.20625000000000002,
       "exceeds": false
     },
     {
       "year": 2037,
       "tech": "solar",
-      "approved_mw": 257895.80389184575,
+      "approved_mw": 64473.95097296144,
       "construction_limit_mw": 2063166.431134766,
-      "ratio": 0.125,
-      "exceeds": false
-    },
-    {
-      "year": 2038,
-      "tech": "wind",
-      "approved_mw": 68373.99318234305,
-      "construction_limit_mw": 312566.82597642543,
-      "ratio": 0.21874999999999997,
-      "exceeds": false
-    },
-    {
-      "year": 2038,
-      "tech": "solar",
-      "approved_mw": 68091.88080453535,
-      "construction_limit_mw": 2178940.185745131,
       "ratio": 0.03125,
       "exceeds": false
     },
     {
-      "year": 2039,
+      "year": 2038,
       "tech": "wind",
-      "approved_mw": 141534.1658874501,
-      "construction_limit_mw": 323506.6648856003,
-      "ratio": 0.43749999999999994,
+      "approved_mw": 128933.8157152755,
+      "construction_limit_mw": 312566.82597642543,
+      "ratio": 0.41250000000000003,
       "exceeds": false
     },
     {
-      "year": 2039,
+      "year": 2038,
       "tech": "solar",
-      "approved_mw": 286600.2135955581,
-      "construction_limit_mw": 2292801.7087644646,
+      "approved_mw": 272367.5232181414,
+      "construction_limit_mw": 2178940.185745131,
       "ratio": 0.125,
       "exceeds": false
     },
     {
+      "year": 2039,
+      "tech": "wind",
+      "approved_mw": 266892.9985306201,
+      "construction_limit_mw": 323506.6648856003,
+      "ratio": 0.8249999999999997,
+      "exceeds": false
+    },
+    {
       "year": 2040,
       "tech": "wind",
-      "approved_mw": 73243.93084675541,
+      "approved_mw": 69058.56336979796,
       "construction_limit_mw": 334829.3981565962,
-      "ratio": 0.21874999999999997,
+      "ratio": 0.20625000000000002,
       "exceeds": false
     },
     {
       "year": 2040,
       "tech": "solar",
-      "approved_mw": 37584.26362912256,
+      "approved_mw": 75168.52725824511,
       "construction_limit_mw": 2405392.8722638437,
-      "ratio": 0.015625,
+      "ratio": 0.03125,
       "exceeds": false
     },
     {
       "year": 2041,
       "tech": "wind",
-      "approved_mw": 75075.0291179243,
+      "approved_mw": 70785.02745404292,
       "construction_limit_mw": 343200.1331105111,
-      "ratio": 0.21875,
+      "ratio": 0.20625000000000002,
       "exceeds": false
     },
     {
       "year": 2041,
       "tech": "solar",
-      "approved_mw": 38953.22065898875,
+      "approved_mw": 77906.4413179775,
       "construction_limit_mw": 2493006.12217528,
-      "ratio": 0.015625,
+      "ratio": 0.03125,
       "exceeds": false
     },
     {
       "year": 2042,
       "tech": "wind",
-      "approved_mw": 153903.8096917448,
+      "approved_mw": 36277.32657019698,
       "construction_limit_mw": 351780.1364382738,
-      "ratio": 0.4375,
+      "ratio": 0.10312499999999998,
       "exceeds": false
     },
     {
       "year": 2042,
       "tech": "solar",
-      "approved_mw": 161164.0436459804,
+      "approved_mw": 20145.50545574755,
       "construction_limit_mw": 2578624.6983356862,
-      "ratio": 0.0625,
+      "ratio": 0.0078125,
       "exceeds": false
     },
     {
       "year": 2043,
       "tech": "wind",
-      "approved_mw": 315502.8098680767,
+      "approved_mw": 74368.5194689038,
       "construction_limit_mw": 360574.63984923065,
-      "ratio": 0.8749999999999997,
+      "ratio": 0.20624999999999996,
+      "exceeds": false
+    },
+    {
+      "year": 2043,
+      "tech": "solar",
+      "approved_mw": 166425.00530515955,
+      "construction_limit_mw": 2662800.0848825527,
+      "ratio": 0.0625,
       "exceeds": false
     },
     {
       "year": 2044,
       "tech": "wind",
-      "approved_mw": 323390.38011477864,
+      "approved_mw": 76227.7324556264,
       "construction_limit_mw": 369589.00584546133,
-      "ratio": 0.8749999999999999,
+      "ratio": 0.20625000000000002,
       "exceeds": false
     },
     {
-      "year": 2045,
-      "tech": "wind",
-      "approved_mw": 82868.78490441201,
-      "construction_limit_mw": 378828.73099159787,
-      "ratio": 0.21874999999999994,
-      "exceeds": false
-    },
-    {
-      "year": 2045,
+      "year": 2044,
       "tech": "solar",
-      "approved_mw": 88397.67130016226,
-      "construction_limit_mw": 2828725.481605192,
+      "approved_mw": 85813.20686770466,
+      "construction_limit_mw": 2746022.619766549,
       "ratio": 0.03125,
       "exceeds": false
     },
     {
-      "year": 2046,
+      "year": 2045,
       "tech": "wind",
-      "approved_mw": 84940.50452702232,
-      "construction_limit_mw": 388299.4492663878,
-      "ratio": 0.21874999999999997,
+      "approved_mw": 78133.42576701708,
+      "construction_limit_mw": 378828.73099159787,
+      "ratio": 0.20625000000000004,
       "exceeds": false
     },
     {
-      "year": 2046,
+      "year": 2045,
       "tech": "solar",
-      "approved_mw": 181955.61342722893,
-      "construction_limit_mw": 2911289.814835663,
+      "approved_mw": 176795.3426003245,
+      "construction_limit_mw": 2828725.481605192,
       "ratio": 0.0625,
       "exceeds": false
     },
     {
+      "year": 2046,
+      "tech": "wind",
+      "approved_mw": 40043.38070559624,
+      "construction_limit_mw": 388299.4492663878,
+      "ratio": 0.103125,
+      "exceeds": false
+    },
+    {
+      "year": 2046,
+      "tech": "solar",
+      "approved_mw": 45488.903356807234,
+      "construction_limit_mw": 2911289.814835663,
+      "ratio": 0.015625,
+      "exceeds": false
+    },
+    {
       "year": 2047,
       "tech": "wind",
-      "approved_mw": 174128.03428039575,
+      "approved_mw": 164177.8608929445,
       "construction_limit_mw": 398006.93549804745,
-      "ratio": 0.4375,
+      "ratio": 0.4124999999999998,
       "exceeds": false
     },
     {
       "year": 2047,
       "tech": "solar",
-      "approved_mw": 374256.28788430855,
+      "approved_mw": 748512.5757686171,
       "construction_limit_mw": 2994050.3030744684,
-      "ratio": 0.125,
+      "ratio": 0.25,
       "exceeds": false
     },
     {
       "year": 2048,
       "tech": "wind",
-      "approved_mw": 178481.2351374056,
+      "approved_mw": 336564.61483053636,
       "construction_limit_mw": 407957.10888549854,
-      "ratio": 0.4375,
-      "exceeds": false
-    },
-    {
-      "year": 2048,
-      "tech": "solar",
-      "approved_mw": 384662.593716982,
-      "construction_limit_mw": 3077300.749735856,
-      "ratio": 0.125,
+      "ratio": 0.8250000000000002,
       "exceeds": false
     },
     {
       "year": 2049,
       "tech": "wind",
-      "approved_mw": 91471.63300792036,
+      "approved_mw": 172489.36510064983,
       "construction_limit_mw": 418156.03660763596,
-      "ratio": 0.21875,
+      "ratio": 0.4125,
       "exceeds": false
     },
     {
       "year": 2049,
       "tech": "solar",
-      "approved_mw": 98790.60623415046,
+      "approved_mw": 790324.8498732037,
       "construction_limit_mw": 3161299.3994928147,
-      "ratio": 0.03125,
+      "ratio": 0.25,
       "exceeds": false
     },
     {
       "year": 2050,
       "tech": "wind",
-      "approved_mw": 375033.69533247343,
+      "approved_mw": 353603.19845633215,
       "construction_limit_mw": 428609.93752282683,
-      "ratio": 0.8749999999999999,
-      "exceeds": false
-    },
-    {
-      "year": 2050,
-      "tech": "solar",
-      "approved_mw": 1623136.9266242557,
-      "construction_limit_mw": 3246273.8532485114,
-      "ratio": 0.5,
+      "ratio": 0.8250000000000001,
       "exceeds": false
     },
     {
       "year": 2051,
       "tech": "wind",
-      "approved_mw": 380659.2007624605,
+      "approved_mw": 358907.2464331771,
       "construction_limit_mw": 435039.08658566914,
-      "ratio": 0.875,
+      "ratio": 0.8250000000000001,
       "exceeds": false
     },
     {
-      "year": 2052,
-      "tech": "wind",
-      "approved_mw": 96592.27219347433,
-      "construction_limit_mw": 441564.6728844541,
-      "ratio": 0.21875,
-      "exceeds": false
-    },
-    {
-      "year": 2052,
+      "year": 2051,
       "tech": "solar",
-      "approved_mw": 104797.76906719831,
-      "construction_limit_mw": 3353528.610150346,
-      "ratio": 0.03125,
-      "exceeds": false
-    },
-    {
-      "year": 2053,
-      "tech": "wind",
-      "approved_mw": 392164.6251055058,
-      "construction_limit_mw": 448188.14297772094,
-      "ratio": 0.875,
-      "exceeds": false
-    },
-    {
-      "year": 2053,
-      "tech": "solar",
-      "approved_mw": 1703627.8443340275,
-      "construction_limit_mw": 3407255.688668055,
+      "approved_mw": 1649957.0199504208,
+      "construction_limit_mw": 3299914.0399008417,
       "ratio": 0.5,
+      "exceeds": false
+    },
+    {
+      "year": 2052,
+      "tech": "wind",
+      "approved_mw": 364290.85512967466,
+      "construction_limit_mw": 441564.6728844541,
+      "ratio": 0.8250000000000001,
+      "exceeds": false
+    },
+    {
+      "year": 2053,
+      "tech": "wind",
+      "approved_mw": 184877.6089783099,
+      "construction_limit_mw": 448188.14297772094,
+      "ratio": 0.41250000000000003,
+      "exceeds": false
+    },
+    {
+      "year": 2053,
+      "tech": "solar",
+      "approved_mw": 851813.9221670137,
+      "construction_limit_mw": 3407255.688668055,
+      "ratio": 0.25,
       "exceeds": false
     },
     {
       "year": 2054,
       "tech": "wind",
-      "approved_mw": 398047.09448208835,
+      "approved_mw": 187650.77311298452,
       "construction_limit_mw": 454910.9651223867,
-      "ratio": 0.875,
+      "ratio": 0.41250000000000003,
+      "exceeds": false
+    },
+    {
+      "year": 2054,
+      "tech": "solar",
+      "approved_mw": 865303.15878168,
+      "construction_limit_mw": 3461212.63512672,
+      "ratio": 0.25,
       "exceeds": false
     },
     {
       "year": 2055,
       "tech": "wind",
-      "approved_mw": 202008.90044965982,
+      "approved_mw": 380931.0694193585,
       "construction_limit_mw": 461734.62959922245,
-      "ratio": 0.4375,
-      "exceeds": false
-    },
-    {
-      "year": 2055,
-      "tech": "solar",
-      "approved_mw": 878874.8526967556,
-      "construction_limit_mw": 3515499.410787022,
-      "ratio": 0.25,
+      "ratio": 0.825,
       "exceeds": false
     },
     {
       "year": 2056,
       "tech": "wind",
-      "approved_mw": 205039.03395640472,
+      "approved_mw": 386645.03546064894,
       "construction_limit_mw": 468660.6490432108,
-      "ratio": 0.4375,
-      "exceeds": false
-    },
-    {
-      "year": 2056,
-      "tech": "solar",
-      "approved_mw": 892550.3578768003,
-      "construction_limit_mw": 3570201.4315072014,
-      "ratio": 0.25,
+      "ratio": 0.8250000000000001,
       "exceeds": false
     },
     {
       "year": 2057,
       "tech": "wind",
-      "approved_mw": 416229.23893150146,
+      "approved_mw": 392444.7109925586,
       "construction_limit_mw": 475690.55877885886,
-      "ratio": 0.8749999999999999,
+      "ratio": 0.8250000000000002,
       "exceeds": false
     },
     {
       "year": 2058,
       "tech": "wind",
-      "approved_mw": 422472.6775154739,
+      "approved_mw": 398331.3816574469,
       "construction_limit_mw": 482825.9171605417,
-      "ratio": 0.8749999999999999,
+      "ratio": 0.8250000000000001,
       "exceeds": false
     },
     {
       "year": 2059,
       "tech": "wind",
-      "approved_mw": 428809.76767820603,
+      "approved_mw": 404306.35238230857,
       "construction_limit_mw": 490068.30591794976,
-      "ratio": 0.875,
+      "ratio": 0.8250000000000001,
       "exceeds": false
     },
     {
       "year": 2060,
       "tech": "wind",
-      "approved_mw": 435241.914193379,
+      "approved_mw": 410370.9476680428,
       "construction_limit_mw": 497419.3305067189,
-      "ratio": 0.8749999999999999,
+      "ratio": 0.8249999999999994,
       "exceeds": false
     }
   ]

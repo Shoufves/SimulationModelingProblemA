@@ -500,4 +500,178 @@ class NationalTests(unittest.TestCase):
                 self.assertEqual(entry.main(),0)
                 dispatch.assert_called_once_with("run_q2_national.py","--output-dir","outputs/q2/review_pr9_common_entry")
 
+    def test_fuel_shares_reconcile_to_physical_fuel_and_primary_total(self):
+        m=self.model(2024).run(2025);r=m.paths[0]
+        self.assertAlmostEqual(sum(r[f+"_share"] for f in ("coal","oil","gas"))+r["nonfossil_share"],1,places=12)
+        for fuel in ("coal","oil","gas"):
+            physical=sum(v["direct_mwh"]+v["conversion_mwh"] for v in m.operations if v["kind"]=="fuel" and v["fuel"]==fuel)*365
+            self.assertAlmostEqual(physical/(r[fuel+"_primary_tce"]*TCE_MWH),1,places=12)
+            self.assertAlmostEqual(r[fuel+"_share"],r[fuel+"_primary_tce"]/r["primary_energy_tce"],places=12)
+
+    def test_oil_gas_errors_cannot_escape_training_loss(self):
+        m=self.model(detail=False).run(2021)
+        original,_,_=loss(m.paths,self.data,self.design,self.design["training_years"],"probe")
+        changed=deepcopy(m.paths)
+        for row in changed:
+            row["oil_share"]+=1;row["gas_share"]+=1
+        other,parts,_=loss(changed,self.data,self.design,self.design["training_years"],"probe")
+        self.assertGreater(other,original)
+        self.assertEqual({p["metric"] for p in parts if p["metric"].endswith("_share")},{"coal_share","oil_share","gas_share","peo_share"})
+
+    def test_statistical_bridge_fit_never_reads_evaluation_observations(self):
+        from energy_model.q2_statistics import fit_bridge
+        original=fit_bridge(self.data,self.design)
+        changed=deepcopy(self.data)
+        for key in changed:
+            if key[0]>=2022:changed[key]*=11 if "consumption" in key[1] else 3
+        self.assertEqual(original,fit_bridge(changed,self.design))
+
+    def test_bridge_constant_baseline_and_forecast_anchor(self):
+        from energy_model.q2_statistics import coefficient,observed_coefficient
+        for anchor in (2014,2024):
+            for year in (anchor,anchor+10,2060):
+                self.assertEqual(coefficient(self.data,self.design,anchor,year,{"bridge_trend_multiplier":0}),observed_coefficient(self.data,anchor))
+        self.assertNotEqual(coefficient(self.data,self.design,2014,2025),coefficient(self.data,self.design,2024,2025))
+
+    def test_carrier_elasticities_affect_their_own_requests(self):
+        a=self.model();b=self.model()
+        b.theta["gas_activity_elasticity"]=2.5
+        a.drivers();b.drivers()
+        self.assertGreater(b.consumers["gas"].service_request(),a.consumers["gas"].service_request())
+        self.assertEqual(b.consumers["oil"].service_request(),a.consumers["oil"].service_request())
+        self.assertEqual(b.consumers["coal"].service_request(),a.consumers["coal"].service_request())
+
+    def test_policy_comparison_never_certifies_official_attainment(self):
+        m=self.model(2024,detail=False).run(2060)
+        rows,_=targets(m.paths,self.data,self.design)
+        nf=[r for r in rows if r["metric"]=="nonfossil_share"]
+        self.assertEqual([r["target"] for r in nf],[.25,.8])
+        self.assertTrue(all(not r["official_attainment_certified"] and r["judgement"].startswith("conditional_") for r in nf))
+
+    def test_missing_fuel_calibration_target_is_rejected(self):
+        from energy_model.q2_admission import validate_admission
+        from run_q2_national import load
+        _,design,rows=preflight()
+        design["targets"]=[t for t in design["targets"] if t["metric"]!="gas_share"]
+        with self.assertRaisesRegex(ValueError,"Required calibration target"):
+            validate_admission(load(ROOT/"data/catalog/q2_national_input_review.json"),rows,design)
+
+    def test_planning_supply_follows_announced_path_without_side_effects(self):
+        m=self.model(2024);m.drivers();m.mature();m.last_operation=m.make_operation()
+        before=len(m.behavior)
+        future=m.planning_operation(3)
+        self.assertEqual(len(m.behavior),before)
+        for fuel,supplier in m.suppliers.items():
+            expected=supplier.offer(m.year+3,record=False)
+            self.assertEqual(future["fuels"][fuel]["domestic_mw"],expected["domestic_mw"])
+            self.assertEqual(future["fuels"][fuel]["import_mw"],expected["import_mw"])
+            self.assertEqual(future["fuels"][fuel]["initial_mwh"],m.last_operation["fuels"][fuel]["initial_mwh"])
+
+    def test_priority_has_publication_boundary_and_cost_only_counterfactual(self):
+        m=self.model();m.drivers();m.mature();m.last_operation=m.make_operation()
+        self.assertNotIn("fossil_displacement_priority_plants",m.last_operation)
+        self.assertNotIn("fossil_displacement_priority_plants",m.planning_operation(3))
+        m.year=2016
+        self.assertEqual(m.make_operation()["fossil_displacement_priority_plants"],["coal","oil","gas"])
+        m.variant["nonfossil_dispatch_priority"]=0
+        self.assertNotIn("fossil_displacement_priority_plants",m.make_operation())
+
+    def test_generation_diagnostic_exposes_mix_error_despite_equal_total(self):
+        from run_q2_national import generation_diagnostics
+        from energy_model.q2_national import TECHS
+        row={"year":2021}
+        for tech in TECHS:
+            row[tech+"_generation_mwh"]=self.data[2021,("biofuel" if tech=="biomass" else tech)+"_electricity_mwh"]
+        total=sum(row[t+"_generation_mwh"] for t in TECHS)
+        row["coal_generation_mwh"]+=row["gas_generation_mwh"]
+        row["gas_generation_mwh"]=0
+        self.assertEqual(total,sum(row[t+"_generation_mwh"] for t in TECHS))
+        result=generation_diagnostics([row],self.data,self.design)
+        self.assertEqual(len(result),8)
+        self.assertEqual([r["technology"] for r in result if r["zero_model_with_positive_observation"]],["gas"])
+        self.assertAlmostEqual(sum(r["residual_mwh"] for r in result),0,places=4)
+
+    def test_nonpower_identification_is_training_only_and_not_simulated_power(self):
+        from energy_model.q2_identification import fit_nonpower,identified_parameters
+        original=fit_nonpower(self.data,self.design)
+        data=deepcopy(self.data)
+        for key in data:
+            if key[0]>=2022:data[key]*=17
+        self.assertEqual(original,fit_nonpower(data,self.design))
+        self.assertFalse(original["observed_final_energy"])
+        params=identified_parameters(original)
+        self.assertEqual({k:self.design["calibration_search"]["initial_parameters"][k] for k in params},params)
+        self.assertFalse(set(params)&set(self.design["parameter_grid"]))
+
+    def test_initial_utilisation_uses_only_average_initial_capacity(self):
+        m=self.model()
+        for t in ("hydro","nuclear","wind","solar"):
+            average=(self.data[2013,t+"_capacity_mw"]+self.data[2014,t+"_capacity_mw"])/2
+            expected=min(.9,self.data[2014,t+"_electricity_mwh"]/(8760*average))
+            self.assertAlmostEqual(m.generators[t].reference_cf,expected)
+        self.assertGreater(m.supply_growth["biomass"],self.design["assumptions"]["fuel_supply_annual_growth"])
+
+    def test_training_pipeline_inference_is_not_transferred_to_2024(self):
+        theta={**self.theta,"nuclear_initial_pipeline_multiplier":2,"hydro_initial_pipeline_multiplier":.5}
+        past=NationalModel(self.data,self.design,theta,2014)
+        present=NationalModel(self.data,self.design,theta,2024)
+        for m,factor in ((past,2),(present,1)):
+            projects=[p for p in m.projects if p["tech"]=="nuclear"]
+            for p in projects:
+                self.assertAlmostEqual(p["capacity_mw"],m.initial_additions["nuclear"]*factor)
+                self.assertAlmostEqual(p["cost"],p["capacity_mw"]*m.generators["nuclear"].capex_2024)
+            self.assertAlmostEqual(m.construction_fund,sum(p["remaining"] for p in m.projects))
+
+    def test_national_allocation_score_is_scaled_and_not_money(self):
+        m=self.model();m.drivers();m.mature();op=m.make_operation()
+        raw=operate(op);scaled=operate_national(op)
+        for key in ("actual_dispatch_cost","behavioral_score","reference_fossil_mwh","resource_cost"):
+            self.assertAlmostEqual(raw[key]/scaled[key],1,places=8)
+        self.assertAlmostEqual(scaled["actual_dispatch_cost"]/(scaled["resource_cost"]+scaled["policy_signal_cost"]),1,places=12)
+        self.assertAlmostEqual(scaled["dispatch_objective"]/(scaled["actual_dispatch_cost"]+scaled["behavioral_score"]),1,places=12)
+        m.variant["dispatch_kappa_multiplier"]=0
+        self.assertNotIn("fossil_allocation_score",m.make_operation())
+
+    def test_fuel_price_shock_does_not_recalibrate_behavioral_anchor(self):
+        a=self.model();b=self.model(variant={"fuel_price_multiplier":1.3})
+        for m in (a,b):m.drivers();m.mature()
+        left=a.make_operation();right=b.make_operation()
+        self.assertEqual(left["fossil_allocation_score"],right["fossil_allocation_score"])
+        self.assertNotEqual(left["fuels"]["gas"]["domestic_cost_per_mwh"],right["fuels"]["gas"]["domestic_cost_per_mwh"])
+
+    def test_hydro_construction_response_limits_actual_approvals(self):
+        theta={**self.theta,"hydro_construction_response":.5}
+        m=NationalModel(self.data,self.design,theta,2024)
+        baseline=self.model(2024)
+        for model in (m,baseline):model.drivers();model.mature()
+        g=m.generators["hydro"]
+        self.assertAlmostEqual(g.construction_limit(),baseline.generators["hydro"].construction_limit()*.5)
+        m.gdp_cny=1e20;g.cash=1e18;g.margin=1e10
+        proposal=g.proposal(1e10);proposal["amount"]=1e20
+        m.government.approve([proposal],[])
+        self.assertAlmostEqual(sum(p["capacity_mw"] for p in m.projects if not p["initial_reconstruction"] and p["tech"]=="hydro"),g.construction_limit())
+
+    def test_generation_and_capacity_losses_cannot_hide_technology_mix(self):
+        d=self.design
+        generation=[t for t in d["targets"] if t["metric"].endswith("_generation_mwh")]
+        capacity=[t for t in d["targets"] if t["metric"].endswith("_capacity_mw")]
+        self.assertEqual(len(generation),9);self.assertEqual(len(capacity),5)
+        self.assertAlmostEqual(sum(t["weight"] for t in generation),1)
+        self.assertAlmostEqual(sum(t["weight"] for t in capacity),1)
+
+    def test_independent_scenarios_match_serial_and_preserve_order(self):
+        from concurrent.futures import ProcessPoolExecutor
+        from run_q2_national import scenario_trial
+        import os
+        for key in ("OMP_NUM_THREADS","OPENBLAS_NUM_THREADS","MKL_NUM_THREADS"):os.environ[key]="1"
+        theta=self.design["calibration_search"]["initial_parameters"]
+        settings=[("probe","base",{},theta,self.data,self.design),
+                  ("probe","shock",{"carbon_price_multiplier":1.5},theta,self.data,self.design)]
+        serial=[scenario_trial(p) for p in settings]
+        with ProcessPoolExecutor(max_workers=2) as pool:
+            parallel=list(pool.map(scenario_trial,settings,chunksize=1))
+        self.assertEqual(serial,parallel)
+        self.assertEqual([r["label"] for r in parallel],["base","shock"])
+        self.assertTrue(all(r["status"]=="success" for r in parallel))
+
 if __name__=="__main__":unittest.main()
