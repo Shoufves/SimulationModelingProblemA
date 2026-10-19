@@ -2,9 +2,8 @@
   "passed": true,
   "checks": [
     {
-      "name": "final_mechanism_tests",
-      "passed": true,
-      "returncode": 0
+      "name": "fresh_full_regression_matches_final_code",
+      "passed": true
     },
     {
       "name": "final_workspace_audit",
@@ -17,24 +16,26 @@
       "returncode": 0
     },
     {
-      "name": "final_current_code_and_26_artifacts",
+      "name": "final_current_code_and_scientific_artifacts",
       "passed": true,
       "artifacts": 26
     }
   ],
-  "model_run_id": "20261019T022256882831Z",
+  "model_run_id": "20261019T061618016081Z",
   "handoff_hashes": {
-    "README.md": "3db0630364067dc6131a183121ed34f0d17575d9ee6dd63b8a79b9661f722b6d",
+    "README.md": "36861a14d4bb8b062b87da28333885e5b41b206d12dc2e30a5f09d1b27691061",
     "WORKFLOW.md": "3293db8fe644848517c673e1b4a5fba5b3e4eb041ad7c9c41f9c5396528920f3",
-    "docs/IMPLEMENTATION_ROADMAP.md": "f4ba3771307497ff0533cfa2f6a18d56c35dc3b402c210248490621bd06235b8",
-    "docs/RUNNING.md": "e54b39a111c1e9d096f58ef5d2f829d3a3aea73d2dd9a4d5d4e0486e37bab7fc",
-    "docs/solutions/p2-lb.md": "7e9cabded45ee583aeef701ea4316bfcbc28035f44f014fb1a65bd69a88affc2",
-    "docs/solutions/p2-lb-repaired.md": "b9841963ee25e145aba5ad8d9806956b547383b13fd7888358d00e4eea88d40f",
-    "scripts/write_q2_repair_report.py": "17871b30e7da68ab292e424eee2582e1259e4f145e90e03f5b7a6d148dee9722",
+    "docs/IMPLEMENTATION_ROADMAP.md": "60fe75f0545c92253d158403c09f15ed264be4c86ff89107d7a0ce67b3329326",
+    "docs/RUNNING.md": "8fc435211c31892b56c96745aad13c830991b3489ca342a1422ce467756319da",
+    "docs/solutions/p2-lb.md": "29e748578aaa99adf6c4d7777c607b0c173c7c36be19078cc8b94512aabd280e",
+    "docs/solutions/p2-lb-repaired.md": "7f9656182edf199d7234d9af88c809e0d5a77c821aca77feaf9817624b6e8a6f",
+    "docs/solutions/p2-lb-review7-response.md": "94b754c6808bf80b5d8c7e5df5acfc842b582bef0f2f3e9590d3dad3c588ec40",
+    "docs/reviews/p2-lb-review7-mmj.md": "1a1472da71ec4cb10586a8deac6e145d303e529eb8698530913ab02905b0b5dd",
+    "scripts/write_q2_repair_report.py": "721e285c6429e25273b076786a65ae117d1aeab269456e62095a5e34ddc511c6",
     "scripts/check_q2_repaired_mechanisms.py": "64c072e9931437c5acf1576684775ba08dee4cae3f0fce379fc0b02f5ed244bb",
-    "scripts/review_q2_national_delivery.py": "c38da0390cc7689e42f42b90ae3673ff5d1b8a7406f880987cae628536db6e0c",
-    "archive/q2_national_v5_before_remaining_repairs.zip": "2599ba63aa8a31d02cbbfb411d32c3d12e4eabac291356603668a7acf3bf0a89",
-    "archive/q2_revision6_preserved_runs.zip": "47bd6744fa12fe54389ad4d389cb89f42ca0bf77c13af1b2fd691e25089e76ca",
-    "archive/q2_revision6_preserved_runs_manifest.json": "0c06a7945012a34c8ae6e9a7f11ebf4fafbe68e63931b91e27dbd11787f04378"
+    "scripts/review_q2_national_delivery.py": "8dc0ec61a9b1230ead1acdb85e7aeaa1ca17d9622da75e82e26aed9566ed86dc",
+    "archive/q2_national_v6_before_review7.zip": "c7a2b03360c86997448721e43007f08a736ce422eb15a5ed24bb6e5ace08fc80",
+    "archive/q2_revision7_preserved_runs.zip": "62d2bbbe40513eb0a4219ff40426fddf85a2427c4db23c14c9fdb4cc0dc7d61b",
+    "archive/q2_revision7_preserved_runs_manifest.json": "e12de8c2de8a55389d3035e819094a277d042b6c9567023e2ca56ff05a342602"
   }
 }

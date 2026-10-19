@@ -8,9 +8,12 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / "data/processed/q2"
+sys.path.insert(0,str(ROOT/"src"))
+from energy_model.q2_admission import SOURCE_REQUIREMENTS
 
 
 def sha(path):
@@ -75,7 +78,10 @@ def build():
         entries = [r for r in catalog if r.get("canonical_path") == path]
         sources[path] = dict(path=path, sha256=sha(path), source_keys=[r["source_key"] for r in entries],
             url=entries[0].get("url") if entries else None, allowed_use=use, review=review, locator=locator,
-            status="author_scoped_review_not_team_approval")
+            status="author_scoped_review_not_team_approval",
+            allowed_operations=SOURCE_REQUIREMENTS[path]["operations"])
+        if use != SOURCE_REQUIREMENTS[path]["allowed_use"]:
+            raise ValueError("Source-use contract differs from reviewed builder: "+path)
         return path
     nbs_e = source("data/raw/batch1_national/nbs_2025_C09-02.jpg", "energy_observations_and_initial_scale",
         "Full image visually read; 100 literal cells checked against unified CSV; PEO is not automatically nonfossil", "Table 9-2; 2005-2024")
@@ -133,12 +139,26 @@ def build():
         for key,value in row.items():
             add(year,"btr_"+key+"_co2_t",value*1e4,"t CO2",btr,f"Table 1-4a; {year}; {key}; x1e4",
                 "National inventory Part I; CO2 only; international bunkers/biomass combustion memo items excluded")
-    gcb = source("data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv", "external_boundary_diagnostic_only",
-        "CHN raw annual Total read directly; fossil and industrial CO2 excludes LULUCF; not silently substituted for BTR", "Country China, 2005-2024")
+    gcb = source("data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv", "external_diagnostic_and_conditional_peak_bridge",
+        "CHN raw annual Total rechecked for all 20 years, Mt to t; compared against BTR at all three common years. Separate author-scoped admission of annual relative-movement bridge, not empirical scope equivalence. See gcb_peak_bridge_review.json and docs/solutions/p2-lb-review7-response.md; never training or official peak certification", "Country China, ISO CHN, 2005-2024; Total; BTR table 1-4a 2005/2020/2021")
     for r in read(gcb):
         if r.get("ISO 3166-1 alpha-3") == "CHN" and 2005 <= int(r["Year"]) <= 2024:
             add(int(r["Year"]),"gcb_positive_co2_t",float(r["Total"])*1e6,"t CO2",gcb,
-                f"CHN,{r['Year']},Total; Mt x1e6","GCB fossil and industry boundary, differs from BTR", "external_diagnostic")
+                f"CHN,{r['Year']},Total; Mt x1e6","GCB fossil and industry boundary, differs from BTR", "external_diagnostic_and_conditional_peak_bridge")
+    gcb_values = {r["year"]:r["value"] for r in records if r["source_path"]==gcb}
+    if set(gcb_values) != set(range(2005,2025)) or any(v<=0 for v in gcb_values.values()):
+        raise ValueError("Incomplete/nonpositive GCB annual bridge")
+    scale = BTR[2021]["positive"]*1e4/gcb_values[2021]
+    bridge_review = dict(status="author_reviewed_conditional_bridge_not_empirical_equivalence",team_approved=False,
+        reviewer="lb author; independent team review still required",source_hashes={p:sha(p) for p in (gcb,btr)},
+        checked_years=list(range(2005,2025)),scale_btr2021_over_gcb2021=scale,
+        formula="GCB_t[y] * BTR_positive_CO2_t[2021] / GCB_t[2021]; retain direct BTR observations in 2005/2020/2021",
+        allowed_operations=["external_diagnostic","conditional_peak_bridge"],
+        excluded_operations=["initialization","calibration","same_scope_evaluation","official_peak_certification"],
+        limitations="Single-anchor proportional movement is a research assumption; residual differences at 2005/2020 remain. No process CO2 added to GCB, no LULUCF/net/all-GHG equivalence, no additional observations imputed for training.",
+        common_year_checks=[dict(year=y,gcb_t=gcb_values[y],btr_positive_t=BTR[y]["positive"]*1e4,
+            scaled_gcb_t=gcb_values[y]*scale,relative_gap_to_btr=gcb_values[y]*scale/(BTR[y]["positive"]*1e4)-1) for y in sorted(BTR)])
+    dump(DEST/"gcb_peak_bridge_review.json",bridge_review)
     fx = source("data/raw/lb/ai_social/nbs_bulletin_2024.txt", "2024_currency_conversion",
         "Text explicitly reports annual mean 1 USD = 7.1217 CNY; WDI 7.197491 excluded, no averaging", "National 2024 bulletin; exchange-rate paragraph")
     if "7.1217" not in (ROOT/fx).read_text(encoding="utf-8-sig"):
@@ -176,7 +196,7 @@ def build():
             original_image=286467,decision="Q2 uses visually verified original; Q1 files unchanged; outside training window")],
         exclusions=["data/restricted", "WDI exchange rate", "OWID other_renewable duplicated with biofuel",
             "NBS PEO as automatic official nonfossil", "GCB+BTR process double addition", "2026 policies before publication"],
-        products={p.relative_to(ROOT).as_posix():sha(p.relative_to(ROOT)) for p in (DEST/"national_observations.csv",DEST/"technical_references.json")})
+        products={p.relative_to(ROOT).as_posix():sha(p.relative_to(ROOT)) for p in (DEST/"national_observations.csv",DEST/"technical_references.json",DEST/"gcb_peak_bridge_review.json")})
     dump(ROOT/"data/catalog/q2_national_input_review.json",review)
     print(json.dumps(dict(observations=len(records),source_files=len(sources),status=review["status"])))
 

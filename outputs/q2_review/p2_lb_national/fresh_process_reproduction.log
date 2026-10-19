@@ -1,3 +1,4 @@
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
 Training 50/2250
 Training 100/2250
 Training 150/2250
@@ -43,19 +44,22 @@ Training 2100/2250
 Training 2150/2250
 Training 2200/2250
 Training 2250/2250
-Sensitivity 5/77
-Sensitivity 10/77
-Sensitivity 15/77
-Sensitivity 20/77
-Sensitivity 25/77
-Sensitivity 30/77
-Sensitivity 35/77
-Sensitivity 40/77
-Sensitivity 45/77
-Sensitivity 50/77
-Sensitivity 55/77
-Sensitivity 60/77
-Sensitivity 65/77
-Sensitivity 70/77
-Sensitivity 75/77
-{"status": "success_conditional_candidate", "elapsed_seconds": 609.7653367000166}
+Sensitivity 5/91
+Sensitivity 10/91
+Sensitivity 15/91
+Sensitivity 20/91
+Sensitivity 25/91
+Sensitivity 30/91
+Sensitivity 35/91
+Sensitivity 40/91
+Sensitivity 45/91
+Sensitivity 50/91
+Sensitivity 55/91
+Sensitivity 60/91
+Sensitivity 65/91
+Sensitivity 70/91
+Sensitivity 75/91
+Sensitivity 80/91
+Sensitivity 85/91
+Sensitivity 90/91
+{"status": "success_conditional_candidate", "elapsed_seconds": 583.7941784000141}

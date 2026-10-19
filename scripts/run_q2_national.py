@@ -23,12 +23,14 @@ sys.path.insert(0,str(ROOT/"src"))
 from energy_model.q2_national import NationalModel, observations, get
 from energy_model.q2_operations import Q2Error
 from energy_model.q2_experiments import peak_check
+from energy_model.q2_admission import validate_admission
 
 CODE = ["run.py","scripts/run_q2_national.py","scripts/build_q2_national_inputs.py","src/energy_model/q2_national.py",
-        "src/energy_model/q2_finance.py",
+        "src/energy_model/q2_finance.py","src/energy_model/q2_admission.py",
         "src/energy_model/q2_operations.py","src/energy_model/q2_experiments.py","requirements-q2.txt"]
 INPUTS = ["data/catalog/q2_national_input_review.json","data/processed/q2/national_observations.csv",
-          "data/processed/q2/technical_references.json","workflow/q2_national_design.json"]
+          "data/processed/q2/technical_references.json","workflow/q2_national_design.json",
+          "data/processed/q2/gcb_peak_bridge_review.json"]
 
 
 def sha(path):
@@ -55,6 +57,8 @@ def preflight():
     review = load(ROOT/INPUTS[0])
     if review["status"] != "author_reviewed_conditional_research_inputs" or review["team_approved"]:
         raise ValueError("Author candidate cannot impersonate team approval")
+    if set(review["products"]) != {INPUTS[1],INPUTS[2],INPUTS[4]}:
+        raise ValueError("Missing or unexpected reviewed national product")
     for p,digest in review["products"].items():
         if sha(ROOT/p) != digest:
             raise ValueError("Changed reviewed product "+p)
@@ -64,8 +68,14 @@ def preflight():
             raise ValueError("Changed/forbidden source "+s["path"])
     with (ROOT/INPUTS[1]).open(encoding="utf-8",newline="") as f:
         rows = list(csv.DictReader(f))
-    data = observations(rows)
     design = load(ROOT/INPUTS[3])
+    validate_admission(review,rows,design)
+    data = observations(rows)
+    bridge_review = load(ROOT/INPUTS[4])
+    if bridge_review["status"] != "author_reviewed_conditional_bridge_not_empirical_equivalence" or bridge_review["team_approved"]:
+        raise ValueError("Conditional historical bridge not admitted")
+    if bridge_review["scale_btr2021_over_gcb2021"] != get(data,2021,"btr_positive_co2_t")/get(data,2021,"gcb_positive_co2_t"):
+        raise ValueError("Historical bridge anchor differs from reviewed observations")
     with (ROOT/"data/processed/q1/reviewed_2024_additions.csv").open(encoding="utf-8-sig",newline="") as f:
         additions = {r["variable"]:float(r["value"]) for r in csv.DictReader(f) if r["year"] == "2024" and r["region"] == "China" and r["value"]}
     if design["assumptions"]["new_storage_2024_power_mw"] != additions["new_storage_power"]*1000 or design["assumptions"]["new_storage_2024_energy_mwh"] != additions["new_storage_energy"]*1000:
@@ -176,6 +186,8 @@ def targets(paths,data,design):
             p["positive_co2_t"] = get(data,p["year"],"btr_positive_co2_t")
     peak = peak_check(historical+paths,design["peak_persistence_years"])
     peak["historical_bridge"] = "GCB annual relative movement scaled to BTR2021; official BTR 2005/2020/2021 retained; approximate scope bridge"
+    peak["admitted_use"] = "conditional_peak_bridge; not official historical peak certification"
+    peak["historical_bridge_review"] = "data/processed/q2/gcb_peak_bridge_review.json"
     result = []
     metrics = dict(primary_energy_tce="tce statistical bridge",nonfossil_share_proxy="fraction (conditional proxy)",
         positive_co2_t="t CO2",net_removals_t="t CO2",net_co2_t="t CO2",neutralisation_ratio="R/P",
@@ -360,7 +372,7 @@ def report(folder,calibration,rows,failures):
         fmt=lambda v: "无同口径观测" if v is None else f"{v:.2%}"
         text += f"| {p['metric']} | {fmt(train[p['metric']]['mape'])} | {fmt(p['mape'])} | {p['n']} |\n"
     text += f"\n留出综合损失：本模型{quality['already_seen_evaluation']['loss']:.4f}，训练末值持平{quality['persistence']['loss']:.4f}，关闭新增投资和替代{quality['alternative_rules']['loss']:.4f}。这些损失均只累计有同口径观测的指标。\n\n"
-    text += f"预先指定误差门槛逐项结果：`{json.dumps(quality['acceptance']['checks'],ensure_ascii=False)}`。未通过项保留为失败，不借事后改阈值宣称验证成功。燃烧排放只有2020/2021两年同口径训练观测，2022—2024没有同口径清单；GCB仅作异口径外部诊断。\n\n"
+    text += f"预先指定误差门槛逐项结果：`{json.dumps(quality['acceptance']['checks'],ensure_ascii=False)}`。未通过项保留为失败，不借事后改阈值宣称验证成功。燃烧排放只有2020/2021两年同口径训练观测，2022—2024没有同口径清单；GCB用于异口径外部诊断和另行审查的条件峰值桥接，不参与拟合或同口径验证。\n\n"
     text += "## 任务三：S0条件结果\n\n| 指标 | 2030 | 2060 |\n|---|---:|---:|\n"
     for metric,label,scale in [("primary_energy_tce","能源消费（亿tce，桥接）",1e8),("nonfossil_share_proxy","非化石占比代理（%）",.01),
         ("positive_co2_t","正CO₂排放（亿t）",1e8),("net_removals_t","净移除（亿tCO₂）",1e8),
@@ -395,17 +407,18 @@ def main():
         archive=out.parent/(out.name+".attempts")/old["run_id"]
         archive.parent.mkdir(parents=True,exist_ok=True)
         shutil.move(str(out),str(archive))
-    out.mkdir(parents=True)
     start=time.perf_counter()
     run_id=datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     manifest=dict(run_id=run_id,owner="p2/lb",status="running",q2_scientific_complete=False,
-        code_hashes={x:sha(ROOT/x) for x in CODE},input_hashes={x:sha(ROOT/x) for x in INPUTS},
-        git_sha=subprocess.run(["git","rev-parse","HEAD"],cwd=ROOT,capture_output=True,text=True).stdout.strip(),
-        python=sys.version,command=sys.argv,team_approved=False)
-    dump(out/"run_manifest.json",manifest)
+        code_hashes={},input_hashes={},python=sys.version,command=sys.argv,team_approved=False)
     latest=out.parent/(out.name+".latest-attempt.json")
+    out.mkdir(parents=True)
     dump(latest,dict(run_id=run_id,status="running",output_valid_for_this_attempt=False))
+    dump(out/"run_manifest.json",manifest)
     try:
+        manifest["code_hashes"]={x:sha(ROOT/x) for x in CODE}
+        manifest["input_hashes"]={x:sha(ROOT/x) for x in INPUTS}
+        manifest["git_sha"]=subprocess.run(["git","rev-parse","HEAD"],cwd=ROOT,capture_output=True,text=True).stdout.strip()
         data,design,_=preflight(); dump(out/"frozen_design.json",design)
         with zipfile.ZipFile(out/"model_snapshot.zip","w",zipfile.ZIP_DEFLATED) as snapshot:
             for name in CODE+INPUTS:

@@ -380,4 +380,124 @@ class NationalTests(unittest.TestCase):
             self.assertEqual(a.consumers[fuel].income_per_service,b.consumers[fuel].income_per_service)
 
 
+    def test_positive_npv_and_high_response_cannot_exceed_construction(self):
+        m=self.model(2024);m.drivers();m.mature()
+        m.theta={**m.theta,"investment_response":1.75,"renewable_mix_response":.4}
+        m.gdp_cny=1e20
+        proposals=[]
+        for g in m.generators.values():
+            g.cash=1e18;g.margin=1e10
+            p=g.proposal(1e10)
+            self.assertGreater(m.behavior[-1]["npv_cny_per_mw"],0)
+            self.assertGreater(p["amount"],0)
+            self.assertLessEqual(p["amount"],g.construction_limit())
+            proposals.append(p)
+        m.government.approve(proposals,[])
+        for p in m.projects:
+            if not p["initial_reconstruction"]:
+                self.assertLessEqual(p["capacity_mw"],m.generators[p["tech"]].construction_limit())
+
+    def test_approval_rechecks_cap_and_cumulative_annual_commitments(self):
+        m=self.model(2024);m.drivers();m.mature();m.gdp_cny=1e20
+        g=m.generators["hydro"];g.cash=1e18;g.margin=1e10
+        p=g.proposal(1e10);p["amount"]=g.construction_limit()*10
+        p["construction_limit_mw"]=1e30
+        for _ in range(2):m.government.approve([p],[])
+        projects=[p for p in m.projects if not p["initial_reconstruction"] and p["tech"]=="hydro"]
+        self.assertEqual(len(projects),1)
+        self.assertAlmostEqual(sum(p["capacity_mw"] for p in projects),g.construction_limit())
+        with self.assertRaises(Q2Error):m.government.approve([p,p],[])
+
+    def test_pending_or_withdrawn_source_rejected_without_byte_changes(self):
+        import run_q2_national as runner
+        from unittest.mock import patch
+        original=runner.load
+        for field,value in (("status","pending_review"),("allowed_use","candidate_inventory_only_NOT_national_initialization_or_calibration"),("allowed_operations",[])):
+            reviewed=deepcopy(original(ROOT/runner.INPUTS[0]))
+            for source in reviewed["sources"]:source[field]=value
+            def changed(path):
+                return reviewed if Path(path)==ROOT/runner.INPUTS[0] else original(path)
+            with self.subTest(field=field),patch.object(runner,"load",side_effect=changed):
+                with self.assertRaises(ValueError):runner.preflight()
+
+    def test_each_required_source_cannot_be_removed_or_duplicated(self):
+        from energy_model.q2_admission import validate_admission
+        import run_q2_national as runner
+        review=runner.load(ROOT/runner.INPUTS[0]);_,design,rows=preflight()
+        for i in range(len(review["sources"])):
+            missing=deepcopy(review);missing["sources"].pop(i)
+            with self.subTest(source=i),self.assertRaises(ValueError):validate_admission(missing,rows,design)
+        duplicate=deepcopy(review);duplicate["sources"].append(duplicate["sources"][0])
+        with self.assertRaises(ValueError):validate_admission(duplicate,rows,design)
+
+    def test_actual_observation_use_is_bound_to_reviewed_source(self):
+        from energy_model.q2_admission import validate_admission
+        import run_q2_national as runner
+        review=runner.load(ROOT/runner.INPUTS[0]);_,design,rows=preflight()
+        for change in ({"use":"initialization"},{"source_path":review["sources"][0]["path"]},{"source_sha256":"0"*64}):
+            changed=deepcopy(rows)
+            next(r for r in changed if r["metric"]=="gcb_positive_co2_t").update(change)
+            with self.subTest(change=change),self.assertRaises(ValueError):validate_admission(review,changed,design)
+        design["targets"][0]["observation"]="gcb_positive_co2_t"
+        with self.assertRaisesRegex(ValueError,"not admitted to calibration"):validate_admission(review,rows,design)
+
+    def test_gcb_peak_use_requires_separate_admission(self):
+        from energy_model.q2_admission import validate_admission
+        import run_q2_national as runner
+        review=runner.load(ROOT/runner.INPUTS[0]);_,design,rows=preflight()
+        gcb=next(s for s in review["sources"] if "GCB2025" in s["path"])
+        gcb["allowed_operations"].remove("conditional_peak_bridge")
+        with self.assertRaisesRegex(ValueError,"operations"):validate_admission(review,rows,design)
+
+    def _missing_startup_and_retry(self, previous_success):
+        import run_q2_national as runner
+        import tempfile
+        from types import SimpleNamespace
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory(dir=ROOT/"tmp") as temp:
+            root=Path(temp).resolve();out=root/"outputs/q2/probe"
+            for name in runner.CODE+runner.INPUTS:
+                p=root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text("{}",encoding="utf-8")
+            if previous_success:
+                out.mkdir(parents=True)
+                runner.dump(out/"run_manifest.json",dict(run_id="previous",owner="p2/lb",status="success_conditional_candidate"))
+                runner.dump(out.parent/(out.name+".latest-attempt.json"),dict(run_id="previous",status="success_conditional_candidate",output_valid_for_this_attempt=True))
+                (out/"old-result.txt").write_text("preserve me")
+            missing=root/runner.INPUTS[1];missing.unlink()
+            calibration={"quality":{"acceptance":{"all_thresholds_passed":True}}}
+            model=SimpleNamespace(paths=[{"max_residual":0}])
+            with patch.object(runner,"ROOT",root),patch.object(sys,"argv",["probe","--output-dir","outputs/q2/probe"]),\
+                patch.object(runner,"preflight",return_value=({}, {}, [])) as flight,\
+                patch.object(runner,"calibrate",return_value=calibration),\
+                patch.object(runner,"evaluate",return_value=model),\
+                patch.object(runner,"experiments",return_value=(model,[],[],[])),\
+                patch.object(runner,"plot"),patch.object(runner,"report"):
+                with self.assertRaises(FileNotFoundError):runner.main()
+                flight.assert_not_called()
+                latest=runner.load(out.parent/(out.name+".latest-attempt.json"))
+                manifest=runner.load(out/"run_manifest.json")
+                self.assertEqual(latest["status"],"failed");self.assertFalse(latest["output_valid_for_this_attempt"])
+                self.assertEqual(manifest["owner"],"p2/lb");self.assertEqual(manifest["error_type"],"FileNotFoundError")
+                if previous_success:
+                    self.assertEqual((out.parent/"probe.attempts/previous/old-result.txt").read_text(),"preserve me")
+                missing.write_text("{}",encoding="utf-8")
+                runner.main()
+                self.assertEqual(runner.verify_latest(out)["status"],"success_conditional_candidate")
+                self.assertTrue((out.parent/"probe.attempts"/manifest["run_id"]/"run_manifest.json").exists())
+
+    def test_first_run_missing_input_records_failure_and_can_retry(self):
+        self._missing_startup_and_retry(False)
+
+    def test_existing_success_missing_input_invalidates_and_can_retry(self):
+        self._missing_startup_and_retry(True)
+
+    def test_common_q2_entry_dispatches_reviewed_national_runner(self):
+        from unittest.mock import patch
+        spec=importlib.util.spec_from_file_location("q2_common_entry",ROOT/"run.py")
+        entry=importlib.util.module_from_spec(spec);spec.loader.exec_module(entry)
+        for config in ("workflow/q2_inputs.json","workflow/q2_national_design.json",str(ROOT/"workflow/q2_inputs.json")):
+            with patch.object(sys,"argv",["run.py","q2","--config",config,"--output-dir","outputs/q2/review_pr9_common_entry"]),patch.object(entry,"script",return_value=0) as dispatch:
+                self.assertEqual(entry.main(),0)
+                dispatch.assert_called_once_with("run_q2_national.py","--output-dir","outputs/q2/review_pr9_common_entry")
+
 if __name__=="__main__":unittest.main()

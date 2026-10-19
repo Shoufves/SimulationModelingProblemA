@@ -10,35 +10,35 @@ Mesa组织煤油气及生物质供给商、八类发电主体、工业热/交通
 
 ## 任务二：真实历史校准及验证
 
-训练2015—2021年；2022—2024年为已接触留出。2250组候选中2250组运行成功，按训练损失选出的参数为 `{"activity_elasticity": 0.5, "expectation_rate": 0.25, "investment_response": 1.75, "renewable_mix_response": 0.55, "replacement_adoption": 0.2, "solar_construction_growth": 0.15}`；保留8组等效参数。
+训练2015—2021年；2022—2024年为已接触留出。2250组候选中2250组运行成功，按训练损失选出的参数为 `{"activity_elasticity": 0.5, "expectation_rate": 0.25, "investment_response": 1.25, "renewable_mix_response": 0.7, "replacement_adoption": 0.2, "solar_construction_growth": 0.3}`；保留22组等效参数。
 
 | 指标 | 训练MAPE | 已接触留出MAPE | 留出可比年数 |
 |---|---:|---:|---:|
-| primary_energy_tce | 5.57% | 2.48% | 3 |
-| peo_share | 4.37% | 14.25% | 3 |
-| total_capacity_mw | 3.73% | 5.90% | 3 |
-| wind_capacity_mw | 12.87% | 5.15% | 3 |
-| solar_capacity_mw | 15.63% | 22.30% | 3 |
+| primary_energy_tce | 5.50% | 2.21% | 3 |
+| peo_share | 5.32% | 2.49% | 3 |
+| total_capacity_mw | 4.83% | 6.20% | 3 |
+| wind_capacity_mw | 8.97% | 5.61% | 3 |
+| solar_capacity_mw | 35.35% | 19.91% | 3 |
 | electricity_generation_mwh | 5.78% | 1.63% | 3 |
-| combustion_co2_t | 9.66% | 无同口径观测 | 0 |
+| combustion_co2_t | 11.38% | 无同口径观测 | 0 |
 
-留出综合损失：本模型12.2130，训练末值持平40.5389，关闭新增投资和替代213.9978。这些损失均只累计有同口径观测的指标。
+留出综合损失：本模型9.2657，训练末值持平40.5389，关闭新增投资和替代213.9978。这些损失均只累计有同口径观测的指标。
 
-预先指定误差门槛逐项结果：`{"energy": true, "generation": true, "capacity": true, "wind_capacity": true, "solar_capacity": true, "structure": true, "sparse_training_combustion": true}`。未通过项保留为失败，不借事后改阈值宣称验证成功。燃烧排放只有2020/2021两年同口径训练观测，2022—2024没有同口径清单；GCB仅作异口径外部诊断。
+预先指定误差门槛逐项结果：`{"energy": true, "generation": true, "capacity": true, "wind_capacity": true, "solar_capacity": true, "structure": true, "sparse_training_combustion": true}`。未通过项保留为失败，不借事后改阈值宣称验证成功。燃烧排放只有2020/2021两年同口径训练观测，2022—2024没有同口径清单；GCB用于异口径外部诊断和另行审查的条件峰值桥接，不参与拟合或同口径验证。
 
 ## 任务三：S0条件结果
 
 | 指标 | 2030 | 2060 |
 |---|---:|---:|
-| 能源消费（亿tce，桥接） | 69.456 | 90.362 |
-| 非化石占比代理（%） | 38.349 | 65.944 |
-| 正CO₂排放（亿t） | 111.905 | 74.933 |
+| 能源消费（亿tce，桥接） | 69.464 | 90.285 |
+| 非化石占比代理（%） | 38.893 | 62.508 |
+| 正CO₂排放（亿t） | 110.874 | 83.461 |
 | 净移除（亿tCO₂） | 13.465 | 13.465 |
-| 剩余净排放（亿tCO₂） | 98.440 | 61.468 |
-| 中和率R/P（%） | 12.033 | 17.969 |
-| 较2005碳强度降幅（%） | 67.850 | 89.727 |
-| 较2005总能耗强度降幅（%） | 50.120 | 69.033 |
-| 较2025碳强度降幅（%） | 30.602 | 77.825 |
+| 剩余净排放（亿tCO₂） | 97.409 | 69.996 |
+| 中和率R/P（%） | 12.144 | 16.133 |
+| 较2005碳强度降幅（%） | 68.146 | 88.558 |
+| 较2005总能耗强度降幅（%） | 50.114 | 69.059 |
+| 较2025碳强度降幅（%） | 31.241 | 75.301 |
 
 持续达峰判据给出的峰年：2025；全路径最大正排放12.940 GtCO₂。`None`表示未确认达峰，并非零排放。需连续五年不反弹且余下路径低于峰值，历史年序列含明确的GCB→BTR桥接。
 

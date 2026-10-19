@@ -31,7 +31,13 @@ def main():
     if args.command=='test':return tests()
     if args.command=='q1':return script('build_q1.py','--output-dir',args.output_dir or 'outputs/q1/p1_yx')
     if args.command=='q2':
-        if args.config in (None,'workflow/q2_national_design.json'):
+        national_configs={ROOT/'workflow/q2_national_design.json',ROOT/'workflow/q2_inputs.json'}
+        if args.config is None or (ROOT/args.config).resolve() in national_configs:
+            if args.config and (ROOT/args.config).resolve()==ROOT/'workflow/q2_inputs.json':
+                print('Q2 common entry: q2_inputs.json remains the legacy candidate inventory. '
+                      'Execution uses the separately reviewed q2_national_design.json and '
+                      'q2_national_input_review.json; no candidate-inventory use is promoted. '
+                      'For inventory-only checks use scripts/run_q2.py explicitly.',flush=True)
             return script('run_q2_national.py','--output-dir',args.output_dir or 'outputs/q2/p2_lb_national')
         return script('run_q2.py','--config',args.config,'--output-dir',args.output_dir or 'outputs/q2/p2_lb')
     if args.command=='reproduce-lb':return script('reproduce_lb.py',args.recipe)

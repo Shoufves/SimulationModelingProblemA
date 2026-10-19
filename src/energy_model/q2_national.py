@@ -120,6 +120,18 @@ class NationalGenerator(NationalActor):
     def capacity(self):
         return sum(c["capacity_mw"] for c in self.model.cohorts if c["tech"] == self.name and c["status"] == "active")
 
+    def construction_limit(self):
+        """Hard annual new-project capacity, independent of investment appetite."""
+        m,a = self.model,self.model.a
+        limit = max(m.initial_additions[self.name],self.initial_capacity*(.35 if self.name in {"wind","solar"} else .025))
+        limit *= (m.gdp/m.gdp0)**m.variant.get("construction_elasticity",a["construction_gdp_elasticity"])
+        if self.name == "solar":
+            tau = a["manufacturing_growth_decay_years"]
+            years = max(0,min(m.year,2024)-m.initial_year)
+            years += tau*(1-exp(-max(0,m.year-2024)/tau))
+            limit *= exp(m.theta.get("solar_construction_growth",0)*years)
+        return limit
+
     def proposal(self, realised_margin):
         m,a = self.model,self.model.a
         self.margin = (1-m.theta["expectation_rate"])*self.margin + m.theta["expectation_rate"]*realised_margin
@@ -128,16 +140,7 @@ class NationalGenerator(NationalActor):
         annuity = (1-(1+r)**(-life))/r
         pv_cost = sum(capex/lead/(1+r)**t for t in range(lead))
         npv = self.margin*annuity/(1+r)**(lead-1)-pv_cost
-        # Construction capability is a bounded adjustment of lagged/current scale.
-        limit = max(m.initial_additions[self.name],self.initial_capacity*(.35 if self.name in {"wind","solar"} else .025))
-        limit *= (m.gdp/m.gdp0)**m.variant.get("construction_elasticity",a["construction_gdp_elasticity"])
-        if self.name == "solar":
-            # Construction-sector growth is calibrated on training years,
-            # independent of commissioned fleet. Post-2024 growth converges.
-            tau = a["manufacturing_growth_decay_years"]
-            years = max(0,min(m.year,2024)-m.initial_year)
-            years += tau*(1-exp(-max(0,m.year-2024)/tau))
-            limit *= exp(m.theta.get("solar_construction_growth",0)*years)
+        limit = self.construction_limit()
         amount = limit*m.theta["investment_response"] if npv > 0 and m.investment else 0
         if self.name == "wind":
             amount *= m.theta["renewable_mix_response"]
@@ -146,7 +149,7 @@ class NationalGenerator(NationalActor):
         if self.name in {"wind","solar"}:
             amount *= max(0,1-m.last_curtailment[self.name])**2
         finance_cap = financing_limit(self,capex)
-        amount = min(amount,finance_cap)
+        amount = min(amount,finance_cap,limit)
         marginal = None
         if self.name in {"wind","solar"} and amount>0 and m.last_operation is not None:
             # Audit a candidate's incremental sales, not the old fleet's
@@ -248,6 +251,8 @@ class NationalConsumer(NationalActor):
 class NationalGovernment(NationalActor):
     def approve(self, generation, devices):
         m,a = self.model,self.model.a
+        if len({p["tech"] for p in generation}) != len(generation):
+            raise Q2Error("invalid_proposal","At most one annual request per generation technology")
         self.approve_devices(devices)
         m.planning_cache = {}
         # Full commitments reserved against this year's financing authorisation.
@@ -256,7 +261,12 @@ class NationalGovernment(NationalActor):
         total = sum(p["amount"]*p["capex"] for p in generation)
         budget = m.gdp_cny*a["investment_budget_gdp_fraction"]
         ratio = min(1,budget/total) if total else 1
-        approved = {p["tech"]:min(p["amount"]*ratio,financing_limit(m.generators[p["tech"]],p["capex"])) for p in generation}
+        # Recompute independently; do not trust a proposal's reported ceiling.
+        committed = {t:sum(p["capacity_mw"] for p in m.projects
+            if not p["initial_reconstruction"] and p["decision_year"]==m.year and p["tech"]==t)
+            for t in m.generators}
+        approved = {p["tech"]:min(p["amount"]*ratio,financing_limit(m.generators[p["tech"]],p["capex"]),
+            max(0,m.generators[p["tech"]].construction_limit()-committed[p["tech"]])) for p in generation}
         approved = m.audit_renewable_portfolio(approved)
         for p in generation:
             generator = m.generators[p["tech"]]
@@ -272,7 +282,8 @@ class NationalGovernment(NationalActor):
             m.construction_fund += cost
             m.finance.append(dict(year=m.year,kind="financing_commitment",actor=p["tech"],amount_cny=cost,
                                   resource_cost_cny=0,project=project["id"]))
-            self.log("approval",project=project["id"],approved_mw=amount,online_year=project["online_year"],common_budget_ratio=ratio)
+            self.log("approval",project=project["id"],approved_mw=amount,online_year=project["online_year"],common_budget_ratio=ratio,
+                construction_limit_mw=generator.construction_limit(),already_committed_mw=committed[p["tech"]])
 
     def approve_devices(self, devices):
         m,a = self.model,self.model.a

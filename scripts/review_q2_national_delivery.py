@@ -28,10 +28,10 @@ def main():
     # Replace stale success BEFORE reading inputs or running any check.
     dump(out/"verification.json",report)
     start=time.perf_counter()
-    def check(name,passed,detail):
+    def check(name,passed,detail,blocking=True):
         report["checks"].append(dict(name=name,passed=bool(passed),detail=detail))
         dump(out/"verification.json",report)
-        if not passed:raise ValueError(name)
+        if not passed and blocking:raise ValueError(name)
     def command(name,args,expected=0,env=None):
         report["running_check"]=name
         dump(out/"verification.json",report)
@@ -47,7 +47,7 @@ def main():
         tests=load(ROOT/"outputs/q2_review/p2_lb/tests.json")
         check("full_regression_tests_no_skip",regression["passed"] and tests["passed"] and tests["skipped"]==0,tests)
         check("regression_covers_current_mechanisms",all(regression["code_hashes"].get(p)==sha(ROOT/p) for p in
-            ("tests/test_q2_national.py","src/energy_model/q2_national.py","src/energy_model/q2_finance.py","src/energy_model/q2_operations.py")),"Fresh full regression includes mechanism counterexamples")
+            ("tests/test_q2_national.py","src/energy_model/q2_national.py","src/energy_model/q2_finance.py","src/energy_model/q2_operations.py","src/energy_model/q2_admission.py")),"Fresh full regression includes mechanism counterexamples")
         import importlib.metadata
         expected=dict(numpy="2.3.5",scipy="1.16.3",mesa="3.3.1",pandas="3.0.1",matplotlib="3.10.7")
         report["dependencies"]={p:importlib.metadata.version(p) for p in expected}
@@ -66,7 +66,9 @@ def main():
         q1=load(ROOT/"outputs/q1/p1_yx/run_manifest.json")
         check("q1_18_scientific_outputs_preserved",len(q1["outputs"])==18 and all(sha(ROOT/"outputs/q1/p1_yx"/n)==v for n,v in q1["outputs"].items()),list(q1["outputs"]))
         calibration=load(folder/"calibration.json")
-        check("frozen_empirical_thresholds_passed",calibration["quality"]["acceptance"]["all_thresholds_passed"],calibration["quality"]["acceptance"])
+        # Failed fit remains a failed acceptance check, but must not prevent
+        # independent replication and accounting checks from being executed.
+        check("frozen_empirical_thresholds_passed",calibration["quality"]["acceptance"]["all_thresholds_passed"],calibration["quality"]["acceptance"],blocking=False)
         check("all_grid_trials_accounted",calibration["successful_trials"]==calibration["search_budget"]==load(folder/"frozen_design.json")["search_budget"],calibration["search_budget"])
         eval_emission=next(r for r in calibration["quality"]["already_seen_evaluation"]["components"] if r["metric"]=="combustion_co2_t")
         check("missing_emissions_holdout_not_fabricated",eval_emission["n"]==0 and eval_emission["mape"] is None,eval_emission)
@@ -113,6 +115,17 @@ def main():
             if abs(total-float(payment["amount_cny"]))>.01:raise ValueError("Device queue funding mismatch")
         check("all_service_device_queues_paid_and_delayed",bool(device_projects),len(device_projects))
         behavior=read(folder/"behavior.csv")
+        construction=[]
+        for approval in (r for r in behavior if r["kind"]=="approval"):
+            year=int(approval["year"]);tech=approval["project"].split('/')[1]
+            proposal=next(r for r in behavior if r["kind"]=="investment_proposal" and int(r["year"])==year and r["actor"]==tech)
+            limit=float(proposal["construction_limit_mw"])
+            total=sum(float(r["approved_mw"]) for r in behavior if r["kind"]=="approval" and int(r["year"])==year and r["project"].split('/')[1]==tech)
+            construction.append(dict(year=year,tech=tech,approved_mw=total,construction_limit_mw=limit,
+                ratio=total/limit,exceeds=total>limit+1e-7))
+        check("hard_construction_ceiling_all_annual_approvals",bool(construction) and not any(r["exceeds"] for r in construction),
+              dict(approvals=len(construction),exceedances=sum(r["exceeds"] for r in construction),max_ratio=max(r["ratio"] for r in construction)))
+        dump(out/"construction_limit_checks.json",dict(run_id=manifest["run_id"],code_hashes=manifest["code_hashes"],checks=construction))
         for year in range(2025,2061):
             approvals={r["project"].split('/')[1]:float(r["approved_mw"]) for r in behavior
                        if r["kind"]=="approval" and int(r["year"])==year and r["project"].split('/')[1] in {"wind","solar"}}
@@ -149,7 +162,7 @@ def main():
         # Reproduce with a different process and PYTHONHASHSEED, not a second call in this interpreter.
         import os
         env=dict(os.environ,PYTHONHASHSEED="7919")
-        command("fresh_process_reproduction",["scripts/run_q2_national.py","--output-dir","outputs/q2/p2_lb_national_reproduction"],env=env)
+        command("fresh_process_reproduction",["run.py","q2","--config","workflow/q2_inputs.json","--output-dir","outputs/q2/p2_lb_national_reproduction"],env=env)
         other=verify_latest(ROOT/"outputs/q2/p2_lb_national_reproduction")
         check("all_scientific_artifacts_byte_identical",manifest["outputs"]==other["outputs"],dict(artifacts=len(manifest["outputs"]),hash_seed=7919))
         # This audit's copied output is a local failure probe, not the primary delivery.
@@ -169,11 +182,16 @@ def main():
         except ValueError:rejected=True
         check("latest_failure_not_hidden_by_old_success",rejected and load(probe/"run_manifest.json")["status"]=="failed","Original success preserved under probe .attempts; primary delivery untouched")
         verify_latest(folder)
-        report.update(passed=True,status="repaired_conditional_Q2_candidate_review_ready",implementation_and_declared_checks_complete=True,
+        all_passed=all(c["passed"] for c in report["checks"])
+        report.update(passed=all_passed,status="repaired_conditional_Q2_candidate_review_ready" if all_passed else "implementation_verified_empirical_acceptance_failed",implementation_and_declared_checks_complete=all_passed,
             closed_implementation_gaps=["Finite paid equipment for all four service proxies",
                 "Consumer energy budgets and retained cash constrain device purchases",
                 "Shared demand elasticity schedule and final joint renewable approval",
-                "Audit running/failure state replaces stale success before checks"],
+                "Audit running/failure state replaces stale success before checks",
+                "Hard annual construction cap enforced at request and final approval including repeat requests",
+                "Missing input before preflight records failed ownership and permits retry",
+                "Required source/status/allowed-use/operations and observation lineage fail closed",
+                "Common Issue7 entry invokes the separately admitted national candidate"],
             independent_review_still_required=True,scientific_limits=["Already-seen evaluation reused for disclosed model revisions",
                 "No same-scope emissions holdout", "PEO/nonfossil and process/sink bridges conditional",
                 "Representative day does not validate annual reliability", "Not all-GHG neutrality",

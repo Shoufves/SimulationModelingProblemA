@@ -17,7 +17,13 @@
       "allowed_use": "energy_observations_and_initial_scale",
       "review": "Full image visually read; 100 literal cells checked against unified CSV; PEO is not automatically nonfossil",
       "locator": "Table 9-2; 2005-2024",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "initialization",
+        "calibration",
+        "evaluation",
+        "target_comparison"
+      ]
     },
     {
       "path": "data/raw/batch1_national/nbs_2025_C09-15.jpg",
@@ -30,7 +36,12 @@
       "allowed_use": "capacity_observations_and_initial_scale",
       "review": "Full image visually read; 112 literal cells checked against unified CSV; thermal includes biomass; hydro includes pumped",
       "locator": "Table 9-15; 2009-2024",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "initialization",
+        "calibration",
+        "evaluation"
+      ]
     },
     {
       "path": "data/raw/batch1_national/owid_energy_data.csv",
@@ -43,7 +54,12 @@
       "allowed_use": "generation_observations_initial_decomposition_crosscheck",
       "review": "CHN rows machine-matched to processed transcription; secondary compilation (EI/Ember); not independent of their upstream",
       "locator": "iso_code=CHN; years 2005-2024",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "initialization",
+        "calibration",
+        "evaluation"
+      ]
     },
     {
       "path": "data/raw/batch1_national/wdi_china_macro_2005_2025.json",
@@ -55,7 +71,12 @@
       "allowed_use": "constant_GDP_ratios_and_CPI_deflation",
       "review": "All selected GDP/CPI values matched original API JSON; FX explicitly excluded after official NBS conflict",
       "locator": "CHN; GDP constant LCU, CPI; 2005-2024",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "historical_driver",
+        "price_conversion",
+        "target_comparison"
+      ]
     },
     {
       "path": "data/raw/lb/base/reports/china_btr1_2024.pdf",
@@ -67,7 +88,13 @@
       "allowed_use": "CO2_calibration_sparse_years_and_conditional_bridge",
       "review": "Table 1-4a physical pp30-31 visually checked; CO2 column only, 10^4 tonnes; HK/Macao chapters separate; no all-GHG neutrality claim",
       "locator": "Table 1-4a; physical pp30-31; printed pp20-21; 2005/2020/2021",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "calibration",
+        "conditional_carbon_path",
+        "conditional_peak_bridge",
+        "target_comparison"
+      ]
     },
     {
       "path": "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv",
@@ -76,10 +103,14 @@
         "yx:GCB_GCB2025v15_MtCO2_flat"
       ],
       "url": "https://zenodo.org/api/records/17417124/files/GCB2025v15_MtCO2_flat.csv/content",
-      "allowed_use": "external_boundary_diagnostic_only",
-      "review": "CHN raw annual Total read directly; fossil and industrial CO2 excludes LULUCF; not silently substituted for BTR",
-      "locator": "Country China, 2005-2024",
-      "status": "author_scoped_review_not_team_approval"
+      "allowed_use": "external_diagnostic_and_conditional_peak_bridge",
+      "review": "CHN raw annual Total rechecked for all 20 years, Mt to t; compared against BTR at all three common years. Separate author-scoped admission of annual relative-movement bridge, not empirical scope equivalence. See gcb_peak_bridge_review.json and docs/solutions/p2-lb-review7-response.md; never training or official peak certification",
+      "locator": "Country China, ISO CHN, 2005-2024; Total; BTR table 1-4a 2005/2020/2021",
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "external_diagnostic",
+        "conditional_peak_bridge"
+      ]
     },
     {
       "path": "data/raw/lb/ai_social/nbs_bulletin_2024.txt",
@@ -89,7 +120,10 @@
       "allowed_use": "2024_currency_conversion",
       "review": "Text explicitly reports annual mean 1 USD = 7.1217 CNY; WDI 7.197491 excluded, no averaging",
       "locator": "National 2024 bulletin; exchange-rate paragraph",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "price_conversion"
+      ]
     },
     {
       "path": "data/raw/lb/base/reports/iea_oecd_generation_cost_2020.pdf",
@@ -101,7 +135,10 @@
       "allowed_use": "technical_reference_not_observed_2024_fleet",
       "review": "China rows physically checked pp50-51,58-61; direct overnight/O&M components, never residual LCOE; 2018 USD projected 2025 new plants",
       "locator": "Tables 3.2a,3.3,3.4a,3.11a,3.12,3.13a; methodology chapter2",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "technical_reference"
+      ]
     },
     {
       "path": "data/raw/batch3_scenarios/irena_power_costs_2024.pdf",
@@ -114,7 +151,10 @@
       "allowed_use": "wind_solar_capex_new_project_reference",
       "review": "Reuse existing reviewed China new-project cells and source-locator chain; not national fleet CF; offshore/onshore distinct",
       "locator": "physical pp71,95,119; O&M p209 TableA3",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "technical_reference"
+      ]
     },
     {
       "path": "data/processed/technology_accounting_parameters.csv",
@@ -124,7 +164,10 @@
       "allowed_use": "IPCC and IRENA source-located reference cells",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
       "locator": "IPCC and IRENA source-located reference cells",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "technical_reference"
+      ]
     },
     {
       "path": "data/processed/q1/cost_method_parameters.csv",
@@ -134,7 +177,10 @@
       "allowed_use": "Q1 reviewed O&M cells; new Q2 conditional use",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
       "locator": "Q1 reviewed O&M cells; new Q2 conditional use",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "technical_reference"
+      ]
     },
     {
       "path": "data/processed/q1/reviewed_2024_additions.csv",
@@ -144,7 +190,11 @@
       "allowed_use": "Q1 reviewed 2024 storage power/energy and nonfossil anchor, new scoped Q2 use",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
       "locator": "Q1 reviewed 2024 storage power/energy and nonfossil anchor, new scoped Q2 use",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "initialization",
+        "statistical_bridge"
+      ]
     },
     {
       "path": "data/raw/official/S28_qinshan_design_life_capture.txt",
@@ -154,7 +204,10 @@
       "allowed_use": "First Chinese nuclear unit grid date 1991-12-15; restrict reconstructed nuclear age; not a national licence database",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
       "locator": "First Chinese nuclear unit grid date 1991-12-15; restrict reconstructed nuclear age; not a national licence database",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "initialization"
+      ]
     },
     {
       "path": "data/raw/batch3_scenarios/ipcc_2006_stationary_combustion.pdf",
@@ -167,7 +220,10 @@
       "allowed_use": "IPCC default NCV emission-factor reference",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
       "locator": "IPCC default NCV emission-factor reference",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "technical_reference"
+      ]
     },
     {
       "path": "data/processed/fuel_storage_hydrogen_snapshots.csv",
@@ -177,7 +233,10 @@
       "allowed_use": "reported snapshots, not inferred inventory",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
       "locator": "reported snapshots, not inferred inventory",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "initialization"
+      ]
     },
     {
       "path": "data/processed/cea_market_annual.csv",
@@ -187,7 +246,10 @@
       "allowed_use": "2024 annual turnover/volume, not universal compliance price",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
       "locator": "2024 annual turnover/volume, not universal compliance price",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "policy_reference"
+      ]
     },
     {
       "path": "data/raw/lb/international/cn_ets_allocation_2026.pdf",
@@ -200,7 +262,10 @@
       "allowed_use": "output-based allocation design, effective information after publication only",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
       "locator": "output-based allocation design, effective information after publication only",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "policy_reference"
+      ]
     },
     {
       "path": "data/raw/lb/international/cn_ets_notice.txt",
@@ -210,7 +275,10 @@
       "allowed_use": "publication date 2026-09-02; no retrospective information",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
       "locator": "publication date 2026-09-02; no retrospective information",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "policy_reference"
+      ]
     },
     {
       "path": "data/processed/policy_target_reference.csv",
@@ -220,7 +288,10 @@
       "allowed_use": "source-specific target comparison only, no forced attainment",
       "review": "Scoped reference; exact implemented assumptions are separately declared",
       "locator": "source-specific target comparison only, no forced attainment",
-      "status": "author_scoped_review_not_team_approval"
+      "status": "author_scoped_review_not_team_approval",
+      "allowed_operations": [
+        "target_comparison"
+      ]
     }
   ],
   "transcription_conflicts": [
@@ -241,7 +312,8 @@
     "2026 policies before publication"
   ],
   "products": {
-    "data/processed/q2/national_observations.csv": "1c2efa84913dc07e25862ae307a38d12ce87819d9e51edfb967a41b090fc8954",
-    "data/processed/q2/technical_references.json": "af38ccd89ece76b7e37f929ec8056acd1cc6bcba47a2e403589766afb16ca62f"
+    "data/processed/q2/national_observations.csv": "4d0462cfddcf51ff42e2f4e489437380e18f08b90c76df3ff7a71684856792c5",
+    "data/processed/q2/technical_references.json": "af38ccd89ece76b7e37f929ec8056acd1cc6bcba47a2e403589766afb16ca62f",
+    "data/processed/q2/gcb_peak_bridge_review.json": "dd3a278703ab2c0ef2374d5d0613188dbf822d38d3f238ff8f4a24f3e3865a13"
   }
 }

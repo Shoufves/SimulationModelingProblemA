@@ -63,7 +63,9 @@ python -B -X utf8 scripts/review_q2_delivery.py
 python -B -X utf8 scripts/review_q2_national_delivery.py
 ```
 
-第一条按原图复核转录、原始API/CSV和报告页表重建511条观测及技术参考，不变更原Q1契约。第二条执行2250组训练搜索、已接触评估、独立2024初态及条件试验；结果见 `outputs/q2/p2_lb_national/`。第三条保留工程夹具和原Q1回归，包括故意拒绝未准入首轮配置的测试；其旧状态名称 `engineering_passed_national_blocked` 仅指这个旧配置，不能替代第四条的全国候选验收结论。第四条执行独立进程、不同哈希种子的复现及来源/结果/账本/失败语义核查。
+第一条按原图复核转录、原始API/CSV和报告页表重建511条观测、技术参考及GCB条件峰值专项审查，不变更原Q1契约。第二条执行2250组训练搜索、已接触评估、独立2024初态及条件试验；结果见 `outputs/q2/p2_lb_national/`。第三条保留工程夹具和原Q1回归，包括故意拒绝未准入首轮配置的测试；其旧状态名称 `engineering_passed_national_blocked` 仅指这个旧配置，不能替代第四条的全国候选验收结论。第四条执行独立进程、不同哈希种子的复现及来源/结果/账本/失败语义核查。
+
+V7统一Issue #7共同入口：`python -B -X utf8 run.py q2 --config workflow/q2_inputs.json --output-dir outputs/q2/review_pr9_common_entry`。该配置名为明确提示的兼容别名，实际使用全国专用设计及用途审查；`q2_inputs.json`原字节和候选用途不升级。若仅检查旧候选清单，用`python scripts/run_q2.py --config workflow/q2_inputs.json`，仍按旧契约阻断。独立复现使用共同配置入口。
 
 每次运行保留旧输出于同名 `.attempts/`；`latest-attempt.json`决定当前有效性。先前成功不能掩盖新失败。读取全国结果前调用 `scripts/run_q2_national.py` 中的 `verify_latest`，核对当前代码、输入、原件和全部结果哈希。`q2_scientific_complete=false` 是执行器不自行签发研究验收的约定；四任务交付结论见独立审查的 `outputs/q2_review/p2_lb_national/verification.json`，不代表团队批准。
 

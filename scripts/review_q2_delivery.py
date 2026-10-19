@@ -50,7 +50,7 @@ def main():
         q1_manifest = load(q1folder/"run_manifest.json")
         names = list(q1_manifest["outputs"])
         check("q1_scientific_outputs_unchanged",len(names)==18 and all(sha(q1folder/p)==sha(comparison/p) for p in names),names)
-        command("national_expected_block",["run.py","q2","--config","workflow/q2_inputs.json","--output-dir","outputs/q2/p2_lb"],2)
+        command("national_expected_block",["scripts/run_q2.py","--config","workflow/q2_inputs.json","--output-dir","outputs/q2/p2_lb"],2)
         latest = load(ROOT/"outputs/q2/p2_lb.latest-attempt.json")
         check("national_status_honest",latest["status"]=="blocked_national_inputs" and not latest["output_valid_for_this_attempt"],latest)
         command("engineering",["run.py","q2","--config","examples/q2/config.json","--output-dir","outputs/q2/p2_lb_engineering"])
@@ -82,7 +82,7 @@ def main():
     finally:
         for p,content in before.items():p.write_bytes(content)
         report["seconds"] = time.perf_counter()-start
-        report["code_hashes"] = {p:sha(ROOT/p) for p in CODE+["tests/test_q2.py","tests/test_q2_national.py","src/energy_model/q2_national.py","src/energy_model/q2_finance.py","scripts/review_q2_candidates.py","scripts/review_q2_delivery.py"]}
+        report["code_hashes"] = {p:sha(ROOT/p) for p in CODE+["tests/test_q2.py","tests/test_q2_national.py","src/energy_model/q2_national.py","src/energy_model/q2_finance.py","src/energy_model/q2_admission.py","scripts/review_q2_candidates.py","scripts/review_q2_delivery.py"]}
         report["dependencies"] = {p:importlib.metadata.version(p) for p in ("mesa","scipy","numpy","pandas","matplotlib","reportlab")}
         report["evidence_hashes"] = {p.name:sha(p) for p in sorted(evidence.iterdir()) if p.is_file() and p.name != "verification.json"}
         dump(evidence/"verification.json",report)

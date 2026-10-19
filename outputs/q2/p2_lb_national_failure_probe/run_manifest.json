@@ -1,25 +1,26 @@
 {
-  "run_id": "20261019T024352417913Z",
+  "run_id": "20261019T063621745951Z",
   "owner": "p2/lb",
   "status": "failed",
   "q2_scientific_complete": false,
   "code_hashes": {
-    "run.py": "3d427aae2aad978374ad751e99c7992c6edf9a7aabf85e40674c8cc28ba8722e",
-    "scripts/run_q2_national.py": "411acf29366cbd412f3cc9ecaa2122353cd661b64d015a94d96de2cd15c385fc",
-    "scripts/build_q2_national_inputs.py": "cc4afd053149e3e28ed97b33fc1d56d2373452b8a148d843e090e91572f8192f",
-    "src/energy_model/q2_national.py": "d5d4809747a3181529826d32259deddc1049943c7da844918e5cfdab6606fcfe",
+    "run.py": "f650af45e441255037ab977e600da804cee11a39bb7345301ebe947c68ccf473",
+    "scripts/run_q2_national.py": "5ad7599c49207bc7ec62942c4a6a7a96fbfdc8fc0823349326d9adfe32e82ae2",
+    "scripts/build_q2_national_inputs.py": "df2c1ffbf7df8571aa0b2f8bc021927ffc0b3cc05e134a6edcb11e99411dd98c",
+    "src/energy_model/q2_national.py": "2fb74c91e0475f1c5e38b9306f83f6f7a47c801c8ba662233c70edbc29e18454",
     "src/energy_model/q2_finance.py": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
+    "src/energy_model/q2_admission.py": "0c47b5ac765bf30cb403608b6acf83ff154dd570c64f7d364381a853871b6a01",
     "src/energy_model/q2_operations.py": "38758b7e525b64f9036233b4a5ac54c1e43182c588a4a03da95bc6cbd819fcfd",
     "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
     "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
   },
   "input_hashes": {
-    "data/catalog/q2_national_input_review.json": "87759254cb1e9d0f6d7b1d0a301df3d9239eae5b3c91a16fc4bb9fa4a4fa0746",
-    "data/processed/q2/national_observations.csv": "1c2efa84913dc07e25862ae307a38d12ce87819d9e51edfb967a41b090fc8954",
+    "data/catalog/q2_national_input_review.json": "ed0ce0f9de695e4aa7d10c4ea6a1fedeb58368043bd479a1e8feb81df366c833",
+    "data/processed/q2/national_observations.csv": "4d0462cfddcf51ff42e2f4e489437380e18f08b90c76df3ff7a71684856792c5",
     "data/processed/q2/technical_references.json": "af38ccd89ece76b7e37f929ec8056acd1cc6bcba47a2e403589766afb16ca62f",
-    "workflow/q2_national_design.json": "c3f5b192b1cf260d594f15ea971d5bd2e58c7204017fe1c2e2178c9809a6ca8a"
+    "workflow/q2_national_design.json": "618b0c97938dbe7b7f8149f12d1dbbdffe06cdbe7e55bdb6530c9d7c79142ee0",
+    "data/processed/q2/gcb_peak_bridge_review.json": "dd3a278703ab2c0ef2374d5d0613188dbf822d38d3f238ff8f4a24f3e3865a13"
   },
-  "git_sha": "d28013b57f1e24d93aef37e00e7345561d8d69d4",
   "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "command": [
     "probe",
@@ -27,8 +28,9 @@
     "outputs/q2/p2_lb_national_failure_probe"
   ],
   "team_approved": false,
+  "git_sha": "dd3cff550d63fa137bcf6082ea3e94d0ce0d5115",
   "error_type": "ValueError",
   "error": "injected admission failure",
-  "elapsed_seconds": 0.028598900011274964,
+  "elapsed_seconds": 0.028955899993889034,
   "outputs": {}
 }
