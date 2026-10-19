@@ -6,7 +6,7 @@ cohorts, finance envelopes, output-based allowance accounting and statistical
 bridges. Observations after initial_year never enter endogenous physical state.
 """
 from copy import deepcopy
-from math import exp, sqrt, log, fsum
+from math import exp, sqrt, log, fsum, isfinite
 
 from mesa import Agent, Model
 
@@ -19,6 +19,7 @@ TECHS = ("coal", "gas", "oil", "biomass", "hydro", "nuclear", "wind", "solar")
 EF = dict(coal=.34056, oil=.26388, gas=.20196, biomass=0.0)  # IPCC NCV defaults t/MWh
 LIFE = dict(coal=40, gas=30, oil=30, biomass=25, hydro=80, nuclear=60, wind=25, solar=25)
 LEAD = dict(coal=4, gas=3, oil=2, biomass=4, hydro=5, nuclear=7, wind=1, solar=1)
+APPROVAL_ALLOCATIONS = {"lb_budget_first", "proportional_feasible_requests"}
 
 
 def operate_national(operation):
@@ -253,21 +254,50 @@ class NationalGovernment(NationalActor):
         m,a = self.model,self.model.a
         if len({p["tech"] for p in generation}) != len(generation):
             raise Q2Error("invalid_proposal","At most one annual request per generation technology")
+        if m.approval_allocation == "proportional_feasible_requests":
+            for p in generation:
+                amount,capex = p.get("amount"),p.get("capex")
+                if (type(amount) not in (int,float) or not isfinite(amount) or amount < 0 or
+                        type(capex) not in (int,float) or not isfinite(capex) or capex <= 0 or
+                        not isfinite(amount*capex)):
+                    raise Q2Error("invalid_proposal","Proportional allocation requires finite nonnegative requests and positive capex")
         self.approve_devices(devices)
         m.planning_cache = {}
-        # Full commitments reserved against this year's financing authorisation.
-        # Total capital commitments include sponsor cash, shareholder equity and
-        # loans. The national envelope is not fabricated government tax revenue.
-        total = sum(p["amount"]*p["capex"] for p in generation)
         budget = m.gdp_cny*a["investment_budget_gdp_fraction"]
-        ratio = min(1,budget/total) if total else 1
         # Recompute independently; do not trust a proposal's reported ceiling.
         committed = {t:sum(p["capacity_mw"] for p in m.projects
             if not p["initial_reconstruction"] and p["decision_year"]==m.year and p["tech"]==t)
             for t in m.generators}
-        approved = {p["tech"]:min(p["amount"]*ratio,financing_limit(m.generators[p["tech"]],p["capex"]),
-            max(0,m.generators[p["tech"]].construction_limit()-committed[p["tech"]])) for p in generation}
+        feasible = {}
+        if m.approval_allocation == "lb_budget_first":
+            # Preserve the LB rule: apply the common capital envelope to raw
+            # requests, then enforce technology financing and construction caps.
+            total = sum(p["amount"]*p["capex"] for p in generation)
+            ratio = min(1,budget/total) if total else 1
+            approved = {p["tech"]:min(p["amount"]*ratio,
+                financing_limit(m.generators[p["tech"]],p["capex"]),
+                max(0,m.generators[p["tech"]].construction_limit()-committed[p["tech"]]))
+                for p in generation}
+        else:
+            # YX's proportional-request increment, mapped to LB's existing
+            # controls: apply each request's finance/construction limits first,
+            # then scale the remaining feasible requests to the shared capital
+            # envelope. No separate connection cap exists in this LB model.
+            feasible = {p["tech"]:min(p["amount"],
+                financing_limit(m.generators[p["tech"]],p["capex"]),
+                max(0,m.generators[p["tech"]].construction_limit()-committed[p["tech"]]))
+                for p in generation}
+            feasible_total = fsum(feasible[p["tech"]]*p["capex"] for p in generation)
+            ratio = min(1,budget/feasible_total) if feasible_total else 1
+            approved = {p["tech"]:feasible[p["tech"]]*ratio for p in generation}
         approved = m.audit_renewable_portfolio(approved)
+        if feasible:
+            for p in generation:
+                tech = p["tech"]
+                self.log("approval_allocation",allocation_rule=m.approval_allocation,tech=tech,
+                    requested_mw=p["amount"],pre_budget_feasible_mw=feasible[tech],
+                    common_budget_ratio=ratio,shared_budget_allocated_mw=feasible[tech]*ratio,
+                    final_approved_mw=approved[tech],shared_budget_cny=budget)
         for p in generation:
             generator = m.generators[p["tech"]]
             amount = approved[p["tech"]]
@@ -382,11 +412,15 @@ class NationalGrid(NationalActor):
 
 
 class NationalModel(Model):
-    def __init__(self, data, design, theta, initial_year, *, variant=None, investment=True, substitution=True, detail=True):
+    def __init__(self, data, design, theta, initial_year, *, variant=None, approval_allocation="lb_budget_first",
+                 investment=True, substitution=True, detail=True):
         super().__init__(seed=design["seed"])
         self.data,self.design,self.theta = data,deepcopy(design),dict(theta)
         self.a = self.design["assumptions"]
         self.variant = {k:float(v) for k,v in (variant or {}).items()}
+        if not isinstance(approval_allocation,str) or approval_allocation not in APPROVAL_ALLOCATIONS:
+            raise Q2Error("invalid_input",f"Unknown approval allocation rule: {approval_allocation}")
+        self.approval_allocation = approval_allocation
         for key in ("project_equity_fraction","grid_initial_headroom","grid_build_fraction"):
             if key in self.variant:
                 self.a[key] = self.variant[key]

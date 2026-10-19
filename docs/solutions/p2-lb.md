@@ -58,6 +58,10 @@
 
 这些检查没有扩大 `data/sources.json`、`data/evidence_reviews.json` 或 `workflow/model_inputs.json` 的原用途。新的 `workflow/q2_inputs.json` 只授予候选清点用途，执行默认全国入口会非零阻断，详细缺口随失败尝试保存。
 
+YX PR #10 的 2014 煤炭类别桥接和 APEC 详细能源账可作为统计口径的补充诊断，具体复核、数值边界及团队准入状态见[LB/YX 整合核对](p2-lb-yx-integration.md)。该补充不进入本候选的训练、全国初态或结果；LB 的全国输入准入仍由本报告所列审查控制。
+
+模型审批新增可选的 `proportional_feasible_requests` 口径：先应用各技术的融资与施工剩余额度，再按可行申请同比分配共同资本预算；LB 原 `lb_budget_first` 仍为默认。该口径只扩展可比较的审批规则，不改变全国输入准入或本报告中的既有结果。具体映射边界和针对性测试见[LB/YX 整合核对](p2-lb-yx-integration.md)。
+
 | 下一步 | 可复用材料 | 需要落实的决定或实现 |
 |---|---|---|
 | 历史与2024初态 | NBS历史、Q1交接、新型储能功率/能量 | 设备年龄/效率、库存SOC、在建队列与同期用途；缺实测时逐项提出可检验的研究假设 |

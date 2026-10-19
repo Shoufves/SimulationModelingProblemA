@@ -408,6 +408,68 @@ class NationalTests(unittest.TestCase):
         self.assertAlmostEqual(sum(p["capacity_mw"] for p in projects),g.construction_limit())
         with self.assertRaises(Q2Error):m.government.approve([p,p],[])
 
+    def test_proportional_feasible_request_allocation_applies_caps_before_budget(self):
+        def approve(rule, reverse=False):
+            m=self.model(2024,approval_allocation=rule);m.drivers();m.mature()
+            m.a["investment_budget_gdp_fraction"]=10_000_000/m.gdp_cny
+            for tech,limit in (("hydro",1.),("gas",10.)):
+                g=m.generators[tech];g.cash=1e18;g.construction_limit=lambda limit=limit:limit
+            proposals=[dict(tech="hydro",amount=10.,capex=1_000_000.,lead=5,life=80),
+                       dict(tech="gas",amount=10.,capex=1_000_000.,lead=3,life=30)]
+            if reverse:proposals.reverse()
+            m.government.approve(proposals,[])
+            result={p["tech"]:p["capacity_mw"] for p in m.projects if not p["initial_reconstruction"]}
+            return m,result
+
+        legacy,legacy_amounts=approve("lb_budget_first")
+        proportional,amounts=approve("proportional_feasible_requests")
+        _,reversed_amounts=approve("proportional_feasible_requests",reverse=True)
+
+        # LB's existing order leaves part of the shared budget unused when one
+        # technology hits its hard cap after the common ratio is applied.
+        self.assertAlmostEqual(legacy_amounts["hydro"],1.)
+        self.assertAlmostEqual(legacy_amounts["gas"],5.)
+        self.assertFalse(any(r["kind"]=="approval_allocation" for r in legacy.behavior))
+        self.assertAlmostEqual(sum(amounts.values()),10.)
+        self.assertAlmostEqual(amounts["hydro"],10/11)
+        self.assertAlmostEqual(amounts["gas"],100/11)
+        self.assertEqual(amounts,reversed_amounts)
+        self.assertAlmostEqual(sum(p["cost"] for p in proportional.projects
+                                   if not p["initial_reconstruction"]),10_000_000.)
+        entries=[r for r in proportional.behavior if r["kind"]=="approval_allocation"]
+        self.assertTrue(all(r["allocation_rule"]=="proportional_feasible_requests" for r in entries))
+        self.assertEqual({r["tech"]:r["pre_budget_feasible_mw"] for r in entries},
+                         {"hydro":1.,"gas":10.})
+        self.assertEqual({r["tech"]:r["final_approved_mw"] for r in entries},amounts)
+
+    def test_unknown_approval_allocation_rule_is_rejected(self):
+        for rule in ("first_come_first_served",None,[]):
+            with self.subTest(rule=rule),self.assertRaises(Q2Error):
+                self.model(2024,approval_allocation=rule)
+
+    def test_national_runner_builds_model_with_selected_approval_rule(self):
+        import run_q2_national as runner
+        default=runner.build_model(deepcopy(self.data),deepcopy(self.design),self.theta,2024,detail=False)
+        self.assertEqual(default.approval_allocation,"lb_budget_first")
+        design=deepcopy(self.design)
+        design["approval_allocation"]="proportional_feasible_requests"
+        model=runner.build_model(deepcopy(self.data),design,self.theta,2024,detail=False)
+        self.assertEqual(model.approval_allocation,design["approval_allocation"])
+
+    def test_proportional_allocation_rejects_invalid_request_values(self):
+        for amount,capex in ((-1.,1.),(1.,0.),(float("nan"),1.)):
+            m=self.model(2024,approval_allocation="proportional_feasible_requests");m.drivers();m.mature()
+            request=dict(tech="hydro",amount=amount,capex=capex,lead=5,life=80)
+            with self.subTest(amount=amount,capex=capex),self.assertRaises(Q2Error):
+                m.government.approve([request],[])
+        m=self.model(2024,approval_allocation="proportional_feasible_requests");m.drivers();m.mature()
+        consumer=m.consumers["electricity"];opening=consumer.cash
+        invalid=dict(tech="hydro",amount=-1.,capex=1.,lead=5,life=80)
+        device=dict(actor=consumer.name,amount=1.,electric_fraction=0.,capex=1.)
+        with self.assertRaises(Q2Error):m.government.approve([invalid],[device])
+        self.assertEqual(consumer.cash,opening)
+        self.assertEqual(consumer.queue,[])
+
     def test_pending_or_withdrawn_source_rejected_without_byte_changes(self):
         import run_q2_national as runner
         from unittest.mock import patch
@@ -499,5 +561,15 @@ class NationalTests(unittest.TestCase):
             with patch.object(sys,"argv",["run.py","q2","--config",config,"--output-dir","outputs/q2/review_pr9_common_entry"]),patch.object(entry,"script",return_value=0) as dispatch:
                 self.assertEqual(entry.main(),0)
                 dispatch.assert_called_once_with("run_q2_national.py","--output-dir","outputs/q2/review_pr9_common_entry")
+
+    def test_common_q2_entry_routes_alternate_rule_to_separate_output(self):
+        from unittest.mock import patch
+        spec=importlib.util.spec_from_file_location("q2_common_entry_alt",ROOT/"run.py")
+        entry=importlib.util.module_from_spec(spec);spec.loader.exec_module(entry)
+        argv=["run.py","q2","--approval-allocation","proportional_feasible_requests"]
+        with patch.object(sys,"argv",argv),patch.object(entry,"script",return_value=0) as dispatch:
+            self.assertEqual(entry.main(),0)
+            dispatch.assert_called_once_with("run_q2_national.py","--approval-allocation",
+                "proportional_feasible_requests","--output-dir","outputs/q2/p2_lb_national_proportional")
 
 if __name__=="__main__":unittest.main()

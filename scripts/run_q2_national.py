@@ -20,7 +20,7 @@ from concurrent.futures import ProcessPoolExecutor
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"src"))
-from energy_model.q2_national import NationalModel, observations, get
+from energy_model.q2_national import APPROVAL_ALLOCATIONS, NationalModel, observations, get
 from energy_model.q2_operations import Q2Error
 from energy_model.q2_experiments import peak_check
 from energy_model.q2_admission import validate_admission
@@ -31,6 +31,11 @@ CODE = ["run.py","scripts/run_q2_national.py","scripts/build_q2_national_inputs.
 INPUTS = ["data/catalog/q2_national_input_review.json","data/processed/q2/national_observations.csv",
           "data/processed/q2/technical_references.json","workflow/q2_national_design.json",
           "data/processed/q2/gcb_peak_bridge_review.json"]
+
+
+def build_model(data, design, theta, initial_year, **kwargs):
+    return NationalModel(data,design,theta,initial_year,
+        approval_allocation=design.get("approval_allocation","lb_budget_first"),**kwargs)
 
 
 def sha(path):
@@ -143,7 +148,7 @@ def loss(paths,data,design,years,method):
 def calibration_trial(payload):
     i,theta,data,design=payload
     try:
-        model=NationalModel(data,design,theta,2014,detail=False).run(2021)
+        model=build_model(data,design,theta,2014,detail=False).run(2021)
         value,components,_=loss(model.paths,data,design,design["training_years"],"national_candidate")
         return dict(index=i,parameters=theta,status="success",loss=value,components=components)
     except (Q2Error,ValueError) as exc:
@@ -219,7 +224,7 @@ def targets(paths,data,design):
 
 def evaluate(data,design,calibration,folder):
     best = calibration["best"]["parameters"]
-    history = NationalModel(data,design,best,2014).run(2024)
+    history = build_model(data,design,best,2014).run(2024)
     fitting,quality = [],{}
     for name,years in (("training",design["training_years"]),("already_seen_evaluation",design["evaluation_years"])):
         value,parts,rows = loss(history.paths,data,design,years,"national_candidate")
@@ -236,7 +241,7 @@ def evaluate(data,design,calibration,folder):
     value,parts,rows = loss(persistence,data,design,design["evaluation_years"],"training_last_value")
     quality["persistence"] = dict(loss=value,components=parts)
     fitting += [dict(split="already_seen_evaluation",**r) for r in rows]
-    alternative = NationalModel(data,design,best,2014,investment=False,substitution=False,detail=False).run(2024)
+    alternative = build_model(data,design,best,2014,investment=False,substitution=False,detail=False).run(2024)
     value,parts,rows = loss(alternative.paths,data,design,design["evaluation_years"],"no_new_investment_or_substitution")
     quality["alternative_rules"] = dict(loss=value,components=parts)
     fitting += [dict(split="already_seen_evaluation",**r) for r in rows]
@@ -263,7 +268,7 @@ def evaluate(data,design,calibration,folder):
 
 def experiments(data,design,calibration,folder):
     theta = calibration["best"]["parameters"]
-    baseline = NationalModel(data,design,theta,2024).run(2060)
+    baseline = build_model(data,design,theta,2024).run(2060)
     rows,peak = targets(baseline.paths,data,design)
     csv_write(folder/"targets_2030_2060.csv",rows); dump(folder/"peak.json",peak)
     for name,records in (("baseline_path",baseline.paths),("assets",baseline.assets),("behavior",baseline.behavior),
@@ -301,7 +306,7 @@ def experiments(data,design,calibration,folder):
     sensitivity,failures = [],[]
     for i,(kind,label,variant,t) in enumerate(settings):
         try:
-            model = NationalModel(data,design,t,2024,variant=variant,detail=False).run(2060)
+            model = build_model(data,design,t,2024,variant=variant,detail=False).run(2060)
             target,p = targets(model.paths,data,design)
             for r in target:
                 base = next(b["value"] for b in rows if b["year"] == r["year"] and b["metric"] == r["metric"])
@@ -392,8 +397,12 @@ def report(folder,calibration,rows,failures):
 
 
 def main():
-    p=argparse.ArgumentParser(); p.add_argument("--output-dir",default="outputs/q2/p2_lb_national"); p.add_argument("--train-only",action="store_true")
+    p=argparse.ArgumentParser(); p.add_argument("--output-dir",default=None); p.add_argument("--train-only",action="store_true")
+    p.add_argument("--approval-allocation",choices=sorted(APPROVAL_ALLOCATIONS),default="lb_budget_first")
     args=p.parse_args()
+    default_output=("outputs/q2/p2_lb_national" if args.approval_allocation=="lb_budget_first"
+                    else "outputs/q2/p2_lb_national_proportional")
+    args.output_dir=args.output_dir or default_output
     out=(ROOT/args.output_dir).resolve()
     if out.parent != ROOT/"outputs/q2":
         raise ValueError("National output must be under outputs/q2")
@@ -410,7 +419,8 @@ def main():
     start=time.perf_counter()
     run_id=datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     manifest=dict(run_id=run_id,owner="p2/lb",status="running",q2_scientific_complete=False,
-        code_hashes={},input_hashes={},python=sys.version,command=sys.argv,team_approved=False)
+        approval_allocation=args.approval_allocation,code_hashes={},input_hashes={},python=sys.version,
+        command=sys.argv,team_approved=False)
     latest=out.parent/(out.name+".latest-attempt.json")
     out.mkdir(parents=True)
     dump(latest,dict(run_id=run_id,status="running",output_valid_for_this_attempt=False))
@@ -419,7 +429,8 @@ def main():
         manifest["code_hashes"]={x:sha(ROOT/x) for x in CODE}
         manifest["input_hashes"]={x:sha(ROOT/x) for x in INPUTS}
         manifest["git_sha"]=subprocess.run(["git","rev-parse","HEAD"],cwd=ROOT,capture_output=True,text=True).stdout.strip()
-        data,design,_=preflight(); dump(out/"frozen_design.json",design)
+        data,design,_=preflight(); design["approval_allocation"]=args.approval_allocation
+        dump(out/"frozen_design.json",design)
         with zipfile.ZipFile(out/"model_snapshot.zip","w",zipfile.ZIP_DEFLATED) as snapshot:
             for name in CODE+INPUTS:
                 info=zipfile.ZipInfo(name,date_time=(2026,1,1,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED

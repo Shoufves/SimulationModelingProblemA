@@ -26,7 +26,10 @@ def main():
     parser.add_argument('--output-dir',default=None)
     parser.add_argument('--config',default=None)
     parser.add_argument('--recipe',choices=['national','trade','international','ai_trade'],default='trade')
+    parser.add_argument('--approval-allocation',choices=['lb_budget_first','proportional_feasible_requests'],default='lb_budget_first')
     args=parser.parse_args()
+    if args.command!='q2' and args.approval_allocation!='lb_budget_first':
+        parser.error('--approval-allocation only applies to the national Q2 model')
     os.chdir(ROOT)
     if args.command=='test':return tests()
     if args.command=='q1':return script('build_q1.py','--output-dir',args.output_dir or 'outputs/q1/p1_yx')
@@ -38,7 +41,14 @@ def main():
                       'Execution uses the separately reviewed q2_national_design.json and '
                       'q2_national_input_review.json; no candidate-inventory use is promoted. '
                       'For inventory-only checks use scripts/run_q2.py explicitly.',flush=True)
-            return script('run_q2_national.py','--output-dir',args.output_dir or 'outputs/q2/p2_lb_national')
+            national_args=[]
+            if args.approval_allocation!='lb_budget_first':
+                national_args.extend(['--approval-allocation',args.approval_allocation])
+            default_output=('outputs/q2/p2_lb_national' if args.approval_allocation=='lb_budget_first'
+                            else 'outputs/q2/p2_lb_national_proportional')
+            return script('run_q2_national.py',*national_args,'--output-dir',args.output_dir or default_output)
+        if args.approval_allocation!='lb_budget_first':
+            parser.error('--approval-allocation requires the national Q2 configuration')
         return script('run_q2.py','--config',args.config,'--output-dir',args.output_dir or 'outputs/q2/p2_lb')
     if args.command=='reproduce-lb':return script('reproduce_lb.py',args.recipe)
     jobs={
