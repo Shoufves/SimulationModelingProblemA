@@ -82,7 +82,7 @@ def main():
     finally:
         for p,content in before.items():p.write_bytes(content)
         report["seconds"] = time.perf_counter()-start
-        report["code_hashes"] = {p:sha(ROOT/p) for p in CODE+["tests/test_q2.py","scripts/review_q2_candidates.py","scripts/review_q2_delivery.py"]}
+        report["code_hashes"] = {p:sha(ROOT/p) for p in CODE+["tests/test_q2.py","tests/test_q2_national.py","src/energy_model/q2_national.py","src/energy_model/q2_finance.py","scripts/review_q2_candidates.py","scripts/review_q2_delivery.py"]}
         report["dependencies"] = {p:importlib.metadata.version(p) for p in ("mesa","scipy","numpy","pandas","matplotlib","reportlab")}
         report["evidence_hashes"] = {p.name:sha(p) for p in sorted(evidence.iterdir()) if p.is_file() and p.name != "verification.json"}
         dump(evidence/"verification.json",report)

@@ -14,6 +14,9 @@ import shutil
 import subprocess
 import sys
 import time
+import zipfile
+import os
+from concurrent.futures import ProcessPoolExecutor
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"src"))
@@ -22,6 +25,7 @@ from energy_model.q2_operations import Q2Error
 from energy_model.q2_experiments import peak_check
 
 CODE = ["run.py","scripts/run_q2_national.py","scripts/build_q2_national_inputs.py","src/energy_model/q2_national.py",
+        "src/energy_model/q2_finance.py",
         "src/energy_model/q2_operations.py","src/energy_model/q2_experiments.py","requirements-q2.txt"]
 INPUTS = ["data/catalog/q2_national_input_review.json","data/processed/q2/national_observations.csv",
           "data/processed/q2/technical_references.json","workflow/q2_national_design.json"]
@@ -126,19 +130,29 @@ def loss(paths,data,design,years,method):
     return total,parts,residuals
 
 
+def calibration_trial(payload):
+    i,theta,data,design=payload
+    try:
+        model=NationalModel(data,design,theta,2014,detail=False).run(2021)
+        value,components,_=loss(model.paths,data,design,design["training_years"],"national_candidate")
+        return dict(index=i,parameters=theta,status="success",loss=value,components=components)
+    except (Q2Error,ValueError) as exc:
+        return dict(index=i,parameters=theta,status=getattr(exc,"status","error"),loss=None,error=str(exc))
+
+
 def calibrate(data,design,folder):
     keys = sorted(design["parameter_grid"])
     trials = []
-    for i,values in enumerate(product(*(design["parameter_grid"][k] for k in keys))):
-        theta = dict(zip(keys,values))
-        try:
-            model = NationalModel(data,design,theta,2014,detail=False).run(2021)
-            value,components,_ = loss(model.paths,data,design,design["training_years"],"national_candidate")
-            trials.append(dict(index=i,parameters=theta,status="success",loss=value,components=components))
-        except (Q2Error,ValueError) as exc:
-            trials.append(dict(index=i,parameters=theta,status=getattr(exc,"status","error"),loss=None,error=str(exc)))
-        if (i+1)%10 == 0:
-            print(f"Training {i+1}/{design['search_budget']}",flush=True)
+    payloads=[(i,dict(zip(keys,v)),data,design) for i,v in enumerate(product(*(design["parameter_grid"][k] for k in keys)))]
+    # Independent deterministic candidates; map preserves original index/ties.
+    for name in ("OMP_NUM_THREADS","OPENBLAS_NUM_THREADS","MKL_NUM_THREADS"):
+        os.environ[name]="1"
+    workers=max(1,min(4,int(os.environ.get("Q2_WORKERS","4"))))
+    with ProcessPoolExecutor(max_workers=workers) as pool:
+        for i,trial in enumerate(pool.map(calibration_trial,payloads,chunksize=5)):
+            trials.append(trial)
+            if (i+1)%50==0:
+                print(f"Training {i+1}/{design['search_budget']}",flush=True)
     valid = sorted((r for r in trials if r["loss"] is not None),key=lambda r:r["loss"])
     dump(folder/"training_trials.json",trials)
     if not valid:
@@ -249,7 +263,9 @@ def experiments(data,design,calibration,folder):
     for name,values in {"primary_bridge_multiplier":[.9,1.1],"removals_multiplier":[.5,1.5],
         "process_multiplier":[.7,1.3],"nonenergy_multiplier":[.5,1.5],"capex_multiplier":[.7,1.3],
         "renewable_availability_multiplier":[.8,1.2],"fuel_price_multiplier":[.7,1.3],
-        "initial_age_multiplier":[.75,1.25],"wind_construction_elasticity":[.5,1.5]}.items():
+        "initial_age_multiplier":[.75,1.25],"construction_elasticity":[.5,1.5],
+        "electricity_terminal_elasticity":[.6,1.0],"project_equity_fraction":[.15,.4],
+        "grid_initial_headroom":[1.05,1.3],"grid_build_fraction":[.05,.15]}.items():
         settings += [("assumption_bounds",name+"="+str(v),{name:v},theta) for v in values]
     import numpy as np
     rng = np.random.default_rng(design["seed"])
@@ -333,7 +349,7 @@ def report(folder,calibration,rows,failures):
     text = "# 问题二：全国聚合条件模型候选结果\n\n"
     text += "本次使用真实历史观测进行有限多目标校准，并从独立2024年规模与重建资产初态推演至2060年。结果是附带明确假设的研究候选；未获团队批准，不是官方预测。\n\n"
     text += "## 任务一：主体、决策与交互\n\nMesa组织煤油气及生物质供给商、八类发电主体、工业热/交通/建筑热服务代理、存量电力服务、电网储能和政府。设备逐批到龄退出并更新；企业按滞后利润预期和NPV申请，政府按共同融资限额批准，项目分期支出并在建设期后投产。\n\n"
-    text += "供给商报送有限国产/进口交付能力；运营者在连续24小时代表窗口中统一分配共享燃料和电力，保持储能与燃料库存递推；结算后再产生未来动作。碳市场采用免费产出基准下的净买卖额，与清算对手方抵消，不作政府碳税收入。\n\n"
+    text += "供给商报送有限国产/进口交付能力；运行层先满足服务，再按资源费用加已覆盖碳履约机会成本安排调度；政策转移从社会资源成本中扣除另行结算。企业承担出资、债务及偿付约束，外部股权与贷款进入共同投资额度。电网和储能各有预算、建设能力与投运队列，电源新增不扩大电网上限。储能读取实际弃电与缺供，新设备从空SOC开始，跨年继承库存并记录退役库存处置。\n\n"
     text += "## 任务二：真实历史校准及验证\n\n"
     text += f"训练2015—2021年；2022—2024年为已接触留出。{calibration['search_budget']}组候选中{calibration['successful_trials']}组运行成功，按训练损失选出的参数为 `{json.dumps(calibration['best']['parameters'],ensure_ascii=False)}`；保留{len(calibration['equivalent_parameters'])}组等效参数。\n\n"
     text += "| 指标 | 训练MAPE | 已接触留出MAPE | 留出可比年数 |\n|---|---:|---:|---:|\n"
@@ -355,7 +371,7 @@ def report(folder,calibration,rows,failures):
     text += "## 任务四：灵敏度与稳健性\n\nGDP增长率±1个百分点、风光成本降幅±1个百分点、碳价0.5/1.5倍分别实际运行；同时运行等效参数、碳汇/工业过程/原料比例/成本/风光出力/统计桥接/初始年龄/建设能力边界、6条Morris轨迹以及12点三因素联合Latin Hypercube。全部条件及与S0的差值见 `sensitivity.csv`，Morris逐步效应及μ*/σ见同名表。样本仅用于首轮有界筛选，没有宣称数值精度已收敛。\n\n"
     text += f"试验求解失败{len(failures)}项，原样登记于 `sensitivity_failures.json`。样本代表所检验假设范围，不能解读为达标概率。\n\n"
     text += "## 必须随结果保留的限制\n\n"
-    text += "- 历史资料版本、价格及技术参数是事后重建；只有经济活动驱动按年输入，不能称实时可预测检验。未把2024物理规模回填2015。\n- 设备年龄、初始建设队列、细分火电和部门服务是聚合重建，非逐厂/逐户普查。发电总量和年末装机衔接存在年内投产平均量误差。\n- 代表日采用24小时完美信息和循环边界；没有全年气象概率、跨省网络瓶颈、季节储能及完整启停机。水电含抽蓄的统计口径是桥接近似，不能作实际水库/抽蓄能力结论。\n- 2021—2025碳配额和历史支持电价为明示代理；2026基准仅用于其发布后的大型煤电/燃气类别，未模拟所有供热、负荷修正和工业扩围企业。\n- BTR工业过程及净碳汇以条件路径外推；没有假定无限免费CCUS或负排放。中和率是本项目定义R/P，非全温室气体中和认证。\n- 社会分配、就业、AI专项及国际冲击需要问题三的配对情景；本次S0不把军事、贸易或技术跃迁事件当作确定事实。\n\n"
+    text += "- 历史资料版本、价格及技术参数是事后重建；未把2024物理规模回填2015。已接触评估不能变成盲测。\n- 设备年龄、初始建设队列、细分火电和部门服务是聚合重建；不声称逐厂/逐户普查。\n- 电网是独立投资的全国交付能力代理，不是跨省网络。24小时循环代表日不验证季节性、极端天气或全年可靠性；库存不乘年度权重。\n- 2026年发布的碳配额参考从2027年年度决策启用。终端燃料代理不足以识别工业ETS覆盖，S0不虚构覆盖比例；覆盖机制以单独反例验证。\n- 初态PEO统计桥代理与直接等价值口径分列；后者不作为官方非化石考核。水电统计含抽蓄，完整充放电拆分仍受原观测边界限制。氢在燃料余量/非能源用途内隐含，未另加能源；没有可准入的全国转换初态时不伪造独立氢链、CCUS减排或负排放。\n- 融资、施工及电网参数为明示结构假设，已作范围试验。用电弹性从历史拟合值渐变至条件终值，制造业建设能力增长独立于电站存量并逐渐收敛。\n- BTR工业过程及净碳汇以条件路径外推；中和率R/P不是全温室气体中和认证。社会分配、就业、AI专项及国际冲击属于后续问题三。\n\n"
     text += "复现：`python -B -X utf8 scripts/build_q2_national_inputs.py`，然后 `python -B -X utf8 scripts/run_q2_national.py`。假设全表见 `frozen_design.json`，原件、转换与排除项见问题二输入审查；Q1原契约不变。\n"
     (folder/"report.md").write_text(text,encoding="utf-8")
 
@@ -388,6 +404,10 @@ def main():
     dump(latest,dict(run_id=run_id,status="running",output_valid_for_this_attempt=False))
     try:
         data,design,_=preflight(); dump(out/"frozen_design.json",design)
+        with zipfile.ZipFile(out/"model_snapshot.zip","w",zipfile.ZIP_DEFLATED) as snapshot:
+            for name in CODE+INPUTS:
+                info=zipfile.ZipInfo(name,date_time=(2026,1,1,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED
+                snapshot.writestr(info,(ROOT/name).read_bytes())
         calibration=calibrate(data,design,out)
         if args.train_only:
             manifest["status"]="training_only"

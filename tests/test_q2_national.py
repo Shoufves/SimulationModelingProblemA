@@ -147,5 +147,117 @@ class NationalTests(unittest.TestCase):
         self.assertTrue(any(r["metric"]=="carbon_intensity_reduction_vs_2025" for r in records))
         self.assertIn("not_all_GHG",m.paths[-1]["scope"])
 
+    def test_no_cash_no_new_projects_even_with_positive_npv(self):
+        from energy_model.q2_finance import financing_limit
+        m=self.model(2024); m.drivers(); m.mature()
+        g=m.generators["solar"]
+        funded=financing_limit(g,m.capex("solar"))
+        self.assertGreater(funded,0)
+        g.cash=-1e12
+        self.assertEqual(financing_limit(g,m.capex("solar")),0)
+        self.assertEqual(g.proposal(g.margin)["amount"],0)
+
+    def test_loan_draw_equity_repayment_and_transfer_conservation(self):
+        from energy_model.q2_finance import fund_project,service_debt,debt
+        m=self.model(2024);g=m.generators["solar"]
+        original=g.cash;cost=1e8
+        fund_project(g,cost,"probe")
+        self.assertAlmostEqual(original-g.cash,cost*m.a["sponsor_equity_fraction"])
+        initial=debt(g);m.year+=1
+        service_debt(g)
+        self.assertAlmostEqual(initial-debt(g),initial/m.a["loan_term_years"])
+        for r in m.finance:
+            self.assertAlmostEqual(sum(r.get(k,0) for k in ("actor_cash_transfer_cny","lender_transfer_cny","shareholder_transfer_cny","escrow_transfer_cny")),0,places=5)
+        g.cash=0;m.year+=1;service_debt(g)
+        from energy_model.q2_finance import financing_limit
+        self.assertGreater(g.arrears,0)
+        self.assertEqual(financing_limit(g,m.capex("solar")),0)
+
+    def test_generation_addition_cannot_create_network(self):
+        m=self.model(2024);m.drivers();m.mature()
+        power=m.make_operation()["grid"]["power_mw"]
+        m.cohorts.append(dict(tech="solar",status="active",capacity_mw=1e6))
+        self.assertEqual(m.make_operation()["grid"]["power_mw"],power)
+
+    def test_grid_construction_is_paid_and_delayed(self):
+        m=self.model(2024);m.drivers()
+        before=m.grid.network_power()
+        amount=m.grid.enqueue("grid",1000,800000,.004,3,50)
+        self.assertEqual(m.grid.network_power(),before)
+        for _ in range(3):
+            m.grid.pay();m.year+=1;m.grid.mature()
+        self.assertAlmostEqual(m.grid.network_power(),before+amount)
+        self.assertAlmostEqual(m.grid.reserved,0,places=5)
+        self.assertGreater(m.construction_cost,0)
+
+    def test_solar_construction_cap_not_proportional_to_fleet(self):
+        m=self.model(2024);m.drivers();m.mature();g=m.generators["solar"]
+        g.proposal(g.margin)
+        before=m.behavior[-1]["construction_limit_mw"]
+        m.cohorts.append(dict(tech="solar",status="active",capacity_mw=1e7,book_cost_cny_per_mw=1e6,online_year=2025,exit_year=2050))
+        g.proposal(g.margin)
+        self.assertEqual(m.behavior[-1]["construction_limit_mw"],before)
+
+    def test_actual_curtailment_is_used_and_storage_starts_empty(self):
+        m=self.model(2024).run(2035)
+        self.assertTrue(any(r["previous_curtailment_mwh"]>0 for r in m.behavior if r["kind"]=="storage_proposal"))
+        for left,right in zip(m.paths,m.paths[1:]):
+            self.assertAlmostEqual(left["storage_closing_mwh"]-right["storage_retirement_loss_mwh"],right["storage_opening_mwh"],places=5)
+
+    def test_covered_carbon_bid_is_separate_from_resource_cost(self):
+        op=small_operation()
+        p=next(iter(op["plants"].values()))
+        p["policy_cost_per_mwh"]=50
+        r=operate(op)
+        self.assertAlmostEqual(r["dispatch_objective"],r["resource_cost"]+r["policy_signal_cost"])
+        a=self.model(2024,variant={"carbon_price_multiplier":0});a.drivers();a.mature()
+        b=self.model(2024,variant={"carbon_price_multiplier":10});b.drivers();b.mature()
+        self.assertNotEqual(a.make_operation()["plants"]["coal"]["policy_cost_per_mwh"],b.make_operation()["plants"]["coal"]["policy_cost_per_mwh"])
+
+    def test_carbon_bid_changes_dispatch_when_merit_order_crosses(self):
+        op=small_operation();op["storage"].update(initial_mwh=0,power_mw=0,energy_mwh=0)
+        op["fuels"]["gas"]["domestic_mw"]=[5,5]
+        op["plants"]["clean"]={**op["plants"]["gas"],"input":None,"variable_cost_per_mwh":20}
+        cheap=operate(op)
+        op["plants"]["gas"]["policy_cost_per_mwh"]=30
+        covered=operate(op)
+        generation=lambda result,t:sum(r["output_mwh"] for r in result["generation"] if r["plant"]==t)
+        self.assertEqual(generation(cheap,"gas"),10)
+        self.assertEqual(generation(covered,"gas"),0)
+        self.assertEqual(covered["resource_cost"],200)
+
+    def test_positive_old_margin_cannot_fund_unconnectable_solar(self):
+        m=self.model(2024);m.drivers();m.mature()
+        m.grid.network[0]["power"]=0
+        m.last_operation=m.make_operation()
+        g=m.generators["solar"];g.cash=1e15;g.margin=1e7
+        self.assertEqual(g.proposal(1e7)["amount"],0)
+
+    def test_new_storage_does_not_invent_initial_energy(self):
+        m=self.model(2024);m.drivers();m.mature()
+        soc=m.storage_soc
+        m.storage_cohorts.append(dict(power=1000,energy=4000,online=m.year,exit=m.year+10))
+        self.assertEqual(m.make_operation()["storage"]["initial_mwh"],soc)
+
+    def test_cyclic_fuel_state_is_inherited_after_first_year(self):
+        m=self.model(2024).run(2025)
+        expected=dict(m.fuel_stocks)
+        m.drivers();m.mature();op=m.make_operation()
+        self.assertEqual({f:p["initial_mwh"] for f,p in op["fuels"].items()},expected)
+
+    def test_cheaper_new_equipment_does_not_revalue_existing_book_assets(self):
+        from energy_model.q2_finance import book_assets
+        m=self.model(2024);g=m.generators["solar"]
+        original=book_assets(g);g.capex_2024*=.5
+        self.assertEqual(book_assets(g),original)
+
+    def test_covered_user_cost_response_and_carbon_settlement(self):
+        m=self.model(2024,variant={"direct_carbon_coverage":1,"carbon_price_multiplier":100})
+        m.run(2025)
+        c=m.consumers["coal"];self.assertGreater(c.proposal()["electric_fraction"],0)
+        self.assertGreater(next(r for r in m.finance if r["kind"]=="direct_ETS")["ets_transfer_cny"]*-1,0)
+        self.assertLess(abs(m.paths[0]["cash_balance_residual_cny"]),.1)
+        self.assertLess(abs(m.paths[0]["ets_balance_cny"]),.1)
+
 
 if __name__=="__main__":unittest.main()

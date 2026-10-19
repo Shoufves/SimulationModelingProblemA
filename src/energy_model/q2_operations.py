@@ -115,6 +115,7 @@ def operate(config, *, solver=linprog):
         b = bal[c, t]
         b[i] = b.get(i, 0) + value
     g, inputs, u, supply, tanks, c, d, s = {}, {}, {}, {}, {}, {}, {}, {}
+    policy_terms = {}
     shortages = {}
     for fuel, p in sorted(fuels.items()):
         capacity = number(p["tank_mwh"], fuel + ".tank")
@@ -152,6 +153,9 @@ def operate(config, *, solver=linprog):
             i = lp.var(f"generation/{name}/{t}", cap, p["variable_cost_per_mwh"] * weight,
                        cap * p["minimum_fraction"])
             g[name, t] = i
+            adjustment = number(p.get("policy_cost_per_mwh",0),name+".policy",-float("inf"))
+            lp.cost[i] += adjustment*weight
+            policy_terms[i] = adjustment*weight
             add(out, t, i, 1)
             if fuel:
                 add(fuel, t, i, -1 / efficiency)
@@ -178,6 +182,9 @@ def operate(config, *, solver=linprog):
             x = lp.var(f"terminal-input/{name}/{t}", p["input_capacity_mw"] * h)
             unmet = lp.var(f"unmet-service/{name}/{t}", requested)
             inputs[name, t], u[name, t] = x, unmet
+            adjustment = number(p.get("policy_cost_per_mwh",0),name+".policy",-float("inf"))
+            lp.cost[x] += adjustment*weight
+            policy_terms[x] = adjustment*weight
             lp.eq({x: efficiency, unmet: 1}, requested, f"service/{name}/{t}")
             add(p["carrier"], t, x, -1/eta_grid if p["carrier"] == "electricity" else -1)
             shortages.setdefault(p["priority"], []).append(unmet)
@@ -240,6 +247,8 @@ def operate(config, *, solver=linprog):
                                  charge_mwh=float(x[c[t]]), discharge_mwh=float(x[d[t]]), closing_mwh=float(x[s[t]])))
     for terms, rhs, name in lp.equalities:
         balance_rows.append(dict(constraint=name, residual=float(sum(x[i]*v for i,v in terms.items())-rhs)))
-    return dict(status="optimal", annual_repeats=weight, resource_cost=float(result.fun),
+    policy_cost = sum(x[i]*v for i,v in policy_terms.items())
+    return dict(status="optimal", annual_repeats=weight, resource_cost=float(result.fun)-policy_cost,
+                dispatch_objective=float(result.fun), policy_signal_cost=policy_cost,
                 fuel=fuel_rows, generation=generation_rows, demand=demand_rows, storage=storage_rows,
                 balances=balance_rows, stages=stages, max_residual=residual)

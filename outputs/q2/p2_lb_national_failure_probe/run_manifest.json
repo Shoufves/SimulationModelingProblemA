@@ -1,14 +1,15 @@
 {
-  "run_id": "20261018T161255503919Z",
+  "run_id": "20261019T004353433186Z",
   "owner": "p2/lb",
   "status": "failed",
   "q2_scientific_complete": false,
   "code_hashes": {
     "run.py": "3d427aae2aad978374ad751e99c7992c6edf9a7aabf85e40674c8cc28ba8722e",
-    "scripts/run_q2_national.py": "7feb532a57b5fea2bb4627722c445a414b3a96a580d58124312f01430c00bb82",
+    "scripts/run_q2_national.py": "f105da206efb3c27fe12d413ef292305cc87c074bc062c548f4b9e834d5b0016",
     "scripts/build_q2_national_inputs.py": "cc4afd053149e3e28ed97b33fc1d56d2373452b8a148d843e090e91572f8192f",
-    "src/energy_model/q2_national.py": "c83bf39a8398d9c1d2513e5c73a8aafea620ee2ffc2edd57b15ffdda44f6e532",
-    "src/energy_model/q2_operations.py": "065a3c7ad575badb49cc3e5442fe009b88f6ede54dd877c25871b0a56fdaaa52",
+    "src/energy_model/q2_national.py": "0417c1864950a74dacbd1f392bb800d283f8c8e1db9cac81efccdf011e832409",
+    "src/energy_model/q2_finance.py": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
+    "src/energy_model/q2_operations.py": "2b9ba4f4dd53c1769d6096febd3da58f7dfbb36e3e564da1a8dc5716ac5c9674",
     "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
     "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
   },
@@ -16,9 +17,9 @@
     "data/catalog/q2_national_input_review.json": "87759254cb1e9d0f6d7b1d0a301df3d9239eae5b3c91a16fc4bb9fa4a4fa0746",
     "data/processed/q2/national_observations.csv": "1c2efa84913dc07e25862ae307a38d12ce87819d9e51edfb967a41b090fc8954",
     "data/processed/q2/technical_references.json": "af38ccd89ece76b7e37f929ec8056acd1cc6bcba47a2e403589766afb16ca62f",
-    "workflow/q2_national_design.json": "4746f93c131724b487cff4450d5d70fd8710431fce9eafd1e743c7074ee06b7e"
+    "workflow/q2_national_design.json": "c6141f820134b2bf8ee5a593e64a0a705cc14a2f02015756bb67052e8a11cbf8"
   },
-  "git_sha": "b22c14dd4dd558e26baed73d4c5219162e08e2e6",
+  "git_sha": "b1a03c6f636d5067838e43908b51cfc371b9fe29",
   "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "command": [
     "probe",
@@ -28,6 +29,6 @@
   "team_approved": false,
   "error_type": "ValueError",
   "error": "injected admission failure",
-  "elapsed_seconds": 0.02889439999125898,
+  "elapsed_seconds": 0.03196699998807162,
   "outputs": {}
 }

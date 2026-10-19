@@ -1,70 +1,71 @@
 {
   "best": {
-    "index": 15,
+    "index": 317,
     "parameters": {
       "activity_elasticity": 0.5,
       "expectation_rate": 0.25,
-      "investment_response": 1.0,
-      "renewable_mix_response": 0.7,
-      "replacement_adoption": 0.2
+      "investment_response": 1.75,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0.2,
+      "solar_construction_growth": 0.15
     },
     "status": "success",
-    "loss": 2.0497940846777993,
+    "loss": 1.427751586930665,
     "components": [
       {
         "metric": "primary_energy_tce",
         "n": 7,
-        "loss": 0.3464352744284037,
-        "mape": 0.056612129370256434,
-        "mae": 269788459.0197025,
+        "loss": 0.3381426249282436,
+        "mape": 0.05568630935758011,
+        "mae": 265843327.94879436,
         "missing_years": []
       },
       {
         "metric": "peo_share",
         "n": 7,
-        "loss": 0.1018979445577209,
-        "mape": 0.06414921850859945,
-        "mae": 0.009251346219578077,
+        "loss": 0.046731614813655446,
+        "mape": 0.04365742897577228,
+        "mae": 0.006303698485075066,
         "missing_years": []
       },
       {
         "metric": "total_capacity_mw",
         "n": 7,
-        "loss": 0.06651185965654362,
-        "mape": 0.0531782358960466,
-        "mae": 102735.6497040706,
+        "loss": 0.04110146582410402,
+        "mape": 0.037337383406537396,
+        "mae": 73150.02173457478,
         "missing_years": []
       },
       {
         "metric": "wind_capacity_mw",
         "n": 7,
-        "loss": 0.06721434813443836,
-        "mape": 0.07681468835513364,
-        "mae": 16966.711617792454,
+        "loss": 0.13498186826842448,
+        "mape": 0.1286976290936234,
+        "mae": 26039.386304025138,
         "missing_years": []
       },
       {
         "metric": "solar_capacity_mw",
         "n": 7,
-        "loss": 0.47880898618475015,
-        "mape": 0.2809826952138524,
-        "mae": 39456.215773401185,
+        "loss": 0.12051644639214898,
+        "mape": 0.15626865940606433,
+        "mae": 19900.70812222315,
         "missing_years": []
       },
       {
         "metric": "electricity_generation_mwh",
         "n": 7,
-        "loss": 0.37724960827334236,
-        "mape": 0.06191460582854421,
-        "mae": 428935315.31383544,
+        "loss": 0.3313566745059463,
+        "mape": 0.0577706774980352,
+        "mae": 400859509.3867995,
         "missing_years": []
       },
       {
         "metric": "combustion_co2_t",
         "n": 2,
-        "loss": 0.6116760634426004,
-        "mape": 0.11711528474680909,
-        "mae": 1157514224.1052465,
+        "loss": 0.4149208921981422,
+        "mape": 0.09660410301495172,
+        "mae": 954221948.953824,
         "missing_years": [
           2015,
           2016,
@@ -79,20 +80,70 @@
     {
       "activity_elasticity": 0.5,
       "expectation_rate": 0.25,
-      "investment_response": 1.0,
-      "renewable_mix_response": 0.7,
-      "replacement_adoption": 0.2
+      "investment_response": 1.75,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0.2,
+      "solar_construction_growth": 0.15
     },
     {
       "activity_elasticity": 0.5,
       "expectation_rate": 0.75,
-      "investment_response": 1.0,
-      "renewable_mix_response": 0.7,
-      "replacement_adoption": 0.2
+      "investment_response": 1.75,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0.2,
+      "solar_construction_growth": 0.15
+    },
+    {
+      "activity_elasticity": 0.5,
+      "expectation_rate": 0.25,
+      "investment_response": 1.75,
+      "renewable_mix_response": 0.4,
+      "replacement_adoption": 0.2,
+      "solar_construction_growth": 0.1
+    },
+    {
+      "activity_elasticity": 0.5,
+      "expectation_rate": 0.75,
+      "investment_response": 1.75,
+      "renewable_mix_response": 0.4,
+      "replacement_adoption": 0.2,
+      "solar_construction_growth": 0.1
+    },
+    {
+      "activity_elasticity": 0.5,
+      "expectation_rate": 0.25,
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0.2,
+      "solar_construction_growth": 0.2
+    },
+    {
+      "activity_elasticity": 0.5,
+      "expectation_rate": 0.75,
+      "investment_response": 1.5,
+      "renewable_mix_response": 0.55,
+      "replacement_adoption": 0.2,
+      "solar_construction_growth": 0.2
+    },
+    {
+      "activity_elasticity": 0.5,
+      "expectation_rate": 0.25,
+      "investment_response": 1.75,
+      "renewable_mix_response": 0.4,
+      "replacement_adoption": 0.2,
+      "solar_construction_growth": 0.15
+    },
+    {
+      "activity_elasticity": 0.5,
+      "expectation_rate": 0.75,
+      "investment_response": 1.75,
+      "renewable_mix_response": 0.4,
+      "replacement_adoption": 0.2,
+      "solar_construction_growth": 0.15
     }
   ],
-  "search_budget": 216,
-  "successful_trials": 216,
+  "search_budget": 2250,
+  "successful_trials": 2250,
   "selection": "training loss only; no holdout retuning",
   "evaluation_identity": "already_seen_not_blind"
 }

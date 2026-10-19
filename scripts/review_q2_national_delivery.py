@@ -41,6 +41,8 @@ def main():
         regression=load(ROOT/"outputs/q2_review/p2_lb/verification.json")
         tests=load(ROOT/"outputs/q2_review/p2_lb/tests.json")
         check("full_regression_tests_no_skip",regression["passed"] and tests["passed"] and tests["skipped"]==0,tests)
+        check("regression_covers_current_mechanisms",all(regression["code_hashes"].get(p)==sha(ROOT/p) for p in
+            ("tests/test_q2_national.py","src/energy_model/q2_national.py","src/energy_model/q2_finance.py","src/energy_model/q2_operations.py")),"Fresh full regression includes mechanism counterexamples")
         import importlib.metadata
         expected=dict(numpy="2.3.5",scipy="1.16.3",mesa="3.3.1",pandas="3.0.1",matplotlib="3.10.7")
         report["dependencies"]={p:importlib.metadata.version(p) for p in expected}
@@ -60,7 +62,7 @@ def main():
         check("q1_18_scientific_outputs_preserved",len(q1["outputs"])==18 and all(sha(ROOT/"outputs/q1/p1_yx"/n)==v for n,v in q1["outputs"].items()),list(q1["outputs"]))
         calibration=load(folder/"calibration.json")
         check("frozen_empirical_thresholds_passed",calibration["quality"]["acceptance"]["all_thresholds_passed"],calibration["quality"]["acceptance"])
-        check("all_grid_trials_accounted",calibration["successful_trials"]==calibration["search_budget"]==216,calibration["search_budget"])
+        check("all_grid_trials_accounted",calibration["successful_trials"]==calibration["search_budget"]==load(folder/"frozen_design.json")["search_budget"],calibration["search_budget"])
         eval_emission=next(r for r in calibration["quality"]["already_seen_evaluation"]["components"] if r["metric"]=="combustion_co2_t")
         check("missing_emissions_holdout_not_fabricated",eval_emission["n"]==0 and eval_emission["mape"] is None,eval_emission)
         baseline=read(folder/"baseline_path.csv")
@@ -80,6 +82,18 @@ def main():
         check("small_physical_residuals",max(r["LP_max_residual_mwh"] for r in physical)<.001,max(r["LP_max_residual_mwh"] for r in physical))
         check("cash_and_ETS_transfers_reconcile",all(abs(float(r["cash_balance_residual_cny"]))<.1 and abs(float(r["ets_balance_cny"]))<.001 for r in baseline),"National annual CNY residual < 0.1; ETS residual < 0.001")
         check("construction_commitments_funded",all(abs(float(r["construction_fund_residual_cny"]))<.1 for r in baseline),"Reserved funding equals sum of unpaid project commitments")
+        check("infrastructure_and_financing_ledgers",all(abs(float(r["infrastructure_fund_residual_cny"]))<.1 and abs(float(r["financing_transfer_residual_cny"]))<.1 for r in baseline),"Independent infrastructure escrow and sponsor/shareholder/lender transfers")
+        check("cross_year_storage_continuity",all(abs(float(a["storage_closing_mwh"])-float(b["storage_retirement_loss_mwh"])-float(b["storage_opening_mwh"]))<1e-4 for a,b in zip(baseline,baseline[1:])),"New storage enters empty; retirement disposal explicitly deducted")
+        accounts=read(folder/"accounts.csv")
+        projects=load(folder/"project_queue.json")
+        for p in projects:
+            if p["initial_reconstruction"]:continue
+            funding=[r for r in accounts if r["kind"]=="project_finance" and r["project"]==p["id"]]
+            if len(funding)!=1:raise ValueError("Missing unique project finance "+p["id"])
+            r=funding[0]
+            if abs(sum(float(r[k]) for k in ("equity_cny","shareholder_equity_cny","debt_draw_cny"))-p["cost"])/max(1,p["cost"])>1e-12:
+                raise ValueError("Project funding mismatch "+p["id"])
+        check("every_new_generator_has_equity_and_loan_funding",True,len([p for p in projects if not p["initial_reconstruction"]]))
         assets=read(folder/"assets.csv")
         pre1991=[r for r in assets if r.get("tech")=="nuclear" and int(r["online_year"])<1991]
         check("no_pre1991_nuclear_cohort",not pre1991,len(pre1991))
@@ -117,10 +131,11 @@ def main():
         except ValueError:rejected=True
         check("latest_failure_not_hidden_by_old_success",rejected and load(probe/"run_manifest.json")["status"]=="failed","Original success preserved under probe .attempts; primary delivery untouched")
         verify_latest(folder)
-        report.update(passed=True,status="conditional_Q2_candidate_review_ready",four_question_tasks_completed=True,
+        report.update(passed=True,status="repaired_conditional_Q2_candidate_review_ready",implementation_and_declared_checks_complete=True,
             independent_review_still_required=True,scientific_limits=["Already-seen evaluation reused for disclosed model revisions",
                 "No same-scope emissions holdout", "PEO/nonfossil and process/sink bridges conditional",
-                "Representative day does not validate annual reliability", "Not all-GHG neutrality"])
+                "Representative day does not validate annual reliability", "Not all-GHG neutrality",
+                "Aggregate grid and finance parameters are explicit research assumptions; no independent national mechanism certification"])
     except Exception as exc:
         report.update(status="failed",error=f"{type(exc).__name__}: {exc}")
     finally:
