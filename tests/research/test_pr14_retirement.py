@@ -15,10 +15,34 @@ if PIN.resolve() not in Path(national.__file__).resolve().parents:
 from q2_delivery_snapshot import decode,build_snapshot
 from energy_model.q2_forward_current import activate_forward
 from run_q2_portable import compare_reference
-from transition_research.retirement import activate,RetirementModel
+from transition_research.retirement import activate,RetirementModel,services
 from transition_research.anchored import activate as activate_anchored
 from transition_research.current_information import activate as activate_current
 from energy_model.q2_forward_current import ForwardModel
+
+
+def feedstock_dispatch_pair():
+    """Identical inputs except coal capacity: material shortages trade places."""
+    fuel=dict(domestic_mw=[20],import_mw=[0],domestic_cost_per_mwh=1,
+              import_cost_per_mwh=1,emission_t_per_mwh=.3,tank_mwh=0,
+              initial_mwh=0,injection_mw=0,withdrawal_mw=0)
+    plant=dict(input='coal',output='electricity',efficiency=1,capacity_mw=20,
+               availability=[1],variable_cost_per_mwh=0,minimum_fraction=0,
+               ramp_mw_per_hour=100,window_energy_budget_mwh=20)
+    op=dict(periods=[dict(hours=1)],annual_repeats=1,cyclic=True,
+            grid=dict(efficiency=1,power_mw=100),
+            storage=dict(power_mw=0,energy_mwh=0,initial_mwh=0,
+                         charge_efficiency=1,discharge_efficiency=1,throughput_cost=0),
+            fuels=dict(coal=deepcopy(fuel),gas=deepcopy(fuel)),
+            plants=dict(coal=deepcopy(plant),gas={**plant,'input':'gas','variable_cost_per_mwh':10}),
+            demands=dict(building=dict(sector='building',carrier='electricity',efficiency=1,
+                                       input_capacity_mw=20,priority=0,service_mwh=[20]),
+                         coal_material=dict(sector='nonenergy_feedstock',carrier='coal',efficiency=1,
+                                            input_capacity_mw=20,priority=1,service_mwh=[20]),
+                         gas_material=dict(sector='nonenergy_feedstock',carrier='gas',efficiency=1,
+                                           input_capacity_mw=20,priority=1,service_mwh=[20])))
+    retired=deepcopy(op);retired['plants']['coal']['capacity_mw']=0
+    return op,retired,national.operate_national(op),national.operate_national(retired)
 
 
 class RetirementTests(unittest.TestCase):
@@ -138,6 +162,47 @@ class RetirementTests(unittest.TestCase):
         self.assertTrue(all(abs(v-m.current_growth)<1e-12 for v in observed))
         self.assertIs(m.a['gdp_future'],original_map)
         self.assertEqual(original_map['2031_2040'],.25)
+
+    def test_actual_lp_material_counterexample_is_detected(self):
+        op,retired,keep,release=feedstock_dispatch_pair()
+        retired['plants']['coal']['capacity_mw']=20
+        self.assertEqual(op,retired)
+        for result in (keep,release):
+            self.assertLessEqual(abs(result['max_residual']),1e-6)
+        a,b=services(keep),services(release)
+        self.assertEqual(a['building']['fraction'],0)
+        self.assertEqual(b['building']['fraction'],0)
+        self.assertAlmostEqual(a['nonenergy_feedstock/coal']['fraction'],1)
+        self.assertAlmostEqual(a['nonenergy_feedstock/gas']['fraction'],0)
+        self.assertAlmostEqual(b['nonenergy_feedstock/coal']['fraction'],0)
+        self.assertAlmostEqual(b['nonenergy_feedstock/gas']['fraction'],1)
+        self.assertEqual(sum(v['unmet'] for k,v in a.items() if k.startswith('nonenergy')),
+                         sum(v['unmet'] for k,v in b.items() if k.startswith('nonenergy')))
+        self.assertFalse(all(b[k]['fraction']<=a[k]['fraction']+1e-8 for k in a))
+
+    def test_paired_guard_rejects_lp_material_harm(self):
+        _,_,keep,release=feedstock_dispatch_pair()
+        m=self.model('rollout_guard');m.run(2026)
+        def forecast(due,retained,*,horizon):
+            return {'2028/'+s:v['fraction'] for s,v in services(keep if retained else release).items()}
+        with patch.object(m,'rollout_forecast',side_effect=forecast):
+            m.retirement_decision()
+        self.assertTrue(m.research_decisions[-1]['retained'])
+        self.assertTrue(any(not e['accepted'] and e['max_excess']>.99 for e in m.research_decisions[-1]['evaluations']))
+
+    def test_energy_substitution_preserved_but_all_materials_separate(self):
+        rows=[]
+        for carrier in ('coal','oil','gas'):
+            rows.append(dict(sector='nonenergy_feedstock',carrier=carrier,requested_service_mwh=10,unmet_service_mwh=1))
+            rows.append(dict(sector='building',carrier=carrier,requested_service_mwh=10,unmet_service_mwh=1))
+        grouped=services(dict(demand=rows))
+        self.assertEqual(set(grouped),{'building','nonenergy_feedstock/coal','nonenergy_feedstock/oil','nonenergy_feedstock/gas'})
+        self.assertEqual(grouped['building']['requested'],30)
+        self.assertEqual(grouped['nonenergy_feedstock/oil']['requested'],10)
+
+    def test_material_without_identity_fails_closed(self):
+        with self.assertRaises(ValueError):
+            services(dict(demand=[dict(sector='nonenergy_feedstock',requested_service_mwh=10,unmet_service_mwh=0)]))
 
 
 if __name__=='__main__':unittest.main()

@@ -5,6 +5,7 @@ import hashlib
 import json
 import subprocess
 import sys
+import argparse
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'outputs/research_n2'
@@ -19,6 +20,9 @@ def write(path, value):
 
 
 def main():
+    global OUT
+    parser=argparse.ArgumentParser();parser.add_argument('--evidence',default='outputs/research_n2')
+    args=parser.parse_args();OUT=ROOT/args.evidence
     qa = OUT / 'qa'
     qa.mkdir(exist_ok=True)
     archive = json.loads((OUT / 'archive_manifest.json').read_text('utf-8'))

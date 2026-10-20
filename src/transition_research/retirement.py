@@ -16,7 +16,15 @@ RULES = ('schedule', 'cost_order', 'capacity_ready', 'replacement_ready',
 def services(result):
     groups = {}
     for row in result['demand']:
-        item = groups.setdefault(row['sector'], dict(requested=0., unmet=0.))
+        sector = row['sector']
+        # Coal, oil and gas feedstocks are distinct material services. Energy
+        # devices serving the same end use remain substitutable within sector.
+        if sector == 'nonenergy_feedstock':
+            carrier = row.get('carrier')
+            if carrier not in ('coal', 'oil', 'gas'):
+                raise ValueError('Missing or unsupported nonenergy feedstock carrier')
+            sector += '/' + carrier
+        item = groups.setdefault(sector, dict(requested=0., unmet=0.))
         item['requested'] += row['requested_service_mwh']
         item['unmet'] += row['unmet_service_mwh']
     for item in groups.values():

@@ -1,5 +1,7 @@
 # N2研究证据导航
 
+最新修复版见[pr13_review2](pr13_review2/README.md)及其[验收](pr13_review2/final_acceptance.json)。本目录原R0—R9及根final_acceptance保留修复前历史身份，不覆盖原641份证据；当前方法采用分原料服务身份与累计成本有界ULP比较。
+
 研究基线为PR14固定提交`1b8f465783afe7505c8d4e65ec43ada18c311daf`，当前分支未合并该PR。研究从`d0c234313509f159f1c449a2372c35686ce9cb15`追加，不改原Q1/Q2/Q3科学结果。
 
 先读[方法、效果与复现命令](../../docs/research/n2-method-and-results.md)、[五类研究记录](../../docs/research/n2-research-ledger.md)，再核对[最终机器验收](final_acceptance.json)。最终结论为项目内部N2经验候选通过；N3不支持、系统硬服务界8/8未过、人工签认pending。

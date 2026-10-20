@@ -12,6 +12,8 @@
 
 ## 阅读入口
 
+PR13第二次复审修复：已按`review_pr13_2.md`拆分煤/油/气原料服务身份，并修复累计成本一浮点步长被误拒的问题。22项研究测试及77条完整路径重新执行通过，原冻结科学门槛不变；339项既有测试按相关文件未变复用收据。见[逐项修复与自检](docs/research/n2-pr13-review2-response.md)及[最新验收](outputs/research_n2/pr13_review2/final_acceptance.json)。下方353项测试与原R9记录为修复前历史，最新SHA仍待人工复审。
+
 2026-10-20：基于用户选定的lb PR14固定提交，新增[退役审查方法与最终结果](docs/research/n2-method-and-results.md)、[五类研究记录](docs/research/n2-research-ledger.md)和[完整研究证据](outputs/research_n2/README.md)。R0—R9十轮后，一个方法达到项目内部N2经验门槛：8个条件少延退4.51%—13.37%，逐服务缺供不增加；353项测试及另进程复现通过。系统硬服务界仍8/8未过、人工复核待完成，不支持N3。PR14未合并，固定版本由独立研究入口导出，不改变当前`run.py q2/q3`或原结果。
 
 2026-10-20：问题一与问题三新增[创新性复核](docs/research/q1-q3-innovation-review.md)、[文本指标与改善说明](docs/research/q1-q3-text-review.md)和[真实AI使用/人工待核表](docs/research/ai-use-and-human-review.md)。供论文采用的[Q1分析稿](docs/paper/q1-evidence-analysis.md)、[Q3分析稿](docs/paper/q3-innovation-analysis.md)补充共同来源暴露和实际政策部署归因，原科学结果保留。外部AI率、全网重复率未测，人工签认尚待完成；技术状态见[本轮验收](outputs/research_audit/verification/acceptance.json)。

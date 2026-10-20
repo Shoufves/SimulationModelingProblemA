@@ -6,13 +6,15 @@ import subprocess
 import sys
 import time
 import unittest
+import argparse
 
 ROOT=Path(__file__).resolve().parents[1]
 BASE='d0c234313509f159f1c449a2372c35686ce9cb15'
 
 
 def main():
-    out=ROOT/'tmp/n2';out.mkdir(parents=True,exist_ok=True)
+    parser=argparse.ArgumentParser();parser.add_argument('--output',default='tmp/n2');args=parser.parse_args()
+    out=ROOT/args.output;out.mkdir(parents=True,exist_ok=True)
     suite=unittest.defaultTestLoader.discover(str(ROOT/'tests/research'))
     start=time.perf_counter()
     with (out/'research_tests.log').open('w',encoding='utf-8') as stream:
@@ -21,7 +23,8 @@ def main():
         'workflow/model_inputs.json','workflow/q3_inputs.json','outputs/q1','outputs/q2','outputs/q3']
     changes=subprocess.check_output(['git','diff','--name-only',BASE,'--',*protected],cwd=ROOT,text=True,encoding='utf-8').splitlines()
     files=['tests/research/test_pr14_retirement.py','tests/research/test_research_comparisons.py',
-        'src/transition_research/retirement.py','src/transition_research/anchored.py','src/transition_research/current_information.py']
+        'src/transition_research/retirement.py','src/transition_research/anchored.py','src/transition_research/current_information.py',
+        'scripts/compare_n2_reproduction.py','tests/research/test_n2_reproduction.py']
     receipt=dict(tests=result.testsRun,failures=len(result.failures),errors=len(result.errors),skipped=len(result.skipped),
         passed=result.wasSuccessful() and not changes,seconds=time.perf_counter()-start,
         protected_scientific_files_changed=changes,preservation_base=BASE,python=sys.version,

@@ -6,6 +6,7 @@ import hashlib
 import argparse
 from summarize_n2_research import compare
 from verify_n2_research import dominates
+from compare_n2_reproduction import compare_reproduction
 
 ROOT=Path(__file__).resolve().parents[1]
 BASE=ROOT/'tmp/n2'
@@ -16,14 +17,15 @@ def save(path,obj):path.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--primary',default='r9');p.add_argument('--fixed',default='r9_fixed');p.add_argument('--reproduction',default='r9_reproduction');args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--primary',default='r9');p.add_argument('--fixed',default='r9_fixed');p.add_argument('--reproduction',default='r9_reproduction')
+    p.add_argument('--controls',default='r7');p.add_argument('--tests',default='research_tests.json');args=p.parse_args()
     primary=BASE/args.primary;fixed_folder=BASE/args.fixed;repro_folder=BASE/args.reproduction
     r5=read(primary/'acceptance.json');protocol=read(primary/'protocol.json')
     rows=[]
     for c in protocol['conditions']:
         name=c['id'];a=read(primary/name/(name+'__anchored_guard.json'))
         controls={rule:read(primary/name/(name+'__'+rule+'.json')) for rule in protocol['rules'] if rule!='anchored_guard'}
-        controls.update({rule:read(BASE/'r7'/name/(name+'__'+rule+'.json')) for rule in ['cost_order','capacity_ready','paired_myopic','paired_guard']})
+        controls.update({rule:read(BASE/args.controls/name/(name+'__'+rule+'.json')) for rule in ['cost_order','capacity_ready','paired_myopic','paired_guard']})
         for rule,b in controls.items():
             if a['condition']!=b['condition']:raise ValueError('Mismatched comparator condition')
         candidate_vectors={}
@@ -61,19 +63,20 @@ def main():
     save(fixed_folder/'fixed_invariants.json',dict(passed=True,cases=fixed))
     pin=ROOT/'tmp/n2/pr14'
     sys.path[:0]=[str(pin/'scripts'),str(pin/'src')]
-    from run_q2_portable import compare_reference
     a=read(primary/'W08_compound/W08_compound__anchored_guard.json')
     b=read(repro_folder/'W08_compound__anchored_guard.json')
-    reproduction=compare_reference(a,b)
+    reproduction=compare_reproduction(a,b)
     save(repro_folder/'reproduction.json',reproduction)
-    tests=read(BASE/'research_tests.json');legacy=read(BASE/'legacy_tests.json')
+    tests=read(BASE/args.tests);legacy=read(BASE/'legacy_tests.json')
     result=dict(primary_protocol=args.primary,primary_gate_passed=r5['n2_empirical_gate_passed'],extended_comparison_passed=extended['passed'],
         distinct_physical_trajectories=extended['distinct_physical_trajectories'],reproduction_passed=reproduction['passed'],
         fixed_invariants_passed=True,implementation_tests_passed=tests['passed'],legacy_tests_passed=legacy['passed'],
         tests_run=tests['tests']+legacy['tests'],human_review='pending',n3_supported=False,
         system_hard_service_limit_passed_conditions=r5['counts']['hard_service_limit_passed'])
+    result['test_receipt_scope']=dict(research_tests=tests['tests'],legacy_tests=legacy['tests'],
+        note='Counts read from supplied receipts; this verifier does not execute tests. See revision reuse record for execution scope.')
     result['n2_internal_empirical_candidate']=all(result[k] for k in ['primary_gate_passed','extended_comparison_passed','reproduction_passed','fixed_invariants_passed','implementation_tests_passed','legacy_tests_passed'])
-    result['verifier_sha256']={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in ['scripts/verify_n2_supplements.py','scripts/verify_n2_research.py','scripts/summarize_n2_research.py']}
+    result['verifier_sha256']={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in ['scripts/verify_n2_supplements.py','scripts/verify_n2_research.py','scripts/summarize_n2_research.py','scripts/compare_n2_reproduction.py']}
     save(BASE/'final_acceptance.json',result)
     save(primary/'final_acceptance.json',result)
     print(json.dumps(result,indent=2))

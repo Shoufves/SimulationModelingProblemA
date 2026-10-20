@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "differences": [],
+  "failures": [],
+  "numeric_fields": 9091,
+  "tolerances": {
+    "relative": 1e-12,
+    "cny_absolute": 0.02,
+    "other_absolute": 1e-06,
+    "cny_cap": 0.02,
+    "other_cap": 0.001,
+    "research_cumulative_cost": {
+      "path": "/summary/discounted_resource_cost_cny",
+      "absolute_floor_cny": 0.02,
+      "maximum_ulps": 4,
+      "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+    }
+  },
+  "exact_match": true,
+  "upstream_passed": true
+}

@@ -1,6 +1,6 @@
 # PR14底座上的退役审查研究
 
-本轮取得一个达到项目内部N2经验标准的方法增量候选：以原滚动规则为基准，用完整年度反馈逐项取消无服务收益的延退动作。最终8个条件均少延退，逐年逐服务缺供均未恶化；全国系统保供缺口仍在，不支持N3。人工评审未完成。最终判定见[验收收据](../../outputs/research_n2/final_acceptance.json)，五类研究记录及失败历史见[n2-research-ledger.md](n2-research-ledger.md)，先例范围见[n2-prior-art.md](n2-prior-art.md)。
+本轮取得一个达到项目内部N2经验标准的方法增量候选：以原滚动规则为基准，用完整年度反馈逐项取消无服务收益的延退动作。全国系统保供缺口仍在，不支持N3。PR13第二次复审指出原料身份漏检与累计成本复现误拒，修复说明见[两项P2响应](n2-pr13-review2-response.md)。新版判定见[修复验收收据](../../outputs/research_n2/pr13_review2/final_acceptance.json)；旧[原R9收据](../../outputs/research_n2/final_acceptance.json)保留为历史，不冒充修复版验收。人工评审仍待完成，五类研究记录见[n2-research-ledger.md](n2-research-ledger.md)，先例范围见[n2-prior-art.md](n2-prior-art.md)。
 
 ## 方案结构
 
@@ -17,6 +17,8 @@ Q1继续负责公开来源、现实规模和风险暴露解释。Q2采用用户�
 5. 只执行当年的动作。保留费按2万元/MW年视为额外维护服务资源耗费，计入当年资源成本一次，同时记录公共支付/承包方收入等额双边账；年度上限为GDP的0.05%。这笔费用使用独立的外生公共专项额度，没有从PR14财政账户现金中扣除，也不挤占其建设补贴。已有运行成本、债务及建设费用照常结算。它是继承原Q3的条件性额外服务费用假设，不是官方补偿标准或已识别的实际财政空间；不能把等额双边记账称为完整财政现金闭环。
 
 该过程是有限候选的顺序筛查，不求全局最优。三年逐服务不恶化是预测分支上的局部性质，不能推出未来实际路径、任意冲击或全国系统永远安全。参照自己越过2%研究服务界时仍记录越界，绝不改称已经满足安全约束。
+
+修复版服务身份：非能源煤、油、气原料分别使用`nonenergy_feedstock/coal`、`/oil`、`/gas`，不可互相抵消；其他能源设备在同部门同用途内继续可替代。旧R9仅按部门汇总，不能用其原料总缺供率保证每一种原料不恶化；新结果须在拆分口径下重新验证。
 
 ## 正反证据如何分开
 
@@ -52,9 +54,11 @@ Q1继续负责公开来源、现实规模和风险暴露解释。Q2采用用户�
 
 8/8少延退，6/8超过5%；所有逐服务/年份缺供率与原规则相同，最大增量为0。任何受管理批次均未比参考更晚退出，期末受管理容量不增加。在包含替代可用、成本/容量排序、静态配对、短视配对及未锚定闭环的完整强对照中8/8不被支配。这里的“不被支配”只表示没有一个对照在定义的全部指标上压过候选，不表示候选全面优于所有对照。
 
-总折现资源成本仅下降0.0109%—0.0314%，额外公共保留费减少22.19—77.66亿元；CO2下降0—0.01708%，高增长条件无减排。每条完整路径约107—155秒，为原规则约10.3—17.0倍。这是减少无效保留的增量，不是运行速度创新。8/8仍违反2%研究服务硬界，不能将“风险不增加”表述为“安全达标”。
+总折现资源成本仅下降0.0109%—0.0314%，额外公共保留费减少22.19—77.66亿元；CO2下降0—0.01708%，高增长条件无减排。修复版每条候选完整路径约101—166秒，为同次原规则约8.49—14.57倍；原R9对应107—155秒、10.3—17.0倍，计时受机器负载影响。这是减少无效保留的增量，不是运行速度创新。8/8仍违反2%研究服务硬界，不能将“风险不增加”表述为“安全达标”。
 
-![最终八条件的保留量、风险、资源成本和计算代价](../../outputs/research_n2/figures/n2_validation.png)
+![修复版八条件的保留量、风险、资源成本和计算代价](../../outputs/research_n2/pr13_review2/figures/n2_validation.png)
+
+复审修复后的40条主路径共有年度/累计指标、实际退役动作和期末资产与旧版完全相同；服务及预测向量因原料身份拆分而改变，不称全JSON相同。4320个逐原料年度单元均无实际缺供。完整77条路径重跑与22项研究测试通过，W08另进程复现9091个数字字段且本机科学JSON完全相同；这次恰好exact_match不意味着其他环境必须位级一致。
 
 固定初始项目消融中，少延退11.79%、服务相同、资源成本下降0.0362%、CO2下降0.0124%，但严重缺供仍在。它只检查机制在单一固定项目条件下的表现。8个主条件按物理路径签名分为7类，不能视为8个独立随机样本；全部213条有效路径含历史探索、对照与重复运行，不作为统计样本量。未计算无独立性依据的显著性或置信区间。
 
@@ -66,29 +70,29 @@ Q1继续负责公开来源、现实规模和风险暴露解释。Q2采用用户�
 
 ```powershell
 python -B -X utf8 scripts/prepare_n2_baseline.py
-python -B -X utf8 scripts/run_n2_validation_batch.py --protocol workflow/n2_validation_r9.json --runner scripts/run_n2_current.py --workers 2 --output tmp/n2/reproduce_r9
-python -B -X utf8 scripts/verify_n2_research.py tmp/n2/reproduce_r9
-python -B -X utf8 scripts/check_n2_implementation.py
+python -B -X utf8 scripts/run_n2_validation_batch.py --protocol workflow/n2_validation_r9.json --runner scripts/run_n2_current.py --workers 2 --output tmp/n2/reproduce_review2/primary
+python -B -X utf8 scripts/verify_n2_research.py tmp/n2/reproduce_review2/primary
+python -B -X utf8 scripts/check_n2_implementation.py --output tmp/n2/reproduce_review2/tests
 ```
 
 输出目录必须是新目录，防止旧成功文件覆盖本次失败。便携模式只核验已提取快照及原模型代码；原始PDF需另走PR14完整档案核验入口。单次年度路径与完整验证批次的耗时分开报告，不能把混合诊断计数器称为全部LP次数。
 
-上述命令只重跑主验证及14项研究测试。完整补充验收还需要R7四个强对照、最终固定项目消融、不同哈希种子复现及339项既有测试。`verify_n2_supplements.py`默认读取`tmp/n2/r7`、`r9`、`r9_fixed`、`r9_reproduction`、`research_tests.json`及`legacy_tests.json`；不能只运行主批次就声称全部复现。
+上述命令只重跑主验证及22项研究测试。完整补充验收还需要R7四个强对照、最终固定项目消融、不同哈希种子复现及339项既有测试。修复版验收须显式传入本次新目录，不能混入服务身份尚未拆分的旧R7/R9结果，也不能只运行主批次就声称全部复现。
 
-在全新复现目录按上述命令完成主验证后，可执行以下补充命令。`tmp/n2/r7`须不存在；若已有有效历史结果，应保留并核验，不覆盖。最后命令的`--primary`为`tmp/n2`下目录名。
+在全新复现目录按上述命令完成主验证后，可执行以下补充命令。各输出目录须不存在；有效历史结果应保留，不覆盖。最后命令各参数均为`tmp/n2`下的相对路径。
 
 ```powershell
-python -B -X utf8 scripts/run_n2_validation_batch.py --protocol workflow/n2_controls_r7.json --runner scripts/run_n2_research.py --workers 2 --output tmp/n2/r7
-python -B -X utf8 scripts/run_n2_fixed.py --protocol workflow/n2_fixed_r9.json --output tmp/n2/reproduce_fixed
+python -B -X utf8 scripts/run_n2_validation_batch.py --protocol workflow/n2_controls_r7.json --runner scripts/run_n2_research.py --workers 2 --output tmp/n2/reproduce_review2/controls
+python -B -X utf8 scripts/run_n2_fixed.py --protocol workflow/n2_fixed_r9.json --output tmp/n2/reproduce_review2/fixed
 $env:PYTHONHASHSEED = '83'
-python -B -X utf8 scripts/run_n2_current.py --protocol workflow/n2_reproduction_r9.json --output tmp/n2/reproduce_repeat
+python -B -X utf8 scripts/run_n2_current.py --protocol workflow/n2_reproduction_r9.json --output tmp/n2/reproduce_review2/reproduction
 Remove-Item Env:PYTHONHASHSEED
 python -B -X utf8 run.py test
 Copy-Item outputs/validation/tests.json tmp/n2/legacy_tests.json
-python -B -X utf8 scripts/verify_n2_supplements.py --primary reproduce_r9 --fixed reproduce_fixed --reproduction reproduce_repeat
+python -B -X utf8 scripts/verify_n2_supplements.py --primary reproduce_review2/primary --controls reproduce_review2/controls --fixed reproduce_review2/fixed --reproduction reproduce_review2/reproduction --tests reproduce_review2/tests/research_tests.json
 ```
 
-先确认每一步返回0再继续。`run.py test`会更新原测试收据，已有工作区应先保存原字节，另存本次收据后恢复。最终W08复现与原运行全部科学JSON字段相同；耗时和环境记录不要求字节相同。353项测试由339项既有测试和14项研究测试构成。
+先确认每一步返回0再继续。`run.py test`会更新原测试收据，已有工作区应先保存原字节，另存本次收据后恢复。本次修复新增8项测试，研究测试共22项；339项既有测试的本轮复用范围另有保护文件核验收据，不能说成本轮全部重新执行。修复版比较器仅为累计折现成本保留最多四ULP（且至少0.02元）的舍入预算，年度成本、现金、决策、服务和结构的规则不变；`passed`与`exact_match`分报，独立环境不承诺位级完全相同。
 
 完整证据保存在[outputs/research_n2](../../outputs/research_n2/README.md)：历史失败、协议、源码快照、主结果与消融/复现分目录。大JSON使用无损gzip，`archive_manifest.json`记录压缩和解压哈希；解压归档后重新验收属于证据核验，不等于重新执行仿真。
 
