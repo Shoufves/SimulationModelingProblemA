@@ -371,7 +371,7 @@ def main():
                   script_sha256=sha(__file__), source_code_hashes=original["code_hashes"],
                   source_input_hashes=original["input_hashes"], scope=protocol["identity"])
     save(out / "run_manifest.json", record)
-    save(out / "frozen_protocol.json", protocol)
+    (out / "frozen_protocol.json").write_bytes((ROOT / args.config).read_bytes())
     (out / "diagnostic_source.py").write_bytes(Path(__file__).read_bytes())
     if equivalence is not None:
         save(out / "source_equivalence.json", equivalence)

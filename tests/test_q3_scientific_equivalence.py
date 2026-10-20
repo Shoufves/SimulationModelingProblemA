@@ -88,6 +88,7 @@ class ScientificEquivalenceTests(unittest.TestCase):
              patch.object(diagnose, "run_diagnostics", side_effect=compute) as solver:
             self.assertEqual(diagnose.main(), 0)
         self.assertEqual(solver.call_count, 1)
+        verify_receipt(out)
         evidence = eq.load(out / "source_equivalence.json")
         self.assertEqual(evidence["numeric_differences"], 2)
         self.assertEqual(evidence["candidate"]["manifest_sha256"], eq.sha(self.candidate / "run_manifest.json"))
