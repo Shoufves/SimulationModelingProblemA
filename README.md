@@ -2,9 +2,9 @@
 
 以 `只读工作区/final.md` 为唯一研究主线。本工程已将 yx 的数学与数据准备、mmj 的可运行模块和证据核验、lb 的贸易及社会扩展资料按用途合并。仅研究 A 题。
 
-**当前Q2入口已接入lb PR14固定版。** 执行 `python -B -X utf8 run.py q2` 重算新版S0及23个敏感性/初态条件；采用已核验提取输入，保留原模型与参考结果哈希。新版答题稿见 [PR14原交付](outputs/question2_delivery_20261020/问题二答题稿.md)，运行、版本边界和本轮验收见 [整合说明](docs/solutions/p2-pr14-main-integration.md)。Q1、已合并PR13的问题3及N2创新成果保留；旧Q2模型仅继续支撑它们的固定复现。显式使用旧 `q2_inputs.json` / `q2_national_design.json` 配置仍选择PR9历史入口，不能把旧结果当PR14结果。上游装机误差未过原门槛的限制不变。
+**当前Q1—Q2—Q3默认入口共用PR14口径。** Q1保留原212条指标，补正旧油电合列解释并导出实际工厂初态；Q2固定模型及24案不变；Q3在同一PR14底座重跑原187条年度路径与118个事件。见[统一口径与结论边界](docs/solutions/q123-pr14-alignment.md)、[当前Q1](outputs/q1/pr14_aligned/report.md)及[本轮验收](outputs/q123_alignment/acceptance.json)。Q3的S0通过Q2逐字段比较，但8个政策均未过原年度服务界；不能挪用旧模型的政策排名。原Q1/Q3/N2成果全部保留。显式旧配置仍可复现原版本；上游装机误差未过门槛及已接触评估身份不变。
 
-2026-10-20，P3/yx 在共同 base `500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93` 上实现问题三条件实验。六情景、H01/H02、有限政策筛选与复现说明见 [问题三交付](docs/solutions/p3-yx.md)；`run.py q3` 为入口。当前通过与否以最新运行收据和独立验收记录为准，团队评审另行完成。
+历史PR13记录：P3/yx在base `500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93` 上实现问题三条件实验，见[旧问题三交付](docs/solutions/p3-yx.md)。其复现入口为 `run.py q3 --config workflow/q3_inputs.json`；当前默认 `run.py q3` 已切换至PR14适配版。技术检查不代替团队评审。
 
 **先看路线，再选数据，再运行。** 已有问题二全国聚合条件模型包括真实历史多目标校准、年度主体与连续运行、2030/2060条件推演和三因素灵敏度。入口见[Q2候选与自检](docs/solutions/p2-lb.md)。官方统计衔接、逐厂状态及全年网络可靠性仍有限制，不能将研究候选称为官方预测；问题三状态见上方独立交付。
 

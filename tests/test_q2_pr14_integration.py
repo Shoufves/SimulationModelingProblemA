@@ -21,15 +21,17 @@ class Q2PR14IntegrationTests(unittest.TestCase):
         self.assertFalse(review['scientific_code_modified'])
         self.assertFalse(review['raw_originals_reverified'])
 
-    def test_new_default_dispatches_pr14_and_q3_keeps_its_entry(self):
+    def test_current_defaults_share_pr14_and_explicit_legacy_entries_remain(self):
         spec = importlib.util.spec_from_file_location('integrated_entry', ROOT/'run.py')
         entry = importlib.util.module_from_spec(spec); spec.loader.exec_module(entry)
         for args, expected in [
             (['q2'], ('run_q2_pr14.py', '--output-dir', 'outputs/q2_pr14/integrated')),
             (['q2', '--config', 'workflow/q2_pr14_integration.json'],
              ('run_q2_pr14.py', '--output-dir', 'outputs/q2_pr14/integrated')),
-            (['q3'], ('run_q3.py', '--config', 'workflow/q3_inputs.json', '--output-dir', 'outputs/q3/p3_yx')),
-            (['q1'], ('build_q1.py', '--output-dir', 'outputs/q1/p1_yx')),
+            (['q3'], ('run_q3_pr14.py', '--output-dir', 'outputs/q3_pr14/current')),
+            (['q1'], ('build_q1_pr14.py', '--output-dir', 'outputs/q1/pr14_aligned')),
+            (['q3', '--config', 'workflow/q3_inputs.json'], ('run_q3.py', '--config', 'workflow/q3_inputs.json', '--output-dir', 'outputs/q3/p3_yx')),
+            (['q1', '--config', 'workflow/q1_inputs.json'], ('build_q1.py', '--output-dir', 'outputs/q1/p1_yx')),
         ]:
             with self.subTest(args=args), patch.object(sys, 'argv', ['run.py', *args]), \
                     patch.object(entry, 'script', return_value=0) as call:
@@ -80,9 +82,9 @@ class Q2PR14IntegrationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             runner.within(ROOT/'tmp/q2_pr14/../../src', ROOT/'tmp/q2_pr14')
 
-    def test_only_q2_dispatch_is_changed_from_accepted_main(self):
+    def test_only_question_dispatch_is_changed_from_accepted_main(self):
         # The original launcher is a small reviewed compatibility asset, not a
-        # second entry point for users. Compare AST after removing Q2 dispatch.
+        # second entry point for users. Other workflow dispatch is unchanged.
         original = (ROOT/'vendor/q2_pr14/accepted_main_run.py').read_text('utf-8')
         actual = (ROOT/'run.py').read_text('utf-8')
         def without_q2(source):
@@ -90,7 +92,8 @@ class Q2PR14IntegrationTests(unittest.TestCase):
             for node in ast.walk(tree):
                 if isinstance(node, ast.FunctionDef) and node.name == 'main':
                     node.body = [n for n in node.body if not (
-                        isinstance(n, ast.If) and ast.unparse(n.test) == "args.command == 'q2'")]
+                        isinstance(n, ast.If) and ast.unparse(n.test) in {
+                            "args.command == 'q1'", "args.command == 'q2'", "args.command == 'q3'"})]
             return ast.dump(tree, include_attributes=False)
         self.assertEqual(without_q2(original), without_q2(actual))
 

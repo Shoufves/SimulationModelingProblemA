@@ -1,5 +1,13 @@
 # 运行与复现
 
+## 当前三问统一入口
+
+`python -B -X utf8 run.py q1` 输出 `outputs/q1/pr14_aligned/`；`run.py q2` 保持固定PR14的24案；`run.py q3` 输出 `outputs/q3_pr14/current/attempts/`，使用同一个PR14工厂、参数和S0。Q1重跑归档旧输出，Q3每次建立新attempt并更新latest。读取Q3前在独立解释器调用 `scripts/run_q3_pr14.py` 的 `verify_latest()`；新增包与旧energy_model命名空间不可在同一解释器混用。
+
+完整适配说明、科学结论变化与命令见 [三问统一口径](solutions/q123-pr14-alignment.md)。新验收脚本 `scripts/check_q123_alignment.py` 依次运行 `checks`、`results`、`accept`；`results`需要另一次Q3复算至 `tmp/q3_pr14/reproduction`。新检查将自己的收据写入 `outputs/q123_alignment`，还原旧检查脚本产生的历史收据覆盖。
+
+旧Q1显式 `--config workflow/q1_inputs.json`、旧Q3显式 `--config workflow/q3_inputs.json`；建议另指定输出目录。下文原交付时的默认路径和“不改变Q1/Q3入口”描述为历史记录，现行行为以上述入口为准。N2原协议及入口保持。
+
 ## 当前问题二：PR14整合入口
 
 `python -B -X utf8 run.py q2` 现默认执行lb PR14 `1b8f465`的24案便携复算；依赖仍为 `requirements-q2.txt`。输出在 `outputs/q2_pr14/integrated/attempts/`，`latest.json` 标识最近成功/失败，读取前用 `scripts/run_q2_pr14.py` 的 `verify_latest()` 核验。单案使用 `python -B -X utf8 scripts/run_q2_pr14.py --only S0 --output-dir outputs/q2_pr14/s0_check`。本次复算使用已审查提取输入，不重训历史，也不声称重新核验原始PDF。

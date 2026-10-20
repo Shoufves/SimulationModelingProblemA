@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "checks": {
+    "main_tests": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 104.50720280001406,
+      "arguments": [
+        "run.py",
+        "test"
+      ]
+    },
+    "alignment_tests": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 13.5308424999821,
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/alignment",
+        "-v"
+      ]
+    },
+    "n2_tests": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 10.827720100001898,
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/research",
+        "-v"
+      ]
+    },
+    "workspace_audit": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 11.355005099962,
+      "arguments": [
+        "scripts/audit_workspace.py"
+      ]
+    },
+    "formal_inputs": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 0.24492530000861734,
+      "arguments": [
+        "scripts/workflow_status.py",
+        "--check-formal-inputs"
+      ]
+    },
+    "key_scan": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 3.6023109999950975,
+      "arguments": [
+        "scripts/scan_google_keys.py"
+      ]
+    }
+  }
+}

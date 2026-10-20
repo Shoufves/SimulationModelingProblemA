@@ -29,8 +29,16 @@ def main():
     args=parser.parse_args()
     os.chdir(ROOT)
     if args.command=='test':return tests()
-    if args.command=='q3':return script('run_q3.py','--config',args.config or 'workflow/q3_inputs.json','--output-dir',args.output_dir or 'outputs/q3/p3_yx')
-    if args.command=='q1':return script('build_q1.py','--output-dir',args.output_dir or 'outputs/q1/p1_yx')
+    if args.command=='q3':
+        if args.config is None or (ROOT/args.config).resolve()==ROOT/'workflow/q3_pr14_inputs.json':
+            return script('run_q3_pr14.py','--output-dir',args.output_dir or 'outputs/q3_pr14/current')
+        return script('run_q3.py','--config',args.config,'--output-dir',args.output_dir or 'outputs/q3/p3_yx')
+    if args.command=='q1':
+        if args.config is None or (ROOT/args.config).resolve()==ROOT/'workflow/q3_pr14_inputs.json':
+            return script('build_q1_pr14.py','--output-dir',args.output_dir or 'outputs/q1/pr14_aligned')
+        if (ROOT/args.config).resolve()!=ROOT/'workflow/q1_inputs.json':
+            parser.error('Unknown Q1 config')
+        return script('build_q1.py','--output-dir',args.output_dir or 'outputs/q1/p1_yx')
     if args.command=='q2':
         if args.config is None or (ROOT/args.config).resolve()==ROOT/'workflow/q2_pr14_integration.json':
             return script('run_q2_pr14.py','--output-dir',args.output_dir or 'outputs/q2_pr14/integrated')

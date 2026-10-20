@@ -1,0 +1,17 @@
+.......................................................................................................Q1 FAILED: Input hash mismatch: cost
+......................................Q1 FAILED: [Errno 2] No such file or directory: 'D:\\仿真建模资料\\2026年仿真建模挑战赛赛题\\A题\\tmp\\tests\\tmpi0dsya1j\\missing.csv'
+..................................................Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+..........{"status": "success_conditional_candidate", "elapsed_seconds": 0.05750300001818687}
+.{"status": "success_conditional_candidate", "elapsed_seconds": 0.050666099996306}
+........................................................................Q2 PR14 integration failed: Unknown, duplicate or empty Q2 cases
+Q2 PR14 integration failed: --end-year must be within 2025..2060
+Q2 PR14 integration failed: Unknown, duplicate or empty Q2 cases
+.......{"passed": false, "status": "failed", "checks": 0, "error": "ValueError: injected audit failure"}
+{"status": "failed", "error_type": "FileNotFoundError", "error": "[Errno 2] No such file or directory: 'D:\\\\仿真建模资料\\\\2026年仿真建模挑战赛赛题\\\\A题\\\\tmp\\\\tests\\\\tmpl3cry2pv\\\\missing.json'"}
+{"status": "failed", "seconds": 0.0022017000010237098}
+..................................................................
+----------------------------------------------------------------------
+Ran 347 tests in 102.384s
+
+OK

@@ -1,5 +1,7 @@
 # 数据入口、去重及使用边界
 
+2026-10-20三问对齐：`data/catalog/q123_pr14_alignment_review.json`限定PR14提取输入的新用途，说明油/Other、抽蓄、垃圾化石排放、材料服务、初态和资金处理。`workflow/q3_pr14_inputs.json`绑定原实验协议与该审查；不修改原九子集契约、不新增独立观测、不重签PDF原件核验。当前Q1接口在 `outputs/q1/pr14_aligned/`，由实际PR14工厂导出；旧Q1记录和指标原值保留。详见[统一说明](solutions/q123-pr14-alignment.md)。
+
 2026-10-20 PR14整合：新增 `data/catalog/q2_pr14_integration_review.json` 登记固定PR14提交的逐文件原路径、Git blob、SHA256和用途。`data/processed/q2_delivery/` 是上游已核验提取输入/设计/事后参考路径；本次用于同一问题二的便携复算，不增加独立历史观测，也不重签原件核验。原九子集、Q1/Q3/N2用途契约保持。原数据来源索引随历史证据保留，未导入的完整原件须到固定PR14目录核查；详见 [整合说明](solutions/p2-pr14-main-integration.md)。
 
 2026-10-20 V10补充：Q2专项准入共26份来源、511条观测；新增两份调度方法原件只提供方法动机。条件非电残差和初始在建队列属于研究推断，八技术发电及装机目标共享上游数据，不能计作新增独立观测。详见[V10结构修复](solutions/p2-lb-review10-structure.md)。

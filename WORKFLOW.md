@@ -1,6 +1,6 @@
 # final实施工作流
 
-当前接线：已合并PR13基础上的 `run.py q2` 默认调用固定PR14的24案便携复算；Q3仍复现其已验收的旧Q2基础，N2保留原固定PR14研究协议。两个S0属于不同版本，跨问不能直接相减当政策效果。新版Q2科学误差、假设与五类记录见 [整合说明](docs/solutions/p2-pr14-main-integration.md)，未将执行通过等同全国预测/装机精度验收通过。下表原Q2模块行保留历史研究身份。
+当前接线：`run.py q1/q2/q3`已形成固定PR14口径链。Q1增加分类/初态交接，Q2原24案不变，Q3沿原实验设计重跑187条年度路径及118个连续事件，S0逐字段与Q2一致。见[统一说明](docs/solutions/q123-pr14-alignment.md)和[验收证据](outputs/q123_alignment/acceptance.json)。8个政策均未过原年度服务门槛；H02仍为零，不强行保留旧排名。历史Q1/Q3及N2结果原字节保留；下表沿用历史研究进度，不替代当前验收。全国精度限制、已接触评估和人工审批边界不变。
 
 研究依据为[只读final](只读工作区/final.md)，执行细节见[实施路线](docs/IMPLEMENTATION_ROADMAP.md)。原mmj的W0—W9状态机只描述其局部模块，不代表合并主线整体验收。2026-10-20本分支Q2进展见[review(9)修复结果](docs/solutions/p2-lb-review9-results.md)，工程通过、经验拟合和团队审批分别判断。
 
