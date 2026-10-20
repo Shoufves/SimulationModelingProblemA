@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "upstream_commit": "1b8f465783afe7505c8d4e65ec43ada18c311daf",
+  "base": "dba50210dcf0636e9b54e4137077ae710070eb2e",
+  "q2_cases": 24,
+  "q2_numeric_fields": 99528,
+  "q2_max_reference_difference": 0.00390625,
+  "q2_reference_comparison": "Unchanged upstream per-field tolerances; see each difference and bound",
+  "repository_tests": 347,
+  "n2_tests": 22,
+  "upstream_runner_tests_log": "upstream_runner_tests.log",
+  "q3_path_regression": {
+    "passed": true,
+    "cases": [
+      {
+        "scenario": "S0",
+        "years": 36,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "scenario": "SP",
+        "years": 36,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "scenario": "ST",
+        "years": 36,
+        "max_absolute_difference": 0.0
+      }
+    ],
+    "numeric_fields": 8424,
+    "failures": [],
+    "statement": "Recomputed full 2025-2060 S0/SP/ST with the unchanged accepted Q3 model; H01/H02/policy full batches were not rerun."
+  },
+  "protected_old_files": 2755,
+  "clean_directory_reproduction": {
+    "passed": true,
+    "cases": [
+      "S0",
+      "sensitivity_gdp_growth_delta_1"
+    ],
+    "no_git_directory": true,
+    "pythonhashseed": "81739"
+  },
+  "historical_training_rerun": false,
+  "raw_originals_reverified": false,
+  "q1_recomputed": false,
+  "full_q3_experiment_batch_rerun": false,
+  "n2_77_paths_rerun": false,
+  "scientific_thresholds_all_passed": false,
+  "team_approval_granted": false,
+  "evidence_hashes": {
+    "audit.log": "00b4f90fabe8b3f88bdd3348240de7486c27e5b0f0eb671589a4b2107641c1b3",
+    "checks.json": "3f3b14e69063a2e1357fb711da5c68ccf26ff991a745cd93dfaffdc07c8a564b",
+    "clean_delivery.json": "c255beb4ba4c4ce40ad2fa6989a80db752700a5b0db1b007082c05a999fe70db",
+    "clean_delivery.log": "a8c71155e98cd244368df48ee6823b7c11e004f96514dd1a192d0e29e633a17a",
+    "formal_inputs.log": "5da9e52f12f5a13032091f0101f886b08fc98e3ff44ded4148416f3f2fa4e8f2",
+    "key_scan.log": "26dc2866e0df184f6af103f4e94119f22eb28cc3f7c7df2de71a157bf8f61c47",
+    "n2.log": "031dc535281ae6530f4de0ff4418672d54132a5b68f2d9760ea23c101cce5d77",
+    "n2_research_tests.json": "031dc535281ae6530f4de0ff4418672d54132a5b68f2d9760ea23c101cce5d77",
+    "n2_research_tests.log": "ac2dfa10961a2946c4d22d1633d12fa7f5d1cce3536780c8d5db577184cefe68",
+    "preservation.json": "c9dc0f7cbadf9dc26124f0107f29d6608a843cb5fb9cd604962f047736e63ade",
+    "q3_paths.log": "62d2ee8ecde89b08c3d8a70dd5eeb88fdbd48c3f143a11af2601d83a2000efc0",
+    "q3_path_regression.json": "015a6c150610079e93ace0dcdb51f95d2957d5610d9be8e99c40706e680fda7e",
+    "README.md": "1b1327a7a1dd87ef2da420708ebad7621468c7d7858a115ce23939baaa75c578",
+    "tests.json": "8c8af9eeb92483616894aee754fb139d1bddcab7fb68064c79825efef56605cf",
+    "tests.log": "ca43a0422ecb0a8b0b0fcfeeb4b13eb19750aa46f328aa538bfea2ce0fc7324d",
+    "upstream_runner_tests.log": "4a13570c7eff1b90df15f85bc9490f3cc8cfe23c10e5dde12798bf1e4147c102",
+    "workspace_audit.json": "ee30454b05b9c6c1b91b2af92ed57b388699d290abea3706850339c5ecd150fe"
+  },
+  "q2_receipt_sha256": "de7263891ace6744b361132b6ea172109789c4d18629d7be26788bfa019d8009",
+  "checker_sha256": "8d63ce4e79c9fc529bd2ffdc7a4b4b2cc0c4d546ca0a4136a7c81dbdff2dd8d2"
+}

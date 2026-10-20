@@ -32,6 +32,8 @@ def main():
     if args.command=='q3':return script('run_q3.py','--config',args.config or 'workflow/q3_inputs.json','--output-dir',args.output_dir or 'outputs/q3/p3_yx')
     if args.command=='q1':return script('build_q1.py','--output-dir',args.output_dir or 'outputs/q1/p1_yx')
     if args.command=='q2':
+        if args.config is None or (ROOT/args.config).resolve()==ROOT/'workflow/q2_pr14_integration.json':
+            return script('run_q2_pr14.py','--output-dir',args.output_dir or 'outputs/q2_pr14/integrated')
         national_configs={ROOT/'workflow/q2_national_design.json',ROOT/'workflow/q2_inputs.json'}
         if args.config is None or (ROOT/args.config).resolve() in national_configs:
             if args.config and (ROOT/args.config).resolve()==ROOT/'workflow/q2_inputs.json':

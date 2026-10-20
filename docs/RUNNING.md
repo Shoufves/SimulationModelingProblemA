@@ -1,5 +1,11 @@
 # 运行与复现
 
+## 当前问题二：PR14整合入口
+
+`python -B -X utf8 run.py q2` 现默认执行lb PR14 `1b8f465`的24案便携复算；依赖仍为 `requirements-q2.txt`。输出在 `outputs/q2_pr14/integrated/attempts/`，`latest.json` 标识最近成功/失败，读取前用 `scripts/run_q2_pr14.py` 的 `verify_latest()` 核验。单案使用 `python -B -X utf8 scripts/run_q2_pr14.py --only S0 --output-dir outputs/q2_pr14/s0_check`。本次复算使用已审查提取输入，不重训历史，也不声称重新核验原始PDF。
+
+`python -B -X utf8 scripts/check_q2_pr14_integration.py` 运行主干测试、资料/准入/密钥检查、三条Q3完整路径、N2研究测试和PR14入口测试，收据写入 `outputs/q2_pr14_review/`，保留旧收据原字节。问题1、问题3和N2原入口不变。旧Q2配置仍选择PR9路线，供历史复现；下方“P2/lb全国聚合条件模型”一节是该旧路线说明。采用材料与原件复核边界见 [整合说明](solutions/p2-pr14-main-integration.md)。
+
 当前 Q1 采用 lb 主线与 mmj 增量整合，详见[整合说明](solutions/p1-yx-integration.md)。`python -B -X utf8 run.py q1` 默认写入 `outputs/q1/p1_yx/`，保留 lb 原候选产物。完整交付核验仍运行 `python -B -X utf8 scripts/review_q1_delivery.py`，本次证据写入 `outputs/q1_review/lb_mmj_integration/`；其中两次 Q1 分别写入 `p1_yx`、`yx_reproduction`。显式重建 `scripts/prepare_q1_review.py` 会重新核对 mmj 已用 IRENA 原文再重建六条成本参数，并拒绝未经重新审查的 lb 原输入变化。
 
 在A题目录执行。Python 3.11及以上；本轮使用本机捆绑Python 3.12.14。核心模型和测试主要使用标准库；附件需要openpyxl，yx/lb离线提取需要pandas/numpy/lxml/pypdf/pdfplumber。

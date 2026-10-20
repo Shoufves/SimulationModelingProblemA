@@ -1,5 +1,7 @@
 # 数据入口、去重及使用边界
 
+2026-10-20 PR14整合：新增 `data/catalog/q2_pr14_integration_review.json` 登记固定PR14提交的逐文件原路径、Git blob、SHA256和用途。`data/processed/q2_delivery/` 是上游已核验提取输入/设计/事后参考路径；本次用于同一问题二的便携复算，不增加独立历史观测，也不重签原件核验。原九子集、Q1/Q3/N2用途契约保持。原数据来源索引随历史证据保留，未导入的完整原件须到固定PR14目录核查；详见 [整合说明](solutions/p2-pr14-main-integration.md)。
+
 2026-10-20 V10补充：Q2专项准入共26份来源、511条观测；新增两份调度方法原件只提供方法动机。条件非电残差和初始在建队列属于研究推断，八技术发电及装机目标共享上游数据，不能计作新增独立观测。详见[V10结构修复](solutions/p2-lb-review10-structure.md)。
 
 先查 `data/catalog/datasets_unified.csv`，再看对应来源与final限制。`data/catalog/sources_unified.json` 保留原登记记录、原ID、命名空间、原件哈希、摘录证据和迁移后的路径。`source_key` 区分yx、mmj和lb各批资料，不能仅凭S01等局部编号关联。

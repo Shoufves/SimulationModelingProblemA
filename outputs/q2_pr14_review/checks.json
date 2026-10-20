@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "checks": {
+    "tests": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 89.63432040001499,
+      "command": [
+        "run.py",
+        "test"
+      ],
+      "log": "tests.log"
+    },
+    "audit": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 8.860840999986976,
+      "command": [
+        "run.py",
+        "audit"
+      ],
+      "log": "audit.log"
+    },
+    "formal_inputs": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 0.16482150001684204,
+      "command": [
+        "scripts/workflow_status.py",
+        "--check-formal-inputs"
+      ],
+      "log": "formal_inputs.log"
+    },
+    "key_scan": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 2.8709420999512076,
+      "command": [
+        "scripts/scan_google_keys.py"
+      ],
+      "log": "key_scan.log"
+    },
+    "q3_paths": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 34.866864599986,
+      "command": [
+        "scripts/check_q2_pr14_integration.py",
+        "--q3-only"
+      ],
+      "log": "q3_paths.log"
+    },
+    "n2": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 7.7670310999965295,
+      "command": [
+        "scripts/check_n2_implementation.py",
+        "--output",
+        "tmp/q2_integration/n2_check"
+      ],
+      "log": "n2.log"
+    },
+    "upstream_runner_tests": {
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 3.7947227000258863,
+      "command": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "D:\\仿真建模资料\\2026年仿真建模挑战赛赛题\\A题\\tmp\\q2_pr14\\tests_20261020T084132020649Z\\tests",
+        "-p",
+        "test_q2_delivery_runners.py"
+      ],
+      "log": "upstream_runner_tests.log"
+    },
+    "preservation": {
+      "passed": true,
+      "checked_files": 2755,
+      "mismatches": []
+    }
+  },
+  "q2_24_cases_receipt": "See outputs/q2_pr14/integrated/latest.json"
+}

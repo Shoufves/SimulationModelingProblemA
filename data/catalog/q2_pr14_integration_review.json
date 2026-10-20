@@ -1,0 +1,1017 @@
+{
+  "upstream_commit": "1b8f465783afe7505c8d4e65ec43ada18c311daf",
+  "integration_base": "dba50210dcf0636e9b54e4137077ae710070eb2e",
+  "scope": "Q2 unchanged PR14 portable model; Q1/Q3/N2 retain their accepted baselines",
+  "scientific_code_modified": false,
+  "raw_originals_reverified": false,
+  "files": [
+    {
+      "upstream_path": "data/processed/q2_delivery/manifest.json",
+      "path": "data/processed/q2_delivery/manifest.json",
+      "git_blob": "1dfa9f23929cbf7dc50b699fd846f3860322b4cc",
+      "sha256": "e6938053118425baf4cdf6d06f159efa5ff1b3fcb80118240bcda2dded6487ed",
+      "bytes": 32507,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/parsed_inputs.json",
+      "path": "data/processed/q2_delivery/parsed_inputs.json",
+      "git_blob": "af14e81c9d3419d361cc6e7b68b28208794688a5",
+      "sha256": "a37e246a279f65a1f5d074111eebabe657aac487b52ea2f1b0128da81460dfbe",
+      "bytes": 951453,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/q2_design.json",
+      "path": "data/processed/q2_delivery/q2_design.json",
+      "git_blob": "54bf400fbadbd25fd957763e8860092ab845ce1b",
+      "sha256": "4cefaca1da252b9110dc991df0993e2827f03854ef169ba21f9d6c2d34b257db",
+      "bytes": 2495,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/S0.json",
+      "path": "data/processed/q2_delivery/reference_paths/S0.json",
+      "git_blob": "156fc0d51588689e743f0f4d5eb1123de4d35748",
+      "sha256": "93b2090fab4a748971e2d71a7a00e80bfcdcaddd996cb1bf5da0d9a15ae2590a",
+      "bytes": 193423,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/S0_authority100.json",
+      "path": "data/processed/q2_delivery/reference_paths/S0_authority100.json",
+      "git_blob": "961c022731a5d353c12628133b47e05728b46b81",
+      "sha256": "7fe809d1dc21aa0f158df2031d6775be29490a47f4d1b4179edd0f7de599bb85",
+      "bytes": 193436,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/S0_authority5.json",
+      "path": "data/processed/q2_delivery/reference_paths/S0_authority5.json",
+      "git_blob": "ef1df880916deed4ec8b935dd4af8b0e31e93d6b",
+      "sha256": "a8c12eaa30ca74921bd8d735496a7695a87f75c7100cb863c13512dabd87700a",
+      "bytes": 193451,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/S0_net55.json",
+      "path": "data/processed/q2_delivery/reference_paths/S0_net55.json",
+      "git_blob": "a3b2d6749d8dc20843c860878df638c1d4650a5d",
+      "sha256": "753c733acb1b2124fdd3088e27825d79a4261badce302d61c25d40566a686ece",
+      "bytes": 193429,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/opening_double_arrears.json",
+      "path": "data/processed/q2_delivery/reference_paths/opening_double_arrears.json",
+      "git_blob": "ce59affb9f0f47530d4bf791639011a9eb82a4c9",
+      "sha256": "a610bf81311973d1cfb075ac8cf8d7815f6a1aa5906e8fcc8857d538d7084dd7",
+      "bytes": 193452,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/opening_high_cash.json",
+      "path": "data/processed/q2_delivery/reference_paths/opening_high_cash.json",
+      "git_blob": "2c506b1ebad3ece130fb661fbeb7ce5f4e21ee07",
+      "sha256": "c793bbb28cfdd93d6f417359574512d012430a324768161b033ab71e3ce3c064",
+      "bytes": 193460,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/opening_high_debt.json",
+      "path": "data/processed/q2_delivery/reference_paths/opening_high_debt.json",
+      "git_blob": "c0fb4623b67c96bf511b482da7756723e9c83919",
+      "sha256": "6e9a6b9f2795c81b186785bd8e7e7aab86d4fbb58ea2f97d84954473140f31f9",
+      "bytes": 193360,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/opening_large_queue.json",
+      "path": "data/processed/q2_delivery/reference_paths/opening_large_queue.json",
+      "git_blob": "f8bee5abf12e6701588a1b0f686192c5c6d8575f",
+      "sha256": "8225aad9b1c73241768c12f331533bce8f424a0d1da30b222e4de9f88cc6d70c",
+      "bytes": 192986,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/opening_low_cash.json",
+      "path": "data/processed/q2_delivery/reference_paths/opening_low_cash.json",
+      "git_blob": "57cefaf7a5a4855afeae3beb444def64ee988b64",
+      "sha256": "bd3d7dc2be58835fe5f364e6b8ff1f759d7da8cacc8f26f99463132f4363e404",
+      "bytes": 193428,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/opening_low_debt.json",
+      "path": "data/processed/q2_delivery/reference_paths/opening_low_debt.json",
+      "git_blob": "4e657b40ab1f9a7bb55e158fd7618505648f69f7",
+      "sha256": "2b55590088daa0ae967ae043e275926d3983bec407508cd16ebbca761d0f9fee",
+      "bytes": 193487,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/opening_no_arrears.json",
+      "path": "data/processed/q2_delivery/reference_paths/opening_no_arrears.json",
+      "git_blob": "a16bed2e3973ac2602fa900946612fd26f3c864c",
+      "sha256": "b0858acb4c43c143858c9a7bb60a1fa9482c767d8344b9d6e09a0c16e3f8338d",
+      "bytes": 193340,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/opening_no_queue.json",
+      "path": "data/processed/q2_delivery/reference_paths/opening_no_queue.json",
+      "git_blob": "6da461c702d56ea8fe5507ca34cb2e7a5d02020e",
+      "sha256": "4c728529440b2a5144ca867e9f0bdbb3c70ad8b114e89e620f9a87ad6ea8c57d",
+      "bytes": 192822,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/opening_older.json",
+      "path": "data/processed/q2_delivery/reference_paths/opening_older.json",
+      "git_blob": "27e1f3a59cb0312aa870bb35bc9b9c916c2d8d13",
+      "sha256": "ff4c28920e385ab1d4ef46d663e20f47fea79cc25febd93800ad4788e674f5ce",
+      "bytes": 193415,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/opening_younger.json",
+      "path": "data/processed/q2_delivery/reference_paths/opening_younger.json",
+      "git_blob": "a2714704fa4ba00c896ee8964adb723ff80437e5",
+      "sha256": "de342c68cc002a5429ec5176de8160d20626ff3fe4e665c74f7b0225b32382c1",
+      "bytes": 193490,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/sensitivity_carbon_price_multiplier_0.json",
+      "path": "data/processed/q2_delivery/reference_paths/sensitivity_carbon_price_multiplier_0.json",
+      "git_blob": "a3b9914df9fee3e40969753bade111380a2a910f",
+      "sha256": "45c242602e3a4737033dcdc987304d7f980cb8eb385a4c674157d4ee98e7c841",
+      "bytes": 193438,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/sensitivity_carbon_price_multiplier_1.json",
+      "path": "data/processed/q2_delivery/reference_paths/sensitivity_carbon_price_multiplier_1.json",
+      "git_blob": "203f8f67aa4104beb5ccbae49ba6f5ee17ca363b",
+      "sha256": "af54b254de00fa72dea0096975f83829be168135101a4f5e6b78af43522479dd",
+      "bytes": 193396,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/sensitivity_cost_decline_delta_0.json",
+      "path": "data/processed/q2_delivery/reference_paths/sensitivity_cost_decline_delta_0.json",
+      "git_blob": "fe798346f22798a8da55777585d14ce53a3f287c",
+      "sha256": "25e9035e5d4ae1a0be5fd82d58eb704d8eb990a5c10339ee3a33ca871ae04822",
+      "bytes": 193418,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/sensitivity_cost_decline_delta_1.json",
+      "path": "data/processed/q2_delivery/reference_paths/sensitivity_cost_decline_delta_1.json",
+      "git_blob": "4316e133f80dee29cbf4d87c272a99e52f002493",
+      "sha256": "71e34e18c551a9cf5be276b2efc2375af90754172617da68544b7803b5914641",
+      "bytes": 193436,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/sensitivity_fuel_price_multiplier_0.json",
+      "path": "data/processed/q2_delivery/reference_paths/sensitivity_fuel_price_multiplier_0.json",
+      "git_blob": "82b25320947f2b07faa4a21a535e6299673ffc09",
+      "sha256": "71f6695112a0a8a5f29a3740647ff2173ffed65ee4505457761b0d3e1c715173",
+      "bytes": 193262,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/sensitivity_fuel_price_multiplier_1.json",
+      "path": "data/processed/q2_delivery/reference_paths/sensitivity_fuel_price_multiplier_1.json",
+      "git_blob": "c3289e3411f7ce13acd6b012b698ffc20d554dd4",
+      "sha256": "d8b1f3b8297f744f0fdbc9745c32480525179f478b5beb4e0187fe598a803374",
+      "bytes": 193762,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/sensitivity_gdp_growth_delta_0.json",
+      "path": "data/processed/q2_delivery/reference_paths/sensitivity_gdp_growth_delta_0.json",
+      "git_blob": "b52d5dd2c3fd5522d259b6766eb19961b20b63a6",
+      "sha256": "767586a5b6458eb3b6297212f7734f0fa571371cad39d9eb09cabb4d64f98016",
+      "bytes": 194608,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/sensitivity_gdp_growth_delta_1.json",
+      "path": "data/processed/q2_delivery/reference_paths/sensitivity_gdp_growth_delta_1.json",
+      "git_blob": "f40893a878d87b3eb22bd9b2960ec2d3412aa06c",
+      "sha256": "a2a70e35e0a9f05e64ca3eb2560adfbd650e54c5f80210a792920843b0ecdfc9",
+      "bytes": 193319,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/sensitivity_removals_multiplier_0.json",
+      "path": "data/processed/q2_delivery/reference_paths/sensitivity_removals_multiplier_0.json",
+      "git_blob": "e4f277fc412962032c13835133c7e2d96d3e4cfc",
+      "sha256": "577acc3c18a3999dc87eb3953b0609e46bcaca00be35894b409e2c6ba9f6a159",
+      "bytes": 193442,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/processed/q2_delivery/reference_paths/sensitivity_removals_multiplier_1.json",
+      "path": "data/processed/q2_delivery/reference_paths/sensitivity_removals_multiplier_1.json",
+      "git_blob": "5ca8169f78e9fd8536c5924e17b3ad8856ba82c6",
+      "sha256": "576546346796b5bcd8c398ae744e6d9f4e202ebd159719a4f8f3954680f1d631",
+      "bytes": 193452,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "data/raw/q2_bioeconomics/extract_evidence.py",
+      "path": "vendor/q2_pr14/data/raw/q2_bioeconomics/extract_evidence.py",
+      "git_blob": "6e537f753946da198a84cb3f6d560b4c35875459",
+      "sha256": "895d2ce514f2a785310fad504e437ad3de43cef242d3f73bad038e4f833acc53",
+      "bytes": 5701,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "data/raw/q2_fiscal/build_fiscal.py",
+      "path": "vendor/q2_pr14/data/raw/q2_fiscal/build_fiscal.py",
+      "git_blob": "8f23244dca9eb71f5cb5e06cfb890b3ac430e5d6",
+      "sha256": "70698d683822763ef658dcda5279dc38b30b247e848ebe94b6e9ad404d4dd65e",
+      "bytes": 9217,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "data/raw/q2_waste_boundary/extract_nea_briefing.py",
+      "path": "vendor/q2_pr14/data/raw/q2_waste_boundary/extract_nea_briefing.py",
+      "git_blob": "47a31010d78e27972f0fc00350db770e175bbe1f",
+      "sha256": "50c49e6304698c9933b01f7ccc1ffaf0ab87a19e3428e7f3cced346b7062570f",
+      "bytes": 1989,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "data/raw/q2_waste_fossil_ef/research.py",
+      "path": "vendor/q2_pr14/data/raw/q2_waste_fossil_ef/research.py",
+      "git_blob": "e47878f354e845fce270f0a011edb6b0832afc45",
+      "sha256": "baf87b2d6aed12b44cc5bdf1ea00e4cbff334cf50dceaab16f7405aa90c7cdeb",
+      "bytes": 3653,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "docs/solutions/PR14_REVIEW10_RESPONSE.md",
+      "path": "docs/solutions/PR14_REVIEW10_RESPONSE.md",
+      "git_blob": "52c664b588b52dd537c5399f7b7186563d50e3d2",
+      "sha256": "6d8a9affe2a340476c180de813c79e4466795e80b3fea974e98838c0e81d51bd",
+      "bytes": 2773,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "docs/solutions/QUESTION2_DELIVERY_20261020.md",
+      "path": "docs/solutions/QUESTION2_DELIVERY_20261020.md",
+      "git_blob": "b3be3e38c89c1eacffce9a94991cf7f6a9e47642",
+      "sha256": "b15730008465e7b58f89e31b07f0ad33874823adf44f9ec841708a8525eaddda",
+      "bytes": 4579,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "docs/solutions/QUESTION2_PR_HANDOFF_20261020.md",
+      "path": "docs/solutions/QUESTION2_PR_HANDOFF_20261020.md",
+      "git_blob": "9e23b389655d52874de88ce1ace3bb9152d41132",
+      "sha256": "98b5cf53d7329661e257ef192eb43fcc73aeea7a46684675f7b59294558fbde8",
+      "bytes": 5364,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/q2_current_delivery/20261020T004752442611Z/design.json",
+      "path": "outputs/q2_current_delivery/20261020T004752442611Z/design.json",
+      "git_blob": "e30155152b58cef30049da88539814926a9333a9",
+      "sha256": "2c9b976be12dec66efc1e7e1dcea2ca9d16f91aeb950fb90f96a53743983fb00",
+      "bytes": 11011,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/q2_current_delivery/20261020T004752442611Z/results.json",
+      "path": "outputs/q2_current_delivery/20261020T004752442611Z/results.json",
+      "git_blob": "e15cc539aba4bcafa8b0028eb6975d103dea35a9",
+      "sha256": "d199a8da52f1c5d7d4394b7bb342d28443f0081baafa16a0a307deacdc41c062",
+      "bytes": 823367,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/q2_current_delivery/20261020T004752442611Z/source_snapshot.json",
+      "path": "outputs/q2_current_delivery/20261020T004752442611Z/source_snapshot.json",
+      "git_blob": "b86da8349f90ba8b4b35843e130d79622064e320",
+      "sha256": "c77958372275584b9f53133475a315e2a960e6ff036892b165aefa38136abaf6",
+      "bytes": 26779,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/q2_current_delivery/20261020T004752442611Z/status.json",
+      "path": "outputs/q2_current_delivery/20261020T004752442611Z/status.json",
+      "git_blob": "8560290bfa3f175e17480b96a3b8dcecc79db3fe",
+      "sha256": "50855e9dea453c5ae5cea0ab91ea1e85d15d0d0c0a3d31e94dd27b08cd13dcf3",
+      "bytes": 121,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/q2_current_delivery/20261020T004752442611Z/targets.csv",
+      "path": "outputs/q2_current_delivery/20261020T004752442611Z/targets.csv",
+      "git_blob": "9dd64e9ef4d74f08f0b1740c3f214df34fc26418",
+      "sha256": "3e100da3e2f198d23fe4a565c976a0463df1d70ec21582e03b0466a7eddf935b",
+      "bytes": 363168,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/q2_revenue_recalibration/20261020T001729046749Z/design.json",
+      "path": "outputs/q2_revenue_recalibration/20261020T001729046749Z/design.json",
+      "git_blob": "262e15be8c73f8536b5a5f417efb0005440c977e",
+      "sha256": "c8c10fad5479f4e31831ffd1da85c10e208c073d9dca07ab5ac72f6e8fecac0d",
+      "bytes": 4547,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/q2_revenue_recalibration/20261020T001729046749Z/results.json",
+      "path": "outputs/q2_revenue_recalibration/20261020T001729046749Z/results.json",
+      "git_blob": "fe0537328bf2b007e85aa114d2cfe0c8f6f6cd0b",
+      "sha256": "77aa53122fcadcf846f911fe27527f3beeacb69c3eaf0c9fd9407057e5f18ba4",
+      "bytes": 334293,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/q2_revenue_recalibration/20261020T001729046749Z/training_selection.json",
+      "path": "outputs/q2_revenue_recalibration/20261020T001729046749Z/training_selection.json",
+      "git_blob": "c6c77e1d3654fba472cd7c9debca638a7b1f097e",
+      "sha256": "432bef3792c4af560b6191e72af7b879f60e4b2eab18abb0b09128d30c314b3a",
+      "bytes": 17355,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/q2_revenue_recalibration/20261020T001729054583Z/design.json",
+      "path": "outputs/q2_revenue_recalibration/20261020T001729054583Z/design.json",
+      "git_blob": "5f927a4a014981afc224075ddf1faa077539a8fd",
+      "sha256": "890d884ffc9e3a24b2266071fd2173496f53e3394115fd856a50a2386c28ce05",
+      "bytes": 4547,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/q2_revenue_recalibration/20261020T001729054583Z/results.json",
+      "path": "outputs/q2_revenue_recalibration/20261020T001729054583Z/results.json",
+      "git_blob": "a5bf5e86dce3254f5d422887a8d3376485b914f4",
+      "sha256": "f7195eed7fa5ae04a20466c16a1168296e3b6d10ada246e5eb97b7633377ff77",
+      "bytes": 334316,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/q2_revenue_recalibration/20261020T001729054583Z/training_selection.json",
+      "path": "outputs/q2_revenue_recalibration/20261020T001729054583Z/training_selection.json",
+      "git_blob": "8939d642f27d6957418147b19bd68ac39f0f6add",
+      "sha256": "5511ae53743492642a0d0d0079269924500ca0ee649901d4f160922fabe47df2",
+      "bytes": 17356,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/AI工具使用详情说明.md",
+      "path": "outputs/question2_delivery_20261020/AI工具使用详情说明.md",
+      "git_blob": "e2f58c396d90d1d04cd448c076ebdf7590e3e074",
+      "sha256": "98db433e86c561f5d0c1a0bd0f58d7aa154a533594b9093688d3cb58874592aa",
+      "bytes": 2961,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/AI工具使用详情说明.pdf",
+      "path": "outputs/question2_delivery_20261020/AI工具使用详情说明.pdf",
+      "git_blob": "834e6c8e28308ff6c807857beb008b3d3e6345c5",
+      "sha256": "2c8018179b12c2124cf505b059171cef4f565518bcef74924afbd383bb53d50e",
+      "bytes": 104514,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/answer_manifest.json",
+      "path": "outputs/question2_delivery_20261020/answer_manifest.json",
+      "git_blob": "11a0b543a55e5fad4e1c9c7b9acd8dcf8da0ac61",
+      "sha256": "fe2e9de1bbaecfefdb4215cee4db1e86f60b0911558ec7bd42d0d630b481bd7d",
+      "bytes": 14619,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/baseline_targets.csv",
+      "path": "outputs/question2_delivery_20261020/baseline_targets.csv",
+      "git_blob": "a471ae8dbcb15d5a6af1ea197b28d9b315edb994",
+      "sha256": "26e3ac5a95da430b2a7d3d7ff9982c08baf21c7bcca059b6d5955b00a454ee3a",
+      "bytes": 6774,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/figures/01_现状.png",
+      "path": "outputs/question2_delivery_20261020/figures/01_现状.png",
+      "git_blob": "de6b8ec11375f314ecab49257bc326ccdad4b790",
+      "sha256": "c3eb433fbfdd2e80963f963a77f11e6c4ff46191b25be9a285e784befd96dbaa",
+      "bytes": 71570,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/figures/01_现状.svg",
+      "path": "outputs/question2_delivery_20261020/figures/01_现状.svg",
+      "git_blob": "86267a436f6a28a6da64a4ec328f0a94c0c526c7",
+      "sha256": "d3731ba5d9881bf4a6ed12b4a08062cef9ec6b54e1aa07382d8f1397bde9a6af",
+      "bytes": 53408,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/figures/02_历史验证.png",
+      "path": "outputs/question2_delivery_20261020/figures/02_历史验证.png",
+      "git_blob": "99edcafedea46d8a4d9002e9e357c716fa030544",
+      "sha256": "c40488719b4887464ef77970ad21b46c5010a550f265f405e4126b220c59a3c9",
+      "bytes": 139881,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/figures/02_历史验证.svg",
+      "path": "outputs/question2_delivery_20261020/figures/02_历史验证.svg",
+      "git_blob": "483819649e8476238e842c353ab5b90411f8e1cf",
+      "sha256": "4eb0744d60a54787c59349a1f87e4c127aef0b2322960eb7ac2b889c2bba8f8c",
+      "bytes": 71626,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/figures/03_基准路径.png",
+      "path": "outputs/question2_delivery_20261020/figures/03_基准路径.png",
+      "git_blob": "6664cb284b2da3bd185dcf0bdef5bd5543a634bc",
+      "sha256": "5fc63369678a49da0200342331c47e9865abfe3055e21b7fc206778d3fb56098",
+      "bytes": 114411,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/figures/03_基准路径.svg",
+      "path": "outputs/question2_delivery_20261020/figures/03_基准路径.svg",
+      "git_blob": "09b137cf7d394bc8d49fe72b92790b1b9c8c79d7",
+      "sha256": "9ecb2c5dc8bfddeba96113cf500469de6bd5c8118262b5cf8f432a766d5d1608",
+      "bytes": 80959,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/figures/05_必选灵敏度.png",
+      "path": "outputs/question2_delivery_20261020/figures/05_必选灵敏度.png",
+      "git_blob": "123822c55a50804f44ae2def8363b72f5836280a",
+      "sha256": "3c2533f4fde8860f1ad5625c938c839aa0a7463c84513aa938e898b52182598e",
+      "bytes": 46368,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/figures/05_必选灵敏度.svg",
+      "path": "outputs/question2_delivery_20261020/figures/05_必选灵敏度.svg",
+      "git_blob": "4e4083602b8e36c72e7e85ce21547c65b142448f",
+      "sha256": "435ae3dfb6a1a588ad390fb0c443570b7b411f6f1ce0ee81f83469c16386984a",
+      "bytes": 54100,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/figures/07_分技术误差.png",
+      "path": "outputs/question2_delivery_20261020/figures/07_分技术误差.png",
+      "git_blob": "9abfa671ae9e6c7f47ec3add3c321ca6f12413c0",
+      "sha256": "6de6b51d05af031c102f943c38e9c881c218a935780903d1317973dcc7ab1a37",
+      "bytes": 36458,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/figures/07_分技术误差.svg",
+      "path": "outputs/question2_delivery_20261020/figures/07_分技术误差.svg",
+      "git_blob": "0a1de1097c6f090b4008f51cc10e6c90d289b434",
+      "sha256": "51cb258722a57b966ff5929b5de3fecb3e369f4d3b58e6feb33f4ed424e82db7",
+      "bytes": 50048,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/final_delivery_validation.json",
+      "path": "outputs/question2_delivery_20261020/final_delivery_validation.json",
+      "git_blob": "a82b8d3a718450eaaa5cee5351d3fa3008e5334e",
+      "sha256": "03c2d6397ce7ab3d27f6e7a6fe8dc91bcbcee40195a3066704b7e5c3abed332a",
+      "bytes": 2098,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/historical_validation.csv",
+      "path": "outputs/question2_delivery_20261020/historical_validation.csv",
+      "git_blob": "5d864956f0601d1a98038f14e08029c4af1a4941",
+      "sha256": "4f0450dc8be63f0ce75b9389516f57d042df6a401356d112789f31570f52acad",
+      "bytes": 4088,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/package_validation.json",
+      "path": "outputs/question2_delivery_20261020/package_validation.json",
+      "git_blob": "57fa9c68b668c565bebe90b712a008be36e73953",
+      "sha256": "77d1026b8f2e38b93b83c7e6f4083e10d5eaa71fb5dfaf567d49c17c2491eab7",
+      "bytes": 4021,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/q2_summary.csv",
+      "path": "outputs/question2_delivery_20261020/q2_summary.csv",
+      "git_blob": "b99f689e7a233044f5fa881210069cd96abb1f17",
+      "sha256": "5dbfc926e2909012f3710632521d9f6797b8a7381499d8a23899eec7a7462d5e",
+      "bytes": 6756,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/sensitivity_summary.csv",
+      "path": "outputs/question2_delivery_20261020/sensitivity_summary.csv",
+      "git_blob": "ded5a7d008257f96c169fae4bc2d715356bdb827",
+      "sha256": "f65747c783ffd98cd90d9ff2da491f4f7bf19e73b723ec9ced375efd9409fd38",
+      "bytes": 1164,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/video_validation.json",
+      "path": "outputs/question2_delivery_20261020/video_validation.json",
+      "git_blob": "716f7bbbb19ded05b28923fabf684a2960b3b3db",
+      "sha256": "8b486c68f35c0f88e7aa8d004e410876ad5ffdb2d098ab111c88fca859f84a25",
+      "bytes": 1012,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/问题二-演示稿.mp4",
+      "path": "outputs/question2_delivery_20261020/问题二-演示稿.mp4",
+      "git_blob": "98b22d3a420bffe552a357e75b7ae1f77feee717",
+      "sha256": "b79515f03953119a86ec5831ff4f9aabb2949d4f81e4180dab2576ae3480a1d1",
+      "bytes": 1695752,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/问题二答题稿.md",
+      "path": "outputs/question2_delivery_20261020/问题二答题稿.md",
+      "git_blob": "7f83b096be03abb9d459d8a26f0b79194e494e97",
+      "sha256": "53620db051b1afef5a6856d87e8a818caad0edfc7b6fc95ec12222b9f7d343bc",
+      "bytes": 21750,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/问题二答题稿.pdf",
+      "path": "outputs/question2_delivery_20261020/问题二答题稿.pdf",
+      "git_blob": "2ef55ad0ce010b380aee60faaa82f8a9d105f1bc",
+      "sha256": "0bdf897f6d8dde96cce4e7977b3a97cf77b324bbd28167b41c9e7d325952ec5c",
+      "bytes": 667233,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "outputs/question2_delivery_20261020/问题二视频讲稿.md",
+      "path": "outputs/question2_delivery_20261020/问题二视频讲稿.md",
+      "git_blob": "c6e6282f0f11c33dd0d58b0bc3874085e592d96b",
+      "sha256": "761ac24f1aa930645a460de058556e44833996a81743fe5ca5a3e0868e2a65c6",
+      "bytes": 2229,
+      "role": "upstream_evidence"
+    },
+    {
+      "upstream_path": "requirements-data.txt",
+      "path": "vendor/q2_pr14/requirements-data.txt",
+      "git_blob": "9abff976a55e2d66094d6e44b210fc47edd82f1a",
+      "sha256": "1a16159d6ae1dff56e9269c0adfffb94bdba809558f48cf611cc4b2d9eae5a78",
+      "bytes": 157,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "requirements-q1.txt",
+      "path": "vendor/q2_pr14/requirements-q1.txt",
+      "git_blob": "a8e99979ca1b5a5690e84a1583e22add25c181b8",
+      "sha256": "f1b21977c06d06cc687ebb0b0f057787635239f3e446c436f78e722ce2699045",
+      "bytes": 18,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "requirements-q2.txt",
+      "path": "vendor/q2_pr14/requirements-q2.txt",
+      "git_blob": "8316ecf2fcc0887ec5fed7b9822c2793c589bfcf",
+      "sha256": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0",
+      "bytes": 155,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "run.py",
+      "path": "vendor/q2_pr14/run.py",
+      "git_blob": "39dc45c00a41e9babf07d54602dc2ea6be82fbe6",
+      "sha256": "f650af45e441255037ab977e600da804cee11a39bb7345301ebe947c68ccf473",
+      "bytes": 3704,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/build_q2_answer_delivery.py",
+      "path": "vendor/q2_pr14/scripts/build_q2_answer_delivery.py",
+      "git_blob": "a2c4fb7d1c73becf480b0ddfbe7d09a3bd5406f1",
+      "sha256": "04f734ff481aa889bca0bc0039574e20bcb2a161ac6ebdcdfe299900c35b05cf",
+      "bytes": 39701,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/build_q2_electricity_scope.py",
+      "path": "vendor/q2_pr14/scripts/build_q2_electricity_scope.py",
+      "git_blob": "a53cba3c99f87135ee86cab1ce95c172f0afddfd",
+      "sha256": "0184532dec842422d4d49779035e4b6f47e6409203134a907f7ac3f45ee18163",
+      "bytes": 8313,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/build_q2_national_inputs.py",
+      "path": "vendor/q2_pr14/scripts/build_q2_national_inputs.py",
+      "git_blob": "c12828ccda8dea55daa799133abdee9d345a831c",
+      "sha256": "39bad2e449a2ee1e4595422c16194a0ce0d3d80c40d75adf7a4095970412f488",
+      "bytes": 19605,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/build_q2_project_costs.py",
+      "path": "vendor/q2_pr14/scripts/build_q2_project_costs.py",
+      "git_blob": "3350419b467c02bc2941484e690a1eb01235d701",
+      "sha256": "7eafad29562b81af81fe153ede55701c40814cd750840f9851bef01fb510edbc",
+      "bytes": 4098,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/build_q2_revenue_evidence.py",
+      "path": "vendor/q2_pr14/scripts/build_q2_revenue_evidence.py",
+      "git_blob": "721078461a02a369b768e49dc1bc581e24fc1463",
+      "sha256": "d12286913a87108cfb0b5d60b1403e987b35712887e4e65946bb7d193885fd82",
+      "bytes": 12051,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/collect_q2_investor_behavior.py",
+      "path": "vendor/q2_pr14/scripts/collect_q2_investor_behavior.py",
+      "git_blob": "a66d30fe2a6cf849f7bb52b20fc118e8c8b72013",
+      "sha256": "3442d11e622b6410e9dcd5bbef3f63c237ecbabdf597e3d7a775ab67897bd17e",
+      "bytes": 3594,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/collect_q2_thermal_efficiency_history.py",
+      "path": "vendor/q2_pr14/scripts/collect_q2_thermal_efficiency_history.py",
+      "git_blob": "80b269b78430248eedc727223f1a75d259f5f51d",
+      "sha256": "502e208174d43a30731a82c7403d302800ba9498c1387c1e7557a67a7a2fd852",
+      "bytes": 2615,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/prepare_q2_thermal_training.py",
+      "path": "vendor/q2_pr14/scripts/prepare_q2_thermal_training.py",
+      "git_blob": "a8f7848007050510a792efc72265a1a5c34e166d",
+      "sha256": "ceb68fe9639385fbbb3554e3cebf71b27960ae9134db4709030c5b5258d8227e",
+      "bytes": 3748,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/q2_competition_factory.py",
+      "path": "vendor/q2_pr14/scripts/q2_competition_factory.py",
+      "git_blob": "6950789d4dc3d67546103b08f637cb43518543fa",
+      "sha256": "036ecc86df52e03f59a200247bf4ebd93b81dc8fd4e86d57d6c65fc9c6b6dd5a",
+      "bytes": 4996,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/q2_corrected_factory.py",
+      "path": "vendor/q2_pr14/scripts/q2_corrected_factory.py",
+      "git_blob": "c7624cfdc64e87eb6882c6027cc46cf1befbd0c5",
+      "sha256": "7b540156694f0ba409ad6ba2829022907f781641d2d89e870d706a2b4affa469",
+      "bytes": 4476,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/q2_current_factory.py",
+      "path": "vendor/q2_pr14/scripts/q2_current_factory.py",
+      "git_blob": "14f3e85c541760bfdc752876f7817af65e9a1ac0",
+      "sha256": "d84944470b0bdbd5975c42a2d680a40089d18799bbce634629ce1d5481d56b8b",
+      "bytes": 16579,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/q2_delivery_snapshot.py",
+      "path": "vendor/q2_pr14/scripts/q2_delivery_snapshot.py",
+      "git_blob": "727c861e558f09816bfd4b653e3d4de8ab87bc96",
+      "sha256": "3c9612be54f8ef6823a54980ef8f0264a2c4d0c55d19b85ab41bae52a8d6fbb7",
+      "bytes": 5730,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/q2_fuel_price_factory.py",
+      "path": "vendor/q2_pr14/scripts/q2_fuel_price_factory.py",
+      "git_blob": "7bf6e3c15777d1bb9d3b74da3fe16d8b50165532",
+      "sha256": "52f3b8ed91c515bba72ed6e0b4aea673aa57dd2e7c4138fcc53616af8e151284",
+      "bytes": 3364,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/q2_thermal_configured_factory.py",
+      "path": "vendor/q2_pr14/scripts/q2_thermal_configured_factory.py",
+      "git_blob": "00ca93fd9132b9f2baf8c36f7641ecc876fbe8ac",
+      "sha256": "ccb44f6168aff928744b7e6b991b966f0a500857607a1c5e863511fe0d7d8a4c",
+      "bytes": 795,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/q2_thermal_factory.py",
+      "path": "vendor/q2_pr14/scripts/q2_thermal_factory.py",
+      "git_blob": "99dcec75be5bf630cfc7cab0c93b89fd4e25c154",
+      "sha256": "4e8043bdb78839a4f394983c58e7be80a4307b56fcd361e965c95b7cc9a98465",
+      "bytes": 6494,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/q2_verified_input_cache.py",
+      "path": "vendor/q2_pr14/scripts/q2_verified_input_cache.py",
+      "git_blob": "6714c7d9bb77fe2ed6be036081e223ba0b824d35",
+      "sha256": "5a701e3ef9caa99c7db58e0b67724fde037b00225f8ed378d4a25198ceb8df2b",
+      "bytes": 1888,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/review_q2_revenue_candidate.py",
+      "path": "vendor/q2_pr14/scripts/review_q2_revenue_candidate.py",
+      "git_blob": "6241a961f8b10ec97651842e866736a92813c3a7",
+      "sha256": "e94a26df4fabd045829d26f9da5b09b4b1d0543c2b0cef486514db06d3541ed9",
+      "bytes": 6173,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/run_q2_competition_recalibration.py",
+      "path": "vendor/q2_pr14/scripts/run_q2_competition_recalibration.py",
+      "git_blob": "23b855a15f5549c6cee3f64f48d44399268b948e",
+      "sha256": "c3908e9f87102fe42d908c1e19ca578213f1413c81b0337042f76384f49a6a3e",
+      "bytes": 12225,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/run_q2_corrected_recalibration.py",
+      "path": "vendor/q2_pr14/scripts/run_q2_corrected_recalibration.py",
+      "git_blob": "0020360023ba15fe3dd122b54b4f1a3c08742aea",
+      "sha256": "71f761ee44ce82e85252eaddeee940841fdf563b29ccbbc7417345b2826cb93c",
+      "bytes": 10763,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/run_q2_cost_review.py",
+      "path": "vendor/q2_pr14/scripts/run_q2_cost_review.py",
+      "git_blob": "da90619035f4ee4415051add59b679fcbbe882c4",
+      "sha256": "9e171aeda0dc5efbcfe6e6f0d052decaa19b8b04ba4105985028d1020bafb4f5",
+      "bytes": 5259,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/run_q2_current_delivery.py",
+      "path": "vendor/q2_pr14/scripts/run_q2_current_delivery.py",
+      "git_blob": "5f509695f2dff7dfadf79bb036ecf949d430c263",
+      "sha256": "b942e28368b0b49a2261aa4a5ea29c9bac423650ee1db22b56b574bf62167ba9",
+      "bytes": 10576,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/run_q2_empirical_support.py",
+      "path": "vendor/q2_pr14/scripts/run_q2_empirical_support.py",
+      "git_blob": "d67427c5a708baad5f97a117d82456ab366c9eda",
+      "sha256": "913ca77a3bd90e486f91ba42525e21c7673d39452cece9efa65bc9e27298002b",
+      "bytes": 25439,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/run_q2_forward_delivery.py",
+      "path": "vendor/q2_pr14/scripts/run_q2_forward_delivery.py",
+      "git_blob": "518531e7dd09e6e0a30579d36626b0b907a0b66c",
+      "sha256": "2a34db9a6e4ce9977d61aff0dd4bcc29805d8acdd4dd0d9daf19899ae3107164",
+      "bytes": 9214,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/run_q2_historical_support.py",
+      "path": "vendor/q2_pr14/scripts/run_q2_historical_support.py",
+      "git_blob": "30803724ef43a402ac6e5dfa42c021e63a486d9e",
+      "sha256": "7ece8cb900cc8a8891f7d35ff47e268a50fb61308f61682374c129ebeafa2ec2",
+      "bytes": 18464,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/run_q2_joint_recalibration.py",
+      "path": "vendor/q2_pr14/scripts/run_q2_joint_recalibration.py",
+      "git_blob": "8584ee161815ad3c36a1505e851dffc866d7c2be",
+      "sha256": "f9fa59982d6ddc7b05d807d309442ff3e2ff5217f376b9c4f3c36de77ab5b401",
+      "bytes": 10153,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/run_q2_national.py",
+      "path": "vendor/q2_pr14/scripts/run_q2_national.py",
+      "git_blob": "881a8ef1d54a70ba8a8209375f7c9babb611bf51",
+      "sha256": "776174b8ddd6f8e1ec43c623ff356ef6c2346ea78db3cb809f6f7a48018fd01e",
+      "bytes": 43576,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/run_q2_portable.py",
+      "path": "vendor/q2_pr14/scripts/run_q2_portable.py",
+      "git_blob": "2a3bf8c83b6f12ab64ab61aac2fd36c5e3ace10f",
+      "sha256": "6c2cf1ddce80fd6fbb5b2910d834bd2f30a06f7c99fde76cfb11c31dfce2c8c2",
+      "bytes": 7064,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "scripts/run_q2_revenue_recalibration.py",
+      "path": "vendor/q2_pr14/scripts/run_q2_revenue_recalibration.py",
+      "git_blob": "5788dda45be133cdc50ea502eaeae4e0410279bb",
+      "sha256": "b6df4d24c3f280050c04a801b1f53d1c38de256e33717f4f9b86f11fb1e47924",
+      "bytes": 10104,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/__init__.py",
+      "path": "vendor/q2_pr14/src/energy_model/__init__.py",
+      "git_blob": "f36dc3b8d3db8d50a2f0fea8a8766c9ae77ca9d3",
+      "sha256": "6918004f3238cce27b61c55a1423d9eaad5dc7028b711d138ba10db47d91ecbe",
+      "bytes": 75,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_admission.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_admission.py",
+      "git_blob": "c1d6e86c9fb3589d7118c34c73031b1db07e4d0e",
+      "sha256": "e6f06e18b8d49ef9acb69eed12e2ed747ace88ec794535dc0c1d4d16c50a0941",
+      "bytes": 18280,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_agents.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_agents.py",
+      "git_blob": "8dbbc9aa97def0df9f1a061b17108992a528a931",
+      "sha256": "1f0a4465183916ab475447736c3923e540fd0d82a7408b7cd2bfc00116da5290",
+      "bytes": 22398,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_bioenergy.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_bioenergy.py",
+      "git_blob": "b3dd659805dbe3b45ce33abf8a9254cf0d221495",
+      "sha256": "72e40fcbad9e1dda537e87c46cad320da7131aa7f6b719a24c29b5a1a62f6331",
+      "bytes": 7984,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_boundary.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_boundary.py",
+      "git_blob": "445424c1980ceeef36c4f089e3b2500e78cf8e48",
+      "sha256": "803c47c509f8273403b337850da9ea72c1f10d2e2618b24ae8a75d0a75a4ed7e",
+      "bytes": 9178,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_experiments.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_experiments.py",
+      "git_blob": "3fc7f80b78ef865bc220f8f357b3d76f9e8f60a4",
+      "sha256": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+      "bytes": 16422,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_exposure.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_exposure.py",
+      "git_blob": "63923612cfe807f269bff6c68431de589df74229",
+      "sha256": "09ae2b2243410065fc661eea9e971c828fb3b5b7a09ab9835262b5ba3fef466d",
+      "bytes": 1954,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_finance.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_finance.py",
+      "git_blob": "2867c9449a54f5408426cae088861e662208dd00",
+      "sha256": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
+      "bytes": 3305,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_forward.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_forward.py",
+      "git_blob": "c4af867f69aff5f4294b4a2e91a20a3ed7996b74",
+      "sha256": "068d890438a09e9372b79ad9b2b280208259148f46c6bad1d0eeaa6075317cf7",
+      "bytes": 11686,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_forward_current.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_forward_current.py",
+      "git_blob": "6576de02c6df74069295973909eaf48e86e992bb",
+      "sha256": "259356af6047c5dd46dec5646bab487d3f4a4de6d7a9056e7a49bb21512a94c4",
+      "bytes": 12113,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_fuel_prices.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_fuel_prices.py",
+      "git_blob": "ef7c16712d90b81148a5af4cab4f6378bffc9726",
+      "sha256": "3c537aa5445eb3befdf0758d91779cd5f0f69908ee2891170e81e5feacce162d",
+      "bytes": 4634,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_identification.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_identification.py",
+      "git_blob": "af48766a9c5f31eabefbf77264c50539dd4255ab",
+      "sha256": "116e8f1b3b13794a32009ca4c00822d70cedca249605b236bafe530af7124899",
+      "bytes": 2667,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_national.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_national.py",
+      "git_blob": "f599fdb5503212ef87e1c3c184d3c7f18f45fd28",
+      "sha256": "603b806c6da8477f759340f2cadc3013bf974f1dae5bd33086c36b259b0ec4d3",
+      "bytes": 80840,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_operations.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_operations.py",
+      "git_blob": "0fd9451f969870584654cf159ef52f5fc858850a",
+      "sha256": "2ca550b41712e10b0ca89f28f3bf70f7e606c300d987a520d474e44c55b04223",
+      "bytes": 29508,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_portfolio.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_portfolio.py",
+      "git_blob": "eec601d30ffb3cd97213acf52f377f988da2eccf",
+      "sha256": "8118ac052b978a5a10dd35ed643d20f7ce40c62c2223146b4bc848b354289659",
+      "bytes": 3133,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_project_competition.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_project_competition.py",
+      "git_blob": "585a7d9831e26df96ef34940a5b3daf520eb717c",
+      "sha256": "40dca3cd9d5319cc4e4870f780af316019b3eb30c5c182f47412e76cf75894fb",
+      "bytes": 8454,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_project_costs.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_project_costs.py",
+      "git_blob": "b0de456d293a799c425097e8c52b9c88e084b559",
+      "sha256": "7ca81bc51161d66ed99c8b889e79af492fb5095ef4529896f13b4df8c0969486",
+      "bytes": 2332,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_renewable_vintages.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_renewable_vintages.py",
+      "git_blob": "ab4e88960fdac969c5392c5bd8f8d15e4953dd99",
+      "sha256": "12fbeee815c4b7c85868e5562649d327c03f5f1626c8db15b174c73f97537128",
+      "bytes": 5643,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_revenue.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_revenue.py",
+      "git_blob": "f815fb502f0f1d606982d3cb06ee895488ecc895",
+      "sha256": "8516bcaa44fea1107a7f1551ca331f7e50b281510530dccd98e37bbed89883b6",
+      "bytes": 12847,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_solar_entitlement.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_solar_entitlement.py",
+      "git_blob": "e2acca5f4d115aae3a4a666a4a062d92db18daa2",
+      "sha256": "1284b4ceb7c8e27d74d830d6f0fe7513a66eebc59f840cf8fae4a65e24e4ef42",
+      "bytes": 2114,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_statistics.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_statistics.py",
+      "git_blob": "04aa6e141f7dd038a99a4b98c94e372763e08a37",
+      "sha256": "43e58dfd42234d30c33278a4c4c485b96105c6d575e864fb7cc265b5116c8120",
+      "bytes": 4459,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_subsidies.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_subsidies.py",
+      "git_blob": "4e79f2b77def9fd7e76d72d6ff89e179d151b144",
+      "sha256": "5a2ddbeb8275cc706b80aeb745ea8601268d59fd3a32d786b2e7ed5e097dfb9b",
+      "bytes": 11655,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_support_investment.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_support_investment.py",
+      "git_blob": "c398928b0a82fa1483c24a17afeb4fd4be5d136e",
+      "sha256": "f6cd3f47fabd05a98cfe89d15ecc2b3ea8e2f02bbc01a3ca39c7c8400372aff5",
+      "bytes": 9875,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "src/energy_model/q2_thermal_vintages.py",
+      "path": "vendor/q2_pr14/src/energy_model/q2_thermal_vintages.py",
+      "git_blob": "b6686a0896003470b5b99d0c9b6becbc74733a3d",
+      "sha256": "1715bcf437fc9dcb8149fb4e3d88131e291f3e83d219201e5108e46819be6d12",
+      "bytes": 15962,
+      "role": "runtime"
+    },
+    {
+      "upstream_path": "tests/test_q2_delivery_runners.py",
+      "path": "vendor/q2_pr14/tests/test_q2_delivery_runners.py",
+      "git_blob": "7870fad17688be3ce17ec2842c221ffc219b8a4e",
+      "sha256": "4394e670600e54e13d5bad1560b1960cef1bf44e356ed12689fbcc85f266c470",
+      "bytes": 5734,
+      "role": "runtime"
+    }
+  ]
+}
