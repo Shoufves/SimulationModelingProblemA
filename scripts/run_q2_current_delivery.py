@@ -136,8 +136,14 @@ def main():
     parser.add_argument("--only", nargs="*")
     parser.add_argument("--end-year", type=int, default=2060)
     args = parser.parse_args()
+    if not 2025 <= args.end_year <= 2060:
+        parser.error('--end-year must be within 2025..2060')
+    if args.workers < 1:
+        parser.error('--workers must be positive')
     path = ROOT/args.design
     config = load(path)
+    if args.only is not None and set(args.only)-{s['name'] for s in config['scenarios']}:
+        parser.error('Unknown scenario in --only')
     specs = [s for s in config["scenarios"] if args.only is None or s["name"] in args.only]
     if not specs or len({s["name"] for s in specs})!=len(specs):
         raise ValueError("Nonempty distinct scenario names required")
@@ -191,7 +197,8 @@ def main():
     save(folder/"status.json",dict(status="complete_conditional_scenarios" if not failed else "completed_with_failures",
         cases=len(results),failures=failed,scientific_acceptance=False))
     print("COMPLETE",len(results),"cases",failed,"failures",flush=True)
+    return 1 if failed else 0
 
 
 if __name__=="__main__":
-    main()
+    raise SystemExit(main())

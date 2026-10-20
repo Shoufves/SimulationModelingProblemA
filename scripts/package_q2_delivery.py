@@ -71,7 +71,7 @@ def ai_disclosure():
       ('6 数值与图表贡献','图表与表格由AI辅助脚本直接读取冻结结果。数据原始观测来自公开材料；初态财务、年龄、在建队列及未来参数中存在作者条件假设，正文分别标注。提取输入快照不包含驱动仿真的未来参考路径，后者仅在重新求解后核对。'),
       ('7 采纳与人工修改','现有会话显示用户批准路线、限定范围并要求修复，但没有证据证明队员已独立重写全部核心建模、实现和分析，也没有完整人工修改记录。因此当前状态为AI辅助研究稿，人工复核及采用情况待队员据实补录。不能将本说明改成“未使用AI”或笼统宣称核心内容已由人独立完成。'),
       ('8 仍需队员核验','重点核验模型适用边界、2024初态选择、历史装机误差、价格与政策代理、参考文献原件及比赛独立完成要求。正文、代码、数据和数字一致并不自动等于科学正确或参赛资格认可。本说明不包含虚构队号、签名、学校或参赛者身份。'),
-      ('9 材料索引','问题二答题稿MD/PDF、24案逐年与目标数据、提取输入/原件来源清单、529项测试记录、独立复核、视频及讲稿。具体文件与SHA256列在压缩包的PACKAGE_MANIFEST.json。')]
+      ('9 材料索引','问题二答题稿MD/PDF、24案逐年与目标数据、提取输入/原件来源清单、PR范围测试记录（原候选511项；修订以验证收据为准）、独立复核、视频及讲稿。具体文件与SHA256列在压缩包的PACKAGE_MANIFEST.json。')]
     body=ParagraphStyle('body',fontName='Q2Song',fontSize=12,leading=17,spaceAfter=10,wordWrap='CJK')
     heading=ParagraphStyle('heading',parent=body,fontName='Q2Hei',fontSize=14,leading=20,spaceBefore=10,keepWithNext=True)
     story=[];md=[]
@@ -87,6 +87,7 @@ def package():
     stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
     stage=ROOT/'tmp'/('q2_delivery_stage_'+stamp);stage.mkdir()
     files=set()
+    files.add('archive/pr14_review10/run_q2_current_delivery.py')
     for folder in ('src','scripts'):
         files.update(p.relative_to(ROOT).as_posix() for p in (ROOT/folder).rglob('*.py') if '__pycache__' not in p.parts)
     for folder in ('data/processed/q1','data/processed/q2','data/processed/q2_delivery'):

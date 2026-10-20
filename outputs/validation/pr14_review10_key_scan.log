@@ -1,0 +1,16 @@
+{
+  "working_tree": {
+    "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
+    "excluded_directories": [
+      "tmp",
+      "data/restricted"
+    ],
+    "pattern": "Google API key format only; not an exhaustive credential audit",
+    "passed": true,
+    "findings": [],
+    "errors": [],
+    "files_scanned": 2599,
+    "payloads_scanned": 6092,
+    "zip_members_scanned": 3493
+  }
+}

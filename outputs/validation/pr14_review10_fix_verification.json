@@ -1,0 +1,49 @@
+{
+  "reviewed_parent": "e29dff3987174ea0c6495f96b924b0c78a9cce7a",
+  "test_count": 519,
+  "tests_passed": true,
+  "portable_cases": 24,
+  "portable_status": "passed",
+  "original_S0_exit_code": 0,
+  "runtime_failure_exit_code": 1,
+  "runtime_failure_status": {
+    "status": "completed_with_failures",
+    "cases": 1,
+    "failures": 1,
+    "scientific_acceptance": false
+  },
+  "original_vs_portable": {
+    "passed": true,
+    "differences": [],
+    "failures": [],
+    "numeric_fields": 4147,
+    "tolerances": {
+      "relative": 1e-12,
+      "cny_absolute": 0.02,
+      "other_absolute": 1e-06,
+      "cny_cap": 0.02,
+      "other_cap": 0.001
+    },
+    "exact_match": true
+  },
+  "frozen_source_archive_resolution": {
+    "scripts/run_q2_current_delivery.py": "archive/pr14_review10/run_q2_current_delivery.py"
+  },
+  "historical_capacity_gates": "still failed; not changed",
+  "no_model_input_or_reference_changes": true,
+  "runner_sha256": {
+    "scripts/run_q2_portable.py": "6c2cf1ddce80fd6fbb5b2910d834bd2f30a06f7c99fde76cfb11c31dfce2c8c2",
+    "scripts/run_q2_current_delivery.py": "b942e28368b0b49a2261aa4a5ea29c9bac423650ee1db22b56b574bf62167ba9",
+    "scripts/build_q2_answer_delivery.py": "04f734ff481aa889bca0bc0039574e20bcb2a161ac6ebdcdfe299900c35b05cf"
+  },
+  "evidence_sha256": {
+    "pr14_review10_failure.log": "7132336c5fbbaf91919c66a2cb7ad03c15f5438b2cff394888bdc2137435851c",
+    "pr14_review10_final_audit.log": "9f86979d8d086dd2279ed2c879b351c6a62634287d0023b6ab04e09059ed014b",
+    "pr14_review10_final_portable.log": "c69207fca95f4ff9009481e529f227936227fe13a4673317688d29cf1a395325",
+    "pr14_review10_final_tests.log": "157cadd27d30dadd4f1664a345321a02f5ee1f5ac2466949b0021417a53c3e55",
+    "pr14_review10_key_scan.log": "2eb92c7e64e9d186dff68c009b80d07724b0f78758374bd9ffd7a9537eb1e58e",
+    "pr14_review10_original.log": "327494355e08d83b533ddc4d5a82270bfd528f482909c24006fb2a4c993ad9c1",
+    "pr14_review10_portable.log": "05ae1ba03aeb4d1ddbd91846fa24b4ee8e8fae8a95eb6c7eadc31c907d753629",
+    "pr14_review10_tests.log": "0571ffcc1745fb444a2a5c8eb5e789add49258c5c043c347451615d7d59b94ec"
+  }
+}
