@@ -1,0 +1,2295 @@
+{
+  "schema_version": 1,
+  "basis_commit": "ddb60bc",
+  "purpose": "Path-only organization; frozen model and evidence bytes unchanged",
+  "bundle_sha256": "f04e08a0b9329187a40476d5947e5e6b15ce5f8630d7b92737fdb59bad911a58",
+  "runtime": {
+    "data/attachment_reviews.json": {
+      "storage": "active",
+      "sha256": "ad9a67448769c72cb18b2891af3db036f0518bb01a8ea4d2a421e7390f76a1ab"
+    },
+    "data/catalog/q123_pr14_alignment_review.json": {
+      "storage": "active",
+      "sha256": "d1027fbc65c84a47121f45eea31b5a9c932624b1b88e828c89a4deebe0a67460"
+    },
+    "data/catalog/q1_input_review.json": {
+      "storage": "active",
+      "sha256": "09926951f02141c1ee910c3e441fe57ed004fe55f578f39cf3fdf4a940eadfaf"
+    },
+    "data/catalog/q1_sources.json": {
+      "storage": "active",
+      "sha256": "fe1b97003afdd71f958fbe0ecc87fc553d059f93d5b990fc9c36ad0306bc1c14"
+    },
+    "data/catalog/q2_pr14_integration_review.json": {
+      "storage": "active",
+      "sha256": "9a1688d85b159173dac149f0f267c4f15747ef9c46199dc3dc47ffd9fe7e6271"
+    },
+    "data/catalog/q3_input_review.json": {
+      "storage": "active",
+      "sha256": "2a0fe24ff7bbf5367353e5c30bfb72a0fa208b2345fe66b0c03d5646259cc427"
+    },
+    "data/observations/energy_official_communique_2024.json": {
+      "storage": "active",
+      "sha256": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af"
+    },
+    "data/processed/china_co2_gcb_annual.csv": {
+      "storage": "active",
+      "sha256": "7723d3b59c8620c16eabe77c84c02eefb5f0f131f6d9b7f931caf273e377dc98"
+    },
+    "data/processed/china_energy_research_annual.csv": {
+      "storage": "active",
+      "sha256": "ab1c42a9df72db6bcf7f7a73a849ac2e60eb14895517c661c0d0a4b203f8f4c5"
+    },
+    "data/processed/fuel_storage_hydrogen_snapshots.csv": {
+      "storage": "active",
+      "sha256": "6db227b76970960a8be7dfd043b85e55327b777812b991638f361f313e32e9dc"
+    },
+    "data/processed/lb/base/irena/china_capacity_2016_2025.csv": {
+      "storage": "active",
+      "sha256": "9b6c9464d7ad29f324202671172faee64c0283be21b92bae44ba54193a337e7f"
+    },
+    "data/processed/lb/trade_alternatives/coal_china_2024_EJ.csv": {
+      "storage": "active",
+      "sha256": "bf10eb6cfb4cba6bebe7b239e861271fac4b9e2e0047a2dc488ba6224584775c"
+    },
+    "data/processed/lb/trade_alternatives/lng_china_2024.csv": {
+      "storage": "active",
+      "sha256": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363"
+    },
+    "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv": {
+      "storage": "active",
+      "sha256": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f"
+    },
+    "data/processed/nbs_balance_checkpoints.csv": {
+      "storage": "active",
+      "sha256": "8121d87c60acf5f8c457245f7d1d512f69b4c652dea717a5f823aae3192a3193"
+    },
+    "data/processed/nbs_products_annual.csv": {
+      "storage": "active",
+      "sha256": "6fb964607aa68d86f9297a039aeb472c7860324ec21e67da11dbcd7bd8f92642"
+    },
+    "data/processed/nbs_province_demand.csv": {
+      "storage": "active",
+      "sha256": "2ed23bee6511030b5b3b8b60c8aa63e1ea65e7bbd967c5958bc6307f7a228e91"
+    },
+    "data/processed/nea_renewables_2024_2025.csv": {
+      "storage": "active",
+      "sha256": "6726f62a9d125862768b9f7e0b6dedffa170def5497e9b8247e1a35eac076db6"
+    },
+    "data/processed/q1/additional_context.csv": {
+      "storage": "active",
+      "sha256": "a4b66d22bbcdea6809db4c13df554abac48c17e2b8438d7545c7fcd2e7030765"
+    },
+    "data/processed/q1/cost_method_parameters.csv": {
+      "storage": "active",
+      "sha256": "56d3b1aed854a6807c643b15c291d3582feed17d9667d7c3d43a091168f505a9"
+    },
+    "data/processed/q1/iea_comparable_costs.csv": {
+      "storage": "active",
+      "sha256": "fa3f1c86fa84b3c3049810f1f7f54a94ddfb462ae4cf3d69770d4ba024c0b45f"
+    },
+    "data/processed/q1/prices_reviewed.csv": {
+      "storage": "active",
+      "sha256": "6cb15a884e48518a1d9ab3bdf7db887ad91bb4cf8ddccc9cf578c4f51ee01cf2"
+    },
+    "data/processed/q1/province_generation_2024.csv": {
+      "storage": "active",
+      "sha256": "5f69f7029dc47f09353386642bfed007ca3d17287680f18b8fb2c2c6a24ee53a"
+    },
+    "data/processed/q1/regional_resource_top3.csv": {
+      "storage": "active",
+      "sha256": "5ff7b5213e25d451b3f97906c8ad88cbc94b98bc0a36afe68ce48241c1e70cb8"
+    },
+    "data/processed/q1/renewable_regions.csv": {
+      "storage": "active",
+      "sha256": "ea2c254a0d01dcd637a9e695651602ed7e784520c9421caf66c82a7c58471c82"
+    },
+    "data/processed/q1/reviewed_2024_additions.csv": {
+      "storage": "active",
+      "sha256": "60e91cb161df7f33da4ca89c7b83b02619c6e44defa5d6f2781f83673d3f8fbd"
+    },
+    "data/processed/q1/technology_region_capacities.csv": {
+      "storage": "active",
+      "sha256": "93c400dc1fbebadcd6b6eff7029f3e397771f8ab9bb03e55172a1d103a58a1bb"
+    },
+    "data/processed/q2_delivery/manifest.json": {
+      "storage": "active",
+      "sha256": "e6938053118425baf4cdf6d06f159efa5ff1b3fcb80118240bcda2dded6487ed"
+    },
+    "data/processed/q2_delivery/parsed_inputs.json": {
+      "storage": "active",
+      "sha256": "a37e246a279f65a1f5d074111eebabe657aac487b52ea2f1b0128da81460dfbe"
+    },
+    "data/processed/q2_delivery/q2_design.json": {
+      "storage": "active",
+      "sha256": "4cefaca1da252b9110dc991df0993e2827f03854ef169ba21f9d6c2d34b257db"
+    },
+    "data/processed/q2_delivery/reference_paths/S0.json": {
+      "storage": "active",
+      "sha256": "93b2090fab4a748971e2d71a7a00e80bfcdcaddd996cb1bf5da0d9a15ae2590a"
+    },
+    "data/processed/q2_delivery/reference_paths/S0_authority100.json": {
+      "storage": "active",
+      "sha256": "7fe809d1dc21aa0f158df2031d6775be29490a47f4d1b4179edd0f7de599bb85"
+    },
+    "data/processed/q2_delivery/reference_paths/S0_authority5.json": {
+      "storage": "active",
+      "sha256": "a8c12eaa30ca74921bd8d735496a7695a87f75c7100cb863c13512dabd87700a"
+    },
+    "data/processed/q2_delivery/reference_paths/S0_net55.json": {
+      "storage": "active",
+      "sha256": "753c733acb1b2124fdd3088e27825d79a4261badce302d61c25d40566a686ece"
+    },
+    "data/processed/q2_delivery/reference_paths/opening_double_arrears.json": {
+      "storage": "active",
+      "sha256": "a610bf81311973d1cfb075ac8cf8d7815f6a1aa5906e8fcc8857d538d7084dd7"
+    },
+    "data/processed/q2_delivery/reference_paths/opening_high_cash.json": {
+      "storage": "active",
+      "sha256": "c793bbb28cfdd93d6f417359574512d012430a324768161b033ab71e3ce3c064"
+    },
+    "data/processed/q2_delivery/reference_paths/opening_high_debt.json": {
+      "storage": "active",
+      "sha256": "6e9a6b9f2795c81b186785bd8e7e7aab86d4fbb58ea2f97d84954473140f31f9"
+    },
+    "data/processed/q2_delivery/reference_paths/opening_large_queue.json": {
+      "storage": "active",
+      "sha256": "8225aad9b1c73241768c12f331533bce8f424a0d1da30b222e4de9f88cc6d70c"
+    },
+    "data/processed/q2_delivery/reference_paths/opening_low_cash.json": {
+      "storage": "active",
+      "sha256": "bd3d7dc2be58835fe5f364e6b8ff1f759d7da8cacc8f26f99463132f4363e404"
+    },
+    "data/processed/q2_delivery/reference_paths/opening_low_debt.json": {
+      "storage": "active",
+      "sha256": "2b55590088daa0ae967ae043e275926d3983bec407508cd16ebbca761d0f9fee"
+    },
+    "data/processed/q2_delivery/reference_paths/opening_no_arrears.json": {
+      "storage": "active",
+      "sha256": "b0858acb4c43c143858c9a7bb60a1fa9482c767d8344b9d6e09a0c16e3f8338d"
+    },
+    "data/processed/q2_delivery/reference_paths/opening_no_queue.json": {
+      "storage": "active",
+      "sha256": "4c728529440b2a5144ca867e9f0bdbb3c70ad8b114e89e620f9a87ad6ea8c57d"
+    },
+    "data/processed/q2_delivery/reference_paths/opening_older.json": {
+      "storage": "active",
+      "sha256": "ff4c28920e385ab1d4ef46d663e20f47fea79cc25febd93800ad4788e674f5ce"
+    },
+    "data/processed/q2_delivery/reference_paths/opening_younger.json": {
+      "storage": "active",
+      "sha256": "de342c68cc002a5429ec5176de8160d20626ff3fe4e665c74f7b0225b32382c1"
+    },
+    "data/processed/q2_delivery/reference_paths/sensitivity_carbon_price_multiplier_0.json": {
+      "storage": "active",
+      "sha256": "45c242602e3a4737033dcdc987304d7f980cb8eb385a4c674157d4ee98e7c841"
+    },
+    "data/processed/q2_delivery/reference_paths/sensitivity_carbon_price_multiplier_1.json": {
+      "storage": "active",
+      "sha256": "af54b254de00fa72dea0096975f83829be168135101a4f5e6b78af43522479dd"
+    },
+    "data/processed/q2_delivery/reference_paths/sensitivity_cost_decline_delta_0.json": {
+      "storage": "active",
+      "sha256": "25e9035e5d4ae1a0be5fd82d58eb704d8eb990a5c10339ee3a33ca871ae04822"
+    },
+    "data/processed/q2_delivery/reference_paths/sensitivity_cost_decline_delta_1.json": {
+      "storage": "active",
+      "sha256": "71e34e18c551a9cf5be276b2efc2375af90754172617da68544b7803b5914641"
+    },
+    "data/processed/q2_delivery/reference_paths/sensitivity_fuel_price_multiplier_0.json": {
+      "storage": "active",
+      "sha256": "71f6695112a0a8a5f29a3740647ff2173ffed65ee4505457761b0d3e1c715173"
+    },
+    "data/processed/q2_delivery/reference_paths/sensitivity_fuel_price_multiplier_1.json": {
+      "storage": "active",
+      "sha256": "d8b1f3b8297f744f0fdbc9745c32480525179f478b5beb4e0187fe598a803374"
+    },
+    "data/processed/q2_delivery/reference_paths/sensitivity_gdp_growth_delta_0.json": {
+      "storage": "active",
+      "sha256": "767586a5b6458eb3b6297212f7734f0fa571371cad39d9eb09cabb4d64f98016"
+    },
+    "data/processed/q2_delivery/reference_paths/sensitivity_gdp_growth_delta_1.json": {
+      "storage": "active",
+      "sha256": "a2a70e35e0a9f05e64ca3eb2560adfbd650e54c5f80210a792920843b0ecdfc9"
+    },
+    "data/processed/q2_delivery/reference_paths/sensitivity_removals_multiplier_0.json": {
+      "storage": "active",
+      "sha256": "577acc3c18a3999dc87eb3953b0609e46bcaca00be35894b409e2c6ba9f6a159"
+    },
+    "data/processed/q2_delivery/reference_paths/sensitivity_removals_multiplier_1.json": {
+      "storage": "active",
+      "sha256": "576546346796b5bcd8c398ae744e6d9f4e202ebd159719a4f8f3954680f1d631"
+    },
+    "data/processed/technology_accounting_parameters.csv": {
+      "storage": "active",
+      "sha256": "2cb248a57bce4173ab72c0edc669ea5c059ff57636d5f7831673ecff9a4b851f"
+    },
+    "data/processed/unified/nbs_history.csv": {
+      "storage": "active",
+      "sha256": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb"
+    },
+    "data/raw/batch1_national/GCB2025v15_MtCO2_flat.csv": {
+      "storage": "active",
+      "sha256": "20650c19b394d91b6b31cddff2fbc9508bcdbbed7c3f93660336f2f655f367ff"
+    },
+    "data/raw/batch1_national/nbs_2025_C09-01.jpg": {
+      "storage": "active",
+      "sha256": "cc7d20189a1782dd3e6327e173a0871ab0ffdcc2304e8a521e9a885cdf5b4ae3"
+    },
+    "data/raw/batch1_national/nbs_2025_C09-02.jpg": {
+      "storage": "active",
+      "sha256": "f7bb733936e7ad95a80f06f795a734347b62837c402f611e53796d5bf3575708"
+    },
+    "data/raw/batch1_national/nbs_2025_C09-03.jpg": {
+      "storage": "active",
+      "sha256": "7b64dcf6845ab84955be19ed60cc68c00764f75ba623f4e623c18deb3018022d"
+    },
+    "data/raw/batch1_national/nbs_2025_C09-04.jpg": {
+      "storage": "active",
+      "sha256": "04879f1944b4f45aaddcd17c6f8e4f9d7d576f9ab85f04ba1049dcbd73f7b6b5"
+    },
+    "data/raw/batch1_national/nbs_2025_C09-05.jpg": {
+      "storage": "active",
+      "sha256": "2d29ed89b2cbe42a1adefe75ad63621b42617184b0f094d19def390694dbe988"
+    },
+    "data/raw/batch1_national/nbs_2025_C09-06.jpg": {
+      "storage": "active",
+      "sha256": "8d415663790fc15d22add695af264dab44f847009367891b7613b629e94d02b3"
+    },
+    "data/raw/batch1_national/nbs_2025_C09-15.jpg": {
+      "storage": "active",
+      "sha256": "b9b9fc6e4c15a5e61fb0be058e3739174d703af7bb8c5ed9178a889e28e5652b"
+    },
+    "data/raw/batch1_national/ndrc_gas_apparent_2024.html": {
+      "storage": "active",
+      "sha256": "a55466c36ff019534d5e36615377bb3779f344c516242dc17a20d04b7d026330"
+    },
+    "data/raw/batch1_national/nea_renewable_2024.html": {
+      "storage": "active",
+      "sha256": "13fabe3f96b292ab2aab7ab2332541d8839fe21e1f144b2f56184f65fbe552cd"
+    },
+    "data/raw/batch1_national/nea_renewable_2025.html": {
+      "storage": "active",
+      "sha256": "14eaf89261b0b02e6543c7406e1e8d5106ebad819921f7aea9204e8f8a30c6a6"
+    },
+    "data/raw/batch1_national/owid_energy_data.csv": {
+      "storage": "active",
+      "sha256": "266f2e2baad7975351bc9bb4aa061d22b1da9fe4c47d51d2ac6071e01e171f76"
+    },
+    "data/raw/batch1_national/wb_commodity_prices_stable.xlsx": {
+      "storage": "active",
+      "sha256": "f25870f3ce992bf6caa6b7159ae3722c9411ab66108cef47aea2e4451a21961a"
+    },
+    "data/raw/batch2_mechanisms/nbs_2025_C09-14.jpg": {
+      "storage": "active",
+      "sha256": "792f54dc21b686356d6e4ea6d49277155a2fef3799b9b1622094548599e488d9"
+    },
+    "data/raw/batch2_mechanisms/nbs_2025_C09-19.jpg": {
+      "storage": "active",
+      "sha256": "7b1d1c5d526905e4611c80f9fd97b637de3b62385218733aa20b55599b0f4d75"
+    },
+    "data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf": {
+      "storage": "active",
+      "sha256": "6e46cb5edb3bec945c45871750b7c35b267341fbce37745200414993106fea5d"
+    },
+    "data/raw/batch2_mechanisms/nea_province_renewable_2024.doc": {
+      "storage": "active",
+      "sha256": "b2c460a50a2bcd379b1a8c18b0b4c992fffff047dc8c5bb775aa7845ccd62449"
+    },
+    "data/raw/batch2_mechanisms/nea_storage_2025.html": {
+      "storage": "active",
+      "sha256": "739bb225cb040415095b6d3e1de0c81f75ec32541e0613c823d849d190c44453"
+    },
+    "data/raw/batch3_scenarios/ipcc_2006_stationary_combustion.pdf": {
+      "storage": "active",
+      "sha256": "a25d9f96d7672df391b328de79d4cfd812c07fe79d5cf4a30d23d82d8f02985b"
+    },
+    "data/raw/batch3_scenarios/irena_power_costs_2024.pdf": {
+      "storage": "active",
+      "sha256": "ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada"
+    },
+    "data/raw/batch3_scenarios/nea_hydrogen_2025.pdf": {
+      "storage": "active",
+      "sha256": "0c88c1a6255f778277d008cb641cee9c71fab1936786a010e692d536142eb6ed"
+    },
+    "data/raw/lb/base/nbs/yearbook2025/C03-04.jpg": {
+      "storage": "active",
+      "sha256": "9f795096c539319d7532ae197251bf533f0fbc742c97ed1612cfe7b7f41e13e4"
+    },
+    "data/raw/lb/base/reports/china_ndc_2035.pdf": {
+      "storage": "active",
+      "sha256": "ae37d01d21bfb33df2ed2dcbde2d423bca4075c9bfe150a2408461a70cb73b9d"
+    },
+    "data/raw/lb/base/reports/iea_oecd_generation_cost_2020.pdf": {
+      "storage": "active",
+      "sha256": "7471000f732fb256bb9c2ebfbaa74285ea4736e980983b10201e0fdbf71d0b7a"
+    },
+    "data/raw/lb/base/reports/irena_capacity_2026.pdf": {
+      "storage": "active",
+      "sha256": "fc580bd4f4ee39ef20de6b1ce3926005a4e3e3b8e2c92fd6a16d175a52515921"
+    },
+    "data/raw/lb/base/reports/storage_2025.pdf": {
+      "storage": "active",
+      "sha256": "47c97e8afc308653fd47dc6a174915499189a10c295b23c8f9d96e45906ac6c3"
+    },
+    "data/raw/lb/trade_alternatives/ei_2025_data.xlsx": {
+      "storage": "active",
+      "sha256": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63"
+    },
+    "data/raw/official/S01_demand_excerpt_20261017.txt": {
+      "storage": "active",
+      "sha256": "bdae0182ff96a1153755073b5840526887b0f358c81a65714999f7f4de77a08c"
+    },
+    "data/raw/official/S06_gdp_excerpt_20261017.txt": {
+      "storage": "active",
+      "sha256": "b4b45dbb0ea15c11660536efd8b800bab94cda3970734a3c56945acabfd0fba7"
+    },
+    "data/raw/official/S13_selected_capture.txt": {
+      "storage": "active",
+      "sha256": "fdcf2c563d51bdfe1135b2f2a3e88d87d2ada2c66acfaa6e075cf8fa15f88e98"
+    },
+    "data/raw/q1/bio_industry_interview.html": {
+      "storage": "active",
+      "sha256": "3bb47743036f21a2dba4bebda60b0557a0bf11f4ff9357ce7ad2c9d7df6337b1"
+    },
+    "data/raw/q1/bio_report_access.html": {
+      "storage": "active",
+      "sha256": "4178f2d4aba1db78cddf4d40d709860d83099792342081916db88445721c383f"
+    },
+    "data/raw/q1/nea_pv_2024.html": {
+      "storage": "active",
+      "sha256": "ca0f582fbfbb3038d6db494d6e14b04612302c7f864a64e1113cbcf520aa164d"
+    },
+    "data/raw/q1/nea_pv_2024.jpeg": {
+      "storage": "active",
+      "sha256": "12ce026ce5ac9e3444cfce47f5d90996b9e3a8cc049fdaa4208ab08b03bbbbe5"
+    },
+    "data/raw/q1/nnsa_nuclear_2024.html": {
+      "storage": "active",
+      "sha256": "b566deb215c53a2530e3d17a9df9bfd8207a786e0919183cbec50d06b170bb30"
+    },
+    "data/raw/q1/nnsa_nuclear_regions_2024.png": {
+      "storage": "active",
+      "sha256": "eed1fdea3dac27bf1f8656bf4569b55be0ce8a4eb202fef52ad0eeadf31ca69b"
+    },
+    "data/raw/q1/retrievals.json": {
+      "storage": "active",
+      "sha256": "0231a22887eb608f6bbcb8983e383ef50d6503f912a353ee4a64029e47f8c08e"
+    },
+    "data/raw/q1/wb_pink_february_2025.pdf": {
+      "storage": "active",
+      "sha256": "94f053ef4134d5278ba71feec6613aff5d62eeeebf78ea4fb9b226217d7a7907"
+    },
+    "data/raw/q1/wb_pink_january_2023.pdf": {
+      "storage": "active",
+      "sha256": "e781f5b701cf92f3647bd7c9a9a20e8625b98795a1ce348182b3d385c619519c"
+    },
+    "data/raw/q1/wb_pink_january_2024.pdf": {
+      "storage": "active",
+      "sha256": "3c808387b7e836aa4d1c72384f8a9213d55bf621927346730b11cc696247c4f4"
+    },
+    "data/raw/q1/wb_pink_january_2025.pdf": {
+      "storage": "active",
+      "sha256": "b53a6b98c921bdb8cf9f68f170cc6d65c6e341970cb7747a0fb4e91dcf7ef1a5"
+    },
+    "data/sources.json": {
+      "storage": "active",
+      "sha256": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f"
+    },
+    "docs/solutions/PR14_REVIEW10_RESPONSE.md": {
+      "storage": "bundle",
+      "sha256": "6d8a9affe2a340476c180de813c79e4466795e80b3fea974e98838c0e81d51bd"
+    },
+    "docs/solutions/QUESTION2_DELIVERY_20261020.md": {
+      "storage": "bundle",
+      "sha256": "b15730008465e7b58f89e31b07f0ad33874823adf44f9ec841708a8525eaddda"
+    },
+    "docs/solutions/QUESTION2_PR_HANDOFF_20261020.md": {
+      "storage": "bundle",
+      "sha256": "98b5cf53d7329661e257ef192eb43fcc73aeea7a46684675f7b59294558fbde8"
+    },
+    "outputs/q1/p1_yx/cost_sensitivity.svg": {
+      "storage": "bundle",
+      "sha256": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6"
+    },
+    "outputs/q1/p1_yx/coverage.csv": {
+      "storage": "bundle",
+      "sha256": "39afebba91a3a4335b09cce4ffb282bf9fa5241c84fd6a3de656ff837917796a"
+    },
+    "outputs/q1/p1_yx/demand_trends.svg": {
+      "storage": "bundle",
+      "sha256": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406"
+    },
+    "outputs/q1/p1_yx/energy_assessment.csv": {
+      "storage": "bundle",
+      "sha256": "c0d33c6daabeb73699d1a3a18762b3047d5d668fa4a52688489150daab6e27dd"
+    },
+    "outputs/q1/p1_yx/energy_roles.csv": {
+      "storage": "bundle",
+      "sha256": "7dfebae87f6f211afdb3bf9bb07d4a371feae05a196bd3370e6e2fa26c8fc9ba"
+    },
+    "outputs/q1/p1_yx/gaps_and_conflicts.csv": {
+      "storage": "bundle",
+      "sha256": "46e4da700806daed8dfaecca0265adb22a431367dd304a9430f8f4f028feecf3"
+    },
+    "outputs/q1/p1_yx/history.csv": {
+      "storage": "bundle",
+      "sha256": "9f142b8a22f6703adf3e56cba40a200c1c4523c386f0fa41d73e0d7be824b59c"
+    },
+    "outputs/q1/p1_yx/import_origins.csv": {
+      "storage": "bundle",
+      "sha256": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469"
+    },
+    "outputs/q1/p1_yx/indicators.csv": {
+      "storage": "bundle",
+      "sha256": "e5f28dbc98632bc7bf81835843ed103dea4f0ec250731c66ebf7ca7b82165564"
+    },
+    "outputs/q1/p1_yx/model_handoff.csv": {
+      "storage": "bundle",
+      "sha256": "763e59930721e8b1b665a0e7648c8fa1975516edcb2803844f91a3250d488541"
+    },
+    "outputs/q1/p1_yx/price_trends.svg": {
+      "storage": "bundle",
+      "sha256": "5fb4a559ebd17aa763b3ef11eccbe730bdb628323492bf43f4bee5d63a0a7408"
+    },
+    "outputs/q1/p1_yx/regional_comparison.csv": {
+      "storage": "bundle",
+      "sha256": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51"
+    },
+    "outputs/q1/p1_yx/regional_shares.svg": {
+      "storage": "bundle",
+      "sha256": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396"
+    },
+    "outputs/q1/p1_yx/renewable_regions.csv": {
+      "storage": "bundle",
+      "sha256": "467362307a9a9a14563380200bc0d2310fdcc54a3d43ae77310a95dd13f669c8"
+    },
+    "outputs/q1/p1_yx/report.md": {
+      "storage": "bundle",
+      "sha256": "76391387299f31573ab85330e5c69ac961c8084c3c52f14c8e1ef466098a44ce"
+    },
+    "outputs/q1/p1_yx/run_manifest.json": {
+      "storage": "bundle",
+      "sha256": "e58a9e5ac4d24eaa0e261038e36c662ef97578f78311f513d3a95c9808f460d4"
+    },
+    "outputs/q1/p1_yx/static_balance.json": {
+      "storage": "bundle",
+      "sha256": "30a66292a4b577478c0f84f68dae004646dbbbc428a5ace8c95f3e2779ce7624"
+    },
+    "outputs/q1/p1_yx/synergy_assessment.csv": {
+      "storage": "bundle",
+      "sha256": "9acb3c05e82900862fe84cd6ef8388edc1e1738034a6caaca3227d9afdd433b7"
+    },
+    "outputs/q1/p1_yx/technology_region_capacities.csv": {
+      "storage": "bundle",
+      "sha256": "3469a8fdbb7c12ef98c19bb8eae1c27e30e54fd5c9d19f60ef629431d7f429a4"
+    },
+    "outputs/q1/pr14_aligned/alignment_manifest.json": {
+      "storage": "active",
+      "sha256": "a79a2d34713776e92a92e338b73e8355076f99aac204d5cdfc22b0da2b260577"
+    },
+    "outputs/q1/pr14_aligned/classification_changes.csv": {
+      "storage": "active",
+      "sha256": "1e183cfa5f9db139a95f6f5feaf21851eb5c28c0c8a9fd5db1154dd781b30656"
+    },
+    "outputs/q1/pr14_aligned/cost_sensitivity.svg": {
+      "storage": "active",
+      "sha256": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6"
+    },
+    "outputs/q1/pr14_aligned/coverage.csv": {
+      "storage": "active",
+      "sha256": "9cadd6c8d629380dd56820f45f88b5aa3039fd020f56c23dfda302e9b641bc5b"
+    },
+    "outputs/q1/pr14_aligned/demand_trends.svg": {
+      "storage": "active",
+      "sha256": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406"
+    },
+    "outputs/q1/pr14_aligned/energy_assessment.csv": {
+      "storage": "active",
+      "sha256": "c0d33c6daabeb73699d1a3a18762b3047d5d668fa4a52688489150daab6e27dd"
+    },
+    "outputs/q1/pr14_aligned/energy_roles.csv": {
+      "storage": "active",
+      "sha256": "7dfebae87f6f211afdb3bf9bb07d4a371feae05a196bd3370e6e2fa26c8fc9ba"
+    },
+    "outputs/q1/pr14_aligned/gaps_and_conflicts.csv": {
+      "storage": "active",
+      "sha256": "46e4da700806daed8dfaecca0265adb22a431367dd304a9430f8f4f028feecf3"
+    },
+    "outputs/q1/pr14_aligned/handoff.json": {
+      "storage": "active",
+      "sha256": "f0937b7c66d6c0756cb80d8090500c98a4a20f8733bd12606693aba985b45bfa"
+    },
+    "outputs/q1/pr14_aligned/history.csv": {
+      "storage": "active",
+      "sha256": "2502b390cc5f3e7126e5137d0bdd38af4252198b83ab7efb096c985fd9bf3bb0"
+    },
+    "outputs/q1/pr14_aligned/import_origins.csv": {
+      "storage": "active",
+      "sha256": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469"
+    },
+    "outputs/q1/pr14_aligned/indicators.csv": {
+      "storage": "active",
+      "sha256": "e5f28dbc98632bc7bf81835843ed103dea4f0ec250731c66ebf7ca7b82165564"
+    },
+    "outputs/q1/pr14_aligned/model_handoff.csv": {
+      "storage": "active",
+      "sha256": "e7eec3a39f608d46e6481a561d946405e9306c2823b344cb56e9f3f26c4d0361"
+    },
+    "outputs/q1/pr14_aligned/price_trends.svg": {
+      "storage": "active",
+      "sha256": "5fb4a559ebd17aa763b3ef11eccbe730bdb628323492bf43f4bee5d63a0a7408"
+    },
+    "outputs/q1/pr14_aligned/q2_initial_state.csv": {
+      "storage": "active",
+      "sha256": "d633cc69ba1984aeb1e7762d6f683892b42b54c65b1b8bdf607a59f04b0329a9"
+    },
+    "outputs/q1/pr14_aligned/q2_observation_bridge.csv": {
+      "storage": "active",
+      "sha256": "b26ca9a19aaae24b79eec54b749ce4a8bddd0a20570bcc98e6eb94aa7c70f565"
+    },
+    "outputs/q1/pr14_aligned/regional_comparison.csv": {
+      "storage": "active",
+      "sha256": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51"
+    },
+    "outputs/q1/pr14_aligned/regional_shares.svg": {
+      "storage": "active",
+      "sha256": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396"
+    },
+    "outputs/q1/pr14_aligned/renewable_regions.csv": {
+      "storage": "active",
+      "sha256": "467362307a9a9a14563380200bc0d2310fdcc54a3d43ae77310a95dd13f669c8"
+    },
+    "outputs/q1/pr14_aligned/report.md": {
+      "storage": "bundle",
+      "sha256": "931713b224b02838d532c2bc89029664c7840fd7cf9dbb79f53903890d14894a"
+    },
+    "outputs/q1/pr14_aligned/static_balance.json": {
+      "storage": "active",
+      "sha256": "30a66292a4b577478c0f84f68dae004646dbbbc428a5ace8c95f3e2779ce7624"
+    },
+    "outputs/q1/pr14_aligned/synergy_assessment.csv": {
+      "storage": "active",
+      "sha256": "9acb3c05e82900862fe84cd6ef8388edc1e1738034a6caaca3227d9afdd433b7"
+    },
+    "outputs/q1/pr14_aligned/technology_region_capacities.csv": {
+      "storage": "active",
+      "sha256": "3469a8fdbb7c12ef98c19bb8eae1c27e30e54fd5c9d19f60ef629431d7f429a4"
+    },
+    "outputs/q123_alignment/annual_common_metrics.csv": {
+      "storage": "active",
+      "sha256": "220de8368ea9e25bdeb3a5acde14b58fc0726063850bf92c1a7074bd20460256"
+    },
+    "outputs/q123_alignment/scenario_service_fractions.csv": {
+      "storage": "active",
+      "sha256": "dedb25ac21e32ca8b91302a9292a38f5ce95df753a65720c4f0bf9c317d2f2bd"
+    },
+    "outputs/q2_current_delivery/20261020T004752442611Z/design.json": {
+      "storage": "active",
+      "sha256": "2c9b976be12dec66efc1e7e1dcea2ca9d16f91aeb950fb90f96a53743983fb00"
+    },
+    "outputs/q2_current_delivery/20261020T004752442611Z/results.json": {
+      "storage": "bundle",
+      "sha256": "d199a8da52f1c5d7d4394b7bb342d28443f0081baafa16a0a307deacdc41c062"
+    },
+    "outputs/q2_current_delivery/20261020T004752442611Z/source_snapshot.json": {
+      "storage": "active",
+      "sha256": "c77958372275584b9f53133475a315e2a960e6ff036892b165aefa38136abaf6"
+    },
+    "outputs/q2_current_delivery/20261020T004752442611Z/status.json": {
+      "storage": "bundle",
+      "sha256": "50855e9dea453c5ae5cea0ab91ea1e85d15d0d0c0a3d31e94dd27b08cd13dcf3"
+    },
+    "outputs/q2_current_delivery/20261020T004752442611Z/targets.csv": {
+      "storage": "active",
+      "sha256": "3e100da3e2f198d23fe4a565c976a0463df1d70ec21582e03b0466a7eddf935b"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/S0.json": {
+      "storage": "active",
+      "sha256": "9ceef5aa84d0e8d9dba92e84943aace9dd053c41249725f4711a69847c8f2e59"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/S0_authority100.json": {
+      "storage": "active",
+      "sha256": "8b2285b776e58cc000caad99e1416e58182099069e0846731286cceef5e93d26"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/S0_authority100_path.csv": {
+      "storage": "active",
+      "sha256": "ac4a94763069200462620991502dbafb19549de5540dcdaf41391c28ab66870b"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/S0_authority5.json": {
+      "storage": "active",
+      "sha256": "ac257a99b007524e4aa87a49fa681b712c785cda9ed1125cb12880f507588a3d"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/S0_authority5_path.csv": {
+      "storage": "active",
+      "sha256": "bf14d71afbe8e4641d944f7f21e2e51cc7f85a165fd3ecd676c3e81d4ed2ba45"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/S0_net55.json": {
+      "storage": "active",
+      "sha256": "453ba40f7caa6a09c880b1c1eb5d491c35ac646a7c7ef952200ae58c27fc985f"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/S0_net55_path.csv": {
+      "storage": "active",
+      "sha256": "ac4a94763069200462620991502dbafb19549de5540dcdaf41391c28ab66870b"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/S0_path.csv": {
+      "storage": "active",
+      "sha256": "ac4a94763069200462620991502dbafb19549de5540dcdaf41391c28ab66870b"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/execution.log": {
+      "storage": "bundle",
+      "sha256": "338a991d3cf25c2f8fa831d4ac9a974a72636307a3ace4ab783352fbde9095c2"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/integration.json": {
+      "storage": "active",
+      "sha256": "de7263891ace6744b361132b6ea172109789c4d18629d7be26788bfa019d8009"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_double_arrears.json": {
+      "storage": "active",
+      "sha256": "4f7f05d2fd7a80ca4c6bc7e222bf6bccc50355a17a6d490765ab0d0c1bf1bf41"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_double_arrears_path.csv": {
+      "storage": "active",
+      "sha256": "23e5a420fb83faa92d00356e970cf56af9b378551d94c7b92f1de957da2cc141"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_high_cash.json": {
+      "storage": "active",
+      "sha256": "888482582901ddf887c2ed9fbc0869caa485e98d1dff432e69aba91a40f82060"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_high_cash_path.csv": {
+      "storage": "active",
+      "sha256": "d2f9a7cf28fa4d255a5e3fba450519ebf5ec40850858b38acb51673261a46d7a"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_high_debt.json": {
+      "storage": "active",
+      "sha256": "628fc9f9e0b4b852b30170bc065e545c798eec381762acc93bb8b3cd67da15c2"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_high_debt_path.csv": {
+      "storage": "active",
+      "sha256": "bf81818ada5d12a17e583c8c9d7ac170918b78577daf59f7faeb873a647a97fe"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_large_queue.json": {
+      "storage": "active",
+      "sha256": "fded466aff5bf781d1b9f0d91898548a2569d130327c753d5926c77ced8a81a9"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_large_queue_path.csv": {
+      "storage": "active",
+      "sha256": "827289453bdbdca61223440858d4768fb017cb99c265a18b9c283bce70b979e6"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_low_cash.json": {
+      "storage": "active",
+      "sha256": "8b33572cec983c700f85d019dd9d3f156f57d8aa056275bac3ffaad4ea741566"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_low_cash_path.csv": {
+      "storage": "active",
+      "sha256": "8cfabe2278e11a0bf86004ef3faf31ca1f1e8a07b871f0044462303dacd39f03"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_low_debt.json": {
+      "storage": "active",
+      "sha256": "7a150c9a5b751e18d50726c4fd27ca2ee7786ac025cb58c66ffe995f42aeaee1"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_low_debt_path.csv": {
+      "storage": "active",
+      "sha256": "58a4b2505ca94a8ba12c9d8041b0be2b2fce129291da5dffbfa597eb5f464774"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_no_arrears.json": {
+      "storage": "active",
+      "sha256": "f7276d1bc76aa193ad0bd55bb8e39594f00dc0047715684bfee1b9a34bd54e2e"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_no_arrears_path.csv": {
+      "storage": "active",
+      "sha256": "7689918a3db42a22d6e51adde9694488ca231429765f4e6042851224eeec0f2e"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_no_queue.json": {
+      "storage": "active",
+      "sha256": "9eb976dd74f520d0783697fa7b193ae251d1a6544b7c8017614aeaea19401e9a"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_no_queue_path.csv": {
+      "storage": "active",
+      "sha256": "a37d8a5f350e6c747a0c42a2e815d635aaeb5233bc8d87346fcc0ad1dce846ab"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_older.json": {
+      "storage": "active",
+      "sha256": "848073166b21de60d1d7d7e5bf9da12f7dec4b1627b8771f9d0368782d6428bd"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_older_path.csv": {
+      "storage": "active",
+      "sha256": "7ab79682027f7de32337c0e48fad902fa42736030c7b7a46f487ee51ff8ceed3"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_younger.json": {
+      "storage": "active",
+      "sha256": "5216d3d6337e12e54b0900396a6a281d0b7aa88f914fd912186d7da6a2b6ef47"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/opening_younger_path.csv": {
+      "storage": "active",
+      "sha256": "06dcd01b078cb90e848cdafaf08db55db058e025d6362bada3db4b55926396ce"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_carbon_price_multiplier_0.json": {
+      "storage": "active",
+      "sha256": "794c95202b22da6034a94112e0493baff2184214dd2f66c027967eca938ea391"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_carbon_price_multiplier_0_path.csv": {
+      "storage": "active",
+      "sha256": "ce81dec70626c220b625aba72c93e6444ef613449cbf18ba64f510b9ed351563"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_carbon_price_multiplier_1.json": {
+      "storage": "active",
+      "sha256": "b2a138736702392887139d0c9d4ad260222bd06027703231ecc72c77c1cd93c3"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_carbon_price_multiplier_1_path.csv": {
+      "storage": "active",
+      "sha256": "0bcce456c546ea0f23c97465a01c29505d29da00b8963147d0cafcd916c66036"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_cost_decline_delta_0.json": {
+      "storage": "active",
+      "sha256": "618e284289014cffab605d1c23064936ab6466e881a18be963250d30eed8b9f3"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_cost_decline_delta_0_path.csv": {
+      "storage": "active",
+      "sha256": "0b993d38d3e78a1112eb8adde15fc58af6e3c266b622af094a090b6b8012ee86"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_cost_decline_delta_1.json": {
+      "storage": "active",
+      "sha256": "5677c332c1cd8e70b7c494ead668efcd67fdaa1a0353b3e258f2084b63244b0b"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_cost_decline_delta_1_path.csv": {
+      "storage": "active",
+      "sha256": "86cde545847bbf2af8fbb93294f258ec935a4927b17895e30c85e91c14c71d9e"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_fuel_price_multiplier_0.json": {
+      "storage": "active",
+      "sha256": "b0b5cc033873378d24c0d44d308f5157f487117db2f467b97a4f7b040c741362"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_fuel_price_multiplier_0_path.csv": {
+      "storage": "active",
+      "sha256": "c3bf5a92da667c7ab333f481a72f7ccb78303cae56162f50d52c8073cc74ea9b"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_fuel_price_multiplier_1.json": {
+      "storage": "active",
+      "sha256": "9923d920d518dbfaedccf37cfd8b2be270419511e3f87fda0005ba05ca7950d6"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_fuel_price_multiplier_1_path.csv": {
+      "storage": "active",
+      "sha256": "049bcf38b58d589d7dd1e484b05a3eb84ec2a676250c5efd5b3a3aaad97a396a"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_gdp_growth_delta_0.json": {
+      "storage": "active",
+      "sha256": "c973765542f8226f4aadd0e62082c72c574a20a37c510081806412dca9e01671"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_gdp_growth_delta_0_path.csv": {
+      "storage": "active",
+      "sha256": "96f5fc6fd4ed96b18760851460daf035562a34846fbced023b7bfdd2cfc1b8e9"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_gdp_growth_delta_1.json": {
+      "storage": "active",
+      "sha256": "2a59f0907332194ae382a5ad47b5a4d820743f8c9fa14f1b81f325c8edee9239"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_gdp_growth_delta_1_path.csv": {
+      "storage": "active",
+      "sha256": "fdf49a61c023a5dd37f6f5fb458c991734446e03b8b9c98d564f075b4a3eb903"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_removals_multiplier_0.json": {
+      "storage": "active",
+      "sha256": "371c8b0e7dad143e26983981eefaf8231f11492f202ba7cd1493a999a2e24c2d"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_removals_multiplier_0_path.csv": {
+      "storage": "active",
+      "sha256": "23e0e6166401b3755be4b1655d7094c7ccb7f8f393f44221610d965779a07df2"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_removals_multiplier_1.json": {
+      "storage": "active",
+      "sha256": "fa0c70afc415e433904280ca04360d78c2ece497f94572bcde86723fd9a94e06"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/sensitivity_removals_multiplier_1_path.csv": {
+      "storage": "active",
+      "sha256": "f73360f8218fb38ef5b7a7f39eea2098db1bb70f90e733f9645c1cb818ec67bb"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T083317900895Z/verification.json": {
+      "storage": "active",
+      "sha256": "42981d3316d21dc0a5815b44ff6f6c62666a8c0364cbf698922962ac5100a09f"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/S0.json": {
+      "storage": "active",
+      "sha256": "9ceef5aa84d0e8d9dba92e84943aace9dd053c41249725f4711a69847c8f2e59"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/S0_authority100.json": {
+      "storage": "active",
+      "sha256": "8b2285b776e58cc000caad99e1416e58182099069e0846731286cceef5e93d26"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/S0_authority100_path.csv": {
+      "storage": "active",
+      "sha256": "ac4a94763069200462620991502dbafb19549de5540dcdaf41391c28ab66870b"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/S0_authority5.json": {
+      "storage": "active",
+      "sha256": "ac257a99b007524e4aa87a49fa681b712c785cda9ed1125cb12880f507588a3d"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/S0_authority5_path.csv": {
+      "storage": "active",
+      "sha256": "bf14d71afbe8e4641d944f7f21e2e51cc7f85a165fd3ecd676c3e81d4ed2ba45"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/S0_net55.json": {
+      "storage": "active",
+      "sha256": "453ba40f7caa6a09c880b1c1eb5d491c35ac646a7c7ef952200ae58c27fc985f"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/S0_net55_path.csv": {
+      "storage": "active",
+      "sha256": "ac4a94763069200462620991502dbafb19549de5540dcdaf41391c28ab66870b"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/S0_path.csv": {
+      "storage": "active",
+      "sha256": "ac4a94763069200462620991502dbafb19549de5540dcdaf41391c28ab66870b"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/execution.log": {
+      "storage": "bundle",
+      "sha256": "bd5f552af43b23b9d06205e954ef5870ff834256cce04dd73a792e46369a11d8"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/integration.json": {
+      "storage": "active",
+      "sha256": "475ce10473d81ca5d99eef497d39c9279e919f93de9bfea7a21cd500f5e53f12"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_double_arrears.json": {
+      "storage": "active",
+      "sha256": "4f7f05d2fd7a80ca4c6bc7e222bf6bccc50355a17a6d490765ab0d0c1bf1bf41"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_double_arrears_path.csv": {
+      "storage": "active",
+      "sha256": "23e5a420fb83faa92d00356e970cf56af9b378551d94c7b92f1de957da2cc141"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_high_cash.json": {
+      "storage": "active",
+      "sha256": "888482582901ddf887c2ed9fbc0869caa485e98d1dff432e69aba91a40f82060"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_high_cash_path.csv": {
+      "storage": "active",
+      "sha256": "d2f9a7cf28fa4d255a5e3fba450519ebf5ec40850858b38acb51673261a46d7a"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_high_debt.json": {
+      "storage": "active",
+      "sha256": "628fc9f9e0b4b852b30170bc065e545c798eec381762acc93bb8b3cd67da15c2"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_high_debt_path.csv": {
+      "storage": "active",
+      "sha256": "bf81818ada5d12a17e583c8c9d7ac170918b78577daf59f7faeb873a647a97fe"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_large_queue.json": {
+      "storage": "active",
+      "sha256": "fded466aff5bf781d1b9f0d91898548a2569d130327c753d5926c77ced8a81a9"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_large_queue_path.csv": {
+      "storage": "active",
+      "sha256": "827289453bdbdca61223440858d4768fb017cb99c265a18b9c283bce70b979e6"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_low_cash.json": {
+      "storage": "active",
+      "sha256": "8b33572cec983c700f85d019dd9d3f156f57d8aa056275bac3ffaad4ea741566"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_low_cash_path.csv": {
+      "storage": "active",
+      "sha256": "8cfabe2278e11a0bf86004ef3faf31ca1f1e8a07b871f0044462303dacd39f03"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_low_debt.json": {
+      "storage": "active",
+      "sha256": "7a150c9a5b751e18d50726c4fd27ca2ee7786ac025cb58c66ffe995f42aeaee1"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_low_debt_path.csv": {
+      "storage": "active",
+      "sha256": "58a4b2505ca94a8ba12c9d8041b0be2b2fce129291da5dffbfa597eb5f464774"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_no_arrears.json": {
+      "storage": "active",
+      "sha256": "f7276d1bc76aa193ad0bd55bb8e39594f00dc0047715684bfee1b9a34bd54e2e"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_no_arrears_path.csv": {
+      "storage": "active",
+      "sha256": "7689918a3db42a22d6e51adde9694488ca231429765f4e6042851224eeec0f2e"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_no_queue.json": {
+      "storage": "active",
+      "sha256": "9eb976dd74f520d0783697fa7b193ae251d1a6544b7c8017614aeaea19401e9a"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_no_queue_path.csv": {
+      "storage": "active",
+      "sha256": "a37d8a5f350e6c747a0c42a2e815d635aaeb5233bc8d87346fcc0ad1dce846ab"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_older.json": {
+      "storage": "active",
+      "sha256": "848073166b21de60d1d7d7e5bf9da12f7dec4b1627b8771f9d0368782d6428bd"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_older_path.csv": {
+      "storage": "active",
+      "sha256": "7ab79682027f7de32337c0e48fad902fa42736030c7b7a46f487ee51ff8ceed3"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_younger.json": {
+      "storage": "active",
+      "sha256": "5216d3d6337e12e54b0900396a6a281d0b7aa88f914fd912186d7da6a2b6ef47"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/opening_younger_path.csv": {
+      "storage": "active",
+      "sha256": "06dcd01b078cb90e848cdafaf08db55db058e025d6362bada3db4b55926396ce"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_carbon_price_multiplier_0.json": {
+      "storage": "active",
+      "sha256": "794c95202b22da6034a94112e0493baff2184214dd2f66c027967eca938ea391"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_carbon_price_multiplier_0_path.csv": {
+      "storage": "active",
+      "sha256": "ce81dec70626c220b625aba72c93e6444ef613449cbf18ba64f510b9ed351563"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_carbon_price_multiplier_1.json": {
+      "storage": "active",
+      "sha256": "b2a138736702392887139d0c9d4ad260222bd06027703231ecc72c77c1cd93c3"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_carbon_price_multiplier_1_path.csv": {
+      "storage": "active",
+      "sha256": "0bcce456c546ea0f23c97465a01c29505d29da00b8963147d0cafcd916c66036"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_cost_decline_delta_0.json": {
+      "storage": "active",
+      "sha256": "618e284289014cffab605d1c23064936ab6466e881a18be963250d30eed8b9f3"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_cost_decline_delta_0_path.csv": {
+      "storage": "active",
+      "sha256": "0b993d38d3e78a1112eb8adde15fc58af6e3c266b622af094a090b6b8012ee86"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_cost_decline_delta_1.json": {
+      "storage": "active",
+      "sha256": "5677c332c1cd8e70b7c494ead668efcd67fdaa1a0353b3e258f2084b63244b0b"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_cost_decline_delta_1_path.csv": {
+      "storage": "active",
+      "sha256": "86cde545847bbf2af8fbb93294f258ec935a4927b17895e30c85e91c14c71d9e"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_fuel_price_multiplier_0.json": {
+      "storage": "active",
+      "sha256": "b0b5cc033873378d24c0d44d308f5157f487117db2f467b97a4f7b040c741362"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_fuel_price_multiplier_0_path.csv": {
+      "storage": "active",
+      "sha256": "c3bf5a92da667c7ab333f481a72f7ccb78303cae56162f50d52c8073cc74ea9b"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_fuel_price_multiplier_1.json": {
+      "storage": "active",
+      "sha256": "9923d920d518dbfaedccf37cfd8b2be270419511e3f87fda0005ba05ca7950d6"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_fuel_price_multiplier_1_path.csv": {
+      "storage": "active",
+      "sha256": "049bcf38b58d589d7dd1e484b05a3eb84ec2a676250c5efd5b3a3aaad97a396a"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_gdp_growth_delta_0.json": {
+      "storage": "active",
+      "sha256": "c973765542f8226f4aadd0e62082c72c574a20a37c510081806412dca9e01671"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_gdp_growth_delta_0_path.csv": {
+      "storage": "active",
+      "sha256": "96f5fc6fd4ed96b18760851460daf035562a34846fbced023b7bfdd2cfc1b8e9"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_gdp_growth_delta_1.json": {
+      "storage": "active",
+      "sha256": "2a59f0907332194ae382a5ad47b5a4d820743f8c9fa14f1b81f325c8edee9239"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_gdp_growth_delta_1_path.csv": {
+      "storage": "active",
+      "sha256": "fdf49a61c023a5dd37f6f5fb458c991734446e03b8b9c98d564f075b4a3eb903"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_removals_multiplier_0.json": {
+      "storage": "active",
+      "sha256": "371c8b0e7dad143e26983981eefaf8231f11492f202ba7cd1493a999a2e24c2d"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_removals_multiplier_0_path.csv": {
+      "storage": "active",
+      "sha256": "23e0e6166401b3755be4b1655d7094c7ccb7f8f393f44221610d965779a07df2"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_removals_multiplier_1.json": {
+      "storage": "active",
+      "sha256": "fa0c70afc415e433904280ca04360d78c2ece497f94572bcde86723fd9a94e06"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/sensitivity_removals_multiplier_1_path.csv": {
+      "storage": "active",
+      "sha256": "f73360f8218fb38ef5b7a7f39eea2098db1bb70f90e733f9645c1cb818ec67bb"
+    },
+    "outputs/q2_pr14/integrated/attempts/20261020T093157669952Z/verification.json": {
+      "storage": "active",
+      "sha256": "42981d3316d21dc0a5815b44ff6f6c62666a8c0364cbf698922962ac5100a09f"
+    },
+    "outputs/q2_pr14/integrated/latest.json": {
+      "storage": "active",
+      "sha256": "78c870ba34b37221cf6fbf45d7dd4c19e91424357effe02f4f7f772f72c0bd04"
+    },
+    "outputs/q2_pr14/integrated/owner.json": {
+      "storage": "active",
+      "sha256": "af0eca2c5f6b0167ec3695e3570e670be743216f02a4cb851eb35e0359ef4ef7"
+    },
+    "outputs/q2_revenue_recalibration/20261020T001729046749Z/design.json": {
+      "storage": "active",
+      "sha256": "c8c10fad5479f4e31831ffd1da85c10e208c073d9dca07ab5ac72f6e8fecac0d"
+    },
+    "outputs/q2_revenue_recalibration/20261020T001729046749Z/results.json": {
+      "storage": "active",
+      "sha256": "77aa53122fcadcf846f911fe27527f3beeacb69c3eaf0c9fd9407057e5f18ba4"
+    },
+    "outputs/q2_revenue_recalibration/20261020T001729046749Z/training_selection.json": {
+      "storage": "active",
+      "sha256": "432bef3792c4af560b6191e72af7b879f60e4b2eab18abb0b09128d30c314b3a"
+    },
+    "outputs/q2_revenue_recalibration/20261020T001729054583Z/design.json": {
+      "storage": "active",
+      "sha256": "890d884ffc9e3a24b2266071fd2173496f53e3394115fd856a50a2386c28ce05"
+    },
+    "outputs/q2_revenue_recalibration/20261020T001729054583Z/results.json": {
+      "storage": "active",
+      "sha256": "f7195eed7fa5ae04a20466c16a1168296e3b6d10ada246e5eb97b7633377ff77"
+    },
+    "outputs/q2_revenue_recalibration/20261020T001729054583Z/training_selection.json": {
+      "storage": "active",
+      "sha256": "5511ae53743492642a0d0d0079269924500ca0ee649901d4f160922fabe47df2"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/annual_ledgers_001.jsonl.gz": {
+      "storage": "active",
+      "sha256": "005d7e1ce590a5da87a21a47970760b5be7339611a666f1b257642811100e694"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/annual_ledgers_002.jsonl.gz": {
+      "storage": "active",
+      "sha256": "10091e03a8f17a66249c9beedbf9d6eb6152a36a2e9c80adc0eec8985a15c7b8"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/annual_ledgers_003.jsonl.gz": {
+      "storage": "active",
+      "sha256": "0901a15f704d52e575bbab0692b8e6554cddca1e8327a4c19e213d80bb7d359a"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/annual_ledgers_004.jsonl.gz": {
+      "storage": "active",
+      "sha256": "8c14e8710f03755aac953648e2400c5626398963b6ee2cff8c1816e7843c6f13"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/baseline_regression.json": {
+      "storage": "active",
+      "sha256": "8b3f10b7b7d7dd2c130aa085896ea81f19d2164fe70664323cee72ef5716b28a"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/bottleneck_diagnostics.csv": {
+      "storage": "active",
+      "sha256": "9cd7758f88f1df1daffee299e8833bfc77f640082faaacdb135c7e861018d98a"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/event_ledgers_001.jsonl.gz": {
+      "storage": "active",
+      "sha256": "813d8cba1148b5e898aa430115452f239a876bd776ae566d34171be051706ae2"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/experiment_coverage.json": {
+      "storage": "active",
+      "sha256": "26f3c014a097b9a213746afbc41c65d969fcf33d9bb67ff321f4f97ac7dc4b6d"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/frozen_config.json": {
+      "storage": "active",
+      "sha256": "7f7cc43a9efc048a33704b0330aacd2f83ad04e9d080df9a8c42852ad711f9e0"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/gaps_and_conflicts.csv": {
+      "storage": "active",
+      "sha256": "615365f35ceb98e5b270b2fdbb65ae0121a34921eb96819ddb1f951933ff48de"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/h01_results.csv": {
+      "storage": "active",
+      "sha256": "64c00819e999f2d07705d19ba798807657ea752ed704a55b25570b0a5002adff"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/h01_selection.json": {
+      "storage": "active",
+      "sha256": "e55030df0a1f8a305eecf64479aeb00c784915b7f332427f7d9752f39c759af0"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/h02_results.csv": {
+      "storage": "active",
+      "sha256": "36943b50b6f617ccafb4e36a70d32cd004d063e223c0331935faf7ef9c5aa871"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/manifest.json": {
+      "storage": "active",
+      "sha256": "bcb44d9b480c20b5d4d5989ba7b03a04f71e99975a8d9e880ff0a7f73ca793d1"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/policy_candidates.csv": {
+      "storage": "active",
+      "sha256": "6f5e86d9e2a2e10143eac671ff8d6ba4ce459ce4316387cf286142d3e015f95d"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/policy_results.csv": {
+      "storage": "active",
+      "sha256": "8172b87f439bbebd99d9f4e56f13675e4336387d824ee03c1b46597e13c878c6"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/policy_selection.json": {
+      "storage": "active",
+      "sha256": "7bb0e4286879304e31159a4886fcebd6848af24d3b2c29235fc01c920cc6fce9"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/policy_tradeoffs.csv": {
+      "storage": "active",
+      "sha256": "2584e53ce83b55dcc11396d12d0c83589f975db4f145dd0f6109a763bcaac7a7"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/policy_tradeoffs.png": {
+      "storage": "active",
+      "sha256": "25babd4daa1636ab1f6128229b83633d95b6a36069bac317ee6c9693c56f9f4c"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/report.md": {
+      "storage": "bundle",
+      "sha256": "56eb97170e3c319df5833870ed79edca755151c6fc97ffa91a55a85e8222db07"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/safety_metrics.csv": {
+      "storage": "active",
+      "sha256": "48811317a16e907745e1c7221b1e4926dfd46709719935ef46a9bf95a2024b55"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/scenario_comparison.csv": {
+      "storage": "active",
+      "sha256": "d7bc50470a87e411e435e140b3b4f9f2c1ccaaf89fdde535ab5f9da36ff27d03"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/scenario_paths.csv": {
+      "storage": "active",
+      "sha256": "1c13ff141c3c0b6705fb0b8ca2e4c058fbea9e87476e33e570cf9617b0e0946c"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/sensitivity.csv": {
+      "storage": "active",
+      "sha256": "e7e57c6bd97957758fdb25462db058710ab31b027d76eae517fc8c6bbb2f02b9"
+    },
+    "outputs/q3_pr14/current/attempts/20261020T091248608100Z/timing_search.csv": {
+      "storage": "active",
+      "sha256": "6a26629be737a6aa93940679586303efa0dd517a86cec2f3af2e66c8bd2af1c7"
+    },
+    "outputs/q3_pr14/current/latest.json": {
+      "storage": "active",
+      "sha256": "b118471babb257cb51699e490fc352cafda118cc74cc72ffe98fdae4a0f0488f"
+    },
+    "outputs/question2_delivery_20261020/AI工具使用详情说明.md": {
+      "storage": "bundle",
+      "sha256": "98db433e86c561f5d0c1a0bd0f58d7aa154a533594b9093688d3cb58874592aa"
+    },
+    "outputs/question2_delivery_20261020/AI工具使用详情说明.pdf": {
+      "storage": "bundle",
+      "sha256": "2c8018179b12c2124cf505b059171cef4f565518bcef74924afbd383bb53d50e"
+    },
+    "outputs/question2_delivery_20261020/answer_manifest.json": {
+      "storage": "active",
+      "sha256": "fe2e9de1bbaecfefdb4215cee4db1e86f60b0911558ec7bd42d0d630b481bd7d"
+    },
+    "outputs/question2_delivery_20261020/baseline_targets.csv": {
+      "storage": "active",
+      "sha256": "26e3ac5a95da430b2a7d3d7ff9982c08baf21c7bcca059b6d5955b00a454ee3a"
+    },
+    "outputs/question2_delivery_20261020/figures/01_现状.png": {
+      "storage": "active",
+      "sha256": "c3eb433fbfdd2e80963f963a77f11e6c4ff46191b25be9a285e784befd96dbaa"
+    },
+    "outputs/question2_delivery_20261020/figures/01_现状.svg": {
+      "storage": "active",
+      "sha256": "d3731ba5d9881bf4a6ed12b4a08062cef9ec6b54e1aa07382d8f1397bde9a6af"
+    },
+    "outputs/question2_delivery_20261020/figures/02_历史验证.png": {
+      "storage": "active",
+      "sha256": "c40488719b4887464ef77970ad21b46c5010a550f265f405e4126b220c59a3c9"
+    },
+    "outputs/question2_delivery_20261020/figures/02_历史验证.svg": {
+      "storage": "active",
+      "sha256": "4eb0744d60a54787c59349a1f87e4c127aef0b2322960eb7ac2b889c2bba8f8c"
+    },
+    "outputs/question2_delivery_20261020/figures/03_基准路径.png": {
+      "storage": "active",
+      "sha256": "5fc63369678a49da0200342331c47e9865abfe3055e21b7fc206778d3fb56098"
+    },
+    "outputs/question2_delivery_20261020/figures/03_基准路径.svg": {
+      "storage": "active",
+      "sha256": "9ecb2c5dc8bfddeba96113cf500469de6bd5c8118262b5cf8f432a766d5d1608"
+    },
+    "outputs/question2_delivery_20261020/figures/05_必选灵敏度.png": {
+      "storage": "active",
+      "sha256": "3c2533f4fde8860f1ad5625c938c839aa0a7463c84513aa938e898b52182598e"
+    },
+    "outputs/question2_delivery_20261020/figures/05_必选灵敏度.svg": {
+      "storage": "active",
+      "sha256": "435ae3dfb6a1a588ad390fb0c443570b7b411f6f1ce0ee81f83469c16386984a"
+    },
+    "outputs/question2_delivery_20261020/figures/07_分技术误差.png": {
+      "storage": "active",
+      "sha256": "6de6b51d05af031c102f943c38e9c881c218a935780903d1317973dcc7ab1a37"
+    },
+    "outputs/question2_delivery_20261020/figures/07_分技术误差.svg": {
+      "storage": "active",
+      "sha256": "51cb258722a57b966ff5929b5de3fecb3e369f4d3b58e6feb33f4ed424e82db7"
+    },
+    "outputs/question2_delivery_20261020/final_delivery_validation.json": {
+      "storage": "bundle",
+      "sha256": "03c2d6397ce7ab3d27f6e7a6fe8dc91bcbcee40195a3066704b7e5c3abed332a"
+    },
+    "outputs/question2_delivery_20261020/historical_validation.csv": {
+      "storage": "active",
+      "sha256": "4f0450dc8be63f0ce75b9389516f57d042df6a401356d112789f31570f52acad"
+    },
+    "outputs/question2_delivery_20261020/package_validation.json": {
+      "storage": "bundle",
+      "sha256": "77d1026b8f2e38b93b83c7e6f4083e10d5eaa71fb5dfaf567d49c17c2491eab7"
+    },
+    "outputs/question2_delivery_20261020/q2_summary.csv": {
+      "storage": "active",
+      "sha256": "5dbfc926e2909012f3710632521d9f6797b8a7381499d8a23899eec7a7462d5e"
+    },
+    "outputs/question2_delivery_20261020/sensitivity_summary.csv": {
+      "storage": "active",
+      "sha256": "f65747c783ffd98cd90d9ff2da491f4f7bf19e73b723ec9ced375efd9409fd38"
+    },
+    "outputs/question2_delivery_20261020/video_validation.json": {
+      "storage": "bundle",
+      "sha256": "8b486c68f35c0f88e7aa8d004e410876ad5ffdb2d098ab111c88fca859f84a25"
+    },
+    "outputs/question2_delivery_20261020/问题二-演示稿.mp4": {
+      "storage": "bundle",
+      "sha256": "b79515f03953119a86ec5831ff4f9aabb2949d4f81e4180dab2576ae3480a1d1"
+    },
+    "outputs/question2_delivery_20261020/问题二答题稿.md": {
+      "storage": "bundle",
+      "sha256": "53620db051b1afef5a6856d87e8a818caad0edfc7b6fc95ec12222b9f7d343bc"
+    },
+    "outputs/question2_delivery_20261020/问题二答题稿.pdf": {
+      "storage": "bundle",
+      "sha256": "0bdf897f6d8dde96cce4e7977b3a97cf77b324bbd28167b41c9e7d325952ec5c"
+    },
+    "outputs/question2_delivery_20261020/问题二视频讲稿.md": {
+      "storage": "bundle",
+      "sha256": "761ac24f1aa930645a460de058556e44833996a81743fe5ca5a3e0868e2a65c6"
+    },
+    "requirements-data.txt": {
+      "storage": "active",
+      "sha256": "1a16159d6ae1dff56e9269c0adfffb94bdba809558f48cf611cc4b2d9eae5a78"
+    },
+    "requirements-q1.txt": {
+      "storage": "active",
+      "sha256": "f1b21977c06d06cc687ebb0b0f057787635239f3e446c436f78e722ce2699045"
+    },
+    "requirements-q2.txt": {
+      "storage": "active",
+      "sha256": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
+    },
+    "requirements-q3.txt": {
+      "storage": "active",
+      "sha256": "4e8e60dd00634bcc0f185daa92dffc99ea481fb7c3c87d4a599f0320b225306a"
+    },
+    "run.py": {
+      "storage": "bundle",
+      "sha256": "aedecb2dbfebceeeefac38ed962d5e881b8b245013fc801d3cee4871aed5e33e"
+    },
+    "scripts/build_attachments.py": {
+      "storage": "active",
+      "sha256": "eb27232a74d6b858ac6204bc36491de7b17e86aca2bcb38240303d4ecd733417"
+    },
+    "scripts/build_q1.py": {
+      "storage": "active",
+      "sha256": "1dbb7ca41e3c2501119648ae6e3f92c0987ac0ad37303327c9b74cc161cc490d"
+    },
+    "scripts/build_q1_pr14.py": {
+      "storage": "active",
+      "sha256": "6d06324edd84c6de7417863e400e3ae647674fbb739e65cc959bcd99f5373bf7"
+    },
+    "scripts/extract_q1_additions.py": {
+      "storage": "active",
+      "sha256": "9e0cbe5dff99b76542ddae8baa7116c3b0e812b5fcb111b82a498ed969a4b73f"
+    },
+    "scripts/extract_q1_revision.py": {
+      "storage": "active",
+      "sha256": "107a9fab4805b4f10824792cd7bf79615771dc92e472f24024dab808c8b24bce"
+    },
+    "scripts/plot_q1.py": {
+      "storage": "active",
+      "sha256": "bb6b6bc44e7527a998b6c2f17f8be7c81622d06e2abacb62176a1ef0b610383d"
+    },
+    "scripts/prepare_q1_cost_parameters.py": {
+      "storage": "active",
+      "sha256": "8db40d676ca3058f3f5f189f136cfbc08f5e5b4efb721717740f5e41da78be0a"
+    },
+    "scripts/prepare_q1_review.py": {
+      "storage": "active",
+      "sha256": "7c1fb47d297518000dbe91d505786be975fafbd67f8a0c6a78a86b4aa5b6f091"
+    },
+    "scripts/q1_additional_analysis.py": {
+      "storage": "active",
+      "sha256": "9b17c4e8e6428877368dee5d374f89016631b7c03fc89c4ac291292274c7f090"
+    },
+    "scripts/q3_pr14_runtime.py": {
+      "storage": "active",
+      "sha256": "46fbe066267cc79636fd11f32a124b37992638faa0240521a06c24fc435e3d09"
+    },
+    "scripts/review_q1_delivery.py": {
+      "storage": "bundle",
+      "sha256": "ce123943fc39d6d314d5b95fb6bbcc916105f23b8f59136eb4ad38dffa81adf4"
+    },
+    "scripts/run_q2_pr14.py": {
+      "storage": "active",
+      "sha256": "26e79e6cb7f11b3530a1a6fecf99eb89082bea4c8d4d2cd8c621fac4b6cc41c3"
+    },
+    "scripts/run_q3.py": {
+      "storage": "active",
+      "sha256": "ca71a9125f008c93bd59e302ebd335fcbb9bad72f6b5bc322be01ed9516d3f40"
+    },
+    "scripts/run_q3_pr14.py": {
+      "storage": "active",
+      "sha256": "7eee3af9994aa075d1010f1db1abd10a9026b2c3a6a88f9bd15336522c82949e"
+    },
+    "scripts/workflow_status.py": {
+      "storage": "active",
+      "sha256": "0a948df02f7a11e2f8f7afef0be49c1eeac44a9e9371bf2a3fc4300ed7046e9e"
+    },
+    "src/energy_model/__init__.py": {
+      "storage": "active",
+      "sha256": "6918004f3238cce27b61c55a1423d9eaad5dc7028b711d138ba10db47d91ecbe"
+    },
+    "src/energy_model/q1.py": {
+      "storage": "active",
+      "sha256": "ce0e92f4944e9e71b19e8c2f1d9f547ad4eccb79e6b94074278706b7b565e75a"
+    },
+    "src/energy_model/q3_events.py": {
+      "storage": "active",
+      "sha256": "4097d54236ea7bf209891f89ffae29310bf409651c813ea4c42dd846b8914500"
+    },
+    "src/energy_model/q3_transition.py": {
+      "storage": "active",
+      "sha256": "038ec0d36404d929bf7e897bd869f3476ec9b2589ce7c138046add331909531a"
+    },
+    "src/q3_pr14/__init__.py": {
+      "storage": "active",
+      "sha256": "76b1fed2af3fc97e027429b5fb59a40b00295b59234b26292dc301b88f4b9db1"
+    },
+    "src/q3_pr14/dispatch.py": {
+      "storage": "active",
+      "sha256": "2f4ea0cbaa334bc4b605bb94dfb6e42fcadfbb9ff41bb61848a6f1aa6a8cf3de"
+    },
+    "src/q3_pr14/events.py": {
+      "storage": "active",
+      "sha256": "c4756c42e96428ad8fe6f6736e504e743f078ba26f3ba5b82673e62488cb2eb8"
+    },
+    "src/q3_pr14/operations.py": {
+      "storage": "active",
+      "sha256": "26437beb1408ab2fc9f696aebab147a198de8fdab80f9129b6927a385f6eaabe"
+    },
+    "src/q3_pr14/services.py": {
+      "storage": "active",
+      "sha256": "52f9a27221c30c60040133ce20454809dce6c3279e54da16dea67b54187c0a56"
+    },
+    "src/q3_pr14/transition.py": {
+      "storage": "active",
+      "sha256": "739795f80e27697d86bd50f54b2b3854f5f12aa0167a6c73aa0e8bb6ed1a45ab"
+    },
+    "vendor/q2_pr14/data/raw/q2_bioeconomics/extract_evidence.py": {
+      "storage": "active",
+      "sha256": "895d2ce514f2a785310fad504e437ad3de43cef242d3f73bad038e4f833acc53"
+    },
+    "vendor/q2_pr14/data/raw/q2_fiscal/build_fiscal.py": {
+      "storage": "active",
+      "sha256": "70698d683822763ef658dcda5279dc38b30b247e848ebe94b6e9ad404d4dd65e"
+    },
+    "vendor/q2_pr14/data/raw/q2_waste_boundary/extract_nea_briefing.py": {
+      "storage": "active",
+      "sha256": "50c49e6304698c9933b01f7ccc1ffaf0ab87a19e3428e7f3cced346b7062570f"
+    },
+    "vendor/q2_pr14/data/raw/q2_waste_fossil_ef/research.py": {
+      "storage": "active",
+      "sha256": "baf87b2d6aed12b44cc5bdf1ea00e4cbff334cf50dceaab16f7405aa90c7cdeb"
+    },
+    "vendor/q2_pr14/requirements-data.txt": {
+      "storage": "active",
+      "sha256": "1a16159d6ae1dff56e9269c0adfffb94bdba809558f48cf611cc4b2d9eae5a78"
+    },
+    "vendor/q2_pr14/requirements-q1.txt": {
+      "storage": "active",
+      "sha256": "f1b21977c06d06cc687ebb0b0f057787635239f3e446c436f78e722ce2699045"
+    },
+    "vendor/q2_pr14/requirements-q2.txt": {
+      "storage": "active",
+      "sha256": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
+    },
+    "vendor/q2_pr14/run.py": {
+      "storage": "active",
+      "sha256": "f650af45e441255037ab977e600da804cee11a39bb7345301ebe947c68ccf473"
+    },
+    "vendor/q2_pr14/scripts/build_q2_answer_delivery.py": {
+      "storage": "active",
+      "sha256": "04f734ff481aa889bca0bc0039574e20bcb2a161ac6ebdcdfe299900c35b05cf"
+    },
+    "vendor/q2_pr14/scripts/build_q2_electricity_scope.py": {
+      "storage": "active",
+      "sha256": "0184532dec842422d4d49779035e4b6f47e6409203134a907f7ac3f45ee18163"
+    },
+    "vendor/q2_pr14/scripts/build_q2_national_inputs.py": {
+      "storage": "active",
+      "sha256": "39bad2e449a2ee1e4595422c16194a0ce0d3d80c40d75adf7a4095970412f488"
+    },
+    "vendor/q2_pr14/scripts/build_q2_project_costs.py": {
+      "storage": "active",
+      "sha256": "7eafad29562b81af81fe153ede55701c40814cd750840f9851bef01fb510edbc"
+    },
+    "vendor/q2_pr14/scripts/build_q2_revenue_evidence.py": {
+      "storage": "active",
+      "sha256": "d12286913a87108cfb0b5d60b1403e987b35712887e4e65946bb7d193885fd82"
+    },
+    "vendor/q2_pr14/scripts/collect_q2_investor_behavior.py": {
+      "storage": "active",
+      "sha256": "3442d11e622b6410e9dcd5bbef3f63c237ecbabdf597e3d7a775ab67897bd17e"
+    },
+    "vendor/q2_pr14/scripts/collect_q2_thermal_efficiency_history.py": {
+      "storage": "active",
+      "sha256": "502e208174d43a30731a82c7403d302800ba9498c1387c1e7557a67a7a2fd852"
+    },
+    "vendor/q2_pr14/scripts/prepare_q2_thermal_training.py": {
+      "storage": "active",
+      "sha256": "ceb68fe9639385fbbb3554e3cebf71b27960ae9134db4709030c5b5258d8227e"
+    },
+    "vendor/q2_pr14/scripts/q2_competition_factory.py": {
+      "storage": "active",
+      "sha256": "036ecc86df52e03f59a200247bf4ebd93b81dc8fd4e86d57d6c65fc9c6b6dd5a"
+    },
+    "vendor/q2_pr14/scripts/q2_corrected_factory.py": {
+      "storage": "active",
+      "sha256": "7b540156694f0ba409ad6ba2829022907f781641d2d89e870d706a2b4affa469"
+    },
+    "vendor/q2_pr14/scripts/q2_current_factory.py": {
+      "storage": "active",
+      "sha256": "d84944470b0bdbd5975c42a2d680a40089d18799bbce634629ce1d5481d56b8b"
+    },
+    "vendor/q2_pr14/scripts/q2_delivery_snapshot.py": {
+      "storage": "active",
+      "sha256": "3c9612be54f8ef6823a54980ef8f0264a2c4d0c55d19b85ab41bae52a8d6fbb7"
+    },
+    "vendor/q2_pr14/scripts/q2_fuel_price_factory.py": {
+      "storage": "active",
+      "sha256": "52f3b8ed91c515bba72ed6e0b4aea673aa57dd2e7c4138fcc53616af8e151284"
+    },
+    "vendor/q2_pr14/scripts/q2_thermal_configured_factory.py": {
+      "storage": "active",
+      "sha256": "ccb44f6168aff928744b7e6b991b966f0a500857607a1c5e863511fe0d7d8a4c"
+    },
+    "vendor/q2_pr14/scripts/q2_thermal_factory.py": {
+      "storage": "active",
+      "sha256": "4e8043bdb78839a4f394983c58e7be80a4307b56fcd361e965c95b7cc9a98465"
+    },
+    "vendor/q2_pr14/scripts/q2_verified_input_cache.py": {
+      "storage": "active",
+      "sha256": "5a701e3ef9caa99c7db58e0b67724fde037b00225f8ed378d4a25198ceb8df2b"
+    },
+    "vendor/q2_pr14/scripts/review_q2_revenue_candidate.py": {
+      "storage": "bundle",
+      "sha256": "e94a26df4fabd045829d26f9da5b09b4b1d0543c2b0cef486514db06d3541ed9"
+    },
+    "vendor/q2_pr14/scripts/run_q2_competition_recalibration.py": {
+      "storage": "active",
+      "sha256": "c3908e9f87102fe42d908c1e19ca578213f1413c81b0337042f76384f49a6a3e"
+    },
+    "vendor/q2_pr14/scripts/run_q2_corrected_recalibration.py": {
+      "storage": "active",
+      "sha256": "71f761ee44ce82e85252eaddeee940841fdf563b29ccbbc7417345b2826cb93c"
+    },
+    "vendor/q2_pr14/scripts/run_q2_cost_review.py": {
+      "storage": "active",
+      "sha256": "9e171aeda0dc5efbcfe6e6f0d052decaa19b8b04ba4105985028d1020bafb4f5"
+    },
+    "vendor/q2_pr14/scripts/run_q2_current_delivery.py": {
+      "storage": "active",
+      "sha256": "b942e28368b0b49a2261aa4a5ea29c9bac423650ee1db22b56b574bf62167ba9"
+    },
+    "vendor/q2_pr14/scripts/run_q2_empirical_support.py": {
+      "storage": "active",
+      "sha256": "913ca77a3bd90e486f91ba42525e21c7673d39452cece9efa65bc9e27298002b"
+    },
+    "vendor/q2_pr14/scripts/run_q2_forward_delivery.py": {
+      "storage": "active",
+      "sha256": "2a34db9a6e4ce9977d61aff0dd4bcc29805d8acdd4dd0d9daf19899ae3107164"
+    },
+    "vendor/q2_pr14/scripts/run_q2_historical_support.py": {
+      "storage": "active",
+      "sha256": "7ece8cb900cc8a8891f7d35ff47e268a50fb61308f61682374c129ebeafa2ec2"
+    },
+    "vendor/q2_pr14/scripts/run_q2_joint_recalibration.py": {
+      "storage": "active",
+      "sha256": "f9fa59982d6ddc7b05d807d309442ff3e2ff5217f376b9c4f3c36de77ab5b401"
+    },
+    "vendor/q2_pr14/scripts/run_q2_national.py": {
+      "storage": "active",
+      "sha256": "776174b8ddd6f8e1ec43c623ff356ef6c2346ea78db3cb809f6f7a48018fd01e"
+    },
+    "vendor/q2_pr14/scripts/run_q2_portable.py": {
+      "storage": "active",
+      "sha256": "6c2cf1ddce80fd6fbb5b2910d834bd2f30a06f7c99fde76cfb11c31dfce2c8c2"
+    },
+    "vendor/q2_pr14/scripts/run_q2_revenue_recalibration.py": {
+      "storage": "active",
+      "sha256": "b6df4d24c3f280050c04a801b1f53d1c38de256e33717f4f9b86f11fb1e47924"
+    },
+    "vendor/q2_pr14/src/energy_model/__init__.py": {
+      "storage": "active",
+      "sha256": "6918004f3238cce27b61c55a1423d9eaad5dc7028b711d138ba10db47d91ecbe"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_admission.py": {
+      "storage": "active",
+      "sha256": "e6f06e18b8d49ef9acb69eed12e2ed747ace88ec794535dc0c1d4d16c50a0941"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_agents.py": {
+      "storage": "active",
+      "sha256": "1f0a4465183916ab475447736c3923e540fd0d82a7408b7cd2bfc00116da5290"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_bioenergy.py": {
+      "storage": "active",
+      "sha256": "72e40fcbad9e1dda537e87c46cad320da7131aa7f6b719a24c29b5a1a62f6331"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_boundary.py": {
+      "storage": "active",
+      "sha256": "803c47c509f8273403b337850da9ea72c1f10d2e2618b24ae8a75d0a75a4ed7e"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_experiments.py": {
+      "storage": "active",
+      "sha256": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_exposure.py": {
+      "storage": "active",
+      "sha256": "09ae2b2243410065fc661eea9e971c828fb3b5b7a09ab9835262b5ba3fef466d"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_finance.py": {
+      "storage": "active",
+      "sha256": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_forward.py": {
+      "storage": "active",
+      "sha256": "068d890438a09e9372b79ad9b2b280208259148f46c6bad1d0eeaa6075317cf7"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_forward_current.py": {
+      "storage": "active",
+      "sha256": "259356af6047c5dd46dec5646bab487d3f4a4de6d7a9056e7a49bb21512a94c4"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_fuel_prices.py": {
+      "storage": "active",
+      "sha256": "3c537aa5445eb3befdf0758d91779cd5f0f69908ee2891170e81e5feacce162d"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_identification.py": {
+      "storage": "active",
+      "sha256": "116e8f1b3b13794a32009ca4c00822d70cedca249605b236bafe530af7124899"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_national.py": {
+      "storage": "active",
+      "sha256": "603b806c6da8477f759340f2cadc3013bf974f1dae5bd33086c36b259b0ec4d3"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_operations.py": {
+      "storage": "active",
+      "sha256": "2ca550b41712e10b0ca89f28f3bf70f7e606c300d987a520d474e44c55b04223"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_portfolio.py": {
+      "storage": "active",
+      "sha256": "8118ac052b978a5a10dd35ed643d20f7ce40c62c2223146b4bc848b354289659"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_project_competition.py": {
+      "storage": "active",
+      "sha256": "40dca3cd9d5319cc4e4870f780af316019b3eb30c5c182f47412e76cf75894fb"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_project_costs.py": {
+      "storage": "active",
+      "sha256": "7ca81bc51161d66ed99c8b889e79af492fb5095ef4529896f13b4df8c0969486"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_renewable_vintages.py": {
+      "storage": "active",
+      "sha256": "12fbeee815c4b7c85868e5562649d327c03f5f1626c8db15b174c73f97537128"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_revenue.py": {
+      "storage": "active",
+      "sha256": "8516bcaa44fea1107a7f1551ca331f7e50b281510530dccd98e37bbed89883b6"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_solar_entitlement.py": {
+      "storage": "active",
+      "sha256": "1284b4ceb7c8e27d74d830d6f0fe7513a66eebc59f840cf8fae4a65e24e4ef42"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_statistics.py": {
+      "storage": "active",
+      "sha256": "43e58dfd42234d30c33278a4c4c485b96105c6d575e864fb7cc265b5116c8120"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_subsidies.py": {
+      "storage": "active",
+      "sha256": "5a2ddbeb8275cc706b80aeb745ea8601268d59fd3a32d786b2e7ed5e097dfb9b"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_support_investment.py": {
+      "storage": "active",
+      "sha256": "f6cd3f47fabd05a98cfe89d15ecc2b3ea8e2f02bbc01a3ca39c7c8400372aff5"
+    },
+    "vendor/q2_pr14/src/energy_model/q2_thermal_vintages.py": {
+      "storage": "active",
+      "sha256": "1715bcf437fc9dcb8149fb4e3d88131e291f3e83d219201e5108e46819be6d12"
+    },
+    "vendor/q2_pr14/tests/test_q2_delivery_runners.py": {
+      "storage": "bundle",
+      "sha256": "4394e670600e54e13d5bad1560b1960cef1bf44e356ed12689fbcc85f266c470"
+    },
+    "workflow/provided_inputs.json": {
+      "storage": "active",
+      "sha256": "06ef40b43fcb2a5e1fb75bd5812920f416e5c3043d8b03a0bd00d82804447ca9"
+    },
+    "workflow/q1_inputs.json": {
+      "storage": "active",
+      "sha256": "2837cef198db3e173781bfdb9de9ac7d5c19cb75504d9deda0d20a3e41c1d726"
+    },
+    "workflow/q2_pr14_integration.json": {
+      "storage": "active",
+      "sha256": "b47449bb7ee560d887476a1516dbbbea43f4c9daebf8bd3c031e488fc39f1900"
+    },
+    "workflow/q3_inputs.json": {
+      "storage": "active",
+      "sha256": "659b919a707ab09a580e04610390c24dd0495739ac0ed1ba2b6d63bc2a2fb1d9"
+    },
+    "workflow/q3_pr14_inputs.json": {
+      "storage": "active",
+      "sha256": "9117d9bc48198b9f48fa99e51006bc19f0a15930be7c857a9ec38b4a5635ea9b"
+    },
+    "附件1.xlsx": {
+      "storage": "active",
+      "sha256": "4cd3f519f72d18869d33713fc9dd2ec7a3ba83d5178ee6d4170d37adf45ea1cd"
+    },
+    "附件2.xlsx": {
+      "storage": "active",
+      "sha256": "7a35204be5db7e8cbfddf77a8a36604fafa87dabbf80c69c752b8b8f0d97a330"
+    },
+    "附件3.xlsx": {
+      "storage": "active",
+      "sha256": "df616d471bd31fe865ad9d509ea3fc1fa68d8bd172af7c10bb15ffba7a74987e"
+    },
+    "附件4.xlsx": {
+      "storage": "active",
+      "sha256": "a7945ce8d6c279ecb695c3e56b7d331c1d3f098a282b59a8d1826a69b8736eaf"
+    }
+  },
+  "upstream_originals_unavailable_or_different": [
+    {
+      "path": "data/processed/q2/revenue/nea_tariff_and_auxiliary_use.csv",
+      "expected_sha256": "25ecc8cbc03ee7936eefc49c1687d2d6cf5d042884d63756bd6ce90da35becb2",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_bioeconomics/changqing_2020_prospectus.pdf",
+      "expected_sha256": "727c90968d6e554c761256980aec3de8367df652743c34dff898eab6faadbceb",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_bioeconomics/changqing_2021.pdf",
+      "expected_sha256": "be417a0bb9a6357966f4fc11d03f68dbe06b9b5dafaa1a94d9a6fa69e30a3f28",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_bioeconomics/evidence.json",
+      "expected_sha256": "0611bd6847c38f5d506706ff784838422d7c79304858cdd708f7c7f3acd5bf70",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_bioeconomics/extract_evidence.py",
+      "expected_sha256": "895d2ce514f2a785310fad504e437ad3de43cef242d3f73bad038e4f833acc53",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_bioeconomics/sanfeng_2020_ipo_summary.pdf",
+      "expected_sha256": "ef56935af7bdc4a113d262b22ff4fc376e6190d8a32b08a5779f4441792f69f2",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_bioeconomics/sanfeng_2023_bond.pdf",
+      "expected_sha256": "4fcd1b8c9bff3bc5562a1148f96abb94b850b3bceff01247652a7d492a56e1ff",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_bioeconomics/source_manifest.json",
+      "expected_sha256": "146fb3f86457ff552cd6a89b2cc44c40daa877b44d5d16b4ba24615ceb4a1a89",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_capacity_detail/cec_2009_portal.html",
+      "expected_sha256": "bf2cf867b51c56a08614b964ebf4bed452bad3fbafb03b1d94c89d6a024f2894",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_capacity_detail/cec_2010_portal.html",
+      "expected_sha256": "c95243051c15d02bf26b1ffda488b67834922f1b55dc0cefc2306991ac02dc6a",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_capacity_detail/cec_2011_portal.html",
+      "expected_sha256": "b1e18dc0dac3a3d6edaf72eb1029573d4be1e83f8b0705670b290aa3ef6138fc",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_capacity_detail/cec_2012_portal.html",
+      "expected_sha256": "bba19c9282f70d690e22ca8f22ee84808dda26043b6982ec6ea04d1a16d9f308",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_capacity_detail/cec_2013_portal.html",
+      "expected_sha256": "886e5cf80d1ae8c1f7b9466aaed718b03b2e874e967d8d5c148d7ca0fad241c9",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/annual_renewable_levy.csv",
+      "expected_sha256": "9d30e2f6b6fed268d0d85149436e2798c1e0b9e6a277ecba299c42cf6114462c",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/build_fiscal.py",
+      "expected_sha256": "70698d683822763ef658dcda5279dc38b30b247e848ebe94b6e9ad404d4dd65e",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/central_notes_anchors.json",
+      "expected_sha256": "ef51dfceb362616404b3a265b7cfcd271f78b2886f908718e1b313311710bfa8",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/extracted_rows.json",
+      "expected_sha256": "3ee176332a06b37f482c56cfa26b533def959638f67ea6741d94a2603c837d11",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2014_central_expenditure.html",
+      "expected_sha256": "c117b210dfde85cedd955840e116b4f2a402dfadcfcb7e67ee7693f7f5c879e5",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2014_central_revenue.html",
+      "expected_sha256": "dc3dbdf71a7dca7cc620ba452967e552c2900d8974a3f9fdfcc61c23279570b0",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2014_index.html",
+      "expected_sha256": "9598b525eba3b26926328e8f39e62a01ac1c4be9eeacf8fb921ad73854b81b04",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2014_national_expenditure.html",
+      "expected_sha256": "29d0ce270bf4c7bafe838d7e89788d5a11b854956c0d01d8e5e32cb79b5adf8c",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2014_national_revenue.html",
+      "expected_sha256": "bf6fe76e8f5aec74ca5bf23179e3c197249e0adb5c0151a79e6f2cc6ea67377c",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2015_central_expenditure.html",
+      "expected_sha256": "89e5e1867fd785c7ead12a09de16378fd0230e2f8becfec3f9ef734b551190c7",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2015_central_revenue.html",
+      "expected_sha256": "0977e61cea09efbc407e25a42821ac162f3b00c6350da8ea1d7cbdb7e4f35cc9",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2015_index.html",
+      "expected_sha256": "1fa376025af5546f620b47e3047ed4ff3398c370181abb8913161d6f427b1ef1",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2015_national_expenditure.html",
+      "expected_sha256": "64abb61bf1034c857262cc08afdca432a78b635a2e0356697fbf91e448ad4b16",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2015_national_revenue.html",
+      "expected_sha256": "1010d251140c65b726d4383e64e35247c19238f183bf958b4ee0752388877bb0",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2016_central_expenditure.html",
+      "expected_sha256": "51caf63b5911fa2fd2a95db9a3b5d2ae22fe8d6fb2ac82d27d8949f9a0006f4b",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2016_central_revenue.html",
+      "expected_sha256": "067a8322556f002624fd8f1982a06475dc2f177eb52b2e70df3c3c79685a31cf",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2016_index.html",
+      "expected_sha256": "3344be09e1d26f5ee23f24921dc30fe573ad0d12c9665748b932915254597424",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2016_national_expenditure.html",
+      "expected_sha256": "5c66b22f949fb16184a1ba4cd1db5161c0949bcb6461dff7b2a5a9efdcb57ece",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2016_national_revenue.html",
+      "expected_sha256": "0656d245465b3cfafba7233842b4d0d77a2da2a013ab05b3a631d033fdbe37d2",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2017_central_expenditure.html",
+      "expected_sha256": "ce98fe63cfb2a470fc601dc1ff66677b3899553256d297ce20af23e5aca64ad1",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2017_central_revenue.html",
+      "expected_sha256": "83e4b2d7077db2aecc397f7379c66d31f03c90447d227f1ec58310b8a17e446a",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2017_index.html",
+      "expected_sha256": "5450a25d200b7f834e2619aee0b7ba4ceb3253d3e91884f549f33cee7fb4dc24",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2017_national_expenditure.html",
+      "expected_sha256": "df2b8797770715fefc76c1897c20f2875bba08166f4ed8d742dd0cead6a4eaf1",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2017_national_revenue.html",
+      "expected_sha256": "0f8eeca96c54288134fd3c53fb30f2cc5826c000d91e2022158163611a4d06a1",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2018_central_expenditure.html",
+      "expected_sha256": "457d63b715fd29f053da318c61fb1bac7f0d348f2ddc463c55aa819561553d01",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2018_central_revenue.html",
+      "expected_sha256": "8e1373b3659893d0d82fcdc433b93831691fb4b43b21c7bfbd08f310cd99c246",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2018_index.html",
+      "expected_sha256": "69892daff558555e4f1f78e0f89a944b82d7e2183923dc49b1560a31e13ccc90",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2018_national_expenditure.html",
+      "expected_sha256": "bbb9b8a6b4b0c41d8e9a202e0fd899aa371fd507a45167044d9c8f1fe0acf2f9",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2018_national_revenue.html",
+      "expected_sha256": "18ffd247d9bb8858b01ef454e4e39f3e7356372c0082c339b2b59713efd72dbb",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2019_central_expenditure.html",
+      "expected_sha256": "29d170c391a1e2cceb177d5bd534ccde5c72dc845db129b6380390720d787fa6",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2019_central_revenue.html",
+      "expected_sha256": "0cd04ea243cf77261c2c4e08d12dce3880acbed5cb75ea5efbde1b6587dd09dc",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2019_index.html",
+      "expected_sha256": "96da028cbaf3102c4a94a4147400672db88aa292215ed4f1cb7622a58d81cb00",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2019_index_1.html",
+      "expected_sha256": "3c2f70d6e33b8e4f221900cbbd23b9ae3511d1b1aff61a5ebb2c3cccc9e891f2",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2019_national_expenditure.html",
+      "expected_sha256": "8450b6d09992bbc6528220179a2de22bffe38b55e3e3d5410fdfded583238711",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2019_national_revenue.html",
+      "expected_sha256": "ce1e7447867dd404f2e1b8515f61156f02168b635996efb0c7650e58c7ded815",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2020_central_expenditure.html",
+      "expected_sha256": "6913aec7461b57a0bedf0b6c37aa8e89d2fb76d1e35675f3cdf655c09f81569b",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2020_central_revenue.html",
+      "expected_sha256": "5ed14ca3e6e2128136d2e1bb9a649a386a41e65628bc2ebc8ac9e2b7e1ad8e64",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2020_index.html",
+      "expected_sha256": "859fc0c7cdfa19de959afde4af088210b562b1173d2982137b801cbe36ea28a9",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2020_national_expenditure.html",
+      "expected_sha256": "fd5a40edd6a5559a34a91341171de65906fb2db0a7a8b8e8b4bfdd3364d077d2",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2020_national_revenue.html",
+      "expected_sha256": "7d45eb68bf775f308f6d5fe79f0750151d00d762869c1085d7e7db8bdadebdc8",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2021_central_expenditure.html",
+      "expected_sha256": "b3b7a71927abb00c07ce3a54c680bb30aa5c45f30066365ddea61bc12b14c048",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2021_central_revenue.html",
+      "expected_sha256": "2b6932c9aa9a91bd37c3411a4743c384b64a2632374aff238eeee5f208f01320",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2021_index.html",
+      "expected_sha256": "b15242ead83565c89bbb47584c0c5952551ad2574f7abe8bbc67ff515b3c63a8",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2021_national_expenditure.html",
+      "expected_sha256": "890edfee0192b4552c415d8ab292db452c3cb5d13c9879442da445566401f4c6",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2021_national_revenue.html",
+      "expected_sha256": "331173baebc465c7e10c3816776196b6d360f5456080fdbcb033a76a24571004",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2022_central_expenditure.html",
+      "expected_sha256": "a26aeff6669d068dec57323aa9b941ea616bc9acc1cc5446edff0264fb5f3acc",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2022_central_notes.html",
+      "expected_sha256": "c727dfe5e1e04a662a39dd2ba3be59d65e0da868028e1ead8ff1c5af210134d5",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2022_central_revenue.html",
+      "expected_sha256": "be3ba65ba5116c48312c00c18a9fb038ceabab36948804be888e291fdb9835a5",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2022_index.html",
+      "expected_sha256": "c22a04d0f31f6dc87f0a01b5f6cd8e5f0d8c3ed1c22fe663dcb99dd249bfbe99",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2022_national_expenditure.html",
+      "expected_sha256": "e4a994ed661dfcc1a14fe6b69c447a0310df832f176443799acccc5fc97cbf6a",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2022_national_revenue.html",
+      "expected_sha256": "951f7b9458a22f6fff873daa0cd260ecbaea1e681b2ed71160106c218df0917f",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2023_central_expenditure.html",
+      "expected_sha256": "b5baf9f93f804391e722b8e01f0ee9a5da2a08db396cc1255add6c65339a6e6c",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2023_central_notes.html",
+      "expected_sha256": "53f07b2b303e5bc6d4f41c282a684769fdd914470b2461063f80b8f1a0e65ae8",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2023_central_revenue.html",
+      "expected_sha256": "331f5aa57be0dcdd9c0ef155b402fdadd43c21f24f3453d5507af5909109e47c",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2023_index.html",
+      "expected_sha256": "da2257da1b7d6758f42ff1d0691880a7073e422d00683d9be7d5ac1d7b997f26",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2023_national_expenditure.html",
+      "expected_sha256": "16d09eb0792e082ef36157eaea934ad46b6cd8c3526807d9ddd636ed83fe00cc",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2023_national_revenue.html",
+      "expected_sha256": "a50ba7ab2373d8925117ef6546cd87d9ca1a59bb64128980c9b4ec8863cc9f07",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2024_central_expenditure.html",
+      "expected_sha256": "44f478ce39cfba29c7ac7650ab79d3dcd1207428cac7563479dd1964035f70ad",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2024_central_revenue.html",
+      "expected_sha256": "4faf9e66e56729a1cef28e4b15a020368c78a38e3144abc19dd3c8506330437b",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2024_index.html",
+      "expected_sha256": "8738e21df9c97e445769bc67e7293cda58d7879e502acc5e44faf4abf1c61907",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2024_national_expenditure.html",
+      "expected_sha256": "df070357a9ea8738196ec774ed8f3a37ad494a870eb8617c3377bbcc43346077",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/mof_2024_national_revenue.html",
+      "expected_sha256": "5536f87c836bf660e5746f68ff7a5d289f8c41ae5143da4fb3f4cd65f08bf4f8",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/normalized_tables.json",
+      "expected_sha256": "4971ecb4b8dfe166db21e189545961bf5cbe883fcd7bc935e6e3aa2b829e181c",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_fiscal/source_manifest.json",
+      "expected_sha256": "e1bce54b1a14ddee889c454f014bad7108077a8f2c420bb14838f116a802513a",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_investor_behavior/evidence.json",
+      "expected_sha256": "685c6b72bea1a80a44ea0d02b23a0b1ce17c7be6a45d6b26854676fb0c4ee76b",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_investor_behavior/nber_25437_2019.pdf",
+      "expected_sha256": "b2c2f3f243a1bfca8b3e576f6eccee05accdf7c5451e68c816bcf2bc4b72d3e6",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_investor_behavior/source_manifest.json",
+      "expected_sha256": "d87202921fde7b5c0101cca54cc1f7e8890642923c853f07beb6fb1ff5a6dc22",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_project_costs/iea_projected_costs_2020_data.xlsx",
+      "expected_sha256": "74782355333e065462b1cd3b2468643bebebad0db0ae42d2c8996926aaa3881a",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/guangdong_gas_tariff_2020_284.html",
+      "expected_sha256": "e80360fc4a49e0e11a29de6418fdf2c197ad8b518212bd9de5d16e957776fdb2",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/mof_2011_surcharge_management.html",
+      "expected_sha256": "f1c00457310170841070fdb1db1d6190411e63c123ae4f86a8a7f61b6ebcd9b1",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/mof_2024_local_subsidy_budget.html",
+      "expected_sha256": "757683fcadbf76ff2d3989444b160c887ff6588cc1b5933555fdaf22accda788",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/mof_biomass_arrears_2020.html",
+      "expected_sha256": "00f22b144407ef450104beeaa9c94d064e56bc36cce98dabc51b726ba4ce72b4",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/mof_levy_2013.html",
+      "expected_sha256": "9f0ae13eb921698b92848921f5da22ae967a844d736d846ff56a1dc60261eb5b",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/mof_levy_2016.html",
+      "expected_sha256": "9258e773dead3be3a0e9a746b28a6dbbd0bec4eb78648d23b14ae644cdbc776a",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/mof_subsidy_budget_rules_2020.html",
+      "expected_sha256": "09f36364129d59a39f2e62ea04f8a05d0b7d7208aeb7766b77866a2cdfd8c777",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/mof_subsidy_lifetime_2020_426.html",
+      "expected_sha256": "e06cf30027505716a928ea766a75a5ece7c893570f8bd1a22374068b2b47676d",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/mof_vat_2018.html",
+      "expected_sha256": "ddd6bae0df0c06a569ac624f46badfd599ff310eb0aea640bcf3a56a99bf8aaf",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/mof_vat_2019.html",
+      "expected_sha256": "e4aca708bb1426ae3db14e925fb6ee9b5bc4a0a23aaf4651ed0ac2e8586c5eb7",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/ndrc_biomass_tariff_2010.html",
+      "expected_sha256": "6ebf6ceade034784609678c809a26a39fc59e1e2184a47ab3d5da742b6a601b3",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/ndrc_biomass_tariff_competition_2022.html",
+      "expected_sha256": "4ebba37a8f8ab313a167989826a9ba5bc36153b86a65f176ef91d11fcde624ad",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/ndrc_gas_tariff_2014_3009.html",
+      "expected_sha256": "1dcaf346cfac0ef53c998c6184a0816ffe4d89152bc1f222925169d970f64e50",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/ndrc_renewable_market_2025.html",
+      "expected_sha256": "5e7657e07ca5db9092691ade4f8c4b5ba3ca27c00e0c307db15f15fcd682e3ff",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/ndrc_renewable_parity_2021.html",
+      "expected_sha256": "cf213a8a0322850c1a19b3efed7432b015b5198e03635e0febe546782a76840c",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/ndrc_waste_tariff_2012_801.html",
+      "expected_sha256": "600ecd1e7158e22e0c697c403e798fa145f2da97c2a5e901a2b1a59b5742d6cb",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_biomass_tariff_2010_1579.html",
+      "expected_sha256": "605366901d2256b453e6399cc350eaf2a2efffad2ed579b02d84f580caefd326",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_clean_dispatch_2015_518.html",
+      "expected_sha256": "27a95717063a702349f130668d310b952d81a8dbc20f8f94329628324842568d",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_full_purchase_2007_25.html",
+      "expected_sha256": "23bd1e7f03f0741a8330cd00ee4260332864648cf1f96842bf14ffdf9b526aa3",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_prices_2013_2014.html",
+      "expected_sha256": "0759ac883bb7bf19f283fdcfdf4d9fb1379ac2dd9082b766574d633807b36e40",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_prices_2015.html",
+      "expected_sha256": "742c2308eebdda0eee2e09661cd374e4c75d38d923fa7a14c4ba37992662e88d",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_prices_2016.pdf",
+      "expected_sha256": "9f17016dce53aadac69571e4cc61e58a577f574940bbc1b5cde7ff157feb6268",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_prices_2017.pdf",
+      "expected_sha256": "25a8fc54314273b90f8509dbd7203df110a31deb90845f8b625bfe2fb3e40623",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_prices_2018.pdf",
+      "expected_sha256": "0419bb45012036a862c9e9fffa52c72247a48ef4c7eddf243dc3b5a7f6122902",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_revenue/shanghai_gas_tariff_2024_38.html",
+      "expected_sha256": "4f5a6f343051e5a7779e6d45f70d34b9762d0a91fb70b9649fcc0a9bd8a7f7d9",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_scope_components/hydrochina_renewables_2024.pdf",
+      "expected_sha256": "054559d058e9a867b25935be4a93450792d5492a5f6cfd43ab714e241bdd6119",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_scope_components/source_manifest.json",
+      "expected_sha256": "10ba980f02843caf37cf059a3bf51e55504ad6a0c1150d57dfaba5b3eff15e98",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_scope_components/visual_pdf_anchors.json",
+      "expected_sha256": "c26fa650b52d902707208dd302c747fa6d5c1828e94ab3733a74faedbd0e5bf0",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_solar_entitlement/ndrc_solar_2013_1638.html",
+      "expected_sha256": "8f0490f6a8a7d55073aecf7c46b8125936afa5564ed7111f9e29714117b2e9b7",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_solar_entitlement/source_manifest.json",
+      "expected_sha256": "994c29a2f8c09f248d5bc2828fe967933002181c970ca10eb2f0d18c766c8713",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_technology_scope/cec2014_portal.html",
+      "expected_sha256": "b64dfe3c7f9e2150e9da3b87f8ade46b1649c3492dd89c1919a62f4280128ee3",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_technology_scope/cec_annual2025_release.txt",
+      "expected_sha256": "819726dac5e898336687be019afaf4db6dd6c41c4810838fc5edac6c15026f02",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_technology_scope/ei_2025_original.xlsx",
+      "expected_sha256": "6a1a468ea14db9474defae069ee51a5a8097bf19b22712d4e022e4acca09acbd",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_technology_scope/technology_capacity_generation_anchors.csv",
+      "expected_sha256": "f366792f1f25e5a8a3fc438a9709824985880eafb56360ebf725b957248e8cff",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_thermal_efficiency_history/evidence.json",
+      "expected_sha256": "7e13e75543f827cb8f99abb369fbf2114151cbaba87301ea8a35cf0f889c01f7",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_thermal_efficiency_history/iea_nea_projected_costs_2010.pdf",
+      "expected_sha256": "673a6a22cc62e26ff19cf07b0120be7e1fca99fa9033fac7150e33826a168c77",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_thermal_efficiency_history/iea_nea_projected_costs_2015.pdf",
+      "expected_sha256": "8c4bb17d76204408c7069232d1dea9e727cf1ee7f783f4f8291ffecbaa16afdc",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_thermal_efficiency_history/nea_coal_upgrade_2014.html",
+      "expected_sha256": "b78722a5cf66e4441c5300a2e618cfbc0d50c9618695c2562a9d1bf3487e2e27",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_thermal_efficiency_history/nea_power_statistics_2015.html",
+      "expected_sha256": "aa4232ffe9ddfebe8b0c9693e35817c57787bdb1365c56819ec56d4f4c11ca1d",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_thermal_efficiency_history/source_manifest.json",
+      "expected_sha256": "aa74c0ead931908ff099aee4cc7d9cfc577699b0632b5e0c61286f509ef7f152",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_waste_boundary/extract_nea_briefing.py",
+      "expected_sha256": "50c49e6304698c9933b01f7ccc1ffaf0ab87a19e3428e7f3cced346b7062570f",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_waste_boundary/nea_20170105_planning_briefing.html",
+      "expected_sha256": "767790b5e80d1b2f78fe12f4333801822ac9c0137f0dea020f5313ed0699b9e9",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_waste_boundary/source_manifest.json",
+      "expected_sha256": "6a03167ddb059e28b9481f465bb308868ab2eea7cf5ed650a4e3392f83937160",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_waste_fossil_ef/bourtsalas_2020_publisher.html",
+      "expected_sha256": "6e2f0054655446dd07a34b3a8e59ad33fd099d84af66ed4e04921cacefeb36aa",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_waste_fossil_ef/bourtsalas_2021_correction_publisher.html",
+      "expected_sha256": "0e386767dc69f22b24568c6eb036d3e31150e3a82e19c24b2191b95c31134653",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_waste_fossil_ef/research.py",
+      "expected_sha256": "baf87b2d6aed12b44cc5bdf1ea00e4cbff334cf50dceaab16f7405aa90c7cdeb",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_waste_fossil_ef/sensitivity_range.json",
+      "expected_sha256": "9febd681eb1520f3f347f6c32d15d54f429f342e9f5240e27a8109b60e480ee6",
+      "status": "missing"
+    },
+    {
+      "path": "data/raw/q2_waste_fossil_ef/source_manifest.json",
+      "expected_sha256": "56fc626f36a52d77ece6a160e5f7ddcb5cb490c40ea48852385666f6651a6ab2",
+      "status": "missing"
+    }
+  ]
+}

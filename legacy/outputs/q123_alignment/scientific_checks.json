@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "failures": [],
+  "annual_cases": 187,
+  "event_cases": 118,
+  "h01_cases": 160,
+  "h01_service_failures": 160,
+  "h02_rows": 40,
+  "max_abs_h02_J": 0.0,
+  "max_abs_h02_response": 0.0,
+  "selected_policy": null,
+  "selected_rule": "replacement_ready",
+  "max_physical_residual": 5.381176985489826e-08,
+  "retirement_records_checked": 4520,
+  "q2_cases": 24,
+  "q2_historical_training_rerun": false,
+  "q1": {
+    "historical_rows": 2176,
+    "unchanged_indicator_rows": 212,
+    "classification_changes": 21,
+    "observation_bridge_rows": 293
+  },
+  "reproduction": {
+    "primary": "outputs\\q3_pr14\\current\\attempts\\20261020T091248608100Z",
+    "replica": "tmp\\q3_pr14\\reproduction\\attempts\\20261020T091956819139Z",
+    "compared_outputs": 24,
+    "different_outputs": [],
+    "all_scientific_outputs_exact": true
+  },
+  "evidence": {
+    "q3_manifest": "bcb44d9b480c20b5d4d5989ba7b03a04f71e99975a8d9e880ff0a7f73ca793d1",
+    "q3_reproduction_manifest": "abd412e73020bc27374f584cf860ae79603c9b87f678c7a36b525dbe57c91202",
+    "q1_manifest": "a79a2d34713776e92a92e338b73e8355076f99aac204d5cdfc22b0da2b260577"
+  },
+  "scope": "engineering, conditional cases and reproducibility; not nationwide empirical validation or human approval"
+}

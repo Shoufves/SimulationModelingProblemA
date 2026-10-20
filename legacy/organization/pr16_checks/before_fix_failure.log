@@ -1,0 +1,4 @@
+Before wrapper compatibility repair, q1-history in the independent export failed only when asking Git for run provenance:
+fatal: not a git repository (or any of the parent directories): .git
+Q1 FAILED: Command git rev-parse HEAD returned non-zero exit status 128.
+Frozen scientific code and input bytes were not changed.

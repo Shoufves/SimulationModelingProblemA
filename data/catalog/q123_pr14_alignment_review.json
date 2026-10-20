@@ -1,0 +1,19 @@
+{
+  "status": "author_reviewed_scoped_alignment",
+  "team_approved": false,
+  "upstream_commit": "1b8f465783afe7505c8d4e65ec43ada18c311daf",
+  "allowed_uses": ["q1_classification_handoff", "q3_same_model_scenarios", "h01", "h02", "bounded_policy_search"],
+  "evidence_mode": "reuse pinned PR14 extracted inputs and existing source review; no new raw-document verification claim",
+  "checks": [
+    {"subject": "initial state and calibration", "finding": "Use decoded net58/25 record and build_snapshot plus activate_forward, exactly as PR14 portable S0. 2015-2021 fitted parameters retained; 2022-2024 remain already-seen evaluation. 2024 physical scale is observed, age/finance/queue state is reconstructed."},
+    {"subject": "oil and Other", "finding": "PR14 answer and corrected input distinguish pure oil 9.4496 TWh and Other 79.4276 TWh in 2024. Q1 research oil_electricity 88.88 TWh is a composite series, not pure oil. Preserve original records and relabel only the current interpretation; do not infer a historical pure-oil series from it."},
+    {"subject": "hydro and storage", "finding": "Hydro capacity/generation in descriptive sources may include pumping. Q2 separates pumped hydro from conventional hydro and batteries. Q3 must preserve additional_storage with separate SOC, efficiency, limits and terminal valuation on every event day."},
+    {"subject": "carbon and costs", "finding": "Retain PR14 fuel/process CO2, removals and positive/net boundaries; no all-GHG certification. Q3 public transfers are not duplicate resource costs. Keep original undiscounted annual policy screening, report discounted Q2 cost separately. Twelve-day event costs/losses are not annual forecasts."},
+    {"subject": "services", "finding": "Coal, oil and gas material feedstock cannot substitute. Split nonenergy_feedstock by carrier for annual and event acceptance; energy device cohorts remain grouped by their original service. Do not treat the pooled Q2 display fraction as Q3 worst-service reliability."},
+    {"subject": "experiment design", "finding": "Reuse all 187 annual cases, 160 H01 cases, 8 policies, four paired events and frozen-response counterfactuals, original budgets, 5%/15% thresholds and timing splits. New model results are recomputed; historical rankings are not guaranteed or forced. All evaluation conditions are already seen."},
+    {"subject": "retirement and financing", "finding": "Actual early exit is used by PR14 annual exposure and investor forecasts, retaining natural lifetime separately. Delegate financing approval to the factory's actual bound government method. Rebind Mesa user step after activation. No N2 research rule or empirical assumption is imported."},
+    {"subject": "event dispatch extension", "finding": "Copy the pinned PR14 LP into a scoped event module with only explicit noncyclic free-terminal-SOC support for both storage classes. Annual paths continue using the original vendor LP. Stocks are carried and valued, not reset; cyclic equivalence and all-store continuity require tests."}
+  ],
+  "preserved_contracts": ["data/sources.json", "evidence_reviews.json", "workflow/model_inputs.json"],
+  "limitations": ["single-node national aggregate", "representative 4x6-hour day", "conditional events, not probabilities", "capacity and solar historical MAPE threshold failures retained", "independent human review pending"]
+}

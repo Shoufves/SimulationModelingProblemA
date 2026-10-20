@@ -24,3 +24,22 @@ outputs/question2_delivery_20261020/*.pdf binary
 outputs/question2_delivery_20261020/figures/*.svg -whitespace
 # This single upstream source has a frozen extra final newline; do not rehash it.
 vendor/q2_pr14/scripts/q2_corrected_factory.py whitespace=trailing-space,space-before-tab,cr-at-eol,-blank-at-eof
+# Q1/Q3 alignment hashes must survive checkout on every platform.
+src/q3_pr14/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+scripts/*q1_pr14.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+scripts/*q3_pr14*.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+workflow/q3_pr14_inputs.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+data/catalog/q123_pr14_alignment_review.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+data/catalog/datasets_unified.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+outputs/q1/pr14_aligned/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+outputs/q1/pr14_aligned/*.svg -whitespace
+outputs/q3_pr14/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+outputs/q123_alignment/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Organized and archived evidence keeps its original bytes after checkout.
+legacy/** -text
+scripts/** -text
+src/** -text
+data/** -text
+workflow/** -text
+outputs/** -text
+requirements-*.txt -text
