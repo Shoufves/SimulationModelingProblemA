@@ -12,6 +12,8 @@
 
 ## 阅读入口
 
+2026-10-20：问题一与问题三新增[创新性复核](docs/research/q1-q3-innovation-review.md)、[文本指标与改善说明](docs/research/q1-q3-text-review.md)和[真实AI使用/人工待核表](docs/research/ai-use-and-human-review.md)。供论文采用的[Q1分析稿](docs/paper/q1-evidence-analysis.md)、[Q3分析稿](docs/paper/q3-innovation-analysis.md)补充共同来源暴露和实际政策部署归因，原科学结果保留。外部AI率、全网重复率未测，人工签认尚待完成；技术状态见[本轮验收](outputs/research_audit/verification/acceptance.json)。
+
 | 入口 | 用途 |
 |---|---|
 | [final 阅读版](docs/final_阅读版.md) | 完整最终方案，已适配118项文件引用；研究内容以只读原文为准 |

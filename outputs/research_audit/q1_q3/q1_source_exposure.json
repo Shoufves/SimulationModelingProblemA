@@ -1,0 +1,784 @@
+{
+  "total_bcm_gcv40": 176.4663928858596,
+  "mode_totals": {
+    "lng": 105.18859696417408,
+    "pipeline": 71.2777959216855
+  },
+  "unresolved_bcm": 1.684277693277171,
+  "named_country_hhi_lower": 1503.162982657414,
+  "conservative_country_hhi_upper": 1545.2785443032615,
+  "separated_route_country_hhi_lower": 1308.224413595311,
+  "omitted_common_origin_cross_term": 194.93856906210294,
+  "largest_named_origin": "Russian Federation",
+  "largest_named_share": 0.21585591098081805,
+  "single_origin_exposure_upper": 0.22540037814951336,
+  "countries": [
+    {
+      "origin": "Russian Federation",
+      "bcm": 38.09131399387617,
+      "share": 0.21585591098081805
+    },
+    {
+      "origin": "Australia",
+      "bcm": 35.80458367685534,
+      "share": 0.2028974644481691
+    },
+    {
+      "origin": "Turkmenistan",
+      "bcm": 32.82623882972482,
+      "share": 0.18601977573688602
+    },
+    {
+      "origin": "Qatar",
+      "bcm": 25.20133617200949,
+      "share": 0.14281096677886987
+    },
+    {
+      "origin": "Malaysia",
+      "bcm": 10.488856646912186,
+      "share": 0.059438267396877624
+    },
+    {
+      "origin": "US",
+      "bcm": 5.755474346591666,
+      "share": 0.03261513001126719
+    },
+    {
+      "origin": "Indonesia",
+      "bcm": 4.859466899554043,
+      "share": 0.027537633767451688
+    },
+    {
+      "origin": "Myanmar",
+      "bcm": 4.676842781483646,
+      "share": 0.026502739161833946
+    },
+    {
+      "origin": "Kazakhstan",
+      "bcm": 4.543739229578111,
+      "share": 0.025748467769254237
+    },
+    {
+      "origin": "Papua New Guinea",
+      "bcm": 3.318189968250413,
+      "share": 0.018803523515078902
+    },
+    {
+      "origin": "Uzbekistan",
+      "bcm": 2.490260034823371,
+      "share": 0.014111809019829055
+    },
+    {
+      "origin": "Nigeria",
+      "bcm": 1.8864692368262654,
+      "share": 0.010690246488159673
+    },
+    {
+      "origin": "Oman",
+      "bcm": 1.5108684332459874,
+      "share": 0.008561791333397026
+    },
+    {
+      "origin": "United Arab Emirates",
+      "bcm": 1.251011160254289,
+      "share": 0.007089231778333322
+    },
+    {
+      "origin": "Brunei",
+      "bcm": 1.0530073301792686,
+      "share": 0.005967183399393024
+    },
+    {
+      "origin": "Peru",
+      "bcm": 0.42819872167405054,
+      "share": 0.002426517109980336
+    },
+    {
+      "origin": "Trinidad & Tobago",
+      "bcm": 0.3182368437736487,
+      "share": 0.0018033849877550781
+    },
+    {
+      "origin": "Egypt",
+      "bcm": 0.17464820851633334,
+      "share": 0.0009896967102925808
+    },
+    {
+      "origin": "Norway",
+      "bcm": 0.057621902959615376,
+      "share": 0.0003265318796247275
+    },
+    {
+      "origin": "Algeria",
+      "bcm": 0.04575077549369747,
+      "share": 0.0002592605580332204
+    },
+    {
+      "origin": "Angola",
+      "bcm": 0.0,
+      "share": 0.0
+    },
+    {
+      "origin": "Azerbaijan",
+      "bcm": 0.0,
+      "share": 0.0
+    },
+    {
+      "origin": "Bolivia",
+      "bcm": 0.0,
+      "share": 0.0
+    },
+    {
+      "origin": "Canada",
+      "bcm": 0.0,
+      "share": 0.0
+    },
+    {
+      "origin": "Iran",
+      "bcm": 0.0,
+      "share": 0.0
+    },
+    {
+      "origin": "Libya",
+      "bcm": 0.0,
+      "share": 0.0
+    },
+    {
+      "origin": "Mexico",
+      "bcm": 0.0,
+      "share": 0.0
+    },
+    {
+      "origin": "Yemen",
+      "bcm": 0.0,
+      "share": 0.0
+    }
+  ],
+  "input_cells": [
+    {
+      "mode": "lng",
+      "origin": "US",
+      "value": 5.755474346591666,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "B28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Peru",
+      "value": 0.42819872167405054,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "C28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Trinidad & Tobago",
+      "value": 0.3182368437736487,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "D28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Other Americas*",
+      "value": 0.0006513176000000001,
+      "is_unresolved_bucket": true,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "E28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Norway",
+      "value": 0.057621902959615376,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "F28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Other Europe*",
+      "value": 0.0812164365,
+      "is_unresolved_bucket": true,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "G28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Russian Federation",
+      "value": 11.350598947800634,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "H28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Oman",
+      "value": 1.5108684332459874,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "I28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Qatar",
+      "value": 25.20133617200949,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "J28"
+    },
+    {
+      "mode": "lng",
+      "origin": "United Arab Emirates",
+      "value": 1.251011160254289,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "K28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Yemen",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "L28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Algeria",
+      "value": 0.04575077549369747,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "M28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Angola",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "N28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Egypt",
+      "value": 0.17464820851633334,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "O28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Nigeria",
+      "value": 1.8864692368262654,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "P28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Other Africa",
+      "value": 1.6024099391771711,
+      "is_unresolved_bucket": true,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "Q28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Australia",
+      "value": 35.80458367685534,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "R28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Brunei",
+      "value": 1.0530073301792686,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "S28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Indonesia",
+      "value": 4.859466899554043,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "T28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Malaysia",
+      "value": 10.488856646912186,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "U28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Papua New Guinea",
+      "value": 3.318189968250413,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "V28"
+    },
+    {
+      "mode": "lng",
+      "origin": "Other Asia Pacific*",
+      "value": 0.0,
+      "is_unresolved_bucket": true,
+      "sheet": "Gas trade 2024 - LNG",
+      "cell": "W28"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Canada",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "B27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Mexico",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "C27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "US",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "D27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Bolivia",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "E27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Other S. & Cent. America",
+      "value": 0.0,
+      "is_unresolved_bucket": true,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "F27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Norway",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "G27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Other Europe",
+      "value": 0.0,
+      "is_unresolved_bucket": true,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "H27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Azerbaijan",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "I27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Kazakhstan",
+      "value": 4.543739229578111,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "J27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Russian Federation",
+      "value": 26.74071504607554,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "K27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Turkmenistan",
+      "value": 32.82623882972482,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "L27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Uzbekistan",
+      "value": 2.490260034823371,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "M27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Iran",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "N27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Qatar",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "O27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Other Middle East",
+      "value": 0.0,
+      "is_unresolved_bucket": true,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "P27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Algeria",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "Q27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Libya",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "R27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Other Africa",
+      "value": 0.0,
+      "is_unresolved_bucket": true,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "S27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Indonesia",
+      "value": 0.0,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "T27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Myanmar",
+      "value": 4.676842781483646,
+      "is_unresolved_bucket": false,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "U27"
+    },
+    {
+      "mode": "pipeline",
+      "origin": "Other Asia Pacific",
+      "value": 0.0,
+      "is_unresolved_bucket": true,
+      "sheet": "Gas trade 2024 - pipeline",
+      "cell": "V27"
+    }
+  ],
+  "interpretation": "Annual gross-import exposure, not outage probability, domestic consumption share, physical pipeline capacity, or Q3 channel calibration.",
+  "workbook_verification": {
+    "path": "data/raw/lb/trade_alternatives/ei_2025_data.xlsx",
+    "sha256": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63",
+    "cells": [
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "B27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "C27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "D27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "E27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "F27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "G27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "H27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "I27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "J27",
+        "value": 4.543739229578111
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "K27",
+        "value": 26.74071504607554
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "L27",
+        "value": 32.82623882972482
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "M27",
+        "value": 2.490260034823371
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "N27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "O27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "P27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "Q27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "R27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "S27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "T27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "U27",
+        "value": 4.676842781483646
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "V27",
+        "value": 0
+      },
+      {
+        "mode": "pipeline",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "W27",
+        "value": 71.2777959216855
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "B28",
+        "value": 5.755474346591666
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "C28",
+        "value": 0.42819872167405054
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "D28",
+        "value": 0.3182368437736487
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "E28",
+        "value": 0.0006513176000000001
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "F28",
+        "value": 0.057621902959615376
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "G28",
+        "value": 0.0812164365
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "H28",
+        "value": 11.350598947800634
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "I28",
+        "value": 1.5108684332459874
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "J28",
+        "value": 25.20133617200949
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "K28",
+        "value": 1.251011160254289
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "L28",
+        "value": 0
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "M28",
+        "value": 0.04575077549369747
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "N28",
+        "value": 0
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "O28",
+        "value": 0.17464820851633334
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "P28",
+        "value": 1.8864692368262654
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "Q28",
+        "value": 1.6024099391771711
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "R28",
+        "value": 35.80458367685534
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "S28",
+        "value": 1.0530073301792686
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "T28",
+        "value": 4.859466899554043
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "U28",
+        "value": 10.488856646912186
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "V28",
+        "value": 3.318189968250413
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "W28",
+        "value": 0
+      },
+      {
+        "mode": "lng",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "X28",
+        "value": 105.18859696417408
+      }
+    ]
+  },
+  "processed_inputs": {
+    "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f",
+    "data/processed/lb/trade_alternatives/lng_china_2024.csv": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363"
+  }
+}

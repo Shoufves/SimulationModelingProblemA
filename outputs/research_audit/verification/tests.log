@@ -1,0 +1,14 @@
+.......................................................................................................Q1 FAILED: Input hash mismatch: cost
+......................................Q1 FAILED: [Errno 2] No such file or directory: 'D:\\仿真建模资料\\2026年仿真建模挑战赛赛题\\A题\\tmp\\tests\\tmp3d94cp97\\missing.csv'
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+{"status": "success_conditional_candidate", "elapsed_seconds": 0.05890560004627332}
+{"status": "success_conditional_candidate", "elapsed_seconds": 0.049034399969968945}
+{"passed": false, "status": "failed", "checks": 0, "error": "ValueError: injected audit failure"}
+{"status": "failed", "error_type": "FileNotFoundError", "error": "[Errno 2] No such file or directory: 'D:\\\\仿真建模资料\\\\2026年仿真建模挑战赛赛题\\\\A题\\\\tmp\\\\tests\\\\tmpjoo02m9p\\\\missing.json'"}
+{"status": "failed", "seconds": 0.0030174999847076833}
+......................................................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 339 tests in 127.401s
+
+OK

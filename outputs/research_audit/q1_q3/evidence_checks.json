@@ -1,0 +1,940 @@
+{
+  "passed": true,
+  "claims": [
+    {
+      "id": "E1",
+      "manuscript": "docs/paper/q1-evidence-analysis.md",
+      "phrase": "## 结构变化为什么不能只看份额\n\n同版统计中，能源消费从2015年的43.4113亿吨标准煤增至2024年的59.6000亿吨标准煤[E1]。",
+      "values": [
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "energy_total",
+              "year": "2015"
+            },
+            "field": "value"
+          },
+          "raw": 43.4113,
+          "rendered": "43.4113"
+        },
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "energy_total",
+              "year": "2024"
+            },
+            "field": "value"
+          },
+          "raw": 59.6,
+          "rendered": "59.6000"
+        }
+      ]
+    },
+    {
+      "id": "E2",
+      "manuscript": "docs/paper/q1-evidence-analysis.md",
+      "phrase": "煤炭消费份额由63.8%降到53.2%，按同表总量与份额计算的煤炭标准煤量却从27.6964升到31.7072亿吨[E2]。",
+      "values": [
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "coal_share",
+              "year": "2015"
+            },
+            "field": "value"
+          },
+          "raw": 63.8,
+          "rendered": "63.8"
+        },
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "coal_share",
+              "year": "2024"
+            },
+            "field": "value"
+          },
+          "raw": 53.2,
+          "rendered": "53.2"
+        },
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "coal_allocated_tce",
+              "year": "2015"
+            },
+            "field": "value"
+          },
+          "raw": 27.696409399999997,
+          "rendered": "27.6964"
+        },
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "coal_allocated_tce",
+              "year": "2024"
+            },
+            "field": "value"
+          },
+          "raw": 31.7072,
+          "rendered": "31.7072"
+        }
+      ]
+    },
+    {
+      "id": "E3",
+      "manuscript": "docs/paper/q1-evidence-analysis.md",
+      "phrase": "以同版实际GDP增速连乘指数作分母，全口径能耗强度和化石工业CO₂强度在2024年分别为83.717与76.015，基期均为2015年[E3]。",
+      "values": [
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "energy_intensity_index",
+              "year": "2024"
+            },
+            "field": "value"
+          },
+          "raw": 83.71703519629108,
+          "rendered": "83.717"
+        },
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "co2_intensity_index",
+              "year": "2024"
+            },
+            "field": "value"
+          },
+          "raw": 76.01470578853679,
+          "rendered": "76.015"
+        }
+      ]
+    },
+    {
+      "id": "E4",
+      "manuscript": "docs/paper/q1-evidence-analysis.md",
+      "phrase": "## 保障问题：进口方式与进口来源不能混为一项\n\n国内总量账显示，2023年石油净进口占消费的78.85%，煤炭为9.99%[E4]。",
+      "values": [
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "oil_net_import_ratio",
+              "year": "2023"
+            },
+            "field": "value"
+          },
+          "raw": 78.8546255506608,
+          "rendered": "78.85"
+        },
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "coal_net_import_ratio",
+              "year": "2023"
+            },
+            "field": "value"
+          },
+          "raw": 9.99118437403745,
+          "rendered": "9.99"
+        }
+      ]
+    },
+    {
+      "id": "E5",
+      "manuscript": "docs/paper/q1-evidence-analysis.md",
+      "phrase": "本次只使用已经准入的EI工作簿，统一到2024年、China目的地、40 MJ/m³热值口径，并实际复核45个数值单元格[E5]。两种运输方式总计176.4664 bcm，其中1.6843 bcm仍只识别到地区桶，不能强行分给具体国家[E5]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q1_source_exposure.json",
+            "keys": [
+              "workbook_verification",
+              "cells"
+            ],
+            "operation": "length"
+          },
+          "raw": 45,
+          "rendered": "45"
+        },
+        {
+          "source": {
+            "generated": "q1_source_exposure.json",
+            "keys": [
+              "total_bcm_gcv40"
+            ]
+          },
+          "raw": 176.4663928858596,
+          "rendered": "176.4664"
+        },
+        {
+          "source": {
+            "generated": "q1_source_exposure.json",
+            "keys": [
+              "unresolved_bcm"
+            ]
+          },
+          "raw": 1.684277693277171,
+          "rendered": "1.6843"
+        }
+      ]
+    },
+    {
+      "id": "E6",
+      "manuscript": "docs/paper/q1-evidence-analysis.md",
+      "phrase": "将各方式的同名具名来源相加后，俄罗斯的进口量为38.0913 bcm，占总量21.59%，高于本表中其他具名来源[E6]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q1_source_exposure.json",
+            "keys": [
+              "countries",
+              0,
+              "bcm"
+            ]
+          },
+          "raw": 38.09131399387617,
+          "rendered": "38.0913"
+        },
+        {
+          "source": {
+            "generated": "q1_source_exposure.json",
+            "keys": [
+              "largest_named_share"
+            ]
+          },
+          "raw": 0.21585591098081805,
+          "rendered": "21.59"
+        }
+      ]
+    },
+    {
+      "id": "E7",
+      "manuscript": "docs/paper/q1-evidence-analysis.md",
+      "phrase": "本题中这个遗漏交叉项为194.94点，运输方式拆开后的具名来源下界为1308.22点，合并后为1503.16点[E7]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q1_source_exposure.json",
+            "keys": [
+              "omitted_common_origin_cross_term"
+            ]
+          },
+          "raw": 194.93856906210294,
+          "rendered": "194.94"
+        },
+        {
+          "source": {
+            "generated": "q1_source_exposure.json",
+            "keys": [
+              "separated_route_country_hhi_lower"
+            ]
+          },
+          "raw": 1308.224413595311,
+          "rendered": "1308.22"
+        },
+        {
+          "source": {
+            "generated": "q1_source_exposure.json",
+            "keys": [
+              "named_country_hhi_lower"
+            ]
+          },
+          "raw": 1503.162982657414,
+          "rendered": "1503.16"
+        }
+      ]
+    },
+    {
+      "id": "E8",
+      "manuscript": "docs/paper/q1-evidence-analysis.md",
+      "phrase": "为避免擅自认定未知桶与已知国家互斥，上界允许全部未知量叠加到最大具名来源，得到1545.28点[E8]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q1_source_exposure.json",
+            "keys": [
+              "conservative_country_hhi_upper"
+            ]
+          },
+          "raw": 1545.2785443032615,
+          "rendered": "1545.28"
+        }
+      ]
+    },
+    {
+      "id": "E9",
+      "manuscript": "docs/paper/q1-evidence-analysis.md",
+      "phrase": "沿用mmj的同参数风电计算，在5%实际折现率、共同寿命假设下，陆风和海风的条件成本分别为0.03104与0.05148美元/kWh[E9]。",
+      "values": [
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "screening_onshore_wind_wacc_0.05",
+              "year": "2024"
+            },
+            "field": "value"
+          },
+          "raw": 0.031041685155714878,
+          "rendered": "0.03104"
+        },
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "screening_offshore_wind_wacc_0.05",
+              "year": "2024"
+            },
+            "field": "value"
+          },
+          "raw": 0.0514771489247282,
+          "rendered": "0.05148"
+        }
+      ]
+    },
+    {
+      "id": "E10",
+      "manuscript": "docs/paper/q1-evidence-analysis.md",
+      "phrase": "2024年31省发电份额与用电份额差异指标为0.1266[E10]，说明生产和负荷分布有别，但不是跨省电量、线路容量或拥塞价格。",
+      "values": [
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "spatial_share_difference",
+              "year": "2024"
+            },
+            "field": "value"
+          },
+          "raw": 0.12656107234462657,
+          "rendered": "0.1266"
+        }
+      ]
+    },
+    {
+      "id": "E11",
+      "manuscript": "docs/paper/q1-evidence-analysis.md",
+      "phrase": "新型储能在同年为73.76 GW、168.2 GWh[E11]，功率和能量需要同时保留，公开名牌容量还不能证明极端时段一定可用。",
+      "values": [
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "new_storage_power",
+              "year": "2024"
+            },
+            "field": "value"
+          },
+          "raw": 73.76,
+          "rendered": "73.76"
+        },
+        {
+          "source": {
+            "file": "outputs/q1/p1_yx/indicators.csv",
+            "where": {
+              "indicator_id": "new_storage_energy",
+              "year": "2024"
+            },
+            "field": "value"
+          },
+          "raw": 168.2,
+          "rendered": "168.2"
+        }
+      ]
+    },
+    {
+      "id": "E12",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "年度S0、SP、ST的累计资源成本分别为389.014873、388.787441、388.387217万亿元，期间为2025—2060年[E12]。",
+      "values": [
+        {
+          "source": {
+            "file": "outputs/q3/p3_yx/scenario_comparison.csv",
+            "where": {
+              "scenario": "S0",
+              "scope": "2025-2060 annual path"
+            },
+            "field": "resource_cost_cny"
+          },
+          "raw": 389014873157918.44,
+          "rendered": "389.014873"
+        },
+        {
+          "source": {
+            "file": "outputs/q3/p3_yx/scenario_comparison.csv",
+            "where": {
+              "scenario": "SP",
+              "scope": "2025-2060 annual path"
+            },
+            "field": "resource_cost_cny"
+          },
+          "raw": 388787441257695.4,
+          "rendered": "388.787441"
+        },
+        {
+          "source": {
+            "file": "outputs/q3/p3_yx/scenario_comparison.csv",
+            "where": {
+              "scenario": "ST",
+              "scope": "2025-2060 annual path"
+            },
+            "field": "resource_cost_cny"
+          },
+          "raw": 388387216810183.4,
+          "rendered": "388.387217"
+        }
+      ]
+    },
+    {
+      "id": "E13",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "在共同2030快照的12天事件中，S0与SG成本均为2291.226531亿元，SW与SGW均为2490.200790亿元[E13]。各情景最大服务缺供率为0[E13]。",
+      "values": [
+        {
+          "source": {
+            "file": "outputs/q3/p3_yx/scenario_comparison.csv",
+            "where": {
+              "scenario": "S0",
+              "scope": "12-day continuous event"
+            },
+            "field": "resource_cost_cny"
+          },
+          "raw": 229122653058.71817,
+          "rendered": "2291.226531"
+        },
+        {
+          "source": {
+            "file": "outputs/q3/p3_yx/scenario_comparison.csv",
+            "where": {
+              "scenario": "SG",
+              "scope": "12-day continuous event"
+            },
+            "field": "resource_cost_cny"
+          },
+          "raw": 229122653058.71817,
+          "rendered": "2291.226531"
+        },
+        {
+          "source": {
+            "file": "outputs/q3/p3_yx/scenario_comparison.csv",
+            "where": {
+              "scenario": "SW",
+              "scope": "12-day continuous event"
+            },
+            "field": "resource_cost_cny"
+          },
+          "raw": 249020079025.14215,
+          "rendered": "2490.200790"
+        },
+        {
+          "source": {
+            "file": "outputs/q3/p3_yx/scenario_comparison.csv",
+            "where": {
+              "scenario": "SGW",
+              "scope": "12-day continuous event"
+            },
+            "field": "resource_cost_cny"
+          },
+          "raw": 249020079025.14215,
+          "rendered": "2490.200790"
+        },
+        {
+          "source": {
+            "file": "outputs/q3/p3_yx/scenario_comparison.csv",
+            "where": {
+              "scenario": "S0",
+              "scope": "12-day continuous event"
+            },
+            "field": "max_service_loss"
+          },
+          "raw": 0.0,
+          "rendered": "0"
+        },
+        {
+          "source": {
+            "file": "outputs/q3/p3_yx/scenario_comparison.csv",
+            "where": {
+              "scenario": "SG",
+              "scope": "12-day continuous event"
+            },
+            "field": "max_service_loss"
+          },
+          "raw": 0.0,
+          "rendered": "0"
+        },
+        {
+          "source": {
+            "file": "outputs/q3/p3_yx/scenario_comparison.csv",
+            "where": {
+              "scenario": "SW",
+              "scope": "12-day continuous event"
+            },
+            "field": "max_service_loss"
+          },
+          "raw": 0.0,
+          "rendered": "0"
+        },
+        {
+          "source": {
+            "file": "outputs/q3/p3_yx/scenario_comparison.csv",
+            "where": {
+              "scenario": "SGW",
+              "scope": "12-day continuous event"
+            },
+            "field": "max_service_loss"
+          },
+          "raw": 0.0,
+          "rendered": "0"
+        }
+      ]
+    },
+    {
+      "id": "E14",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "按服务分开的正常响应与气电向上响应冻结对照，缺供交互J也均为0[E14]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h02_max_abs_J"
+            ]
+          },
+          "raw": 0.0,
+          "rendered": "0"
+        }
+      ]
+    },
+    {
+      "id": "E15",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "## 退役规则的作用没有跨条件稳定成立\n\n原H01的160个标签点中，156个超过5%年度服务界[E15]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_summary",
+              "labelled_rows"
+            ]
+          },
+          "raw": 160,
+          "rendered": "160"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_summary",
+              "labelled_service_bound_failures"
+            ]
+          },
+          "raw": 156,
+          "rendered": "156"
+        }
+      ]
+    },
+    {
+      "id": "E16",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "40个标签条件对应34个不同物理条件[E16]，这些是确定性设计点，不是独立随机样本。",
+      "values": [
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_design_labelled_settings"
+            ]
+          },
+          "raw": 40,
+          "rendered": "40"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_unique_physical_settings"
+            ]
+          },
+          "raw": 34,
+          "rendered": "34"
+        }
+      ]
+    },
+    {
+      "id": "E17",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "与固定日程相比，滚动保障规则在2个条件更好、32个持平；与成本规则相比，1个更差、33个持平；与替代可用规则相比，34个全部持平[E17]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_risk_order_counts",
+              "schedule",
+              "better"
+            ]
+          },
+          "raw": 2,
+          "rendered": "2"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_risk_order_counts",
+              "schedule",
+              "tie"
+            ]
+          },
+          "raw": 32,
+          "rendered": "32"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_risk_order_counts",
+              "cost_order",
+              "worse"
+            ]
+          },
+          "raw": 1,
+          "rendered": "1"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_risk_order_counts",
+              "cost_order",
+              "tie"
+            ]
+          },
+          "raw": 33,
+          "rendered": "33"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_risk_order_counts",
+              "replacement_ready",
+              "tie"
+            ]
+          },
+          "raw": 34,
+          "rendered": "34"
+        }
+      ]
+    },
+    {
+      "id": "E18",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "最后这组风险相同并不意味着成本或完整轨迹相同：滚动规则有10个条件成本更低、9个更高、15个相同，最大绝对差为228.374903亿元[E18]。滚动规则在这34个条件中仅1个满足服务界[E18]，因此成本降低不能越过安全约束成为推荐依据。",
+      "values": [
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_summary",
+              "replacement_cost_lower"
+            ]
+          },
+          "raw": 10,
+          "rendered": "10"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_summary",
+              "replacement_cost_higher"
+            ]
+          },
+          "raw": 9,
+          "rendered": "9"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_summary",
+              "replacement_cost_tie"
+            ]
+          },
+          "raw": 15,
+          "rendered": "15"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_summary",
+              "replacement_max_abs_cost_delta_cny"
+            ]
+          },
+          "raw": 22837490281.0625,
+          "rendered": "228.374903"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_summary",
+              "rolling_unique_feasible"
+            ]
+          },
+          "raw": 1,
+          "rendered": "1"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "h01_unique_physical_settings"
+            ]
+          },
+          "raw": 34,
+          "rendered": "34"
+        }
+      ]
+    },
+    {
+      "id": "E19",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "然而本次按实际公共承诺、动作容量、付款及投运年份构造签名后，8个基准标签只对应4类部署[E19]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "nominal_baseline_policies"
+            ]
+          },
+          "raw": 8,
+          "rendered": "8"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "unique_baseline_deployments"
+            ]
+          },
+          "raw": 4,
+          "rendered": "4"
+        }
+      ]
+    },
+    {
+      "id": "E20",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "随后核验基准及两档成本条件下24条年度账本，并对36对事件账本逐一核对，等价组内规范化内容一致[E20]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "annual_cases_checked"
+            ]
+          },
+          "raw": 24,
+          "rendered": "24"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "event_pairs"
+            ],
+            "operation": "length"
+          },
+          "raw": 36,
+          "rendered": "36"
+        }
+      ]
+    },
+    {
+      "id": "E21",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "在累计成本节省中，储能分量为1.190352万亿元，气源分散分量为−20.061631亿元，电网分量为0[E21]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "attribution",
+              "resource_cost_saving_cny",
+              "shapley",
+              "storage"
+            ]
+          },
+          "raw": 1190351627133.7188,
+          "rendered": "1.190352"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "attribution",
+              "resource_cost_saving_cny",
+              "shapley",
+              "gas"
+            ]
+          },
+          "raw": -2006163112.1562502,
+          "rendered": "20.061631"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "attribution",
+              "resource_cost_saving_cny",
+              "shapley",
+              "grid"
+            ]
+          },
+          "raw": 0.0,
+          "rendered": "0"
+        }
+      ]
+    },
+    {
+      "id": "E22",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "在累计减排中，储能分量为159.813859亿吨，另两项均为0[E22]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "attribution",
+              "co2_reduction_t",
+              "shapley",
+              "storage"
+            ]
+          },
+          "raw": 15981385942.729555,
+          "rendered": "159.813859"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "attribution",
+              "co2_reduction_t",
+              "shapley",
+              "gas"
+            ]
+          },
+          "raw": 0.0,
+          "rendered": "0"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "attribution",
+              "co2_reduction_t",
+              "shapley",
+              "grid"
+            ]
+          },
+          "raw": 0.0,
+          "rendered": "0"
+        }
+      ]
+    },
+    {
+      "id": "E23",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "成本的储能—气源交互为−0.0625元，低于由原金额浮点间距确定的1元计算误差界[E23]。",
+      "values": [
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "attribution",
+              "resource_cost_saving_cny",
+              "anchored_interactions",
+              "storage+gas"
+            ]
+          },
+          "raw": -0.0625,
+          "rendered": "0.0625"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "attribution",
+              "resource_cost_saving_cny",
+              "roundoff_bound"
+            ]
+          },
+          "raw": 1.0,
+          "rendered": "1"
+        }
+      ]
+    },
+    {
+      "id": "E24",
+      "manuscript": "docs/paper/q3-innovation-analysis.md",
+      "phrase": "所有候选的年度最大缺供率改善分量也为0[E24]，进一步限制了将成本收益宣传为安全收益的说法。",
+      "values": [
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "attribution",
+              "annual_max_loss_reduction",
+              "shapley",
+              "storage"
+            ]
+          },
+          "raw": 0.0,
+          "rendered": "0"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "attribution",
+              "annual_max_loss_reduction",
+              "shapley",
+              "gas"
+            ]
+          },
+          "raw": 0.0,
+          "rendered": "0"
+        },
+        {
+          "source": {
+            "generated": "q3_effectiveness.json",
+            "keys": [
+              "attribution",
+              "annual_max_loss_reduction",
+              "shapley",
+              "grid"
+            ]
+          },
+          "raw": 0.0,
+          "rendered": "0"
+        }
+      ]
+    }
+  ],
+  "scope": "Registered numerical phrases only; not a substitute for human interpretation or literature verification."
+}

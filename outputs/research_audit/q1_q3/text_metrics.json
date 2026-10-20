@@ -1,0 +1,230 @@
+{
+  "targets": {
+    "q1_original": {
+      "path": "outputs/q1/p1_yx/report.md",
+      "sha256": "76391387299f31573ab85330e5c69ac961c8084c3c52f14c8e1ef466098a44ce",
+      "corpus_files": {
+        "只读工作区/final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+        "只读工作区/gemini_final_idea.md": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+        "docs/solutions/p1-yx-integration.md": "6c9a62fe20ee76a268b2bb725d644126743bd9d09342d47f7e08053402c0fa7a",
+        "outputs/q3/p3_yx/report.md": "e0c9cbb9870e0913eb45a0e1f4ac7b659809ca58f2053a0bb16b7d23ee319875"
+      },
+      "prose_sentences": 305,
+      "prose_normalized_characters": 7109,
+      "repeated_sentence_rate": {
+        "numerator": 9,
+        "denominator": 305,
+        "percent": 2.9508196721311477
+      },
+      "explicit_template_label_rate": {
+        "numerator": 71,
+        "denominator": 305,
+        "percent": 23.278688524590162
+      },
+      "local_12gram_overlap": {
+        "numerator": 16,
+        "denominator": 3754,
+        "percent": 0.42621204049014383
+      },
+      "numeric_sentence_explicit_anchor_rate": {
+        "numerator": 0,
+        "denominator": 114,
+        "percent": 0.0
+      },
+      "repeated_sentences": [
+        {
+          "normalized": "边界年电量不等于任意时段可靠容量",
+          "count": 4
+        },
+        {
+          "normalized": "体现非燃烧电源对电力结构的贡献",
+          "count": 4
+        },
+        {
+          "normalized": "边界不是一次能源消费份额生命周期零排放或已实现替代减排量",
+          "count": 4
+        }
+      ],
+      "overlap_locations": [
+        {
+          "sentence": "两份原候选已通过yx侧本地技术复审，尚未正式批准或合并",
+          "sources": {
+            "docs/solutions/p1-yx-integration.md": 6
+          }
+        },
+        {
+          "sentence": "本次完整整合PR须由mmj、lb针对同一最终提交正式评审",
+          "sources": {
+            "docs/solutions/p1-yx-integration.md": 3
+          }
+        },
+        {
+          "sentence": "CF通常为事前估计，O&M为报告假设",
+          "sources": {
+            "docs/solutions/p1-yx-integration.md": 5
+          }
+        },
+        {
+          "sentence": "完整31省见regional_comparison.csv",
+          "sources": {
+            "只读工作区/final.md": 2
+          }
+        }
+      ],
+      "formal_aigc_detector_percent": null,
+      "true_ai_authorship_percent": null,
+      "external_plagiarism_percent": null,
+      "interpretation": "Descriptive metrics only. Local overlap includes legitimate reuse of team material; it is neither external plagiarism nor AI-generation probability. Anchors are a syntactic measure, not proof of a claim."
+    },
+    "q3_original": {
+      "path": "docs/solutions/p3-yx.md",
+      "sha256": "f1a97e2589a8b2441dbba2e9cf0b38b4f58aa4909c8939c70605b94c3a7d1b0d",
+      "corpus_files": {
+        "只读工作区/final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+        "只读工作区/gemini_final_idea.md": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+        "docs/solutions/p1-yx-integration.md": "6c9a62fe20ee76a268b2bb725d644126743bd9d09342d47f7e08053402c0fa7a",
+        "outputs/q3/p3_yx/report.md": "e0c9cbb9870e0913eb45a0e1f4ac7b659809ca58f2053a0bb16b7d23ee319875"
+      },
+      "prose_sentences": 115,
+      "prose_normalized_characters": 3511,
+      "repeated_sentence_rate": {
+        "numerator": 0,
+        "denominator": 115,
+        "percent": 0.0
+      },
+      "explicit_template_label_rate": {
+        "numerator": 0,
+        "denominator": 115,
+        "percent": 0.0
+      },
+      "local_12gram_overlap": {
+        "numerator": 65,
+        "denominator": 2246,
+        "percent": 2.894033837934105
+      },
+      "numeric_sentence_explicit_anchor_rate": {
+        "numerator": 0,
+        "denominator": 59,
+        "percent": 0.0
+      },
+      "repeated_sentences": [],
+      "overlap_locations": [
+        {
+          "sentence": "共同起点 `500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93`",
+          "sources": {
+            "outputs/q3/p3_yx/report.md": 29
+          }
+        },
+        {
+          "sentence": "固定已承诺发电项目组只移动同一组清洁在建项目的工期、禁止新增发电/电网申请，终端设备仍按vE和实际付款更新",
+          "sources": {
+            "outputs/q3/p3_yx/report.md": 1
+          }
+        },
+        {
+          "sentence": "`retired_early_mw`及逐年 `q3_early_retired_mw`仅计实际退出年严格早于自然退出年的容量",
+          "sources": {
+            "outputs/q3/p3_yx/report.md": 6
+          }
+        },
+        {
+          "sentence": "`managed_natural_retired_mw`及逐年 `q3_managed_natural_retired_mw`计受Q3退役计划管理、最终恰好到龄退出的容量，不是全国全部自然退役量",
+          "sources": {
+            "outputs/q3/p3_yx/report.md": 24
+          }
+        },
+        {
+          "sentence": "187条年度路径、160个H01点、118个连续事件全部实际求解，其中56个为政策选择/扩展检验事件，30行是分服务H02差分",
+          "sources": {
+            "outputs/q3/p3_yx/report.md": 5
+          }
+        }
+      ],
+      "formal_aigc_detector_percent": null,
+      "true_ai_authorship_percent": null,
+      "external_plagiarism_percent": null,
+      "interpretation": "Descriptive metrics only. Local overlap includes legitimate reuse of team material; it is neither external plagiarism nor AI-generation probability. Anchors are a syntactic measure, not proof of a claim."
+    },
+    "q1_manuscript": {
+      "path": "docs/paper/q1-evidence-analysis.md",
+      "sha256": "44ef175691c2baa245b087ae69ef0d41d7004259d4078e484a676773ff78c970",
+      "corpus_files": {
+        "只读工作区/final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+        "只读工作区/gemini_final_idea.md": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+        "docs/solutions/p1-yx-integration.md": "6c9a62fe20ee76a268b2bb725d644126743bd9d09342d47f7e08053402c0fa7a",
+        "outputs/q3/p3_yx/report.md": "e0c9cbb9870e0913eb45a0e1f4ac7b659809ca58f2053a0bb16b7d23ee319875"
+      },
+      "prose_sentences": 55,
+      "prose_normalized_characters": 1945,
+      "repeated_sentence_rate": {
+        "numerator": 0,
+        "denominator": 55,
+        "percent": 0.0
+      },
+      "explicit_template_label_rate": {
+        "numerator": 0,
+        "denominator": 55,
+        "percent": 0.0
+      },
+      "local_12gram_overlap": {
+        "numerator": 0,
+        "denominator": 1340,
+        "percent": 0.0
+      },
+      "numeric_sentence_explicit_anchor_rate": {
+        "numerator": 12,
+        "denominator": 17,
+        "percent": 70.58823529411765
+      },
+      "repeated_sentences": [],
+      "overlap_locations": [],
+      "formal_aigc_detector_percent": null,
+      "true_ai_authorship_percent": null,
+      "external_plagiarism_percent": null,
+      "interpretation": "Descriptive metrics only. Local overlap includes legitimate reuse of team material; it is neither external plagiarism nor AI-generation probability. Anchors are a syntactic measure, not proof of a claim."
+    },
+    "q3_manuscript": {
+      "path": "docs/paper/q3-innovation-analysis.md",
+      "sha256": "917e849bb7e061cfe35e2ba98a8ae28244747947bfbf683f7c15bde0bfff3b16",
+      "corpus_files": {
+        "只读工作区/final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+        "只读工作区/gemini_final_idea.md": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+        "docs/solutions/p1-yx-integration.md": "6c9a62fe20ee76a268b2bb725d644126743bd9d09342d47f7e08053402c0fa7a",
+        "outputs/q3/p3_yx/report.md": "e0c9cbb9870e0913eb45a0e1f4ac7b659809ca58f2053a0bb16b7d23ee319875"
+      },
+      "prose_sentences": 56,
+      "prose_normalized_characters": 2015,
+      "repeated_sentence_rate": {
+        "numerator": 0,
+        "denominator": 56,
+        "percent": 0.0
+      },
+      "explicit_template_label_rate": {
+        "numerator": 0,
+        "denominator": 56,
+        "percent": 0.0
+      },
+      "local_12gram_overlap": {
+        "numerator": 0,
+        "denominator": 1399,
+        "percent": 0.0
+      },
+      "numeric_sentence_explicit_anchor_rate": {
+        "numerator": 15,
+        "denominator": 20,
+        "percent": 75.0
+      },
+      "repeated_sentences": [],
+      "overlap_locations": [],
+      "formal_aigc_detector_percent": null,
+      "true_ai_authorship_percent": null,
+      "external_plagiarism_percent": null,
+      "interpretation": "Descriptive metrics only. Local overlap includes legitimate reuse of team material; it is neither external plagiarism nor AI-generation probability. Anchors are a syntactic measure, not proof of a claim."
+    }
+  },
+  "classification": "descriptive_not_authorship_detection",
+  "ai_use_disclosure": "AI assisted code, analysis, drafting, validation and Git actions in this session; human choices and actual signed checks must be recorded separately.",
+  "before_after_limit": "Different lengths and purposes: descriptive version comparisons, not a controlled detector-reduction experiment.",
+  "external_detection": "not_run_no_platform_or_threshold_specified",
+  "human_validation": "pending_actual_human_signature"
+}

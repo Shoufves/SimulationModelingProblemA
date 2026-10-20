@@ -95,6 +95,23 @@ python -B -X utf8 scripts/summarize_q3_evidence.py
 
 `outputs/q3_review/README.md`列出本次证据与复跑步骤。`scripts/accept_q3_delivery.py`只汇总已执行且指纹匹配的本地证据；不能用它替代前述实际运行或两位成员的C9批准。
 
-## 版本与恢复记录
+## Q1/Q3补充研究审查
+
+本轮只读取既有科学产物，新增来源暴露、实施等价类、Shapley与文本诊断。使用已有Q3环境及openpyxl，从仓库根目录运行：
+
+```powershell
+python -B -X utf8 scripts/audit_q1_q3_research.py
+$env:PYTHONHASHSEED='29'
+python -B -X utf8 scripts/audit_q1_q3_research.py --output-dir outputs/research_audit/q1_q3_reproduction
+python -B -X utf8 scripts/verify_q1_q3_audit.py --run-checks
+```
+
+两套诊断结果写不同目录，最后一条实际运行全部测试、基础审计、正式输入检查和密钥格式扫描，再比较诊断输出与指纹。不带`--run-checks`只核验已有且指纹匹配的检查收据，不冒称重跑测试。原`outputs/validation`与`outputs/workflow`的被跟踪文件在保存本轮证据后恢复到执行前字节，验收证据独立保存在`outputs/research_audit/verification`。
+
+诊断的`--science-only`是局部探索模式；即使正常执行，其manifest的`passed`仍为false，不作为完整验收。正式诊断会检查24组论文关键数值及原科学资产与起点`7d52f439992503eac5978c6f218f5289fe3e2195`字节相同；浅克隆须包含该提交。输出目录必须专用。新文稿或证据登记改变后需重新运行，不能只重写哈希。
+
+此轮没有重新求解全部Q3或训练Q2，而是在原依赖与科学产物未变的前提下复用上一轮完整复现，再独立重做本轮分析。科学解释、外部检测和人工批准分开记录，技术通过不替代人工签认。文献采用离线书目登记，访问限制已列明；复跑不会自动访问检测平台或补签团队批准。
+
+## 版本与恢复记录（原工作区整理）
 
 `archive/organization_20261017/file_disposition.csv` 逐文件记录旧路径→新位置或删除理由。修改过的文档/脚本原字节保存在 `edited_originals.zip`；复算前的结果与目录在 `prior_results.zip`。恢复时按该映射提取单个文件，不把全部旧目录覆盖回当前工程。
