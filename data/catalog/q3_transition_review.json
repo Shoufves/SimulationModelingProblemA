@@ -1,0 +1,80 @@
+{
+  "owner": "mmj",
+  "base_sha": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
+  "team_approved": false,
+  "status": "author_reviewed_conditional_protocol",
+  "reviewed_at_utc": "2026-10-20T00:56:16.182955+00:00",
+  "inherited_review": "data/catalog/q3_input_review.json",
+  "inherited_review_sha256": "1d6dc15fac1272f18dd13310e2e580f345ae2117256246fc0d26ca72c3e3960b",
+  "original_protocol_sha256": "3ec691289c3441b6e9366988898373396b962acd54edc940a82fbf78a6625f8f",
+  "identity": "No new empirical observation. Existing approved-use Q2 stocks/financial mechanisms are extended by explicit author-designed interventions.",
+  "permissions": [
+    "conditional_retirement_timing",
+    "fixed_application_replay",
+    "public_infrastructure_programmes",
+    "finite_policy_screening"
+  ],
+  "review": [
+    {
+      "parameter": "vR",
+      "unit": "fraction_initial_coal_MW_per_year",
+      "use": "early retirement authorisation; only initial reconstructed cohorts within 5 years of technical expiry",
+      "evidence": "author hypothesis; not observed legal authorisation"
+    },
+    {
+      "parameter": "vE",
+      "unit": "share_eligible_device_renewal_and_expansion",
+      "use": "existing Q2 adoption parameter; never replaces installed devices immediately",
+      "evidence": "author grid; conditional on inherited relative-cost eligibility"
+    },
+    {
+      "parameter": "L",
+      "unit": "year",
+      "use": "additional grid/storage/gas-release construction delay; no generation/device delay or overnight stock change",
+      "evidence": "author grid"
+    },
+    {
+      "parameter": "retention_cost",
+      "unit": "2024_real_CNY_per_year",
+      "use": "1% of retained book construction cost annually, paid public maintenance/capacity service; original technical expiry and 2060 deadline binding",
+      "evidence": "author assumption; no legal life extension"
+    },
+    {
+      "parameter": "budget",
+      "unit": "fraction_2024_price_GDP",
+      "use": "extra public appropriation ceiling .0005 annually, full capital reserved at approval; maintenance and retention consume same ceiling",
+      "evidence": "author fiscal experiment, not forecast tax revenue"
+    },
+    {
+      "parameter": "gas_release_capex",
+      "unit": "2024_real_CNY_per_MW_thermal",
+      "use": "1e6 with 2-year construction and 20-year life; throughput only, no added stock/tank/fuel/import capacity",
+      "evidence": "author engineering hypothesis; factor sensitivity required before recommendation"
+    },
+    {
+      "parameter": "grid_storage_capex_efficiency_life",
+      "unit": "inherited_Q2_units",
+      "use": "unchanged conditional Q2 technology/cost data; deployment support, no free technical breakthrough",
+      "evidence": "inherits Q2 purpose and uncertainty"
+    },
+    {
+      "parameter": "terminal_asset_value",
+      "unit": "2024_real_CNY",
+      "use": "straight-line residual construction value discounted to 2024; paired initial capital identical; report gross and net costs",
+      "evidence": "accounting convention, not observed resale value"
+    },
+    {
+      "parameter": "test_events",
+      "unit": "conditional_event",
+      "use": "existing deeper condition remains already seen; no blind-test or population probability claim",
+      "evidence": "unchanged V2 stress values"
+    }
+  ],
+  "exclusions": [
+    "new empirical permit claims",
+    "automatic national reliability probability",
+    "new emissions forecast calibration",
+    "interprovincial congestion",
+    "AI/household/employment extensions"
+  ]
+}

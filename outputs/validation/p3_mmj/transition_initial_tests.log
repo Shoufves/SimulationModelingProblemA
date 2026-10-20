@@ -1,0 +1,318 @@
+test_bad_response_caps_are_rejected (test_q3.FiniteEventTests.test_bad_response_caps_are_rejected) ... ok
+test_calendar_integrates_recovery_and_elapsed_hours (test_q3.FiniteEventTests.test_calendar_integrates_recovery_and_elapsed_hours) ... ok
+test_default_q2_dispatch_unchanged_without_options (test_q3.FiniteEventTests.test_default_q2_dispatch_unchanged_without_options) ... ok
+test_dispatch_carries_ramp_limit_across_window_boundary (test_q3.FiniteEventTests.test_dispatch_carries_ramp_limit_across_window_boundary) ... ok
+test_event_does_not_mutate_snapshot_or_scale_stocks_by_days (test_q3.FiniteEventTests.test_event_does_not_mutate_snapshot_or_scale_stocks_by_days) ... ok
+test_event_start_is_retained_when_not_on_period_boundary (test_q3.FiniteEventTests.test_event_start_is_retained_when_not_on_period_boundary) ... ok
+test_frozen_discharge_changes_action_without_changing_assets (test_q3.FiniteEventTests.test_frozen_discharge_changes_action_without_changing_assets) ... ok
+test_impossible_terminal_stock_is_infeasible (test_q3.FiniteEventTests.test_impossible_terminal_stock_is_infeasible) ... ok
+test_interaction_is_per_service_and_requires_complete_pairs (test_q3.FiniteEventTests.test_interaction_is_per_service_and_requires_complete_pairs) ... ok
+test_noncyclic_fuel_replenishment_prevents_free_initial_stock (test_q3.FiniteEventTests.test_noncyclic_fuel_replenishment_prevents_free_initial_stock) ... ok
+test_real_event_solver_keeps_fuel_and_soc_continuous (test_q3.FiniteEventTests.test_real_event_solver_keeps_fuel_and_soc_continuous) ... ok
+test_recovery_not_silently_set_to_zero_if_censored (test_q3.FiniteEventTests.test_recovery_not_silently_set_to_zero_if_censored) ... ok
+test_sg_keeps_domestic_supply_other_sources_and_weather (test_q3.FiniteEventTests.test_sg_keeps_domestic_supply_other_sources_and_weather) ... ok
+test_sgw_exactly_combines_sg_and_sw (test_q3.FiniteEventTests.test_sgw_exactly_combines_sg_and_sw) ... ok
+test_shock_foreknowledge_cannot_change_pre_event_state (test_q3.FiniteEventTests.test_shock_foreknowledge_cannot_change_pre_event_state) ... ok
+test_zero_demand_has_no_fabricated_shortage_ratio (test_q3.FiniteEventTests.test_zero_demand_has_no_fabricated_shortage_ratio) ... ok
+test_zero_shocks_leave_all_operation_inputs_identical (test_q3.FiniteEventTests.test_zero_shocks_leave_all_operation_inputs_identical) ... ok
+test_invalid_cost_multiplier_is_rejected (test_q3.ReceiptTests.test_invalid_cost_multiplier_is_rejected) ... ERROR
+test_missing_config_creates_failed_latest_attempt (test_q3.ReceiptTests.test_missing_config_creates_failed_latest_attempt) ... ERROR
+test_missing_scenario_is_not_full_success (test_q3.ReceiptTests.test_missing_scenario_is_not_full_success) ... ERROR
+test_modified_input_hash_is_rejected_before_simulation (test_q3.ReceiptTests.test_modified_input_hash_is_rejected_before_simulation) ... ERROR
+test_new_policy_start_is_not_silently_ignored (test_q3.ReceiptTests.test_new_policy_start_is_not_silently_ignored) ... ERROR
+test_restricted_paths_are_rejected (test_q3.ReceiptTests.test_restricted_paths_are_rejected) ... ok
+test_withdrawn_use_is_rejected_even_if_config_hash_is_updated (test_q3.ReceiptTests.test_withdrawn_use_is_rejected_even_if_config_hash_is_updated) ... ok
+test_cohort_split_conserves_initial_capacity_and_annual_authorisation (test_q3_transition.ProtocolTests.test_cohort_split_conserves_initial_capacity_and_annual_authorisation) ... ok
+test_extra_delay_never_adds_devices_or_generation_immediately (test_q3_transition.ProtocolTests.test_extra_delay_never_adds_devices_or_generation_immediately) ... ok
+test_fixed_comparator_reproduces_project_set (test_q3_transition.ProtocolTests.test_fixed_comparator_reproduces_project_set) ... ok
+test_fixed_project_cash_failure_is_not_silently_resized (test_q3_transition.ProtocolTests.test_fixed_project_cash_failure_is_not_silently_resized) ... ok
+test_forecast_never_uses_unrevealed_fixed_applications (test_q3_transition.ProtocolTests.test_forecast_never_uses_unrevealed_fixed_applications) ... ok
+test_fuel_material_services_are_not_aggregated (test_q3_transition.ProtocolTests.test_fuel_material_services_are_not_aggregated) ... ok
+test_invalid_grid_values_rejected (test_q3_transition.ProtocolTests.test_invalid_grid_values_rejected) ... ok
+test_maintenance_has_same_public_budget_and_cannot_be_free (test_q3_transition.ProtocolTests.test_maintenance_has_same_public_budget_and_cannot_be_free) ... ok
+test_new_asset_needs_funding_and_positive_construction_time (test_q3_transition.ProtocolTests.test_new_asset_needs_funding_and_positive_construction_time) ... ok
+test_retirement_cannot_be_deferred_past_experiment_deadline (test_q3_transition.ProtocolTests.test_retirement_cannot_be_deferred_past_experiment_deadline) ... ok
+test_two_grids_are_not_full_factorial_or_duplicates (test_q3_transition.ProtocolTests.test_two_grids_are_not_full_factorial_or_duplicates) ... ok
+test_unpaid_project_cannot_commission (test_q3_transition.ProtocolTests.test_unpaid_project_cannot_commission) ... ok
+test_failed_simulation_cannot_beat_working_policy (test_q3_transition.ScreeningTests.test_failed_simulation_cannot_beat_working_policy) ... ok
+test_no_feasible_solution_does_not_relax_constraints (test_q3_transition.ScreeningTests.test_no_feasible_solution_does_not_relax_constraints) ... ok
+test_test_values_cannot_change_selection (test_q3_transition.ScreeningTests.test_test_values_cannot_change_selection) ... ok
+
+======================================================================
+ERROR: test_invalid_cost_multiplier_is_rejected (test_q3.ReceiptTests.test_invalid_cost_multiplier_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 189, in bad_configuration
+    path=Path(temp)/"config.json";path.write_text(json.dumps(config),encoding="utf-8")
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmpx57o6h8u\\config.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmpx57o6h8u'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 200, in test_invalid_cost_multiplier_is_rejected
+    self.bad_configuration(lambda c:c["scenarios"]["ST"].update(storage_new_project_cost_multiplier=0),"invalid_input")
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 188, in bad_configuration
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmpx57o6h8u'
+
+======================================================================
+ERROR: test_missing_config_creates_failed_latest_attempt (test_q3.ReceiptTests.test_missing_config_creates_failed_latest_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmp5j6kss8e\\outputs\\q3\\test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmp5j6kss8e\\outputs\\q3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 217, in test_missing_config_creates_failed_latest_attempt
+    code=run_q3.main(["--config","missing.json","--output-dir","outputs/q3/test"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\scripts\run_q3.py", line 268, in main
+    out.mkdir(parents=True)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmp5j6kss8e\\outputs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmp5j6kss8e'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 216, in test_missing_config_creates_failed_latest_attempt
+    with tempfile.TemporaryDirectory() as temp, patch.object(run_q3,"ROOT",Path(temp)):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmp5j6kss8e'
+
+======================================================================
+ERROR: test_missing_scenario_is_not_full_success (test_q3.ReceiptTests.test_missing_scenario_is_not_full_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 189, in bad_configuration
+    path=Path(temp)/"config.json";path.write_text(json.dumps(config),encoding="utf-8")
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmph4c6p85w\\config.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmph4c6p85w'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 203, in test_missing_scenario_is_not_full_success
+    self.bad_configuration(lambda c:c["scenarios"].pop("SGW"),"missing_input")
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 188, in bad_configuration
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmph4c6p85w'
+
+======================================================================
+ERROR: test_modified_input_hash_is_rejected_before_simulation (test_q3.ReceiptTests.test_modified_input_hash_is_rejected_before_simulation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 189, in bad_configuration
+    path=Path(temp)/"config.json";path.write_text(json.dumps(config),encoding="utf-8")
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmp5egdra_1\\config.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmp5egdra_1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 194, in test_modified_input_hash_is_rejected_before_simulation
+    self.bad_configuration(lambda c:c["input_hashes"].update({next(iter(c["input_hashes"])):"0"*64}),"changed_input")
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 188, in bad_configuration
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmp5egdra_1'
+
+======================================================================
+ERROR: test_new_policy_start_is_not_silently_ignored (test_q3.ReceiptTests.test_new_policy_start_is_not_silently_ignored)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 189, in bad_configuration
+    path=Path(temp)/"config.json";path.write_text(json.dumps(config),encoding="utf-8")
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmp8ewzr323\\config.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmp8ewzr323'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 197, in test_new_policy_start_is_not_silently_ignored
+    self.bad_configuration(lambda c:c["scenarios"]["SP"].update(effective_year=2030),"invalid_input")
+  File "D:\CSF2026\mmj\SimulationModelingProblemA\tests\test_q3.py", line 188, in bad_configuration
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\44321\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmp8ewzr323'
+
+----------------------------------------------------------------------
+Ran 39 tests in 3.871s
+
+FAILED (errors=5)

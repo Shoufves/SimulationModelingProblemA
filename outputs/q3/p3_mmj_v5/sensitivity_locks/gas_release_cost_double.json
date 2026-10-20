@@ -1,0 +1,57 @@
+{
+  "protocol_change": {
+    "id": "gas_release_cost_double",
+    "target": "transition.gas_release_capex_cny_per_mw",
+    "multiplier": 2.0
+  },
+  "decision": {
+    "selected": null,
+    "feasible": [],
+    "pareto": [],
+    "reason": "no_feasible_candidate",
+    "carbon_ratio": 1.0,
+    "cost_ratio": 1.05,
+    "records": [
+      {
+        "policy_id": "none",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "retain",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "grid",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "gas_release",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "grid_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "retain_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "gas_release_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      }
+    ]
+  }
+}

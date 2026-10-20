@@ -886,6 +886,15 @@ class NationalModel(Model):
                    dispatch_actual_cost_cny=result.get("actual_dispatch_cost",result["dispatch_objective"]))
         return row,margins
 
+    def approve_investments(self, margins):
+        """Default Q2 behaviour; Q3 controlled experiments override this hook."""
+        proposals = [self.generators[t].proposal(margins[t]) for t in TECHS]
+        devices = [c.proposal() for c in self.consumers.values()]
+        self.government.approve(proposals,devices)
+
+    def approve_infrastructure(self, op, result, curtailed):
+        self.grid.propose(op,result,curtailed)
+
     def step(self):
         self.drivers()
         self.construction_cost = 0
@@ -906,10 +915,8 @@ class NationalModel(Model):
             curtailed += unused
         for g in self.generators.values():
             service_debt(g)
-        proposals = [self.generators[t].proposal(margins[t]) for t in TECHS]
-        devices = [c.proposal() for c in self.consumers.values()]
-        self.government.approve(proposals,devices)
-        self.grid.propose(op,result,curtailed)
+        self.approve_investments(margins)
+        self.approve_infrastructure(op,result,curtailed)
         self.grid.pay()
         row.update(grid_power_mw=op["grid"]["power_mw"],storage_power_mw=op["storage"]["power_mw"],
                    storage_energy_mwh=op["storage"]["energy_mwh"],storage_opening_mwh=op["storage"]["initial_mwh"],

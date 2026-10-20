@@ -1,0 +1,65 @@
+{
+  "scope": "Final Git-visible untracked task artifacts; excludes this inventory and summary to avoid recursive receipt sizes.",
+  "created_at_utc": "2026-10-20T02:11:53.879016+00:00",
+  "new_files": 858,
+  "total_bytes": 215905025,
+  "group_bytes": {
+    "data": 20000,
+    "docs": 22222,
+    "outputs/q1/p3_mmj_regression.latest-attempt.json": 210,
+    "outputs/q1/p3_mmj_regression": 1856624,
+    "outputs/q3/README.md": 1098,
+    "outputs/q3/p3_mmj.attempts": 8318091,
+    "outputs/q3/p3_mmj.latest-attempt.json": 246,
+    "outputs/q3/p3_mmj": 22939936,
+    "outputs/q3/p3_mmj_v3.latest-attempt.json": 253,
+    "outputs/q3/p3_mmj_v3": 58517143,
+    "outputs/q3/p3_mmj_v4.latest-attempt.json": 253,
+    "outputs/q3/p3_mmj_v4": 30632915,
+    "outputs/q3/p3_mmj_v5.latest-attempt.json": 256,
+    "outputs/q3/p3_mmj_v5": 92692490,
+    "outputs/validation/p3_mmj": 670073,
+    "scripts": 132340,
+    "src": 36833,
+    "tests": 22624,
+    "workflow": 41418
+  },
+  "files_at_least_50_mib": [],
+  "unwanted_cache_or_restricted_paths": [],
+  "largest_files": [
+    {
+      "path": "outputs/q3/p3_mmj_v5/model_snapshot.zip",
+      "bytes": 14410062
+    },
+    {
+      "path": "outputs/q3/p3_mmj_v4/model_snapshot.zip",
+      "bytes": 14405292
+    },
+    {
+      "path": "outputs/q3/p3_mmj_v3/model_snapshot.zip",
+      "bytes": 14396495
+    },
+    {
+      "path": "outputs/q3/p3_mmj/model_snapshot.zip",
+      "bytes": 14376847
+    },
+    {
+      "path": "outputs/q3/p3_mmj/event_operations.csv",
+      "bytes": 3099005
+    },
+    {
+      "path": "outputs/q3/p3_mmj_v3/event_operations.csv",
+      "bytes": 3099005
+    },
+    {
+      "path": "outputs/q3/p3_mmj_v4/event_operations.csv",
+      "bytes": 3099005
+    },
+    {
+      "path": "outputs/q3/p3_mmj_v5/event_operations.csv",
+      "bytes": 3099005
+    }
+  ],
+  "passed": true,
+  "retention_reason": "V2 stage history and stopped V3/V4 evidence are retained; independent full reproduction remains outside the repository with its receipt and scientific-output comparison."
+}

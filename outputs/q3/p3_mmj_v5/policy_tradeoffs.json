@@ -1,0 +1,505 @@
+{
+  "designated": {
+    "selected": null,
+    "feasible": [],
+    "pareto": [],
+    "reason": "no_feasible_candidate",
+    "carbon_ratio": 1.0,
+    "cost_ratio": 1.05,
+    "records": [
+      {
+        "policy_id": "none",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "retain",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "grid",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "gas_release",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "grid_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "retain_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "gas_release_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      }
+    ]
+  },
+  "alternative_bounds": [
+    {
+      "selected": null,
+      "feasible": [],
+      "pareto": [],
+      "reason": "no_feasible_candidate",
+      "carbon_ratio": 0.95,
+      "cost_ratio": 1.0,
+      "records": [
+        {
+          "policy_id": "none",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "retain",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        },
+        {
+          "policy_id": "grid",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        },
+        {
+          "policy_id": "storage",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        },
+        {
+          "policy_id": "gas_release",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        },
+        {
+          "policy_id": "grid_storage",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        },
+        {
+          "policy_id": "retain_storage",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        },
+        {
+          "policy_id": "gas_release_storage",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        }
+      ]
+    },
+    {
+      "selected": null,
+      "feasible": [],
+      "pareto": [],
+      "reason": "no_feasible_candidate",
+      "carbon_ratio": 0.95,
+      "cost_ratio": 1.05,
+      "records": [
+        {
+          "policy_id": "none",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "retain",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "grid",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "gas_release",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "grid_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "retain_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "gas_release_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        }
+      ]
+    },
+    {
+      "selected": null,
+      "feasible": [],
+      "pareto": [],
+      "reason": "no_feasible_candidate",
+      "carbon_ratio": 0.95,
+      "cost_ratio": 1.1,
+      "records": [
+        {
+          "policy_id": "none",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "retain",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "grid",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "gas_release",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "grid_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "retain_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "gas_release_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        }
+      ]
+    },
+    {
+      "selected": null,
+      "feasible": [],
+      "pareto": [],
+      "reason": "no_feasible_candidate",
+      "carbon_ratio": 1.0,
+      "cost_ratio": 1.0,
+      "records": [
+        {
+          "policy_id": "none",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "retain",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        },
+        {
+          "policy_id": "grid",
+          "feasible": false,
+          "violations": "cost;service"
+        },
+        {
+          "policy_id": "storage",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        },
+        {
+          "policy_id": "gas_release",
+          "feasible": false,
+          "violations": "cost;service"
+        },
+        {
+          "policy_id": "grid_storage",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        },
+        {
+          "policy_id": "retain_storage",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        },
+        {
+          "policy_id": "gas_release_storage",
+          "feasible": false,
+          "violations": "carbon;cost;service"
+        }
+      ]
+    },
+    {
+      "selected": null,
+      "feasible": [],
+      "pareto": [],
+      "reason": "no_feasible_candidate",
+      "carbon_ratio": 1.0,
+      "cost_ratio": 1.05,
+      "records": [
+        {
+          "policy_id": "none",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "retain",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "grid",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "gas_release",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "grid_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "retain_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "gas_release_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        }
+      ]
+    },
+    {
+      "selected": null,
+      "feasible": [],
+      "pareto": [],
+      "reason": "no_feasible_candidate",
+      "carbon_ratio": 1.0,
+      "cost_ratio": 1.1,
+      "records": [
+        {
+          "policy_id": "none",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "retain",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "grid",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "gas_release",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "grid_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "retain_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        },
+        {
+          "policy_id": "gas_release_storage",
+          "feasible": false,
+          "violations": "carbon;service"
+        }
+      ]
+    },
+    {
+      "selected": null,
+      "feasible": [],
+      "pareto": [],
+      "reason": "no_feasible_candidate",
+      "carbon_ratio": 1.05,
+      "cost_ratio": 1.0,
+      "records": [
+        {
+          "policy_id": "none",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "retain",
+          "feasible": false,
+          "violations": "cost;service"
+        },
+        {
+          "policy_id": "grid",
+          "feasible": false,
+          "violations": "cost;service"
+        },
+        {
+          "policy_id": "storage",
+          "feasible": false,
+          "violations": "cost;service"
+        },
+        {
+          "policy_id": "gas_release",
+          "feasible": false,
+          "violations": "cost;service"
+        },
+        {
+          "policy_id": "grid_storage",
+          "feasible": false,
+          "violations": "cost;service"
+        },
+        {
+          "policy_id": "retain_storage",
+          "feasible": false,
+          "violations": "cost;service"
+        },
+        {
+          "policy_id": "gas_release_storage",
+          "feasible": false,
+          "violations": "cost;service"
+        }
+      ]
+    },
+    {
+      "selected": null,
+      "feasible": [],
+      "pareto": [],
+      "reason": "no_feasible_candidate",
+      "carbon_ratio": 1.05,
+      "cost_ratio": 1.05,
+      "records": [
+        {
+          "policy_id": "none",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "retain",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "grid",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "storage",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "gas_release",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "grid_storage",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "retain_storage",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "gas_release_storage",
+          "feasible": false,
+          "violations": "service"
+        }
+      ]
+    },
+    {
+      "selected": null,
+      "feasible": [],
+      "pareto": [],
+      "reason": "no_feasible_candidate",
+      "carbon_ratio": 1.05,
+      "cost_ratio": 1.1,
+      "records": [
+        {
+          "policy_id": "none",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "retain",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "grid",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "storage",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "gas_release",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "grid_storage",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "retain_storage",
+          "feasible": false,
+          "violations": "service"
+        },
+        {
+          "policy_id": "gas_release_storage",
+          "feasible": false,
+          "violations": "service"
+        }
+      ]
+    }
+  ],
+  "warning": "Alternative bounds are sensitivity results, never a relaxation of the designated acceptance criteria"
+}

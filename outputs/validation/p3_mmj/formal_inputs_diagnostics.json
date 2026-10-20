@@ -1,0 +1,101 @@
+{
+  "workflow_check": {
+    "passed": true,
+    "errors": [],
+    "original_inputs": [
+      {
+        "path": "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+        "unchanged": true
+      },
+      {
+        "path": "附件1.xlsx",
+        "unchanged": true
+      },
+      {
+        "path": "附件2.xlsx",
+        "unchanged": true
+      },
+      {
+        "path": "附件3.xlsx",
+        "unchanged": true
+      },
+      {
+        "path": "附件4.xlsx",
+        "unchanged": true
+      }
+    ]
+  },
+  "formal_input_check": {
+    "passed": true,
+    "errors": [],
+    "accepted_inputs": [
+      {
+        "dataset_path": "data/observations/demand_energy_total_2015_2024.json",
+        "review_id": "R-S01-DEMAND-20261017",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+        "review_id": "R-S06-GDP-20261017",
+        "source_ids": [
+          "S06"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "review_id": "R-S17-20261016",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/energy_official_communique_2024.json",
+        "review_id": "R-S13-20261017",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_official_report_2024.json",
+        "review_id": "R-S22-20261017",
+        "source_ids": [
+          "S22"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_apparent_consumption_2024.json",
+        "review_id": "R-S23-20261017",
+        "source_ids": [
+          "S23"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/electricity_demand_official_2024.json",
+        "review_id": "R-S24-20261017",
+        "source_ids": [
+          "S24"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "review_id": "R-S25-20261017",
+        "source_ids": [
+          "S25"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/qinshan_asset_permit_case.json",
+        "review_id": "R-QINSHAN-ASSETS-20261017",
+        "source_ids": [
+          "S26",
+          "S27",
+          "S28"
+        ]
+      }
+    ],
+    "declared_inputs": 9,
+    "limitation": "仅检查已登记子集的证据结构和文件一致性；不自动验证原文真伪、转录正确性、数据覆盖完整性、情景参数或模型有效性。未准入不等于原数值错误。"
+  }
+}

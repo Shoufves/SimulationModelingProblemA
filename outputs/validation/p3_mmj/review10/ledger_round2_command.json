@@ -1,0 +1,27 @@
+{
+  "command": [
+    "D:\\CSF2026\\mmj\\SimulationModelingProblemA\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "scripts/review_q3_complete.py",
+    "--output-dir",
+    "outputs/q3/pr15_review10",
+    "--evidence",
+    "D:\\CSF2026\\mmj\\SimulationModelingProblemA\\outputs\\validation\\p3_mmj\\review10\\ledger_round2.json",
+    "--reproduction-root",
+    "D:\\CSF2026\\mmj\\SimulationModelingProblemA",
+    "--existing-reproduction",
+    "--reproduction-output",
+    "outputs/q3/p3_mmj_v5"
+  ],
+  "cwd": "D:\\CSF2026\\mmj\\reviews\\p3-mmj-review10",
+  "pythonhashseed": null,
+  "started_at_utc": "2026-10-20T05:12:26.957546+00:00",
+  "git_sha": "301d43815b4152983ebac2e9fb1d5e7c5006e096",
+  "git_dirty": true,
+  "status": "passed",
+  "exit_code": 0,
+  "elapsed_seconds": 201.24474069999997,
+  "finished_at_utc": "2026-10-20T05:15:48.377666+00:00"
+}

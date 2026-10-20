@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "reference_output": "outputs/q3/p3_mmj_v5",
+  "reference_manifest_sha256": "62df4e376ef0e326915b48b5847208be906c2096c4a649ea34262bb6c1fe77fc",
+  "tolerances": {
+    "relative": 1e-10,
+    "absolute": 1e-06,
+    "currency_absolute": 0.01
+  },
+  "basis": "workflow/q3_inputs_v5.json numerical and the existing review_q3_complete CSV comparator; unchanged bounds.",
+  "scope": "Decoded scientific CSV/JSON/gzip outputs including projects, selections and embedded hashes. Each run first passes its own raw SHA, latest-attempt, code/input and admission verification.",
+  "exact": "JSON types/integers/booleans/strings, keys/list order, discrete decisions and parameter identities; no embedded hash exclusions.",
+  "excluded": "Run receipts, timing, logs, source snapshots, plots, prose reports and gaps; their original bytes remain covered by each run integrity check.",
+  "team_approval": false
+}

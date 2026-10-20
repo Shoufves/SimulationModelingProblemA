@@ -75,4 +75,8 @@ V7统一Issue #7共同入口：`python -B -X utf8 run.py q2 --config workflow/q2
 
 ## 版本与恢复
 
+问题三完整方案见 [P3/mmj V5](solutions/p3-mmj-v5.md)。本机系统默认Python为3.10，请使用 `.venv/Scripts/python.exe`。完整入口为 `run.py q3 --config workflow/q3_inputs_v5.json --output-dir outputs/q3/p3_mmj_v5`，包含六情景、H01/H02、八项政策及六组单因素网格；退出码0仅表示计算完成。`scripts/review_q3_complete.py`独立检查导出账本，另须独立目录完整复现和两人批准。旧 `workflow/q3_inputs.json`与`--stage scenarios-h02`保留阶段用途，不能代替完整入口。V3/V4停止证据及全部配置版本保留。
+
+V5已实际完成两轮作者自查与独立目录全量复现，当前收据为 `outputs/validation/p3_mmj/v5_validation_summary.json`，C9仍待另外两人评审。重新运行请指定新的输出目录，例如 `outputs/q3/p3_mmj_v5_recheck`，并给审查器传入同一路径；避免将既有收据指向新的尝试。旧目录重跑时运行器会归档原结果，但原评审记录仍只对原run_id有效。`scripts/plot_q3_review.py`只对已验证的V5 CSV做独立绘图导出，不改变冻结运行。
+
 `archive/organization_20261017/file_disposition.csv` 逐文件记录旧路径→新位置或删除理由。修改过的文档/脚本原字节保存在 `edited_originals.zip`；复算前的结果与目录在 `prior_results.zip`。恢复时按该映射提取单个文件，不把全部旧目录覆盖回当前工程。

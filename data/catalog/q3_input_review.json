@@ -1,0 +1,445 @@
+{
+  "owner": "mmj",
+  "base_sha": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
+  "status": "author_reviewed_conditional_proposal",
+  "team_approved": false,
+  "reviewed_at_utc": "2026-10-19T18:41:43.480729+00:00",
+  "inherited_q2_review": "data/catalog/q2_national_input_review.json",
+  "inherited_use": "unchanged Q2 initialization/calibrated parameters/conditional annual model; no new empirical validation claim",
+  "trade": {
+    "workbook": "data/raw/lb/trade_alternatives/ei_2025_data.xlsx",
+    "workbook_sha256": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63",
+    "cells": [
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "B27",
+        "value": 0,
+        "origin": "Canada",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "C27",
+        "value": 0,
+        "origin": "Mexico",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "D27",
+        "value": 0,
+        "origin": "US",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "E27",
+        "value": 0,
+        "origin": "Bolivia",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "F27",
+        "value": 0,
+        "origin": "Other S. & Cent. America",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "G27",
+        "value": 0,
+        "origin": "Norway",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "H27",
+        "value": 0,
+        "origin": "Other Europe",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "I27",
+        "value": 0,
+        "origin": "Azerbaijan",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "J27",
+        "value": 4.543739229578111,
+        "origin": "Kazakhstan",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "K27",
+        "value": 26.74071504607554,
+        "origin": "Russian Federation",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "L27",
+        "value": 32.82623882972482,
+        "origin": "Turkmenistan",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "M27",
+        "value": 2.490260034823371,
+        "origin": "Uzbekistan",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "N27",
+        "value": 0,
+        "origin": "Iran",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "O27",
+        "value": 0,
+        "origin": "Qatar",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "P27",
+        "value": 0,
+        "origin": "Other Middle East",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "Q27",
+        "value": 0,
+        "origin": "Algeria",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "R27",
+        "value": 0,
+        "origin": "Libya",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "S27",
+        "value": 0,
+        "origin": "Other Africa",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "T27",
+        "value": 0,
+        "origin": "Indonesia",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "U27",
+        "value": 4.676842781483646,
+        "origin": "Myanmar",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "V27",
+        "value": 0,
+        "origin": "Other Asia Pacific",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv",
+        "sheet": "Gas trade 2024 - pipeline",
+        "cell": "W27",
+        "value": 71.2777959216855,
+        "origin": "Total imports",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "total"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "B28",
+        "value": 5.755474346591666,
+        "origin": "US",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "C28",
+        "value": 0.42819872167405054,
+        "origin": "Peru",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "D28",
+        "value": 0.3182368437736487,
+        "origin": "Trinidad & Tobago",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "E28",
+        "value": 0.0006513176000000001,
+        "origin": "Other Americas*",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "F28",
+        "value": 0.057621902959615376,
+        "origin": "Norway",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "G28",
+        "value": 0.0812164365,
+        "origin": "Other Europe*",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "H28",
+        "value": 11.350598947800634,
+        "origin": "Russian Federation",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "I28",
+        "value": 1.5108684332459874,
+        "origin": "Oman",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "J28",
+        "value": 25.20133617200949,
+        "origin": "Qatar",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "K28",
+        "value": 1.251011160254289,
+        "origin": "United Arab Emirates",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "L28",
+        "value": 0,
+        "origin": "Yemen",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "M28",
+        "value": 0.04575077549369747,
+        "origin": "Algeria",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "N28",
+        "value": 0,
+        "origin": "Angola",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "O28",
+        "value": 0.17464820851633334,
+        "origin": "Egypt",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "P28",
+        "value": 1.8864692368262654,
+        "origin": "Nigeria",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "Q28",
+        "value": 1.6024099391771711,
+        "origin": "Other Africa",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "R28",
+        "value": 35.80458367685534,
+        "origin": "Australia",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "S28",
+        "value": 1.0530073301792686,
+        "origin": "Brunei",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "T28",
+        "value": 4.859466899554043,
+        "origin": "Indonesia",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "U28",
+        "value": 10.488856646912186,
+        "origin": "Malaysia",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "V28",
+        "value": 3.318189968250413,
+        "origin": "Papua New Guinea",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "W28",
+        "value": 0,
+        "origin": "Other Asia Pacific*",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "origin"
+      },
+      {
+        "table": "data/processed/lb/trade_alternatives/lng_china_2024.csv",
+        "sheet": "Gas trade 2024 - LNG",
+        "cell": "X28",
+        "value": 105.18859696417408,
+        "origin": "Total imports",
+        "unit": "billion cubic metres; GCV 40 MJ/m3",
+        "row_type": "total"
+      }
+    ],
+    "selected_origin": "Russian Federation",
+    "selected_bcm_gcv": 38.09131399387617,
+    "total_import_bcm_gcv": 176.4663928858596,
+    "fraction": 0.21585591098081805,
+    "use": "dimensionless 2024 import composition reference only",
+    "new_q3_assumption": "Apply this fraction to Q2's CONDITIONAL aggregate gas delivery envelope; equal quality conversion and source costs. No bcm-to-LHV conversion or hourly capacity observation is asserted.",
+    "excluded_uses": [
+      "observed hourly deliverability",
+      "historical outage",
+      "event probability",
+      "route-level causal attribution"
+    ]
+  },
+  "source_hashes": {
+    "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f",
+    "data/processed/lb/trade_alternatives/lng_china_2024.csv": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363",
+    "data/raw/lb/trade_alternatives/ei_2025_data.xlsx": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63"
+  },
+  "permissions": [
+    "conditional_annual_scenarios",
+    "conditional_event_composition",
+    "conditional_event_shape",
+    "h02_battery_response_freeze"
+  ],
+  "event_basis": "author-designed stress grid; no historical disaster or country interruption likelihood claimed",
+  "physical_scope": "single node; repeated 24h input SHAPES over continuous noncyclic state; same restored terminal inventories"
+}

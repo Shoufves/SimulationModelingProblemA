@@ -1,0 +1,59 @@
+{
+  "base_sha": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
+  "inherited_receipt_verified": true,
+  "inherited_run_id": "20261019T173346617925Z",
+  "replayed_years": 36,
+  "passed": false,
+  "differences": [
+    {
+      "year": "2025",
+      "field": "cash_balance_residual_cny",
+      "reference": "-0.001953125",
+      "actual": "0.0"
+    },
+    {
+      "year": "2028",
+      "field": "cash_balance_residual_cny",
+      "reference": "0.001953125",
+      "actual": "0.00390625"
+    },
+    {
+      "year": "2029",
+      "field": "cash_balance_residual_cny",
+      "reference": "0.0",
+      "actual": "0.001953125"
+    },
+    {
+      "year": "2038",
+      "field": "cash_balance_residual_cny",
+      "reference": "0.0",
+      "actual": "-0.001953125"
+    },
+    {
+      "year": "2042",
+      "field": "cash_balance_residual_cny",
+      "reference": "0.0",
+      "actual": "0.001953125"
+    },
+    {
+      "year": "2044",
+      "field": "cash_balance_residual_cny",
+      "reference": "0.001953125",
+      "actual": "0.00390625"
+    },
+    {
+      "year": "2058",
+      "field": "cash_balance_residual_cny",
+      "reference": "-0.00390625",
+      "actual": "-0.001953125"
+    },
+    {
+      "year": "2060",
+      "field": "cash_balance_residual_cny",
+      "reference": "0.001953125",
+      "actual": "0.00390625"
+    }
+  ],
+  "elapsed_seconds": 14.490056800015736,
+  "scope": "Replayed S0 with inherited fixed calibration; not rerun 1012-candidate search"
+}

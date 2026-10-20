@@ -1,0 +1,178 @@
+{
+  "status": "stage_passed_full_Q3_pending",
+  "passed": true,
+  "q3_complete": false,
+  "team_approved": false,
+  "scope": "six-scenario/H02 stage only; not C1-C9 completion",
+  "checks": [
+    {
+      "name": "current_stage_receipt",
+      "passed": true,
+      "detail": "20261019T185135303254Z"
+    },
+    {
+      "name": "six_scenario_labels",
+      "passed": true,
+      "detail": 22
+    },
+    {
+      "name": "all_event_cases",
+      "passed": true,
+      "detail": 16
+    },
+    {
+      "name": "continuous_fuel_SOC_energy_service_and_terminal_balances",
+      "passed": true,
+      "detail": {
+        "max_absolute_mwh": 2.9802322387695312e-08,
+        "checks": 14160
+      }
+    },
+    {
+      "name": "frozen_battery_action_bound",
+      "passed": true,
+      "detail": "Compared every exported action to matched S0, without resetting state"
+    },
+    {
+      "name": "H02_recomputed_from_service_outputs",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "Q2_S0_current_numeric_replay",
+      "passed": true,
+      "detail": "Original cash-conservation tolerance; no claim of bitwise match"
+    },
+    {
+      "name": "independent_checkout_same_code_inputs",
+      "passed": true,
+      "detail": "D:\\CSF2026\\mmj\\reviews\\p3-mmj-selfcheck"
+    },
+    {
+      "name": "independent_full_stage_process",
+      "passed": true,
+      "detail": {
+        "returncode": 0,
+        "seconds": 52.147509999980684,
+        "hash_seed": "1729",
+        "command": [
+          "D:\\CSF2026\\mmj\\SimulationModelingProblemA\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-X",
+          "utf8",
+          "scripts/run_q3.py",
+          "--config",
+          "workflow/q3_inputs.json",
+          "--output-dir",
+          "outputs/q3/p3_mmj_reproduction",
+          "--stage",
+          "scenarios-h02"
+        ]
+      }
+    },
+    {
+      "name": "independent_receipt_and_outputs",
+      "passed": true,
+      "detail": "20261019T185411506545Z"
+    },
+    {
+      "name": "independent_scientific_CSV_comparison",
+      "passed": true,
+      "detail": {
+        "files": [
+          {
+            "file": "annual_accounts.csv",
+            "rows": 10725,
+            "bitwise_equal": true
+          },
+          {
+            "file": "annual_operations.csv",
+            "rows": 10368,
+            "bitwise_equal": true
+          },
+          {
+            "file": "annual_queues.csv",
+            "rows": 887,
+            "bitwise_equal": true
+          },
+          {
+            "file": "annual_service_metrics.csv",
+            "rows": 648,
+            "bitwise_equal": true
+          },
+          {
+            "file": "event_balances.csv",
+            "rows": 14432,
+            "bitwise_equal": true
+          },
+          {
+            "file": "event_operations.csv",
+            "rows": 15360,
+            "bitwise_equal": true
+          },
+          {
+            "file": "event_summary.csv",
+            "rows": 16,
+            "bitwise_equal": true
+          },
+          {
+            "file": "h02_results.csv",
+            "rows": 12,
+            "bitwise_equal": true
+          },
+          {
+            "file": "safety_metrics.csv",
+            "rows": 96,
+            "bitwise_equal": true
+          },
+          {
+            "file": "scenario_comparison.csv",
+            "rows": 22,
+            "bitwise_equal": true
+          },
+          {
+            "file": "scenario_paths.csv",
+            "rows": 108,
+            "bitwise_equal": true
+          },
+          {
+            "file": "solver_stages.csv",
+            "rows": 128,
+            "bitwise_equal": true
+          },
+          {
+            "file": "source_supply.csv",
+            "rows": 640,
+            "bitwise_equal": true
+          }
+        ],
+        "max_accepted_numeric_difference": 0.0
+      }
+    },
+    {
+      "name": "code_unchanged_during_review",
+      "passed": true,
+      "detail": "Current-stage fingerprints remain valid"
+    }
+  ],
+  "checked_at_utc": "2026-10-19T18:54:08.629540+00:00",
+  "audit_sha256": "dae08b06fd5fbeba5be6e256d79961953a01de3d78725b56bcc3bc1f7eb34645",
+  "run_id": "20261019T185135303254Z",
+  "audited_code_hashes": {
+    "run.py": "01d0da4dff1f667d0fa6e6ff3e18dc49103ee1ce03363969703f6f6504f5351f",
+    "scripts/run_q2_national.py": "bb1eb105368d8d8a229e2175ad2870b31e38e4f05f4bed5a5610cd7d38fbabbe",
+    "scripts/build_q2_national_inputs.py": "39bad2e449a2ee1e4595422c16194a0ce0d3d80c40d75adf7a4095970412f488",
+    "src/energy_model/q2_national.py": "15745cbeb61df7d3bfcb03e15c00883438f5674c2c88f82aa6c5800c48d1ae0a",
+    "src/energy_model/q2_statistics.py": "43e58dfd42234d30c33278a4c4c485b96105c6d575e864fb7cc265b5116c8120",
+    "src/energy_model/q2_identification.py": "116e8f1b3b13794a32009ca4c00822d70cedca249605b236bafe530af7124899",
+    "src/energy_model/q2_finance.py": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
+    "src/energy_model/q2_admission.py": "e6f06e18b8d49ef9acb69eed12e2ed747ace88ec794535dc0c1d4d16c50a0941",
+    "src/energy_model/q2_operations.py": "4dcc5ec89c533c502a735756ee94f29fe71428e0b094b52c40010b54cb61ec6e",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0",
+    "scripts/run_q3.py": "1e188a78b86e3da4fac0759476143b6ef07d90721e5eaa9196f5bbf8222092dc",
+    "src/energy_model/q3_events.py": "282e61ad7a9c35621c3b4d89ed1875cbafa62703539fe828cd56fb95ab6e84f5",
+    "scripts/prepare_q3_inputs.py": "86c4d0ba35f11855a653240f45214a7990e9d16cef17b6e4cbe662d929938e2e",
+    "scripts/check_q3_environment.py": "51013ebfcfcb2fee177b698559fb9e245c6167c5eb5c92f19cbcee9d69f9e891"
+  }
+}

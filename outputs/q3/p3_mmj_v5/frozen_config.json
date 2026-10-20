@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "owner": "p3/mmj",
+  "base_sha": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
+  "status": "author_frozen_conditional_proposal",
+  "team_approved": false,
+  "frozen_at_utc": "2026-10-20T01:29:00.781777+00:00",
+  "source_review": "data/catalog/q3_input_review.json",
+  "source_review_sha256": "1d6dc15fac1272f18dd13310e2e580f345ae2117256246fc0d26ca72c3e3960b",
+  "input_hashes": {
+    "data/catalog/q2_national_input_review.json": "1cdd1273b336f82eee40b8764e6dd32b0c991fdf86d06ea2ef3128e71dcc8d54",
+    "data/processed/q2/national_observations.csv": "ef6893ccbc52d9bb829c2bc6b9e0451b133800a56bfa114fd09bc47b45a6f505",
+    "data/processed/q2/technical_references.json": "af38ccd89ece76b7e37f929ec8056acd1cc6bcba47a2e403589766afb16ca62f",
+    "workflow/q2_national_design.json": "b10d73157d228750d596eabf481b26f7d06ed4ce2df3af7b70d97e754b49ba3c",
+    "data/processed/q2/gcb_peak_bridge_review.json": "dd3a278703ab2c0ef2374d5d0613188dbf822d38d3f238ff8f4a24f3e3865a13",
+    "data/processed/q2/statistical_scope_review.json": "b00f8338ed2b16160827fba4305a77601f7fb645079ccbe4110db4fe40715b12",
+    "data/processed/lb/trade_alternatives/pipeline_gas_china_2024.csv": "7db2165eb0b8d5c7760d43be2596f3fdc1777f6d0e0746294e90dd35bc8df87f",
+    "data/processed/lb/trade_alternatives/lng_china_2024.csv": "b478a8349e68c7b376212ec39a36cd272a7478bb707ec28573420ffdaf6a4363",
+    "data/raw/lb/trade_alternatives/ei_2025_data.xlsx": "b50e7cb2964e3a73b0ea63838a99d1775cca18545dd702c26083a4488f205d63",
+    "outputs/q2/p2_lb_national/calibration.json": "7dc1437ba4593a33d10b5474927ba586efd180abd44a74973742ca6bdbe4c079",
+    "outputs/q2/p2_lb_national/baseline_path.csv": "9b0797cd9efbdec03a12c024e1beb48206712c5a543af98164d8b6ac49fe485e"
+  },
+  "initial_year": 2024,
+  "end_year": 2060,
+  "snapshot_year": 2030,
+  "calibration_policy": "reuse locked Q2 best parameters; never refit per event",
+  "cost_price_year": 2024,
+  "random_seed": 12,
+  "scope": "conditional_mainland_aggregate_not_official_forecast",
+  "information": {
+    "annual": "Q2 contemporaneous announced information and paid queues",
+    "event": "Common unshocked pre-event dispatch without shock foreknowledge; event becomes visible at start_hour; identical remaining-window perfect foresight thereafter. Optimistic conditional information, not operational forecast skill."
+  },
+  "scenarios": {
+    "S0": {},
+    "SP": {
+      "carbon_price_multiplier": 1.4,
+      "public_year": 2024,
+      "effective_year": 2025
+    },
+    "SG": {
+      "change": "selected_import_gas_capacity_only"
+    },
+    "ST": {
+      "storage_new_project_cost_multiplier": 0.75,
+      "public_year": 2024,
+      "effective_year": 2025
+    },
+    "SW": {
+      "change": "wind_solar_availability_and_hydro_energy_only"
+    },
+    "SGW": {
+      "change": "exact_SG_plus_SW"
+    }
+  },
+  "parameter_identity": "All SP/ST multipliers and event timing/severity are author conditional hypotheses, not empirically estimated policy or disaster parameters",
+  "events": [
+    {
+      "id": "selection_moderate",
+      "split": "selection",
+      "window_days": 9,
+      "start_hour": 24,
+      "duration_hours": 96,
+      "recovery_hours": 48,
+      "gas_channel_loss": 0.6,
+      "renewable_loss": 0.4
+    },
+    {
+      "id": "test_deeper",
+      "split": "test",
+      "window_days": 11,
+      "start_hour": 24,
+      "duration_hours": 120,
+      "recovery_hours": 48,
+      "gas_channel_loss": 1.0,
+      "renewable_loss": 0.65
+    }
+  ],
+  "event_rationale": "Finite two-point mechanism exercise: moderate selection and longer/deeper held-out conditional stress. Separate versions required for changes after viewing results; no probabilistic coverage claimed.",
+  "safety": {
+    "relative_shortage_tolerance": 1e-08,
+    "absolute_shortage_tolerance_mwh": 0.001,
+    "recovery_periods": 4,
+    "critical_service_limit": 0.01,
+    "service_priority": "retain Q2 priorities; report each service separately",
+    "threshold_identity": "author comparison bounds, not statutory reliability criteria"
+  },
+  "numerical": {
+    "relative_comparison_tolerance": 1e-10,
+    "absolute_comparison_tolerance": 1e-06,
+    "cash_balance_absolute_cny": 0.01,
+    "cash_balance_relative": 1e-12,
+    "basis": "Q2 settle() existing currency-balance tolerance; numerical policy fixed before Q3 results"
+  },
+  "h02": {
+    "frozen_response": "battery discharge cannot exceed matched S0 dispatch in each period",
+    "retained": "same physical assets, stocks, service requests, source envelopes and calendar",
+    "interpret": "only this specified storage response contribution, not all multi-energy propagation"
+  },
+  "work_packages": {
+    "six_scenarios": "implemented",
+    "h01": "frozen_before_execution",
+    "h02": "implemented",
+    "policy": "frozen_before_execution"
+  },
+  "revision": 5,
+  "revision_reason": "V4 terminal-accounting review found paid terminal-device queue omitted from construction assets. V5 includes these paid devices in residual asset value; adds an independent stock-based check and counterexample. Physical parameters, rules, grid, service/carbon/cost/budget limits and events unchanged; V3/V4 failed evidence retained.",
+  "test_identity": "Already seen conditions and V3/V4 implementation output; V5 is a disclosed accounting repair, not blind validation.",
+  "source_share_time_assumption": "Hold the 2024 dimensionless source composition fixed in all conditional 2030 and 2060 event/planning snapshots; no observed future source capability claim.",
+  "transition_review": "data/catalog/q3_transition_review.json",
+  "transition_review_sha256": "d1c314c9618f6258ca84ad747f3f3e078fac612c7432825e62f99e2ff56229e8",
+  "transition": {
+    "vR": [
+      0.01,
+      0.03
+    ],
+    "vE": [
+      0.0,
+      0.6
+    ],
+    "delay_years": [
+      0,
+      3
+    ],
+    "fixed_vR": 0.01,
+    "fixed_vE": 0.6,
+    "rules": [
+      "fixed_schedule",
+      "cost_order",
+      "service_ready",
+      "anticipatory"
+    ],
+    "modes": [
+      "full_response",
+      "fixed_projects"
+    ],
+    "early_exit_window_years": 5,
+    "information_horizon_years": 3,
+    "epsilon_candidates": [
+      0.005,
+      0.01
+    ],
+    "annual_retention_cost_fraction": 0.01,
+    "annual_public_asset_maintenance_fraction": 0.01,
+    "public_budget_fraction_gdp": 0.0005,
+    "public_project_power_fraction": 0.01,
+    "gas_release_capex_cny_per_mw": 1000000.0,
+    "gas_release_lead_years": 2,
+    "gas_release_lifetime_years": 20,
+    "gas_release_build_fraction": 0.02,
+    "channel_fraction": 0.21585591098081805,
+    "evaluation_years": [
+      2030,
+      2060
+    ],
+    "information": "Current assets, paid/fully funded committed queues, current growth expectations and frozen selection plateau; no future realised state or test-event values in rules",
+    "fixed_project_identity": "Replay fixed_schedule full-response approved applications, revealed only in original decision years; all capital amounts, payment schedules, service-device mix and base permits identical; cash/finance failure invalidates fixed-set comparison",
+    "deadline": "Early-exit cohorts may defer only to min(original technical exit,2060); no new technical life extension",
+    "planner_limit": "Binding flags screen grid/storage action candidates. Conditional 24h plateau screen is separate from continuous-event outcome; unresolved fuel/device deficits remain risks.",
+    "fixed_rule_tie": "Cost order uses avoidable holding cost per MW then technical expiry; homogeneous coal cohorts can tie exactly with fixed schedule; never invent unit-level heterogeneity",
+    "retirement_information_order": "Commission paid assets, assess current and H-year committed-only pressure, THEN approve exit/paid finite retention, operate, request/approve/pay investments. Future realised states and unrevealed fixed applications are excluded.",
+    "threshold_selection": "Admissible only if every full-response selection grid cell meets the same policy service/carbon/gross-cost limits against its cell fixed-schedule comparator; then rank worst selection shortage, total net cost, epsilon. Return null if none; never replace admissibility with least-bad ranking.",
+    "terminal_value_scope": "Active physical assets plus PAID work in progress for generation, grid, storage, gas-release AND device queues after 2060; unpaid escrow excluded from resource-cost salvage. Straight-line engineering book convention, not market resale."
+  },
+  "policy": {
+    "candidates": [
+      {
+        "id": "none",
+        "rule": "fixed_schedule",
+        "actions": []
+      },
+      {
+        "id": "retain",
+        "rule": "service_ready",
+        "actions": []
+      },
+      {
+        "id": "grid",
+        "rule": "fixed_schedule",
+        "actions": [
+          "grid"
+        ]
+      },
+      {
+        "id": "storage",
+        "rule": "fixed_schedule",
+        "actions": [
+          "storage"
+        ]
+      },
+      {
+        "id": "gas_release",
+        "rule": "fixed_schedule",
+        "actions": [
+          "gas_release"
+        ]
+      },
+      {
+        "id": "grid_storage",
+        "rule": "fixed_schedule",
+        "actions": [
+          "grid",
+          "storage"
+        ]
+      },
+      {
+        "id": "retain_storage",
+        "rule": "service_ready",
+        "actions": [
+          "storage"
+        ]
+      },
+      {
+        "id": "gas_release_storage",
+        "rule": "fixed_schedule",
+        "actions": [
+          "gas_release",
+          "storage"
+        ]
+      }
+    ],
+    "scope": "Finite alternatives, no continuous/global optimality claim; equal annual appropriation ceiling, not mandatory equal expenditure",
+    "carbon_limit_ratio": 1.0,
+    "gross_cost_limit_ratio": 1.05,
+    "service_limit": 0.01,
+    "tradeoff_carbon_ratios": [
+      0.95,
+      1.0,
+      1.05
+    ],
+    "tradeoff_cost_ratios": [
+      1.0,
+      1.05,
+      1.1
+    ],
+    "ranking": [
+      "worst_selection_service_fraction",
+      "net_resource_cost_cny",
+      "cumulative_combustion_co2_t",
+      "id"
+    ],
+    "no_feasible": "Report none; sensitivity bounds never replace designated constraints",
+    "selection": "All candidates evaluated against annual services plus S0/SG/SW/SGW in selection event at 2030 and 2060; lock before deeper event evaluation",
+    "test_identity": "Already seen conditions and V3/V4 implementation output; V5 is a disclosed accounting repair, not blind validation."
+  },
+  "sensitivity": [
+    {
+      "id": "retention_half",
+      "target": "transition.annual_retention_cost_fraction",
+      "multiplier": 0.5
+    },
+    {
+      "id": "retention_double",
+      "target": "transition.annual_retention_cost_fraction",
+      "multiplier": 2.0
+    },
+    {
+      "id": "public_budget_half",
+      "target": "transition.public_budget_fraction_gdp",
+      "multiplier": 0.5
+    },
+    {
+      "id": "public_budget_double",
+      "target": "transition.public_budget_fraction_gdp",
+      "multiplier": 2.0
+    },
+    {
+      "id": "gas_release_cost_half",
+      "target": "transition.gas_release_capex_cny_per_mw",
+      "multiplier": 0.5
+    },
+    {
+      "id": "gas_release_cost_double",
+      "target": "transition.gas_release_capex_cny_per_mw",
+      "multiplier": 2.0
+    }
+  ],
+  "sensitivity_scope": "Run each single-factor change for ALL eight fixed policy candidates; independent ranking with original constraints, no new policy search or retuning on test events. vR/vE/L and epsilon already have H01 grids.",
+  "compute_budget": {
+    "max_transition_annual_runs": 116,
+    "max_years_per_run": 36,
+    "rationale": "6 unique H01 cells x (3 controls+2 epsilon values) x 2 modes=60; 8 policy candidates + 6 one-factor grids x 8=56. All deterministic, no agent parallelism."
+  },
+  "previous_protocol": "workflow/q3_inputs_v4.json",
+  "previous_protocol_sha256": "822de1bbd69f31a9354df48501b7a01c9ba4416cafbfcac9957e834bdd83a070"
+}

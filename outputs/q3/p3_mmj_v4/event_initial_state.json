@@ -1,0 +1,457 @@
+{
+  "periods": [
+    {
+      "hours": 6
+    },
+    {
+      "hours": 6
+    },
+    {
+      "hours": 6
+    },
+    {
+      "hours": 6
+    }
+  ],
+  "annual_repeats": 365,
+  "cyclic": true,
+  "fuels": {
+    "coal": {
+      "domestic_mw": [
+        4367290.819754509,
+        4367290.819754509,
+        4367290.819754509,
+        4367290.819754509
+      ],
+      "import_mw": [
+        485254.53552827885,
+        485254.53552827885,
+        485254.53552827885,
+        485254.53552827885
+      ],
+      "domestic_cost_per_mwh": 91.01155125567355,
+      "import_cost_per_mwh": 95.56212881845724,
+      "tank_mwh": 212160259.06849313,
+      "initial_mwh": 106080129.53424656,
+      "injection_mw": 970509.0710565577,
+      "withdrawal_mw": 970509.0710565577,
+      "emission_t_per_mwh": 0.34056
+    },
+    "oil": {
+      "domestic_mw": [
+        480723.38821871765,
+        480723.38821871765,
+        480723.38821871765,
+        480723.38821871765
+      ],
+      "import_mw": [
+        1236145.8554195594,
+        1236145.8554195594,
+        1236145.8554195594,
+        1236145.8554195594
+      ],
+      "domestic_cost_per_mwh": 350,
+      "import_cost_per_mwh": 367.5,
+      "tank_mwh": 72581141.26027398,
+      "initial_mwh": 36290570.63013699,
+      "injection_mw": 343373.8487276554,
+      "withdrawal_mw": 343373.8487276554,
+      "emission_t_per_mwh": 0.26388
+    },
+    "gas": {
+      "domestic_mw": [
+        746885.5501583018,
+        746885.5501583018,
+        746885.5501583018,
+        746885.5501583018
+      ],
+      "import_mw": [
+        540848.157011184,
+        540848.157011184,
+        540848.157011184,
+        540848.157011184
+      ],
+      "domestic_cost_per_mwh": 224.08529388414638,
+      "import_cost_per_mwh": 235.2895585783537,
+      "tank_mwh": 35094178.19178082,
+      "initial_mwh": 17547089.09589041,
+      "injection_mw": 257546.74143389717,
+      "withdrawal_mw": 257546.74143389717,
+      "emission_t_per_mwh": 0.20196
+    },
+    "biomass": {
+      "domestic_mw": [
+        348104.3103048824,
+        348104.3103048824,
+        348104.3103048824,
+        348104.3103048824
+      ],
+      "import_mw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "domestic_cost_per_mwh": 100,
+      "import_cost_per_mwh": 105.0,
+      "tank_mwh": 6283561.643835617,
+      "initial_mwh": 3141780.8219178086,
+      "injection_mw": 69620.86206097649,
+      "withdrawal_mw": 69620.86206097649,
+      "emission_t_per_mwh": 0.0
+    }
+  },
+  "plants": {
+    "coal": {
+      "input": "coal",
+      "output": "electricity",
+      "efficiency": 0.41,
+      "capacity_mw": 1365085.9025046998,
+      "availability": [
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ],
+      "variable_cost_per_mwh": 108.03553081581235,
+      "minimum_fraction": 0,
+      "ramp_mw_per_hour": 273017.18050093995,
+      "window_energy_budget_mwh": 32762061.660112794,
+      "policy_cost_per_mwh": 4.458764401831135
+    },
+    "gas": {
+      "input": "gas",
+      "output": "electricity",
+      "efficiency": 0.52,
+      "capacity_mw": 101679.77157712406,
+      "availability": [
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ],
+      "variable_cost_per_mwh": 97.3546633737681,
+      "minimum_fraction": 0,
+      "ramp_mw_per_hour": 20335.954315424813,
+      "window_energy_budget_mwh": 2440314.5178509774,
+      "policy_cost_per_mwh": 6.44305231333411
+    },
+    "oil": {
+      "input": "oil",
+      "output": "electricity",
+      "efficiency": 0.38,
+      "capacity_mw": 63909.46823085982,
+      "availability": [
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ],
+      "variable_cost_per_mwh": 100,
+      "minimum_fraction": 0,
+      "ramp_mw_per_hour": 12781.893646171964,
+      "window_energy_budget_mwh": 1533827.2375406357,
+      "policy_cost_per_mwh": 0.0
+    },
+    "biomass": {
+      "input": "biomass",
+      "output": "electricity",
+      "efficiency": 0.3,
+      "capacity_mw": 51453.89501541291,
+      "availability": [
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ],
+      "variable_cost_per_mwh": 100,
+      "minimum_fraction": 0,
+      "ramp_mw_per_hour": 10290.779003082584,
+      "window_energy_budget_mwh": 713679.2671026351,
+      "policy_cost_per_mwh": 0.0
+    },
+    "hydro": {
+      "input": null,
+      "output": "electricity",
+      "efficiency": 1,
+      "capacity_mw": 509268.0245561921,
+      "availability": [
+        0.3604069259659105,
+        0.3604069259659105,
+        0.3604069259659105,
+        0.3604069259659105
+      ],
+      "variable_cost_per_mwh": 10,
+      "minimum_fraction": 0,
+      "ramp_mw_per_hour": 101853.60491123842,
+      "window_energy_budget_mwh": 4405049.357352696,
+      "policy_cost_per_mwh": 0.0
+    },
+    "nuclear": {
+      "input": null,
+      "output": "electricity",
+      "efficiency": 1,
+      "capacity_mw": 75970.0,
+      "availability": [
+        0.8742465598296068,
+        0.8742465598296068,
+        0.8742465598296068,
+        0.8742465598296068
+      ],
+      "variable_cost_per_mwh": 262.8359407021968,
+      "minimum_fraction": 0,
+      "ramp_mw_per_hour": 15194.0,
+      "window_energy_budget_mwh": 1593996.2676061254,
+      "policy_cost_per_mwh": 0.0
+    },
+    "wind": {
+      "input": null,
+      "output": "electricity",
+      "efficiency": 1,
+      "capacity_mw": 1365335.3667448477,
+      "availability": [
+        0.2602296496809272,
+        0.2129151679207586,
+        0.20108654748071644,
+        0.2720582701209693
+      ],
+      "variable_cost_per_mwh": 0,
+      "minimum_fraction": 0,
+      "ramp_mw_per_hour": 273067.07334896957,
+      "window_energy_budget_mwh": 32768048.801876344,
+      "policy_cost_per_mwh": 0.0
+    },
+    "solar": {
+      "input": null,
+      "output": "electricity",
+      "efficiency": 1,
+      "capacity_mw": 4239623.176096572,
+      "availability": [
+        0.0,
+        0.17904152571591095,
+        0.33250569061526325,
+        0.0
+      ],
+      "variable_cost_per_mwh": 0,
+      "minimum_fraction": 0,
+      "ramp_mw_per_hour": 847924.6352193144,
+      "window_energy_budget_mwh": 101750956.22631772,
+      "policy_cost_per_mwh": 0.0
+    }
+  },
+  "demands": {
+    "industrial_heat_proxy/coal": {
+      "sector": "industrial_heat_proxy",
+      "carrier": "coal",
+      "efficiency": 0.75,
+      "input_capacity_mw": 1712689.4629523922,
+      "priority": 0,
+      "budget_group": "industrial_heat_proxy",
+      "purchase_price_per_mwh": 91.01155125567355,
+      "service_mwh": [
+        3699409.2399771665,
+        4624261.549971458,
+        5549113.859965749,
+        4624261.549971458
+      ],
+      "policy_cost_per_mwh": 0.0
+    },
+    "industrial_heat_proxy/electricity": {
+      "sector": "industrial_heat_proxy",
+      "carrier": "electricity",
+      "efficiency": 0.95,
+      "input_capacity_mw": 0.0,
+      "priority": 0,
+      "budget_group": "industrial_heat_proxy",
+      "purchase_price_per_mwh": 650,
+      "service_mwh": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "policy_cost_per_mwh": 0
+    },
+    "transport_proxy/oil": {
+      "sector": "transport_proxy",
+      "carrier": "oil",
+      "efficiency": 0.25,
+      "input_capacity_mw": 1553601.4630785407,
+      "priority": 0,
+      "budget_group": "transport_proxy",
+      "purchase_price_per_mwh": 350.0,
+      "service_mwh": [
+        1118593.0534165492,
+        1398241.3167706868,
+        1677889.580124824,
+        1398241.3167706868
+      ],
+      "policy_cost_per_mwh": 0.0
+    },
+    "transport_proxy/electricity": {
+      "sector": "transport_proxy",
+      "carrier": "electricity",
+      "efficiency": 0.9,
+      "input_capacity_mw": 0.0,
+      "priority": 0,
+      "budget_group": "transport_proxy",
+      "purchase_price_per_mwh": 650,
+      "service_mwh": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "policy_cost_per_mwh": 0
+    },
+    "building_heat_proxy/gas": {
+      "sector": "building_heat_proxy",
+      "carrier": "gas",
+      "efficiency": 0.85,
+      "input_capacity_mw": 897039.7142326582,
+      "priority": 0,
+      "budget_group": "building_heat_proxy",
+      "purchase_price_per_mwh": 224.08529388414638,
+      "service_mwh": [
+        2195953.2204415468,
+        2744941.5255519333,
+        3293929.83066232,
+        2744941.5255519333
+      ],
+      "policy_cost_per_mwh": 0.0
+    },
+    "building_heat_proxy/electricity": {
+      "sector": "building_heat_proxy",
+      "carrier": "electricity",
+      "efficiency": 2.5,
+      "input_capacity_mw": 0.0,
+      "priority": 0,
+      "budget_group": "building_heat_proxy",
+      "purchase_price_per_mwh": 650,
+      "service_mwh": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "policy_cost_per_mwh": 0
+    },
+    "existing_electric_services": {
+      "sector": "existing_electric_services",
+      "carrier": "electricity",
+      "efficiency": 1,
+      "input_capacity_mw": 2244405.399402466,
+      "priority": 0,
+      "budget_group": "existing_electric_services",
+      "purchase_price_per_mwh": 650,
+      "service_mwh": [
+        6463887.550279101,
+        8079859.437848876,
+        9695831.325418651,
+        8079859.437848876
+      ],
+      "policy_cost_per_mwh": 0
+    },
+    "feedstock/coal": {
+      "sector": "nonenergy_feedstock",
+      "carrier": "coal",
+      "efficiency": 1,
+      "input_capacity_mw": 316711.10289109766,
+      "priority": 0,
+      "service_mwh": [
+        950133.308673293,
+        950133.308673293,
+        950133.308673293,
+        950133.308673293
+      ]
+    },
+    "feedstock/oil": {
+      "sector": "nonenergy_feedstock",
+      "carrier": "oil",
+      "efficiency": 1,
+      "input_capacity_mw": 422901.3472877656,
+      "priority": 0,
+      "service_mwh": [
+        1268704.0418632969,
+        1268704.0418632969,
+        1268704.0418632969,
+        1268704.0418632969
+      ]
+    },
+    "feedstock/gas": {
+      "sector": "nonenergy_feedstock",
+      "carrier": "gas",
+      "efficiency": 1,
+      "input_capacity_mw": 95921.69445570598,
+      "priority": 0,
+      "service_mwh": [
+        287765.0833671179,
+        287765.0833671179,
+        287765.0833671179,
+        287765.0833671179
+      ]
+    },
+    "exports": {
+      "sector": "electricity_exports",
+      "carrier": "electricity",
+      "efficiency": 1,
+      "input_capacity_mw": 3881.2785388127854,
+      "priority": 0,
+      "service_mwh": [
+        11643.835616438357,
+        11643.835616438357,
+        11643.835616438357,
+        11643.835616438357
+      ]
+    }
+  },
+  "grid": {
+    "efficiency": 0.94,
+    "power_mw": 2026759.1768485485
+  },
+  "storage": {
+    "power_mw": 29504.0,
+    "energy_mwh": 67280.0,
+    "initial_mwh": 33640.0,
+    "charge_efficiency": 0.9219544457292888,
+    "discharge_efficiency": 0.9219544457292888,
+    "throughput_cost": 1
+  },
+  "fossil_displacement_priority_plants": [
+    "coal",
+    "oil",
+    "gas"
+  ],
+  "fossil_allocation_score": {
+    "kappa": 1000,
+    "ratio_step": 0.1,
+    "plants": {
+      "coal": {
+        "reference_cf": 0.529767146108923,
+        "initial_marginal_cost": 330.01492412233324
+      },
+      "oil": {
+        "reference_cf": 0.19264259858506286,
+        "initial_marginal_cost": 1021.0526315789474
+      },
+      "gas": {
+        "reference_cf": 0.3852851971701257,
+        "initial_marginal_cost": 528.2879208432804
+      }
+    }
+  },
+  "spending_limits": {
+    "industrial_heat_proxy": {
+      "budget_cny": 6463387373.070639
+    },
+    "transport_proxy": {
+      "budget_cny": 18849006915.52259
+    },
+    "building_heat_proxy": {
+      "budget_cny": 6372062682.483921
+    },
+    "existing_electric_services": {
+      "budget_cny": 49396913744.48555
+    }
+  }
+}

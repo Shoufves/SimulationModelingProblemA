@@ -1,0 +1,22 @@
+{
+  "command": [
+    "D:\\CSF2026\\mmj\\SimulationModelingProblemA\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "scripts/diagnose_q3_mechanisms.py",
+    "--source",
+    "outputs/q3/p3_mmj_v5",
+    "--output-dir",
+    "outputs/validation/p3_mmj/review10/diagnostics_reference"
+  ],
+  "cwd": "D:\\CSF2026\\mmj\\SimulationModelingProblemA",
+  "pythonhashseed": "1729",
+  "started_at_utc": "2026-10-20T04:33:11.256934+00:00",
+  "git_sha": "58a83c110c799318ba5b94bc7ac93323b2363c5d",
+  "git_dirty": true,
+  "status": "passed",
+  "exit_code": 0,
+  "elapsed_seconds": 188.52003849996254,
+  "finished_at_utc": "2026-10-20T04:36:19.940175+00:00"
+}

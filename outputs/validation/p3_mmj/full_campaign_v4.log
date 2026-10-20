@@ -1,0 +1,40 @@
+Q3 annual S0
+Q3 annual SP
+Q3 annual ST
+Q3 event selection_moderate normal S0
+Q3 event selection_moderate normal SG
+Q3 event selection_moderate normal SW
+Q3 event selection_moderate normal SGW
+Q3 event selection_moderate frozen_battery_discharge S0
+Q3 event selection_moderate frozen_battery_discharge SG
+Q3 event selection_moderate frozen_battery_discharge SW
+Q3 event selection_moderate frozen_battery_discharge SGW
+Q3 event test_deeper normal S0
+Q3 event test_deeper normal SG
+Q3 event test_deeper normal SW
+Q3 event test_deeper normal SGW
+Q3 event test_deeper frozen_battery_discharge S0
+Q3 event test_deeper frozen_battery_discharge SG
+Q3 event test_deeper frozen_battery_discharge SW
+Q3 event test_deeper frozen_battery_discharge SGW
+Q3 transition 1: h01_0_full_response_fixed_schedule_0.01
+Q3 transition 2: h01_0_full_response_cost_order_0.01
+Q3 transition 3: h01_0_full_response_service_ready_0.01
+Q3 transition 4: h01_0_full_response_anticipatory_0.005
+Q3 transition 5: h01_0_full_response_anticipatory_0.01
+Q3 transition 6: h01_0_fixed_projects_fixed_schedule_0.01
+Q3 transition 7: h01_0_fixed_projects_cost_order_0.01
+Q3 transition 8: h01_0_fixed_projects_service_ready_0.01
+Q3 transition 9: h01_0_fixed_projects_anticipatory_0.005
+Q3 transition 10: h01_0_fixed_projects_anticipatory_0.01
+Q3 transition 11: h01_1_full_response_fixed_schedule_0.01
+Q3 transition 12: h01_1_full_response_cost_order_0.01
+Q3 transition 13: h01_1_full_response_service_ready_0.01
+Q3 transition 14: h01_1_full_response_anticipatory_0.005
+Q3 transition 15: h01_1_full_response_anticipatory_0.01
+Q3 transition 16: h01_1_fixed_projects_fixed_schedule_0.01
+Q3 transition 17: h01_1_fixed_projects_cost_order_0.01
+Q3 transition 18: h01_1_fixed_projects_service_ready_0.01
+Q3 transition 19: h01_1_fixed_projects_anticipatory_0.005
+Q3 transition 20: h01_1_fixed_projects_anticipatory_0.01
+Q3 transition 21: h01_2_full_response_fixed_schedule_0.01

@@ -1,0 +1,47 @@
+{
+  "scope": "Interim sample only; independent full run and both integrity gates must still finish",
+  "results": [
+    {
+      "numeric_leaves": 82172,
+      "numeric_differences": 0,
+      "exact_leaves": 30952,
+      "project_records": 669,
+      "max_absolute_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "examples": [],
+      "file": "cases/h01_0_full_response_fixed_schedule_0.01.json.gz",
+      "reference_sha256": "ef78e4cc7775a671a5285211084765700684fc18f022e5195f0962ccd531fcf4",
+      "candidate_sha256": "ef78e4cc7775a671a5285211084765700684fc18f022e5195f0962ccd531fcf4",
+      "bitwise_equal": true,
+      "status": "byte_equal"
+    },
+    {
+      "numeric_leaves": 82172,
+      "numeric_differences": 0,
+      "exact_leaves": 30952,
+      "project_records": 669,
+      "max_absolute_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "examples": [],
+      "file": "cases/h01_0_full_response_cost_order_0.01.json.gz",
+      "reference_sha256": "a6572592bfefa1d63b77f18ef4a1e6fdc05badabd4fc6c39047765f6d195d8f2",
+      "candidate_sha256": "a6572592bfefa1d63b77f18ef4a1e6fdc05badabd4fc6c39047765f6d195d8f2",
+      "bitwise_equal": true,
+      "status": "byte_equal"
+    },
+    {
+      "numeric_leaves": 2022,
+      "numeric_differences": 0,
+      "exact_leaves": 847,
+      "project_records": 310,
+      "max_absolute_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "examples": [],
+      "file": "plans/h01_cell_0.json",
+      "reference_sha256": "71e50ccb0a6ed7847264c90145f8bd9eba67b1ba0cf63a5d82ffbad452b16bd7",
+      "candidate_sha256": "71e50ccb0a6ed7847264c90145f8bd9eba67b1ba0cf63a5d82ffbad452b16bd7",
+      "bitwise_equal": true,
+      "status": "byte_equal"
+    }
+  ]
+}
