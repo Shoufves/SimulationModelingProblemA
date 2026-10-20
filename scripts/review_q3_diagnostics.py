@@ -13,6 +13,8 @@ import hashlib
 import json
 from math import fsum, isclose
 from pathlib import Path
+from q3_scientific_equivalence import admit_source, compare_outputs, tolerances
+from run_q3 import verify_latest
 
 ROOT = Path(__file__).resolve().parents[1]
 EF = dict(coal=.34056, oil=.26388, gas=.20196, biomass=0.)
@@ -177,15 +179,22 @@ def verify_receipt(folder):
     return manifest
 
 
-def review(source, folder, independent=None):
+def review(source, folder, independent=None, independent_source=None):
     manifest = verify_receipt(folder)
     protocol = load(folder / "frozen_protocol.json")
     require(sha(source / "run_manifest.json") == manifest["source_manifest_sha256"], "Source receipt changed")
+    original = verify_latest(source)
+    require(original["run_id"] == manifest["source_run_id"], "Source run identity changed")
     for names in (protocol["model_code_hashes"], protocol["input_hashes"]):
         for name, expected in names.items():
             require(sha(ROOT / name) == expected, "Frozen model/input changed: " + name)
-    for name, expected in protocol["source_files"].items():
-        require(sha(source / name) == expected, "Source evidence changed: " + name)
+    if protocol.get("version") == 3:
+        require(sha(folder / "scientific_equivalence_source.py") == manifest["equivalence_code_sha256"], "Comparison code receipt")
+        require(sha(folder / "frozen_reproduction_protocol.json") == protocol["reproduction_protocol_sha256"], "Comparison protocol receipt")
+        require(load(folder / "source_equivalence.json") == admit_source(source, protocol), "Source equivalence evidence differs")
+    else:
+        for name, expected in protocol["source_files"].items():
+            require(sha(source / name) == expected, "Source evidence changed: " + name)
     require(load(folder / "diagnostic_failures.json") == [], "Probe failures require individual review")
 
     gas = unpack(folder / "gas_control_details.json.gz")
@@ -295,22 +304,28 @@ def review(source, folder, independent=None):
     summary = dict(total_delta_co2_t=delta, forward_storage_only_delta_co2_t=forward,
                    remaining_path_and_interaction_delta_co2_t=delta-forward,
                    reverse_complete_horizon_available=False)
-    compared = []
+    compared = None
     if independent is not None:
         independent_manifest = verify_receipt(independent)
         require(independent_manifest["source_run_id"] != manifest["source_run_id"], "Not an independently executed source run")
-        require(independent_manifest["outputs"] == manifest["outputs"], "Independent scientific outputs differ")
-        compared = sorted(manifest["outputs"])
+        require(independent_manifest["protocol_sha256"] == manifest["protocol_sha256"], "Independent diagnostic protocol differs")
+        require(independent_manifest["script_sha256"] == manifest["script_sha256"], "Independent diagnostic code differs")
+        independent_source = independent_source or independent_manifest.get("source_path")
+        require(independent_source is not None, "Supply the independent source run directory")
+        review(Path(independent_source), independent)
+        compared = compare_outputs(folder, independent, manifest, independent_manifest,
+                                   tolerances(load(source / "frozen_config.json")), kind="diagnostic")
     return dict(status="passed", gas_pairs=4, probes=38, annual_controls=71,
                 unavailable_controls=unavailable, carbon_decomposition=summary,
-                independent_identical_files=compared, team_approval=False)
+                independent_scientific_comparison=compared, team_approval=False)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", default="outputs/q3/p3_mmj_v5")
-    parser.add_argument("--diagnostics", default="outputs/validation/p3_mmj/diagnostics_v2")
+    parser.add_argument("--diagnostics", default="outputs/validation/p3_mmj/diagnostics_v3")
     parser.add_argument("--independent")
+    parser.add_argument("--independent-source")
     parser.add_argument("--receipt", required=True)
     args = parser.parse_args()
     receipt = (ROOT / args.receipt).resolve()
@@ -320,7 +335,8 @@ def main():
                   diagnostic_manifest_sha256=sha(folder / "run_manifest.json"), source_run_manifest_sha256=sha(source / "run_manifest.json"))
     code = 0
     try:
-        record.update(review(source, folder, Path(args.independent) if args.independent else None))
+        record.update(review(source, folder, Path(args.independent) if args.independent else None,
+                             Path(args.independent_source) if args.independent_source else None))
     except Exception as exc:
         record.update(status="failed", error=type(exc).__name__ + ": " + str(exc))
         code = 1

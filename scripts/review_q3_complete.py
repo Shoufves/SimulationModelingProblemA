@@ -20,6 +20,7 @@ import time
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 from run_q3 import verify_latest
+from q3_scientific_equivalence import compare_runs
 
 
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -279,28 +280,7 @@ def audit_summary_tables(folder,cases,config):
 
 
 def compare_files(left,right):
-    compared=[]
-    for path in sorted(left.glob("*.csv")):
-        if path.name=="gaps_and_conflicts.csv":continue
-        a,b=csv_read(path),csv_read(right/path.name)
-        if len(a)!=len(b):raise ValueError("Reproduction row count: "+path.name)
-        for x,y in zip(a,b):
-            if set(x)!=set(y):raise ValueError("Reproduction columns: "+path.name)
-            for key,value in x.items():
-                if value==y[key]:continue
-                try:
-                    v,w=float(value),float(y[key])
-                except ValueError:raise ValueError("Reproduction text: "+path.name+"/"+key)
-                close(v,w,"reproduction "+path.name+"/"+key,absolute=.01 if "cny" in key else 1e-6,relative=1e-10)
-        compared.append(dict(file=path.name,rows=len(a),bitwise_equal=sha(path)==sha(right/path.name)))
-    # All detailed action/cash/stock records, not just summary rows.
-    for sub in ("cases","events","plans","sensitivity_locks"):
-        files=sorted((left/sub).glob("*"))
-        for p in files:
-            if sha(p)!=sha(right/sub/p.name):raise ValueError("Detailed reproduction differs: "+sub+"/"+p.name)
-        compared.append(dict(directory=sub,files=len(files),bitwise_equal=True))
-    if sha(left/"selection_lock.json")!=sha(right/"selection_lock.json"):raise ValueError("Selection lock differs")
-    return compared
+    return compare_runs(left,right)
 
 
 def main():
@@ -308,6 +288,8 @@ def main():
     parser.add_argument("--output-dir",default="outputs/q3/p3_mmj_v5")
     parser.add_argument("--evidence",default="outputs/validation/p3_mmj/complete_review_round1.json")
     parser.add_argument("--reproduction-root",type=Path)
+    parser.add_argument("--reproduction-output",help="Path within the independent checkout; defaults to the source name plus _reproduction")
+    parser.add_argument("--reproduction-seed",default="1729",help="Seed when this auditor launches a new run; existing-run seeds are not inferred")
     parser.add_argument("--existing-reproduction",action="store_true",help="Validate the already executed independent full-entry run, including its current fingerprints and latest-attempt receipt")
     args=parser.parse_args()
     source=(ROOT/args.output_dir).resolve();target=(ROOT/args.evidence).resolve()
@@ -383,16 +365,19 @@ def main():
             for rel,expected in {**manifest["code_hashes"],**manifest["input_hashes"]}.items():
                 if sha(reproduction/rel)!=expected:raise ValueError("Independent checkout input/code mismatch: "+rel)
             check("independent_checkout_has_identical_code_and_inputs",str(reproduction))
-            env=os.environ.copy();env["PYTHONHASHSEED"]="1729"
+            env=os.environ.copy();env["PYTHONHASHSEED"]=args.reproduction_seed
             output_name=source.name+"_reproduction"
-            command=[sys.executable,"-B","-X","utf8","run.py","q3","--config",manifest["config_path"],"--output-dir","outputs/q3/"+output_name]
+            output_relative=args.reproduction_output or "outputs/q3/"+output_name
+            rep=(reproduction/output_relative).resolve()
+            if not rep.is_relative_to(reproduction/"outputs/q3"):raise ValueError("Reproduction output outside independent Q3 directory")
+            output_name=rep.name
+            command=[sys.executable,"-B","-X","utf8","run.py","q3","--config",manifest["config_path"],"--output-dir",output_relative]
             log=target.with_suffix(".reproduction.log")
             started=time.perf_counter()
             if not args.existing_reproduction:
                 with log.open("w",encoding="utf-8") as f:
                     result=subprocess.run(command,cwd=reproduction,env=env,stdout=f,stderr=subprocess.STDOUT)
                 if result.returncode:raise ValueError("Independent full entry failed; see reproduction log")
-            rep=reproduction/"outputs/q3"/output_name
             repeated=load(rep/"run_manifest.json")
             attempt=load(rep.parent/(output_name+".latest-attempt.json"))
             if not attempt["output_valid_for_this_attempt"] or attempt["run_id"]!=repeated["run_id"] or attempt["manifest_sha256"]!=sha(rep/"run_manifest.json"):
@@ -400,7 +385,7 @@ def main():
             if repeated["status"]!="conditional_experiments_completed":raise ValueError("Independent receipt incomplete")
             if repeated["code_hashes"]!=manifest["code_hashes"] or repeated["input_hashes"]!=manifest["input_hashes"]:raise ValueError("Independent run used different code/inputs")
             if any(sha(rep/p)!=v for p,v in repeated["outputs"].items()):raise ValueError("Independent output hashes changed")
-            check("independent_full_entry",dict(returncode=repeated["exit_code"],seconds=repeated["elapsed_seconds"],pythonhashseed=1729,command=repeated["command"],run_id=repeated["run_id"],receipt_mode="separately_executed" if args.existing_reproduction else "executed_by_auditor"))
+            check("independent_full_entry",dict(returncode=repeated["exit_code"],seconds=repeated["elapsed_seconds"],pythonhashseed=None if args.existing_reproduction else args.reproduction_seed,command=repeated["command"],run_id=repeated["run_id"],receipt_mode="separately_executed" if args.existing_reproduction else "executed_by_auditor"))
             check("independent_all_scientific_outputs",compare_files(source,rep))
         verify_latest(source)
         record.update(status="author_round_passed",passed=True,

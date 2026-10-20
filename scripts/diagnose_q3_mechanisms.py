@@ -23,6 +23,7 @@ from energy_model.q3_events import run_event, safety_metrics
 from energy_model.q3_transition import service_id
 from run_q2_national import csv_write
 from run_q3 import verify_latest
+from q3_scientific_equivalence import admit_source
 
 
 def sha(path):
@@ -346,8 +347,8 @@ def run_diagnostics(source, out, protocol):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", default="outputs/q3/p3_mmj_v5")
-    parser.add_argument("--config", default="workflow/q3_diagnostics_v2.json")
-    parser.add_argument("--output-dir", default="outputs/validation/p3_mmj/diagnostics_v2")
+    parser.add_argument("--config", default="workflow/q3_diagnostics_v3.json")
+    parser.add_argument("--output-dir", default="outputs/validation/p3_mmj/diagnostics_v3")
     args = parser.parse_args()
     source, out = (ROOT / args.source).resolve(), (ROOT / args.output_dir).resolve()
     if not out.is_relative_to(ROOT / "outputs/validation") or out.exists():
@@ -356,23 +357,37 @@ def main():
     original = verify_latest(source)
     if original["code_hashes"] != protocol["model_code_hashes"] or original["input_hashes"] != protocol["input_hashes"]:
         raise ValueError("Frozen diagnostic model or inputs changed")
-    for name, expected in protocol["source_files"].items():
-        if sha(source / name) != expected:
-            raise ValueError("Frozen scientific evidence changed: " + name)
+    equivalence = None
+    if protocol.get("version") == 3:
+        equivalence = admit_source(source, protocol)
+    else:
+        for name, expected in protocol["source_files"].items():
+            if sha(source / name) != expected:
+                raise ValueError("Frozen scientific evidence changed: " + name)
     out.mkdir(parents=True)
     record = dict(status="running", started_at_utc=datetime.now(timezone.utc).isoformat(),
-                  source_run_id=original["run_id"], source_manifest_sha256=sha(source / "run_manifest.json"),
+                  source_run_id=original["run_id"], source_manifest_sha256=sha(source / "run_manifest.json"), source_path=str(source),
                   protocol_path=args.config, protocol_sha256=sha(ROOT / args.config),
                   script_sha256=sha(__file__), source_code_hashes=original["code_hashes"],
                   source_input_hashes=original["input_hashes"], scope=protocol["identity"])
     save(out / "run_manifest.json", record)
     save(out / "frozen_protocol.json", protocol)
     (out / "diagnostic_source.py").write_bytes(Path(__file__).read_bytes())
+    if equivalence is not None:
+        save(out / "source_equivalence.json", equivalence)
+        (out / "scientific_equivalence_source.py").write_bytes((ROOT / "scripts/q3_scientific_equivalence.py").read_bytes())
+        (out / "frozen_reproduction_protocol.json").write_bytes((ROOT / protocol["reproduction_protocol"]).read_bytes())
+        record["equivalence_code_sha256"] = sha(ROOT / "scripts/q3_scientific_equivalence.py")
     started = time.perf_counter()
     code = 0
     try:
         record["completion"] = run_diagnostics(source, out, protocol)
         verify_latest(source)
+        if equivalence is not None:
+            if sha(source / "run_manifest.json") != record["source_manifest_sha256"] or sha(ROOT / "scripts/q3_scientific_equivalence.py") != record["equivalence_code_sha256"]:
+                raise ValueError("Diagnostic source or comparison code changed during execution")
+            if sha(ROOT / protocol["reproduction_protocol"]) != protocol["reproduction_protocol_sha256"]:
+                raise ValueError("Reproduction protocol changed during execution")
         if record["script_sha256"] != sha(__file__) or record["protocol_sha256"] != sha(ROOT / args.config):
             raise ValueError("Diagnostic code or protocol changed during execution")
         record["status"] = "diagnostics_completed" if not record["completion"]["event_probe_failures"] else "diagnostics_with_failures"
