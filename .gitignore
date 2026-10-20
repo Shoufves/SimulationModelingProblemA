@@ -19,3 +19,21 @@ outputs/research_audit/exploration*/
 outputs/research_audit/q1_q3_reproduction/
 # Earlier generated alignment drafts are archived locally; current receipts stay tracked.
 outputs/q1_pr14_archive/
+# Local archived environments, caches and new reproduction staging.
+legacy/tmp/*
+!legacy/tmp/README.md
+legacy/.runs/
+legacy/outputs/q1_pr14_archive/
+outputs/reproduced/
+# Local competition statement; official attachments 1-4 remain versioned.
+2026年第二届全国大学生仿真建模应用挑战赛A题.pdf
+# Keep the original generated-output exclusions after moving them into legacy.
+legacy/outputs/q3/*.attempts/
+legacy/outputs/q3/p3_yx_reproduction/
+legacy/outputs/q3/p3_yx_reproduction.latest-attempt.json
+legacy/outputs/q2/q3_yx_regression/
+legacy/outputs/q2/q3_yx_regression.latest-attempt.json
+legacy/outputs/q1/q3_yx_regression/
+legacy/outputs/q1/q3_yx_regression.latest-attempt.json
+legacy/outputs/research_audit/exploration*/
+legacy/outputs/research_audit/q1_q3_reproduction/

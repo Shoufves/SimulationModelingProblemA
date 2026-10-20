@@ -1,0 +1,37 @@
+# Preserve exact bytes of the hashed N2 evidence and its frozen inputs/code.
+# CRLF is a line ending here, not trailing content; ordinary whitespace is checked.
+outputs/research_n2/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+scripts/*n2*.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+src/transition_research/*.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+tests/research/*.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+workflow/n2_*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+data/catalog/n2_input_review.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Frozen PR14 imports: original bytes are verified before every Q2 execution.
+vendor/q2_pr14/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+data/processed/q2_delivery/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+outputs/question2_delivery_20261020/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+outputs/q2_current_delivery/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+outputs/q2_revenue_recalibration/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/solutions/QUESTION2_DELIVERY_20261020.md -text whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/solutions/QUESTION2_PR_HANDOFF_20261020.md -text whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/solutions/PR14_REVIEW10_RESPONSE.md -text whitespace=trailing-space,space-before-tab,cr-at-eol
+outputs/q2_pr14/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+outputs/q2_pr14_review/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+data/catalog/q2_pr14_integration_review.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+workflow/q2_pr14_integration.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Generated, hashed upstream graphics retain their original PDF/SVG syntax.
+outputs/question2_delivery_20261020/*.pdf binary
+outputs/question2_delivery_20261020/figures/*.svg -whitespace
+# This single upstream source has a frozen extra final newline; do not rehash it.
+vendor/q2_pr14/scripts/q2_corrected_factory.py whitespace=trailing-space,space-before-tab,cr-at-eol,-blank-at-eof
+# Q1/Q3 alignment hashes must survive checkout on every platform.
+src/q3_pr14/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+scripts/*q1_pr14.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+scripts/*q3_pr14*.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+workflow/q3_pr14_inputs.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+data/catalog/q123_pr14_alignment_review.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+data/catalog/datasets_unified.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+outputs/q1/pr14_aligned/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+outputs/q1/pr14_aligned/*.svg -whitespace
+outputs/q3_pr14/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+outputs/q123_alignment/** -text whitespace=trailing-space,space-before-tab,cr-at-eol

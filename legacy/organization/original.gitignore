@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+tmp/*
+!tmp/README.md
+.venv-workbench/
+.venv/
+.pytest_cache/
+.venv-q3/
+# Recreated verification outputs; receipts and hashes live in outputs/q3_review.
+outputs/q3/*.attempts/
+outputs/q3/p3_yx_reproduction/
+outputs/q3/p3_yx_reproduction.latest-attempt.json
+outputs/q2/q3_yx_regression/
+outputs/q2/q3_yx_regression.latest-attempt.json
+outputs/q1/q3_yx_regression/
+outputs/q1/q3_yx_regression.latest-attempt.json
+# Reproducible supplementary research diagnostics; keep only primary receipts.
+outputs/research_audit/exploration*/
+outputs/research_audit/q1_q3_reproduction/
+# Earlier generated alignment drafts are archived locally; current receipts stay tracked.
+outputs/q1_pr14_archive/

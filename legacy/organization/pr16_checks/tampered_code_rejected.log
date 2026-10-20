@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\_pr16_verify_20261020_181804\run.py", line 167, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\_pr16_verify_20261020_181804\run.py", line 136, in main
+    stage = restore_runtime()
+            ^^^^^^^^^^^^^^^^^
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\_pr16_verify_20261020_181804\run.py", line 46, in restore_runtime
+    raise ValueError('Changed retained input/code/result: ' + name)
+ValueError: Changed retained input/code/result: src/q3_pr14/__init__.py

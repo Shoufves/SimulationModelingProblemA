@@ -1,0 +1,4 @@
+usage: run.py [-h] [--output-dir OUTPUT_DIR] [--smoke]
+              [--only ONLY [ONLY ...]] [--end-year END_YEAR]
+              {verify,q1,q1-history,q2,q3}
+run.py: error: Choose a new output directory; retained results are immutable

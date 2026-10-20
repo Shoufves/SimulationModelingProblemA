@@ -35,3 +35,11 @@ outputs/q1/pr14_aligned/** -text whitespace=trailing-space,space-before-tab,cr-a
 outputs/q1/pr14_aligned/*.svg -whitespace
 outputs/q3_pr14/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 outputs/q123_alignment/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Organized and archived evidence keeps its original bytes after checkout.
+legacy/** -text
+scripts/** -text
+src/** -text
+data/** -text
+workflow/** -text
+outputs/** -text
+requirements-*.txt -text

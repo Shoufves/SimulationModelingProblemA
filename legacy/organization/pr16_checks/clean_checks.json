@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "candidate_tree": "166c06f136a0ed47e186e07883d94ea25587f9dc",
+  "hashseed": "163701",
+  "checks": [
+    {
+      "name": "verify",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "verify"
+      ],
+      "exit_code": 0,
+      "seconds": 3.3,
+      "passed": true
+    },
+    {
+      "name": "q1",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q1",
+        "--output-dir",
+        "outputs/reproduced/review_q1"
+      ],
+      "exit_code": 0,
+      "seconds": 3.21,
+      "passed": true
+    },
+    {
+      "name": "q1_history",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q1-history",
+        "--output-dir",
+        "outputs/reproduced/review_q1_history"
+      ],
+      "exit_code": 0,
+      "seconds": 2.16,
+      "passed": true
+    },
+    {
+      "name": "q2_s0",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q2",
+        "--only",
+        "S0",
+        "--output-dir",
+        "outputs/reproduced/review_q2_s0"
+      ],
+      "exit_code": 0,
+      "seconds": 11.34,
+      "passed": true
+    },
+    {
+      "name": "q3_smoke",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q3",
+        "--smoke",
+        "--output-dir",
+        "outputs/reproduced/review_q3_smoke"
+      ],
+      "exit_code": 0,
+      "seconds": 13.32,
+      "passed": true
+    }
+  ]
+}
