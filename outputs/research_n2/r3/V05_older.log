@@ -1,0 +1,16 @@
+START V05_older__schedule
+V05_older__schedule cost_T 181.074509 retention_MWyr 0 seconds 8.23
+START V05_older__cost_order
+V05_older__cost_order cost_T 181.882951 retention_MWyr 3333418 seconds 9.02
+START V05_older__capacity_ready
+V05_older__capacity_ready cost_T 181.882951 retention_MWyr 3333418 seconds 8.92
+START V05_older__replacement_ready
+V05_older__replacement_ready cost_T 181.806286 retention_MWyr 2682816 seconds 10.25
+START V05_older__rolling_guard
+V05_older__rolling_guard cost_T 181.806286 retention_MWyr 2682816 seconds 14.38
+START V05_older__paired_myopic
+V05_older__paired_myopic cost_T 181.821485 retention_MWyr 2156198 seconds 13.89
+START V05_older__paired_guard
+V05_older__paired_guard cost_T 181.762599 retention_MWyr 2446233 seconds 21.74
+START V05_older__rollout_guard
+V05_older__rollout_guard cost_T 181.777035 retention_MWyr 2623670 seconds 146.96

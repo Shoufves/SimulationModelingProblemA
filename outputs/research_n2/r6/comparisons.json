@@ -1,0 +1,50 @@
+[
+  {
+    "candidate": "fixed_speed6_delay3__anchored_guard",
+    "baseline": "fixed_speed6_delay3__schedule",
+    "maximum_service_fraction_regret": 2.042315531738299e-15,
+    "worst_cell": [
+      2052,
+      "transport_proxy"
+    ],
+    "improved_cells": 29,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": null,
+    "cost_change_fraction": 0.011558566473691911,
+    "co2_change_fraction": 0.0365314959301577,
+    "forecast_solves": 480,
+    "terminal_managed_capacity_change_mw": 42638.8212796472
+  },
+  {
+    "candidate": "fixed_speed6_delay3__anchored_guard",
+    "baseline": "fixed_speed6_delay3__replacement_ready",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.11792552010208945,
+    "cost_change_fraction": -0.00036197255382430793,
+    "co2_change_fraction": -0.00012411890907959577,
+    "forecast_solves": 480,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "fixed_speed6_delay3__anchored_guard",
+    "baseline": "fixed_speed6_delay3__rolling_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.11792552010208945,
+    "cost_change_fraction": -0.00036197255382430793,
+    "co2_change_fraction": -0.00012411890907959577,
+    "forecast_solves": 480,
+    "terminal_managed_capacity_change_mw": 0.0
+  }
+]

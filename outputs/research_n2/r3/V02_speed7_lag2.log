@@ -1,0 +1,16 @@
+START V02_speed7_lag2__schedule
+V02_speed7_lag2__schedule cost_T 180.924526 retention_MWyr 0 seconds 8.88
+START V02_speed7_lag2__cost_order
+V02_speed7_lag2__cost_order cost_T 181.785007 retention_MWyr 3292652 seconds 9.11
+START V02_speed7_lag2__capacity_ready
+V02_speed7_lag2__capacity_ready cost_T 181.785007 retention_MWyr 3292652 seconds 8.93
+START V02_speed7_lag2__replacement_ready
+V02_speed7_lag2__replacement_ready cost_T 181.695969 retention_MWyr 2663995 seconds 10.34
+START V02_speed7_lag2__rolling_guard
+V02_speed7_lag2__rolling_guard cost_T 181.703004 retention_MWyr 2719465 seconds 12.45
+START V02_speed7_lag2__paired_myopic
+V02_speed7_lag2__paired_myopic cost_T 181.655201 retention_MWyr 2183258 seconds 12.51
+START V02_speed7_lag2__paired_guard
+V02_speed7_lag2__paired_guard cost_T 181.650795 retention_MWyr 2294198 seconds 24.22
+START V02_speed7_lag2__rollout_guard
+V02_speed7_lag2__rollout_guard cost_T 181.667057 retention_MWyr 2516076 seconds 163.09

@@ -1,0 +1,21 @@
+{
+  "baseline_commit": "1b8f465783afe7505c8d4e65ec43ada18c311daf",
+  "raw_originals_reverified": false,
+  "files": {
+    "workflow/n2_fixed_r6.json": "456b240d497a5aa1bb5852129d0b502c39acf744e6851a67b674f53aec57209f",
+    "scripts/run_n2_research.py": "a85ac535aec1bd897e4119f58bfd11318c86e27a46d02cff90619f7e65373aa9",
+    "src/transition_research/retirement.py": "b6d3e57c1e1a346084f7cdc3ca30f9d08707c797e045a3dbda5765f622412f1b",
+    "src/transition_research/anchored.py": "3799340884de100e0724e7fb70f5e21d44c6e895b2042360df33d4c8b49ed26c",
+    "src/transition_research/fixed_pipeline.py": "c9b742f3756b29c3dfefe623b588842254a61dfde6fc0dbe883e93c2e0f6d3df",
+    "scripts/run_n2_fixed.py": "66ce1ab4856998948dc3c3ce3deeb4e9cdf192c17e9368b6e1b889726ef0caa0"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "mesa": "3.3.1",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3"
+  },
+  "upstream_manifest_sha256": "e6938053118425baf4cdf6d06f159efa5ff1b3fcb80118240bcda2dded6487ed",
+  "scope": "fixed_committed_generation_infrastructure; demand_devices_remain_endogenous"
+}

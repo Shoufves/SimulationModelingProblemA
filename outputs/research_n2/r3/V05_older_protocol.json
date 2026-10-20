@@ -1,0 +1,48 @@
+{
+  "round": "R3",
+  "identity": "frozen_before_running_new_conditions_conditional_simulation_not_external_empirical_validation",
+  "hypothesis": "The full-feedback paired guard retains materially fewer MW-years than the original rolling guard without worsening service, cost, emissions or terminal deferral; it also remains on the cost/safety/CO2 frontier against replacement readiness.",
+  "acceptance": {
+    "all_conditions_must_finish": true,
+    "reference": "rolling_guard",
+    "maximum_service_fraction_regret_each_condition": 0.001,
+    "maximum_cost_increase_fraction_each_condition": 0.0001,
+    "maximum_co2_increase_fraction_each_condition": 0.002,
+    "minimum_conditions_with_at_least_5_percent_retention_saving": 4,
+    "minimum_conditions_with_positive_retention_saving": 6,
+    "maximum_terminal_managed_capacity_increase_mw": 0.001,
+    "maximum_same_cohort_exit_delay_vs_reference_years": 0,
+    "minimum_nondominated_conditions_against_all_controls": 6,
+    "maximum_wall_seconds_per_candidate_case": 360,
+    "note": "Research acceptance conventions, not official policy or competition thresholds. Any failure prevents N2 acceptance; do not drop failing cells or change thresholds after seeing results. All service/year cells include exports. No significance test treating grid conditions as independent observations."
+  },
+  "end_year": 2060,
+  "method": {
+    "horizon": 3,
+    "pressure": 0.85,
+    "risk_limit": 0.02
+  },
+  "rules": [
+    "schedule",
+    "cost_order",
+    "capacity_ready",
+    "replacement_ready",
+    "rolling_guard",
+    "paired_myopic",
+    "paired_guard",
+    "rollout_guard"
+  ],
+  "conditions": [
+    {
+      "id": "V05_older",
+      "acceleration": 7,
+      "opening": {
+        "initial_age_multiplier": 1.2
+      },
+      "scenario": {
+        "infrastructure_delay_years": 2
+      }
+    }
+  ],
+  "parent_protocol_sha256": "0bd85b6439c2e3a27cda716666474bbebb769fc186a75c36ec6add3d9f895fac"
+}

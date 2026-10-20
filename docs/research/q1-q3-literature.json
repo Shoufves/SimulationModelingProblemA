@@ -1,0 +1,322 @@
+{
+  "retrieved_on": "2026-10-20",
+  "purpose": "Prior-art and detector-validity review only; no new model parameters or observations admitted",
+  "search_scope": "Targeted public English/Chinese searches, publisher/author/institution pages. Not an exhaustive CNKI/Web of Science patent or literature novelty search.",
+  "queries": [
+    "integrated energy systems agent based modelling model predictive control resilience robust decision making regret paper",
+    "energy technology multi criteria assessment ranking uncertainty sensitivity source data study",
+    "natural gas import diversification portfolio source transport LNG pipeline Herfindahl China energy security study",
+    "energy system policy Shapley value attribution interactions investment policy combinations",
+    "coal retirement infrastructure delay model predictive control energy transition 2025 paper",
+    "compound energy drought natural gas supply disruption multi energy resilience 2024 2025",
+    "GPT detectors are biased against non-native English writers",
+    "Testing of detection tools for AI-generated text",
+    "AI generated text detection Chinese benchmark 2025 2026 study"
+  ],
+  "references": [
+    {
+      "id": "L01",
+      "title": "Projected Costs of Generating Electricity 2020",
+      "author": "IEA / OECD NEA",
+      "year": 2020,
+      "url": "https://www.iea.org/reports/projected-costs-of-generating-electricity-2020",
+      "read_scope": "Official report landing page and existing repository source review",
+      "finding": "LCOE, discount-rate and technology-cost comparison predate this project; original report scenarios are not 2024 operating costs.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "8080d16aeecb2e81ddf18ff2552152f80050bc10a3036c761fb7517826c68803",
+        "kind": "primary_page_or_publisher_deposited_metadata"
+      }
+    },
+    {
+      "id": "L02",
+      "title": "Renewable power generation costs in 2024",
+      "author": "IRENA",
+      "year": 2025,
+      "url": "https://www.irena.org/Publications/2025/Jul/Renewable-power-generation-costs-in-2024",
+      "read_scope": "Local original-report extraction: title/copyright and previously reviewed cost sections; official landing page returned HTTP 403 on this verification",
+      "finding": "Published project-cost and performance aggregates are reused evidence, not original observations of this team.",
+      "local_evidence": "data/extracted/irena_cost_2024_pdf.txt",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "2feafd8023e4563b069af61f0a5f2a9d324f7aa98ba40319a5d7a7810bc3066b",
+        "kind": "local_original_extraction"
+      }
+    },
+    {
+      "id": "L03",
+      "title": "AMIRIS: An Agent-Based Simulation Model for the Analysis of Different Support Schemes and Their Effects on Actors Involved in the Integration of Renewable Energies into Energy Markets",
+      "author": "Reeg, Hauser, Wassermann, Kast, Klann, Nienhaus, Pfenning and Weimer-Jehle",
+      "year": 2012,
+      "url": "https://doi.org/10.1109/DEXA.2012.54",
+      "read_scope": "Publisher-deposited Crossref bibliographic metadata only; no full-text or abstract-method claim",
+      "finding": "The registered 2012 paper establishes an earlier agent-based energy-policy research topic. It does not establish that its mechanisms equal ours.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "4c836fede5816f37f910407706a1da8909e9a5bd581cbe1d5431c98123b75b79",
+        "kind": "primary_page_or_publisher_deposited_metadata",
+        "deposited_metadata": {
+          "title": [
+            "AMIRIS: An Agent-Based Simulation Model for the Analysis of Different Support Schemes and Their Effects on Actors Involved in the Integration of Renewable Energies into Energy Markets"
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2012,
+                9
+              ]
+            ]
+          },
+          "DOI": "10.1109/dexa.2012.54"
+        },
+        "metadata_url": "https://api.crossref.org/works/10.1109/dexa.2012.54"
+      }
+    },
+    {
+      "id": "L04",
+      "title": "PyPSA: Python for Power System Analysis",
+      "author": "Brown, Hörsch and Schlachtberger",
+      "year": 2018,
+      "url": "https://arxiv.org/abs/1707.09913",
+      "read_scope": "Author abstract and model scope",
+      "finding": "Open optimization with generation, storage and networks precedes this implementation; the project's contribution must lie in its question, constraints or evidence.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "0d7e62ace97fdc46d4f1b2e9ae70b365a7f8e95988c51281c6add032ab815bf1",
+        "kind": "primary_page_or_publisher_deposited_metadata"
+      }
+    },
+    {
+      "id": "L05",
+      "title": "A Model Predictive Control Approach to Microgrid Operation Optimization",
+      "author": "Alessandra Parisio, Evangelos Rikos and Luigi Glielmo",
+      "year": 2014,
+      "url": "https://doi.org/10.1109/TCST.2013.2295737",
+      "read_scope": "IEEE-deposited Crossref bibliographic metadata only; no full-text replication claimed",
+      "finding": "MPC applied to energy operation is an earlier research topic. Our threshold-based deferral implementation must not be described as a general MPC optimization algorithm.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "daabc8073e96633e1e0720baf715de95b51efcd59a83c6fbb4a494a4886e4af9",
+        "kind": "primary_page_or_publisher_deposited_metadata",
+        "deposited_metadata": {
+          "title": [
+            "A Model Predictive Control Approach to Microgrid Operation Optimization"
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2014,
+                9
+              ]
+            ]
+          },
+          "DOI": "10.1109/tcst.2013.2295737"
+        },
+        "metadata_url": "https://api.crossref.org/works/10.1109/tcst.2013.2295737"
+      }
+    },
+    {
+      "id": "L06",
+      "title": "Multicriteria diversity analysis",
+      "author": "Stirling",
+      "year": 2010,
+      "url": "https://doi.org/10.1016/j.enpol.2009.02.023",
+      "read_scope": "Elsevier-deposited bibliographic metadata; full descriptive subtitle corroborated by Nature Energy L11 reference list. No full-text formula comparison claimed",
+      "finding": "Multicriteria energy-portfolio diversity has prior research. Our HHI identity is elementary and is not presented as a new diversity theory.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "e9dd0303c7c0b140a4d8a267b9916c405c665007d579db0de36f9f4bff2c469e",
+        "kind": "primary_page_or_publisher_deposited_metadata",
+        "deposited_metadata": {
+          "title": [
+            "Multicriteria diversity analysis"
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2010,
+                4
+              ]
+            ]
+          },
+          "DOI": "10.1016/j.enpol.2009.02.023"
+        },
+        "metadata_url": "https://api.crossref.org/works/10.1016/j.enpol.2009.02.023"
+      }
+    },
+    {
+      "id": "L07",
+      "title": "SMAA - Stochastic multiobjective acceptability analysis",
+      "author": "Lahdelma, Hokkanen and Salminen",
+      "year": 1998,
+      "url": "https://doi.org/10.1016/S0377-2217(97)00163-X",
+      "read_scope": "Elsevier-deposited bibliographic metadata only",
+      "finding": "Multiobjective acceptability analysis has prior research; the present work does not implement or claim to improve SMAA.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "4689f8f7ee2378e32ffe69d5cab703700113794330104dc5f92da651c1b675f5",
+        "kind": "primary_page_or_publisher_deposited_metadata",
+        "deposited_metadata": {
+          "title": [
+            "SMAA - Stochastic multiobjective acceptability analysis"
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1998,
+                4
+              ]
+            ]
+          },
+          "DOI": "10.1016/s0377-2217(97)00163-x"
+        },
+        "metadata_url": "https://api.crossref.org/works/10.1016/s0377-2217(97)00163-x"
+      }
+    },
+    {
+      "id": "L08",
+      "title": "A Value for n-Person Games",
+      "author": "L. S. Shapley",
+      "year": 1953,
+      "url": "https://doi.org/10.1515/9781400881970-018",
+      "read_scope": "Publisher-deposited metadata for the 1953 book chapter. RAND 1951 report page and PDF returned 403; not represented as inspected",
+      "finding": "Shapley allocation is an established method; our complete permutation implementation is checked against efficiency, symmetry and dummy-player fixtures, not claimed as a new allocation algorithm.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "df145def321a7018f5687d0d7d7ca86167c8630dfe122e30fce47c93a7ae2ef2",
+        "kind": "primary_page_or_publisher_deposited_metadata",
+        "deposited_metadata": {
+          "title": [
+            "17. A Value for n-Person Games"
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1953,
+                12,
+                31
+              ]
+            ]
+          },
+          "DOI": "10.1515/9781400881970-018"
+        },
+        "metadata_url": "https://api.crossref.org/works/10.1515/9781400881970-018"
+      }
+    },
+    {
+      "id": "L11",
+      "title": "Strategies to accelerate US coal power phase-out using contextual retirement vulnerabilities",
+      "author": "Sidney Gathrid; Jeremy Wayland; Stuart Wayland; Ranjit Deshmukh; Grace C. Wu",
+      "year": 2025,
+      "url": "https://www.nature.com/articles/s41560-025-01871-0",
+      "read_scope": "Publisher abstract and scope",
+      "finding": "Retirement strategies conditioned on context are prior art; US empirical results are not transferred as China model parameters.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "df35107f35a215df75ac5d3ec93343590d549ae4c3cfd8fa00a6c999eb16147e",
+        "kind": "primary_page_or_publisher_deposited_metadata"
+      }
+    },
+    {
+      "id": "L13",
+      "title": "Testing of detection tools for AI-generated text",
+      "author": "Weber-Wulff and colleagues",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2306.15666",
+      "read_scope": "Author abstract and reported evaluation scope",
+      "finding": "Detection reliability depends on tool and text setting; the paper does not justify assigning an authorship percentage to this repository.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "e323d14681fa8c34a95b759c0db17135ada76e2d517e47e2e3a92cad13489762",
+        "kind": "primary_page_or_publisher_deposited_metadata"
+      }
+    },
+    {
+      "id": "L14",
+      "title": "GPT detectors are biased against non-native English writers",
+      "author": "Liang and colleagues",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2304.02819",
+      "read_scope": "Original author abstract on arXiv v3; PMC URL returned a captcha page and was not used as article evidence",
+      "finding": "False positives and distribution sensitivity are demonstrated for non-native English. Its numerical results cannot be transferred to Chinese energy papers.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "f20def56d7747bcfcfcc248e94efec016f848af4fe6090494c14a59a0befae49",
+        "kind": "primary_page_or_publisher_deposited_metadata"
+      }
+    },
+    {
+      "id": "L15",
+      "title": "Can AI-Generated Text be Reliably Detected?",
+      "author": "Sadasivan and colleagues",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2303.11156",
+      "read_scope": "Author abstract on v4; robustness results are setting-dependent and are not used for detector evasion",
+      "finding": "Detection has distribution-dependent limitations. This is not evidence that every detector is useless or that an undetected text is human-authored.",
+      "version_note": "First preprint 2023; inspected version v4 posted 2025-01-17, page identifies TMLR publication",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "fbf2f7628f52ced46f9b62bdae9f6173e6586f28aad1b51764beed3d3bf8295f",
+        "kind": "primary_page_or_publisher_deposited_metadata"
+      }
+    },
+    {
+      "id": "L16",
+      "title": "How Close is ChatGPT to Human Experts? Comparison Corpus, Evaluation, and Detection",
+      "author": "Guo and colleagues",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2301.07597",
+      "read_scope": "Author corpus description and detection scope",
+      "finding": "HC3 includes Chinese and English answers, but those benchmark distributions do not calibrate mixed human/AI technical manuscripts in this project.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "248b0d6b1b121f1aa3b9d72e28449e6e01b0a776f5009e8fb204a57cba75eb45",
+        "kind": "primary_page_or_publisher_deposited_metadata"
+      }
+    },
+    {
+      "id": "L17",
+      "title": "M4: Multi-generator, Multi-domain, and Multi-lingual Black-Box Machine-Generated Text Detection",
+      "author": "Wang and colleagues",
+      "year": 2024,
+      "url": "https://aclanthology.org/2024.eacl-long.83/",
+      "read_scope": "ACL original proceedings abstract",
+      "finding": "Some detectors perform usefully in matched benchmark conditions, while transfer across generators/domains/languages must be tested; do not infer a local posterior without calibration.",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "79058e9a09d4876be95adf9caa56e654cf60ce482a1284d165944986abbfea14",
+        "kind": "primary_page_or_publisher_deposited_metadata"
+      }
+    },
+    {
+      "id": "L18",
+      "title": "C-HAT-Bench: Benchmarking Chinese AI-Text Detection Beyond Fully Generated Text",
+      "author": "Qing Yang and colleagues",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2609.32770",
+      "read_scope": "Author preprint v1 abstract and submission metadata; no peer-review or full-text verification claimed",
+      "finding": "Chinese collaborative writing changes detection behavior relative to fully generated text. A document classification score is not a measured percentage of who wrote each character.",
+      "version_note": "Preprint v1 submitted 2026-09-26; accessed 2026-10-20",
+      "verification": {
+        "checked_on": "2026-10-20",
+        "response_sha256": "435fe2daffb8d361846338ee588ed3fb27fcc36c376203f5054806c6e6bb33b1",
+        "kind": "primary_page_or_publisher_deposited_metadata"
+      }
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "id": "L09",
+      "reason": "RAND page inaccessible in verification; not used in final comparative claims"
+    },
+    {
+      "id": "L10",
+      "reason": "Exact IEEE title/author/year could not be independently verified; excluded"
+    },
+    {
+      "id": "L12",
+      "reason": "PNNL source retrieval timed out; not used for final novelty conclusions"
+    }
+  ],
+  "verification_limits": "Bibliographic metadata establishes existence/topic, not full method equivalence. Abstract-level comparisons are labelled. Web-tool searches returned no usable visible content in final verification; primary pages and publisher-deposited records were retrieved directly."
+}

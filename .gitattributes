@@ -1,0 +1,8 @@
+# Preserve exact bytes of the hashed N2 evidence and its frozen inputs/code.
+# CRLF is a line ending here, not trailing content; ordinary whitespace is checked.
+outputs/research_n2/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+scripts/*n2*.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+src/transition_research/*.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+tests/research/*.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+workflow/n2_*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+data/catalog/n2_input_review.json -text whitespace=trailing-space,space-before-tab,cr-at-eol

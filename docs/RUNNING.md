@@ -73,6 +73,45 @@ V7统一Issue #7共同入口：`python -B -X utf8 run.py q2 --config workflow/q2
 
 复现只承诺冻结假设内的确定性结果；碳排放留出缺测、统计桥接、代表日和反复使用评估窗口的限制见[模型修订记录](solutions/p2-lb-national-review.md)。
 
-## 版本与恢复
+## P3/yx 问题三
+
+先安装 `requirements-q3.txt`（推荐Python3.12），从仓库根目录执行：
+
+```powershell
+python -B -X utf8 run.py q3 --config workflow/q3_inputs.json --output-dir outputs/q3/p3_yx
+python -B -X utf8 scripts/review_q3_delivery.py
+python -B -X utf8 run.py q3 --config workflow/q3_inputs.json --output-dir outputs/q3/p3_yx_reproduction
+python -B -X utf8 scripts/compare_q3_runs.py
+python -B -X utf8 scripts/probe_q3_retirement.py
+python -B -X utf8 scripts/review_pr13_changes.py
+python -B -X utf8 scripts/summarize_q3_evidence.py
+```
+
+全部实验离线执行，默认最多4进程，可设环境变量 `Q3_WORKERS=1` 串行。新尝试先使旧收据失效；失败返回非零并保留旧尝试。原问题二模块只增加非循环窗口的可选自由终端SOC，原默认行为有完整回归。科学范围、成本及资金、选参和检验边界见 [P3报告说明](solutions/p3-yx.md)。重复复现输出和失败尝试不重复提交，验收记录及必要失败证据保留。
+
+原v3主批次实际约16.3分钟、独立完整复现约21.4分钟；PR13修复后的耗时以新manifest为准，硬件和并发会改变耗时。Q1/Q2回归分别使用独立输出目录`outputs/q1/q3_yx_regression`和`outputs/q2/q3_yx_regression`，运行后执行`python -B -X utf8 scripts/review_q3_regressions.py --q2`核对原产物和受保护文件。Q2回归会完整重做1012次训练及107项条件试验，需要额外时间。
+
+本次PR13仅修正Q3退役分类和L说明，实际重新执行完整测试与两套Q3，Q1/Q2沿用原完整回归并重新核验依赖和产物；作用域收据由 `scripts/review_pr13_regression_scope.py` 生成。不能将依赖核验说成重新训练。修复前后比较需要本地保留原提交 `bf8590809004466d2f595407eb61ddd2b6b7e5a2`，若浅克隆缺失须先取得该提交。新增到龄量只覆盖受Q3计划管理的退出，定义和L作用对象表见[审查回应](solutions/p3-pr13-review-response.md)。
+
+`outputs/q3_review/README.md`列出本次证据与复跑步骤。`scripts/accept_q3_delivery.py`只汇总已执行且指纹匹配的本地证据；不能用它替代前述实际运行或两位成员的C9批准。
+
+## Q1/Q3补充研究审查
+
+本轮只读取既有科学产物，新增来源暴露、实施等价类、Shapley与文本诊断。使用已有Q3环境及openpyxl，从仓库根目录运行：
+
+```powershell
+python -B -X utf8 scripts/audit_q1_q3_research.py
+$env:PYTHONHASHSEED='29'
+python -B -X utf8 scripts/audit_q1_q3_research.py --output-dir outputs/research_audit/q1_q3_reproduction
+python -B -X utf8 scripts/verify_q1_q3_audit.py --run-checks
+```
+
+两套诊断结果写不同目录，最后一条实际运行全部测试、基础审计、正式输入检查和密钥格式扫描，再比较诊断输出与指纹。不带`--run-checks`只核验已有且指纹匹配的检查收据，不冒称重跑测试。原`outputs/validation`与`outputs/workflow`的被跟踪文件在保存本轮证据后恢复到执行前字节，验收证据独立保存在`outputs/research_audit/verification`。
+
+诊断的`--science-only`是局部探索模式；即使正常执行，其manifest的`passed`仍为false，不作为完整验收。正式诊断会检查24组论文关键数值及原科学资产与起点`7d52f439992503eac5978c6f218f5289fe3e2195`字节相同；浅克隆须包含该提交。输出目录必须专用。新文稿或证据登记改变后需重新运行，不能只重写哈希。
+
+此轮没有重新求解全部Q3或训练Q2，而是在原依赖与科学产物未变的前提下复用上一轮完整复现，再独立重做本轮分析。科学解释、外部检测和人工批准分开记录，技术通过不替代人工签认。文献采用离线书目登记，访问限制已列明；复跑不会自动访问检测平台或补签团队批准。
+
+## 版本与恢复记录（原工作区整理）
 
 `archive/organization_20261017/file_disposition.csv` 逐文件记录旧路径→新位置或删除理由。修改过的文档/脚本原字节保存在 `edited_originals.zip`；复算前的结果与目录在 `prior_results.zip`。恢复时按该映射提取单个文件，不把全部旧目录覆盖回当前工程。

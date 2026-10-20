@@ -1,0 +1,20 @@
+{
+  "primary_protocol": "r9",
+  "primary_gate_passed": true,
+  "extended_comparison_passed": true,
+  "distinct_physical_trajectories": 7,
+  "reproduction_passed": true,
+  "fixed_invariants_passed": true,
+  "implementation_tests_passed": true,
+  "legacy_tests_passed": true,
+  "tests_run": 353,
+  "human_review": "pending",
+  "n3_supported": false,
+  "system_hard_service_limit_passed_conditions": 0,
+  "n2_internal_empirical_candidate": true,
+  "verifier_sha256": {
+    "scripts/verify_n2_supplements.py": "33599ddcf940e177da1d0abc9e21e313a2f5e72e9ab54accd1b8ac3fdc1aa683",
+    "scripts/verify_n2_research.py": "e00fc2fa431b055a543184dd9a22725df26b3d27f54d0f5dc1d73ba2f3590fc2",
+    "scripts/summarize_n2_research.py": "610cd160260ca1cb2d0f4a519ab42831d28e850f87c41645af8ace257b997d12"
+  }
+}

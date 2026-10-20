@@ -1,0 +1,886 @@
+{
+  "scope": "Common actual paths, summary, decisions and terminal cohorts; changed service/forecast schema excluded explicitly",
+  "records": [
+    {
+      "name": "W01_speed6_lag1__schedule",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6444,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W01_speed6_lag1__replacement_ready",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W01_speed6_lag1__rolling_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W01_speed6_lag1__rollout_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W01_speed6_lag1__anchored_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W02_speed6_lag3__schedule",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6444,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W02_speed6_lag3__replacement_ready",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W02_speed6_lag3__rolling_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W02_speed6_lag3__rollout_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W02_speed6_lag3__anchored_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W03_speed8_lag2__schedule",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6436,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W03_speed8_lag2__replacement_ready",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6448,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W03_speed8_lag2__rolling_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6448,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W03_speed8_lag2__rollout_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6448,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W03_speed8_lag2__anchored_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6448,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W04_authority5__schedule",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6452,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W04_authority5__replacement_ready",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6464,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W04_authority5__rolling_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6464,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W04_authority5__rollout_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6464,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W04_authority5__anchored_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6464,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W05_authority100__schedule",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6436,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W05_authority100__replacement_ready",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6448,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W05_authority100__rolling_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6448,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W05_authority100__rollout_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6448,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W05_authority100__anchored_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6448,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W06_low_cash__schedule",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6444,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W06_low_cash__replacement_ready",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W06_low_cash__rolling_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W06_low_cash__rollout_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W06_low_cash__anchored_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6456,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W07_high_growth__schedule",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6428,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W07_high_growth__replacement_ready",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6440,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W07_high_growth__rolling_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6440,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W07_high_growth__rollout_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6440,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W07_high_growth__anchored_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6440,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W08_compound__schedule",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6429,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W08_compound__replacement_ready",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6441,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W08_compound__rolling_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6441,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W08_compound__rollout_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6441,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    },
+    {
+      "name": "W08_compound__anchored_guard",
+      "passed": true,
+      "differences": [],
+      "failures": [],
+      "numeric_fields": 6441,
+      "tolerances": {
+        "relative": 1e-12,
+        "cny_absolute": 0.02,
+        "other_absolute": 1e-06,
+        "cny_cap": 0.02,
+        "other_cap": 0.001,
+        "research_cumulative_cost": {
+          "path": "/summary/discounted_resource_cost_cny",
+          "absolute_floor_cny": 0.02,
+          "maximum_ulps": 4,
+          "rationale": "Bounded binary64 roundoff of the discounted cumulative total only"
+        }
+      },
+      "exact_match": true,
+      "upstream_passed": true
+    }
+  ],
+  "all_common_fields_equivalent": true
+}

@@ -1,0 +1,46 @@
+{
+  "round": "R9",
+  "candidate": "anchored_guard",
+  "identity": "same_frozen_R5_protocol_reexecuted_after_current_information_boundary_correction_not_new_blind_validation",
+  "hypothesis": "The anchored guard retains its empirical improvement when future GDP regime information is removed; all R5 gates unchanged.",
+  "acceptance": {
+    "all_conditions_must_finish": true,
+    "reference": "rolling_guard",
+    "maximum_service_fraction_regret_each_condition": 0.001,
+    "maximum_cost_increase_fraction_each_condition": 0.0001,
+    "maximum_co2_increase_fraction_each_condition": 0.002,
+    "minimum_conditions_with_at_least_5_percent_retention_saving": 4,
+    "minimum_conditions_with_positive_retention_saving": 6,
+    "maximum_terminal_managed_capacity_increase_mw": 0.001,
+    "maximum_same_cohort_exit_delay_vs_reference_years": 0,
+    "minimum_nondominated_conditions_against_all_controls": 6,
+    "maximum_wall_seconds_per_candidate_case": 360,
+    "note": "Same numerical gates as R3, no relaxation. New conditional scenarios, not independent real-world observations; previously inspected R3 conditions remain exploratory for the revised rule. All service/year cells including exports retained."
+  },
+  "end_year": 2060,
+  "method": {
+    "horizon": 3,
+    "pressure": 0.85,
+    "risk_limit": 0.02
+  },
+  "rules": [
+    "schedule",
+    "replacement_ready",
+    "rolling_guard",
+    "rollout_guard",
+    "anchored_guard"
+  ],
+  "conditions": [
+    {
+      "id": "W06_low_cash",
+      "acceleration": 6,
+      "opening": {
+        "opening_cash_capex_fraction": 0.05
+      },
+      "scenario": {
+        "infrastructure_delay_years": 2
+      }
+    }
+  ],
+  "parent_protocol_sha256": "3106379c8d4ae493c61299f0e933a1dcc6a5f80f88c1f2dc1cfc1c2643055aa9"
+}

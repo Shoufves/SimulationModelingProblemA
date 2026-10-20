@@ -1,0 +1,446 @@
+{
+  "generated_at": "2026-10-20T09:00:40+08:00",
+  "selected_stage": "W2",
+  "current_stage": "W2",
+  "workflow_check": {
+    "passed": true,
+    "errors": [],
+    "original_inputs": [
+      {
+        "path": "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+        "unchanged": true
+      },
+      {
+        "path": "附件1.xlsx",
+        "unchanged": true
+      },
+      {
+        "path": "附件2.xlsx",
+        "unchanged": true
+      },
+      {
+        "path": "附件3.xlsx",
+        "unchanged": true
+      },
+      {
+        "path": "附件4.xlsx",
+        "unchanged": true
+      }
+    ]
+  },
+  "formal_input_check": {
+    "passed": true,
+    "errors": [],
+    "accepted_inputs": [
+      {
+        "dataset_path": "data/observations/demand_energy_total_2015_2024.json",
+        "review_id": "R-S01-DEMAND-20261017",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+        "review_id": "R-S06-GDP-20261017",
+        "source_ids": [
+          "S06"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/power_official_release_2024.json",
+        "review_id": "R-S17-20261016",
+        "source_ids": [
+          "S17"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/energy_official_communique_2024.json",
+        "review_id": "R-S13-20261017",
+        "source_ids": [
+          "S13"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_official_report_2024.json",
+        "review_id": "R-S22-20261017",
+        "source_ids": [
+          "S22"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/gas_apparent_consumption_2024.json",
+        "review_id": "R-S23-20261017",
+        "source_ids": [
+          "S23"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/electricity_demand_official_2024.json",
+        "review_id": "R-S24-20261017",
+        "source_ids": [
+          "S24"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/renewable_operation_official_2024.json",
+        "review_id": "R-S25-20261017",
+        "source_ids": [
+          "S25"
+        ]
+      },
+      {
+        "dataset_path": "data/observations/qinshan_asset_permit_case.json",
+        "review_id": "R-QINSHAN-ASSETS-20261017",
+        "source_ids": [
+          "S26",
+          "S27",
+          "S28"
+        ]
+      }
+    ],
+    "declared_inputs": 9,
+    "limitation": "仅检查已登记子集的证据结构和文件一致性；不自动验证原文真伪、转录正确性、数据覆盖完整性、情景参数或模型有效性。未准入不等于原数值错误。"
+  },
+  "requirement_status_counts": {
+    "not_started": 9,
+    "partial": 15,
+    "done": 0
+  },
+  "source_registry_count": 28,
+  "observation_inventory": [
+    {
+      "path": "data/observations/anchors_2025.json",
+      "measurements": 20,
+      "source_ids": [
+        "S02",
+        "S04"
+      ],
+      "sha256": "ce1e1e77cce93ee853f112f560de607fd74b88be93388547a21f1bc50e7cb6bb"
+    },
+    {
+      "path": "data/observations/coal_balance_2015_2023.json",
+      "measurements": 87,
+      "source_ids": [
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "sha256": "847d28b3884bf1f95930a413a501c8d58ab8d11537be88bdda8a9342a31a8c74"
+    },
+    {
+      "path": "data/observations/demand_energy_total_2015_2024.json",
+      "measurements": 10,
+      "source_ids": [
+        "S01"
+      ],
+      "sha256": "909be60ca5dd53e79059df6eb087db132b34ca1f831728efe2debb20a02e80f0"
+    },
+    {
+      "path": "data/observations/demand_real_gdp_growth_2015_2024.json",
+      "measurements": 10,
+      "source_ids": [
+        "S06"
+      ],
+      "sha256": "3769c34c8f38f39dd456665758da7f892dd11cf1eb90e0603f45254fecdbc6e1"
+    },
+    {
+      "path": "data/observations/electricity_demand_official_2024.json",
+      "measurements": 11,
+      "source_ids": [
+        "S24"
+      ],
+      "sha256": "145522816e8d23c8f96356875d3886186cf0f04ba2724f82b3f554f4c5a26f34"
+    },
+    {
+      "path": "data/observations/energy_consumption_2015_2024.json",
+      "measurements": 50,
+      "source_ids": [
+        "S01"
+      ],
+      "sha256": "fc2e26b41d3f3e54751e097f6969494884c4e69378efef894b9a72583166f126"
+    },
+    {
+      "path": "data/observations/energy_official_communique_2024.json",
+      "measurements": 33,
+      "source_ids": [
+        "S13"
+      ],
+      "sha256": "26558028bfefaa8a4755028b01f36185d7fb6d9d7c2e145c6accb77b89b4a0af"
+    },
+    {
+      "path": "data/observations/fuel_production_2023_2024.json",
+      "measurements": 6,
+      "source_ids": [
+        "S16"
+      ],
+      "sha256": "f756a0a232a08c5b34d4d5302ffde1e0b455a62de0aab39a102a6839867c1606"
+    },
+    {
+      "path": "data/observations/gas_apparent_consumption_2024.json",
+      "measurements": 2,
+      "source_ids": [
+        "S23"
+      ],
+      "sha256": "a0a0febf71f955b657bad404d66700db7804a056c36a5b3c2f01b4eb4ef7019a"
+    },
+    {
+      "path": "data/observations/gas_official_report_2024.json",
+      "measurements": 20,
+      "source_ids": [
+        "S22"
+      ],
+      "sha256": "20a0a46a2113440e2cf65d9395ff4c4377587cd83124e9f92c0f266af2fadc9b"
+    },
+    {
+      "path": "data/observations/macro_growth_2015_2024.json",
+      "measurements": 30,
+      "source_ids": [
+        "S06"
+      ],
+      "sha256": "c8039a79be2f80fc18e42d2a5fcc1ea7e87939f5b9a67cb70e771baafd51ca14"
+    },
+    {
+      "path": "data/observations/petroleum_balance_selected_years.json",
+      "measurements": 45,
+      "source_ids": [
+        "S14",
+        "S15"
+      ],
+      "sha256": "f498bf491177655cc3f2e0aa2565988f8bd2a16526fb0700c094ca16b49b5b65"
+    },
+    {
+      "path": "data/observations/power_capacity_2015_2024.json",
+      "measurements": 70,
+      "source_ids": [
+        "S05"
+      ],
+      "sha256": "c2e25b7bcac1b38967526f00253e8807c27b9351af56a5d69263c23be82c3f27"
+    },
+    {
+      "path": "data/observations/power_generation_2015_2024.json",
+      "measurements": 51,
+      "source_ids": [
+        "S07",
+        "S08",
+        "S09",
+        "S13"
+      ],
+      "sha256": "a6aae99a8d04304f29ccb291cabb6dab06ac208493cb498cb1fc149223738e11"
+    },
+    {
+      "path": "data/observations/power_official_release_2024.json",
+      "measurements": 10,
+      "source_ids": [
+        "S17"
+      ],
+      "sha256": "c4ad62a266a5136d9d8a76dc795bfd2140c90f16e26007a5e672a22207a3b90c"
+    },
+    {
+      "path": "data/observations/qinshan_asset_permit_case.json",
+      "measurements": 1,
+      "source_ids": [
+        "S26",
+        "S27",
+        "S28"
+      ],
+      "sha256": "49377e3598b1f91f9fa226551e92ec06b860da3a9bf21f7f918e8993e0ee56e6"
+    },
+    {
+      "path": "data/observations/renewable_operation_official_2024.json",
+      "measurements": 15,
+      "source_ids": [
+        "S25"
+      ],
+      "sha256": "f59303c667f0529820da3ecd3bb5386445eb5a248051325681641626aacfcb55"
+    }
+  ],
+  "measurement_count": 471,
+  "stages": [
+    {
+      "id": "W0",
+      "title": "题目对齐及工作流",
+      "status": "done",
+      "depends_on": [],
+      "prompt": "prompts/01_alignment.md",
+      "evidence": [
+        "WORKFLOW.md",
+        "docs/06_alignment_review.md",
+        "workflow/requirements.json",
+        "scripts/workflow_status.py",
+        "tests/test_workflow.py"
+      ],
+      "acceptance": "目标覆盖、提示词、状态和证据检查工具齐全且验证通过。"
+    },
+    {
+      "id": "W1",
+      "title": "题给附件清洗与使用",
+      "status": "in_progress",
+      "depends_on": [
+        "W0"
+      ],
+      "prompt": "prompts/02_attachments.md",
+      "evidence": [
+        "scripts/build_attachments.py",
+        "data/processed/attachment_assets.json",
+        "data/attachment_reviews.json",
+        "outputs/attachments/report.md",
+        "docs/16_asset_lifecycle_case.md",
+        "outputs/asset_cases/index.md",
+        "outputs/data_review/review_assets_20261017.md"
+      ],
+      "acceptance": "四份附件标准表、原行定位、核查标记及用途映射齐全。"
+    },
+    {
+      "id": "W2",
+      "title": "官方数据补齐与核验",
+      "status": "in_progress",
+      "depends_on": [
+        "W0"
+      ],
+      "prompt": "prompts/03_official_data.md",
+      "evidence": [
+        "data/raw/official/S17_page_capture.txt",
+        "data/raw/official/S13_selected_capture.txt",
+        "data/raw/official/S22_selected_capture.txt",
+        "data/raw/official/S23_page_capture.txt",
+        "data/raw/official/S24_page_capture.txt",
+        "data/raw/official/S25_selected_capture.txt",
+        "data/raw/official/S01_demand_excerpt_20261017.txt",
+        "data/raw/official/S06_gdp_excerpt_20261017.txt",
+        "data/evidence_reviews.json",
+        "workflow/model_inputs.json",
+        "docs/08_statistical_boundaries.md",
+        "outputs/data_review/catalog.md",
+        "data/raw/official/S26_qinshan_permits_2017_capture.txt",
+        "data/raw/official/S27_qinshan_extension_2021_capture.txt",
+        "data/raw/official/S28_qinshan_design_life_capture.txt"
+      ],
+      "acceptance": "最低可用正式子集证据通过；核算边界与关键缺口有处置说明。"
+    },
+    {
+      "id": "W3",
+      "title": "现状定量评价",
+      "status": "in_progress",
+      "depends_on": [
+        "W1",
+        "W2"
+      ],
+      "prompt": "prompts/04_current_assessment.md",
+      "evidence": [
+        "outputs/current_assessment/electricity_2024_partial.md",
+        "outputs/current_assessment/energy_2024_partial.md",
+        "outputs/current_assessment/gas_2024_partial.md",
+        "outputs/current_assessment/four_dimensions_2024_partial.md",
+        "outputs/current_assessment/four_dimensions_2024.json",
+        "outputs/current_assessment/electricity_inputs_2024_partial.md",
+        "outputs/current_assessment/electricity_inputs_2024.json"
+      ],
+      "acceptance": "完成供给保障、低碳、经济性、协调性及综合结论。"
+    },
+    {
+      "id": "W4",
+      "title": "多智能体实现",
+      "status": "in_progress",
+      "depends_on": [
+        "W1",
+        "W2"
+      ],
+      "prompt": "prompts/05_agent_model.md",
+      "evidence": [
+        "docs/09_agent_prototype.md",
+        "examples/synthetic_agents.json",
+        "src/energy_model/agents.py",
+        "scripts/run_agent_prototype.py",
+        "tests/test_agents.py",
+        "outputs/prototype/report.md",
+        "outputs/data_review/history_readiness.md",
+        "docs/10_operation_windows.md",
+        "src/energy_model/operations.py",
+        "examples/synthetic_operation_windows.json",
+        "scripts/run_operation_windows.py",
+        "tests/test_operations.py",
+        "outputs/prototype/operations/report.md",
+        "docs/11_calibration_input_contract.md",
+        "docs/12_workbench.md",
+        "apps/workbench.py",
+        "src/energy_model/workbench.py",
+        "run_workbench.ps1",
+        "tests/test_workbench.py",
+        "tests/ui/test_workbench_app.py",
+        "outputs/data_review/review_workbench_20261017.md",
+        "docs/16_asset_lifecycle_case.md",
+        "src/energy_model/asset_lifecycle.py",
+        "scripts/run_asset_lifecycle_case.py",
+        "tests/test_asset_lifecycle.py",
+        "outputs/asset_cases/qinshan_8daa8f844e19a278/result.json",
+        "outputs/data_review/review_assets_20261017.md"
+      ],
+      "acceptance": "可运行主体决策、交互和约束验证闭环。",
+      "progress_note": "独立真实许可事件模块已连接附件3条厂记录与7台机组，尚未连接年度调度或自主经济决策；全国初态、成本和主体校准未验收。"
+    },
+    {
+      "id": "W5",
+      "title": "历史校准与验证",
+      "status": "in_progress",
+      "depends_on": [
+        "W4"
+      ],
+      "prompt": "prompts/06_calibration.md",
+      "evidence": [
+        "outputs/calibration/demand_94d020b761970170/result.json",
+        "outputs/calibration/demand_94d020b761970170/report.md",
+        "outputs/data_review/review_demand_minimal_20261017.md",
+        "outputs/calibration/demand_3312e2a52e0430a7/result.json",
+        "outputs/calibration/demand_3312e2a52e0430a7/report.md"
+      ],
+      "progress_note": "已完成限定真实总能源需求统计基线条件回算；全国ABM、多指标行为校准和机制对照仍未完成，W4依赖未验收，不宣称W5完成。",
+      "acceptance": "输入证据检查通过，多指标校准、历史检验与机制对照完成。"
+    },
+    {
+      "id": "W6",
+      "title": "基准及对比情景",
+      "status": "pending",
+      "depends_on": [
+        "W5"
+      ],
+      "prompt": "prompts/07_scenarios.md",
+      "evidence": [],
+      "acceptance": "全部2030/2060指标及至少三种对比情景、灵敏度和区间齐全。"
+    },
+    {
+      "id": "W7",
+      "title": "能源安全与优化",
+      "status": "pending",
+      "depends_on": [
+        "W6"
+      ],
+      "prompt": "prompts/08_security_optimization.md",
+      "evidence": [],
+      "acceptance": "安全框架、压力实验和约束下建议有结果支撑。"
+    },
+    {
+      "id": "W8",
+      "title": "论文视频复现包",
+      "status": "pending",
+      "depends_on": [
+        "W3",
+        "W7"
+      ],
+      "prompt": "prompts/09_deliverables.md",
+      "evidence": [],
+      "acceptance": "论文、实际<=180秒视频、源代码和原始资料及说明完成。"
+    },
+    {
+      "id": "W9",
+      "title": "最终审查",
+      "status": "pending",
+      "depends_on": [
+        "W8"
+      ],
+      "prompt": "prompts/10_final_review.md",
+      "evidence": [],
+      "acceptance": "所有必需要求均实质验收，提交材料检查通过。"
+    }
+  ],
+  "pending_dependencies": []
+}

@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "reference": "outputs/q1/p1_yx",
+  "fresh": "outputs/q1/q3_yx_regression",
+  "files_compared": 18,
+  "numeric_values_compared": 0,
+  "hashes": [
+    {
+      "file": "cost_sensitivity.svg",
+      "base": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6",
+      "reproduced": "fb4f4b503b6443b2f741652911f25c148551cf44598f2a34a2a522d3b50f00a6",
+      "byte_identical": true
+    },
+    {
+      "file": "coverage.csv",
+      "base": "39afebba91a3a4335b09cce4ffb282bf9fa5241c84fd6a3de656ff837917796a",
+      "reproduced": "39afebba91a3a4335b09cce4ffb282bf9fa5241c84fd6a3de656ff837917796a",
+      "byte_identical": true
+    },
+    {
+      "file": "demand_trends.svg",
+      "base": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406",
+      "reproduced": "aacb43012982c46f2e0f091f644537832b6cc68c3c2e1e390bda9a9087506406",
+      "byte_identical": true
+    },
+    {
+      "file": "energy_assessment.csv",
+      "base": "c0d33c6daabeb73699d1a3a18762b3047d5d668fa4a52688489150daab6e27dd",
+      "reproduced": "c0d33c6daabeb73699d1a3a18762b3047d5d668fa4a52688489150daab6e27dd",
+      "byte_identical": true
+    },
+    {
+      "file": "energy_roles.csv",
+      "base": "7dfebae87f6f211afdb3bf9bb07d4a371feae05a196bd3370e6e2fa26c8fc9ba",
+      "reproduced": "7dfebae87f6f211afdb3bf9bb07d4a371feae05a196bd3370e6e2fa26c8fc9ba",
+      "byte_identical": true
+    },
+    {
+      "file": "gaps_and_conflicts.csv",
+      "base": "46e4da700806daed8dfaecca0265adb22a431367dd304a9430f8f4f028feecf3",
+      "reproduced": "46e4da700806daed8dfaecca0265adb22a431367dd304a9430f8f4f028feecf3",
+      "byte_identical": true
+    },
+    {
+      "file": "history.csv",
+      "base": "9f142b8a22f6703adf3e56cba40a200c1c4523c386f0fa41d73e0d7be824b59c",
+      "reproduced": "9f142b8a22f6703adf3e56cba40a200c1c4523c386f0fa41d73e0d7be824b59c",
+      "byte_identical": true
+    },
+    {
+      "file": "import_origins.csv",
+      "base": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469",
+      "reproduced": "cf5f645606ffcf21e1e7d968f0615e9a016e190d50ec8eba05a036cdede39469",
+      "byte_identical": true
+    },
+    {
+      "file": "indicators.csv",
+      "base": "e5f28dbc98632bc7bf81835843ed103dea4f0ec250731c66ebf7ca7b82165564",
+      "reproduced": "e5f28dbc98632bc7bf81835843ed103dea4f0ec250731c66ebf7ca7b82165564",
+      "byte_identical": true
+    },
+    {
+      "file": "model_handoff.csv",
+      "base": "763e59930721e8b1b665a0e7648c8fa1975516edcb2803844f91a3250d488541",
+      "reproduced": "763e59930721e8b1b665a0e7648c8fa1975516edcb2803844f91a3250d488541",
+      "byte_identical": true
+    },
+    {
+      "file": "price_trends.svg",
+      "base": "5fb4a559ebd17aa763b3ef11eccbe730bdb628323492bf43f4bee5d63a0a7408",
+      "reproduced": "5fb4a559ebd17aa763b3ef11eccbe730bdb628323492bf43f4bee5d63a0a7408",
+      "byte_identical": true
+    },
+    {
+      "file": "regional_comparison.csv",
+      "base": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51",
+      "reproduced": "47a223bec8227850784e1b770bdb5e4f706d00147bad6a8c2370842d629ded51",
+      "byte_identical": true
+    },
+    {
+      "file": "regional_shares.svg",
+      "base": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396",
+      "reproduced": "dc47076d4f500e049b07fadccaf965f6c011238d3abeeb80de8fd59013107396",
+      "byte_identical": true
+    },
+    {
+      "file": "renewable_regions.csv",
+      "base": "467362307a9a9a14563380200bc0d2310fdcc54a3d43ae77310a95dd13f669c8",
+      "reproduced": "467362307a9a9a14563380200bc0d2310fdcc54a3d43ae77310a95dd13f669c8",
+      "byte_identical": true
+    },
+    {
+      "file": "report.md",
+      "base": "76391387299f31573ab85330e5c69ac961c8084c3c52f14c8e1ef466098a44ce",
+      "reproduced": "76391387299f31573ab85330e5c69ac961c8084c3c52f14c8e1ef466098a44ce",
+      "byte_identical": true
+    },
+    {
+      "file": "static_balance.json",
+      "base": "30a66292a4b577478c0f84f68dae004646dbbbc428a5ace8c95f3e2779ce7624",
+      "reproduced": "30a66292a4b577478c0f84f68dae004646dbbbc428a5ace8c95f3e2779ce7624",
+      "byte_identical": true
+    },
+    {
+      "file": "synergy_assessment.csv",
+      "base": "9acb3c05e82900862fe84cd6ef8388edc1e1738034a6caaca3227d9afdd433b7",
+      "reproduced": "9acb3c05e82900862fe84cd6ef8388edc1e1738034a6caaca3227d9afdd433b7",
+      "byte_identical": true
+    },
+    {
+      "file": "technology_region_capacities.csv",
+      "base": "3469a8fdbb7c12ef98c19bb8eae1c27e30e54fd5c9d19f60ef629431d7f429a4",
+      "reproduced": "3469a8fdbb7c12ef98c19bb8eae1c27e30e54fd5c9d19f60ef629431d7f429a4",
+      "byte_identical": true
+    }
+  ],
+  "errors": [],
+  "excluded": {},
+  "original_manifest_sha256": "e58a9e5ac4d24eaa0e261038e36c662ef97578f78311f513d3a95c9808f460d4",
+  "fresh_manifest_sha256": "007df8361ef5a403f2eb3a22c43a051fdcc6cd82bbc19653b8795583b594ba11"
+}

@@ -1,0 +1,33 @@
+{
+  "round":"R5",
+  "candidate":"anchored_guard",
+  "identity":"frozen_before_running_new_conditions_after_R4_method_revision",
+  "hypothesis":"Anchoring prevents additional retention while feedback-aware release preserves service and yields a stable, material reduction of unnecessary retained capacity.",
+  "acceptance":{
+    "all_conditions_must_finish":true,
+    "reference":"rolling_guard",
+    "maximum_service_fraction_regret_each_condition":0.001,
+    "maximum_cost_increase_fraction_each_condition":0.0001,
+    "maximum_co2_increase_fraction_each_condition":0.002,
+    "minimum_conditions_with_at_least_5_percent_retention_saving":4,
+    "minimum_conditions_with_positive_retention_saving":6,
+    "maximum_terminal_managed_capacity_increase_mw":0.001,
+    "maximum_same_cohort_exit_delay_vs_reference_years":0,
+    "minimum_nondominated_conditions_against_all_controls":6,
+    "maximum_wall_seconds_per_candidate_case":360,
+    "note":"Same numerical gates as R3, no relaxation. New conditional scenarios, not independent real-world observations; previously inspected R3 conditions remain exploratory for the revised rule. All service/year cells including exports retained."
+  },
+  "end_year":2060,
+  "method":{"horizon":3,"pressure":0.85,"risk_limit":0.02},
+  "rules":["schedule","replacement_ready","rolling_guard","rollout_guard","anchored_guard"],
+  "conditions":[
+    {"id":"W01_speed6_lag1","acceleration":6,"scenario":{"infrastructure_delay_years":1}},
+    {"id":"W02_speed6_lag3","acceleration":6,"scenario":{"infrastructure_delay_years":3}},
+    {"id":"W03_speed8_lag2","acceleration":8,"scenario":{"infrastructure_delay_years":2}},
+    {"id":"W04_authority5","acceleration":6,"record":"net58/5","scenario":{"infrastructure_delay_years":1}},
+    {"id":"W05_authority100","acceleration":8,"record":"net58/100","scenario":{"infrastructure_delay_years":2}},
+    {"id":"W06_low_cash","acceleration":6,"opening":{"opening_cash_capex_fraction":0.05},"scenario":{"infrastructure_delay_years":2}},
+    {"id":"W07_high_growth","acceleration":8,"scenario":{"infrastructure_delay_years":1,"variant":{"gdp_growth_delta":0.01}}},
+    {"id":"W08_compound","acceleration":6,"scenario":{"infrastructure_delay_years":2,"event":{"start_year":2038,"end_year":2041,"gas_import_multiplier":0.5,"hydro_energy_multiplier":0.65,"renewable_availability_multiplier":0.65}}}
+  ]
+}

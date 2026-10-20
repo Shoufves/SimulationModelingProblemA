@@ -1,0 +1,41 @@
+{
+  "technical_passed": true,
+  "status": "technical_passed_human_review_pending",
+  "base": "7d52f439992503eac5978c6f218f5289fe3e2195",
+  "tests": 339,
+  "test_errors": 0,
+  "test_skips": 0,
+  "identical_diagnostic_files": {
+    "evidence_checks.json": true,
+    "q1_source_exposure.json": true,
+    "q3_effectiveness.json": true,
+    "text_metrics.json": true,
+    "unchanged_baseline.json": true
+  },
+  "protected_scientific_files": 113,
+  "verified_numerical_claim_groups": 24,
+  "literature_records": 15,
+  "literature_check": "Bibliographic/abstract review as individually scoped; not an exhaustive novelty certificate",
+  "diagnostics_manifest_sha256": "b6509825c2015198db094cd72c51a8b0da1f9cb29326bb19833a8263cc1fe2be",
+  "reproduction_manifest_sha256": "de32c5b6f3b76c9ee6ee8b2284c42872dd18577e4cd600efd9dac167e7c2f36a",
+  "gates_sha256": "c26d580f02061c70b2b43a567851cc9c43d3a4c8a4e137d3bcc4a9e9b56cc7ad",
+  "document_hashes": {
+    "docs/research/ai-use-and-human-review.md": "01365bb37b24a94f095b20a39c5ede0f3cf226e63a215ab959d243c821a95e34",
+    "docs/research/q1-q3-audit-targets.md": "3077ce8bb5c70da3c4a314649907f77cad1656d22a61fae065fe9bffb841f089",
+    "docs/research/q1-q3-evidence.json": "e39bd03e9646d72adb887b2e70c83c51944f91e8320dc0fc84f73ddb2a2dd976",
+    "docs/research/q1-q3-innovation-review.md": "02cb4be038ac23b3ec822218c3fb5278b078eec4dbd9a2aba06bae391c5a9d29",
+    "docs/research/q1-q3-literature.json": "aacd2ad44074367875ce320ac0ae12e542e7e5dcb48ba15ffd36a8e829ec5b7e",
+    "docs/research/q1-q3-text-review.md": "00e093fc065f60cb6e673a36d178b97714e22a603e33f61f0ff76a1b6c6e19e5",
+    "docs/paper/q1-evidence-analysis.md": "44ef175691c2baa245b087ae69ef0d41d7004259d4078e484a676773ff78c970",
+    "docs/paper/q3-innovation-analysis.md": "917e849bb7e061cfe35e2ba98a8ae28244747947bfbf683f7c15bde0bfff3b16",
+    "README.md": "43a9a37a9993a7215145b1887dc7b1bcfbd9fddb7324ba055a1257ea3550984f",
+    "docs/RUNNING.md": "ee0555fb2c2ef30cfc878d5ccf92cfda783ab50c844e1639ef90c91fae53d034"
+  },
+  "formal_aigc_detector_percent": null,
+  "true_ai_authorship_percent": null,
+  "external_plagiarism_percent": null,
+  "human_validation": "pending_actual_signatures",
+  "team_approved": false,
+  "novelty_conclusion": "Application-level explanatory increments; no new algorithm or universal performance gain demonstrated",
+  "scope": "Fresh supplementary analysis twice; original scientific code/inputs/outputs unchanged. Prior full Q1/Q2/Q3 reproduction evidence reused, not rerun here."
+}

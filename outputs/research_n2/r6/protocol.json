@@ -1,0 +1,25 @@
+{
+  "round": "R6",
+  "identity": "fixed_pipeline_mechanism_ablation_not_additional_validation_success_count",
+  "hypothesis": "Savings from feedback-aware screening need not survive when new plant and infrastructure responses are disabled; report this domain separately.",
+  "falsifier": "Identical actions or remaining severe service violations cannot be presented as a positive fixed-pipeline innovation result.",
+  "end_year": 2060,
+  "method": {
+    "horizon": 3,
+    "pressure": 0.85,
+    "risk_limit": 0.02,
+    "committed_clean_delay": 3
+  },
+  "rules": [
+    "schedule",
+    "replacement_ready",
+    "rolling_guard",
+    "anchored_guard"
+  ],
+  "conditions": [
+    {
+      "id": "fixed_speed6_delay3",
+      "acceleration": 6
+    }
+  ]
+}

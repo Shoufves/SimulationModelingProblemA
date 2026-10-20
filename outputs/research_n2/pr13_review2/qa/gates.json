@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "commands": [
+    {
+      "name": "audit",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "audit"
+      ],
+      "exit_code": 0,
+      "log_sha256": "a61140634d13d852aa75436105e664422ddf2ab05ad331d7eadcda71acaad9f2"
+    },
+    {
+      "name": "formal_inputs",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/workflow_status.py",
+        "--check-formal-inputs"
+      ],
+      "exit_code": 0,
+      "log_sha256": "5da9e52f12f5a13032091f0101f886b08fc98e3ff44ded4148416f3f2fa4e8f2"
+    },
+    {
+      "name": "key_scan",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/scan_google_keys.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "418e9d31b52979052958833a59cc0fa51ac04156b7ab9043746707681585c23d"
+    }
+  ],
+  "scope": "Delivery checks only; no fresh simulation or test execution claimed"
+}

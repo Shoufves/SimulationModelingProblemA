@@ -1,0 +1,1936 @@
+{
+  "implementation_classes": [
+    {
+      "family": "base",
+      "members": [
+        "policy_0",
+        "policy_1"
+      ],
+      "public_commitments": [],
+      "annual_ledger_sha256": "5046ddf80ad41d9d0306c0512fa6116ba7d94ad24e9db4c970f64e299a765a0b"
+    },
+    {
+      "family": "base",
+      "members": [
+        "policy_2",
+        "policy_4"
+      ],
+      "public_commitments": [
+        {
+          "action": "storage",
+          "amount_cny": 29185712321.77207,
+          "capacity_mw": 15861.800174876129,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        }
+      ],
+      "annual_ledger_sha256": "7a8da5cc2ceded8328f85dd3ab714a8d4cad20c6d8b99ccb988f46cfe12e82b2"
+    },
+    {
+      "family": "base",
+      "members": [
+        "policy_3",
+        "policy_5"
+      ],
+      "public_commitments": [
+        {
+          "action": "gas",
+          "amount_cny": 1842286312.5388544,
+          "capacity_mw": 61409.54375129515,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        }
+      ],
+      "annual_ledger_sha256": "26656e515b91d106cdcc772a48b717e021a17b8fabbb6ffd38ea13f5aae19572"
+    },
+    {
+      "family": "base",
+      "members": [
+        "policy_6",
+        "policy_7"
+      ],
+      "public_commitments": [
+        {
+          "action": "gas",
+          "amount_cny": 1842286312.5388544,
+          "capacity_mw": 61409.54375129515,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        },
+        {
+          "action": "storage",
+          "amount_cny": 29185712321.77207,
+          "capacity_mw": 15861.800174876129,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        }
+      ],
+      "annual_ledger_sha256": "9e713faaae30a21aa6213179bb6e1a3ebf5e187227cbf6f2437a4bd31e346a42"
+    },
+    {
+      "family": "policy_cost_0.5",
+      "members": [
+        "policy_cost_0.5_0",
+        "policy_cost_0.5_1"
+      ],
+      "public_commitments": [],
+      "annual_ledger_sha256": "5046ddf80ad41d9d0306c0512fa6116ba7d94ad24e9db4c970f64e299a765a0b"
+    },
+    {
+      "family": "policy_cost_0.5",
+      "members": [
+        "policy_cost_0.5_2",
+        "policy_cost_0.5_4"
+      ],
+      "public_commitments": [
+        {
+          "action": "storage",
+          "amount_cny": 14592856160.886036,
+          "capacity_mw": 15861.800174876129,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        }
+      ],
+      "annual_ledger_sha256": "57f2ded5beb112365f36451ccfa2523c065f73a90efc0c440a4577ec8d08daf8"
+    },
+    {
+      "family": "policy_cost_0.5",
+      "members": [
+        "policy_cost_0.5_3",
+        "policy_cost_0.5_5"
+      ],
+      "public_commitments": [
+        {
+          "action": "gas",
+          "amount_cny": 921143156.2694272,
+          "capacity_mw": 61409.54375129515,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        }
+      ],
+      "annual_ledger_sha256": "4529a17b6e8c2760efb6ca5b5eb004de7042b14812f4ca8e5525462d7c474b4e"
+    },
+    {
+      "family": "policy_cost_0.5",
+      "members": [
+        "policy_cost_0.5_6",
+        "policy_cost_0.5_7"
+      ],
+      "public_commitments": [
+        {
+          "action": "gas",
+          "amount_cny": 921143156.2694272,
+          "capacity_mw": 61409.54375129515,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        },
+        {
+          "action": "storage",
+          "amount_cny": 14592856160.886036,
+          "capacity_mw": 15861.800174876129,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        }
+      ],
+      "annual_ledger_sha256": "57a7adc7ccd4248368390176f4aca39e43deb70146f07aa8bd26cde7cb6844a3"
+    },
+    {
+      "family": "policy_cost_1.5",
+      "members": [
+        "policy_cost_1.5_0",
+        "policy_cost_1.5_1"
+      ],
+      "public_commitments": [],
+      "annual_ledger_sha256": "5046ddf80ad41d9d0306c0512fa6116ba7d94ad24e9db4c970f64e299a765a0b"
+    },
+    {
+      "family": "policy_cost_1.5",
+      "members": [
+        "policy_cost_1.5_2",
+        "policy_cost_1.5_4"
+      ],
+      "public_commitments": [
+        {
+          "action": "storage",
+          "amount_cny": 43778568482.65811,
+          "capacity_mw": 15861.800174876129,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        }
+      ],
+      "annual_ledger_sha256": "8fb382684467e333259a4d22a4727d021982bfabb46620bc90339a66e7d880c0"
+    },
+    {
+      "family": "policy_cost_1.5",
+      "members": [
+        "policy_cost_1.5_3",
+        "policy_cost_1.5_5"
+      ],
+      "public_commitments": [
+        {
+          "action": "gas",
+          "amount_cny": 2763429468.8082814,
+          "capacity_mw": 61409.54375129515,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        }
+      ],
+      "annual_ledger_sha256": "fb420e862b69e4ee894ea8e3c6e73c55bc5f5bec3e0d41f60b358a3911005507"
+    },
+    {
+      "family": "policy_cost_1.5",
+      "members": [
+        "policy_cost_1.5_6",
+        "policy_cost_1.5_7"
+      ],
+      "public_commitments": [
+        {
+          "action": "gas",
+          "amount_cny": 2763429468.8082814,
+          "capacity_mw": 61409.54375129515,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        },
+        {
+          "action": "storage",
+          "amount_cny": 43778568482.65811,
+          "capacity_mw": 15861.800174876129,
+          "decision": 2025,
+          "online": 2027,
+          "year": 2025
+        }
+      ],
+      "annual_ledger_sha256": "45c3f786a230831090e7ed35804dac86b6e34e91889fc3b7c0ed919f0b21d517"
+    }
+  ],
+  "annual_cases_checked": 24,
+  "unique_baseline_deployments": 4,
+  "nominal_baseline_policies": 8,
+  "h01_design_labelled_settings": 40,
+  "h01_unique_physical_settings": 34,
+  "h01_summary": {
+    "labelled_rows": 160,
+    "labelled_service_bound_failures": 156,
+    "rolling_unique_feasible": 1,
+    "replacement_cost_lower": 10,
+    "replacement_cost_higher": 9,
+    "replacement_cost_tie": 15,
+    "replacement_max_abs_cost_delta_cny": 22837490281.0625
+  },
+  "h02_max_abs_J": 0.0,
+  "event_pairs": [
+    {
+      "first": "policy_0_selection_-1",
+      "other": "policy_1_selection_-1",
+      "canonical_sha256": "056df45bef90458f2876d422e47c4dcd33c538eb1ca66f60afb4ddf1e46da290"
+    },
+    {
+      "first": "policy_0_selection_0",
+      "other": "policy_1_selection_0",
+      "canonical_sha256": "eb5ef273fef512ac2b0e49be1feb0639fc6d68e5d5c45692299e69be15bbdfe6"
+    },
+    {
+      "first": "policy_0_selection_1",
+      "other": "policy_1_selection_1",
+      "canonical_sha256": "f751239867913ec8b27a7da5fe1aecf7a61eda90e4273d3d2c03a219206c51f5"
+    },
+    {
+      "first": "policy_0_test_2",
+      "other": "policy_1_test_2",
+      "canonical_sha256": "650fc8450653afd3c60b979ccca14d08c492777426f05de5986f43d8d385f646"
+    },
+    {
+      "first": "policy_0_test_3",
+      "other": "policy_1_test_3",
+      "canonical_sha256": "bd97b55db12bec077f242e953291c14be486175d9a4e6e86205472cf1a7ac9d1"
+    },
+    {
+      "first": "policy_0_scope_0.35",
+      "other": "policy_1_scope_0.35",
+      "canonical_sha256": "e1fd818027a021f0449c5b36742b0bf93d62829f1ee5467faa46073de429a2b0"
+    },
+    {
+      "first": "policy_0_scope_0.65",
+      "other": "policy_1_scope_0.65",
+      "canonical_sha256": "c7551e92e1e35e49745104fe604884eea1fcf41d89159ac8081f1c0b7e22cc73"
+    },
+    {
+      "first": "policy_2_selection_-1",
+      "other": "policy_4_selection_-1",
+      "canonical_sha256": "0b58a6ba8d910d7d97068b73da9ab1130a45bd90bc0f7e194f209d8d402c52a2"
+    },
+    {
+      "first": "policy_2_selection_0",
+      "other": "policy_4_selection_0",
+      "canonical_sha256": "6034cb22ab43728d13fd73306cc472269e58c59b45429b1eee4e191161f5a0fc"
+    },
+    {
+      "first": "policy_2_selection_1",
+      "other": "policy_4_selection_1",
+      "canonical_sha256": "9a1fbb43ee2da776d64cd95565df296dee94b8f9099065bb8793c240d9f55ab8"
+    },
+    {
+      "first": "policy_2_test_2",
+      "other": "policy_4_test_2",
+      "canonical_sha256": "bc30e138e7f2de28cf479897182fafcc822974c9bbba7f6b0addea4cdcfac7c1"
+    },
+    {
+      "first": "policy_2_test_3",
+      "other": "policy_4_test_3",
+      "canonical_sha256": "4e358b6120878b66487e118fdc67c2d0be01a2bfd969a8eeeb5a5dd5db2e4f6c"
+    },
+    {
+      "first": "policy_2_scope_0.35",
+      "other": "policy_4_scope_0.35",
+      "canonical_sha256": "01e7b7523a0935d5ae3f7cf7072a7cfe1d459ecf77ea2e0af5c56a09d8187cfd"
+    },
+    {
+      "first": "policy_2_scope_0.65",
+      "other": "policy_4_scope_0.65",
+      "canonical_sha256": "37f2890f25cf1d1b37ea9356024a486571caf77d0f544993c61cf8c2ac16f73b"
+    },
+    {
+      "first": "policy_3_selection_-1",
+      "other": "policy_5_selection_-1",
+      "canonical_sha256": "a97487f3f0bd57407c07c41be91042e5b9da3bbfd5a55a444b98cd5130f675d9"
+    },
+    {
+      "first": "policy_3_selection_0",
+      "other": "policy_5_selection_0",
+      "canonical_sha256": "a76fc981ee4a0896ebbc1d041f062143786f3f46423ad8fdcbd802914a346ac4"
+    },
+    {
+      "first": "policy_3_selection_1",
+      "other": "policy_5_selection_1",
+      "canonical_sha256": "6fba3e2dc0deff5007bf315123a1d68dfe277f7bb07e09bf743cfc00be29de58"
+    },
+    {
+      "first": "policy_3_test_2",
+      "other": "policy_5_test_2",
+      "canonical_sha256": "5b51c84c4d6bb86fdb02e1adcc77f92ae52f0f350ab844bd1047823fd747018d"
+    },
+    {
+      "first": "policy_3_test_3",
+      "other": "policy_5_test_3",
+      "canonical_sha256": "48c5a53db5199aee54c2e942032d5cf5e8b4f3a88ae689ae29a1e5d116245c86"
+    },
+    {
+      "first": "policy_3_scope_0.35",
+      "other": "policy_5_scope_0.35",
+      "canonical_sha256": "f2ff503ec670cde8d4d08565ed92109dfe5d14a10a1019ace8c22627ef0cc0e2"
+    },
+    {
+      "first": "policy_3_scope_0.65",
+      "other": "policy_5_scope_0.65",
+      "canonical_sha256": "4bae2278bf4e93d02ad53994b0ef40b03f67bccdf673fe0115447683e6d2fc3c"
+    },
+    {
+      "first": "policy_6_selection_-1",
+      "other": "policy_7_selection_-1",
+      "canonical_sha256": "eba4136731eb2f31cdad795f6b27d81a34c941edf21ae7f5d4eb47767e4ef83a"
+    },
+    {
+      "first": "policy_6_selection_0",
+      "other": "policy_7_selection_0",
+      "canonical_sha256": "717becbf1c55b35e25f7b51d22a555de0ab5bc8832b9286eb6ae857e54af490d"
+    },
+    {
+      "first": "policy_6_selection_1",
+      "other": "policy_7_selection_1",
+      "canonical_sha256": "9838c5378f7847075a197590173e94ed03dc8e53610dae9320c7b70542606033"
+    },
+    {
+      "first": "policy_6_test_2",
+      "other": "policy_7_test_2",
+      "canonical_sha256": "078c4c389f2958d34e2a12ad4eaeba65dfb57e405316149019d88c844a286f8c"
+    },
+    {
+      "first": "policy_6_test_3",
+      "other": "policy_7_test_3",
+      "canonical_sha256": "7a53b516f28b8d0fe8bf79b6c0c8a9639d225e18a42c197c74226033b80d136a"
+    },
+    {
+      "first": "policy_6_scope_0.35",
+      "other": "policy_7_scope_0.35",
+      "canonical_sha256": "4bd7cb4ac12e4fe22e3c2d63dfa528994e953a95f423e134923efeb4cb8f5ca2"
+    },
+    {
+      "first": "policy_6_scope_0.65",
+      "other": "policy_7_scope_0.65",
+      "canonical_sha256": "2c60fcf5bf775a1365822662761f892e7982fcf3da80c5af43f439fd46d51800"
+    },
+    {
+      "first": "policy_cost_0.5_0",
+      "other": "policy_cost_0.5_1",
+      "canonical_sha256": "97bdd90881446d5ada67e17da9716c49625266ae41a562ff7cd061e1c5b59ae9"
+    },
+    {
+      "first": "policy_cost_0.5_2",
+      "other": "policy_cost_0.5_4",
+      "canonical_sha256": "3d7b34f0bad2ee5a6949716fc1e66143ca0e252853b51344a7d500cc44d9f787"
+    },
+    {
+      "first": "policy_cost_0.5_3",
+      "other": "policy_cost_0.5_5",
+      "canonical_sha256": "6b4403ce54db29ca37339b4f35b0f430867f08aacb080e760b93fca891edcbc0"
+    },
+    {
+      "first": "policy_cost_0.5_6",
+      "other": "policy_cost_0.5_7",
+      "canonical_sha256": "d8870434bf655be9d988e144a40dba794e8413b88cbe7690cf3a398f9048eaea"
+    },
+    {
+      "first": "policy_cost_1.5_0",
+      "other": "policy_cost_1.5_1",
+      "canonical_sha256": "97bdd90881446d5ada67e17da9716c49625266ae41a562ff7cd061e1c5b59ae9"
+    },
+    {
+      "first": "policy_cost_1.5_2",
+      "other": "policy_cost_1.5_4",
+      "canonical_sha256": "3d7b34f0bad2ee5a6949716fc1e66143ca0e252853b51344a7d500cc44d9f787"
+    },
+    {
+      "first": "policy_cost_1.5_3",
+      "other": "policy_cost_1.5_5",
+      "canonical_sha256": "6b4403ce54db29ca37339b4f35b0f430867f08aacb080e760b93fca891edcbc0"
+    },
+    {
+      "first": "policy_cost_1.5_6",
+      "other": "policy_cost_1.5_7",
+      "canonical_sha256": "d8870434bf655be9d988e144a40dba794e8413b88cbe7690cf3a398f9048eaea"
+    }
+  ],
+  "attribution": {
+    "resource_cost_saving_cny": {
+      "shapley": {
+        "grid": 0.0,
+        "storage": 1190351627133.7188,
+        "gas": -2006163112.1562502
+      },
+      "anchored_interactions": {
+        "grid+storage": 0.0,
+        "grid+gas": 0.0,
+        "storage+gas": -0.0625,
+        "grid+storage+gas": 0.0
+      },
+      "full_minus_empty": 1188345464021.5625,
+      "efficiency_residual": 0.0,
+      "unit": "resource_cost_saving_cny",
+      "roundoff_bound": 1.0,
+      "nonzero_interactions": []
+    },
+    "co2_reduction_t": {
+      "shapley": {
+        "grid": 0.0,
+        "storage": 15981385942.729555,
+        "gas": 0.0
+      },
+      "anchored_interactions": {
+        "grid+storage": 0.0,
+        "grid+gas": 0.0,
+        "storage+gas": 0.0,
+        "grid+storage+gas": 0.0
+      },
+      "full_minus_empty": 15981385942.729553,
+      "efficiency_residual": 1.9073486328125e-06,
+      "unit": "co2_reduction_t",
+      "roundoff_bound": 0.0009765625,
+      "nonzero_interactions": []
+    },
+    "annual_max_loss_reduction": {
+      "shapley": {
+        "grid": 0.0,
+        "storage": 0.0,
+        "gas": 0.0
+      },
+      "anchored_interactions": {
+        "grid+storage": 0.0,
+        "grid+gas": 0.0,
+        "storage+gas": 0.0,
+        "grid+storage+gas": 0.0
+      },
+      "full_minus_empty": 0.0,
+      "efficiency_residual": 0.0,
+      "unit": "annual_max_loss_reduction",
+      "roundoff_bound": 1e-09,
+      "nonzero_interactions": []
+    },
+    "public_commitment_cny": {
+      "shapley": {
+        "grid": 0.0,
+        "storage": 29185712321.772076,
+        "gas": 1842286312.5388534
+      },
+      "anchored_interactions": {
+        "grid+storage": 0.0,
+        "grid+gas": 0.0,
+        "storage+gas": -1.6689300537109375e-06,
+        "grid+storage+gas": 0.0
+      },
+      "full_minus_empty": 31027998634.310925,
+      "efficiency_residual": 3.814697265625e-06,
+      "unit": "public_commitment_cny",
+      "roundoff_bound": 6.103515625e-05,
+      "nonzero_interactions": []
+    }
+  },
+  "h01_matched_comparisons": [
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0",
+        "0.25",
+        "0"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0",
+        "0.25",
+        "0"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0",
+        "0.25",
+        "0"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0",
+        "0.25",
+        "1"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0",
+        "0.25",
+        "1"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0",
+        "0.25",
+        "1"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0",
+        "0.25",
+        "3"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0",
+        "0.25",
+        "3"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0",
+        "0.25",
+        "3"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0",
+        "0"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 134885385231.46875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0",
+        "0"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0",
+        "0"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -6952944948.65625,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0",
+        "1"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 138672874752.5,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0",
+        "1"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0",
+        "1"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 621738927.6875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0",
+        "3"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 124499944680.4375,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0",
+        "3"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0",
+        "3"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -2584521571.75,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.25",
+        "0"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 292343022629.375,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.25",
+        "0"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.25",
+        "0"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 621738927.71875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.25",
+        "1"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 292343022629.375,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.25",
+        "1"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.25",
+        "1"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 621738927.6875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.25",
+        "3"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 306173647653.46875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.25",
+        "3"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.25",
+        "3"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 621738927.6875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.5",
+        "0"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 308719813029.2344,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.5",
+        "0"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.5",
+        "0"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.5",
+        "1"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 323525824556.1875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.5",
+        "1"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.5",
+        "1"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.5",
+        "3"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 316791079363.59375,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.5",
+        "3"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.02",
+        "0.5",
+        "3"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.04",
+        "0.25",
+        "0"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 1591300951323.8125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.04",
+        "0.25",
+        "0"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.04",
+        "0.25",
+        "0"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -5998505168.15625,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.04",
+        "0.25",
+        "1"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 1592895310816.5625,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.04",
+        "0.25",
+        "1"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.04",
+        "0.25",
+        "1"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -12888647144.84375,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.04",
+        "0.25",
+        "3"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 1595008706669.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.04",
+        "0.25",
+        "3"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "selection",
+        "0.04",
+        "0.25",
+        "3"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -8345963572.8125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "test",
+        "0.02",
+        "0.375",
+        "2"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 306727965220.71875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "test",
+        "0.02",
+        "0.375",
+        "2"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "test",
+        "0.02",
+        "0.375",
+        "2"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "test",
+        "0.03",
+        "0.25",
+        "2"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 713000678912.6875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "test",
+        "0.03",
+        "0.25",
+        "2"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "fixed_committed_generation",
+        "test",
+        "0.03",
+        "0.25",
+        "2"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 1124035943.59375,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0",
+        "0.25",
+        "0"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0",
+        "0.25",
+        "0"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0",
+        "0.25",
+        "0"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0",
+        "0.25",
+        "1"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0",
+        "0.25",
+        "1"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0",
+        "0.25",
+        "1"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0",
+        "0.25",
+        "3"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0",
+        "0.25",
+        "3"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0",
+        "0.25",
+        "3"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0",
+        "0"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": true
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0",
+        "0"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 3799160029.125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": true
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0",
+        "0"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": true
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0",
+        "1"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 502297016.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0",
+        "1"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 22735202377.25,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0",
+        "1"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0",
+        "3"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -12096392959.5,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0",
+        "3"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 23985282308.8125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0",
+        "3"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -358325735.3125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.25",
+        "0"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -43324944561.0625,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.25",
+        "0"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -4517468210.9375,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.25",
+        "0"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 1338390398.3125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.25",
+        "1"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -24762425903.3125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.25",
+        "1"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -3393432267.3125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.25",
+        "1"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 2676780796.6875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.25",
+        "3"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -36053684341.875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.25",
+        "3"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -2149954411.9375,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.25",
+        "3"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 2486955710.8125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.5",
+        "0"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": -6.217248937900877e-15,
+      "rolling_cost_minus_comparator_cny": -77268732255.6875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.5",
+        "0"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 13961609742.5625,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.5",
+        "0"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 15061116317.3125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.5",
+        "1"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -26662430885.4375,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.5",
+        "1"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.5",
+        "1"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.5",
+        "3"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -53325017464.625,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.5",
+        "3"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.02",
+        "0.5",
+        "3"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.04",
+        "0.25",
+        "0"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -100939550408.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.04",
+        "0.25",
+        "0"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": -7.216449660063518e-16,
+      "rolling_cost_minus_comparator_cny": 249288041254.125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.04",
+        "0.25",
+        "0"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -11534976134.875,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.04",
+        "0.25",
+        "1"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": -0.00019367477261417188,
+      "rolling_cost_minus_comparator_cny": -684537984889.75,
+      "risk_order": "better",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.04",
+        "0.25",
+        "1"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.015549024566381076,
+      "rolling_cost_minus_comparator_cny": -1866452196642.125,
+      "risk_order": "worse",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.04",
+        "0.25",
+        "1"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -22837490281.0625,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.04",
+        "0.25",
+        "3"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": -0.019290320517445447,
+      "rolling_cost_minus_comparator_cny": -3724577143815.0,
+      "risk_order": "better",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.04",
+        "0.25",
+        "3"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 16085050923.75,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "selection",
+        "0.04",
+        "0.25",
+        "3"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -16723029263.5625,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "test",
+        "0.02",
+        "0.375",
+        "2"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -23993770861.8125,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "test",
+        "0.02",
+        "0.375",
+        "2"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "test",
+        "0.02",
+        "0.375",
+        "2"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 0.0,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "test",
+        "0.03",
+        "0.25",
+        "2"
+      ],
+      "comparator": "schedule",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -5576992447.4375,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "test",
+        "0.03",
+        "0.25",
+        "2"
+      ],
+      "comparator": "cost_order",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": 7723909318.4375,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    },
+    {
+      "group": [
+        "full_agent_response",
+        "test",
+        "0.03",
+        "0.25",
+        "2"
+      ],
+      "comparator": "replacement_ready",
+      "rolling_loss_minus_comparator": 0.0,
+      "rolling_cost_minus_comparator_cny": -4468388797.5,
+      "risk_order": "tie",
+      "rolling_within_service_bound": false
+    }
+  ],
+  "h01_risk_order_counts": {
+    "schedule": {
+      "better": 2,
+      "worse": 0,
+      "tie": 32
+    },
+    "cost_order": {
+      "better": 0,
+      "worse": 1,
+      "tie": 33
+    },
+    "replacement_ready": {
+      "better": 0,
+      "worse": 0,
+      "tie": 34
+    }
+  },
+  "interpretation": "Post-result explanatory analysis. Equivalence is verified only for the frozen original conditions; no prospective runtime saving or universal effectiveness is claimed."
+}

@@ -1,0 +1,49 @@
+test_anchor_can_release_demonstrably_irrelevant_retention (test_pr14_retirement.RetirementTests.test_anchor_can_release_demonstrably_irrelevant_retention) ... ok
+test_anchor_cannot_create_retention_when_original_rule_releases (test_pr14_retirement.RetirementTests.test_anchor_cannot_create_retention_when_original_rule_releases) ... ok
+test_current_information_rollout_cannot_read_future_gdp_regime (test_pr14_retirement.RetirementTests.test_current_information_rollout_cannot_read_future_gdp_regime) ... ERROR
+test_disabled_retirement_preserves_upstream_reference (test_pr14_retirement.RetirementTests.test_disabled_retirement_preserves_upstream_reference) ... ok
+test_max_deferral_and_transfer_pair (test_pr14_retirement.RetirementTests.test_max_deferral_and_transfer_pair) ... ok
+test_mesa_bound_hook_really_executes (test_pr14_retirement.RetirementTests.test_mesa_bound_hook_really_executes) ... ok
+test_nonfinite_retention_fee_rejected_before_activation (test_pr14_retirement.RetirementTests.test_nonfinite_retention_fee_rejected_before_activation) ... ok
+test_rollout_restores_state_and_cannot_see_future_event (test_pr14_retirement.RetirementTests.test_rollout_restores_state_and_cannot_see_future_event) ... ok
+test_solver_failure_restores_exit_dates_and_cache (test_pr14_retirement.RetirementTests.test_solver_failure_restores_exit_dates_and_cache) ... ok
+test_static_forecast_restores_live_state (test_pr14_retirement.RetirementTests.test_static_forecast_restores_live_state) ... ok
+test_zero_retention_budget_cannot_create_free_capacity (test_pr14_retirement.RetirementTests.test_zero_retention_budget_cannot_create_free_capacity) ... ok
+test_cost_emissions_tradeoff_is_not_dominance (test_research_comparisons.ComparisonTests.test_cost_emissions_tradeoff_is_not_dominance) ... ok
+test_maximum_hides_another_service_regression (test_research_comparisons.ComparisonTests.test_maximum_hides_another_service_regression) ... ok
+test_missing_service_cannot_improve_comparison (test_research_comparisons.ComparisonTests.test_missing_service_cannot_improve_comparison) ... ok
+
+======================================================================
+ERROR: test_current_information_rollout_cannot_read_future_gdp_regime (test_pr14_retirement.RetirementTests.test_current_information_rollout_cannot_read_future_gdp_regime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\tests\research\test_pr14_retirement.py", line 135, in test_current_information_rollout_cannot_read_future_gdp_regime
+    m.rollout_forecast([],set(),horizon=3)
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\src\transition_research\current_information.py", line 17, in rollout_forecast
+    return super().rollout_forecast(due,retained,horizon=horizon)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\src\transition_research\retirement.py", line 58, in rollout_forecast
+    clone.run(self.year+horizon)
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\tmp\n2\pr14\src\energy_model\q2_fuel_prices.py", line 108, in run
+    return super().run(end_year)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\tmp\n2\pr14\src\energy_model\q2_national.py", line 1248, in run
+    self.step()
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\tmp\q3\repro_env\Lib\site-packages\mesa\model.py", line 122, in _wrapped_step
+    self._user_step(*args, **kwargs)
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\tmp\n2\pr14\src\energy_model\q2_project_competition.py", line 28, in step
+    super().step()
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\tmp\n2\pr14\src\energy_model\q2_thermal_vintages.py", line 271, in step
+    super().step()
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\tmp\n2\pr14\src\energy_model\q2_national.py", line 1165, in step
+    self.mature()
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\tmp\n2\pr14\src\energy_model\q2_thermal_vintages.py", line 128, in mature
+    super().mature()
+  File "D:\仿真建模资料\2026年仿真建模挑战赛赛题\A题\tmp\n2\pr14\src\energy_model\q2_national.py", line 938, in mature
+    raise Q2Error("accounting_failure","Unpaid project commissioning")
+energy_model.q2_operations.Q2Error: Unpaid project commissioning
+
+----------------------------------------------------------------------
+Ran 14 tests in 10.445s
+
+FAILED (errors=1)

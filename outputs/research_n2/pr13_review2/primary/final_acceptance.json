@@ -1,0 +1,26 @@
+{
+  "primary_protocol": "pr13_review2/primary",
+  "primary_gate_passed": true,
+  "extended_comparison_passed": true,
+  "distinct_physical_trajectories": 7,
+  "reproduction_passed": true,
+  "fixed_invariants_passed": true,
+  "implementation_tests_passed": true,
+  "legacy_tests_passed": true,
+  "tests_run": 361,
+  "human_review": "pending",
+  "n3_supported": false,
+  "system_hard_service_limit_passed_conditions": 0,
+  "test_receipt_scope": {
+    "research_tests": 22,
+    "legacy_tests": 339,
+    "note": "Counts read from supplied receipts; this verifier does not execute tests. See revision reuse record for execution scope."
+  },
+  "n2_internal_empirical_candidate": true,
+  "verifier_sha256": {
+    "scripts/verify_n2_supplements.py": "759f1b3a1612aaf098231f003cd46d109071b264e8f8a2310ea3acda9d08770f",
+    "scripts/verify_n2_research.py": "e00fc2fa431b055a543184dd9a22725df26b3d27f54d0f5dc1d73ba2f3590fc2",
+    "scripts/summarize_n2_research.py": "610cd160260ca1cb2d0f4a519ab42831d28e850f87c41645af8ace257b997d12",
+    "scripts/compare_n2_reproduction.py": "59d912f16be1c1ba1f273b26ac1c6dec01316202c51c507a49c70673010439df"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "experiment_version": "q3-v2",
+  "base_sha": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
+  "owner": "p3/yx",
+  "scope": "conditional_national_aggregate",
+  "issue": 12,
+  "review": "data/catalog/q3_input_review.json",
+  "review_sha256": "2a0fe24ff7bbf5367353e5c30bfb72a0fa208b2345fe66b0c03d5646259cc427",
+  "initial_year": 2024,
+  "end_year": 2060,
+  "snapshot_year": 2030,
+  "seed": 20261020,
+  "max_rounds": 10,
+  "information": {
+    "annual": "current state, announced trajectories, committed projects; no future realised event",
+    "event": "same day (24 h) perfect operational forecast for all; no future-day forecast",
+    "forecast_horizon_years": 3,
+    "pressure_renewable_factor": 0.85
+  },
+  "scenarios": {
+    "S0": {},
+    "SP": {
+      "carbon_multiplier": 1.5,
+      "start_year": 2027
+    },
+    "ST": {
+      "storage_cost_multiplier": 0.7,
+      "start_year": 2027
+    },
+    "SG": {
+      "gas": true,
+      "weather": false
+    },
+    "SW": {
+      "gas": false,
+      "weather": true
+    },
+    "SGW": {
+      "gas": true,
+      "weather": true
+    }
+  },
+  "event": {
+    "hours_per_period": 6,
+    "days": 12,
+    "warmup_days": 2,
+    "gas_start_day": 3,
+    "weather_start_day": 3,
+    "duration_days": 4,
+    "recovery_days": 2,
+    "gas_loss_fraction": 1.0,
+    "channel_a_share": 0.5,
+    "wind_factor": 0.35,
+    "solar_factor": 0.55,
+    "hydro_factor": 0.65,
+    "source_identity": "hypothetical_channel_A",
+    "status": "conditional_design_not_observed_disaster",
+    "recovery_consecutive_periods": 4
+  },
+  "h01": {
+    "retirement_speeds": [
+      0,
+      0.02,
+      0.04
+    ],
+    "replacement_speeds": [
+      0,
+      0.25,
+      0.5
+    ],
+    "delays": [
+      0,
+      1,
+      3
+    ],
+    "fixed_replacement": 0.25,
+    "fixed_retirement": 0.02,
+    "test_retirement": 0.03,
+    "test_replacement": 0.375,
+    "test_delay": 2,
+    "rules": [
+      "schedule",
+      "cost_order",
+      "replacement_ready",
+      "rolling_guard"
+    ],
+    "start_year": 2028,
+    "last_request_year": 2045,
+    "eligible_age_years": 20,
+    "max_deferral_years": 3,
+    "risk_limit": 0.02,
+    "retention_fee_cny_per_mw_year": 20000,
+    "fixed_pipeline_end": 2040
+  },
+  "policy": {
+    "candidates": [
+      [],
+      [
+        "grid"
+      ],
+      [
+        "storage"
+      ],
+      [
+        "gas"
+      ],
+      [
+        "grid",
+        "storage"
+      ],
+      [
+        "grid",
+        "gas"
+      ],
+      [
+        "storage",
+        "gas"
+      ],
+      [
+        "grid",
+        "storage",
+        "gas"
+      ]
+    ],
+    "decision_year": 2025,
+    "public_budget_gdp_fraction": 0.0005,
+    "grid_fraction": 0.02,
+    "storage_fraction": 0.01,
+    "gas_diversification_fraction": 0.2,
+    "gas_contract_capex_cny_per_mw": 30000,
+    "gas_contract_lead_years": 2,
+    "gas_premium_fraction": 0.1,
+    "carbon_ratio_limit": 1.05,
+    "resource_cost_ratio_limit": 1.1,
+    "event_max_service_loss": 0.15,
+    "annual_max_service_loss": 0.05,
+    "public_spend_ceiling_multiplier": 1.0,
+    "test_cost_multipliers": [
+      0.5,
+      1.5
+    ]
+  },
+  "search": {
+    "selection_gas_offsets": [
+      -1,
+      0,
+      1
+    ],
+    "test_gas_offsets": [
+      2,
+      3
+    ],
+    "test_channel_shares": [
+      0.35,
+      0.65
+    ],
+    "snapshot_test_year": 2035,
+    "diagnostic_fraction": 0.1,
+    "max_policy_candidates": 8
+  },
+  "acceptance": {
+    "relative_numeric_tolerance": 1e-07,
+    "absolute_numeric_tolerance": 0.0001,
+    "physical_residual_mwh": 0.002,
+    "cash_relative_tolerance": 1e-10,
+    "cash_absolute_tolerance_cny": 0.1,
+    "shortage_absolute_mwh": 0.001,
+    "shortage_relative": 1e-08,
+    "require_all_cases_solved": true,
+    "require_positive_innovation_gain": false
+  },
+  "assumption_basis": {
+    "event": "12 days bounds compute and includes 2 pre-event, 4 shock, 2 recovery and post-event time. Six-hour steps inherit the four-period Q2 shape; no empirical frequency. Selection/test offsets fixed before outputs.",
+    "SP_ST": "1.5 carbon and 0.7 new-storage costs are bounded conditional contrasts, not projections or government choices of free innovation. Sensitivities at alternative values.",
+    "h01": "0–4% of initial coal MW voluntary early-retirement requests, eligible renewal electric shares 0–0.5, and 0–3 extra construction years are stress probes; not inferred national behaviour. No legal lifetime extension.",
+    "policy": "Fractional additions below inherited construction envelopes; additional public funding ceiling 0.05% GDP and gas contract cost are hypotheses. Cost bounds and held-out shocks are reported, not adapted for feasibility.",
+    "service_limits": "2% trigger, 5% annual/15% event limits are normative screening thresholds for proxy services, not legal reliability criteria. All infeasible candidates retained."
+  },
+  "revision_disclosure": "V1 test offset -2 violated the required two-day prehistory. Replaced only the invalid test calendar with offsets +2,+3 before any held-out event execution; +3 intentionally tests endpoint censoring. No shock magnitude, policy, selection threshold or selection sample changed. Fixed-project control now replays the S0 request schedule with original finance checks; it no longer disables all investment."
+}

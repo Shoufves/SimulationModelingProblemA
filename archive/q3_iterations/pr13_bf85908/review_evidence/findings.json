@@ -1,0 +1,1059 @@
+{
+  "run_id": "20261020T004441503292Z",
+  "h01_groups": [
+    {
+      "mode": "fixed_committed_generation",
+      "family": "vR",
+      "split": "selection",
+      "rule_ranking": [
+        {
+          "rule": "schedule",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 1298298981488267.0,
+          "points": 9,
+          "service_failures": 9
+        },
+        {
+          "rule": "cost_order",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 1303969046149988.8,
+          "points": 9,
+          "service_failures": 9
+        },
+        {
+          "rule": "rolling_guard",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 1303969046149988.8,
+          "points": 9,
+          "service_failures": 9
+        },
+        {
+          "rule": "replacement_ready",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 1303994414049091.5,
+          "points": 9,
+          "service_failures": 9
+        }
+      ]
+    },
+    {
+      "mode": "fixed_committed_generation",
+      "family": "vR",
+      "split": "test",
+      "rule_ranking": [
+        {
+          "rule": "schedule",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 144229997987098.12,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "replacement_ready",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 144941874630067.22,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "cost_order",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 144942998666010.8,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "rolling_guard",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 144942998666010.8,
+          "points": 1,
+          "service_failures": 1
+        }
+      ]
+    },
+    {
+      "mode": "fixed_committed_generation",
+      "family": "vE",
+      "split": "selection",
+      "rule_ranking": [
+        {
+          "rule": "schedule",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 1300840527902340.2,
+          "points": 9,
+          "service_failures": 9
+        },
+        {
+          "rule": "cost_order",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 1303078482516865.8,
+          "points": 9,
+          "service_failures": 9
+        },
+        {
+          "rule": "rolling_guard",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 1303078482516865.8,
+          "points": 9,
+          "service_failures": 9
+        },
+        {
+          "rule": "replacement_ready",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 1303085533027675.5,
+          "points": 9,
+          "service_failures": 9
+        }
+      ]
+    },
+    {
+      "mode": "fixed_committed_generation",
+      "family": "vE",
+      "split": "test",
+      "rule_ranking": [
+        {
+          "rule": "schedule",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 139430010087756.02,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "cost_order",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 139736738052976.73,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "replacement_ready",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 139736738052976.73,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "rolling_guard",
+          "worst_loss": 1.0,
+          "sum_cost_cny": 139736738052976.73,
+          "points": 1,
+          "service_failures": 1
+        }
+      ]
+    },
+    {
+      "mode": "full_agent_response",
+      "family": "vR",
+      "split": "selection",
+      "rule_ranking": [
+        {
+          "rule": "rolling_guard",
+          "worst_loss": 0.4842431818147392,
+          "sum_cost_cny": 3213224238276658.5,
+          "points": 9,
+          "service_failures": 9
+        },
+        {
+          "rule": "replacement_ready",
+          "worst_loss": 0.4842431818147392,
+          "sum_cost_cny": 3213268831645432.0,
+          "points": 9,
+          "service_failures": 9
+        },
+        {
+          "rule": "cost_order",
+          "worst_loss": 0.4842431818147392,
+          "sum_cost_cny": 3214835378236013.0,
+          "points": 9,
+          "service_failures": 9
+        },
+        {
+          "rule": "schedule",
+          "worst_loss": 0.4844368565873529,
+          "sum_cost_cny": 3217838434010577.5,
+          "points": 9,
+          "service_failures": 9
+        }
+      ]
+    },
+    {
+      "mode": "full_agent_response",
+      "family": "vR",
+      "split": "test",
+      "rule_ranking": [
+        {
+          "rule": "cost_order",
+          "worst_loss": 0.43907761286012387,
+          "sum_cost_cny": 355314576034369.5,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "rolling_guard",
+          "worst_loss": 0.43907761286012387,
+          "sum_cost_cny": 355322299943687.94,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "replacement_ready",
+          "worst_loss": 0.43907761286012387,
+          "sum_cost_cny": 355326768332485.44,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "schedule",
+          "worst_loss": 0.43907761286012387,
+          "sum_cost_cny": 355327876936135.4,
+          "points": 1,
+          "service_failures": 1
+        }
+      ]
+    },
+    {
+      "mode": "full_agent_response",
+      "family": "vE",
+      "split": "selection",
+      "rule_ranking": [
+        {
+          "rule": "cost_order",
+          "worst_loss": 0.7184900895427817,
+          "sum_cost_cny": 3204630866143284.0,
+          "points": 9,
+          "service_failures": 8
+        },
+        {
+          "rule": "replacement_ready",
+          "worst_loss": 0.7184900895427817,
+          "sum_cost_cny": 3204664081625363.5,
+          "points": 9,
+          "service_failures": 8
+        },
+        {
+          "rule": "rolling_guard",
+          "worst_loss": 0.7184900895427817,
+          "sum_cost_cny": 3204685286542851.5,
+          "points": 9,
+          "service_failures": 8
+        },
+        {
+          "rule": "schedule",
+          "worst_loss": 0.7184900895427879,
+          "sum_cost_cny": 3204958277874207.0,
+          "points": 9,
+          "service_failures": 8
+        }
+      ]
+    },
+    {
+      "mode": "full_agent_response",
+      "family": "vE",
+      "split": "test",
+      "rule_ranking": [
+        {
+          "rule": "cost_order",
+          "worst_loss": 0.5996236552304237,
+          "sum_cost_cny": 339086330922419.8,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "replacement_ready",
+          "worst_loss": 0.5996236552304237,
+          "sum_cost_cny": 339086330922419.8,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "rolling_guard",
+          "worst_loss": 0.5996236552304237,
+          "sum_cost_cny": 339086330922419.8,
+          "points": 1,
+          "service_failures": 1
+        },
+        {
+          "rule": "schedule",
+          "worst_loss": 0.5996236552304237,
+          "sum_cost_cny": 339110324693281.6,
+          "points": 1,
+          "service_failures": 1
+        }
+      ]
+    }
+  ],
+  "rolling_guard_pairs": [
+    {
+      "case": "h01_1_vR_0_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0.02_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -292343022629.375
+    },
+    {
+      "case": "h01_1_vR_0.02_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0.02_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -621738927.71875
+    },
+    {
+      "case": "h01_1_vR_0.02_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -292343022629.375
+    },
+    {
+      "case": "h01_1_vR_0.02_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0.02_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -621738927.6875
+    },
+    {
+      "case": "h01_1_vR_0.02_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -306173647653.46875
+    },
+    {
+      "case": "h01_1_vR_0.02_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0.02_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -621738927.6875
+    },
+    {
+      "case": "h01_1_vR_0.04_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -1591300951323.8125
+    },
+    {
+      "case": "h01_1_vR_0.04_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0.04_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 5998505168.15625
+    },
+    {
+      "case": "h01_1_vR_0.04_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -1592895310816.5625
+    },
+    {
+      "case": "h01_1_vR_0.04_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0.04_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 12888647144.84375
+    },
+    {
+      "case": "h01_1_vR_0.04_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -1595008706669.0
+    },
+    {
+      "case": "h01_1_vR_0.04_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vR_0.04_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 8345963572.8125
+    },
+    {
+      "case": "h01_test_1_vR_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -713000678912.6875
+    },
+    {
+      "case": "h01_test_1_vR_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_test_1_vR_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -1124035943.59375
+    },
+    {
+      "case": "h01_1_vE_0_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -134885385231.46875
+    },
+    {
+      "case": "h01_1_vE_0_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vE_0_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 6952944948.65625
+    },
+    {
+      "case": "h01_1_vE_0_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -138672874752.5
+    },
+    {
+      "case": "h01_1_vE_0_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vE_0_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -621738927.6875
+    },
+    {
+      "case": "h01_1_vE_0_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -124499944680.4375
+    },
+    {
+      "case": "h01_1_vE_0_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vE_0_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 2584521571.75
+    },
+    {
+      "case": "h01_1_vE_0.25_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -292343022629.375
+    },
+    {
+      "case": "h01_1_vE_0.25_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vE_0.25_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -621738927.71875
+    },
+    {
+      "case": "h01_1_vE_0.25_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -292343022629.375
+    },
+    {
+      "case": "h01_1_vE_0.25_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vE_0.25_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -621738927.6875
+    },
+    {
+      "case": "h01_1_vE_0.25_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -306173647653.46875
+    },
+    {
+      "case": "h01_1_vE_0.25_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vE_0.25_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -621738927.6875
+    },
+    {
+      "case": "h01_1_vE_0.5_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -308719813029.2344
+    },
+    {
+      "case": "h01_1_vE_0.5_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vE_0.5_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vE_0.5_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -323525824556.1875
+    },
+    {
+      "case": "h01_1_vE_0.5_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vE_0.5_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vE_0.5_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -316791079363.59375
+    },
+    {
+      "case": "h01_1_vE_0.5_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_1_vE_0.5_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_test_1_vE_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -306727965220.71875
+    },
+    {
+      "case": "h01_test_1_vE_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_test_1_vE_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vR_0_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vR_0_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vR_0_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vR_0_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vR_0_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vR_0_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vR_0_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vR_0_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vR_0_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vR_0.02_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 43324944561.0625
+    },
+    {
+      "case": "h01_0_vR_0.02_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 4517468210.9375
+    },
+    {
+      "case": "h01_0_vR_0.02_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -1338390398.3125
+    },
+    {
+      "case": "h01_0_vR_0.02_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 24762425903.3125
+    },
+    {
+      "case": "h01_0_vR_0.02_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 3393432267.3125
+    },
+    {
+      "case": "h01_0_vR_0.02_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -2676780796.6875
+    },
+    {
+      "case": "h01_0_vR_0.02_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 36053684341.875
+    },
+    {
+      "case": "h01_0_vR_0.02_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 2149954411.9375
+    },
+    {
+      "case": "h01_0_vR_0.02_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -2486955710.8125
+    },
+    {
+      "case": "h01_0_vR_0.04_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 100939550408.0
+    },
+    {
+      "case": "h01_0_vR_0.04_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 7.216449660063518e-16,
+      "cost_reduction_cny": -249288041254.125
+    },
+    {
+      "case": "h01_0_vR_0.04_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 11534976134.875
+    },
+    {
+      "case": "h01_0_vR_0.04_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.00019367477261417188,
+      "cost_reduction_cny": 684537984889.75
+    },
+    {
+      "case": "h01_0_vR_0.04_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": -0.015549024566381076,
+      "cost_reduction_cny": 1866452196642.125
+    },
+    {
+      "case": "h01_0_vR_0.04_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 22837490281.0625
+    },
+    {
+      "case": "h01_0_vR_0.04_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.019290320517445447,
+      "cost_reduction_cny": 3724577143815.0
+    },
+    {
+      "case": "h01_0_vR_0.04_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -16085050923.75
+    },
+    {
+      "case": "h01_0_vR_0.04_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 16723029263.5625
+    },
+    {
+      "case": "h01_test_0_vR_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 5576992447.4375
+    },
+    {
+      "case": "h01_test_0_vR_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -7723909318.4375
+    },
+    {
+      "case": "h01_test_0_vR_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 4468388797.5
+    },
+    {
+      "case": "h01_0_vE_0_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vE_0_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -3799160029.125
+    },
+    {
+      "case": "h01_0_vE_0_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vE_0_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -502297016.0
+    },
+    {
+      "case": "h01_0_vE_0_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -22735202377.25
+    },
+    {
+      "case": "h01_0_vE_0_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vE_0_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 12096392959.5
+    },
+    {
+      "case": "h01_0_vE_0_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -23985282308.8125
+    },
+    {
+      "case": "h01_0_vE_0_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 358325735.3125
+    },
+    {
+      "case": "h01_0_vE_0.25_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 43324944561.0625
+    },
+    {
+      "case": "h01_0_vE_0.25_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 4517468210.9375
+    },
+    {
+      "case": "h01_0_vE_0.25_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -1338390398.3125
+    },
+    {
+      "case": "h01_0_vE_0.25_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 24762425903.3125
+    },
+    {
+      "case": "h01_0_vE_0.25_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 3393432267.3125
+    },
+    {
+      "case": "h01_0_vE_0.25_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -2676780796.6875
+    },
+    {
+      "case": "h01_0_vE_0.25_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 36053684341.875
+    },
+    {
+      "case": "h01_0_vE_0.25_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 2149954411.9375
+    },
+    {
+      "case": "h01_0_vE_0.25_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -2486955710.8125
+    },
+    {
+      "case": "h01_0_vE_0.5_0_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 6.217248937900877e-15,
+      "cost_reduction_cny": 77268732255.6875
+    },
+    {
+      "case": "h01_0_vE_0.5_0_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -13961609742.5625
+    },
+    {
+      "case": "h01_0_vE_0.5_0_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": -15061116317.3125
+    },
+    {
+      "case": "h01_0_vE_0.5_1_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 26662430885.4375
+    },
+    {
+      "case": "h01_0_vE_0.5_1_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vE_0.5_1_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vE_0.5_3_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 53325017464.625
+    },
+    {
+      "case": "h01_0_vE_0.5_3_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_0_vE_0.5_3_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_test_0_vE_rolling_guard",
+      "reference": "schedule",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 23993770861.8125
+    },
+    {
+      "case": "h01_test_0_vE_rolling_guard",
+      "reference": "cost_order",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    },
+    {
+      "case": "h01_test_0_vE_rolling_guard",
+      "reference": "replacement_ready",
+      "loss_reduction": 0.0,
+      "cost_reduction_cny": 0.0
+    }
+  ],
+  "h01_service_failed_points": 156,
+  "h01_total": 160,
+  "policy": {
+    "selected": "policy_2",
+    "cost_reduction_cny": 1190351627133.75,
+    "cost_reduction_fraction": 0.0030599128960566713,
+    "cumulative_co2_reduction_t": 15981385942.729553,
+    "cumulative_co2_reduction_fraction": 0.043368460376910556,
+    "public_commitment_cny": 29185712321.77207,
+    "all_candidates_feasible": true,
+    "test_ranking": [
+      "policy_2",
+      "policy_4",
+      "policy_6",
+      "policy_7",
+      "policy_0",
+      "policy_1",
+      "policy_3",
+      "policy_5"
+    ]
+  },
+  "cost_sensitivity": [
+    {
+      "factor": 0.5,
+      "ranking": [
+        "policy_cost_0.5_2",
+        "policy_cost_0.5_4",
+        "policy_cost_0.5_6",
+        "policy_cost_0.5_7",
+        "policy_cost_0.5_0",
+        "policy_cost_0.5_1",
+        "policy_cost_0.5_3",
+        "policy_cost_0.5_5"
+      ],
+      "all_event_loss_zero": true
+    },
+    {
+      "factor": 1.5,
+      "ranking": [
+        "policy_cost_1.5_2",
+        "policy_cost_1.5_4",
+        "policy_cost_1.5_6",
+        "policy_cost_1.5_7",
+        "policy_cost_1.5_0",
+        "policy_cost_1.5_1",
+        "policy_cost_1.5_3",
+        "policy_cost_1.5_5"
+      ],
+      "all_event_loss_zero": true
+    }
+  ],
+  "interpretation": "Ranking is descriptive within the frozen finite conditions. Zero loss and J imply no demonstrated shortage-interaction or security improvement. Test cases were reused after implementation repairs."
+}

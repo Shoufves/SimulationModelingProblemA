@@ -1,0 +1,28 @@
+{
+  "round": "R7",
+  "candidate": "anchored_guard",
+  "identity": "supplementary_controls_same_frozen_R5_conditions_no_method_selection",
+  "hypothesis": "Complete the cost/capacity/static/myopic comparator coverage; do not claim N2 from omitting an unfavorable strong control.",
+  "end_year": 2060,
+  "method": {
+    "horizon": 3,
+    "pressure": 0.85,
+    "risk_limit": 0.02
+  },
+  "rules": [
+    "cost_order",
+    "capacity_ready",
+    "paired_myopic",
+    "paired_guard"
+  ],
+  "conditions": [
+    {
+      "id": "W02_speed6_lag3",
+      "acceleration": 6,
+      "scenario": {
+        "infrastructure_delay_years": 3
+      }
+    }
+  ],
+  "parent_protocol_sha256": "3156be068a385d8a33238ca8ec02bbb9d36a30a697b157b237701691c833f43a"
+}

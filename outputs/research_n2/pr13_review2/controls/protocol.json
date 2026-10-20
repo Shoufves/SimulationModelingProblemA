@@ -1,0 +1,91 @@
+{
+  "round": "R7",
+  "candidate": "anchored_guard",
+  "identity": "supplementary_controls_same_frozen_R5_conditions_no_method_selection",
+  "hypothesis": "Complete the cost/capacity/static/myopic comparator coverage; do not claim N2 from omitting an unfavorable strong control.",
+  "end_year": 2060,
+  "method": {
+    "horizon": 3,
+    "pressure": 0.85,
+    "risk_limit": 0.02
+  },
+  "rules": [
+    "cost_order",
+    "capacity_ready",
+    "paired_myopic",
+    "paired_guard"
+  ],
+  "conditions": [
+    {
+      "id": "W01_speed6_lag1",
+      "acceleration": 6,
+      "scenario": {
+        "infrastructure_delay_years": 1
+      }
+    },
+    {
+      "id": "W02_speed6_lag3",
+      "acceleration": 6,
+      "scenario": {
+        "infrastructure_delay_years": 3
+      }
+    },
+    {
+      "id": "W03_speed8_lag2",
+      "acceleration": 8,
+      "scenario": {
+        "infrastructure_delay_years": 2
+      }
+    },
+    {
+      "id": "W04_authority5",
+      "acceleration": 6,
+      "record": "net58/5",
+      "scenario": {
+        "infrastructure_delay_years": 1
+      }
+    },
+    {
+      "id": "W05_authority100",
+      "acceleration": 8,
+      "record": "net58/100",
+      "scenario": {
+        "infrastructure_delay_years": 2
+      }
+    },
+    {
+      "id": "W06_low_cash",
+      "acceleration": 6,
+      "opening": {
+        "opening_cash_capex_fraction": 0.05
+      },
+      "scenario": {
+        "infrastructure_delay_years": 2
+      }
+    },
+    {
+      "id": "W07_high_growth",
+      "acceleration": 8,
+      "scenario": {
+        "infrastructure_delay_years": 1,
+        "variant": {
+          "gdp_growth_delta": 0.01
+        }
+      }
+    },
+    {
+      "id": "W08_compound",
+      "acceleration": 6,
+      "scenario": {
+        "infrastructure_delay_years": 2,
+        "event": {
+          "start_year": 2038,
+          "end_year": 2041,
+          "gas_import_multiplier": 0.5,
+          "hydro_energy_multiplier": 0.65,
+          "renewable_availability_multiplier": 0.65
+        }
+      }
+    }
+  ]
+}

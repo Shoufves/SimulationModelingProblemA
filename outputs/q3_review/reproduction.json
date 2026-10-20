@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "status": "matched_with_frozen_tolerances",
+  "left_run": "20261020T021432645345Z",
+  "right_run": "20261020T021432808090Z",
+  "left_python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "right_python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "left_manifest": "61cb4d6c4773ddd267c3b85ea58c67d12ac00a1fbcfde301ea81f1869baeab9c",
+  "right_manifest": "b8b7b8a29a8947588d43fe60d406edf254b23c431b219c5daa57f2e82e917689",
+  "numeric_values_compared": 26664262,
+  "max_nonresidual_relative_difference": 0,
+  "ledgers": [
+    {
+      "kind": "annual",
+      "records": 187
+    },
+    {
+      "kind": "event",
+      "records": 118
+    }
+  ],
+  "errors": [],
+  "config_tolerances": {
+    "relative_numeric_tolerance": 1e-07,
+    "absolute_numeric_tolerance": 0.0001,
+    "physical_residual_mwh": 0.002,
+    "cash_relative_tolerance": 1e-10,
+    "cash_absolute_tolerance_cny": 0.1,
+    "shortage_absolute_mwh": 0.001,
+    "shortage_relative": 1e-08,
+    "require_all_cases_solved": true,
+    "require_positive_innovation_gain": false
+  },
+  "checker_sha256": "da2f4a63e2acc3ef0c7f07c60173dbfc3b8b4eec6314ff09aad7645587429cd9",
+  "statement": "Cross-environment numerical reproduction, not a byte-identity claim; image bytes are excluded."
+}

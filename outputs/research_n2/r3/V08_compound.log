@@ -1,0 +1,16 @@
+START V08_compound__schedule
+V08_compound__schedule cost_T 182.722774 retention_MWyr 0 seconds 9.25
+START V08_compound__cost_order
+V08_compound__cost_order cost_T 183.490887 retention_MWyr 3292652 seconds 10.13
+START V08_compound__capacity_ready
+V08_compound__capacity_ready cost_T 183.490887 retention_MWyr 3292652 seconds 10.57
+START V08_compound__replacement_ready
+V08_compound__replacement_ready cost_T 183.361797 retention_MWyr 1985209 seconds 11.67
+START V08_compound__rolling_guard
+V08_compound__rolling_guard cost_T 183.38728 retention_MWyr 2571546 seconds 14.67
+START V08_compound__paired_myopic
+V08_compound__paired_myopic cost_T 183.358949 retention_MWyr 1966719 seconds 14.73
+START V08_compound__paired_guard
+V08_compound__paired_guard cost_T 183.346434 retention_MWyr 2201748 seconds 24.19
+START V08_compound__rollout_guard
+V08_compound__rollout_guard cost_T 183.370224 retention_MWyr 2460607 seconds 145.08

@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "status": "computational_diagnostics_passed_external_and_human_pending",
+  "base": "7d52f439992503eac5978c6f218f5289fe3e2195",
+  "code_hashes": {
+    "scripts/audit_q1_q3_research.py": "107d3a16bb710d00ff82184cfd03563778750a4bc8f995968bcad29423766eb2",
+    "src/energy_model/research_diagnostics.py": "3d2d886dc21462c820e34a87f24a82876c7956cfb283d971543ef3c9b7736c06"
+  },
+  "input_hashes": {
+    "docs/research/q1-q3-audit-targets.md": "3077ce8bb5c70da3c4a314649907f77cad1656d22a61fae065fe9bffb841f089",
+    "docs/research/q1-q3-literature.json": "aacd2ad44074367875ce320ac0ae12e542e7e5dcb48ba15ffd36a8e829ec5b7e",
+    "docs/research/q1-q3-evidence.json": "e39bd03e9646d72adb887b2e70c83c51944f91e8320dc0fc84f73ddb2a2dd976",
+    "docs/paper/q1-evidence-analysis.md": "44ef175691c2baa245b087ae69ef0d41d7004259d4078e484a676773ff78c970",
+    "docs/paper/q3-innovation-analysis.md": "917e849bb7e061cfe35e2ba98a8ae28244747947bfbf683f7c15bde0bfff3b16"
+  },
+  "execution": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "python_hash_seed": "unset"
+  },
+  "outputs": {
+    "evidence_checks.json": "7a453bd5e41215676526d9bc431d6e7cd7b7c2148faaa4969e8d508de9fef90f",
+    "q1_source_exposure.json": "12b74a4aa40547f9c337bd7808a6c71a528b32943862b4776bc4014aa57c911e",
+    "q3_effectiveness.json": "c89fa7de6a4f540170362b43de3a35ef12089c03bed18dce10413d6e1808cacd",
+    "text_metrics.json": "a4185b8fc125cb999fb6ffaa282e7e8212a31fcad8f5bb7436a9b9a6b8f41e7c",
+    "unchanged_baseline.json": "cf3043cb4ad4aae379bbb6e39ecf5474b6611441f50bd485130b8897d1983d1d"
+  },
+  "scientific_novelty": "No global-first or novel-algorithm claim; application increments evaluated separately.",
+  "formal_aigc_detector_percent": null,
+  "external_plagiarism_percent": null,
+  "human_validation": "pending"
+}

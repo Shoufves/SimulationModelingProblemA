@@ -1,0 +1,16 @@
+START V03_speed9_lag4__schedule
+V03_speed9_lag4__schedule cost_T 180.087784 retention_MWyr 0 seconds 7.89
+START V03_speed9_lag4__cost_order
+V03_speed9_lag4__cost_order cost_T 180.94376 retention_MWyr 3292652 seconds 7.48
+START V03_speed9_lag4__capacity_ready
+V03_speed9_lag4__capacity_ready cost_T 180.94376 retention_MWyr 3292652 seconds 7.51
+START V03_speed9_lag4__replacement_ready
+V03_speed9_lag4__replacement_ready cost_T 180.951354 retention_MWyr 2904364 seconds 8.56
+START V03_speed9_lag4__rolling_guard
+V03_speed9_lag4__rolling_guard cost_T 180.906199 retention_MWyr 3015303 seconds 12.0
+START V03_speed9_lag4__paired_myopic
+V03_speed9_lag4__paired_myopic cost_T 180.87542 retention_MWyr 2183258 seconds 13.28
+START V03_speed9_lag4__paired_guard
+V03_speed9_lag4__paired_guard cost_T 180.866767 retention_MWyr 2257218 seconds 22.47
+START V03_speed9_lag4__rollout_guard
+V03_speed9_lag4__rollout_guard cost_T 180.831046 retention_MWyr 2516076 seconds 136.5

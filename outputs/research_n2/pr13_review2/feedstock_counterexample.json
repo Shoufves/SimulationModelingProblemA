@@ -1,0 +1,640 @@
+{
+  "inputs": {
+    "retained": {
+      "periods": [
+        {
+          "hours": 1
+        }
+      ],
+      "annual_repeats": 1,
+      "cyclic": true,
+      "grid": {
+        "efficiency": 1,
+        "power_mw": 100
+      },
+      "storage": {
+        "power_mw": 0,
+        "energy_mwh": 0,
+        "initial_mwh": 0,
+        "charge_efficiency": 1,
+        "discharge_efficiency": 1,
+        "throughput_cost": 0
+      },
+      "fuels": {
+        "coal": {
+          "domestic_mw": [
+            20
+          ],
+          "import_mw": [
+            0
+          ],
+          "domestic_cost_per_mwh": 1,
+          "import_cost_per_mwh": 1,
+          "emission_t_per_mwh": 0.3,
+          "tank_mwh": 0,
+          "initial_mwh": 0,
+          "injection_mw": 0,
+          "withdrawal_mw": 0
+        },
+        "gas": {
+          "domestic_mw": [
+            20
+          ],
+          "import_mw": [
+            0
+          ],
+          "domestic_cost_per_mwh": 1,
+          "import_cost_per_mwh": 1,
+          "emission_t_per_mwh": 0.3,
+          "tank_mwh": 0,
+          "initial_mwh": 0,
+          "injection_mw": 0,
+          "withdrawal_mw": 0
+        }
+      },
+      "plants": {
+        "coal": {
+          "input": "coal",
+          "output": "electricity",
+          "efficiency": 1,
+          "capacity_mw": 20,
+          "availability": [
+            1
+          ],
+          "variable_cost_per_mwh": 0,
+          "minimum_fraction": 0,
+          "ramp_mw_per_hour": 100,
+          "window_energy_budget_mwh": 20
+        },
+        "gas": {
+          "input": "gas",
+          "output": "electricity",
+          "efficiency": 1,
+          "capacity_mw": 20,
+          "availability": [
+            1
+          ],
+          "variable_cost_per_mwh": 10,
+          "minimum_fraction": 0,
+          "ramp_mw_per_hour": 100,
+          "window_energy_budget_mwh": 20
+        }
+      },
+      "demands": {
+        "building": {
+          "sector": "building",
+          "carrier": "electricity",
+          "efficiency": 1,
+          "input_capacity_mw": 20,
+          "priority": 0,
+          "service_mwh": [
+            20
+          ]
+        },
+        "coal_material": {
+          "sector": "nonenergy_feedstock",
+          "carrier": "coal",
+          "efficiency": 1,
+          "input_capacity_mw": 20,
+          "priority": 1,
+          "service_mwh": [
+            20
+          ]
+        },
+        "gas_material": {
+          "sector": "nonenergy_feedstock",
+          "carrier": "gas",
+          "efficiency": 1,
+          "input_capacity_mw": 20,
+          "priority": 1,
+          "service_mwh": [
+            20
+          ]
+        }
+      }
+    },
+    "retired": {
+      "periods": [
+        {
+          "hours": 1
+        }
+      ],
+      "annual_repeats": 1,
+      "cyclic": true,
+      "grid": {
+        "efficiency": 1,
+        "power_mw": 100
+      },
+      "storage": {
+        "power_mw": 0,
+        "energy_mwh": 0,
+        "initial_mwh": 0,
+        "charge_efficiency": 1,
+        "discharge_efficiency": 1,
+        "throughput_cost": 0
+      },
+      "fuels": {
+        "coal": {
+          "domestic_mw": [
+            20
+          ],
+          "import_mw": [
+            0
+          ],
+          "domestic_cost_per_mwh": 1,
+          "import_cost_per_mwh": 1,
+          "emission_t_per_mwh": 0.3,
+          "tank_mwh": 0,
+          "initial_mwh": 0,
+          "injection_mw": 0,
+          "withdrawal_mw": 0
+        },
+        "gas": {
+          "domestic_mw": [
+            20
+          ],
+          "import_mw": [
+            0
+          ],
+          "domestic_cost_per_mwh": 1,
+          "import_cost_per_mwh": 1,
+          "emission_t_per_mwh": 0.3,
+          "tank_mwh": 0,
+          "initial_mwh": 0,
+          "injection_mw": 0,
+          "withdrawal_mw": 0
+        }
+      },
+      "plants": {
+        "coal": {
+          "input": "coal",
+          "output": "electricity",
+          "efficiency": 1,
+          "capacity_mw": 0,
+          "availability": [
+            1
+          ],
+          "variable_cost_per_mwh": 0,
+          "minimum_fraction": 0,
+          "ramp_mw_per_hour": 100,
+          "window_energy_budget_mwh": 20
+        },
+        "gas": {
+          "input": "gas",
+          "output": "electricity",
+          "efficiency": 1,
+          "capacity_mw": 20,
+          "availability": [
+            1
+          ],
+          "variable_cost_per_mwh": 10,
+          "minimum_fraction": 0,
+          "ramp_mw_per_hour": 100,
+          "window_energy_budget_mwh": 20
+        }
+      },
+      "demands": {
+        "building": {
+          "sector": "building",
+          "carrier": "electricity",
+          "efficiency": 1,
+          "input_capacity_mw": 20,
+          "priority": 0,
+          "service_mwh": [
+            20
+          ]
+        },
+        "coal_material": {
+          "sector": "nonenergy_feedstock",
+          "carrier": "coal",
+          "efficiency": 1,
+          "input_capacity_mw": 20,
+          "priority": 1,
+          "service_mwh": [
+            20
+          ]
+        },
+        "gas_material": {
+          "sector": "nonenergy_feedstock",
+          "carrier": "gas",
+          "efficiency": 1,
+          "input_capacity_mw": 20,
+          "priority": 1,
+          "service_mwh": [
+            20
+          ]
+        }
+      }
+    }
+  },
+  "outputs": {
+    "retained": {
+      "status": "optimal",
+      "annual_repeats": 1.0,
+      "resource_cost": 40.0,
+      "dispatch_objective": 40.0,
+      "policy_signal_cost": 0.0,
+      "fuel": [
+        {
+          "fuel": "coal",
+          "period": 0,
+          "domestic_mwh": 20.0,
+          "import_mwh": 0.0,
+          "fill_mwh": 0.0,
+          "withdrawal_mwh": 0.0,
+          "closing_mwh": 0.0,
+          "direct_mwh": 0.0,
+          "conversion_mwh": 20.0,
+          "recovered_in_mwh": 0.0,
+          "internal_recovered_carrier": false,
+          "combustion_co2_t": 6.0
+        },
+        {
+          "fuel": "gas",
+          "period": 0,
+          "domestic_mwh": 20.0,
+          "import_mwh": 0.0,
+          "fill_mwh": 0.0,
+          "withdrawal_mwh": 0.0,
+          "closing_mwh": 0.0,
+          "direct_mwh": 20.0,
+          "conversion_mwh": 0.0,
+          "recovered_in_mwh": 0.0,
+          "internal_recovered_carrier": false,
+          "combustion_co2_t": 6.0
+        }
+      ],
+      "generation": [
+        {
+          "plant": "coal",
+          "period": 0,
+          "output": "electricity",
+          "output_mwh": 20.0,
+          "auxiliary_use_mwh": 0.0,
+          "bus_output_mwh": 20.0,
+          "input_mwh": 20.0
+        },
+        {
+          "plant": "gas",
+          "period": 0,
+          "output": "electricity",
+          "output_mwh": -0.0,
+          "auxiliary_use_mwh": -0.0,
+          "bus_output_mwh": -0.0,
+          "input_mwh": -0.0
+        }
+      ],
+      "demand": [
+        {
+          "device": "building",
+          "sector": "building",
+          "period": 0,
+          "carrier": "electricity",
+          "input_mwh": 20.0,
+          "requested_service_mwh": 20.0,
+          "served_service_mwh": 20.0,
+          "unmet_service_mwh": -0.0
+        },
+        {
+          "device": "coal_material",
+          "sector": "nonenergy_feedstock",
+          "period": 0,
+          "carrier": "coal",
+          "input_mwh": -0.0,
+          "requested_service_mwh": 20.0,
+          "served_service_mwh": -0.0,
+          "unmet_service_mwh": 20.0
+        },
+        {
+          "device": "gas_material",
+          "sector": "nonenergy_feedstock",
+          "period": 0,
+          "carrier": "gas",
+          "input_mwh": 20.0,
+          "requested_service_mwh": 20.0,
+          "served_service_mwh": 20.0,
+          "unmet_service_mwh": 0.0
+        }
+      ],
+      "storage": [
+        {
+          "period": 0,
+          "opening_mwh": 0.0,
+          "charge_mwh": 0.0,
+          "discharge_mwh": 0.0,
+          "closing_mwh": 0.0
+        }
+      ],
+      "additional_storage": [],
+      "recoveries": [],
+      "balances": [
+        {
+          "constraint": "inventory/coal/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "terminal/coal",
+          "residual": 0.0
+        },
+        {
+          "constraint": "inventory/gas/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "terminal/gas",
+          "residual": 0.0
+        },
+        {
+          "constraint": "service/building/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "service/coal_material/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "service/gas_material/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "SOC-balance/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "terminal-SOC",
+          "residual": 0.0
+        },
+        {
+          "constraint": "carrier/coal/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "carrier/electricity/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "carrier/gas/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "carrier/hydrogen/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "fixed-shortage/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "fixed-shortage/1",
+          "residual": 0.0
+        }
+      ],
+      "stages": [
+        {
+          "stage": "service-priority-0",
+          "objective": 0.0,
+          "status": 0,
+          "max_residual": 0.0
+        },
+        {
+          "stage": "service-priority-1",
+          "objective": 20.0,
+          "status": 0,
+          "max_residual": 0.0
+        },
+        {
+          "stage": "resource-cost",
+          "objective": 40.0,
+          "status": 0,
+          "max_residual": 0.0
+        }
+      ],
+      "max_residual": 0.0
+    },
+    "retired": {
+      "status": "optimal",
+      "annual_repeats": 1.0,
+      "resource_cost": 240.0,
+      "dispatch_objective": 240.0,
+      "policy_signal_cost": 0.0,
+      "fuel": [
+        {
+          "fuel": "coal",
+          "period": 0,
+          "domestic_mwh": 20.0,
+          "import_mwh": 0.0,
+          "fill_mwh": 0.0,
+          "withdrawal_mwh": 0.0,
+          "closing_mwh": 0.0,
+          "direct_mwh": 20.0,
+          "conversion_mwh": 0.0,
+          "recovered_in_mwh": 0.0,
+          "internal_recovered_carrier": false,
+          "combustion_co2_t": 6.0
+        },
+        {
+          "fuel": "gas",
+          "period": 0,
+          "domestic_mwh": 20.0,
+          "import_mwh": 0.0,
+          "fill_mwh": 0.0,
+          "withdrawal_mwh": 0.0,
+          "closing_mwh": 0.0,
+          "direct_mwh": 0.0,
+          "conversion_mwh": 20.0,
+          "recovered_in_mwh": 0.0,
+          "internal_recovered_carrier": false,
+          "combustion_co2_t": 6.0
+        }
+      ],
+      "generation": [
+        {
+          "plant": "coal",
+          "period": 0,
+          "output": "electricity",
+          "output_mwh": 0.0,
+          "auxiliary_use_mwh": 0.0,
+          "bus_output_mwh": 0.0,
+          "input_mwh": 0.0
+        },
+        {
+          "plant": "gas",
+          "period": 0,
+          "output": "electricity",
+          "output_mwh": 20.0,
+          "auxiliary_use_mwh": 0.0,
+          "bus_output_mwh": 20.0,
+          "input_mwh": 20.0
+        }
+      ],
+      "demand": [
+        {
+          "device": "building",
+          "sector": "building",
+          "period": 0,
+          "carrier": "electricity",
+          "input_mwh": 20.0,
+          "requested_service_mwh": 20.0,
+          "served_service_mwh": 20.0,
+          "unmet_service_mwh": -0.0
+        },
+        {
+          "device": "coal_material",
+          "sector": "nonenergy_feedstock",
+          "period": 0,
+          "carrier": "coal",
+          "input_mwh": 20.0,
+          "requested_service_mwh": 20.0,
+          "served_service_mwh": 20.0,
+          "unmet_service_mwh": -0.0
+        },
+        {
+          "device": "gas_material",
+          "sector": "nonenergy_feedstock",
+          "period": 0,
+          "carrier": "gas",
+          "input_mwh": -0.0,
+          "requested_service_mwh": 20.0,
+          "served_service_mwh": -0.0,
+          "unmet_service_mwh": 20.0
+        }
+      ],
+      "storage": [
+        {
+          "period": 0,
+          "opening_mwh": 0.0,
+          "charge_mwh": 0.0,
+          "discharge_mwh": 0.0,
+          "closing_mwh": 0.0
+        }
+      ],
+      "additional_storage": [],
+      "recoveries": [],
+      "balances": [
+        {
+          "constraint": "inventory/coal/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "terminal/coal",
+          "residual": 0.0
+        },
+        {
+          "constraint": "inventory/gas/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "terminal/gas",
+          "residual": 0.0
+        },
+        {
+          "constraint": "service/building/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "service/coal_material/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "service/gas_material/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "SOC-balance/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "terminal-SOC",
+          "residual": 0.0
+        },
+        {
+          "constraint": "carrier/coal/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "carrier/electricity/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "carrier/gas/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "carrier/hydrogen/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "fixed-shortage/0",
+          "residual": 0.0
+        },
+        {
+          "constraint": "fixed-shortage/1",
+          "residual": 0.0
+        }
+      ],
+      "stages": [
+        {
+          "stage": "service-priority-0",
+          "objective": 0.0,
+          "status": 0,
+          "max_residual": 0.0
+        },
+        {
+          "stage": "service-priority-1",
+          "objective": 20.0,
+          "status": 0,
+          "max_residual": 0.0
+        },
+        {
+          "stage": "resource-cost",
+          "objective": 240.0,
+          "status": 0,
+          "max_residual": 0.0
+        }
+      ],
+      "max_residual": 0.0
+    }
+  },
+  "service_vectors": {
+    "retained": {
+      "building": {
+        "requested": 20.0,
+        "unmet": 0.0,
+        "fraction": 0.0
+      },
+      "nonenergy_feedstock/coal": {
+        "requested": 20.0,
+        "unmet": 20.0,
+        "fraction": 1.0
+      },
+      "nonenergy_feedstock/gas": {
+        "requested": 20.0,
+        "unmet": 0.0,
+        "fraction": 0.0
+      }
+    },
+    "retired": {
+      "building": {
+        "requested": 20.0,
+        "unmet": 0.0,
+        "fraction": 0.0
+      },
+      "nonenergy_feedstock/coal": {
+        "requested": 20.0,
+        "unmet": 0.0,
+        "fraction": 0.0
+      },
+      "nonenergy_feedstock/gas": {
+        "requested": 20.0,
+        "unmet": 20.0,
+        "fraction": 1.0
+      }
+    }
+  },
+  "old_aggregate_unmet": [
+    20.0,
+    20.0
+  ],
+  "gas_fraction_regret": 1.0,
+  "passed": true
+}
