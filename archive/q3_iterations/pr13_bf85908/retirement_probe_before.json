@@ -1,0 +1,54 @@
+{
+  "passed": false,
+  "cases": [
+    {
+      "rule": "cost_order",
+      "end_year": 2029,
+      "passed": false,
+      "reported_early_mw": 19142.755207136204,
+      "recomputed_strict_early_mw": 0,
+      "recomputed_managed_natural_mw": 19142.755207136204,
+      "exits": [
+        {
+          "year": 2029,
+          "action": "early_retired",
+          "cohort": "initial/coal/20",
+          "capacity_mw": 19142.755207136204,
+          "natural_exit": 2029,
+          "decision": 2027,
+          "deadline": 2029
+        }
+      ]
+    },
+    {
+      "rule": "schedule",
+      "end_year": 2028,
+      "passed": true,
+      "reported_early_mw": 25114.85079581482,
+      "recomputed_strict_early_mw": 25114.85079581482,
+      "recomputed_managed_natural_mw": 0,
+      "exits": [
+        {
+          "year": 2028,
+          "action": "early_retired",
+          "cohort": "initial/coal/20",
+          "capacity_mw": 19142.755207136204,
+          "natural_exit": 2029,
+          "decision": 2027,
+          "deadline": 2029
+        },
+        {
+          "year": 2028,
+          "action": "early_retired",
+          "cohort": "initial/coal/19/q3/2027",
+          "capacity_mw": 5972.095588678614,
+          "natural_exit": 2030,
+          "decision": 2027,
+          "deadline": 2030
+        }
+      ]
+    }
+  ],
+  "config_sha256": "5ebc709f01a944ba31beecac9c81a148123a571795d58d8be417eee68af8f922",
+  "model_sha256": "42b144f4f548e97f75188383aa5ee89d8a5e10609dd437692bc0de7655e4f420"
+}

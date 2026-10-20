@@ -82,12 +82,16 @@ python -B -X utf8 run.py q3 --config workflow/q3_inputs.json --output-dir output
 python -B -X utf8 scripts/review_q3_delivery.py
 python -B -X utf8 run.py q3 --config workflow/q3_inputs.json --output-dir outputs/q3/p3_yx_reproduction
 python -B -X utf8 scripts/compare_q3_runs.py
+python -B -X utf8 scripts/probe_q3_retirement.py
+python -B -X utf8 scripts/review_pr13_changes.py
 python -B -X utf8 scripts/summarize_q3_evidence.py
 ```
 
 全部实验离线执行，默认最多4进程，可设环境变量 `Q3_WORKERS=1` 串行。新尝试先使旧收据失效；失败返回非零并保留旧尝试。原问题二模块只增加非循环窗口的可选自由终端SOC，原默认行为有完整回归。科学范围、成本及资金、选参和检验边界见 [P3报告说明](solutions/p3-yx.md)。重复复现输出和失败尝试不重复提交，验收记录及必要失败证据保留。
 
-本次主批次实际约16.3分钟、独立完整复现约21.4分钟；硬件和并发会改变耗时。Q1/Q2回归分别使用独立输出目录`outputs/q1/q3_yx_regression`和`outputs/q2/q3_yx_regression`，运行后执行`python -B -X utf8 scripts/review_q3_regressions.py --q2`核对原产物和受保护文件。Q2回归会完整重做1012次训练及107项条件试验，需要额外时间。
+原v3主批次实际约16.3分钟、独立完整复现约21.4分钟；PR13修复后的耗时以新manifest为准，硬件和并发会改变耗时。Q1/Q2回归分别使用独立输出目录`outputs/q1/q3_yx_regression`和`outputs/q2/q3_yx_regression`，运行后执行`python -B -X utf8 scripts/review_q3_regressions.py --q2`核对原产物和受保护文件。Q2回归会完整重做1012次训练及107项条件试验，需要额外时间。
+
+本次PR13仅修正Q3退役分类和L说明，实际重新执行完整测试与两套Q3，Q1/Q2沿用原完整回归并重新核验依赖和产物；作用域收据由 `scripts/review_pr13_regression_scope.py` 生成。不能将依赖核验说成重新训练。修复前后比较需要本地保留原提交 `bf8590809004466d2f595407eb61ddd2b6b7e5a2`，若浅克隆缺失须先取得该提交。新增到龄量只覆盖受Q3计划管理的退出，定义和L作用对象表见[审查回应](solutions/p3-pr13-review-response.md)。
 
 `outputs/q3_review/README.md`列出本次证据与复跑步骤。`scripts/accept_q3_delivery.py`只汇总已执行且指纹匹配的本地证据；不能用它替代前述实际运行或两位成员的C9批准。
 

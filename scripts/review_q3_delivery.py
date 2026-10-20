@@ -9,7 +9,7 @@ import math
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
-from run_q3 import verify_latest,load,sha,dump,rank_key
+from run_q3 import verify_latest,load,sha,dump,rank_key,csv_write
 
 
 def read_csv(path):
@@ -22,6 +22,36 @@ def records(folder,kind):
     for p in paths:
         with gzip.open(p,'rt',encoding='utf-8') as stream:
             for line in stream:yield json.loads(line)
+
+
+def reconcile_retirement(record,metrics,config):
+    """Derive actual exit dates from annual asset states, not reported counters."""
+    exits={}
+    for asset in sorted(record['assets'],key=lambda r:r['year']):
+        if asset.get('kind')=='device' or not asset.get('q3_decision') or asset['status']!='retired':continue
+        exits.setdefault(asset['id'],dict(year=asset['year'],natural=asset['exit_year'],mw=asset['capacity_mw']))
+    events=[r for r in record['retirement'] if r['action']!='decision']
+    if len(events)!=len(exits) or {r['cohort'] for r in events}!=set(exits):
+        raise ValueError('Retirement events differ from actual asset exits')
+    def same(a,b):
+        return abs(float(a)-float(b))<=config['acceptance']['absolute_numeric_tolerance']+config['acceptance']['relative_numeric_tolerance']*max(abs(float(a)),abs(float(b)))
+    for event in events:
+        actual=exits[event['cohort']]
+        if actual['year']>actual['natural']:raise ValueError('Actual asset exits after natural lifetime')
+        expected='early_retired' if actual['year']<actual['natural'] else 'natural_retired'
+        if event['action']!=expected:raise ValueError('Incorrect retirement classification: '+event['cohort'])
+        if event['year']!=actual['year'] or event['natural_exit']!=actual['natural'] or not same(event['capacity_mw'],actual['mw']):
+            raise ValueError('Retirement event contradicts asset history')
+    for row in record['paths']:
+        early=math.fsum(x['mw'] for x in exits.values() if x['year']<=row['year'] and x['year']<x['natural'])
+        natural=math.fsum(x['mw'] for x in exits.values() if x['year']<=row['year'] and x['year']==x['natural'])
+        if not same(row['q3_early_retired_mw'],early) or not same(row['q3_managed_natural_retired_mw'],natural):
+            raise ValueError('Yearly cumulative retirement metric differs from actual exits')
+    if not same(metrics['retired_early_mw'],early) or not same(metrics['managed_natural_retired_mw'],natural):
+        raise ValueError('Terminal retirement metric differs from actual exits')
+    return dict(early_retired_mw=early,managed_natural_retired_mw=natural,
+        early_exit_events=sum(x['year']<x['natural'] for x in exits.values()),
+        natural_exit_events=sum(x['year']==x['natural'] for x in exits.values()))
 
 
 def audit(folder):
@@ -37,9 +67,19 @@ def audit(folder):
     metric_rows.update({r['scenario']:r for r in read_csv(folder/'scenario_comparison.csv') if r['scope']=='2025-2060 annual path'})
     metric_rows.update({r['case']:r for r in read_csv(folder/'sensitivity.csv') if r['kind']=='policy_cost'})
     annual=set();max_cash=0;max_physical=0;max_public=0;early=0
-    fixed_reference=None;fixed_cases=0;max_cost_residual=0;max_terminal_residual=0
+    fixed_reference=None;fixed_cases=0;max_cost_residual=0;max_terminal_residual=0;retirement_cases=[];delay_cases=0
     for r in records(folder,'annual'):
         paths=r['paths'];case=r['case'];annual.add(case)
+        retirement_cases.append(dict(case=case,**reconcile_retirement(r,metric_rows[case],c)))
+        if r['spec']['study']=='h01':
+            mode='fixed_committed_generation' if r['spec']['fixed_pipeline'] else 'full_agent_response'
+            target=c['h01']['delay_targets'][mode]
+            if r['spec']['delay_target']!=target or metric_rows[case]['delay_target']!=target:raise ValueError('H01 delay target mislabeled')
+            if mode=='full_agent_response':
+                for project in r['infrastructure']:
+                    if project['online']-project['decision']!=assumptions[project['kind']+'_lead_years']+r['spec']['h01']['delay']:
+                        raise ValueError('H01 infrastructure delay differs from declared target')
+            delay_cases+=1
         if case=='S0':
             fixed_reference={x['id']:{k:x[k] for k in ('tech','capacity_mw','decision_year','cost','online_year')} for x in r['projects'] if x['initial_reconstruction']}
         if r['spec'].get('fixed_pipeline'):
@@ -100,6 +140,10 @@ def audit(folder):
     check('annual_cash_and_physics',max_physical<c['acceptance']['physical_residual_mwh'],dict(max_cash_cny=max_cash,max_physical_mwh=max_physical))
     check('public_budget',max_public<=1+1e-9,max_public)
     check('actual_retirement_decisions',early>0,early)
+    check('retirement_metrics_from_asset_exit_years',len(retirement_cases)==coverage['annual_cases'],dict(
+        cases=len(retirement_cases),managed_natural_cases=sum(r['managed_natural_retired_mw']>0 for r in retirement_cases),
+        early_exit_events=sum(r['early_exit_events'] for r in retirement_cases),natural_exit_events=sum(r['natural_exit_events'] for r in retirement_cases)))
+    check('h01_delay_targets_match_interventions',delay_cases==coverage['h01_cases'],delay_cases)
     check('fixed_committed_project_set',fixed_cases==coverage['h01_cases']//2,fixed_cases)
     check('resource_cost_from_accounts',True,dict(max_residual_cny=max_cost_residual,transfers_excluded=True))
     check('terminal_value_from_paid_assets',True,dict(max_residual_cny=max_terminal_residual,cases=len(metric_rows)))
@@ -153,7 +197,7 @@ def audit(folder):
     best=min(feasible,key=lambda r:rank_key(float(r['worst_loss']),float(r['resource_cost_cny']),r['policy']))['policy'] if feasible else None
     check('selection_uses_no_test_outcome',selection['selected']==best,selection)
     check('selection_test_disjoint',not(set(c['search']['selection_gas_offsets'])&set(c['search']['test_gas_offsets'])),'frozen before held-out events')
-    return dict(passed=True,status='local_scientific_ledger_checks_passed',checks=checks,run_id=m['run_id'],
+    return dict(passed=True,status='local_scientific_ledger_checks_passed',checks=checks,retirement_cases=retirement_cases,run_id=m['run_id'],
         manifest_sha256=sha(folder/'run_manifest.json'),reviewer_sha256=sha(Path(__file__)),C9='pending_human_review')
 
 
@@ -165,6 +209,7 @@ def main():
     try:result=audit(ROOT/args.output_dir)
     except Exception as exc:result=dict(passed=False,status='failed',error=str(exc))
     dump(out/'ledger_checks.json',result);print(json.dumps(result,ensure_ascii=False))
+    if result['passed']:csv_write(out/'retirement_metrics_recomputed.csv',result['retirement_cases'])
     return 0 if result['passed'] else 1
 
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "experiment_version": "q3-v3",
+  "experiment_version": "q3-v4-pr13-review",
   "base_sha": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
   "owner": "p3/yx",
   "scope": "conditional_national_aggregate",
@@ -59,6 +59,10 @@
     "recovery_consecutive_periods": 4
   },
   "h01": {
+    "delay_targets": {
+      "full_agent_response": "new_grid_and_storage_construction",
+      "fixed_committed_generation": "initial_committed_wind_solar_hydro_nuclear_commissioning"
+    },
     "retirement_speeds": [
       0,
       0.02,
@@ -183,5 +187,6 @@
     "loss_decimal_places": 7,
     "cost_cny_quantum": 1000000,
     "basis": "loss below original 1e-7 tolerance treated as tie; same for all rules"
-  }
+  },
+  "pr13_review_revision": "Classification-only correction: actual retirement before natural exit is early; managed exits at natural lifetime are separate. No numerical parameter, physical transition, investment/dispatch decision, threshold or case grid changed. The delay_targets metadata names the existing distinct L interventions; it does not redefine them."
 }

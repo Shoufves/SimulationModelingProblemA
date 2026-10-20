@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "wall_seconds": 1333.9932487999904,
+  "runs": [
+    {
+      "label": "primary",
+      "command": [
+        "D:\\仿真建模资料\\2026年仿真建模挑战赛赛题\\A题\\tmp\\q3\\repro_env\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q3",
+        "--config",
+        "workflow/q3_inputs.json",
+        "--output-dir",
+        "outputs/q3/p3_yx"
+      ],
+      "python_hash_seed": "1313",
+      "workers": 4,
+      "exit_code": 0
+    },
+    {
+      "label": "reproduction",
+      "command": [
+        "D:\\仿真建模资料\\2026年仿真建模挑战赛赛题\\A题\\tmp\\q2\\clean_env\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "run.py",
+        "q3",
+        "--config",
+        "workflow/q3_inputs.json",
+        "--output-dir",
+        "outputs/q3/p3_yx_reproduction"
+      ],
+      "python_hash_seed": "2313",
+      "workers": 3,
+      "exit_code": 0
+    }
+  ]
+}

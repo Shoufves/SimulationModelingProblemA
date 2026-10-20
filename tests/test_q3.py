@@ -15,7 +15,8 @@ if AVAILABLE:
     import run_q3
     from energy_model.q2_national import operate_national
     from energy_model.q2_operations import operate,Q2Error
-    from energy_model.q3_transition import TransitionModel
+    from energy_model.q3_transition import TransitionModel,annual_metrics
+    from review_q3_delivery import reconcile_retirement
     from energy_model.q3_events import run_event,service_metrics,severity,fingerprint,interaction
     from test_q2_operations import dispatch_case
 
@@ -178,6 +179,51 @@ class Q3Tests(unittest.TestCase):
     def test_ranking_ignores_solver_tail_noise(self):
         a=run_q3.rank_key(.4+1e-14,1e12,'a');b=run_q3.rank_key(.4,1e12,'b')
         self.assertLess(a,b)
+
+    def test_deferred_exit_at_natural_lifetime_is_not_early(self):
+        m=TransitionModel(self.data,self.design,self.theta,self.c,h01=dict(vR=.02,vE=.25,delay=0,rule='cost_order')).run(2029)
+        exits=[r for r in m.retirement_log if r['action']!='decision']
+        self.assertEqual(len(exits),1)
+        self.assertEqual((exits[0]['cohort'],exits[0]['year'],exits[0]['natural_exit']),('initial/coal/20',2029,2029))
+        self.assertEqual(exits[0]['action'],'natural_retired')
+        self.assertEqual(m.retired_early_mw,0)
+        self.assertAlmostEqual(m.managed_natural_retired_mw,19142.755207136204)
+        result=reconcile_retirement(run_q3.ledger(m),annual_metrics(m),self.c)
+        self.assertEqual(result['early_retired_mw'],0)
+        self.assertEqual(m.paths[-2]['q3_managed_natural_retired_mw'],0)
+
+    def test_actual_exit_before_natural_lifetime_remains_early(self):
+        m=TransitionModel(self.data,self.design,self.theta,self.c,h01=dict(vR=.02,vE=.25,delay=0,rule='schedule')).run(2028)
+        exits=[r for r in m.retirement_log if r['action']!='decision']
+        self.assertTrue(exits)
+        self.assertTrue(all(r['year']<r['natural_exit'] and r['action']=='early_retired' for r in exits))
+        self.assertAlmostEqual(m.retired_early_mw,25114.85079581482)
+        self.assertEqual(m.managed_natural_retired_mw,0)
+        reconcile_retirement(run_q3.ledger(m),annual_metrics(m),self.c)
+
+    def test_retirement_auditor_rejects_old_misclassification_even_with_matching_counter(self):
+        m=TransitionModel(self.data,self.design,self.theta,self.c,h01=dict(vR=.02,vE=.25,delay=0,rule='cost_order')).run(2029)
+        r=deepcopy(run_q3.ledger(m))
+        next(x for x in r['retirement'] if x['action']=='natural_retired')['action']='early_retired'
+        r['paths'][-1]['q3_early_retired_mw']=m.managed_natural_retired_mw
+        with self.assertRaisesRegex(ValueError,'classification'):
+            reconcile_retirement(r,annual_metrics(m),self.c)
+
+    def test_retirement_auditor_rejects_wrong_yearly_counter(self):
+        m=TransitionModel(self.data,self.design,self.theta,self.c,h01=dict(vR=.02,vE=.25,delay=0,rule='schedule')).run(2028)
+        r=deepcopy(run_q3.ledger(m));r['paths'][-1]['q3_early_retired_mw']=0
+        with self.assertRaisesRegex(ValueError,'Yearly cumulative'):
+            reconcile_retirement(r,annual_metrics(m),self.c)
+
+    def test_incorrect_delay_target_description_rejected(self):
+        original=run_q3.load
+        def changed(path):
+            result=original(path)
+            if str(path).endswith('q3_inputs.json'):
+                result['h01']['delay_targets']['full_agent_response']='initial_committed_wind_solar_hydro_nuclear_commissioning'
+            return result
+        with patch.object(run_q3,'load',side_effect=changed),self.assertRaises(Q2Error):
+            run_q3.preflight(ROOT/'workflow/q3_inputs.json')
 
 
 if __name__=='__main__':unittest.main()

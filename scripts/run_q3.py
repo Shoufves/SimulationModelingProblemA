@@ -53,6 +53,10 @@ def preflight(config_path):
         raise Q2Error('invalid_input','Six named scenarios required')
     if c['initial_year']!=2024 or c['end_year']!=2060:
         raise Q2Error('invalid_input','National horizon changed')
+    if c['h01'].get('delay_targets')!={
+        'full_agent_response':'new_grid_and_storage_construction',
+        'fixed_committed_generation':'initial_committed_wind_solar_hydro_nuclear_commissioning'}:
+        raise Q2Error('invalid_input','H01 delay target metadata differs from implemented interventions')
     if len(c['policy']['candidates'])>c['search']['max_policy_candidates']:
         raise Q2Error('invalid_input','Policy search budget exceeded')
     if set(c['search']['selection_gas_offsets'])&set(c['search']['test_gas_offsets']):
@@ -134,6 +138,7 @@ def case_specs(c):
     specs=[dict(id=s,study='scenario',scenario=s,split='baseline') for s in ('S0','SP','ST')]
     h=c['h01']
     for fixed in (False,True):
+        delay_target=h['delay_targets']['fixed_committed_generation' if fixed else 'full_agent_response']
         for family in ('vR','vE'):
             for speed in h['retirement_speeds' if family=='vR' else 'replacement_speeds']:
                 for delay in h['delays']:
@@ -141,13 +146,13 @@ def case_specs(c):
                         options=dict(vR=speed if family=='vR' else h['fixed_retirement'],
                             vE=speed if family=='vE' else h['fixed_replacement'],delay=delay,rule=rule)
                         specs.append(dict(id=f'h01_{int(fixed)}_{family}_{speed}_{delay}_{rule}',study='h01',
-                            family=family,split='selection',h01=options,fixed_pipeline=fixed,
+                            family=family,split='selection',h01=options,fixed_pipeline=fixed,delay_target=delay_target,
                             end_year=h['fixed_pipeline_end'] if fixed else c['end_year']))
             for rule in h['rules']:
                 options=dict(vR=h['test_retirement'] if family=='vR' else h['fixed_retirement'],
                     vE=h['test_replacement'] if family=='vE' else h['fixed_replacement'],delay=h['test_delay'],rule=rule)
                 specs.append(dict(id=f'h01_test_{int(fixed)}_{family}_{rule}',study='h01',family=family,
-                    split='test',h01=options,fixed_pipeline=fixed,end_year=h['fixed_pipeline_end'] if fixed else c['end_year']))
+                    split='test',h01=options,fixed_pipeline=fixed,delay_target=delay_target,end_year=h['fixed_pipeline_end'] if fixed else c['end_year']))
     for i,p in enumerate(c['policy']['candidates']):
         specs.append(dict(id=f'policy_{i}',study='policy',policy=p,split='selection'))
     for factor in c['policy']['test_cost_multipliers']:
@@ -180,6 +185,7 @@ def run(config,data,design,theta,out):
                     if ident=='S0':dump(out/'baseline_regression.json',baseline_check(result['ledger']['paths'],config))
                 if spec['study']=='h01':h01.append(dict(case=ident,split=spec['split'],family=spec['family'],
                     project_mode='fixed_committed_generation' if spec['fixed_pipeline'] else 'full_agent_response',
+                    delay_target=spec['delay_target'],
                     **spec['h01'],**m,service_bound_passed=m['max_service_loss']<=config['policy']['annual_max_service_loss']))
                 if spec['study']=='policy':candidates.append(dict(policy=ident,actions=spec['policy'],**m))
                 if (idx+1)%8==0 or idx<3:print(f'annual {idx+1}/{len(specs)} {ident}',flush=True)
@@ -304,6 +310,7 @@ def report(out,s,comparisons,h02,tradeoffs,diagnostic):
         '','## H01/H02 与创新','',
         'H01分开vR×L与vE×L，固定已承诺发电项目和完整主体响应分表；前者仅移动同一组清洁在建项目的投运时点，终端设备继续按vE更新。退出最多延期3年且不越自然寿命，无免费延寿。滚动规则与固定日程、成本规则、当前设备可用后退出规则同信息比较。',
         'H02报告正常与限制气电向上调整两组J。冻结不增加资源、不降低服务或重置库存；J本身不等于传播证明。',
+        'H01的delay_target明确区分L：完整主体组增加新电网/储能工期；固定项目组移动初始已承诺风光水核项目的投运时间。两组相同L不是同一种干预。实际退出年严格早于自然退出年才计入retired_early_mw；受Q3计划管理但延期至到龄的退出单列managed_natural_retired_mw，不是全国全部自然退出量。',
         f'本次最大绝对J为{max(abs(r["J_normal"]) for r in h02):.6g} MWh（不同服务不相加）；最大响应贡献为{max(abs(r["response_contribution"]) for r in h02):.6g} MWh。',
         '有限时序枚举和滚动安全审查为已有文档方法的工程实现；不声称算法首创。预先指定检验条件不用于选择，但因实现修复已再次运行，不冒称未接触盲测。零效应或排名不稳均保留。',
         '','## 五方面建议与可实施边界','',

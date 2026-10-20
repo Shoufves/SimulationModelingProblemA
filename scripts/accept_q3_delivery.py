@@ -15,22 +15,38 @@ def main():
         tests=load(OUT/'tests.json');audit=load(OUT/'workspace_audit.json')
         formal=load(OUT/'formal_inputs.json');scan=load(OUT/'google_key_scan.json')['working_tree']
         q1=load(OUT/'q1_regression.json');q2=load(OUT/'q2_regression.json');protected=load(OUT/'protected_originals.json')
+        retirement_probe=load(OUT/'retirement_probe.json');revision=load(OUT/'pr13_change_comparison.json')
+        regression_scope=load(OUT/'review13_regression_scope.json')
         if ledger['manifest_sha256']!=sha(ROOT/'outputs/q3/p3_yx/run_manifest.json'):raise ValueError('stale ledger review')
         if ledger['reviewer_sha256']!=sha(ROOT/'scripts/review_q3_delivery.py'):raise ValueError('ledger checker changed')
         if repro['checker_sha256']!=sha(ROOT/'scripts/compare_q3_runs.py'):raise ValueError('reproduction checker changed')
         if repro['left_manifest']!=ledger['manifest_sha256']:raise ValueError('different reproduction source')
         if repro['right_manifest']!=sha(OUT/'reproduction_manifest.json'):raise ValueError('changed reproduction receipt')
+        if retirement_probe['model_sha256']!=sha(ROOT/'src/energy_model/q3_transition.py') or retirement_probe['config_sha256']!=manifest['config_sha256']:
+            raise ValueError('stale retirement probe')
+        if revision['new_manifest_sha256']!=ledger['manifest_sha256'] or revision['checker_sha256']!=sha(ROOT/'scripts/review_pr13_changes.py'):
+            raise ValueError('stale PR13 invariant comparison')
+        if regression_scope['checker_sha256']!=sha(ROOT/'scripts/review_pr13_regression_scope.py'):
+            raise ValueError('regression scope checker changed')
+        if not regression_scope['unchanged_q1_q2_code_and_inputs']:
+            raise ValueError('empty regression dependency evidence')
+        for kind,receipt in regression_scope['historical_receipts'].items():
+            if receipt['historical_manifest_sha256']!=sha(OUT/f'{kind}_regression_manifest.json') or receipt['comparison_sha256']!=sha(OUT/f'{kind}_regression.json'):
+                raise ValueError('regression receipt changed: '+kind)
+        for path,digest in regression_scope['unchanged_q1_q2_code_and_inputs'].items():
+            if sha(ROOT/path)!=digest:raise ValueError('shared regression dependency changed: '+path)
         checks={r['name']:r['passed'] for r in ledger['checks']}
         ancestry=subprocess.run(['git','merge-base','--is-ancestor',BASE,'HEAD'],cwd=ROOT).returncode==0
         conditions={
             'C1':ancestry and protected['passed'],
             'C2':checks['six_scenarios'] and load(ROOT/'outputs/q3/p3_yx/baseline_regression.json')['passed'],
             'C3':all(checks[k] for k in ('annual_cash_and_physics','public_budget','resource_cost_from_accounts','terminal_value_from_paid_assets','event_continuity','event_solver_residual')),
-            'C4':checks['h01_all_grid_points'] and checks['fixed_committed_project_set'] and checks['actual_retirement_decisions'],
+            'C4':all(checks[k] for k in ('h01_all_grid_points','fixed_committed_project_set','actual_retirement_decisions',
+                'retirement_metrics_from_asset_exit_years','h01_delay_targets_match_interventions')) and retirement_probe['passed'],
             'C5':checks['h02_independent_difference'],
             'C6':checks['selection_uses_no_test_outcome'] and checks['selection_test_disjoint'],
             'C7':tests['passed'] and tests['skipped']==0 and (ROOT/'tests/test_q3.py').exists(),
-            'C8':tests['passed'] and audit['passed'] and formal['workflow_check']['passed'] and formal['formal_input_check']['passed'] and scan['passed'] and q1['passed'] and q2['passed'] and repro['passed'],
+            'C8':tests['passed'] and audit['passed'] and formal['workflow_check']['passed'] and formal['formal_input_check']['passed'] and scan['passed'] and q1['passed'] and q2['passed'] and repro['passed'] and revision['passed'] and regression_scope['passed'],
         }
         evidence={p.name:sha(p) for p in sorted(OUT.iterdir()) if p.is_file() and p.name!='acceptance.json'}
         result=dict(passed=all(conditions.values()),status='C1_C8_local_passed_C9_pending' if all(conditions.values()) else 'local_failed',
@@ -41,6 +57,9 @@ def main():
                 'Rolling rule ranking reverses on a predefined test case','No annual disaster calendar, province network, or real disaster probability is claimed',
                 'Inherited Q2 calibration and observed-input limitations remain; reused test conditions are disclosed'],
             test_count=tests['tests'],reproduced_numeric_values=repro['numeric_values_compared'],
+            pr13_review_items=dict(P2='strict early/natural classification independently reconciled from asset exits',
+                P3='delay targets labeled in configuration, case specifications and H01 CSV'),
+            regression_execution_scope=regression_scope['statement'],
             executed_model_code_hashes=manifest['code_hashes'],evidence_sha256=evidence,
             provenance='Executed from the common base with disclosed uncommitted source; model hashes bind the results to the subsequently committed files.',
             checker_sha256=sha(Path(__file__)))

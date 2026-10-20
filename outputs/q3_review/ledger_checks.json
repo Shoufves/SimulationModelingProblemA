@@ -966,6 +966,21 @@
       "detail": 13455
     },
     {
+      "name": "retirement_metrics_from_asset_exit_years",
+      "passed": true,
+      "detail": {
+        "cases": 187,
+        "managed_natural_cases": 98,
+        "early_exit_events": 3364,
+        "natural_exit_events": 1275
+      }
+    },
+    {
+      "name": "h01_delay_targets_match_interventions",
+      "passed": true,
+      "detail": 160
+    },
+    {
       "name": "fixed_committed_project_set",
       "passed": true,
       "detail": 80
@@ -1032,8 +1047,1319 @@
       "detail": "frozen before held-out events"
     }
   ],
-  "run_id": "20261020T004441503292Z",
-  "manifest_sha256": "8aca85ec8198539e798d161153308b7884ae1d73c4438fef6a89add7a45cacc9",
-  "reviewer_sha256": "3793bdfc560e66a7aba5c87295c8d8874150085c9ccb7a570f9ce4b43e0fc44b",
+  "retirement_cases": [
+    {
+      "case": "S0",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "SP",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "ST",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_0_schedule",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_0_cost_order",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_0_replacement_ready",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_0_rolling_guard",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_1_schedule",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_1_cost_order",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_1_replacement_ready",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_1_rolling_guard",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_3_schedule",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_3_cost_order",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_3_replacement_ready",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0_3_rolling_guard",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0.02_0_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0.02_0_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vR_0.02_0_replacement_ready",
+      "early_retired_mw": 401517.1194993907,
+      "managed_natural_retired_mw": 50550.19482527603,
+      "early_exit_events": 35,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_0_vR_0.02_0_rolling_guard",
+      "early_retired_mw": 376402.2687035759,
+      "managed_natural_retired_mw": 75665.04562109085,
+      "early_exit_events": 33,
+      "natural_exit_events": 7
+    },
+    {
+      "case": "h01_0_vR_0.02_1_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0.02_1_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vR_0.02_1_replacement_ready",
+      "early_retired_mw": 390799.3967631338,
+      "managed_natural_retired_mw": 61267.91756153289,
+      "early_exit_events": 34,
+      "natural_exit_events": 6
+    },
+    {
+      "case": "h01_0_vR_0.02_1_rolling_guard",
+      "early_retired_mw": 338116.75828930346,
+      "managed_natural_retired_mw": 113950.55603536326,
+      "early_exit_events": 30,
+      "natural_exit_events": 10
+    },
+    {
+      "case": "h01_0_vR_0.02_3_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0.02_3_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vR_0.02_3_replacement_ready",
+      "early_retired_mw": 348994.72764238354,
+      "managed_natural_retired_mw": 103072.58668228319,
+      "early_exit_events": 30,
+      "natural_exit_events": 10
+    },
+    {
+      "case": "h01_0_vR_0.02_3_rolling_guard",
+      "early_retired_mw": 305803.3434637097,
+      "managed_natural_retired_mw": 146263.97086095705,
+      "early_exit_events": 27,
+      "natural_exit_events": 13
+    },
+    {
+      "case": "h01_0_vR_0.04_0_schedule",
+      "early_retired_mw": 904134.6286493335,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 48,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0.04_0_cost_order",
+      "early_retired_mw": 827563.6078207886,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 43,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_0_vR_0.04_0_replacement_ready",
+      "early_retired_mw": 904134.6286493335,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 48,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0.04_0_rolling_guard",
+      "early_retired_mw": 904134.6286493335,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 48,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0.04_1_schedule",
+      "early_retired_mw": 904134.6286493335,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 48,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0.04_1_cost_order",
+      "early_retired_mw": 827563.6078207886,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 43,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_0_vR_0.04_1_replacement_ready",
+      "early_retired_mw": 896936.0646195544,
+      "managed_natural_retired_mw": 7198.564029778976,
+      "early_exit_events": 47,
+      "natural_exit_events": 1
+    },
+    {
+      "case": "h01_0_vR_0.04_1_rolling_guard",
+      "early_retired_mw": 865849.1182350611,
+      "managed_natural_retired_mw": 38285.51041427241,
+      "early_exit_events": 46,
+      "natural_exit_events": 2
+    },
+    {
+      "case": "h01_0_vR_0.04_3_schedule",
+      "early_retired_mw": 904134.6286493335,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 48,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vR_0.04_3_cost_order",
+      "early_retired_mw": 827563.6078207886,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 43,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_0_vR_0.04_3_replacement_ready",
+      "early_retired_mw": 877793.3094124183,
+      "managed_natural_retired_mw": 26341.31923691518,
+      "early_exit_events": 46,
+      "natural_exit_events": 2
+    },
+    {
+      "case": "h01_0_vR_0.04_3_rolling_guard",
+      "early_retired_mw": 827563.6078207886,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 43,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_test_0_vR_schedule",
+      "early_retired_mw": 678100.971487,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 43,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_test_0_vR_cost_order",
+      "early_retired_mw": 580547.4927896685,
+      "managed_natural_retired_mw": 97553.47869733158,
+      "early_exit_events": 35,
+      "natural_exit_events": 8
+    },
+    {
+      "case": "h01_test_0_vR_replacement_ready",
+      "early_retired_mw": 620059.4716450413,
+      "managed_natural_retired_mw": 58041.499841958794,
+      "early_exit_events": 38,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_test_0_vR_rolling_guard",
+      "early_retired_mw": 601529.9506584553,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 37,
+      "natural_exit_events": 6
+    },
+    {
+      "case": "h01_0_vE_0_0_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vE_0_0_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0_0_replacement_ready",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vE_0_0_rolling_guard",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vE_0_1_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vE_0_1_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0_1_replacement_ready",
+      "early_retired_mw": 438896.65470620914,
+      "managed_natural_retired_mw": 13170.65961845759,
+      "early_exit_events": 39,
+      "natural_exit_events": 1
+    },
+    {
+      "case": "h01_0_vE_0_1_rolling_guard",
+      "early_retired_mw": 432924.55911753053,
+      "managed_natural_retired_mw": 19142.755207136204,
+      "early_exit_events": 39,
+      "natural_exit_events": 1
+    },
+    {
+      "case": "h01_0_vE_0_3_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vE_0_3_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0_3_replacement_ready",
+      "early_retired_mw": 381468.38908480055,
+      "managed_natural_retired_mw": 70598.9252398662,
+      "early_exit_events": 34,
+      "natural_exit_events": 6
+    },
+    {
+      "case": "h01_0_vE_0_3_rolling_guard",
+      "early_retired_mw": 375496.2934961219,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 33,
+      "natural_exit_events": 7
+    },
+    {
+      "case": "h01_0_vE_0.25_0_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vE_0.25_0_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0.25_0_replacement_ready",
+      "early_retired_mw": 401517.1194993907,
+      "managed_natural_retired_mw": 50550.19482527603,
+      "early_exit_events": 35,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_0_vE_0.25_0_rolling_guard",
+      "early_retired_mw": 376402.2687035759,
+      "managed_natural_retired_mw": 75665.04562109085,
+      "early_exit_events": 33,
+      "natural_exit_events": 7
+    },
+    {
+      "case": "h01_0_vE_0.25_1_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vE_0.25_1_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0.25_1_replacement_ready",
+      "early_retired_mw": 390799.3967631338,
+      "managed_natural_retired_mw": 61267.91756153289,
+      "early_exit_events": 34,
+      "natural_exit_events": 6
+    },
+    {
+      "case": "h01_0_vE_0.25_1_rolling_guard",
+      "early_retired_mw": 338116.75828930346,
+      "managed_natural_retired_mw": 113950.55603536326,
+      "early_exit_events": 30,
+      "natural_exit_events": 10
+    },
+    {
+      "case": "h01_0_vE_0.25_3_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vE_0.25_3_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0.25_3_replacement_ready",
+      "early_retired_mw": 348994.72764238354,
+      "managed_natural_retired_mw": 103072.58668228319,
+      "early_exit_events": 30,
+      "natural_exit_events": 10
+    },
+    {
+      "case": "h01_0_vE_0.25_3_rolling_guard",
+      "early_retired_mw": 305803.3434637097,
+      "managed_natural_retired_mw": 146263.97086095705,
+      "early_exit_events": 27,
+      "natural_exit_events": 13
+    },
+    {
+      "case": "h01_0_vE_0.5_0_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vE_0.5_0_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0.5_0_replacement_ready",
+      "early_retired_mw": 287887.05669767386,
+      "managed_natural_retired_mw": 164180.25762699288,
+      "early_exit_events": 25,
+      "natural_exit_events": 15
+    },
+    {
+      "case": "h01_0_vE_0.5_0_rolling_guard",
+      "early_retired_mw": 281914.96110899525,
+      "managed_natural_retired_mw": 170152.3532156715,
+      "early_exit_events": 25,
+      "natural_exit_events": 15
+    },
+    {
+      "case": "h01_0_vE_0.5_1_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vE_0.5_1_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0.5_1_replacement_ready",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0.5_1_rolling_guard",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0.5_3_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_0_vE_0.5_3_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0.5_3_replacement_ready",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_0_vE_0.5_3_rolling_guard",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_test_0_vE_schedule",
+      "early_retired_mw": 452067.31432466675,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 40,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_test_0_vE_cost_order",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_test_0_vE_replacement_ready",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_test_0_vE_rolling_guard",
+      "early_retired_mw": 250828.0147245018,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 22,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vR_0_0_schedule",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0_0_cost_order",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0_0_replacement_ready",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0_0_rolling_guard",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0_1_schedule",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0_1_cost_order",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0_1_replacement_ready",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0_1_rolling_guard",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0_3_schedule",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0_3_cost_order",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0_3_replacement_ready",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0_3_rolling_guard",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0.02_0_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0.02_0_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vR_0.02_0_replacement_ready",
+      "early_retired_mw": 75024.05915379807,
+      "managed_natural_retired_mw": 176124.4488043501,
+      "early_exit_events": 7,
+      "natural_exit_events": 16
+    },
+    {
+      "case": "h01_1_vR_0.02_0_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vR_0.02_1_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0.02_1_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vR_0.02_1_replacement_ready",
+      "early_retired_mw": 75024.05915379807,
+      "managed_natural_retired_mw": 176124.4488043501,
+      "early_exit_events": 7,
+      "natural_exit_events": 16
+    },
+    {
+      "case": "h01_1_vR_0.02_1_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vR_0.02_3_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0.02_3_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vR_0.02_3_replacement_ready",
+      "early_retired_mw": 75024.05915379807,
+      "managed_natural_retired_mw": 176124.4488043501,
+      "early_exit_events": 7,
+      "natural_exit_events": 16
+    },
+    {
+      "case": "h01_1_vR_0.02_3_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vR_0.04_0_schedule",
+      "early_retired_mw": 652986.1206911852,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 38,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0.04_0_cost_order",
+      "early_retired_mw": 425725.99508775154,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 27,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_1_vR_0.04_0_replacement_ready",
+      "early_retired_mw": 475955.6966793812,
+      "managed_natural_retired_mw": 26341.31923691518,
+      "early_exit_events": 30,
+      "natural_exit_events": 2
+    },
+    {
+      "case": "h01_1_vR_0.04_0_rolling_guard",
+      "early_retired_mw": 425725.99508775154,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 27,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_1_vR_0.04_1_schedule",
+      "early_retired_mw": 652986.1206911852,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 38,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0.04_1_cost_order",
+      "early_retired_mw": 425725.99508775154,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 27,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_1_vR_0.04_1_replacement_ready",
+      "early_retired_mw": 475955.6966793812,
+      "managed_natural_retired_mw": 26341.31923691518,
+      "early_exit_events": 30,
+      "natural_exit_events": 2
+    },
+    {
+      "case": "h01_1_vR_0.04_1_rolling_guard",
+      "early_retired_mw": 425725.99508775154,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 27,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_1_vR_0.04_3_schedule",
+      "early_retired_mw": 652986.1206911852,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 38,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vR_0.04_3_cost_order",
+      "early_retired_mw": 425725.99508775154,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 27,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_1_vR_0.04_3_replacement_ready",
+      "early_retired_mw": 475955.6966793812,
+      "managed_natural_retired_mw": 26341.31923691518,
+      "early_exit_events": 30,
+      "natural_exit_events": 2
+    },
+    {
+      "case": "h01_1_vR_0.04_3_rolling_guard",
+      "early_retired_mw": 425725.99508775154,
+      "managed_natural_retired_mw": 76571.02082854482,
+      "early_exit_events": 27,
+      "natural_exit_events": 5
+    },
+    {
+      "case": "h01_test_1_vR_schedule",
+      "early_retired_mw": 489739.5905183889,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 35,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_test_1_vR_cost_order",
+      "early_retired_mw": 279169.28323989065,
+      "managed_natural_retired_mw": 97553.47869733158,
+      "early_exit_events": 21,
+      "natural_exit_events": 8
+    },
+    {
+      "case": "h01_test_1_vR_replacement_ready",
+      "early_retired_mw": 316841.5594336129,
+      "managed_natural_retired_mw": 59881.202503609355,
+      "early_exit_events": 23,
+      "natural_exit_events": 6
+    },
+    {
+      "case": "h01_test_1_vR_rolling_guard",
+      "early_retired_mw": 279169.28323989065,
+      "managed_natural_retired_mw": 97553.47869733158,
+      "early_exit_events": 21,
+      "natural_exit_events": 8
+    },
+    {
+      "case": "h01_1_vE_0_0_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vE_0_0_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0_0_replacement_ready",
+      "early_retired_mw": 75024.05915379807,
+      "managed_natural_retired_mw": 176124.4488043501,
+      "early_exit_events": 7,
+      "natural_exit_events": 16
+    },
+    {
+      "case": "h01_1_vE_0_0_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0_1_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vE_0_1_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0_1_replacement_ready",
+      "early_retired_mw": 75024.05915379807,
+      "managed_natural_retired_mw": 176124.4488043501,
+      "early_exit_events": 7,
+      "natural_exit_events": 16
+    },
+    {
+      "case": "h01_1_vE_0_1_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0_3_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vE_0_3_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0_3_replacement_ready",
+      "early_retired_mw": 75024.05915379807,
+      "managed_natural_retired_mw": 176124.4488043501,
+      "early_exit_events": 7,
+      "natural_exit_events": 16
+    },
+    {
+      "case": "h01_1_vE_0_3_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.25_0_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vE_0.25_0_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.25_0_replacement_ready",
+      "early_retired_mw": 75024.05915379807,
+      "managed_natural_retired_mw": 176124.4488043501,
+      "early_exit_events": 7,
+      "natural_exit_events": 16
+    },
+    {
+      "case": "h01_1_vE_0.25_0_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.25_1_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vE_0.25_1_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.25_1_replacement_ready",
+      "early_retired_mw": 75024.05915379807,
+      "managed_natural_retired_mw": 176124.4488043501,
+      "early_exit_events": 7,
+      "natural_exit_events": 16
+    },
+    {
+      "case": "h01_1_vE_0.25_1_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.25_3_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vE_0.25_3_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.25_3_replacement_ready",
+      "early_retired_mw": 75024.05915379807,
+      "managed_natural_retired_mw": 176124.4488043501,
+      "early_exit_events": 7,
+      "natural_exit_events": 16
+    },
+    {
+      "case": "h01_1_vE_0.25_3_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.5_0_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vE_0.5_0_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.5_0_replacement_ready",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.5_0_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.5_1_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vE_0.5_1_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.5_1_replacement_ready",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.5_1_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.5_3_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_1_vE_0.5_3_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.5_3_replacement_ready",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_1_vE_0.5_3_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_test_1_vE_schedule",
+      "early_retired_mw": 326493.0603455926,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 30,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "h01_test_1_vE_cost_order",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_test_1_vE_replacement_ready",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "h01_test_1_vE_rolling_guard",
+      "early_retired_mw": 49909.20835798325,
+      "managed_natural_retired_mw": 201239.29960016493,
+      "early_exit_events": 5,
+      "natural_exit_events": 18
+    },
+    {
+      "case": "policy_0",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_1",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_2",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_3",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_4",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_5",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_6",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_7",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_0.5_0",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_0.5_1",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_0.5_2",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_0.5_3",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_0.5_4",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_0.5_5",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_0.5_6",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_0.5_7",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_1.5_0",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_1.5_1",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_1.5_2",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_1.5_3",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_1.5_4",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_1.5_5",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_1.5_6",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    },
+    {
+      "case": "policy_cost_1.5_7",
+      "early_retired_mw": 0.0,
+      "managed_natural_retired_mw": 0.0,
+      "early_exit_events": 0,
+      "natural_exit_events": 0
+    }
+  ],
+  "run_id": "20261020T021432645345Z",
+  "manifest_sha256": "61cb4d6c4773ddd267c3b85ea58c67d12ac00a1fbcfde301ea81f1869baeab9c",
+  "reviewer_sha256": "78bed996897945905c8c6a94f0eeeb578689b8bcfb1ee7d8d936a73b8c47ea3a",
   "C9": "pending_human_review"
 }

@@ -25,6 +25,7 @@ class TransitionModel(NationalModel):
         self.snapshots={};self.event_diversification=0.0;self.gas_contract=None
         self.request_history={}
         self.retired_early_mw=0.0
+        self.managed_natural_retired_mw=0.0
         super().__init__(data,design,theta,config['initial_year'])
         self.original_storage_capex=self.a['storage_capex_cny_per_mwh']
         if h01:
@@ -82,8 +83,14 @@ class TransitionModel(NationalModel):
     def mature(self):
         for c in self.cohorts:
             if c['status']=='active' and c.get('q3_exit',10**9)<=self.year:
-                c['status']='retired';self.retired_early_mw+=c['capacity_mw']
-                self.retirement_log.append(dict(year=self.year,action='early_retired',cohort=c['id'],
+                if self.year>c['exit_year']:
+                    raise Q2Error('accounting_failure','Managed exit exceeds natural lifetime')
+                c['status']='retired'
+                if self.year<c['exit_year']:
+                    action='early_retired';self.retired_early_mw+=c['capacity_mw']
+                else:
+                    action='natural_retired';self.managed_natural_retired_mw+=c['capacity_mw']
+                self.retirement_log.append(dict(year=self.year,action=action,cohort=c['id'],
                     capacity_mw=c['capacity_mw'],natural_exit=c['exit_year'],
                     decision=c['q3_decision'],deadline=c['q3_deadline']))
         super().mature()
@@ -231,7 +238,8 @@ class TransitionModel(NationalModel):
         row['resource_cost_cny']+=added_cost+maintenance
         row['construction_cost_cny']+=added_cost
         row.update(q3_public_commitment_cny=self.annual_public_spend(year),q3_public_budget_cny=self.public_limit(),
-            q3_extra_resource_cost_cny=added_cost+maintenance,q3_early_retired_mw=self.retired_early_mw)
+            q3_extra_resource_cost_cny=added_cost+maintenance,q3_early_retired_mw=self.retired_early_mw,
+            q3_managed_natural_retired_mw=self.managed_natural_retired_mw)
         row['infrastructure_reserved_cny']=self.grid.reserved
         row['infrastructure_fund_residual_cny']=self.grid.reserved-sum(p['remaining'] for p in self.grid.queue)
         self.year=year+1
@@ -269,6 +277,7 @@ def annual_metrics(model):
         cumulative_co2_t=sum(r['positive_co2_t'] for r in model.paths),max_service_loss=risk,
         public_commitment_cny=sum(r['amount_cny'] for r in model.public_ledger),
         max_annual_public_fraction=max((r['q3_public_commitment_cny']/r['q3_public_budget_cny'] for r in model.paths),default=0),
-        retired_early_mw=model.retired_early_mw,terminal_coal_mw=model.generators['coal'].capacity,
+        retired_early_mw=model.retired_early_mw,managed_natural_retired_mw=model.managed_natural_retired_mw,
+        terminal_coal_mw=model.generators['coal'].capacity,
         terminal_queue_mw=model.paths[-1]['queue_mw'],max_residual=max(r['max_residual'] for r in model.paths),
         end_year=end,scope='annual conditional aggregate')

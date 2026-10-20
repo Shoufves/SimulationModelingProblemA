@@ -1,0 +1,1329 @@
+{
+  "passed": true,
+  "status": "classification_only_physics_costs_and_selection_unchanged",
+  "reviewed_sha": "bf8590809004466d2f595407eb61ddd2b6b7e5a2",
+  "old_manifest_sha256": "8aca85ec8198539e798d161153308b7884ae1d73c4438fef6a89add7a45cacc9",
+  "new_manifest_sha256": "61cb4d6c4773ddd267c3b85ea58c67d12ac00a1fbcfde301ea81f1869baeab9c",
+  "case_counts": {
+    "annual": 187,
+    "event": 118
+  },
+  "numeric_values_compared": 26664417,
+  "max_nonresidual_relative_difference": 2.9103830456733704e-11,
+  "affected_h01_cases": 98,
+  "retirement_corrections": [
+    {
+      "case": "S0",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "SP",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "ST",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_0_schedule",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_0_cost_order",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_0_replacement_ready",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_0_rolling_guard",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_1_schedule",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_1_cost_order",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_1_replacement_ready",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_1_rolling_guard",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_3_schedule",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_3_cost_order",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_3_replacement_ready",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0_3_rolling_guard",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0.02_0_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0.02_0_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.02_0_replacement_ready",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 401517.11949939077,
+      "reclassified_natural_mw": 50550.19482527603,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.02_0_rolling_guard",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 376402.26870357594,
+      "reclassified_natural_mw": 75665.04562109085,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.02_1_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0.02_1_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.02_1_replacement_ready",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 390799.396763134,
+      "reclassified_natural_mw": 61267.91756153289,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.02_1_rolling_guard",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 338116.75828930346,
+      "reclassified_natural_mw": 113950.55603536326,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.02_3_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0.02_3_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.02_3_replacement_ready",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 348994.72764238354,
+      "reclassified_natural_mw": 103072.58668228319,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.02_3_rolling_guard",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 305803.3434637097,
+      "reclassified_natural_mw": 146263.97086095705,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.04_0_schedule",
+      "before_early_mw": 904134.6286493336,
+      "after_early_mw": 904134.6286493336,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0.04_0_cost_order",
+      "before_early_mw": 904134.6286493336,
+      "after_early_mw": 827563.6078207887,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.04_0_replacement_ready",
+      "before_early_mw": 904134.6286493336,
+      "after_early_mw": 904134.6286493336,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0.04_0_rolling_guard",
+      "before_early_mw": 904134.6286493336,
+      "after_early_mw": 904134.6286493336,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0.04_1_schedule",
+      "before_early_mw": 904134.6286493336,
+      "after_early_mw": 904134.6286493336,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0.04_1_cost_order",
+      "before_early_mw": 904134.6286493336,
+      "after_early_mw": 827563.6078207887,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.04_1_replacement_ready",
+      "before_early_mw": 904134.6286493336,
+      "after_early_mw": 896936.0646195546,
+      "reclassified_natural_mw": 7198.564029778976,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.04_1_rolling_guard",
+      "before_early_mw": 904134.6286493336,
+      "after_early_mw": 865849.1182350612,
+      "reclassified_natural_mw": 38285.51041427241,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.04_3_schedule",
+      "before_early_mw": 904134.6286493336,
+      "after_early_mw": 904134.6286493336,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vR_0.04_3_cost_order",
+      "before_early_mw": 904134.6286493336,
+      "after_early_mw": 827563.6078207887,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.04_3_replacement_ready",
+      "before_early_mw": 904134.6286493335,
+      "after_early_mw": 877793.3094124183,
+      "reclassified_natural_mw": 26341.31923691518,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vR_0.04_3_rolling_guard",
+      "before_early_mw": 904134.6286493336,
+      "after_early_mw": 827563.6078207887,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_test_0_vR_schedule",
+      "before_early_mw": 678100.9714870001,
+      "after_early_mw": 678100.9714870001,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_test_0_vR_cost_order",
+      "before_early_mw": 678100.9714870001,
+      "after_early_mw": 580547.4927896684,
+      "reclassified_natural_mw": 97553.47869733158,
+      "changed": true
+    },
+    {
+      "case": "h01_test_0_vR_replacement_ready",
+      "before_early_mw": 678100.9714870001,
+      "after_early_mw": 620059.4716450411,
+      "reclassified_natural_mw": 58041.499841958794,
+      "changed": true
+    },
+    {
+      "case": "h01_test_0_vR_rolling_guard",
+      "before_early_mw": 678100.9714870001,
+      "after_early_mw": 601529.9506584551,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0_0_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vE_0_0_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0_0_replacement_ready",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vE_0_0_rolling_guard",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vE_0_1_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vE_0_1_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0_1_replacement_ready",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 438896.65470620926,
+      "reclassified_natural_mw": 13170.65961845759,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0_1_rolling_guard",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 432924.55911753065,
+      "reclassified_natural_mw": 19142.755207136204,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0_3_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vE_0_3_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0_3_replacement_ready",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 381468.38908480055,
+      "reclassified_natural_mw": 70598.9252398662,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0_3_rolling_guard",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 375496.29349612194,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.25_0_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vE_0.25_0_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.25_0_replacement_ready",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 401517.11949939077,
+      "reclassified_natural_mw": 50550.19482527603,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.25_0_rolling_guard",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 376402.26870357594,
+      "reclassified_natural_mw": 75665.04562109085,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.25_1_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vE_0.25_1_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.25_1_replacement_ready",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 390799.396763134,
+      "reclassified_natural_mw": 61267.91756153289,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.25_1_rolling_guard",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 338116.75828930346,
+      "reclassified_natural_mw": 113950.55603536326,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.25_3_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vE_0.25_3_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.25_3_replacement_ready",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 348994.72764238354,
+      "reclassified_natural_mw": 103072.58668228319,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.25_3_rolling_guard",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 305803.3434637097,
+      "reclassified_natural_mw": 146263.97086095705,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.5_0_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vE_0.5_0_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.5_0_replacement_ready",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 287887.0566976738,
+      "reclassified_natural_mw": 164180.25762699288,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.5_0_rolling_guard",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 281914.9611089952,
+      "reclassified_natural_mw": 170152.3532156715,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.5_1_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vE_0.5_1_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.5_1_replacement_ready",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.5_1_rolling_guard",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.5_3_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_0_vE_0.5_3_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.5_3_replacement_ready",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_0_vE_0.5_3_rolling_guard",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_test_0_vE_schedule",
+      "before_early_mw": 452067.3143246669,
+      "after_early_mw": 452067.3143246669,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_test_0_vE_cost_order",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_test_0_vE_replacement_ready",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_test_0_vE_rolling_guard",
+      "before_early_mw": 452067.3143246668,
+      "after_early_mw": 250828.01472450176,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0_0_schedule",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0_0_cost_order",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0_0_replacement_ready",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0_0_rolling_guard",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0_1_schedule",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0_1_cost_order",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0_1_replacement_ready",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0_1_rolling_guard",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0_3_schedule",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0_3_cost_order",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0_3_replacement_ready",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0_3_rolling_guard",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0.02_0_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0.02_0_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.02_0_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 75024.05915379807,
+      "reclassified_natural_mw": 176124.4488043501,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.02_0_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.02_1_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0.02_1_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.02_1_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 75024.05915379807,
+      "reclassified_natural_mw": 176124.4488043501,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.02_1_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.02_3_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0.02_3_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.02_3_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 75024.05915379807,
+      "reclassified_natural_mw": 176124.4488043501,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.02_3_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.04_0_schedule",
+      "before_early_mw": 652986.1206911855,
+      "after_early_mw": 652986.1206911855,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0.04_0_cost_order",
+      "before_early_mw": 502297.0159162965,
+      "after_early_mw": 425725.99508775165,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.04_0_replacement_ready",
+      "before_early_mw": 502297.0159162965,
+      "after_early_mw": 475955.6966793813,
+      "reclassified_natural_mw": 26341.31923691518,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.04_0_rolling_guard",
+      "before_early_mw": 502297.0159162965,
+      "after_early_mw": 425725.99508775165,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.04_1_schedule",
+      "before_early_mw": 652986.1206911855,
+      "after_early_mw": 652986.1206911855,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0.04_1_cost_order",
+      "before_early_mw": 502297.0159162965,
+      "after_early_mw": 425725.99508775165,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.04_1_replacement_ready",
+      "before_early_mw": 502297.0159162965,
+      "after_early_mw": 475955.6966793813,
+      "reclassified_natural_mw": 26341.31923691518,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.04_1_rolling_guard",
+      "before_early_mw": 502297.0159162965,
+      "after_early_mw": 425725.99508775165,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.04_3_schedule",
+      "before_early_mw": 652986.1206911855,
+      "after_early_mw": 652986.1206911855,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vR_0.04_3_cost_order",
+      "before_early_mw": 502297.0159162965,
+      "after_early_mw": 425725.99508775165,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.04_3_replacement_ready",
+      "before_early_mw": 502297.0159162965,
+      "after_early_mw": 475955.6966793813,
+      "reclassified_natural_mw": 26341.31923691518,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vR_0.04_3_rolling_guard",
+      "before_early_mw": 502297.0159162965,
+      "after_early_mw": 425725.99508775165,
+      "reclassified_natural_mw": 76571.02082854482,
+      "changed": true
+    },
+    {
+      "case": "h01_test_1_vR_schedule",
+      "before_early_mw": 489739.59051838896,
+      "after_early_mw": 489739.59051838896,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_test_1_vR_cost_order",
+      "before_early_mw": 376722.76193722227,
+      "after_early_mw": 279169.28323989065,
+      "reclassified_natural_mw": 97553.47869733158,
+      "changed": true
+    },
+    {
+      "case": "h01_test_1_vR_replacement_ready",
+      "before_early_mw": 376722.76193722227,
+      "after_early_mw": 316841.55943361286,
+      "reclassified_natural_mw": 59881.202503609355,
+      "changed": true
+    },
+    {
+      "case": "h01_test_1_vR_rolling_guard",
+      "before_early_mw": 376722.76193722227,
+      "after_early_mw": 279169.28323989065,
+      "reclassified_natural_mw": 97553.47869733158,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0_0_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vE_0_0_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0_0_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 75024.05915379807,
+      "reclassified_natural_mw": 176124.4488043501,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0_0_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0_1_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vE_0_1_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0_1_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 75024.05915379807,
+      "reclassified_natural_mw": 176124.4488043501,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0_1_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0_3_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vE_0_3_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0_3_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 75024.05915379807,
+      "reclassified_natural_mw": 176124.4488043501,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0_3_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.25_0_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vE_0.25_0_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.25_0_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 75024.05915379807,
+      "reclassified_natural_mw": 176124.4488043501,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.25_0_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.25_1_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vE_0.25_1_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.25_1_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 75024.05915379807,
+      "reclassified_natural_mw": 176124.4488043501,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.25_1_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.25_3_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vE_0.25_3_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.25_3_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 75024.05915379807,
+      "reclassified_natural_mw": 176124.4488043501,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.25_3_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.5_0_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vE_0.5_0_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.5_0_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.5_0_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.5_1_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vE_0.5_1_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.5_1_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.5_1_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.5_3_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_1_vE_0.5_3_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.5_3_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_1_vE_0.5_3_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_test_1_vE_schedule",
+      "before_early_mw": 326493.0603455928,
+      "after_early_mw": 326493.0603455928,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "h01_test_1_vE_cost_order",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_test_1_vE_replacement_ready",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "h01_test_1_vE_rolling_guard",
+      "before_early_mw": 251148.50795814823,
+      "after_early_mw": 49909.208357983254,
+      "reclassified_natural_mw": 201239.29960016493,
+      "changed": true
+    },
+    {
+      "case": "policy_0",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_1",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_2",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_3",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_4",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_5",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_6",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_7",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_0.5_0",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_0.5_1",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_0.5_2",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_0.5_3",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_0.5_4",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_0.5_5",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_0.5_6",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_0.5_7",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_1.5_0",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_1.5_1",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_1.5_2",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_1.5_3",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_1.5_4",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_1.5_5",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_1.5_6",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    },
+    {
+      "case": "policy_cost_1.5_7",
+      "before_early_mw": 0.0,
+      "after_early_mw": 0.0,
+      "reclassified_natural_mw": 0.0,
+      "changed": false
+    }
+  ],
+  "policy_selection_unchanged": true,
+  "errors": [],
+  "checker_sha256": "d749bbab0208e9d6053e448b9dfff18468adbb43fd1f5239e77ca3232b488d72",
+  "scope": "All ledgers and scientific tables compared after only the declared classification correction and delay labels. Image bytes are not a scientific equality requirement."
+}
