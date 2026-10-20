@@ -22,13 +22,16 @@ def tests():
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command',choices=['audit','catalog','test','attachments','verify','prototype','baseline','reproduce-lb','status','q1','q2'])
+    parser.add_argument('command',choices=['audit','catalog','test','attachments','verify','prototype','baseline','reproduce-lb','status','q1','q2','q3'])
     parser.add_argument('--output-dir',default=None)
     parser.add_argument('--config',default=None)
     parser.add_argument('--recipe',choices=['national','trade','international','ai_trade'],default='trade')
     args=parser.parse_args()
     os.chdir(ROOT)
     if args.command=='test':return tests()
+    if args.command=='q3':
+        return script('run_q3.py','--config',args.config or 'workflow/q3_inputs_v5.json',
+                      '--output-dir',args.output_dir or 'outputs/q3/p3_mmj')
     if args.command=='q1':return script('build_q1.py','--output-dir',args.output_dir or 'outputs/q1/p1_yx')
     if args.command=='q2':
         national_configs={ROOT/'workflow/q2_national_design.json',ROOT/'workflow/q2_inputs.json'}

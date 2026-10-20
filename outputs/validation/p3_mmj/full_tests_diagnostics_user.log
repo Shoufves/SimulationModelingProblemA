@@ -1,0 +1,16 @@
+.......................................................................................................Q1 FAILED: Input hash mismatch: cost
+......................................Q1 FAILED: [Errno 2] No such file or directory: 'D:\\CSF2026\\mmj\\SimulationModelingProblemA\\tmp\\tests\\tmpx91ig2_d\\missing.csv'
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+{"status": "success_conditional_candidate", "elapsed_seconds": 0.07403359998716041}
+{"status": "success_conditional_candidate", "elapsed_seconds": 0.06591599999228492}
+..................................................................................................................................................Q3 FAILED: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\CSF2026\\mmj\\SimulationModelingProblemA\\tmp\\tests\\tmp9ygpa2rs\\missing.json'
+{"passed": false, "status": "failed", "checks": 0, "error": "ValueError: injected audit failure"}
+{"status": "failed", "stage": "full", "elapsed_seconds": 0.0013410000246949494, "exit_code": 1}
+Q3 FAILED: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\CSF2026\\mmj\\SimulationModelingProblemA\\tmp\\tests\\tmp9ygpa2rs\\missing.json'
+{"status": "failed", "stage": "full", "elapsed_seconds": 0.001442599983420223, "exit_code": 1}
+.........................................................
+----------------------------------------------------------------------
+Ran 344 tests in 101.040s
+
+OK

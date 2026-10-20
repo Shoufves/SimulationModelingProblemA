@@ -1,0 +1,1103 @@
+{
+  "status": "author_round_passed",
+  "passed": true,
+  "team_approved": false,
+  "checked_at_utc": "2026-10-20T02:02:44.979423+00:00",
+  "auditor_sha256": "51f88f762e83133dcc666d55c2187cb27df1cf23910a9eb231ab1519dea0da7f",
+  "checks": [
+    {
+      "name": "current_complete_experiment_receipt",
+      "passed": true,
+      "detail": "20261020T013122048456Z"
+    },
+    {
+      "name": "six_scenario_event_balances_H02_freeze_and_recovery",
+      "passed": true,
+      "detail": {
+        "events": 16,
+        "service_interactions": 16,
+        "resource_and_recovery_checks": true
+      }
+    },
+    {
+      "name": "all_frozen_grid_points_recorded",
+      "passed": true,
+      "detail": 116
+    },
+    {
+      "name": "annual_energy_carbon_cash_budget_lifetime_and_terminal_accounts",
+      "passed": true,
+      "detail": [
+        {
+          "id": "gas_release_cost_double_gas_release",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 157
+        },
+        {
+          "id": "gas_release_cost_double_gas_release_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 196
+        },
+        {
+          "id": "gas_release_cost_double_grid",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 153
+        },
+        {
+          "id": "gas_release_cost_double_grid_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 192
+        },
+        {
+          "id": "gas_release_cost_double_none",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "gas_release_cost_double_retain",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "gas_release_cost_double_retain_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "gas_release_cost_double_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "gas_release_cost_half_gas_release",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 157
+        },
+        {
+          "id": "gas_release_cost_half_gas_release_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 196
+        },
+        {
+          "id": "gas_release_cost_half_grid",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 153
+        },
+        {
+          "id": "gas_release_cost_half_grid_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 192
+        },
+        {
+          "id": "gas_release_cost_half_none",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "gas_release_cost_half_retain",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "gas_release_cost_half_retain_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "gas_release_cost_half_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "h01_0_fixed_projects_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "h01_0_fixed_projects_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "h01_0_fixed_projects_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "h01_0_fixed_projects_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "h01_0_fixed_projects_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "h01_0_full_response_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 126
+        },
+        {
+          "id": "h01_0_full_response_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 126
+        },
+        {
+          "id": "h01_0_full_response_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "h01_0_full_response_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "h01_0_full_response_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "h01_1_fixed_projects_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_1_fixed_projects_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_1_fixed_projects_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_1_fixed_projects_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_1_fixed_projects_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_1_full_response_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_1_full_response_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_1_full_response_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_1_full_response_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_1_full_response_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_2_fixed_projects_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 129
+        },
+        {
+          "id": "h01_2_fixed_projects_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 129
+        },
+        {
+          "id": "h01_2_fixed_projects_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 129
+        },
+        {
+          "id": "h01_2_fixed_projects_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 129
+        },
+        {
+          "id": "h01_2_fixed_projects_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 129
+        },
+        {
+          "id": "h01_2_full_response_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 125
+        },
+        {
+          "id": "h01_2_full_response_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 125
+        },
+        {
+          "id": "h01_2_full_response_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 129
+        },
+        {
+          "id": "h01_2_full_response_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 129
+        },
+        {
+          "id": "h01_2_full_response_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 124
+        },
+        {
+          "id": "h01_3_fixed_projects_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 118
+        },
+        {
+          "id": "h01_3_fixed_projects_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 118
+        },
+        {
+          "id": "h01_3_fixed_projects_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 118
+        },
+        {
+          "id": "h01_3_fixed_projects_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 118
+        },
+        {
+          "id": "h01_3_fixed_projects_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 118
+        },
+        {
+          "id": "h01_3_full_response_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_3_full_response_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_3_full_response_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 118
+        },
+        {
+          "id": "h01_3_full_response_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 118
+        },
+        {
+          "id": "h01_3_full_response_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_4_fixed_projects_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 119
+        },
+        {
+          "id": "h01_4_fixed_projects_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 119
+        },
+        {
+          "id": "h01_4_fixed_projects_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 119
+        },
+        {
+          "id": "h01_4_fixed_projects_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 119
+        },
+        {
+          "id": "h01_4_fixed_projects_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 119
+        },
+        {
+          "id": "h01_4_full_response_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 119
+        },
+        {
+          "id": "h01_4_full_response_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 119
+        },
+        {
+          "id": "h01_4_full_response_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 119
+        },
+        {
+          "id": "h01_4_full_response_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 119
+        },
+        {
+          "id": "h01_4_full_response_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 119
+        },
+        {
+          "id": "h01_5_fixed_projects_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_5_fixed_projects_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_5_fixed_projects_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_5_fixed_projects_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_5_fixed_projects_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_5_full_response_anticipatory_0.005",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_5_full_response_anticipatory_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_5_full_response_cost_order_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_5_full_response_fixed_schedule_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "h01_5_full_response_service_ready_0.01",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 117
+        },
+        {
+          "id": "policy_gas_release",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 157
+        },
+        {
+          "id": "policy_gas_release_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 196
+        },
+        {
+          "id": "policy_grid",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 153
+        },
+        {
+          "id": "policy_grid_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 192
+        },
+        {
+          "id": "policy_none",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "policy_retain",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "policy_retain_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "policy_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "public_budget_double_gas_release",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 157
+        },
+        {
+          "id": "public_budget_double_gas_release_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 196
+        },
+        {
+          "id": "public_budget_double_grid",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 153
+        },
+        {
+          "id": "public_budget_double_grid_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 192
+        },
+        {
+          "id": "public_budget_double_none",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "public_budget_double_retain",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "public_budget_double_retain_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "public_budget_double_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "public_budget_half_gas_release",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 157
+        },
+        {
+          "id": "public_budget_half_gas_release_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 198
+        },
+        {
+          "id": "public_budget_half_grid",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 153
+        },
+        {
+          "id": "public_budget_half_grid_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 194
+        },
+        {
+          "id": "public_budget_half_none",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "public_budget_half_retain",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "public_budget_half_retain_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "public_budget_half_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "retention_double_gas_release",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 157
+        },
+        {
+          "id": "retention_double_gas_release_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 196
+        },
+        {
+          "id": "retention_double_grid",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 153
+        },
+        {
+          "id": "retention_double_grid_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 192
+        },
+        {
+          "id": "retention_double_none",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "retention_double_retain",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "retention_double_retain_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "retention_double_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "retention_half_gas_release",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 157
+        },
+        {
+          "id": "retention_half_gas_release_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 196
+        },
+        {
+          "id": "retention_half_grid",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 153
+        },
+        {
+          "id": "retention_half_grid_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 192
+        },
+        {
+          "id": "retention_half_none",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "retention_half_retain",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 123
+        },
+        {
+          "id": "retention_half_retain_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        },
+        {
+          "id": "retention_half_storage",
+          "status": "passed",
+          "years": 36,
+          "operations": 3456,
+          "projects": 162
+        }
+      ]
+    },
+    {
+      "name": "continuous_events_same_services_and_restored_stocks",
+      "passed": true,
+      "detail": {
+        "event_cases": 1376,
+        "per_service_rows": 11008
+      }
+    },
+    {
+      "name": "all_summary_rows_trace_to_accounts_and_sensitivity_decisions",
+      "passed": true,
+      "detail": {
+        "tables": [
+          {
+            "file": "h01_results.csv",
+            "rows": 60
+          },
+          {
+            "file": "policy_results.csv",
+            "rows": 8
+          },
+          {
+            "file": "sensitivity_results.csv",
+            "rows": 48
+          }
+        ],
+        "sensitivity_choices": 6
+      }
+    },
+    {
+      "name": "designated_constraints_recomputed_without_relaxation",
+      "passed": true,
+      "detail": {
+        "feasible": [],
+        "selected": null
+      }
+    },
+    {
+      "name": "H01_threshold_feasibility_separate_from_ranking",
+      "passed": true,
+      "detail": {
+        "permissible": [],
+        "selected": null
+      }
+    },
+    {
+      "name": "fixed_project_comparisons_are_actually_same_set",
+      "passed": true,
+      "detail": 30
+    },
+    {
+      "name": "protected_originals_equal_locked_base",
+      "passed": true,
+      "detail": 11
+    },
+    {
+      "name": "independent_checkout_has_identical_code_and_inputs",
+      "passed": true,
+      "detail": "D:\\CSF2026\\mmj\\reviews\\p3-mmj-selfcheck"
+    },
+    {
+      "name": "independent_full_entry",
+      "passed": true,
+      "detail": {
+        "returncode": 0,
+        "seconds": 1658.4248302000342,
+        "pythonhashseed": 1729,
+        "command": [
+          "D:\\CSF2026\\mmj\\reviews\\p3-mmj-selfcheck\\scripts\\run_q3.py",
+          "--config",
+          "workflow/q3_inputs_v5.json",
+          "--output-dir",
+          "outputs/q3/p3_mmj_v5_reproduction"
+        ],
+        "run_id": "20261020T013122175975Z",
+        "receipt_mode": "separately_executed"
+      }
+    },
+    {
+      "name": "independent_all_scientific_outputs",
+      "passed": true,
+      "detail": [
+        {
+          "file": "annual_accounts.csv",
+          "rows": 10725,
+          "bitwise_equal": true
+        },
+        {
+          "file": "annual_operations.csv",
+          "rows": 10368,
+          "bitwise_equal": true
+        },
+        {
+          "file": "annual_queues.csv",
+          "rows": 887,
+          "bitwise_equal": true
+        },
+        {
+          "file": "annual_service_metrics.csv",
+          "rows": 864,
+          "bitwise_equal": true
+        },
+        {
+          "file": "event_balances.csv",
+          "rows": 14432,
+          "bitwise_equal": true
+        },
+        {
+          "file": "event_operations.csv",
+          "rows": 15360,
+          "bitwise_equal": true
+        },
+        {
+          "file": "event_summary.csv",
+          "rows": 16,
+          "bitwise_equal": true
+        },
+        {
+          "file": "h01_comparisons.csv",
+          "rows": 60,
+          "bitwise_equal": true
+        },
+        {
+          "file": "h01_feasibility.csv",
+          "rows": 60,
+          "bitwise_equal": true
+        },
+        {
+          "file": "h01_results.csv",
+          "rows": 60,
+          "bitwise_equal": true
+        },
+        {
+          "file": "h02_results.csv",
+          "rows": 16,
+          "bitwise_equal": true
+        },
+        {
+          "file": "policy_bottleneck_flags.csv",
+          "rows": 56,
+          "bitwise_equal": true
+        },
+        {
+          "file": "policy_candidates.csv",
+          "rows": 8,
+          "bitwise_equal": true
+        },
+        {
+          "file": "policy_recommendations.csv",
+          "rows": 5,
+          "bitwise_equal": true
+        },
+        {
+          "file": "policy_results.csv",
+          "rows": 8,
+          "bitwise_equal": true
+        },
+        {
+          "file": "policy_tradeoffs.csv",
+          "rows": 9,
+          "bitwise_equal": true
+        },
+        {
+          "file": "safety_metrics.csv",
+          "rows": 128,
+          "bitwise_equal": true
+        },
+        {
+          "file": "scenario_comparison.csv",
+          "rows": 22,
+          "bitwise_equal": true
+        },
+        {
+          "file": "scenario_paths.csv",
+          "rows": 108,
+          "bitwise_equal": true
+        },
+        {
+          "file": "sensitivity.csv",
+          "rows": 48,
+          "bitwise_equal": true
+        },
+        {
+          "file": "sensitivity_rankings.csv",
+          "rows": 6,
+          "bitwise_equal": true
+        },
+        {
+          "file": "sensitivity_results.csv",
+          "rows": 48,
+          "bitwise_equal": true
+        },
+        {
+          "file": "solver_stages.csv",
+          "rows": 128,
+          "bitwise_equal": true
+        },
+        {
+          "file": "source_supply.csv",
+          "rows": 640,
+          "bitwise_equal": true
+        },
+        {
+          "file": "transition_case_status.csv",
+          "rows": 116,
+          "bitwise_equal": true
+        },
+        {
+          "file": "transition_event_metrics.csv",
+          "rows": 11008,
+          "bitwise_equal": true
+        },
+        {
+          "directory": "cases",
+          "files": 116,
+          "bitwise_equal": true
+        },
+        {
+          "directory": "events",
+          "files": 232,
+          "bitwise_equal": true
+        },
+        {
+          "directory": "plans",
+          "files": 6,
+          "bitwise_equal": true
+        },
+        {
+          "directory": "sensitivity_locks",
+          "files": 6,
+          "bitwise_equal": true
+        }
+      ]
+    }
+  ],
+  "run_id": "20261020T013122048456Z",
+  "code_hashes": {
+    "run.py": "413d8bbd924a392700ff971fe777596fa8bf7748b17e0eb62b19040c95df95b0",
+    "scripts/run_q2_national.py": "bb1eb105368d8d8a229e2175ad2870b31e38e4f05f4bed5a5610cd7d38fbabbe",
+    "scripts/build_q2_national_inputs.py": "39bad2e449a2ee1e4595422c16194a0ce0d3d80c40d75adf7a4095970412f488",
+    "src/energy_model/q2_national.py": "7f7f911a15ff25ccbb13a99188b6baea12b2c8e94cd36ecc852338024b44441d",
+    "src/energy_model/q2_statistics.py": "43e58dfd42234d30c33278a4c4c485b96105c6d575e864fb7cc265b5116c8120",
+    "src/energy_model/q2_identification.py": "116e8f1b3b13794a32009ca4c00822d70cedca249605b236bafe530af7124899",
+    "src/energy_model/q2_finance.py": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
+    "src/energy_model/q2_admission.py": "e6f06e18b8d49ef9acb69eed12e2ed747ace88ec794535dc0c1d4d16c50a0941",
+    "src/energy_model/q2_operations.py": "4dcc5ec89c533c502a735756ee94f29fe71428e0b094b52c40010b54cb61ec6e",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0",
+    "scripts/run_q3.py": "7ea57c9128b143aff93137ba5676b4e099bbfe85e60816bf119429db18755509",
+    "src/energy_model/q3_events.py": "e0a4b26ed18d61b8e140434dbcfddf520877a80563accbbbc067410598eed444",
+    "scripts/prepare_q3_inputs.py": "86c4d0ba35f11855a653240f45214a7990e9d16cef17b6e4cbe662d929938e2e",
+    "scripts/check_q3_environment.py": "51013ebfcfcb2fee177b698559fb9e245c6167c5eb5c92f19cbcee9d69f9e891",
+    "src/energy_model/q3_transition.py": "cc9dac8c054f8661a67b2073e7d3675a88f8e80601bc20b6d4b4b2003dd7aafe",
+    "scripts/q3_campaign.py": "874eb8ba5484b0453099342c1594cc615a91d23e42728a2aea4f310ba8b0bc5b",
+    "scripts/freeze_q3_transition.py": "79d757b9ae8d8e4da308faa71440db53c4f8660fd761de884706749da670df7e",
+    "scripts/q3_reporting.py": "e06a0d2b96ed0d032db5afce85c0ccb2d678db31a9109c0f430ee6820c525cb5"
+  },
+  "scope": "Conditional-computation audit only; empirical/Q2 scope limitations and C9 remain"
+}

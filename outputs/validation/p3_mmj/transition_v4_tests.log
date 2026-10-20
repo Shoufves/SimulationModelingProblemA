@@ -1,0 +1,50 @@
+test_bad_response_caps_are_rejected (test_q3.FiniteEventTests.test_bad_response_caps_are_rejected) ... ok
+test_calendar_integrates_recovery_and_elapsed_hours (test_q3.FiniteEventTests.test_calendar_integrates_recovery_and_elapsed_hours) ... ok
+test_default_q2_dispatch_unchanged_without_options (test_q3.FiniteEventTests.test_default_q2_dispatch_unchanged_without_options) ... ok
+test_dispatch_carries_ramp_limit_across_window_boundary (test_q3.FiniteEventTests.test_dispatch_carries_ramp_limit_across_window_boundary) ... ok
+test_event_does_not_mutate_snapshot_or_scale_stocks_by_days (test_q3.FiniteEventTests.test_event_does_not_mutate_snapshot_or_scale_stocks_by_days) ... ok
+test_event_start_is_retained_when_not_on_period_boundary (test_q3.FiniteEventTests.test_event_start_is_retained_when_not_on_period_boundary) ... ok
+test_frozen_discharge_changes_action_without_changing_assets (test_q3.FiniteEventTests.test_frozen_discharge_changes_action_without_changing_assets) ... ok
+test_impossible_terminal_stock_is_infeasible (test_q3.FiniteEventTests.test_impossible_terminal_stock_is_infeasible) ... ok
+test_interaction_is_per_service_and_requires_complete_pairs (test_q3.FiniteEventTests.test_interaction_is_per_service_and_requires_complete_pairs) ... ok
+test_noncyclic_fuel_replenishment_prevents_free_initial_stock (test_q3.FiniteEventTests.test_noncyclic_fuel_replenishment_prevents_free_initial_stock) ... ok
+test_real_event_solver_keeps_fuel_and_soc_continuous (test_q3.FiniteEventTests.test_real_event_solver_keeps_fuel_and_soc_continuous) ... ok
+test_recovery_not_silently_set_to_zero_if_censored (test_q3.FiniteEventTests.test_recovery_not_silently_set_to_zero_if_censored) ... ok
+test_sg_keeps_domestic_supply_other_sources_and_weather (test_q3.FiniteEventTests.test_sg_keeps_domestic_supply_other_sources_and_weather) ... ok
+test_sgw_exactly_combines_sg_and_sw (test_q3.FiniteEventTests.test_sgw_exactly_combines_sg_and_sw) ... ok
+test_shock_foreknowledge_cannot_change_pre_event_state (test_q3.FiniteEventTests.test_shock_foreknowledge_cannot_change_pre_event_state) ... ok
+test_zero_demand_has_no_fabricated_shortage_ratio (test_q3.FiniteEventTests.test_zero_demand_has_no_fabricated_shortage_ratio) ... ok
+test_zero_shocks_leave_all_operation_inputs_identical (test_q3.FiniteEventTests.test_zero_shocks_leave_all_operation_inputs_identical) ... ok
+test_invalid_cost_multiplier_is_rejected (test_q3.ReceiptTests.test_invalid_cost_multiplier_is_rejected) ... ok
+test_missing_config_creates_failed_latest_attempt (test_q3.ReceiptTests.test_missing_config_creates_failed_latest_attempt) ... Q3 FAILED: FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmpxfm5qh2y\\missing.json'
+{"status": "failed", "stage": "full", "elapsed_seconds": 0.0020175999961793423, "exit_code": 1}
+Q3 FAILED: FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\44321\\AppData\\Local\\Temp\\tmpxfm5qh2y\\missing.json'
+{"status": "failed", "stage": "full", "elapsed_seconds": 0.002380699967034161, "exit_code": 1}
+ok
+test_missing_scenario_is_not_full_success (test_q3.ReceiptTests.test_missing_scenario_is_not_full_success) ... ok
+test_modified_input_hash_is_rejected_before_simulation (test_q3.ReceiptTests.test_modified_input_hash_is_rejected_before_simulation) ... ok
+test_new_policy_start_is_not_silently_ignored (test_q3.ReceiptTests.test_new_policy_start_is_not_silently_ignored) ... ok
+test_restricted_paths_are_rejected (test_q3.ReceiptTests.test_restricted_paths_are_rejected) ... ok
+test_withdrawn_use_is_rejected_even_if_config_hash_is_updated (test_q3.ReceiptTests.test_withdrawn_use_is_rejected_even_if_config_hash_is_updated) ... ok
+test_cohort_split_conserves_initial_capacity_and_annual_authorisation (test_q3_transition.ProtocolTests.test_cohort_split_conserves_initial_capacity_and_annual_authorisation) ... ok
+test_extra_delay_never_adds_devices_or_generation_immediately (test_q3_transition.ProtocolTests.test_extra_delay_never_adds_devices_or_generation_immediately) ... ok
+test_fixed_comparator_reproduces_project_set (test_q3_transition.ProtocolTests.test_fixed_comparator_reproduces_project_set) ... ok
+test_fixed_project_cash_failure_is_not_silently_resized (test_q3_transition.ProtocolTests.test_fixed_project_cash_failure_is_not_silently_resized) ... ok
+test_forecast_never_uses_unrevealed_fixed_applications (test_q3_transition.ProtocolTests.test_forecast_never_uses_unrevealed_fixed_applications) ... ok
+test_fuel_material_services_are_not_aggregated (test_q3_transition.ProtocolTests.test_fuel_material_services_are_not_aggregated) ... ok
+test_invalid_grid_values_rejected (test_q3_transition.ProtocolTests.test_invalid_grid_values_rejected) ... ok
+test_maintenance_has_same_public_budget_and_cannot_be_free (test_q3_transition.ProtocolTests.test_maintenance_has_same_public_budget_and_cannot_be_free) ... ok
+test_new_asset_needs_funding_and_positive_construction_time (test_q3_transition.ProtocolTests.test_new_asset_needs_funding_and_positive_construction_time) ... ok
+test_public_and_base_infrastructure_share_construction_limit (test_q3_transition.ProtocolTests.test_public_and_base_infrastructure_share_construction_limit) ... ok
+test_retirement_cannot_be_deferred_past_experiment_deadline (test_q3_transition.ProtocolTests.test_retirement_cannot_be_deferred_past_experiment_deadline) ... ok
+test_safe_current_service_does_not_override_known_future_shortage (test_q3_transition.ProtocolTests.test_safe_current_service_does_not_override_known_future_shortage) ... ok
+test_two_grids_are_not_full_factorial_or_duplicates (test_q3_transition.ProtocolTests.test_two_grids_are_not_full_factorial_or_duplicates) ... ok
+test_unpaid_project_cannot_commission (test_q3_transition.ProtocolTests.test_unpaid_project_cannot_commission) ... ok
+test_failed_simulation_cannot_beat_working_policy (test_q3_transition.ScreeningTests.test_failed_simulation_cannot_beat_working_policy) ... ok
+test_no_feasible_solution_does_not_relax_constraints (test_q3_transition.ScreeningTests.test_no_feasible_solution_does_not_relax_constraints) ... ok
+test_test_values_cannot_change_selection (test_q3_transition.ScreeningTests.test_test_values_cannot_change_selection) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 4.937s
+
+OK

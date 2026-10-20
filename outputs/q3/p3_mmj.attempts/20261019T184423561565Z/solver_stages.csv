@@ -1,0 +1,65 @@
+event,split,response,scenario,scope,stage,objective,status,max_residual,plants
+selection_moderate,selection,normal,S0,independent_finite_event_not_annual_path,service-priority-0,0.0,0,7.275957614183426e-09,
+selection_moderate,selection,normal,S0,independent_finite_event_not_annual_path,fossil-displacement-priority,73536395.48350307,0,7.275957614183426e-09,"[""coal"", ""gas"", ""oil""]"
+selection_moderate,selection,normal,S0,independent_finite_event_not_annual_path,reference-resource-cost,171182263062.4489,0,1.4551915228366852e-08,
+selection_moderate,selection,normal,S0,independent_finite_event_not_annual_path,fossil-allocation-score,89787333294.21872,0,1.4551915228366852e-08,
+selection_moderate,selection,normal,SG,independent_finite_event_not_annual_path,service-priority-0,0.0,0,7.275957614183426e-09,
+selection_moderate,selection,normal,SG,independent_finite_event_not_annual_path,fossil-displacement-priority,73536395.48350307,0,7.275957614183426e-09,"[""coal"", ""gas"", ""oil""]"
+selection_moderate,selection,normal,SG,independent_finite_event_not_annual_path,reference-resource-cost,171182263062.4489,0,1.4551915228366852e-08,
+selection_moderate,selection,normal,SG,independent_finite_event_not_annual_path,fossil-allocation-score,89787333294.21872,0,1.4551915228366852e-08,
+selection_moderate,selection,normal,SW,independent_finite_event_not_annual_path,service-priority-0,0.0,0,2.1827872842550278e-08,
+selection_moderate,selection,normal,SW,independent_finite_event_not_annual_path,fossil-displacement-priority,113070304.65867625,0,2.1827872842550278e-08,"[""coal"", ""gas"", ""oil""]"
+selection_moderate,selection,normal,SW,independent_finite_event_not_annual_path,reference-resource-cost,185249723917.7839,0,6.912159733474255e-08,
+selection_moderate,selection,normal,SW,independent_finite_event_not_annual_path,fossil-allocation-score,73297863687.03957,0,2.9103830456733704e-08,
+selection_moderate,selection,normal,SGW,independent_finite_event_not_annual_path,service-priority-0,0.0,0,2.1827872842550278e-08,
+selection_moderate,selection,normal,SGW,independent_finite_event_not_annual_path,fossil-displacement-priority,113070304.65867625,0,2.1827872842550278e-08,"[""coal"", ""gas"", ""oil""]"
+selection_moderate,selection,normal,SGW,independent_finite_event_not_annual_path,reference-resource-cost,185249723917.7839,0,6.912159733474255e-08,
+selection_moderate,selection,normal,SGW,independent_finite_event_not_annual_path,fossil-allocation-score,73297863687.03957,0,2.9103830456733704e-08,
+selection_moderate,selection,frozen_battery_discharge,S0,independent_finite_event_not_annual_path,service-priority-0,0.0,0,1.261923898709938e-08,
+selection_moderate,selection,frozen_battery_discharge,S0,independent_finite_event_not_annual_path,fossil-displacement-priority,73536395.48350309,0,7.275957614183426e-09,"[""coal"", ""gas"", ""oil""]"
+selection_moderate,selection,frozen_battery_discharge,S0,independent_finite_event_not_annual_path,reference-resource-cost,171182263062.44894,0,1.4551915228366852e-08,
+selection_moderate,selection,frozen_battery_discharge,S0,independent_finite_event_not_annual_path,fossil-allocation-score,89787333294.21872,0,1.4551915228366852e-08,
+selection_moderate,selection,frozen_battery_discharge,SG,independent_finite_event_not_annual_path,service-priority-0,0.0,0,1.261923898709938e-08,
+selection_moderate,selection,frozen_battery_discharge,SG,independent_finite_event_not_annual_path,fossil-displacement-priority,73536395.48350309,0,7.275957614183426e-09,"[""coal"", ""gas"", ""oil""]"
+selection_moderate,selection,frozen_battery_discharge,SG,independent_finite_event_not_annual_path,reference-resource-cost,171182263062.44894,0,1.4551915228366852e-08,
+selection_moderate,selection,frozen_battery_discharge,SG,independent_finite_event_not_annual_path,fossil-allocation-score,89787333294.21872,0,1.4551915228366852e-08,
+selection_moderate,selection,frozen_battery_discharge,SW,independent_finite_event_not_annual_path,service-priority-0,0.0,0,1.4551915228366852e-08,
+selection_moderate,selection,frozen_battery_discharge,SW,independent_finite_event_not_annual_path,fossil-displacement-priority,113070304.65867624,0,1.4551915228366852e-08,"[""coal"", ""gas"", ""oil""]"
+selection_moderate,selection,frozen_battery_discharge,SW,independent_finite_event_not_annual_path,reference-resource-cost,185249723917.78394,0,5.002220859751105e-08,
+selection_moderate,selection,frozen_battery_discharge,SW,independent_finite_event_not_annual_path,fossil-allocation-score,73297863687.0395,0,5.638867150992155e-08,
+selection_moderate,selection,frozen_battery_discharge,SGW,independent_finite_event_not_annual_path,service-priority-0,0.0,0,1.4551915228366852e-08,
+selection_moderate,selection,frozen_battery_discharge,SGW,independent_finite_event_not_annual_path,fossil-displacement-priority,113070304.65867624,0,1.4551915228366852e-08,"[""coal"", ""gas"", ""oil""]"
+selection_moderate,selection,frozen_battery_discharge,SGW,independent_finite_event_not_annual_path,reference-resource-cost,185249723917.78394,0,5.002220859751105e-08,
+selection_moderate,selection,frozen_battery_discharge,SGW,independent_finite_event_not_annual_path,fossil-allocation-score,73297863687.0395,0,5.638867150992155e-08,
+test_deeper,test,normal,S0,independent_finite_event_not_annual_path,service-priority-0,0.0,0,1.4551915228366852e-08,
+test_deeper,test,normal,S0,independent_finite_event_not_annual_path,fossil-displacement-priority,89877816.7020592,0,1.4551915228366852e-08,"[""coal"", ""gas"", ""oil""]"
+test_deeper,test,normal,S0,independent_finite_event_not_annual_path,reference-resource-cost,209222765965.21548,0,1.4551915228366852e-08,
+test_deeper,test,normal,S0,independent_finite_event_not_annual_path,fossil-allocation-score,109740074026.26753,0,2.9103830456733704e-08,
+test_deeper,test,normal,SG,independent_finite_event_not_annual_path,service-priority-0,0.0,0,1.4551915228366852e-08,
+test_deeper,test,normal,SG,independent_finite_event_not_annual_path,fossil-displacement-priority,89877816.7020592,0,1.4551915228366852e-08,"[""coal"", ""gas"", ""oil""]"
+test_deeper,test,normal,SG,independent_finite_event_not_annual_path,reference-resource-cost,209222765965.21548,0,1.4551915228366852e-08,
+test_deeper,test,normal,SG,independent_finite_event_not_annual_path,fossil-allocation-score,109740074026.26753,0,2.9103830456733704e-08,
+test_deeper,test,normal,SW,independent_finite_event_not_annual_path,service-priority-0,0.0,0,1.4551915228366852e-08,
+test_deeper,test,normal,SW,independent_finite_event_not_annual_path,fossil-displacement-priority,174788659.96475708,0,1.4551915228366852e-08,"[""coal"", ""gas"", ""oil""]"
+test_deeper,test,normal,SW,independent_finite_event_not_annual_path,reference-resource-cost,238582086179.8644,0,9.481482265982777e-08,
+test_deeper,test,normal,SW,independent_finite_event_not_annual_path,fossil-allocation-score,81181324923.1228,0,1.7462298274040222e-07,
+test_deeper,test,normal,SGW,independent_finite_event_not_annual_path,service-priority-0,0.0,0,1.4551915228366852e-08,
+test_deeper,test,normal,SGW,independent_finite_event_not_annual_path,fossil-displacement-priority,174788659.96475708,0,1.4551915228366852e-08,"[""coal"", ""gas"", ""oil""]"
+test_deeper,test,normal,SGW,independent_finite_event_not_annual_path,reference-resource-cost,238582086179.8644,0,9.481482265982777e-08,
+test_deeper,test,normal,SGW,independent_finite_event_not_annual_path,fossil-allocation-score,81181324923.1228,0,1.7462298274040222e-07,
+test_deeper,test,frozen_battery_discharge,S0,independent_finite_event_not_annual_path,service-priority-0,0.0,0,1.4551915228366852e-08,
+test_deeper,test,frozen_battery_discharge,S0,independent_finite_event_not_annual_path,fossil-displacement-priority,89877816.7020592,0,1.4551915228366852e-08,"[""coal"", ""gas"", ""oil""]"
+test_deeper,test,frozen_battery_discharge,S0,independent_finite_event_not_annual_path,reference-resource-cost,209222765965.21542,0,1.4551915228366852e-08,
+test_deeper,test,frozen_battery_discharge,S0,independent_finite_event_not_annual_path,fossil-allocation-score,109740074026.26753,0,4.3655745685100555e-08,
+test_deeper,test,frozen_battery_discharge,SG,independent_finite_event_not_annual_path,service-priority-0,0.0,0,1.4551915228366852e-08,
+test_deeper,test,frozen_battery_discharge,SG,independent_finite_event_not_annual_path,fossil-displacement-priority,89877816.7020592,0,1.4551915228366852e-08,"[""coal"", ""gas"", ""oil""]"
+test_deeper,test,frozen_battery_discharge,SG,independent_finite_event_not_annual_path,reference-resource-cost,209222765965.21542,0,1.4551915228366852e-08,
+test_deeper,test,frozen_battery_discharge,SG,independent_finite_event_not_annual_path,fossil-allocation-score,109740074026.26753,0,4.3655745685100555e-08,
+test_deeper,test,frozen_battery_discharge,SW,independent_finite_event_not_annual_path,service-priority-0,0.0,0,6.571099220309407e-08,
+test_deeper,test,frozen_battery_discharge,SW,independent_finite_event_not_annual_path,fossil-displacement-priority,174788659.96475706,0,1.4551915228366852e-08,"[""coal"", ""gas"", ""oil""]"
+test_deeper,test,frozen_battery_discharge,SW,independent_finite_event_not_annual_path,reference-resource-cost,238582086179.8645,0,8.731149137020111e-08,
+test_deeper,test,frozen_battery_discharge,SW,independent_finite_event_not_annual_path,fossil-allocation-score,81181324923.12283,0,1.1641532182693481e-07,
+test_deeper,test,frozen_battery_discharge,SGW,independent_finite_event_not_annual_path,service-priority-0,0.0,0,6.571099220309407e-08,
+test_deeper,test,frozen_battery_discharge,SGW,independent_finite_event_not_annual_path,fossil-displacement-priority,174788659.96475706,0,1.4551915228366852e-08,"[""coal"", ""gas"", ""oil""]"
+test_deeper,test,frozen_battery_discharge,SGW,independent_finite_event_not_annual_path,reference-resource-cost,238582086179.8645,0,8.731149137020111e-08,
+test_deeper,test,frozen_battery_discharge,SGW,independent_finite_event_not_annual_path,fossil-allocation-score,81181324923.12283,0,1.1641532182693481e-07,

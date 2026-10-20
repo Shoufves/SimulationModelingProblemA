@@ -1,0 +1,17 @@
+event,split,response,scenario,scope,resource_cost_cny,combustion_co2_t,storage_minimum_mwh,gas_minimum_mwh,import_gas_mwh,max_residual_mwh,duration_hours
+selection_moderate,selection,normal,S0,independent_finite_event_not_annual_path,172309557220.31683,211642789.95126456,0.0,9275313.370324314,0.0,1.4551915228366852e-08,216
+selection_moderate,selection,normal,SG,independent_finite_event_not_annual_path,172309557220.31683,211642789.95126456,0.0,9275313.370324314,0.0,1.4551915228366852e-08,216
+selection_moderate,selection,normal,SW,independent_finite_event_not_annual_path,186928333498.90082,243660098.89874431,0.0,9043630.504835313,0.0,2.9103830456733704e-08,216
+selection_moderate,selection,normal,SGW,independent_finite_event_not_annual_path,186928333498.90082,243660098.89874431,0.0,9043630.504835313,0.0,2.9103830456733704e-08,216
+selection_moderate,selection,frozen_battery_discharge,S0,independent_finite_event_not_annual_path,172309557220.31683,211642789.95126456,-0.0,14561337.085196286,0.0,1.4551915228366852e-08,216
+selection_moderate,selection,frozen_battery_discharge,SG,independent_finite_event_not_annual_path,172309557220.31683,211642789.95126456,-0.0,14561337.085196286,0.0,1.4551915228366852e-08,216
+selection_moderate,selection,frozen_battery_discharge,SW,independent_finite_event_not_annual_path,186928333498.90082,243660098.8987443,-0.0,12320373.38534071,0.0,5.638867150992155e-08,216
+selection_moderate,selection,frozen_battery_discharge,SGW,independent_finite_event_not_annual_path,186928333498.90082,243660098.8987443,-0.0,12320373.38534071,0.0,5.638867150992155e-08,216
+test_deeper,test,normal,S0,independent_finite_event_not_annual_path,210600569935.9428,258674521.0515455,0.0,3629085.8259974276,0.0,2.9103830456733704e-08,264
+test_deeper,test,normal,SG,independent_finite_event_not_annual_path,210600569935.9428,258674521.0515455,0.0,3629085.8259974276,0.0,2.9103830456733704e-08,264
+test_deeper,test,normal,SW,independent_finite_event_not_annual_path,241359840685.67627,327197707.8669475,0.0,6432777.950869008,0.0,1.7462298274040222e-07,264
+test_deeper,test,normal,SGW,independent_finite_event_not_annual_path,241359840685.67627,327197707.8669475,0.0,6432777.950869008,0.0,1.7462298274040222e-07,264
+test_deeper,test,frozen_battery_discharge,S0,independent_finite_event_not_annual_path,210600569935.94284,258674521.05154547,-0.0,7408429.344684992,0.0,4.3655745685100555e-08,264
+test_deeper,test,frozen_battery_discharge,SG,independent_finite_event_not_annual_path,210600569935.94284,258674521.05154547,-0.0,7408429.344684992,0.0,4.3655745685100555e-08,264
+test_deeper,test,frozen_battery_discharge,SW,independent_finite_event_not_annual_path,241359840685.67627,327197707.8669474,-0.0,7211889.478149333,0.0,1.1641532182693481e-07,264
+test_deeper,test,frozen_battery_discharge,SGW,independent_finite_event_not_annual_path,241359840685.67627,327197707.8669474,-0.0,7211889.478149333,0.0,1.1641532182693481e-07,264

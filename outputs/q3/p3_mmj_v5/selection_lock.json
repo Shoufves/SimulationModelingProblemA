@@ -1,0 +1,98 @@
+{
+  "status": "selection_locked_before_test_evaluation",
+  "protocol_sha256": "8f3850d1fc9474c68ba45c487ce5ff04d23500869eaead1f103410be286ac9b2",
+  "h01_epsilon": null,
+  "h01_status": "no_feasible_common_threshold",
+  "h01_scores": [
+    {
+      "epsilon": 0.005,
+      "valid": true,
+      "admissible": false,
+      "violations": [
+        "h01_0_full_response_anticipatory_0.005:service",
+        "h01_1_full_response_anticipatory_0.005:service",
+        "h01_1_full_response_anticipatory_0.005:carbon",
+        "h01_2_full_response_anticipatory_0.005:service",
+        "h01_3_full_response_anticipatory_0.005:service",
+        "h01_3_full_response_anticipatory_0.005:carbon",
+        "h01_4_full_response_anticipatory_0.005:service",
+        "h01_4_full_response_anticipatory_0.005:carbon",
+        "h01_5_full_response_anticipatory_0.005:service",
+        "h01_5_full_response_anticipatory_0.005:carbon"
+      ],
+      "worst_selection_service_fraction": 0.25622857165915863,
+      "net_resource_cost_cny": 946837189127096.2
+    },
+    {
+      "epsilon": 0.01,
+      "valid": true,
+      "admissible": false,
+      "violations": [
+        "h01_0_full_response_anticipatory_0.01:service",
+        "h01_1_full_response_anticipatory_0.01:service",
+        "h01_1_full_response_anticipatory_0.01:carbon",
+        "h01_2_full_response_anticipatory_0.01:service",
+        "h01_3_full_response_anticipatory_0.01:service",
+        "h01_3_full_response_anticipatory_0.01:carbon",
+        "h01_4_full_response_anticipatory_0.01:service",
+        "h01_4_full_response_anticipatory_0.01:carbon",
+        "h01_5_full_response_anticipatory_0.01:service",
+        "h01_5_full_response_anticipatory_0.01:carbon"
+      ],
+      "worst_selection_service_fraction": 0.25622857165915863,
+      "net_resource_cost_cny": 946825267757428.0
+    }
+  ],
+  "policy": {
+    "selected": null,
+    "feasible": [],
+    "pareto": [],
+    "reason": "no_feasible_candidate",
+    "carbon_ratio": 1.0,
+    "cost_ratio": 1.05,
+    "records": [
+      {
+        "policy_id": "none",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "retain",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "grid",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "gas_release",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "grid_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "retain_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "gas_release_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      }
+    ]
+  },
+  "selection_records_sha256": "39a74434d6317a2b32fe0a3d2a71d8e9f22583da55507e4a3e76323328755599",
+  "test_identity": "Already seen conditions and V3/V4 implementation output; V5 is a disclosed accounting repair, not blind validation."
+}

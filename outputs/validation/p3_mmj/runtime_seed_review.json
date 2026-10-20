@@ -1,0 +1,10 @@
+{
+  "scope": "Deterministic ABM/LP; no random draw in Q2/Q3 decision or dispatch modules",
+  "actual_mesa_initialisation_seed": 204804,
+  "legacy_q3_random_seed_field": 12,
+  "legacy_field_active": false,
+  "explanation": "The retained Q3 random_seed=12 field is not passed to Mesa. The model uses inherited design.seed=204804. Neither changes a sampled process in these deterministic experiments; no stochastic robustness claim is made.",
+  "config_sha256": "00ce9ea15acf6a7fde72a6fd8c6de2d817e13da51bda9ce4faec1526645d5dba",
+  "model_sha256": "7f7f911a15ff25ccbb13a99188b6baea12b2c8e94cd36ecc852338024b44441d",
+  "independent_pythonhashseed": 1729
+}

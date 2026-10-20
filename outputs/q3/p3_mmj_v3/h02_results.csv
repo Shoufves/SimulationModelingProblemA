@@ -1,0 +1,17 @@
+event,split,sector,unit,J,S0,SG,SW,SGW,J_frozen,J_normal_minus_frozen,attribution
+selection_moderate,selection,building_heat_proxy,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+selection_moderate,selection,electricity_exports,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+selection_moderate,selection,existing_electric_services,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+selection_moderate,selection,industrial_heat_proxy,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+selection_moderate,selection,nonenergy_feedstock/coal,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+selection_moderate,selection,nonenergy_feedstock/gas,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+selection_moderate,selection,nonenergy_feedstock/oil,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+selection_moderate,selection,transport_proxy,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+test_deeper,test,building_heat_proxy,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+test_deeper,test,electricity_exports,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+test_deeper,test,existing_electric_services,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+test_deeper,test,industrial_heat_proxy,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+test_deeper,test,nonenergy_feedstock/coal,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+test_deeper,test,nonenergy_feedstock/gas,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+test_deeper,test,nonenergy_feedstock/oil,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim
+test_deeper,test,transport_proxy,MWh_service_proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,specified_battery_discharge_response_only; no_all_mechanism_claim

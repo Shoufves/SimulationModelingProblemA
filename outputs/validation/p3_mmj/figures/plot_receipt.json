@@ -1,0 +1,15 @@
+{
+  "kind": "postprocessing_only",
+  "run_id": "20261020T013122048456Z",
+  "source_manifest_sha256": "62df4e376ef0e326915b48b5847208be906c2096c4a649ea34262bb6c1fe77fc",
+  "source_files": {
+    "policy_results.csv": "34b724b52edfed7f67be1d5e9d2fe7e66905873a9e22a2c75a2041573801ac29",
+    "frozen_config.json": "00ce9ea15acf6a7fde72a6fd8c6de2d817e13da51bda9ce4faec1526645d5dba"
+  },
+  "script_sha256": "4a5d2383c5012ee61957467650f6588a12db8fae2c8591e98ff6f6080ee078db",
+  "outputs": {
+    "policy_comparison.png": "ee4946b0b45057f0dbe039b54c4f0a60ee5f6b4786d7a4f30198e9c335fdaa70"
+  },
+  "original_run_modified": false,
+  "reason": "Separate panels remove overlapping labels in the original frozen scatterplot."
+}

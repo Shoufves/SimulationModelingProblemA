@@ -1,0 +1,52 @@
+{
+  "branch": "p3/mmj",
+  "base_sha": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
+  "git_head": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
+  "uncommitted_development": true,
+  "environment_ready": true,
+  "tests": {
+    "tests": 321,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "seconds": 95.78216409997549,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "stage_run_id": "20261019T185135303254Z",
+  "stage_review_passed": true,
+  "independent_csv_files": 13,
+  "independent_bitwise_equal_files": 13,
+  "common_full_entry_exit": 2,
+  "q3_complete": false,
+  "team_approved": false,
+  "test_code_hashes": {
+    "tests/test_agents.py": "80c11a498dee19b1bfd8c9faefec8d7f339e9b415d296ebbc6c079d44e26ac24",
+    "tests/test_asset_lifecycle.py": "ce08dcbb2e12105969d1315eecb8f4e8f7875c0db83f458501a6f44d6cc1ff5f",
+    "tests/test_attachments.py": "c83d5e0b7860da33cd9410ca119c826656678dee87982617c6768b3ab3606cc1",
+    "tests/test_demand_hindcast.py": "c362a4a039b2491f77de7dc1b8d4618601d11875a706d6c9ebdcf5f5a4d5ab4d",
+    "tests/test_electricity_inputs.py": "4a2e250c5971cd2f74da99bac4a166ce781fb37b8ec27777efda18ea65b961a8",
+    "tests/test_energy_assessment.py": "d2cae2bf5b361502484df90623880de0be172bf2a2339f3fc54eebb4bc491b37",
+    "tests/test_foundation.py": "c1b446b65b555875b857cf912096898f323b853f4989bf98bb87b349544ac0fd",
+    "tests/test_four_dimensions.py": "94798e93f6ff537a59c5ca3195a13a40f16384956ce4636b1b845e1afed550a5",
+    "tests/test_fuel_ledger.py": "d4c766ac92cf0536b3dcd22db4d1bc4d7b08197b7208d3c0c488fad94b5fe4e9",
+    "tests/test_gas_assessment.py": "ba0522e699fac778968c6223642a1b9c418e1e82aa01560c25054c8f6c6e34b4",
+    "tests/test_history_readiness.py": "9f649ef6477652bb2f503079160be3b13a8973adac86950ca94e9e8ac7c3555f",
+    "tests/test_operations.py": "f79ee3b50209d0ff9b17c69381bea901a189046b5ba029b8d272a466a7e71701",
+    "tests/test_q1.py": "9ee137bca867175039bc7daab253fe8d0d99d6e35f03941580067e4eae6792e4",
+    "tests/test_q1_supplement.py": "fc717d993d472aec4575d25f756f0bdcbfae9965eebf37147b612a3d9be04ee3",
+    "tests/test_q2.py": "327065b5796a02aa917de714f788cf507bb1310e6242924fffddb40e5dc6be4d",
+    "tests/test_q2_national.py": "89887feb248fa4cf27b2ee5e34e7698438663b30fde3bbc4536d90f136b0a4ef",
+    "tests/test_q2_operations.py": "78a87e377b40f1bd73661352eabcb55dc156d004a6b760bc8a13c7a791a5803c",
+    "tests/test_q3.py": "a57577887ee3c4ce6036a383f32d87684eaff54c38e0ffbce018694eebcc6d9e",
+    "tests/test_workbench.py": "ec8d43b45ef73547a16ff21e89549361851ff91d31681a286ceb6157f47afa26",
+    "tests/test_workflow.py": "6486ccfecc1e4271e208ce5fa3da494fa0dcb5718de145c3353fd252b4b3acb5"
+  },
+  "pending": [
+    "H01 two grids and three controls",
+    "implementable policy selection",
+    "one-factor sensitivity",
+    "independent complete Q3 reproduction",
+    "two team approvals"
+  ]
+}

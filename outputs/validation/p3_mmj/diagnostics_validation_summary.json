@@ -1,0 +1,137 @@
+{
+  "status": "author_diagnostic_validation_completed_team_review_pending",
+  "created_at_utc": "2026-10-20T02:59:32.726420+00:00",
+  "base_sha": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
+  "branch": "p3/mmj",
+  "working_tree_uncommitted": true,
+  "source_run_id": "20261020T013122048456Z",
+  "source_manifest_sha256": "62df4e376ef0e326915b48b5847208be906c2096c4a649ea34262bb6c1fe77fc",
+  "original_model_and_inputs_unchanged": true,
+  "original_scientific_outputs_unchanged": true,
+  "original_v5_evidence_unchanged": true,
+  "protected_base_sha256": {
+    "只读工作区/README.md": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af",
+    "只读工作区/final.md": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+    "只读工作区/gemini_final_idea.md": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+    "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf": "a892165c851da77c916d6f2dd7a9cf7062c1e37698a88641b3a3105bef90c963",
+    "附件1.xlsx": "4cd3f519f72d18869d33713fc9dd2ec7a3ba83d5178ee6d4170d37adf45ea1cd",
+    "附件2.xlsx": "7a35204be5db7e8cbfddf77a8a36604fafa87dabbf80c69c752b8b8f0d97a330",
+    "附件3.xlsx": "df616d471bd31fe865ad9d509ea3fc1fa68d8bd172af7c10bb15ffba7a74987e",
+    "附件4.xlsx": "a7945ce8d6c279ecb695c3e56b7d331c1d3f098a282b59a8d1826a69b8736eaf",
+    "data/sources.json": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f",
+    "data/evidence_reviews.json": "6043473c2192dc4c91d47c521bea5adb15b0b07197ad6c421b9216a6f207f376",
+    "workflow/model_inputs.json": "adcdca7ed33dc4048761a220c7a00b6585733117321ed1ce8571dd521c0520b0"
+  },
+  "diagnostic_completion": {
+    "gas_closure_cases": 4,
+    "event_probe_attempts": 38,
+    "event_probe_failures": 0,
+    "annual_dispatch_controls": 71,
+    "annual_controls_requested": 72,
+    "unavailable_annual_controls": 1,
+    "new_empirical_data": false,
+    "original_model_changed": false
+  },
+  "test_results": {
+    "tests": 344,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "seconds": 101.03988649998792,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "checks": {
+    "two_author_rounds": true,
+    "independent_diagnostic_reproduction": true,
+    "independent_targeted_tests": 5,
+    "full_tests": true,
+    "originals_audit": true,
+    "google_key_format_scan": true,
+    "formal_nine_inputs": true,
+    "doc_links_checked": 69,
+    "tracked_diff_whitespace": true
+  },
+  "independent_run": {
+    "source_run_id": "20261020T013122175975Z",
+    "pythonhashseed": 1729,
+    "exit_code": 0,
+    "command": [
+      "D:/CSF2026/mmj/SimulationModelingProblemA/.venv/Scripts/python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "scripts/diagnose_q3_mechanisms.py",
+      "--source",
+      "outputs/q3/p3_mmj_v5_reproduction",
+      "--output-dir",
+      "outputs/validation/p3_mmj/diagnostics_v2"
+    ],
+    "cwd": "D:/CSF2026/mmj/reviews/p3-mmj-selfcheck",
+    "identical_output_files": 16
+  },
+  "code_sha256": {
+    "scripts/diagnose_q3_mechanisms.py": "ace6953a44cefd6482d06c7e83b889d82835aa115df6ff403530629badcafa18",
+    "scripts/review_q3_diagnostics.py": "494d955862c93e5180765e28001e9ded017f18fa5576cbc1ea8c5aa76a0602b6",
+    "tests/test_q3_diagnostics.py": "bd35d2788a2a5d5b05943bb5141c90ce1b386541c0778fa8b3684c31682835ed",
+    "workflow/q3_diagnostics_v1.json": "215fb23f7341c9e29a31a34a4d1cf4ef308d38f28693820f13087341c66b10d6",
+    "workflow/q3_diagnostics_v2.json": "4cd084b4dc7dcbbe71e78eb37a52e9156cf69ac92645d270df4537dd2aaa0ff2"
+  },
+  "document_sha256": {
+    "README.md": "f8d38ac118db50aaa9dd03bd63d417c7517331085ee8eff302666e019cf86236",
+    "docs/IMPLEMENTATION_ROADMAP.md": "8731456659498df62f1066f23320bee9d21ba47a5a43c436292d41398d327831",
+    "docs/solutions/p3-mmj-v5.md": "b237972b51f14b05779145944b5c104db22a5667c6c6441e37905a91b44f64b6",
+    "docs/solutions/p3-mmj-diagnostics.md": "0f683ad7786d51a0b136ab1090068dc1940c63e52252dc6f3945a829787ed577",
+    "outputs/validation/p3_mmj/README.md": "187c3ffcb93c22c6f18cc5da24f8478964af5992ba6b61d50896e2524ca4350d"
+  },
+  "evidence_sha256": {
+    "diagnostics_review_round1_final.json": "17156036d1757dea331b2ab3c203e4eaac4a865a2a75a0838503eaa4e534bf55",
+    "diagnostics_review_round2.json": "3783614daf0787783136d018ca1c3546912129f21de73286281b512001ab477d",
+    "diagnostics_independent.log": "c20e18f93d2f43f3fb891d40e81887d3281b9f1f2647ce425d9f83f502f0b9a3",
+    "diagnostics_independent_manifest.json": "6cad5e49180a929dbb37402b5903c75025eb4b1cd8fb0f2d2556490563e22071",
+    "diagnostics_independent_tests.log": "a74d8102bc4dde38f12d914f8ea306d0b4ac08c4e8e0a636e56ab74379188d74",
+    "full_tests_diagnostics_user.json": "b262d3921f21b1de060427a0ca08c78f71592a4cab028adb877e6f4ab43c8a0e",
+    "full_tests_diagnostics_user.log": "1eec41ab8fcdeb9ae760167e9746d53c78f9f3048c837713fdba997470e59d24",
+    "full_tests_diagnostics.json": "8a3548afe2382b5ff3dc1d453316ef61f419885c0e3277062bd20ff7d13629e6",
+    "full_tests_diagnostics.log": "72627d2ea4361ff22325493e8b39c362bb627c8e0c3871648517d38da334fb40",
+    "audit_diagnostics.json": "c4e506fc679ec4015dd22b0c6608054587ebccc8482526dcaf4d23dd95b8ceee",
+    "key_scan_diagnostics.json": "87fd6aa1c70b84c70e891605e69d7138b2db5079546bab9dd06abca193d6ed88",
+    "formal_inputs_diagnostics.json": "6a9ceafb6276c80148a8e00f5d7116414ac2db5e898c783e3943a46b1086a999",
+    "diagnostics_v2/run_manifest.json": "6a9833cf62d2797802b7e5d6e1188508d24b4ff6ab87ea4f4ff0bc2129845567",
+    "diagnostics_v2.log": "c20e18f93d2f43f3fb891d40e81887d3281b9f1f2647ce425d9f83f502f0b9a3",
+    "diagnostics_v1/run_manifest.json": "8482594237d39843a98cebc503c645e9ae347cb08b716647c58072c6f2ae6a02",
+    "diagnostics_v1.log": "c7d710fb523d9895c6dfe5195ba647535a2a45c94852fe65e50b770cdf8c9a55",
+    "diagnostics_v1_source.zip": "50061e90b85766ac1a37fe87e9283d29d8d156565bf1941435633f2d15a57da1",
+    "diagnostics_review_round1_complete.json": "ba50db293a4e94296a59eae6d325e19340e780844977bfc20f98d6e2ef6243b1",
+    "diagnostics_reviewer_typecheck_failure.py": "6dca152634ffae9ce9ab0ef90aa7f0b2f67e1534873055101b5fb773b0512ec2",
+    "diagnostics_review_round1.json": "36b6659a69fde9f367ad81f4469998cb0634cad1bc483c80fde84a8fe995bc50",
+    "diagnostics_reviewer_initial.py": "b2ddb09f6fe3a8d2e38d3ae7e16c5c46f93936c1fd6891a9c645451a129bf2b0"
+  },
+  "carbon_decomposition": {
+    "total_delta_co2_t": 4290364618.928155,
+    "forward_storage_only_delta_co2_t": -525251221.7741957,
+    "remaining_path_and_interaction_delta_co2_t": 4815615840.702351,
+    "reverse_complete_horizon_available": false
+  },
+  "failure_records_preserved": [
+    "diagnostics_v1: failed on incompatible 2032 reverse swap; V2 preserves unavailable state",
+    "diagnostics_review_round1_complete: reviewer int/float-zero type mismatch; corrected with regression counterexample",
+    "full_tests_diagnostics: 34 Windows sandbox PermissionError cases; unchanged suite rerun with user permissions"
+  ],
+  "not_rerun": [
+    "116-case V5 campaign: model, inputs, all outputs and original two-review evidence hashes unchanged",
+    "Q2 1012-trial calibration search: unchanged original scope"
+  ],
+  "remaining": [
+    "Real gas import-dependence claims require validated domestic/contract/storage constraints, not arbitrary scaling",
+    "Service-priority choices and cross-service proxy weights require method/team agreement",
+    "No feasible policy found under original constraints; diagnostics do not change this status",
+    "C9: other two members must review and approve the same final SHA"
+  ],
+  "team_approval": false,
+  "publication": {
+    "committed": false,
+    "pushed": false,
+    "pr_created": false
+  }
+}

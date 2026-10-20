@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-10-20T02:50:18.784206+00:00",
+  "script_sha256": "494d955862c93e5180765e28001e9ded017f18fa5576cbc1ea8c5aa76a0602b6",
+  "diagnostic_manifest_sha256": "6a9833cf62d2797802b7e5d6e1188508d24b4ff6ab87ea4f4ff0bc2129845567",
+  "source_run_manifest_sha256": "62df4e376ef0e326915b48b5847208be906c2096c4a649ea34262bb6c1fe77fc",
+  "status": "passed",
+  "gas_pairs": 4,
+  "probes": 38,
+  "annual_controls": 71,
+  "unavailable_controls": [
+    {
+      "year": 2032,
+      "receiving_case": "storage",
+      "storage_from": "none",
+      "status": "unavailable_initial_SOC_exceeds_swapped_capacity",
+      "initial_soc_mwh": 36968.057427856336,
+      "swapped_energy_mwh": 33640.0
+    }
+  ],
+  "carbon_decomposition": {
+    "total_delta_co2_t": 4290364618.928155,
+    "forward_storage_only_delta_co2_t": -525251221.7741957,
+    "remaining_path_and_interaction_delta_co2_t": 4815615840.702351,
+    "reverse_complete_horizon_available": false
+  },
+  "independent_identical_files": [
+    "annual_carbon_components.csv",
+    "annual_electricity_identity.csv",
+    "annual_generation.csv",
+    "annual_storage_swaps.csv",
+    "annual_swap_details.json.gz",
+    "diagnostic_failures.json",
+    "diagnostic_source.py",
+    "event_active_constraints.csv",
+    "event_probe_details.json.gz",
+    "event_probe_effects.csv",
+    "frozen_protocol.json",
+    "gas_closure_checks.json",
+    "gas_control_details.json.gz",
+    "gas_import_diagnostics.csv",
+    "generation_projects.csv",
+    "unavailable_annual_controls.json"
+  ],
+  "team_approval": false
+}

@@ -1,0 +1,7 @@
+id,target,multiplier,selected,reason,pareto,same_selected_as_primary
+retention_half,transition.annual_retention_cost_fraction,0.5,,no_feasible_candidate,,True
+retention_double,transition.annual_retention_cost_fraction,2.0,,no_feasible_candidate,,True
+public_budget_half,transition.public_budget_fraction_gdp,0.5,,no_feasible_candidate,,True
+public_budget_double,transition.public_budget_fraction_gdp,2.0,,no_feasible_candidate,,True
+gas_release_cost_half,transition.gas_release_capex_cny_per_mw,0.5,,no_feasible_candidate,,True
+gas_release_cost_double,transition.gas_release_capex_cny_per_mw,2.0,,no_feasible_candidate,,True

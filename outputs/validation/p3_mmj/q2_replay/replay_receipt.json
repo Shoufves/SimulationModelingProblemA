@@ -1,0 +1,215 @@
+{
+  "status": "passed_scoped_replay",
+  "passed": true,
+  "search_repeated": false,
+  "team_approved": false,
+  "code_hashes": {
+    "run.py": "413d8bbd924a392700ff971fe777596fa8bf7748b17e0eb62b19040c95df95b0",
+    "scripts/run_q2_national.py": "bb1eb105368d8d8a229e2175ad2870b31e38e4f05f4bed5a5610cd7d38fbabbe",
+    "scripts/build_q2_national_inputs.py": "39bad2e449a2ee1e4595422c16194a0ce0d3d80c40d75adf7a4095970412f488",
+    "src/energy_model/q2_national.py": "7f7f911a15ff25ccbb13a99188b6baea12b2c8e94cd36ecc852338024b44441d",
+    "src/energy_model/q2_statistics.py": "43e58dfd42234d30c33278a4c4c485b96105c6d575e864fb7cc265b5116c8120",
+    "src/energy_model/q2_identification.py": "116e8f1b3b13794a32009ca4c00822d70cedca249605b236bafe530af7124899",
+    "src/energy_model/q2_finance.py": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
+    "src/energy_model/q2_admission.py": "e6f06e18b8d49ef9acb69eed12e2ed747ace88ec794535dc0c1d4d16c50a0941",
+    "src/energy_model/q2_operations.py": "4dcc5ec89c533c502a735756ee94f29fe71428e0b094b52c40010b54cb61ec6e",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
+  },
+  "checks": [
+    {
+      "file": "historical_path.csv",
+      "rows": 10,
+      "bitwise_equal": false,
+      "within_numeric_tolerance": [
+        {
+          "column": "operating_resource_cost_cny",
+          "reference": 6452894782746.14,
+          "actual": 6452894782746.139
+        },
+        {
+          "column": "cash_balance_residual_cny",
+          "reference": 0.0009765625,
+          "actual": 0.0
+        },
+        {
+          "column": "dispatch_actual_cost_cny",
+          "reference": 6315754730257.277,
+          "actual": 6315754730257.276
+        },
+        {
+          "column": "resource_cost_cny",
+          "reference": 8329764695619.087,
+          "actual": 8329764695619.086
+        },
+        {
+          "column": "operating_resource_cost_cny",
+          "reference": 7042975887585.21,
+          "actual": 7042975887585.209
+        },
+        {
+          "column": "cash_balance_residual_cny",
+          "reference": 0.001953125,
+          "actual": 0.0009765625
+        },
+        {
+          "column": "dispatch_actual_cost_cny",
+          "reference": 6819060617903.576,
+          "actual": 6819060617903.575
+        },
+        {
+          "column": "resource_cost_cny",
+          "reference": 9793667370871.688,
+          "actual": 9793667370871.686
+        },
+        {
+          "column": "operating_resource_cost_cny",
+          "reference": 7178835623945.661,
+          "actual": 7178835623945.66
+        },
+        {
+          "column": "cash_balance_residual_cny",
+          "reference": 0.0009765625,
+          "actual": 0.0
+        },
+        {
+          "column": "dispatch_actual_cost_cny",
+          "reference": 6919986883086.534,
+          "actual": 6919986883086.533
+        },
+        {
+          "column": "resource_cost_cny",
+          "reference": 10209910884207.734,
+          "actual": 10209910884207.732
+        }
+      ]
+    },
+    {
+      "file": "history_fit.csv",
+      "rows": 306,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "statistical_bridge_backtest.csv",
+      "rows": 20,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "fuel_share_validation.csv",
+      "rows": 48,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "generation_validation.csv",
+      "rows": 80,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "external_emissions_diagnostic.csv",
+      "rows": 10,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    }
+  ],
+  "scope": "Selected-parameter Q2 historical replay and Q1 artifact comparison; not a new 1012-trial search",
+  "inherited_acceptance": {
+    "checks": {
+      "energy": true,
+      "generation": true,
+      "capacity": true,
+      "wind_capacity": true,
+      "solar_capacity": true,
+      "structure": true,
+      "sparse_training_combustion": true,
+      "coal_share": true,
+      "oil_share": true,
+      "oil_share_relative": true,
+      "gas_share": true,
+      "gas_share_relative": true,
+      "statistical_bridge_historical_error": true
+    },
+    "all_thresholds_passed": true,
+    "emissions_holdout": "No same-scope BTR 2022-2024 observation; not evaluated as zero error",
+    "team_approved": false
+  },
+  "q1_comparisons": [
+    {
+      "file": "coverage.csv",
+      "rows": 685,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "energy_assessment.csv",
+      "rows": 36,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "energy_roles.csv",
+      "rows": 12,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "gaps_and_conflicts.csv",
+      "rows": 19,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "history.csv",
+      "rows": 2176,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "import_origins.csv",
+      "rows": 57,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "indicators.csv",
+      "rows": 212,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "model_handoff.csv",
+      "rows": 471,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "regional_comparison.csv",
+      "rows": 31,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "renewable_regions.csv",
+      "rows": 270,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "synergy_assessment.csv",
+      "rows": 8,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    },
+    {
+      "file": "technology_region_capacities.csv",
+      "rows": 107,
+      "bitwise_equal": true,
+      "within_numeric_tolerance": []
+    }
+  ],
+  "q1_replay_manifest_sha256": "9906f46950654aa323ab9a9e6d0bb86302c7dc276feba8bec7dea365b664ac97",
+  "seconds": 3.7298948999959975
+}

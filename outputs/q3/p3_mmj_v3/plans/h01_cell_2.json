@@ -1,0 +1,3919 @@
+{
+  "2025": {
+    "generation": [
+      {
+        "id": "2025/coal/27",
+        "tech": "coal",
+        "capacity_mw": 38176.29701440535,
+        "decision_year": 2025,
+        "online_year": 2029,
+        "exit_year": 2069,
+        "cost": 220408631264.30963,
+        "instalment": 55102157816.07741,
+        "remaining": 1.52587890625e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2025/hydro/28",
+        "tech": "hydro",
+        "capacity_mw": 15528.699999999999,
+        "decision_year": 2025,
+        "online_year": 2030,
+        "exit_year": 2110,
+        "cost": 232930499999.99997,
+        "instalment": 46586099999.99999,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2025/nuclear/29",
+        "tech": "nuclear",
+        "capacity_mw": 2636.883333333333,
+        "decision_year": 2025,
+        "online_year": 2032,
+        "exit_year": 2092,
+        "cost": 47574664431.53563,
+        "instalment": 6796380633.076518,
+        "remaining": 1.9073486328125e-06,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2025/wind/30",
+        "tech": "wind",
+        "capacity_mw": 157142.110125,
+        "decision_year": 2025,
+        "online_year": 2026,
+        "exit_year": 2051,
+        "cost": 929226859581.103,
+        "instalment": 929226859581.103,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2025/solar/31",
+        "tech": "solar",
+        "capacity_mw": 425990.4838939242,
+        "decision_year": 2025,
+        "online_year": 2026,
+        "exit_year": 2051,
+        "cost": 1739173013537.307,
+        "instalment": 1739173013537.307,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 134354.0873595029,
+        "online": 2026,
+        "exit": 2041,
+        "decision": 2025,
+        "paid_cost_cny": 134354087359.50291
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 24985.45393995864,
+        "online": 2026,
+        "exit": 2041,
+        "decision": 2025,
+        "paid_cost_cny": 24985453939.95864
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 37478.18090993795,
+        "online": 2026,
+        "exit": 2041,
+        "decision": 2025,
+        "paid_cost_cny": 37478180909.93796
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 55956.464634084216,
+        "online": 2026,
+        "exit": 2041,
+        "decision": 2025,
+        "paid_cost_cny": 55956464634.08422
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 83934.69695112632,
+        "online": 2026,
+        "exit": 2041,
+        "decision": 2025,
+        "paid_cost_cny": 83934696951.12633
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 380028.4718936987,
+        "online": 2026,
+        "exit": 2041,
+        "decision": 2025,
+        "paid_cost_cny": 380028471893.69867
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 165755.8118274555,
+        "energy": 0,
+        "decision": 2025,
+        "online": 2028,
+        "exit": 2078,
+        "cost": 132604649461.9644,
+        "remaining": 0.0,
+        "instalment": 44201549820.6548
+      }
+    ]
+  },
+  "2026": {
+    "generation": [
+      {
+        "id": "2026/coal/32",
+        "tech": "coal",
+        "capacity_mw": 39894.23038005358,
+        "decision_year": 2026,
+        "online_year": 2030,
+        "exit_year": 2070,
+        "cost": 230327019671.20352,
+        "instalment": 57581754917.80088,
+        "remaining": 1.52587890625e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2026/hydro/33",
+        "tech": "hydro",
+        "capacity_mw": 16227.491499999996,
+        "decision_year": 2026,
+        "online_year": 2031,
+        "exit_year": 2111,
+        "cost": 243412372499.99994,
+        "instalment": 48682474499.999985,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2026/nuclear/34",
+        "tech": "nuclear",
+        "capacity_mw": 2755.543083333333,
+        "decision_year": 2026,
+        "online_year": 2033,
+        "exit_year": 2093,
+        "cost": 49715524330.95473,
+        "instalment": 7102217761.564961,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2026/wind/35",
+        "tech": "wind",
+        "capacity_mw": 164213.50508062495,
+        "decision_year": 2026,
+        "online_year": 2027,
+        "exit_year": 2052,
+        "cost": 941910806214.3846,
+        "instalment": 941910806214.3846,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2026/solar/36",
+        "tech": "solar",
+        "capacity_mw": 556156.6247230372,
+        "decision_year": 2026,
+        "online_year": 2027,
+        "exit_year": 2052,
+        "cost": 2202478812792.875,
+        "instalment": 2202478812792.875,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 69918.33056681207,
+        "online": 2027,
+        "exit": 2042,
+        "decision": 2026,
+        "paid_cost_cny": 69918330566.81207
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 12547.491925200098,
+        "online": 2027,
+        "exit": 2042,
+        "decision": 2026,
+        "paid_cost_cny": 12547491925.200098
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 18821.237887800147,
+        "online": 2027,
+        "exit": 2042,
+        "decision": 2026,
+        "paid_cost_cny": 18821237887.800144
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 28838.648026290073,
+        "online": 2027,
+        "exit": 2042,
+        "decision": 2026,
+        "paid_cost_cny": 28838648026.29007
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 43257.9720394351,
+        "online": 2027,
+        "exit": 2042,
+        "decision": 2026,
+        "paid_cost_cny": 43257972039.435104
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 192967.354874942,
+        "online": 2027,
+        "exit": 2042,
+        "decision": 2026,
+        "paid_cost_cny": 192967354874.942
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 173214.82335969098,
+        "energy": 0,
+        "decision": 2026,
+        "online": 2029,
+        "exit": 2079,
+        "cost": 138571858687.75278,
+        "remaining": 0.0,
+        "instalment": 46190619562.58426
+      }
+    ]
+  },
+  "2027": {
+    "generation": [
+      {
+        "id": "2027/coal/37",
+        "tech": "coal",
+        "capacity_mw": 38380.28578776315,
+        "decision_year": 2027,
+        "online_year": 2031,
+        "exit_year": 2071,
+        "cost": 221586348587.49875,
+        "instalment": 55396587146.87469,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2027/hydro/38",
+        "tech": "hydro",
+        "capacity_mw": 15611.675058153125,
+        "decision_year": 2027,
+        "online_year": 2032,
+        "exit_year": 2112,
+        "cost": 234175125872.29688,
+        "instalment": 46835025174.45937,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2027/nuclear/39",
+        "tech": "nuclear",
+        "capacity_mw": 2650.973086366513,
+        "decision_year": 2027,
+        "online_year": 2034,
+        "exit_year": 2094,
+        "cost": 47828871837.6818,
+        "instalment": 6832695976.811686,
+        "remaining": 9.5367431640625e-06,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2027/wind/40",
+        "tech": "wind",
+        "capacity_mw": 157981.77318281727,
+        "decision_year": 2027,
+        "online_year": 2028,
+        "exit_year": 2053,
+        "cost": 878981281683.035,
+        "instalment": 878981281683.035,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2027/solar/41",
+        "tech": "solar",
+        "capacity_mw": 642023.427218604,
+        "decision_year": 2027,
+        "online_year": 2028,
+        "exit_year": 2053,
+        "cost": 2466250773468.237,
+        "instalment": 2466250773468.237,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 71635.56021980941,
+        "online": 2028,
+        "exit": 2043,
+        "decision": 2027,
+        "paid_cost_cny": 71635560219.80942
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 12581.16081017647,
+        "online": 2028,
+        "exit": 2043,
+        "decision": 2027,
+        "paid_cost_cny": 12581160810.17647
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 18871.741215264705,
+        "online": 2028,
+        "exit": 2043,
+        "decision": 2027,
+        "paid_cost_cny": 18871741215.2647
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 29419.594452119014,
+        "online": 2028,
+        "exit": 2043,
+        "decision": 2027,
+        "paid_cost_cny": 29419594452.119015
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 44129.391678178516,
+        "online": 2028,
+        "exit": 2043,
+        "decision": 2027,
+        "paid_cost_cny": 44129391678.17852
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 194965.18515607342,
+        "online": 2028,
+        "exit": 2043,
+        "decision": 2027,
+        "paid_cost_cny": 194965185156.07343
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 181009.4904108771,
+        "energy": 0,
+        "decision": 2027,
+        "online": 2030,
+        "exit": 2080,
+        "cost": 144807592328.7017,
+        "remaining": 0.0,
+        "instalment": 48269197442.900566
+      }
+    ]
+  },
+  "2028": {
+    "generation": [
+      {
+        "id": "2028/coal/42",
+        "tech": "coal",
+        "capacity_mw": 37345.53373410616,
+        "decision_year": 2028,
+        "online_year": 2032,
+        "exit_year": 2072,
+        "cost": 215612267765.61047,
+        "instalment": 53903066941.40262,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2028/hydro/43",
+        "tech": "hydro",
+        "capacity_mw": 15190.776346851708,
+        "decision_year": 2028,
+        "online_year": 2033,
+        "exit_year": 2113,
+        "cost": 227861645202.7756,
+        "instalment": 45572329040.55512,
+        "remaining": 1.52587890625e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2028/nuclear/44",
+        "tech": "nuclear",
+        "capacity_mw": 2579.5015016973402,
+        "decision_year": 2028,
+        "online_year": 2035,
+        "exit_year": 2095,
+        "cost": 46539381091.52593,
+        "instalment": 6648483013.075133,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2028/wind/45",
+        "tech": "wind",
+        "capacity_mw": 153722.50411053188,
+        "decision_year": 2028,
+        "online_year": 2029,
+        "exit_year": 2054,
+        "cost": 829624993665.1436,
+        "instalment": 829624993665.1436,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2028/solar/46",
+        "tech": "solar",
+        "capacity_mw": 725251.2821363424,
+        "decision_year": 2028,
+        "online_year": 2029,
+        "exit_year": 2054,
+        "cost": 2702381121788.8877,
+        "instalment": 2702381121788.8877,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 73277.97495050495,
+        "online": 2029,
+        "exit": 2044,
+        "decision": 2028,
+        "paid_cost_cny": 73277974950.50496
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 12612.575763486979,
+        "online": 2029,
+        "exit": 2044,
+        "decision": 2028,
+        "paid_cost_cny": 12612575763.486979
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 18918.863645230467,
+        "online": 2029,
+        "exit": 2044,
+        "decision": 2028,
+        "paid_cost_cny": 18918863645.230465
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 30004.267233334343,
+        "online": 2029,
+        "exit": 2044,
+        "decision": 2028,
+        "paid_cost_cny": 30004267233.334347
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 45006.40085000151,
+        "online": 2029,
+        "exit": 2044,
+        "decision": 2028,
+        "paid_cost_cny": 45006400850.00152
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 196983.1428310473,
+        "online": 2029,
+        "exit": 2044,
+        "decision": 2028,
+        "paid_cost_cny": 196983142831.0473
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 148747.14790483704,
+        "energy": 0,
+        "decision": 2028,
+        "online": 2031,
+        "exit": 2081,
+        "cost": 118997718323.86963,
+        "remaining": 0.0,
+        "instalment": 39665906107.95654
+      }
+    ]
+  },
+  "2029": {
+    "generation": [
+      {
+        "id": "2029/coal/47",
+        "tech": "coal",
+        "capacity_mw": 36874.485450825276,
+        "decision_year": 2029,
+        "online_year": 2033,
+        "exit_year": 2073,
+        "cost": 212892697888.56958,
+        "instalment": 53223174472.142395,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2029/hydro/48",
+        "tech": "hydro",
+        "capacity_mw": 14999.171396957701,
+        "decision_year": 2029,
+        "online_year": 2034,
+        "exit_year": 2114,
+        "cost": 224987570954.3655,
+        "instalment": 44997514190.8731,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2029/nuclear/49",
+        "tech": "nuclear",
+        "capacity_mw": 2546.965623036559,
+        "decision_year": 2029,
+        "online_year": 2036,
+        "exit_year": 2096,
+        "cost": 45952368579.55593,
+        "instalment": 6564624082.793704,
+        "remaining": 1.9073486328125e-06,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2029/wind/50",
+        "tech": "wind",
+        "capacity_mw": 151783.5648473135,
+        "decision_year": 2029,
+        "online_year": 2030,
+        "exit_year": 2055,
+        "cost": 794585910247.406,
+        "instalment": 794585910247.406,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2029/solar/51",
+        "tech": "solar",
+        "capacity_mw": 809161.891604041,
+        "decision_year": 2029,
+        "online_year": 2030,
+        "exit_year": 2055,
+        "cost": 2924591735272.173,
+        "instalment": 2924591735272.173,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 74851.4273184666,
+        "online": 2030,
+        "exit": 2045,
+        "decision": 2029,
+        "paid_cost_cny": 74851427318.4666
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 12641.639787320793,
+        "online": 2030,
+        "exit": 2045,
+        "decision": 2029,
+        "paid_cost_cny": 12641639787.320793
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 18962.45968098119,
+        "online": 2030,
+        "exit": 2045,
+        "decision": 2029,
+        "paid_cost_cny": 18962459680.98119
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 30591.127722218822,
+        "online": 2030,
+        "exit": 2045,
+        "decision": 2029,
+        "paid_cost_cny": 30591127722.21882
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 45886.691583328226,
+        "online": 2030,
+        "exit": 2045,
+        "decision": 2029,
+        "paid_cost_cny": 45886691583.328224
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 199019.78345949017,
+        "online": 2030,
+        "exit": 2045,
+        "decision": 2029,
+        "paid_cost_cny": 199019783459.49017
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 116560.2890689061,
+        "energy": 0,
+        "decision": 2029,
+        "online": 2032,
+        "exit": 2082,
+        "cost": 93248231255.12488,
+        "remaining": 0.0,
+        "instalment": 31082743751.708294
+      }
+    ]
+  },
+  "2030": {
+    "generation": [
+      {
+        "id": "2030/coal/52",
+        "tech": "coal",
+        "capacity_mw": 36893.54443859076,
+        "decision_year": 2030,
+        "online_year": 2034,
+        "exit_year": 2074,
+        "cost": 213002733846.35483,
+        "instalment": 53250683461.58871,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2030/hydro/53",
+        "tech": "hydro",
+        "capacity_mw": 15006.923885450818,
+        "decision_year": 2030,
+        "online_year": 2035,
+        "exit_year": 2115,
+        "cost": 225103858281.76227,
+        "instalment": 45020771656.352455,
+        "remaining": 1.52587890625e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2030/nuclear/54",
+        "tech": "nuclear",
+        "capacity_mw": 2548.2820505352784,
+        "decision_year": 2030,
+        "online_year": 2037,
+        "exit_year": 2097,
+        "cost": 45976119572.14188,
+        "instalment": 6568017081.734553,
+        "remaining": 1.9073486328125e-06,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2030/wind/55",
+        "tech": "wind",
+        "capacity_mw": 151862.01587029206,
+        "decision_year": 2030,
+        "online_year": 2031,
+        "exit_year": 2056,
+        "cost": 771146702784.8281,
+        "instalment": 771146702784.8281,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2030/solar/56",
+        "tech": "solar",
+        "capacity_mw": 894749.312924831,
+        "decision_year": 2030,
+        "online_year": 2031,
+        "exit_year": 2056,
+        "cost": 3136916331189.3755,
+        "instalment": 3136916331189.3755,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 76361.41604786995,
+        "online": 2031,
+        "exit": 2046,
+        "decision": 2030,
+        "paid_cost_cny": 76361416047.86995
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 12668.257407169556,
+        "online": 2031,
+        "exit": 2046,
+        "decision": 2030,
+        "paid_cost_cny": 12668257407.169556
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 19002.386110754334,
+        "online": 2031,
+        "exit": 2046,
+        "decision": 2030,
+        "paid_cost_cny": 19002386110.754333
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 31178.54108477929,
+        "online": 2031,
+        "exit": 2046,
+        "decision": 2030,
+        "paid_cost_cny": 31178541084.779285
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 46767.81162716893,
+        "online": 2031,
+        "exit": 2046,
+        "decision": 2030,
+        "paid_cost_cny": 46767811627.16892
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 201073.58237426542,
+        "online": 2031,
+        "exit": 2046,
+        "decision": 2030,
+        "paid_cost_cny": 201073582374.2654
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 119010.15310622146,
+        "energy": 0,
+        "decision": 2030,
+        "online": 2033,
+        "exit": 2083,
+        "cost": 95208122484.97717,
+        "remaining": 0.0,
+        "instalment": 31736040828.325726
+      }
+    ]
+  },
+  "2031": {
+    "generation": [
+      {
+        "id": "2031/coal/57",
+        "tech": "coal",
+        "capacity_mw": 49239.723198337,
+        "decision_year": 2031,
+        "online_year": 2035,
+        "exit_year": 2075,
+        "cost": 284282679115.8855,
+        "instalment": 71070669778.97137,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2031/hydro/58",
+        "tech": "hydro",
+        "capacity_mw": 20028.890946167267,
+        "decision_year": 2031,
+        "online_year": 2036,
+        "exit_year": 2116,
+        "cost": 300433364192.509,
+        "instalment": 60086672838.50179,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2031/nuclear/59",
+        "tech": "nuclear",
+        "capacity_mw": 3401.047655058013,
+        "decision_year": 2031,
+        "online_year": 2038,
+        "exit_year": 2098,
+        "cost": 61361721567.14534,
+        "instalment": 8765960223.877905,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2031/wind/60",
+        "tech": "wind",
+        "capacity_mw": 101340.81367867987,
+        "decision_year": 2031,
+        "online_year": 2032,
+        "exit_year": 2057,
+        "cost": 499164816571.4846,
+        "instalment": 499164816571.4846,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2031/solar/61",
+        "tech": "solar",
+        "capacity_mw": 81005.31930988871,
+        "decision_year": 2031,
+        "online_year": 2032,
+        "exit_year": 2057,
+        "cost": 275477944742.95996,
+        "instalment": 275477944742.95996,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 80312.2261028376,
+        "online": 2032,
+        "exit": 2047,
+        "decision": 2031,
+        "paid_cost_cny": 80312226102.8376
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 10297.955574328662,
+        "online": 2032,
+        "exit": 2047,
+        "decision": 2031,
+        "paid_cost_cny": 10297955574.328663
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 15446.933361492993,
+        "online": 2032,
+        "exit": 2047,
+        "decision": 2031,
+        "paid_cost_cny": 15446933361.492992
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 22573.12503852947,
+        "online": 2032,
+        "exit": 2047,
+        "decision": 2031,
+        "paid_cost_cny": 22573125038.52947
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 33859.6875577942,
+        "online": 2032,
+        "exit": 2047,
+        "decision": 2031,
+        "paid_cost_cny": 33859687557.7942
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 155905.02245512884,
+        "online": 2032,
+        "exit": 2047,
+        "decision": 2031,
+        "paid_cost_cny": 155905022455.12885
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 22012.735975059215,
+        "energy": 0,
+        "decision": 2031,
+        "online": 2034,
+        "exit": 2084,
+        "cost": 17610188780.04737,
+        "remaining": 0.0,
+        "instalment": 5870062926.682457
+      },
+      {
+        "kind": "storage",
+        "power": 77375.2309052284,
+        "energy": 177963.0310820253,
+        "decision": 2031,
+        "online": 2033,
+        "exit": 2043,
+        "cost": 142370424865.62024,
+        "remaining": 0.0,
+        "instalment": 71185212432.81012
+      }
+    ]
+  },
+  "2032": {
+    "generation": [
+      {
+        "id": "2032/coal/62",
+        "tech": "coal",
+        "capacity_mw": 50963.11351027879,
+        "decision_year": 2032,
+        "online_year": 2036,
+        "exit_year": 2076,
+        "cost": 294232572884.94147,
+        "instalment": 73558143221.23537,
+        "remaining": 3.0517578125e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2032/hydro/63",
+        "tech": "hydro",
+        "capacity_mw": 20729.90212928312,
+        "decision_year": 2032,
+        "online_year": 2037,
+        "exit_year": 2117,
+        "cost": 310948531939.2468,
+        "instalment": 62189706387.849365,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2032/nuclear/64",
+        "tech": "nuclear",
+        "capacity_mw": 3520.084322985043,
+        "decision_year": 2032,
+        "online_year": 2039,
+        "exit_year": 2099,
+        "cost": 63509381821.99542,
+        "instalment": 9072768831.713633,
+        "remaining": 3.814697265625e-06,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2032/wind/65",
+        "tech": "wind",
+        "capacity_mw": 209775.48431486732,
+        "decision_year": 2032,
+        "online_year": 2033,
+        "exit_year": 2058,
+        "cost": 1002273035193.884,
+        "instalment": 1002273035193.884,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2032/solar/66",
+        "tech": "solar",
+        "capacity_mw": 358619.26400568645,
+        "decision_year": 2032,
+        "online_year": 2033,
+        "exit_year": 2058,
+        "cost": 1182983385240.6738,
+        "instalment": 1182983385240.6738,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 80036.12570283492,
+        "online": 2033,
+        "exit": 2048,
+        "decision": 2032,
+        "paid_cost_cny": 80036125702.83492
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 11468.071152670123,
+        "online": 2033,
+        "exit": 2048,
+        "decision": 2032,
+        "paid_cost_cny": 11468071152.670124
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 17202.106729005183,
+        "online": 2033,
+        "exit": 2048,
+        "decision": 2032,
+        "paid_cost_cny": 17202106729.005184
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 27232.81522748098,
+        "online": 2033,
+        "exit": 2048,
+        "decision": 2032,
+        "paid_cost_cny": 27232815227.48098
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 40849.22284122147,
+        "online": 2033,
+        "exit": 2048,
+        "decision": 2032,
+        "paid_cost_cny": 40849222841.221466
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 179744.02218994405,
+        "online": 2033,
+        "exit": 2048,
+        "decision": 2032,
+        "paid_cost_cny": 179744022189.94406
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 90198.32996591832,
+        "energy": 0,
+        "decision": 2032,
+        "online": 2035,
+        "exit": 2085,
+        "cost": 72158663972.73466,
+        "remaining": 0.0,
+        "instalment": 24052887990.911556
+      }
+    ]
+  },
+  "2033": {
+    "generation": [
+      {
+        "id": "2033/hydro/67",
+        "tech": "hydro",
+        "capacity_mw": 21455.44870380803,
+        "decision_year": 2033,
+        "online_year": 2038,
+        "exit_year": 2118,
+        "cost": 321831730557.1204,
+        "instalment": 64366346111.42409,
+        "remaining": 1.52587890625e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2033/nuclear/68",
+        "tech": "nuclear",
+        "capacity_mw": 3643.2872742895197,
+        "decision_year": 2033,
+        "online_year": 2040,
+        "exit_year": 2100,
+        "cost": 65732210185.76527,
+        "instalment": 9390315740.82361,
+        "remaining": 3.814697265625e-06,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2033/wind/69",
+        "tech": "wind",
+        "capacity_mw": 217117.62626588764,
+        "decision_year": 2033,
+        "online_year": 2034,
+        "exit_year": 2059,
+        "cost": 1006232013682.8998,
+        "instalment": 1006232013682.8998,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 81119.3133386483,
+        "online": 2034,
+        "exit": 2049,
+        "decision": 2033,
+        "paid_cost_cny": 81119313338.6483
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 11455.568050567992,
+        "online": 2034,
+        "exit": 2049,
+        "decision": 2033,
+        "paid_cost_cny": 11455568050.567993
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 17183.352075851988,
+        "online": 2034,
+        "exit": 2049,
+        "decision": 2033,
+        "paid_cost_cny": 17183352075.851986
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 27456.87251559361,
+        "online": 2034,
+        "exit": 2049,
+        "decision": 2033,
+        "paid_cost_cny": 27456872515.593613
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 41185.30877339041,
+        "online": 2034,
+        "exit": 2049,
+        "decision": 2033,
+        "paid_cost_cny": 41185308773.39041
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 180564.15489381412,
+        "online": 2034,
+        "exit": 2049,
+        "decision": 2033,
+        "paid_cost_cny": 180564154893.81412
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 92923.10382232862,
+        "energy": 0,
+        "decision": 2033,
+        "online": 2036,
+        "exit": 2086,
+        "cost": 74338483057.8629,
+        "remaining": 0.0,
+        "instalment": 24779494352.620968
+      },
+      {
+        "kind": "storage",
+        "power": 105861.96734422784,
+        "energy": 243482.52489172402,
+        "decision": 2033,
+        "online": 2035,
+        "exit": 2045,
+        "cost": 194786019913.3792,
+        "remaining": 0.0,
+        "instalment": 97393009956.6896
+      }
+    ]
+  },
+  "2034": {
+    "generation": [
+      {
+        "id": "2034/hydro/70",
+        "tech": "hydro",
+        "capacity_mw": 22206.38940844131,
+        "decision_year": 2034,
+        "online_year": 2039,
+        "exit_year": 2119,
+        "cost": 333095841126.6197,
+        "instalment": 66619168225.32394,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2034/nuclear/71",
+        "tech": "nuclear",
+        "capacity_mw": 3770.8023288896534,
+        "decision_year": 2034,
+        "online_year": 2041,
+        "exit_year": 2101,
+        "cost": 68032837542.26706,
+        "instalment": 9718976791.752438,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2034/wind/72",
+        "tech": "wind",
+        "capacity_mw": 112358.37159259689,
+        "decision_year": 2034,
+        "online_year": 2035,
+        "exit_year": 2060,
+        "cost": 505103315068.47375,
+        "instalment": 505103315068.47375,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2034/solar/73",
+        "tech": "solar",
+        "capacity_mw": 212248.72217111423,
+        "decision_year": 2034,
+        "online_year": 2035,
+        "exit_year": 2060,
+        "cost": 658769650455.5503,
+        "instalment": 658769650455.5503,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 82168.7725933597,
+        "online": 2035,
+        "exit": 2050,
+        "decision": 2034,
+        "paid_cost_cny": 82168772593.3597
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 11441.183077630518,
+        "online": 2035,
+        "exit": 2050,
+        "decision": 2034,
+        "paid_cost_cny": 11441183077.630518
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 17161.774616445775,
+        "online": 2035,
+        "exit": 2050,
+        "decision": 2034,
+        "paid_cost_cny": 17161774616.445776
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 27669.320801308426,
+        "online": 2035,
+        "exit": 2050,
+        "decision": 2034,
+        "paid_cost_cny": 27669320801.308426
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 41503.98120196263,
+        "online": 2035,
+        "exit": 2050,
+        "decision": 2034,
+        "paid_cost_cny": 41503981201.96263
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 181370.77261104295,
+        "online": 2035,
+        "exit": 2050,
+        "decision": 2034,
+        "paid_cost_cny": 181370772611.04294
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 93834.99745137384,
+        "energy": 0,
+        "decision": 2034,
+        "online": 2037,
+        "exit": 2087,
+        "cost": 75067997961.09908,
+        "remaining": 7.62939453125e-06,
+        "instalment": 25022665987.033024
+      }
+    ]
+  },
+  "2035": {
+    "generation": [
+      {
+        "id": "2035/hydro/74",
+        "tech": "hydro",
+        "capacity_mw": 22983.613037736755,
+        "decision_year": 2035,
+        "online_year": 2040,
+        "exit_year": 2120,
+        "cost": 344754195566.05133,
+        "instalment": 68950839113.21027,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2035/nuclear/75",
+        "tech": "nuclear",
+        "capacity_mw": 3902.7804104007905,
+        "decision_year": 2035,
+        "online_year": 2042,
+        "exit_year": 2102,
+        "cost": 70413986856.2464,
+        "instalment": 10059140979.463772,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2035/wind/76",
+        "tech": "wind",
+        "capacity_mw": 116290.91459833775,
+        "decision_year": 2035,
+        "online_year": 2036,
+        "exit_year": 2061,
+        "cost": 507098473162.9941,
+        "instalment": 507098473162.9941,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2035/solar/77",
+        "tech": "solar",
+        "capacity_mw": 227911.73317636005,
+        "decision_year": 2035,
+        "online_year": 2036,
+        "exit_year": 2061,
+        "cost": 686162401005.731,
+        "instalment": 686162401005.731,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 83187.17081844597,
+        "online": 2036,
+        "exit": 2051,
+        "decision": 2035,
+        "paid_cost_cny": 83187170818.44597
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 11424.901087014843,
+        "online": 2036,
+        "exit": 2051,
+        "decision": 2035,
+        "paid_cost_cny": 11424901087.014843
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 17137.351630522262,
+        "online": 2036,
+        "exit": 2051,
+        "decision": 2035,
+        "paid_cost_cny": 17137351630.522263
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 27869.231504437143,
+        "online": 2036,
+        "exit": 2051,
+        "decision": 2035,
+        "paid_cost_cny": 27869231504.43714
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 41803.84725665571,
+        "online": 2036,
+        "exit": 2051,
+        "decision": 2035,
+        "paid_cost_cny": 41803847256.65571
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 182162.859472916,
+        "online": 2036,
+        "exit": 2051,
+        "decision": 2035,
+        "paid_cost_cny": 182162859472.916
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 94723.8265131847,
+        "energy": 0,
+        "decision": 2035,
+        "online": 2038,
+        "exit": 2088,
+        "cost": 75779061210.54776,
+        "remaining": 0.0,
+        "instalment": 25259687070.182587
+      }
+    ]
+  },
+  "2036": {
+    "generation": [
+      {
+        "id": "2036/hydro/78",
+        "tech": "hydro",
+        "capacity_mw": 23788.03949405754,
+        "decision_year": 2036,
+        "online_year": 2041,
+        "exit_year": 2121,
+        "cost": 356820592410.8631,
+        "instalment": 71364118482.17262,
+        "remaining": 3.0517578125e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2036/nuclear/79",
+        "tech": "nuclear",
+        "capacity_mw": 4039.3777247648177,
+        "decision_year": 2036,
+        "online_year": 2043,
+        "exit_year": 2103,
+        "cost": 72878476396.21501,
+        "instalment": 10411210913.745,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2036/wind/80",
+        "tech": "wind",
+        "capacity_mw": 120361.09660927957,
+        "decision_year": 2036,
+        "online_year": 2037,
+        "exit_year": 2062,
+        "cost": 509101512131.98785,
+        "instalment": 509101512131.98785,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2036/solar/81",
+        "tech": "solar",
+        "capacity_mw": 121551.79552694938,
+        "decision_year": 2036,
+        "online_year": 2037,
+        "exit_year": 2062,
+        "cost": 354971385552.87366,
+        "instalment": 354971385552.87366,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 84177.05582937365,
+        "online": 2037,
+        "exit": 2052,
+        "decision": 2036,
+        "paid_cost_cny": 84177055829.37366
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 11406.709187830194,
+        "online": 2037,
+        "exit": 2052,
+        "decision": 2036,
+        "paid_cost_cny": 11406709187.830193
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 17110.063781745288,
+        "online": 2037,
+        "exit": 2052,
+        "decision": 2036,
+        "paid_cost_cny": 17110063781.745289
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 28055.680349035098,
+        "online": 2037,
+        "exit": 2052,
+        "decision": 2036,
+        "paid_cost_cny": 28055680349.035095
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 42083.520523552645,
+        "online": 2037,
+        "exit": 2052,
+        "decision": 2036,
+        "paid_cost_cny": 42083520523.55264
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 182939.39084046846,
+        "online": 2037,
+        "exit": 2052,
+        "decision": 2036,
+        "paid_cost_cny": 182939390840.46848
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 95588.03012104053,
+        "energy": 0,
+        "decision": 2036,
+        "online": 2039,
+        "exit": 2089,
+        "cost": 76470424096.83243,
+        "remaining": 0.0,
+        "instalment": 25490141365.61081
+      }
+    ]
+  },
+  "2037": {
+    "generation": [
+      {
+        "id": "2037/hydro/82",
+        "tech": "hydro",
+        "capacity_mw": 24620.620876349552,
+        "decision_year": 2037,
+        "online_year": 2042,
+        "exit_year": 2122,
+        "cost": 369309313145.2433,
+        "instalment": 73861862629.04866,
+        "remaining": 3.0517578125e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2037/nuclear/83",
+        "tech": "nuclear",
+        "capacity_mw": 4180.7559451315865,
+        "decision_year": 2037,
+        "online_year": 2044,
+        "exit_year": 2104,
+        "cost": 75429223070.08253,
+        "instalment": 10775603295.726076,
+        "remaining": 1.1444091796875e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2037/wind/84",
+        "tech": "wind",
+        "capacity_mw": 124573.73499060435,
+        "decision_year": 2037,
+        "online_year": 2038,
+        "exit_year": 2063,
+        "cost": 511112463104.9092,
+        "instalment": 511112463104.9092,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2037/solar/85",
+        "tech": "solar",
+        "capacity_mw": 257895.80389184575,
+        "decision_year": 2037,
+        "online_year": 2038,
+        "exit_year": 2063,
+        "cost": 730546690205.0005,
+        "instalment": 730546690205.0005,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 85140.86642512819,
+        "online": 2038,
+        "exit": 2053,
+        "decision": 2037,
+        "paid_cost_cny": 85140866425.12819
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 11386.5968006633,
+        "online": 2038,
+        "exit": 2053,
+        "decision": 2037,
+        "paid_cost_cny": 11386596800.6633
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 17079.895200994946,
+        "online": 2038,
+        "exit": 2053,
+        "decision": 2037,
+        "paid_cost_cny": 17079895200.99495
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 28227.751093834453,
+        "online": 2038,
+        "exit": 2053,
+        "decision": 2037,
+        "paid_cost_cny": 28227751093.834457
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 42341.626640751674,
+        "online": 2038,
+        "exit": 2053,
+        "decision": 2037,
+        "paid_cost_cny": 42341626640.75168
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 183699.334528327,
+        "online": 2038,
+        "exit": 2053,
+        "decision": 2037,
+        "paid_cost_cny": 183699334528.327
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 96426.04501718935,
+        "energy": 0,
+        "decision": 2037,
+        "online": 2040,
+        "exit": 2090,
+        "cost": 77140836013.75148,
+        "remaining": 0.0,
+        "instalment": 25713612004.583828
+      }
+    ]
+  },
+  "2038": {
+    "generation": [
+      {
+        "id": "2038/hydro/86",
+        "tech": "hydro",
+        "capacity_mw": 25482.342607021783,
+        "decision_year": 2038,
+        "online_year": 2043,
+        "exit_year": 2123,
+        "cost": 382235139105.3267,
+        "instalment": 76447027821.06534,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2038/wind/87",
+        "tech": "wind",
+        "capacity_mw": 64466.90785763772,
+        "decision_year": 2038,
+        "online_year": 2039,
+        "exit_year": 2064,
+        "cost": 256565678667.08667,
+        "instalment": 256565678667.08667,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2038/solar/88",
+        "tech": "solar",
+        "capacity_mw": 68091.88080453535,
+        "decision_year": 2038,
+        "online_year": 2039,
+        "exit_year": 2064,
+        "cost": 187098698307.14508,
+        "instalment": 187098698307.14508,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 86080.94232455664,
+        "online": 2039,
+        "exit": 2054,
+        "decision": 2038,
+        "paid_cost_cny": 86080942324.55664
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 11364.55570939323,
+        "online": 2039,
+        "exit": 2054,
+        "decision": 2038,
+        "paid_cost_cny": 11364555709.39323
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 17046.833564089844,
+        "online": 2039,
+        "exit": 2054,
+        "decision": 2038,
+        "paid_cost_cny": 17046833564.089844
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 28384.539360966162,
+        "online": 2039,
+        "exit": 2054,
+        "decision": 2038,
+        "paid_cost_cny": 28384539360.966164
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 42576.80904144924,
+        "online": 2039,
+        "exit": 2054,
+        "decision": 2038,
+        "paid_cost_cny": 42576809041.44924
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 184441.65207119146,
+        "online": 2039,
+        "exit": 2054,
+        "decision": 2038,
+        "paid_cost_cny": 184441652071.19147
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 97236.30904440721,
+        "energy": 0,
+        "decision": 2038,
+        "online": 2041,
+        "exit": 2091,
+        "cost": 77789047235.52577,
+        "remaining": 7.62939453125e-06,
+        "instalment": 25929682411.841923
+      }
+    ]
+  },
+  "2039": {
+    "generation": [
+      {
+        "id": "2039/wind/89",
+        "tech": "wind",
+        "capacity_mw": 133446.49926531012,
+        "decision_year": 2039,
+        "online_year": 2040,
+        "exit_year": 2065,
+        "cost": 515158226195.64343,
+        "instalment": 515158226195.64343,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2039/solar/90",
+        "tech": "solar",
+        "capacity_mw": 286600.2135955581,
+        "decision_year": 2039,
+        "online_year": 2040,
+        "exit_year": 2065,
+        "cost": 763877432621.392,
+        "instalment": 763877432621.392,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 2452.599655595375,
+        "online": 2040,
+        "exit": 2055,
+        "decision": 2039,
+        "paid_cost_cny": 2452599655.595375
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 3678.899483393063,
+        "online": 2040,
+        "exit": 2055,
+        "decision": 2039,
+        "paid_cost_cny": 3678899483.3930626
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 14060.334237902054,
+        "online": 2040,
+        "exit": 2055,
+        "decision": 2039,
+        "paid_cost_cny": 14060334237.902054
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 21090.501356853078,
+        "online": 2040,
+        "exit": 2055,
+        "decision": 2039,
+        "paid_cost_cny": 21090501356.85308
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 65116.24878843082,
+        "online": 2040,
+        "exit": 2055,
+        "decision": 2039,
+        "paid_cost_cny": 65116248788.430824
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 98017.26471068477,
+        "energy": 0,
+        "decision": 2039,
+        "online": 2042,
+        "exit": 2092,
+        "cost": 78413811768.54782,
+        "remaining": 7.62939453125e-06,
+        "instalment": 26137937256.182606
+      }
+    ]
+  },
+  "2040": {
+    "generation": [
+      {
+        "id": "2040/wind/91",
+        "tech": "wind",
+        "capacity_mw": 69058.56336979794,
+        "decision_year": 2040,
+        "online_year": 2041,
+        "exit_year": 2066,
+        "cost": 258596550594.55792,
+        "instalment": 258596550594.55792,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2040/solar/92",
+        "tech": "solar",
+        "capacity_mw": 75168.52725824511,
+        "decision_year": 2040,
+        "online_year": 2041,
+        "exit_year": 2066,
+        "cost": 194336754563.89764,
+        "instalment": 194336754563.89764,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 118034.71558263851,
+        "online": 2041,
+        "exit": 2056,
+        "decision": 2040,
+        "paid_cost_cny": 118034715582.63852
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 27412.1401364713,
+        "online": 2041,
+        "exit": 2056,
+        "decision": 2040,
+        "paid_cost_cny": 27412140136.4713
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 41118.21020470694,
+        "online": 2041,
+        "exit": 2056,
+        "decision": 2040,
+        "paid_cost_cny": 41118210204.70695
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 70140.37611579207,
+        "online": 2041,
+        "exit": 2056,
+        "decision": 2040,
+        "paid_cost_cny": 70140376115.79205
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 105210.56417368808,
+        "online": 2041,
+        "exit": 2056,
+        "decision": 2040,
+        "paid_cost_cny": 105210564173.68808
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 445848.65199707216,
+        "online": 2041,
+        "exit": 2056,
+        "decision": 2040,
+        "paid_cost_cny": 445848651997.07214
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 75824.52614470245,
+        "energy": 0,
+        "decision": 2040,
+        "online": 2043,
+        "exit": 2093,
+        "cost": 60659620915.76196,
+        "remaining": 0.0,
+        "instalment": 20219873638.587322
+      }
+    ]
+  },
+  "2041": {
+    "generation": [
+      {
+        "id": "2041/wind/93",
+        "tech": "wind",
+        "capacity_mw": 35392.51372702145,
+        "decision_year": 2041,
+        "online_year": 2042,
+        "exit_year": 2067,
+        "cost": 128554810214.31961,
+        "instalment": 128554810214.31961,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2041/solar/94",
+        "tech": "solar",
+        "capacity_mw": 19476.610329494375,
+        "decision_year": 2041,
+        "online_year": 2042,
+        "exit_year": 2067,
+        "cost": 48843189271.03518,
+        "instalment": 48843189271.03518,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 60705.77936567133,
+        "online": 2042,
+        "exit": 2057,
+        "decision": 2041,
+        "paid_cost_cny": 60705779365.67133
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 12529.66251274303,
+        "online": 2042,
+        "exit": 2057,
+        "decision": 2041,
+        "paid_cost_cny": 12529662512.743032
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 18794.493769114546,
+        "online": 2042,
+        "exit": 2057,
+        "decision": 2041,
+        "paid_cost_cny": 18794493769.114548
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 32320.245437581932,
+        "online": 2042,
+        "exit": 2057,
+        "decision": 2041,
+        "paid_cost_cny": 32320245437.58193
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 48480.3681563729,
+        "online": 2042,
+        "exit": 2057,
+        "decision": 2041,
+        "paid_cost_cny": 48480368156.37289
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 204800.47812132584,
+        "online": 2042,
+        "exit": 2057,
+        "decision": 2041,
+        "paid_cost_cny": 204800478121.32584
+      }
+    ],
+    "infrastructure": []
+  },
+  "2042": {
+    "generation": [
+      {
+        "id": "2042/wind/95",
+        "tech": "wind",
+        "capacity_mw": 72554.65314039396,
+        "decision_year": 2042,
+        "online_year": 2043,
+        "exit_year": 2068,
+        "cost": 255631240111.17456,
+        "instalment": 255631240111.17456,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2042/solar/96",
+        "tech": "solar",
+        "capacity_mw": 80582.0218229902,
+        "decision_year": 2042,
+        "online_year": 2043,
+        "exit_year": 2068,
+        "cost": 196020066677.06537,
+        "instalment": 196020066677.06537,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 64154.00287092663,
+        "online": 2043,
+        "exit": 2058,
+        "decision": 2042,
+        "paid_cost_cny": 64154002870.926636
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 13732.976715972996,
+        "online": 2043,
+        "exit": 2058,
+        "decision": 2042,
+        "paid_cost_cny": 13732976715.972998
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 20599.465073959494,
+        "online": 2043,
+        "exit": 2058,
+        "decision": 2042,
+        "paid_cost_cny": 20599465073.959496
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 38138.464382800834,
+        "online": 2043,
+        "exit": 2058,
+        "decision": 2042,
+        "paid_cost_cny": 38138464382.800835
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 57207.69657420125,
+        "online": 2043,
+        "exit": 2058,
+        "decision": 2042,
+        "paid_cost_cny": 57207696574.20124
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 233688.61212850688,
+        "online": 2043,
+        "exit": 2058,
+        "decision": 2042,
+        "paid_cost_cny": 233688612128.50687
+      }
+    ],
+    "infrastructure": []
+  },
+  "2043": {
+    "generation": [
+      {
+        "id": "2043/wind/97",
+        "tech": "wind",
+        "capacity_mw": 74368.51946890383,
+        "decision_year": 2043,
+        "online_year": 2044,
+        "exit_year": 2069,
+        "cost": 254161360480.53537,
+        "instalment": 254161360480.53537,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2043/solar/98",
+        "tech": "solar",
+        "capacity_mw": 83212.50265257977,
+        "decision_year": 2043,
+        "online_year": 2044,
+        "exit_year": 2069,
+        "cost": 196346286067.7492,
+        "instalment": 196346286067.7492,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 66433.10903519532,
+        "online": 2044,
+        "exit": 2059,
+        "decision": 2043,
+        "paid_cost_cny": 66433109035.19532
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 13728.293666575919,
+        "online": 2044,
+        "exit": 2059,
+        "decision": 2043,
+        "paid_cost_cny": 13728293666.57592
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 20592.44049986388,
+        "online": 2044,
+        "exit": 2059,
+        "decision": 2043,
+        "paid_cost_cny": 20592440499.863876
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 38632.41301779719,
+        "online": 2044,
+        "exit": 2059,
+        "decision": 2043,
+        "paid_cost_cny": 38632413017.797195
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 57948.61952669579,
+        "online": 2044,
+        "exit": 2059,
+        "decision": 2043,
+        "paid_cost_cny": 57948619526.695786
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 235615.79568537557,
+        "online": 2044,
+        "exit": 2059,
+        "decision": 2043,
+        "paid_cost_cny": 235615795685.37558
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 34950.87460612785,
+        "energy": 0,
+        "decision": 2043,
+        "online": 2046,
+        "exit": 2096,
+        "cost": 27960699684.90228,
+        "remaining": 0.0,
+        "instalment": 9320233228.30076
+      },
+      {
+        "kind": "storage",
+        "power": 42311.23088698873,
+        "energy": 97315.83104007406,
+        "decision": 2043,
+        "online": 2045,
+        "exit": 2055,
+        "cost": 77852664832.05925,
+        "remaining": 0.0,
+        "instalment": 38926332416.029625
+      }
+    ]
+  },
+  "2044": {
+    "generation": [
+      {
+        "id": "2044/wind/99",
+        "tech": "wind",
+        "capacity_mw": 76227.7324556264,
+        "decision_year": 2044,
+        "online_year": 2045,
+        "exit_year": 2070,
+        "cost": 252699932657.7722,
+        "instalment": 252699932657.7722,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2044/solar/100",
+        "tech": "solar",
+        "capacity_mw": 85813.20686770466,
+        "decision_year": 2044,
+        "online_year": 2045,
+        "exit_year": 2070,
+        "cost": 196408361834.18732,
+        "instalment": 196408361834.18732,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 68632.2498519863,
+        "online": 2045,
+        "exit": 2060,
+        "decision": 2044,
+        "paid_cost_cny": 68632249851.9863
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 13720.518071717583,
+        "online": 2045,
+        "exit": 2060,
+        "decision": 2044,
+        "paid_cost_cny": 13720518071.717583
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 20580.777107576374,
+        "online": 2045,
+        "exit": 2060,
+        "decision": 2044,
+        "paid_cost_cny": 20580777107.576374
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 39117.3675948278,
+        "online": 2045,
+        "exit": 2060,
+        "decision": 2044,
+        "paid_cost_cny": 39117367594.82781
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 58676.05139224171,
+        "online": 2045,
+        "exit": 2060,
+        "decision": 2044,
+        "paid_cost_cny": 58676051392.24171
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 237544.9896078338,
+        "online": 2045,
+        "exit": 2060,
+        "decision": 2044,
+        "paid_cost_cny": 237544989607.8338
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 43320.77811441012,
+        "energy": 0,
+        "decision": 2044,
+        "online": 2047,
+        "exit": 2097,
+        "cost": 34656622491.52809,
+        "remaining": 0.0,
+        "instalment": 11552207497.176031
+      }
+    ]
+  },
+  "2045": {
+    "generation": [
+      {
+        "id": "2045/wind/101",
+        "tech": "wind",
+        "capacity_mw": 156266.85153403415,
+        "decision_year": 2045,
+        "online_year": 2046,
+        "exit_year": 2071,
+        "cost": 502493816089.9801,
+        "instalment": 502493816089.9801,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2045/solar/102",
+        "tech": "solar",
+        "capacity_mw": 353590.685200649,
+        "decision_year": 2045,
+        "online_year": 2046,
+        "exit_year": 2071,
+        "cost": 785015788149.4698,
+        "instalment": 785015788149.4698,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 70757.96771012456,
+        "online": 2046,
+        "exit": 2061,
+        "decision": 2045,
+        "paid_cost_cny": 70757967710.12456
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 13709.575959691243,
+        "online": 2046,
+        "exit": 2061,
+        "decision": 2045,
+        "paid_cost_cny": 13709575959.691244
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 20564.363939536863,
+        "online": 2046,
+        "exit": 2061,
+        "decision": 2045,
+        "paid_cost_cny": 20564363939.536865
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 39591.65661260058,
+        "online": 2046,
+        "exit": 2061,
+        "decision": 2045,
+        "paid_cost_cny": 39591656612.60058
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 59387.48491890085,
+        "online": 2046,
+        "exit": 2061,
+        "decision": 2045,
+        "paid_cost_cny": 59387484918.900856
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 239474.51922397548,
+        "online": 2046,
+        "exit": 2061,
+        "decision": 2045,
+        "paid_cost_cny": 239474519223.9755
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 43102.61450485187,
+        "energy": 0,
+        "decision": 2045,
+        "online": 2048,
+        "exit": 2098,
+        "cost": 34482091603.88149,
+        "remaining": 0.0,
+        "instalment": 11494030534.627165
+      }
+    ]
+  },
+  "2046": {
+    "generation": [
+      {
+        "id": "2046/wind/103",
+        "tech": "wind",
+        "capacity_mw": 320347.04564476985,
+        "decision_year": 2046,
+        "online_year": 2047,
+        "exit_year": 2072,
+        "cost": 999208953294.9249,
+        "instalment": 999208953294.9249,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 75315.56465636799,
+        "online": 2047,
+        "exit": 2062,
+        "decision": 2046,
+        "paid_cost_cny": 75315564656.368
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 11301.016584803538,
+        "online": 2047,
+        "exit": 2062,
+        "decision": 2046,
+        "paid_cost_cny": 11301016584.803537
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 16951.524877205306,
+        "online": 2047,
+        "exit": 2062,
+        "decision": 2046,
+        "paid_cost_cny": 16951524877.205305
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 30861.88513843585,
+        "online": 2047,
+        "exit": 2062,
+        "decision": 2046,
+        "paid_cost_cny": 30861885138.43585
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 46292.82770765377,
+        "online": 2047,
+        "exit": 2062,
+        "decision": 2046,
+        "paid_cost_cny": 46292827707.65377
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 194164.72898497852,
+        "online": 2047,
+        "exit": 2062,
+        "decision": 2046,
+        "paid_cost_cny": 194164728984.97852
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 42860.96989049902,
+        "energy": 0,
+        "decision": 2046,
+        "online": 2049,
+        "exit": 2099,
+        "cost": 34288775912.399216,
+        "remaining": 3.814697265625e-06,
+        "instalment": 11429591970.799738
+      },
+      {
+        "kind": "storage",
+        "power": 156194.45122035517,
+        "energy": 359247.2378068169,
+        "decision": 2046,
+        "online": 2048,
+        "exit": 2058,
+        "cost": 287397790245.4535,
+        "remaining": 0.0,
+        "instalment": 143698895122.72675
+      }
+    ]
+  },
+  "2047": {
+    "generation": [
+      {
+        "id": "2047/coal/104",
+        "tech": "coal",
+        "capacity_mw": 79771.14187474102,
+        "decision_year": 2047,
+        "online_year": 2051,
+        "exit_year": 2091,
+        "cost": 460554049764.6559,
+        "instalment": 115138512441.16397,
+        "remaining": 3.0517578125e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2047/wind/105",
+        "tech": "wind",
+        "capacity_mw": 164177.8608929446,
+        "decision_year": 2047,
+        "online_year": 2048,
+        "exit_year": 2073,
+        "cost": 496731750906.73956,
+        "instalment": 496731750906.73956,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2047/solar/106",
+        "tech": "solar",
+        "capacity_mw": 748512.5757686171,
+        "decision_year": 2047,
+        "online_year": 2048,
+        "exit_year": 2073,
+        "cost": 1563580139808.543,
+        "instalment": 1563580139808.543,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 75638.30220694887,
+        "online": 2048,
+        "exit": 2063,
+        "decision": 2047,
+        "paid_cost_cny": 75638302206.94887
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 12432.199892575598,
+        "online": 2048,
+        "exit": 2063,
+        "decision": 2047,
+        "paid_cost_cny": 12432199892.575598
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 18648.299838863393,
+        "online": 2048,
+        "exit": 2063,
+        "decision": 2047,
+        "paid_cost_cny": 18648299838.863396
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 35386.000644631684,
+        "online": 2048,
+        "exit": 2063,
+        "decision": 2047,
+        "paid_cost_cny": 35386000644.63168
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 53079.000966947526,
+        "online": 2048,
+        "exit": 2063,
+        "decision": 2047,
+        "paid_cost_cny": 53079000966.947525
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 217845.41081177443,
+        "online": 2048,
+        "exit": 2063,
+        "decision": 2047,
+        "paid_cost_cny": 217845410811.77444
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 42595.74102123035,
+        "energy": 0,
+        "decision": 2047,
+        "online": 2050,
+        "exit": 2100,
+        "cost": 34076592816.98428,
+        "remaining": 3.814697265625e-06,
+        "instalment": 11358864272.328093
+      },
+      {
+        "kind": "storage",
+        "power": 46502.32832261099,
+        "energy": 106955.35514200527,
+        "decision": 2047,
+        "online": 2049,
+        "exit": 2059,
+        "cost": 85564284113.60422,
+        "remaining": 0.0,
+        "instalment": 42782142056.80211
+      }
+    ]
+  },
+  "2048": {
+    "generation": [
+      {
+        "id": "2048/coal/107",
+        "tech": "coal",
+        "capacity_mw": 81765.42042160952,
+        "decision_year": 2048,
+        "online_year": 2052,
+        "exit_year": 2092,
+        "cost": 472067901008.77216,
+        "instalment": 118016975252.19304,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2048/wind/108",
+        "tech": "wind",
+        "capacity_mw": 336564.61483053636,
+        "decision_year": 2048,
+        "online_year": 2049,
+        "exit_year": 2074,
+        "cost": 987751086678.0514,
+        "instalment": 987751086678.0514,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 77313.35107111651,
+        "online": 2049,
+        "exit": 2064,
+        "decision": 2048,
+        "paid_cost_cny": 77313351071.11652
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 12380.1136288821,
+        "online": 2049,
+        "exit": 2064,
+        "decision": 2048,
+        "paid_cost_cny": 12380113628.882101
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 18570.17044332315,
+        "online": 2049,
+        "exit": 2064,
+        "decision": 2048,
+        "paid_cost_cny": 18570170443.32315
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 35463.30069061741,
+        "online": 2049,
+        "exit": 2064,
+        "decision": 2048,
+        "paid_cost_cny": 35463300690.61742
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 53194.95103592612,
+        "online": 2049,
+        "exit": 2064,
+        "decision": 2048,
+        "paid_cost_cny": 53194951035.92612
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 218490.0235889582,
+        "online": 2049,
+        "exit": 2064,
+        "decision": 2048,
+        "paid_cost_cny": 218490023588.9582
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 42306.85106152482,
+        "energy": 0,
+        "decision": 2048,
+        "online": 2051,
+        "exit": 2101,
+        "cost": 33845480849.21986,
+        "remaining": 0.0,
+        "instalment": 11281826949.739954
+      },
+      {
+        "kind": "storage",
+        "power": 164101.79531338564,
+        "energy": 377434.1292207869,
+        "decision": 2048,
+        "online": 2050,
+        "exit": 2060,
+        "cost": 301947303376.6295,
+        "remaining": 0.0,
+        "instalment": 150973651688.31476
+      }
+    ]
+  },
+  "2049": {
+    "generation": [
+      {
+        "id": "2049/coal/109",
+        "tech": "coal",
+        "capacity_mw": 83809.55593214977,
+        "decision_year": 2049,
+        "online_year": 2053,
+        "exit_year": 2093,
+        "cost": 483869598533.9915,
+        "instalment": 120967399633.49788,
+        "remaining": 3.0517578125e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2049/wind/110",
+        "tech": "wind",
+        "capacity_mw": 172489.36510064983,
+        "decision_year": 2049,
+        "online_year": 2050,
+        "exit_year": 2075,
+        "cost": 491035758964.8261,
+        "instalment": 491035758964.8261,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2049/solar/111",
+        "tech": "solar",
+        "capacity_mw": 790324.8498732037,
+        "decision_year": 2049,
+        "online_year": 2050,
+        "exit_year": 2075,
+        "cost": 1553352963141.2998,
+        "instalment": 1553352963141.2998,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 78948.64860140835,
+        "online": 2050,
+        "exit": 2065,
+        "decision": 2049,
+        "paid_cost_cny": 78948648601.40836
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 12325.519172711181,
+        "online": 2050,
+        "exit": 2065,
+        "decision": 2049,
+        "paid_cost_cny": 12325519172.711182
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 18488.278759066772,
+        "online": 2050,
+        "exit": 2065,
+        "decision": 2049,
+        "paid_cost_cny": 18488278759.066772
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 35517.87105077645,
+        "online": 2050,
+        "exit": 2065,
+        "decision": 2049,
+        "paid_cost_cny": 35517871050.77645
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 53276.80657616467,
+        "online": 2050,
+        "exit": 2065,
+        "decision": 2049,
+        "paid_cost_cny": 53276806576.164665
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 219103.81733033108,
+        "online": 2050,
+        "exit": 2065,
+        "decision": 2049,
+        "paid_cost_cny": 219103817330.3311
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 41994.250036327634,
+        "energy": 0,
+        "decision": 2049,
+        "online": 2052,
+        "exit": 2102,
+        "cost": 33595400029.062107,
+        "remaining": 0.0,
+        "instalment": 11198466676.354036
+      }
+    ]
+  },
+  "2050": {
+    "generation": [
+      {
+        "id": "2050/coal/112",
+        "tech": "coal",
+        "capacity_mw": 85904.7948304535,
+        "decision_year": 2050,
+        "online_year": 2054,
+        "exit_year": 2094,
+        "cost": 495966338497.3411,
+        "instalment": 123991584624.33528,
+        "remaining": 3.0517578125e-05,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2050/wind/113",
+        "tech": "wind",
+        "capacity_mw": 353603.19845633215,
+        "decision_year": 2050,
+        "online_year": 2051,
+        "exit_year": 2076,
+        "cost": 976424606701.5569,
+        "instalment": 976424606701.5569,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 80547.8000307451,
+        "online": 2051,
+        "exit": 2066,
+        "decision": 2050,
+        "paid_cost_cny": 80547800030.7451
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 12268.42665335755,
+        "online": 2051,
+        "exit": 2066,
+        "decision": 2050,
+        "paid_cost_cny": 12268426653.35755
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 18402.63998003632,
+        "online": 2051,
+        "exit": 2066,
+        "decision": 2050,
+        "paid_cost_cny": 18402639980.036324
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 35548.870436751284,
+        "online": 2051,
+        "exit": 2066,
+        "decision": 2050,
+        "paid_cost_cny": 35548870436.75128
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 53323.305655126926,
+        "online": 2051,
+        "exit": 2066,
+        "decision": 2050,
+        "paid_cost_cny": 53323305655.12692
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 219685.68678855384,
+        "online": 2051,
+        "exit": 2066,
+        "decision": 2050,
+        "paid_cost_cny": 219685686788.55383
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "grid",
+        "power": 41657.91522147413,
+        "energy": 0,
+        "decision": 2050,
+        "online": 2053,
+        "exit": 2103,
+        "cost": 33326332177.179306,
+        "remaining": 0.0,
+        "instalment": 11108777392.393103
+      },
+      {
+        "kind": "storage",
+        "power": 146924.04369602038,
+        "energy": 337925.3005008469,
+        "decision": 2050,
+        "online": 2052,
+        "exit": 2062,
+        "cost": 270340240400.67746,
+        "remaining": 0.0,
+        "instalment": 135170120200.33873
+      }
+    ]
+  },
+  "2051": {
+    "generation": [
+      {
+        "id": "2051/coal/114",
+        "tech": "coal",
+        "capacity_mw": 87193.36675291028,
+        "decision_year": 2051,
+        "online_year": 2055,
+        "exit_year": 2095,
+        "cost": 503405833574.8012,
+        "instalment": 125851458393.7003,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2051/wind/115",
+        "tech": "wind",
+        "capacity_mw": 358907.2464331771,
+        "decision_year": 2051,
+        "online_year": 2052,
+        "exit_year": 2077,
+        "cost": 984582654662.8002,
+        "instalment": 984582654662.8002,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2051/solar/116",
+        "tech": "solar",
+        "capacity_mw": 1649957.0199504208,
+        "decision_year": 2051,
+        "online_year": 2052,
+        "exit_year": 2077,
+        "cost": 3125045184843.473,
+        "instalment": 3125045184843.473,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 75300.97400830314,
+        "online": 2052,
+        "exit": 2067,
+        "decision": 2051,
+        "paid_cost_cny": 75300974008.30313
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 10025.178128087266,
+        "online": 2052,
+        "exit": 2067,
+        "decision": 2051,
+        "paid_cost_cny": 10025178128.087265
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 15037.767192130896,
+        "online": 2052,
+        "exit": 2067,
+        "decision": 2051,
+        "paid_cost_cny": 15037767192.130898
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 25256.566016698256,
+        "online": 2052,
+        "exit": 2067,
+        "decision": 2051,
+        "paid_cost_cny": 25256566016.698257
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 37884.849025047384,
+        "online": 2052,
+        "exit": 2067,
+        "decision": 2051,
+        "paid_cost_cny": 37884849025.047386
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 164173.24330062186,
+        "online": 2052,
+        "exit": 2067,
+        "decision": 2051,
+        "paid_cost_cny": 164173243300.62186
+      }
+    ],
+    "infrastructure": []
+  },
+  "2052": {
+    "generation": [
+      {
+        "id": "2052/wind/117",
+        "tech": "wind",
+        "capacity_mw": 364290.85512967466,
+        "decision_year": 2052,
+        "online_year": 2053,
+        "exit_year": 2078,
+        "cost": 999351394482.742,
+        "instalment": 999351394482.742,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 79938.71498462162,
+        "online": 2053,
+        "exit": 2068,
+        "decision": 2052,
+        "paid_cost_cny": 79938714984.62161
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 11077.894496597606,
+        "online": 2053,
+        "exit": 2068,
+        "decision": 2052,
+        "paid_cost_cny": 11077894496.597607
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 16616.841744896406,
+        "online": 2053,
+        "exit": 2068,
+        "decision": 2052,
+        "paid_cost_cny": 16616841744.896408
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 30424.232129659038,
+        "online": 2053,
+        "exit": 2068,
+        "decision": 2052,
+        "paid_cost_cny": 30424232129.659042
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 45636.34819448856,
+        "online": 2053,
+        "exit": 2068,
+        "decision": 2052,
+        "paid_cost_cny": 45636348194.488556
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 192528.45140539575,
+        "online": 2053,
+        "exit": 2068,
+        "decision": 2052,
+        "paid_cost_cny": 192528451405.39575
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "storage",
+        "power": 177620.52428811722,
+        "energy": 408527.20586266957,
+        "decision": 2052,
+        "online": 2054,
+        "exit": 2064,
+        "cost": 326821764690.1356,
+        "remaining": 0.0,
+        "instalment": 163410882345.0678
+      }
+    ]
+  },
+  "2053": {
+    "generation": [
+      {
+        "id": "2053/wind/118",
+        "tech": "wind",
+        "capacity_mw": 184877.6089783099,
+        "decision_year": 2053,
+        "online_year": 2054,
+        "exit_year": 2079,
+        "cost": 507170832699.9915,
+        "instalment": 507170832699.9915,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2053/solar/119",
+        "tech": "solar",
+        "capacity_mw": 851813.9221670137,
+        "decision_year": 2053,
+        "online_year": 2054,
+        "exit_year": 2079,
+        "cost": 1613349295565.6794,
+        "instalment": 1613349295565.6794,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 81242.32064991514,
+        "online": 2054,
+        "exit": 2069,
+        "decision": 2053,
+        "paid_cost_cny": 81242320649.91515
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 11029.556306028413,
+        "online": 2054,
+        "exit": 2069,
+        "decision": 2053,
+        "paid_cost_cny": 11029556306.028414
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 16544.334459042617,
+        "online": 2054,
+        "exit": 2069,
+        "decision": 2053,
+        "paid_cost_cny": 16544334459.04262
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 30415.61161580775,
+        "online": 2054,
+        "exit": 2069,
+        "decision": 2053,
+        "paid_cost_cny": 30415611615.807755
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 45623.417423711624,
+        "online": 2054,
+        "exit": 2069,
+        "decision": 2053,
+        "paid_cost_cny": 45623417423.711624
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 192900.42199115595,
+        "online": 2054,
+        "exit": 2069,
+        "decision": 2053,
+        "paid_cost_cny": 192900421991.15594
+      }
+    ],
+    "infrastructure": []
+  },
+  "2054": {
+    "generation": [
+      {
+        "id": "2054/wind/120",
+        "tech": "wind",
+        "capacity_mw": 187650.77311298452,
+        "decision_year": 2054,
+        "online_year": 2055,
+        "exit_year": 2080,
+        "cost": 514778395190.49133,
+        "instalment": 514778395190.49133,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2054/solar/121",
+        "tech": "solar",
+        "capacity_mw": 865303.15878168,
+        "decision_year": 2054,
+        "online_year": 2055,
+        "exit_year": 2080,
+        "cost": 1638898127092.9055,
+        "instalment": 1638898127092.9055,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 2091.4437410866844,
+        "online": 2055,
+        "exit": 2070,
+        "decision": 2054,
+        "paid_cost_cny": 2091443741.0866842
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 3137.165611630026,
+        "online": 2055,
+        "exit": 2070,
+        "decision": 2054,
+        "paid_cost_cny": 3137165611.630026
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 15924.024550032058,
+        "online": 2055,
+        "exit": 2070,
+        "decision": 2054,
+        "paid_cost_cny": 15924024550.032057
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 23886.036825048086,
+        "online": 2055,
+        "exit": 2070,
+        "decision": 2054,
+        "paid_cost_cny": 23886036825.048084
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 73201.67934481846,
+        "online": 2055,
+        "exit": 2070,
+        "decision": 2054,
+        "paid_cost_cny": 73201679344.81847
+      }
+    ],
+    "infrastructure": []
+  },
+  "2055": {
+    "generation": [
+      {
+        "id": "2055/wind/122",
+        "tech": "wind",
+        "capacity_mw": 190465.53470967928,
+        "decision_year": 2055,
+        "online_year": 2056,
+        "exit_year": 2081,
+        "cost": 522500071118.3487,
+        "instalment": 522500071118.3487,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      },
+      {
+        "id": "2055/solar/123",
+        "tech": "solar",
+        "capacity_mw": 878874.8526967556,
+        "decision_year": 2055,
+        "online_year": 2056,
+        "exit_year": 2081,
+        "cost": 1664603134075.906,
+        "instalment": 1664603134075.906,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 109429.70293235593,
+        "online": 2056,
+        "exit": 2071,
+        "decision": 2055,
+        "paid_cost_cny": 109429702932.35593
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 27024.97908964171,
+        "online": 2056,
+        "exit": 2071,
+        "decision": 2055,
+        "paid_cost_cny": 27024979089.641712
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 40537.468634462566,
+        "online": 2056,
+        "exit": 2071,
+        "decision": 2055,
+        "paid_cost_cny": 40537468634.46256
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 71834.86943833316,
+        "online": 2056,
+        "exit": 2071,
+        "decision": 2055,
+        "paid_cost_cny": 71834869438.33316
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 107752.30415749973,
+        "online": 2056,
+        "exit": 2071,
+        "decision": 2055,
+        "paid_cost_cny": 107752304157.49973
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 453557.87795909913,
+        "online": 2056,
+        "exit": 2071,
+        "decision": 2055,
+        "paid_cost_cny": 453557877959.0991
+      }
+    ],
+    "infrastructure": []
+  },
+  "2056": {
+    "generation": [
+      {
+        "id": "2056/wind/124",
+        "tech": "wind",
+        "capacity_mw": 386645.03546064894,
+        "decision_year": 2056,
+        "online_year": 2057,
+        "exit_year": 2082,
+        "cost": 1060675144370.2478,
+        "instalment": 1060675144370.2478,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 56931.10046524089,
+        "online": 2057,
+        "exit": 2072,
+        "decision": 2056,
+        "paid_cost_cny": 56931100465.24089
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 12116.658397340147,
+        "online": 2057,
+        "exit": 2072,
+        "decision": 2056,
+        "paid_cost_cny": 12116658397.340147
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 18174.987596010218,
+        "online": 2057,
+        "exit": 2072,
+        "decision": 2056,
+        "paid_cost_cny": 18174987596.01022
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 33843.887784124636,
+        "online": 2057,
+        "exit": 2072,
+        "decision": 2056,
+        "paid_cost_cny": 33843887784.124634
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 50765.83167618694,
+        "online": 2057,
+        "exit": 2072,
+        "decision": 2056,
+        "paid_cost_cny": 50765831676.18695
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 212130.76312589692,
+        "online": 2057,
+        "exit": 2072,
+        "decision": 2056,
+        "paid_cost_cny": 212130763125.8969
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "storage",
+        "power": 138318.15807458863,
+        "energy": 318131.7635715538,
+        "decision": 2056,
+        "online": 2058,
+        "exit": 2068,
+        "cost": 254505410857.24304,
+        "remaining": 0.0,
+        "instalment": 127252705428.62152
+      }
+    ]
+  },
+  "2057": {
+    "generation": [
+      {
+        "id": "2057/wind/125",
+        "tech": "wind",
+        "capacity_mw": 392444.7109925586,
+        "decision_year": 2057,
+        "online_year": 2058,
+        "exit_year": 2083,
+        "cost": 1076585271535.8014,
+        "instalment": 1076585271535.8014,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 60726.26458266424,
+        "online": 2058,
+        "exit": 2073,
+        "decision": 2057,
+        "paid_cost_cny": 60726264582.66424
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 13294.302167613596,
+        "online": 2058,
+        "exit": 2073,
+        "decision": 2057,
+        "paid_cost_cny": 13294302167.613594
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 19941.453251420393,
+        "online": 2058,
+        "exit": 2073,
+        "decision": 2057,
+        "paid_cost_cny": 19941453251.42039
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 39489.76551774191,
+        "online": 2058,
+        "exit": 2073,
+        "decision": 2057,
+        "paid_cost_cny": 39489765517.741905
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 59234.64827661286,
+        "online": 2058,
+        "exit": 2073,
+        "decision": 2057,
+        "paid_cost_cny": 59234648276.61286
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 240637.3502987586,
+        "online": 2058,
+        "exit": 2073,
+        "decision": 2057,
+        "paid_cost_cny": 240637350298.7586
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "storage",
+        "power": 110802.59898690227,
+        "energy": 254845.97766987522,
+        "decision": 2057,
+        "online": 2059,
+        "exit": 2069,
+        "cost": 203876782135.90015,
+        "remaining": 0.0,
+        "instalment": 101938391067.95007
+      }
+    ]
+  },
+  "2058": {
+    "generation": [
+      {
+        "id": "2058/wind/126",
+        "tech": "wind",
+        "capacity_mw": 398331.3816574469,
+        "decision_year": 2058,
+        "online_year": 2059,
+        "exit_year": 2084,
+        "cost": 1092734050608.8381,
+        "instalment": 1092734050608.8381,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 63349.029842844466,
+        "online": 2059,
+        "exit": 2074,
+        "decision": 2058,
+        "paid_cost_cny": 63349029842.84447
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 13264.131772488705,
+        "online": 2059,
+        "exit": 2074,
+        "decision": 2058,
+        "paid_cost_cny": 13264131772.488707
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 19896.197658733057,
+        "online": 2059,
+        "exit": 2074,
+        "decision": 2058,
+        "paid_cost_cny": 19896197658.73306
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 39810.048885278964,
+        "online": 2059,
+        "exit": 2074,
+        "decision": 2058,
+        "paid_cost_cny": 39810048885.27896
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 59715.07332791844,
+        "online": 2059,
+        "exit": 2074,
+        "decision": 2058,
+        "paid_cost_cny": 59715073327.91844
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 242180.5131744584,
+        "online": 2059,
+        "exit": 2074,
+        "decision": 2058,
+        "paid_cost_cny": 242180513174.4584
+      }
+    ],
+    "infrastructure": []
+  },
+  "2059": {
+    "generation": [
+      {
+        "id": "2059/wind/127",
+        "tech": "wind",
+        "capacity_mw": 404306.35238230857,
+        "decision_year": 2059,
+        "online_year": 2060,
+        "exit_year": 2085,
+        "cost": 1109125061367.9707,
+        "instalment": 1109125061367.9707,
+        "remaining": 0.0,
+        "status": "commissioned",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 65888.88323429506,
+        "online": 2060,
+        "exit": 2075,
+        "decision": 2059,
+        "paid_cost_cny": 65888883234.29506
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 13231.062243400469,
+        "online": 2060,
+        "exit": 2075,
+        "decision": 2059,
+        "paid_cost_cny": 13231062243.400467
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 19846.5933651007,
+        "online": 2060,
+        "exit": 2075,
+        "decision": 2059,
+        "paid_cost_cny": 19846593365.1007
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 40120.18248073217,
+        "online": 2060,
+        "exit": 2075,
+        "decision": 2059,
+        "paid_cost_cny": 40120182480.73217
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 60180.273721098245,
+        "online": 2060,
+        "exit": 2075,
+        "decision": 2059,
+        "paid_cost_cny": 60180273721.09824
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 243723.3460666323,
+        "online": 2060,
+        "exit": 2075,
+        "decision": 2059,
+        "paid_cost_cny": 243723346066.6323
+      }
+    ],
+    "infrastructure": []
+  },
+  "2060": {
+    "generation": [
+      {
+        "id": "2060/wind/128",
+        "tech": "wind",
+        "capacity_mw": 410370.9476680429,
+        "decision_year": 2060,
+        "online_year": 2061,
+        "exit_year": 2086,
+        "cost": 1125761937288.4895,
+        "instalment": 1125761937288.4895,
+        "remaining": 0.0,
+        "status": "construction",
+        "initial_reconstruction": false
+      }
+    ],
+    "devices": [
+      {
+        "actor": "industrial_heat_proxy",
+        "carrier": "coal",
+        "capacity": 68021.74107951089,
+        "online": 2061,
+        "exit": 2076,
+        "decision": 2060,
+        "paid_cost_cny": 68021741079.51089
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "oil",
+        "capacity": 13221.394007153809,
+        "online": 2061,
+        "exit": 2076,
+        "decision": 2060,
+        "paid_cost_cny": 13221394007.153809
+      },
+      {
+        "actor": "transport_proxy",
+        "carrier": "electricity",
+        "capacity": 19832.091010730714,
+        "online": 2061,
+        "exit": 2076,
+        "decision": 2060,
+        "paid_cost_cny": 19832091010.730713
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "gas",
+        "capacity": 40596.33902667416,
+        "online": 2061,
+        "exit": 2076,
+        "decision": 2060,
+        "paid_cost_cny": 40596339026.674164
+      },
+      {
+        "actor": "building_heat_proxy",
+        "carrier": "electricity",
+        "capacity": 60894.508540011244,
+        "online": 2061,
+        "exit": 2076,
+        "decision": 2060,
+        "paid_cost_cny": 60894508540.011246
+      },
+      {
+        "actor": "existing_electric_services",
+        "carrier": "electricity",
+        "capacity": 245664.3815497975,
+        "online": 2061,
+        "exit": 2076,
+        "decision": 2060,
+        "paid_cost_cny": 245664381549.7975
+      }
+    ],
+    "infrastructure": [
+      {
+        "kind": "storage",
+        "power": 200088.20383773555,
+        "energy": 460202.8688267917,
+        "decision": 2060,
+        "online": 2062,
+        "exit": 2072,
+        "cost": 368162295061.43335,
+        "remaining": 184081147530.71667,
+        "instalment": 184081147530.71667
+      }
+    ]
+  }
+}

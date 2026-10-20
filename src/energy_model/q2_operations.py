@@ -171,6 +171,11 @@ def operate(config, *, solver=linprog):
                 add(fuel, t, i, sign)
         if cyclic:
             lp.eq({tanks[fuel, n-1]: 1}, initial, f"terminal/{fuel}")
+        elif "terminal_mwh" in p:
+            # Q3 finite events may require replenishment; absent in Q2.
+            lp.eq({tanks[fuel, n-1]: 1},
+                  number(p["terminal_mwh"], fuel + ".terminal", 0, capacity),
+                  f"terminal/{fuel}")
     for name, p in sorted(plants.items()):
         efficiency = number(p["efficiency"], name + ".efficiency", 1e-9, 1)
         fuel, out = p["input"], p["output"]
@@ -197,6 +202,12 @@ def operate(config, *, solver=linprog):
                 limit = p["ramp_mw_per_hour"] * (h + hours[t-1]) / 2
                 lp.le(change, limit, f"ramp+/{name}/{t}")
                 lp.le({j: -v for j, v in change.items()}, limit, f"ramp-/{name}/{t}")
+            elif "initial_power_mw" in p:
+                opening_power = number(p["initial_power_mw"], name + ".opening power")
+                previous_hours = number(p["initial_period_hours"], name + ".previous hours", 1e-9)
+                limit = p["ramp_mw_per_hour"]*(h+previous_hours)/2
+                lp.le({i: 1/h}, opening_power+limit, f"initial-ramp+/{name}")
+                lp.le({i: -1/h}, limit-opening_power, f"initial-ramp-/{name}")
         if cyclic and n > 1:
             change = {g[name, 0]: 1/hours[0], g[name, n-1]: -1/hours[-1]}
             limit = p["ramp_mw_per_hour"] * (hours[0] + hours[-1]) / 2
@@ -240,6 +251,12 @@ def operate(config, *, solver=linprog):
     for t, h in enumerate(hours):
         c[t] = lp.var(f"charge/{t}", store["power_mw"] * h, store["throughput_cost"] * weight)
         d[t] = lp.var(f"discharge/{t}", store["power_mw"] * h, store["throughput_cost"] * weight)
+        if "discharge_limit_mwh" in store:
+            limits = store["discharge_limit_mwh"]
+            if not isinstance(limits, list) or len(limits) != n:
+                raise Q2Error("invalid_input", "Discharge response cap must cover every period")
+            lp.le({d[t]: 1}, number(limits[t], "discharge response cap"),
+                  f"discharge-response/{t}")
         s[t] = lp.var(f"SOC/{t}", ecap)
         terms = {s[t]: 1, c[t]: -eta_c, d[t]: 1/eta_d}
         if t:

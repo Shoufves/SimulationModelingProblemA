@@ -1,0 +1,15 @@
+{
+  "reviewed_at_utc": "2026-10-20T02:09:44.536085+00:00",
+  "run_id": "20261020T013122048456Z",
+  "method": "Actually viewed all four PNGs with the image viewer; checked axes, units, labels and correspondence to CSV values.",
+  "figures": {
+    "outputs/q3/p3_mmj_v5/figures/h01_test_grid.png": "274982f64b15579624e3878daaf71c9204297cbd4d6e468fa2e31f922712b6d6",
+    "outputs/q3/p3_mmj_v5/figures/event_stocks.png": "104b1fd7d6bbd9ae9eba3dea1e1a991382752583f1f6ed00733f3d0962115f91",
+    "outputs/q3/p3_mmj_v5/figures/policy_cost_emissions.png": "f343f693bdc27c74db04cdc983b07b4463d906b8982ee57411f3e7edbd6226f7",
+    "outputs/validation/p3_mmj/figures/policy_comparison.png": "ee4946b0b45057f0dbe039b54c4f0a60ee5f6b4786d7a4f30198e9c335fdaa70"
+  },
+  "finding": "Original policy scatterplot has overlapping labels at nearby candidates.",
+  "resolution": "Preserve the frozen artifact and use the separate three-panel policy_comparison.png in the current solution document; export is bound by figures/plot_receipt.json.",
+  "current_review_figure_readable": true,
+  "model_or_results_changed": false
+}

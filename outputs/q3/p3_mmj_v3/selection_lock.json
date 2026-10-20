@@ -1,0 +1,71 @@
+{
+  "status": "selection_locked_before_test_evaluation",
+  "protocol_sha256": "62ddd7ca7418b57530038e4fc34fb6468e68e9b158e9a6b74c5c465efc935dd6",
+  "h01_epsilon": 0.01,
+  "h01_scores": [
+    {
+      "epsilon": 0.005,
+      "valid": true,
+      "worst_selection_service_fraction": 0.25622857165915863,
+      "net_resource_cost_cny": 947273076164192.0
+    },
+    {
+      "epsilon": 0.01,
+      "valid": true,
+      "worst_selection_service_fraction": 0.25622857165915863,
+      "net_resource_cost_cny": 947269046730058.0
+    }
+  ],
+  "policy": {
+    "selected": null,
+    "feasible": [],
+    "pareto": [],
+    "reason": "no_feasible_candidate",
+    "carbon_ratio": 1.0,
+    "cost_ratio": 1.05,
+    "records": [
+      {
+        "policy_id": "none",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "retain",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "grid",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "gas_release",
+        "feasible": false,
+        "violations": "service"
+      },
+      {
+        "policy_id": "grid_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "retain_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      },
+      {
+        "policy_id": "gas_release_storage",
+        "feasible": false,
+        "violations": "carbon;service"
+      }
+    ]
+  },
+  "selection_records_sha256": "39a74434d6317a2b32fe0a3d2a71d8e9f22583da55507e4a3e76323328755599",
+  "test_identity": "Disjoint deeper condition, already seen during implementation verification; not blind or empirical independent validation"
+}
