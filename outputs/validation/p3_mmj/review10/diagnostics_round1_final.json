@@ -1,0 +1,28 @@
+{
+  "created_at_utc": "2026-10-20T04:49:45.627579+00:00",
+  "script_sha256": "8271ea368869b4acf7e14126898821186b024749dc7d17ed68480f7c30096394",
+  "diagnostic_manifest_sha256": "672f2375574dfa5f6ff847870e762727290e8a2157c414cefe7fa5a9d3782ba2",
+  "source_run_manifest_sha256": "62df4e376ef0e326915b48b5847208be906c2096c4a649ea34262bb6c1fe77fc",
+  "status": "passed",
+  "gas_pairs": 4,
+  "probes": 38,
+  "annual_controls": 71,
+  "unavailable_controls": [
+    {
+      "year": 2032,
+      "receiving_case": "storage",
+      "storage_from": "none",
+      "status": "unavailable_initial_SOC_exceeds_swapped_capacity",
+      "initial_soc_mwh": 36968.057427856336,
+      "swapped_energy_mwh": 33640.0
+    }
+  ],
+  "carbon_decomposition": {
+    "total_delta_co2_t": 4290364618.928155,
+    "forward_storage_only_delta_co2_t": -525251221.7741957,
+    "remaining_path_and_interaction_delta_co2_t": 4815615840.702351,
+    "reverse_complete_horizon_available": false
+  },
+  "independent_scientific_comparison": null,
+  "team_approval": false
+}

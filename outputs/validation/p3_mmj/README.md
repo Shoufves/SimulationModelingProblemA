@@ -2,6 +2,8 @@
 
 当前完整版本为V5，配置 `workflow/q3_inputs_v5.json`，运行结果 `outputs/q3/p3_mmj_v5/`。
 
+PR15 review(10) 的后续比较器与诊断接续证据放在 `review10/`，见 `docs/solutions/p3-mmj-review10.md`。主模型仍为 V5；诊断 V3 增加新 source 的真实收据及全量科学等价证明。下方原逐字节检查和344/339项测试只表示当时快照。
+
 其后新增机制诊断，主模型和V5收据不变。最新诊断验证索引是 `diagnostics_validation_summary.json`，可读结论见 `docs/solutions/p3-mmj-diagnostics.md`。下表中的V5测试数量和文件是该次主实验自查快照。
 
 | 专项诊断证据 | 用途 |

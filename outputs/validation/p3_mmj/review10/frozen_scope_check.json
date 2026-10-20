@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "base_sha": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
+  "previous_pr_sha": "18e93b28569ed509ae251054f2d1e8a3b205c9f8",
+  "implementation_sha": "58a83c110c799318ba5b94bc7ac93323b2363c5d",
+  "original_run_id": "20261020T013122048456Z",
+  "original_manifest_sha256": "62df4e376ef0e326915b48b5847208be906c2096c4a649ea34262bb6c1fe77fc",
+  "protected": [
+    {
+      "path": "data/sources.json",
+      "sha256": "91df1903fbfb8c2321af10e23f0299763b73fd422cf974ebf44e96635f84272f",
+      "unchanged": true
+    },
+    {
+      "path": "data/evidence_reviews.json",
+      "sha256": "6043473c2192dc4c91d47c521bea5adb15b0b07197ad6c421b9216a6f207f376",
+      "unchanged": true
+    },
+    {
+      "path": "workflow/model_inputs.json",
+      "sha256": "adcdca7ed33dc4048761a220c7a00b6585733117321ed1ce8571dd521c0520b0",
+      "unchanged": true
+    },
+    {
+      "path": "只读工作区/final.md",
+      "sha256": "2d6983432fc4464c92dd0547fc7a465b3fdee1a193e023959b998046b1964554",
+      "unchanged": true
+    },
+    {
+      "path": "只读工作区/gemini_final_idea.md",
+      "sha256": "01782bf8d10801ac516907919468aaf4c80cec507e2061fb441de0261768bcb8",
+      "unchanged": true
+    },
+    {
+      "path": "只读工作区/README.md",
+      "sha256": "f6fded2e95ca4da958aaccb460797cdf4dd6db33d78f1f7fae381ccd7289d5af",
+      "unchanged": true
+    },
+    {
+      "path": "2026年第二届全国大学生仿真建模应用挑战赛A题.pdf",
+      "sha256": "a892165c851da77c916d6f2dd7a9cf7062c1e37698a88641b3a3105bef90c963",
+      "unchanged": true
+    },
+    {
+      "path": "附件1.xlsx",
+      "sha256": "4cd3f519f72d18869d33713fc9dd2ec7a3ba83d5178ee6d4170d37adf45ea1cd",
+      "unchanged": true
+    },
+    {
+      "path": "附件2.xlsx",
+      "sha256": "7a35204be5db7e8cbfddf77a8a36604fafa87dabbf80c69c752b8b8f0d97a330",
+      "unchanged": true
+    },
+    {
+      "path": "附件3.xlsx",
+      "sha256": "df616d471bd31fe865ad9d509ea3fc1fa68d8bd172af7c10bb15ffba7a74987e",
+      "unchanged": true
+    },
+    {
+      "path": "附件4.xlsx",
+      "sha256": "a7945ce8d6c279ecb695c3e56b7d331c1d3f098a282b59a8d1826a69b8736eaf",
+      "unchanged": true
+    }
+  ],
+  "changed_frozen_model_input_output_or_old_protocols": [],
+  "new_empirical_data": false,
+  "restricted_content_read": false,
+  "q1_q2_model_changed": false
+}

@@ -10,6 +10,8 @@
 
 ## 阅读入口
 
+PR15 review(10) 的当前修复与复现方法见[跨运行数值等价及诊断接续](docs/solutions/p3-mmj-review10.md)。保留原模型、输入、政策与容差；新诊断默认 V3，旧 V5/V2 的测试和逐字节复现记录保留为历史证据。
+
 P3/mmj 已完成问题三六情景、H01/H02、受约束政策筛选与敏感性；116个年度转型案例、两轮作者自查及独立目录复现均已完成，见[问题三V5方案与证据](docs/solutions/p3-mmj-v5.md)。当前结果为无可行政策、H02未观察到交互增量。其后已补齐[零进口、服务缺供与储能增排机制诊断](docs/solutions/p3-mmj-diagnostics.md)，新增实际对照与独立复现；最新检查见[专项验证汇总](outputs/validation/p3_mmj/diagnostics_validation_summary.json)，原339项测试保留为V5快照。完整配置使用 `workflow/q3_inputs_v5.json`，旧版本和失败证据保留；两位成员对最终SHA的评审仍未完成。
 
 | 入口 | 用途 |

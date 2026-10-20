@@ -1,0 +1,132 @@
+{
+  "checked_at_utc": "2026-10-20T04:41:43.895576+00:00",
+  "executable": "D:\\CSF2026\\mmj\\SimulationModelingProblemA\\.venv\\Scripts\\python.exe",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "mesa": "3.3.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.7",
+    "reportlab": "4.5.1",
+    "openpyxl": "3.1.5",
+    "lxml": "6.1.1",
+    "pypdf": "6.10.0",
+    "pdfplumber": "0.11.9"
+  },
+  "free_disk_bytes": 443181207552,
+  "checks": [
+    {
+      "check": "python_at_least_3_11",
+      "passed": true
+    },
+    {
+      "check": "requirements-q2.txt:numpy",
+      "expected": "==2.3.5",
+      "actual": "2.3.5",
+      "passed": true
+    },
+    {
+      "check": "requirements-q2.txt:scipy",
+      "expected": "==1.16.3",
+      "actual": "1.16.3",
+      "passed": true
+    },
+    {
+      "check": "requirements-q2.txt:mesa",
+      "expected": "==3.3.1",
+      "actual": "3.3.1",
+      "passed": true
+    },
+    {
+      "check": "requirements-q2.txt:pandas",
+      "expected": "==3.0.1",
+      "actual": "3.0.1",
+      "passed": true
+    },
+    {
+      "check": "requirements-q2.txt:matplotlib",
+      "expected": "==3.10.7",
+      "actual": "3.10.7",
+      "passed": true
+    },
+    {
+      "check": "requirements-q1.txt:reportlab",
+      "expected": "<5,>=4.4",
+      "actual": "4.5.1",
+      "passed": true
+    },
+    {
+      "check": "requirements-data.txt:numpy",
+      "expected": "==2.3.5",
+      "actual": "2.3.5",
+      "passed": true
+    },
+    {
+      "check": "requirements-data.txt:pandas",
+      "expected": "==3.0.1",
+      "actual": "3.0.1",
+      "passed": true
+    },
+    {
+      "check": "requirements-data.txt:openpyxl",
+      "expected": "==3.1.5",
+      "actual": "3.1.5",
+      "passed": true
+    },
+    {
+      "check": "requirements-data.txt:lxml",
+      "expected": "==6.1.1",
+      "actual": "6.1.1",
+      "passed": true
+    },
+    {
+      "check": "requirements-data.txt:pypdf",
+      "expected": "==6.10.0",
+      "actual": "6.10.0",
+      "passed": true
+    },
+    {
+      "check": "requirements-data.txt:pdfplumber",
+      "expected": "==0.11.9",
+      "actual": "0.11.9",
+      "passed": true
+    },
+    {
+      "check": "highs_actual_solve",
+      "passed": true
+    },
+    {
+      "check": "mesa_actual_initialization",
+      "passed": true
+    },
+    {
+      "check": "import:reportlab.pdfgen.canvas",
+      "passed": true
+    },
+    {
+      "check": "import:matplotlib",
+      "passed": true
+    },
+    {
+      "check": "import:openpyxl",
+      "passed": true
+    },
+    {
+      "check": "import:pandas",
+      "passed": true
+    },
+    {
+      "check": "import:pdfplumber",
+      "passed": true
+    },
+    {
+      "check": "pip_check",
+      "passed": true,
+      "detail": "No broken requirements found."
+    }
+  ],
+  "passed": true,
+  "scope": "Environment readiness only; not Q3 scientific or team acceptance"
+}
