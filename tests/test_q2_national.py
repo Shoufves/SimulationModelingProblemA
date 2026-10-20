@@ -176,7 +176,8 @@ class NationalTests(unittest.TestCase):
     def test_generation_addition_cannot_create_network(self):
         m=self.model(2024);m.drivers();m.mature()
         power=m.make_operation()["grid"]["power_mw"]
-        m.cohorts.append(dict(tech="solar",status="active",capacity_mw=1e6))
+        m.cohorts.append(dict(id="test/new_solar",tech="solar",status="active",capacity_mw=1e6,
+            online_year=m.year,exit_year=m.year+25))
         self.assertEqual(m.make_operation()["grid"]["power_mw"],power)
 
     def test_grid_construction_is_paid_and_delayed(self):
@@ -454,6 +455,7 @@ class NationalTests(unittest.TestCase):
         import tempfile
         from types import SimpleNamespace
         from unittest.mock import patch
+        (ROOT/"tmp").mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=ROOT/"tmp") as temp:
             root=Path(temp).resolve();out=root/"outputs/q2/probe"
             for name in runner.CODE+runner.INPUTS:

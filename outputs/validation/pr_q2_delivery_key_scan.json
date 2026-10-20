@@ -1,0 +1,22 @@
+{
+  "working_tree": {
+    "scope": "working tree including hidden files and ZIP members; restricted content, Git metadata, environments and disposable caches excluded without opening",
+    "excluded_directories": [
+      ".git",
+      "__pycache__",
+      "tmp",
+      "data/restricted",
+      "data/raw/q2_capacity_detail/__pycache__",
+      "scripts/__pycache__",
+      "src/energy_model/__pycache__",
+      "tests/__pycache__"
+    ],
+    "pattern": "Google API key format only; not an exhaustive credential audit",
+    "passed": true,
+    "findings": [],
+    "errors": [],
+    "files_scanned": 3296,
+    "payloads_scanned": 8459,
+    "zip_members_scanned": 5163
+  }
+}

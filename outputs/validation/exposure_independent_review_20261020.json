@@ -1,0 +1,417 @@
+{
+  "reviewed_at": "2026-10-19T22:26:45.592560+00:00",
+  "status": "passed_technical_reproducibility_conditional_science_only",
+  "scope": "Read-only source/case hash checks, one selected historical-path rebuild, year_end_operation reconstruction, snapshot four-case rerun and six frozen four-case reruns. No 309-search rerun, original/model edits or experiment rewrites. Only this review receipt added.",
+  "runs": {
+    "history": "outputs/q2_revenue_recalibration/20261019T221146446406Z",
+    "snapshot": "outputs/q3_paired_snapshot/20261019T222252102483Z",
+    "boundary": "outputs/q3_supply_boundary/20261019T222252190876Z",
+    "frozen": "outputs/q3_frozen_response/20261019T222335186180Z"
+  },
+  "results_sha256": {
+    "history": "3ce47697da0e7bfc5876682e5f1deff3cbf619507ba31e39550a46ab64c636d0",
+    "snapshot": "0ef4b7f551784123b5bed7831fbfb881352e96ebeba5762976467d0e197f88c7",
+    "boundary": "4180e9cd8d447fc7fe256ae3e15b62a8bba1be345ae387fcd20c80cc8a713d58",
+    "frozen": "b0ea3255d79dda79bf433bd1bcb4a4b088d58d7cee8a17dc98a36aeced120585"
+  },
+  "source_checks": {
+    "history": {
+      "checked_count": 152,
+      "mismatches": []
+    },
+    "snapshot": {
+      "checked_count": 158,
+      "mismatches": []
+    },
+    "boundary": {
+      "checked_count": 166,
+      "mismatches": []
+    },
+    "frozen": {
+      "checked_count": 175,
+      "mismatches": []
+    }
+  },
+  "historical_case_hashes": {
+    "authority_5_full": true,
+    "authority_5_without_municipal_composition": true,
+    "authority_25_full": true,
+    "authority_25_without_municipal_composition": true,
+    "authority_100_full": true,
+    "authority_100_without_municipal_composition": true
+  },
+  "historical_trial_count": 309,
+  "historical_failed_fit_checks": {
+    "authority_5_full": [
+      "coal_share"
+    ],
+    "authority_5_without_municipal_composition": [
+      "coal_share"
+    ],
+    "authority_25_full": [
+      "coal_share"
+    ],
+    "authority_25_without_municipal_composition": [
+      "coal_share"
+    ],
+    "authority_100_full": [
+      "coal_share"
+    ],
+    "authority_100_without_municipal_composition": [
+      "coal_share"
+    ]
+  },
+  "solar_already_seen_evaluation_mape": {
+    "authority_5_full": 0.46265413423680873,
+    "authority_5_without_municipal_composition": 0.46265413423680873,
+    "authority_25_full": 0.46265413423680873,
+    "authority_25_without_municipal_composition": 0.46265413423680873,
+    "authority_100_full": 0.46265413423680873,
+    "authority_100_without_municipal_composition": 0.46265413423680873
+  },
+  "solar_25_percent_rounded": 46.27,
+  "reconstruction_checks": {
+    "historical_paths_exact": true,
+    "annual_exposure_enabled": true,
+    "annual_first_year_fraction_half": true,
+    "snapshot_file_equals_rebuilt": true,
+    "boundary_original_equals_rebuilt": true,
+    "snapshot_hash": true,
+    "last_operation_not_mutated": true,
+    "fuels_no_free_refill": true,
+    "storage_no_free_refill": true,
+    "additional_storage_no_free_refill": true,
+    "snapshot_has_year_end_basis": true
+  },
+  "year_end_capacity_checks": {
+    "coal": {
+      "annual_exposure_mw_year": 838389.3631528539,
+      "year_end_snapshot_capacity_mw": 830149.6052511571,
+      "reported_year_end_stock_mw": 830149.6052511571,
+      "independent_cohort_physical_mw": 830149.6052511571
+    },
+    "gas": {
+      "annual_exposure_mw_year": 97275.05420827024,
+      "year_end_snapshot_capacity_mw": 96841.75850771193,
+      "reported_year_end_stock_mw": 96841.75850771193,
+      "independent_cohort_physical_mw": 96841.75850771193
+    },
+    "oil": {
+      "annual_exposure_mw_year": 3316.249898762655,
+      "year_end_snapshot_capacity_mw": 3221.5262092238477,
+      "reported_year_end_stock_mw": 3221.5262092238477,
+      "independent_cohort_physical_mw": 3221.5262092238477
+    },
+    "biomass": {
+      "annual_exposure_mw_year": 37071.895621874915,
+      "year_end_snapshot_capacity_mw": 38062.82721677321,
+      "reported_year_end_stock_mw": 38062.82721677321,
+      "independent_cohort_physical_mw": 38062.82721677321
+    },
+    "hydro": {
+      "annual_exposure_mw_year": 317161.6966126089,
+      "year_end_snapshot_capacity_mw": 315983.91748695675,
+      "reported_year_end_stock_mw": 315983.91748695675,
+      "independent_cohort_physical_mw": 315983.91748695675
+    },
+    "nuclear": {
+      "annual_exposure_mw_year": 62179.35600117256,
+      "year_end_snapshot_capacity_mw": 63707.23356037319,
+      "reported_year_end_stock_mw": 63707.23356037319,
+      "independent_cohort_physical_mw": 63707.23356037319
+    },
+    "wind": {
+      "annual_exposure_mw_year": 373386.67986499454,
+      "year_end_snapshot_capacity_mw": 392425.7298099589,
+      "reported_year_end_stock_mw": 392425.7298099589,
+      "independent_cohort_physical_mw": 392425.7298099589
+    },
+    "solar": {
+      "annual_exposure_mw_year": 669168.8340697117,
+      "year_end_snapshot_capacity_mw": 757089.5454374157,
+      "reported_year_end_stock_mw": 757089.5454374157,
+      "independent_cohort_physical_mw": 757089.5454374157
+    }
+  },
+  "snapshot_rerun_maximum_unmet_difference_mwh": 0.0,
+  "boundary_case_checks": {
+    "headroom_1_reserve_0": {
+      "frozen_case_hash": true,
+      "boundary_case_hash": true,
+      "embedded_full_equals_boundary": true,
+      "physical_snapshot_hash": true,
+      "event_and_calendar_equal": true,
+      "metric_definitions_equal": true,
+      "terminal_targets_equal": true,
+      "storage_terminal_formula": true,
+      "fuel_terminal_formula": true,
+      "freeze_schedule_is_common_full_S0": true,
+      "freeze_begins_at_shock_onset": true,
+      "independent_frozen_rerun_equal": true,
+      "S0_services_equal": true
+    },
+    "headroom_1_reserve_1": {
+      "frozen_case_hash": true,
+      "boundary_case_hash": true,
+      "embedded_full_equals_boundary": true,
+      "physical_snapshot_hash": true,
+      "event_and_calendar_equal": true,
+      "metric_definitions_equal": true,
+      "terminal_targets_equal": true,
+      "storage_terminal_formula": true,
+      "fuel_terminal_formula": true,
+      "freeze_schedule_is_common_full_S0": true,
+      "freeze_begins_at_shock_onset": true,
+      "independent_frozen_rerun_equal": true,
+      "S0_services_equal": true
+    },
+    "headroom_1.1_reserve_0": {
+      "frozen_case_hash": true,
+      "boundary_case_hash": true,
+      "embedded_full_equals_boundary": true,
+      "physical_snapshot_hash": true,
+      "event_and_calendar_equal": true,
+      "metric_definitions_equal": true,
+      "terminal_targets_equal": true,
+      "storage_terminal_formula": true,
+      "fuel_terminal_formula": true,
+      "freeze_schedule_is_common_full_S0": true,
+      "freeze_begins_at_shock_onset": true,
+      "independent_frozen_rerun_equal": true,
+      "S0_services_equal": true
+    },
+    "headroom_1.1_reserve_1": {
+      "frozen_case_hash": true,
+      "boundary_case_hash": true,
+      "embedded_full_equals_boundary": true,
+      "physical_snapshot_hash": true,
+      "event_and_calendar_equal": true,
+      "metric_definitions_equal": true,
+      "terminal_targets_equal": true,
+      "storage_terminal_formula": true,
+      "fuel_terminal_formula": true,
+      "freeze_schedule_is_common_full_S0": true,
+      "freeze_begins_at_shock_onset": true,
+      "independent_frozen_rerun_equal": true,
+      "S0_services_equal": true
+    },
+    "headroom_1.3_reserve_0": {
+      "frozen_case_hash": true,
+      "boundary_case_hash": true,
+      "embedded_full_equals_boundary": true,
+      "physical_snapshot_hash": true,
+      "event_and_calendar_equal": true,
+      "metric_definitions_equal": true,
+      "terminal_targets_equal": true,
+      "storage_terminal_formula": true,
+      "fuel_terminal_formula": true,
+      "freeze_schedule_is_common_full_S0": true,
+      "freeze_begins_at_shock_onset": true,
+      "independent_frozen_rerun_equal": true,
+      "S0_services_equal": true
+    },
+    "headroom_1.3_reserve_1": {
+      "frozen_case_hash": true,
+      "boundary_case_hash": true,
+      "embedded_full_equals_boundary": true,
+      "physical_snapshot_hash": true,
+      "event_and_calendar_equal": true,
+      "metric_definitions_equal": true,
+      "terminal_targets_equal": true,
+      "storage_terminal_formula": true,
+      "fuel_terminal_formula": true,
+      "freeze_schedule_is_common_full_S0": true,
+      "freeze_begins_at_shock_onset": true,
+      "independent_frozen_rerun_equal": true,
+      "S0_services_equal": true
+    }
+  },
+  "paired_metrics_and_inventory_checks": {
+    "headroom_1_reserve_0": {
+      "full_J_mwh": 0.0,
+      "frozen_J_mwh": 0.0,
+      "delta_J_mwh": 0.0,
+      "full_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 329601.6178025785,
+        "SGW": 329601.6178025785
+      },
+      "frozen_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 2478158.5643822355,
+        "SGW": 2478158.5643822355
+      },
+      "unmet_change_frozen_minus_full_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 2148556.946579657,
+        "SGW": 2148556.946579657
+      },
+      "maximum_gas_action_excess_mwh": 0.0,
+      "maximum_fuel_recurrence_residual_mwh": 9.313225746154785e-09,
+      "maximum_storage_recurrence_residual_mwh": 9.2412599494298e-10,
+      "maximum_inventory_chain_discontinuity_mwh": 0.0,
+      "minimum_fuel_terminal_slack_mwh": 0.0,
+      "maximum_independent_rerun_unmet_difference_mwh": 0.0
+    },
+    "headroom_1_reserve_1": {
+      "full_J_mwh": 1454003.0821490344,
+      "frozen_J_mwh": 0.0,
+      "delta_J_mwh": 1454003.0821490344,
+      "full_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 353057.0120746634,
+        "SGW": 1807060.094223698
+      },
+      "frozen_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 1965658.3623483942,
+        "SGW": 1965658.3623483942
+      },
+      "unmet_change_frozen_minus_full_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 1612601.3502737307,
+        "SGW": 158598.26812469633
+      },
+      "maximum_gas_action_excess_mwh": 0.0,
+      "maximum_fuel_recurrence_residual_mwh": 1.210719347000122e-08,
+      "maximum_storage_recurrence_residual_mwh": 9.2412599494298e-10,
+      "maximum_inventory_chain_discontinuity_mwh": 0.0,
+      "minimum_fuel_terminal_slack_mwh": 0.0,
+      "maximum_independent_rerun_unmet_difference_mwh": 0.0
+    },
+    "headroom_1.1_reserve_0": {
+      "full_J_mwh": 0.0,
+      "frozen_J_mwh": 0.0,
+      "delta_J_mwh": 0.0,
+      "full_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 329601.6178025785,
+        "SGW": 329601.6178025785
+      },
+      "frozen_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 1962930.530653698,
+        "SGW": 1962930.530653698
+      },
+      "unmet_change_frozen_minus_full_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 1633328.9128511194,
+        "SGW": 1633328.9128511194
+      },
+      "maximum_gas_action_excess_mwh": 0.0,
+      "maximum_fuel_recurrence_residual_mwh": 9.313225746154785e-09,
+      "maximum_storage_recurrence_residual_mwh": 9.2412599494298e-10,
+      "maximum_inventory_chain_discontinuity_mwh": 0.0,
+      "minimum_fuel_terminal_slack_mwh": 0.0,
+      "maximum_independent_rerun_unmet_difference_mwh": 0.0
+    },
+    "headroom_1.1_reserve_1": {
+      "full_J_mwh": 0.0,
+      "frozen_J_mwh": 0.0,
+      "delta_J_mwh": 0.0,
+      "full_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 329601.6178025785,
+        "SGW": 329601.6178025785
+      },
+      "frozen_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 1977316.2880022274,
+        "SGW": 1977316.2880022274
+      },
+      "unmet_change_frozen_minus_full_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 1647714.670199649,
+        "SGW": 1647714.670199649
+      },
+      "maximum_gas_action_excess_mwh": 0.0,
+      "maximum_fuel_recurrence_residual_mwh": 1.210719347000122e-08,
+      "maximum_storage_recurrence_residual_mwh": 9.2412599494298e-10,
+      "maximum_inventory_chain_discontinuity_mwh": 0.0,
+      "minimum_fuel_terminal_slack_mwh": 0.0,
+      "maximum_independent_rerun_unmet_difference_mwh": 0.0
+    },
+    "headroom_1.3_reserve_0": {
+      "full_J_mwh": 0.0,
+      "frozen_J_mwh": 9.313225746154785e-10,
+      "delta_J_mwh": -9.313225746154785e-10,
+      "full_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 329601.6178025785,
+        "SGW": 329601.6178025785
+      },
+      "frozen_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 1962930.530653698,
+        "SGW": 1962930.5306536988
+      },
+      "unmet_change_frozen_minus_full_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 1633328.9128511194,
+        "SGW": 1633328.9128511203
+      },
+      "maximum_gas_action_excess_mwh": 0.0,
+      "maximum_fuel_recurrence_residual_mwh": 9.313225746154785e-09,
+      "maximum_storage_recurrence_residual_mwh": 9.2412599494298e-10,
+      "maximum_inventory_chain_discontinuity_mwh": 0.0,
+      "minimum_fuel_terminal_slack_mwh": 0.0,
+      "maximum_independent_rerun_unmet_difference_mwh": 0.0
+    },
+    "headroom_1.3_reserve_1": {
+      "full_J_mwh": 0.0,
+      "frozen_J_mwh": 9.313225746154785e-10,
+      "delta_J_mwh": -9.313225746154785e-10,
+      "full_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 329601.6178025785,
+        "SGW": 329601.6178025785
+      },
+      "frozen_unmet_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 1977316.288002241,
+        "SGW": 1977316.2880022419
+      },
+      "unmet_change_frozen_minus_full_mwh": {
+        "S0": 0.0,
+        "SG": 0.0,
+        "SW": 1647714.6701996624,
+        "SGW": 1647714.6701996634
+      },
+      "maximum_gas_action_excess_mwh": 0.0,
+      "maximum_fuel_recurrence_residual_mwh": 1.210719347000122e-08,
+      "maximum_storage_recurrence_residual_mwh": 9.2412599494298e-10,
+      "maximum_inventory_chain_discontinuity_mwh": 0.0,
+      "minimum_fuel_terminal_slack_mwh": 0.0,
+      "maximum_independent_rerun_unmet_difference_mwh": 0.0
+    }
+  },
+  "tolerance_mwh": 0.001,
+  "new_blocking_issues": [],
+  "technical_audit_passed": true,
+  "scientific_acceptance": false,
+  "limitations": [
+    "All six historical candidates still fail coal_share acceptance; no national scientific approval.",
+    "Authority25 solar evaluation MAPE 46.27% is retained; evaluation was already seen and not blind.",
+    "Scalar annual exposure is a declared alpha=.5 approximation, not measured commissioning dates or seasonal timing.",
+    "Q3 restores year-end generator MW while preserving annual representative-day inherited initial fuel/SOC; this is a conditional engineering state, not an observed dated hourly inventory.",
+    "Perfect foresight allows different normal-phase dispatch under anticipated frozen controls.",
+    "Lower interaction J under freezing must be read with worsened absolute shortage; no improved-protection inference."
+  ]
+}

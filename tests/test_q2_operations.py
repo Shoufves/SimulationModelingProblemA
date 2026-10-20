@@ -55,8 +55,135 @@ def allocation_case():
     return case
 
 
+def recovered_case():
+    case=dispatch_case()
+    carrier={**deepcopy(case["fuels"]["coal"]), "domestic_mw":[0,0],
+             "domestic_cost_per_mwh":0,"import_cost_per_mwh":0,
+             "emission_t_per_mwh":0,"internal_recovered_carrier":True}
+    case["fuels"]={"coal":case["fuels"]["coal"],"recovered_heat":carrier}
+    case["plants"]={"waste_heat":{**case["plants"]["coal"],"input":"recovered_heat"}}
+    case["demands"]["factory"] = dict(sector="industry",carrier="coal",efficiency=.5,
+        input_capacity_mw=20,priority=0,service_mwh=[5,5])
+    case["recoveries"]={"industry":dict(output="recovered_heat",source_input_fractions={"factory":.5})}
+    return case
+
+
+@unittest.skipUnless(AVAILABLE,"Install requirements-q2.txt")
+class RecoveryAndIndependentStorageTests(unittest.TestCase):
+    def test_recovery_uses_actual_upstream_loss_and_counts_primary_and_carbon_once(self):
+        result=operate(recovered_case())
+        coal=[r for r in result["fuel"] if r["fuel"]=="coal"]
+        self.assertAlmostEqual(sum(r["domestic_mwh"] for r in coal),20)
+        self.assertAlmostEqual(sum(r["combustion_co2_t"] for r in result["fuel"]),6)
+        self.assertAlmostEqual(generation(result,"waste_heat"),10)
+        self.assertAlmostEqual(sum(r["recovered_mwh"] for r in result["recoveries"]),10)
+        self.assertAlmostEqual(result["resource_cost"],20)
+        self.assertAlmostEqual(sum(r["served_service_mwh"] for r in result["demand"]),20)
+
+    def test_unserved_upstream_cannot_produce_free_power(self):
+        case=recovered_case()
+        case["fuels"]["coal"]["domestic_mw"]=[0,0]
+        result=operate(case)
+        self.assertEqual(generation(result,"waste_heat"),0)
+        self.assertEqual(sum(r["recovered_mwh"] for r in result["recoveries"]),0)
+        self.assertEqual(sum(r["unmet_service_mwh"] for r in result["demand"]),20)
+
+    def test_duplicate_recovery_claims_and_untraced_inventory_fail(self):
+        case=recovered_case()
+        case["recoveries"]["duplicate"]=deepcopy(case["recoveries"]["industry"])
+        with self.assertRaisesRegex(Q2Error,"exceed"):operate(case)
+        case=recovered_case()
+        case["fuels"]["recovered_heat"].update(tank_mwh=5,initial_mwh=5)
+        with self.assertRaisesRegex(Q2Error,"opening stock"):operate(case)
+
+    def test_nonenergy_feedstock_cannot_generate_zero_carbon_recovery(self):
+        case=recovered_case()
+        case["demands"]["factory"]["sector"]="nonenergy_feedstock"
+        with self.assertRaisesRegex(Q2Error,"Recovery source"):operate(case)
+
+    def test_internal_carrier_cannot_hide_primary_supply_without_recovery_spec(self):
+        case=recovered_case()
+        case.pop("recoveries")
+        case["fuels"]["recovered_heat"]["domestic_mw"]=[1,1]
+        with self.assertRaises(Q2Error):operate(case)
+
+    def test_independent_pump_has_own_efficiency_stock_and_losses(self):
+        case=dispatch_case()
+        case["plants"]={"coal":case["plants"]["coal"]}
+        case["plants"]["coal"]["availability"]=[1,0]
+        case["demands"]["load"]["service_mwh"]=[0,4]
+        case["storage"].update(power_mw=0,energy_mwh=0)
+        case["additional_storage"]={"pump":dict(power_mw=8,energy_mwh=8,
+            initial_mwh=0,charge_efficiency=1,discharge_efficiency=.5,throughput_cost=.01)}
+        result=operate(case)
+        self.assertAlmostEqual(generation(result,"coal"),8)
+        pump=result["additional_storage"]
+        self.assertAlmostEqual(pump[0]["charge_mwh"],8)
+        self.assertAlmostEqual(pump[1]["discharge_mwh"],4)
+        self.assertAlmostEqual(pump[1]["discharging_loss_mwh"],4)
+        self.assertEqual(pump[-1]["closing_mwh"],0)
+        self.assertEqual(sum(r["charge_mwh"]+r["discharge_mwh"] for r in result["storage"]),0)
+        case["annual_repeats"]=365
+        repeated=operate(case)
+        self.assertEqual(repeated["additional_storage"],pump)
+        self.assertAlmostEqual(repeated["resource_cost"],result["resource_cost"]*365)
+
+    def test_pump_cannot_borrow_battery_opening_stock(self):
+        case=dispatch_case()
+        case["plants"]={"coal":case["plants"]["coal"]}
+        case["plants"]["coal"]["capacity_mw"]=0
+        case["cyclic"]=False
+        case["storage"].update(power_mw=0,initial_mwh=10,terminal_mwh=10)
+        case["additional_storage"]={"pump":dict(power_mw=10,energy_mwh=10,
+            initial_mwh=0,terminal_mwh=0,charge_efficiency=1,discharge_efficiency=1,throughput_cost=.01)}
+        result=operate(case)
+        self.assertEqual(sum(r["unmet_service_mwh"] for r in result["demand"]),10)
+        self.assertEqual(sum(r["discharge_mwh"] for r in result["additional_storage"]),0)
+
+    @unittest.skipUnless(importlib.util.find_spec("mesa"),"Install mesa")
+    def test_national_scaling_preserves_recovery_and_carbon_units(self):
+        from energy_model.q2_national import operate_national
+        case=recovered_case()
+        case["additional_storage"]={"pump":dict(power_mw=1,energy_mwh=1,initial_mwh=0,
+            charge_efficiency=.9,discharge_efficiency=.9,throughput_cost=1)}
+        ordinary=operate(case);national=operate_national(case)
+        for group in ("fuel","generation","demand","recoveries","additional_storage"):
+            for a,b in zip(ordinary[group],national[group]):
+                for key,value in a.items():
+                    if key.endswith(("_mwh","_co2_t")):
+                        self.assertAlmostEqual(value,b[key],places=7)
+
+
 @unittest.skipUnless(AVAILABLE, "Install requirements-q2.txt")
 class FossilDisplacementTests(unittest.TestCase):
+    def test_station_own_use_reduces_delivery_without_reducing_fuel_or_gross_generation(self):
+        case=dispatch_case()
+        case["plants"]={"coal":case["plants"]["coal"]}
+        case["plants"]["coal"]["auxiliary_use_fraction"]=.5
+        result=operate(case)
+        self.assertAlmostEqual(generation(result,"coal"),20)
+        self.assertAlmostEqual(sum(r["conversion_mwh"] for r in result["fuel"]),20)
+        self.assertAlmostEqual(sum(r["bus_output_mwh"] for r in result["generation"]),10)
+        self.assertAlmostEqual(sum(r["auxiliary_use_mwh"] for r in result["generation"]),10)
+        self.assertAlmostEqual(sum(r["unmet_service_mwh"] for r in result["demand"]),0)
+
+    def test_station_loss_cannot_be_reused_when_capacity_is_exhausted(self):
+        case=dispatch_case()
+        case["plants"]={"coal":case["plants"]["coal"]}
+        case["plants"]["coal"].update(auxiliary_use_fraction=.5,capacity_mw=5)
+        result=operate(case)
+        self.assertAlmostEqual(generation(result,"coal"),10)
+        self.assertAlmostEqual(sum(r["unmet_service_mwh"] for r in result["demand"]),5)
+        for r in result["generation"]:
+            self.assertAlmostEqual(r["output_mwh"],r["bus_output_mwh"]+r["auxiliary_use_mwh"])
+
+    def test_impossible_or_wrong_carrier_auxiliary_use_is_rejected(self):
+        case=dispatch_case()
+        case["plants"]["coal"]["auxiliary_use_fraction"]=1.1
+        with self.assertRaises(Q2Error):operate(case)
+        case["plants"]["coal"].update(auxiliary_use_fraction=.1,output="hydrogen")
+        with self.assertRaises(Q2Error):operate(case)
+
     def test_default_keeps_cost_dispatch_and_empty_option_is_identical(self):
         case = dispatch_case()
         original = operate(case)
@@ -130,6 +257,32 @@ class FossilDisplacementTests(unittest.TestCase):
 
 @unittest.skipUnless(AVAILABLE, "Install requirements-q2.txt")
 class FossilAllocationTests(unittest.TestCase):
+    def test_unequal_auxiliary_use_does_not_freeze_fuel_mix(self):
+        # The same delivered fossil electricity must permit different gross
+        # outputs. Fixing gross AND net totals would force a single fuel mix.
+        for priority in (False, True):
+            case = allocation_case()
+            case["plants"]["coal"]["auxiliary_use_fraction"] = .1
+            if priority:
+                case["fossil_displacement_priority_plants"] = ["coal", "gas"]
+            result = operate(case)
+            coal, gas = generation(result,"coal"), generation(result,"gas")
+            self.assertAlmostEqual(.9*coal+gas,20)
+            self.assertGreater(coal,5)
+            self.assertGreater(gas,5)
+            self.assertLess(gas,15)
+            self.assertAlmostEqual(result["reference_fossil_mwh"],20)
+            self.assertEqual(result["reference_fossil_energy_basis"],"net_bus_output_mwh")
+
+    def test_clean_priority_does_not_prefer_expensive_low_auxiliary_gas(self):
+        case = allocation_case()
+        case.pop("fossil_allocation_score")
+        case["plants"]["coal"]["auxiliary_use_fraction"] = .1
+        case["fossil_displacement_priority_plants"] = ["coal", "gas"]
+        result = operate(case)
+        self.assertAlmostEqual(generation(result,"gas"),0)
+        self.assertAlmostEqual(.9*generation(result,"coal"),20)
+
     def test_disabled_option_keeps_old_stages_and_result_fields(self):
         case = allocation_case()
         case.pop("fossil_allocation_score")
@@ -303,6 +456,87 @@ class FossilAllocationTests(unittest.TestCase):
             with self.subTest(case=case["fossil_allocation_score"]):
                 with self.assertRaises(Q2Error):
                     operate(case)
+
+
+@unittest.skipUnless(AVAILABLE, "scipy required")
+class FuelReserveTests(unittest.TestCase):
+    def case(self):
+        case = dispatch_case()
+        case["cyclic"] = False
+        case["storage"]["terminal_mwh"] = 0
+        case["plants"] = {"coal": case["plants"]["coal"]}
+        case["fuels"] = {"coal": case["fuels"]["coal"]}
+        case["fuels"]["coal"].update(domestic_mw=[0, 0], tank_mwh=10,
+            initial_mwh=10, injection_mw=10, withdrawal_mw=10)
+        return case
+
+    def test_terminal_reserve_prevents_free_end_inventory_exhaustion(self):
+        case = self.case()
+        self.assertAlmostEqual(generation(operate(case), "coal"), 10)
+        case["fuels"]["coal"]["minimum_terminal_mwh"] = 6
+        result = operate(case)
+        self.assertAlmostEqual(generation(result, "coal"), 4)
+        self.assertAlmostEqual(result["fuel"][-1]["closing_mwh"], 6)
+        self.assertAlmostEqual(sum(r["unmet_service_mwh"] for r in result["demand"]), 6)
+
+    def test_reserve_can_be_refilled_and_is_not_a_daily_reset(self):
+        case = self.case()
+        case["fuels"]["coal"].update(domestic_mw=[0, 10], minimum_terminal_mwh=10)
+        result = operate(case)
+        self.assertAlmostEqual(generation(result, "coal"), 10)
+        self.assertAlmostEqual(result["fuel"][0]["closing_mwh"], 5)
+        self.assertAlmostEqual(result["fuel"][-1]["closing_mwh"], 10)
+
+    def test_invalid_and_conflicting_reserves_rejected(self):
+        for value in (-1, 11, float("nan")):
+            case = self.case()
+            case["fuels"]["coal"]["minimum_terminal_mwh"] = value
+            with self.assertRaises(Q2Error):
+                operate(case)
+        case = self.case()
+        case["cyclic"] = True
+        case["fuels"]["coal"].update(initial_mwh=5, minimum_terminal_mwh=6)
+        with self.assertRaises(Q2Error):
+            operate(case)
+
+
+@unittest.skipUnless(AVAILABLE, "scipy required")
+class DecisionCeilingTests(unittest.TestCase):
+    def test_restricted_action_keeps_physical_bounds_and_score_unchanged(self):
+        from scipy.optimize import linprog
+        import numpy as np
+        case = allocation_case()
+        before = deepcopy(case)
+        def solve_and_capture(c):
+            calls = []
+            def solver(costs, **kwargs):
+                calls.append((costs.copy(), deepcopy(kwargs["bounds"])))
+                return linprog(costs, **kwargs)
+            return operate(c, solver=solver), calls
+        full, full_calls = solve_and_capture(case)
+        case["plants"]["gas"]["decision_ceiling_mwh"] = [1.25, 1.25]
+        limited, limited_calls = solve_and_capture(case)
+        self.assertGreater(generation(full, "gas"), 2.5)
+        self.assertLessEqual(generation(limited, "gas"), 2.5 + 1e-7)
+        self.assertEqual(case["plants"]["gas"]["availability"], before["plants"]["gas"]["availability"])
+        self.assertEqual(len(full_calls), len(limited_calls))
+        for (a, bounds_a), (b, bounds_b) in zip(full_calls, limited_calls):
+            np.testing.assert_array_equal(a, b)
+            self.assertEqual(bounds_a, bounds_b)
+
+    def test_ceiling_cannot_relax_minimum_output_or_physical_capacity(self):
+        case = dispatch_case()
+        case["plants"]["coal"].update(minimum_fraction=.2, decision_ceiling_mwh=[1, 1])
+        with self.assertRaises(Q2Error) as ctx:
+            operate(case)
+        self.assertEqual(ctx.exception.status, "infeasible")
+        case = allocation_case()
+        case["plants"]["gas"]["decision_ceiling_mwh"] = [1000, 1000]
+        self.assertAlmostEqual(generation(operate(case), "gas"), generation(operate(allocation_case()), "gas"))
+        for value in (None, [1], [1, float("nan")], [-1, 0], "invalid"):
+            case["plants"]["gas"]["decision_ceiling_mwh"] = value
+            with self.assertRaises(Q2Error):
+                operate(case)
 
 
 if __name__ == "__main__":

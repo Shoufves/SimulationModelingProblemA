@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-10-19T23:33:22.783021+00:00",
+  "status": "passed_with_disclosed_scope_limits",
+  "reviewed_run": "outputs/q2_fuel_price_diagnostic/20261019T232811769409Z",
+  "source_sha256": {
+    "src/energy_model/q2_fuel_prices.py": "3c537aa5445eb3befdf0758d91779cd5f0f69908ee2891170e81e5feacce162d",
+    "scripts/q2_fuel_price_factory.py": "52f3b8ed91c515bba72ed6e0b4aea673aa57dd2e7c4138fcc53616af8e151284",
+    "scripts/run_q2_fuel_price_diagnostic.py": "8904ddb09bc72e701ff9719913cc427f10d556eef02d374d877ae6cb5fd18e46",
+    "tests/test_q2_fuel_prices.py": "0453685fa49809913795d581a0b3b956cbee372e7d7f258ea128d68491ad4e5f",
+    "docs/sources/q2_fuel_price_timing.md": "a3a78d86ebd8cb6100b3b1c88bc0a1790fd7945e5170fb5c8f56d859a6e8d9ff"
+  },
+  "all_frozen_run_source_hashes_match": true,
+  "frozen_run_source_count": 181,
+  "specialized_tests": {
+    "command": "python -B -m unittest discover -s tests -p test_q2_fuel_prices.py -v",
+    "passed": 8,
+    "failed": 0
+  },
+  "disabled_factory_full_2015_2024_authority_25_exact": [
+    "paths",
+    "finance",
+    "behavior",
+    "operations",
+    "projects",
+    "assets",
+    "balances"
+  ],
+  "actual_dynamic_rebuild": {
+    "case": "authority_25_vat_0.17_index_initial_price",
+    "tables_exact": [
+      "paths",
+      "finance",
+      "behavior",
+      "operations",
+      "projects"
+    ],
+    "independent_prices_real_2024_cny_per_fuel_mwh": {
+      "2014": 76.40946816170917,
+      "2015": 61.48690128816048
+    }
+  },
+  "future_price_perturbation": {
+    "future_2016_prices": [
+      10,
+      400
+    ],
+    "past_2015_tables_exact": true,
+    "planning_lead_4_exact": true,
+    "planning_coal_price": 90
+  },
+  "all_fifteen_saved_case_accounting_recomputed": true,
+  "max_cash_residual_cny": 0.0009765625,
+  "max_coal_fuel_bill_error_cny": 0.0,
+  "max_generator_cash_identity_error_cny": 6.103515625e-05,
+  "cases": [
+    {
+      "label": "authority_5_reference",
+      "cash_residual_cny": 0.0,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_5_vat_0_original_initial_price",
+      "cash_residual_cny": -0.0009765625,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_5_vat_0_index_initial_price",
+      "cash_residual_cny": 0.0009765625,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_5_vat_0.17_original_initial_price",
+      "cash_residual_cny": 0.0,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_5_vat_0.17_index_initial_price",
+      "cash_residual_cny": 0.0,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_25_reference",
+      "cash_residual_cny": 0.0,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_25_vat_0_original_initial_price",
+      "cash_residual_cny": -0.0009765625,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_25_vat_0_index_initial_price",
+      "cash_residual_cny": 0.0009765625,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_25_vat_0.17_original_initial_price",
+      "cash_residual_cny": 0.0,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_25_vat_0.17_index_initial_price",
+      "cash_residual_cny": 0.0,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_100_reference",
+      "cash_residual_cny": 0.0,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_100_vat_0_original_initial_price",
+      "cash_residual_cny": -0.0009765625,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_100_vat_0_index_initial_price",
+      "cash_residual_cny": 0.0009765625,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_100_vat_0.17_original_initial_price",
+      "cash_residual_cny": 0.0,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    },
+    {
+      "label": "authority_100_vat_0.17_index_initial_price",
+      "cash_residual_cny": 0.0,
+      "coal_bill_error_cny": 0.0,
+      "coal_approved_mw": 0
+    }
+  ],
+  "code_review": {
+    "initial_price_hook": "supplier assignment precedes generator margin and consumer income reconstruction",
+    "annual_price": "drivers before operation and settlement",
+    "future_information": "planning uses supplier current price; no realised future AnnualFuelPrices lookup",
+    "missing_window": "complete run window validated before annual state mutations",
+    "variant": "fuel_price_multiplier applied once; base reference excludes multiplier",
+    "settlement": "same current price in dispatch domestic procurement, generator fuel bills and direct-fuel demand bills; inherited import 5% premium retained",
+    "income": "initial reconstruction fixed; annual fuel-price increases not reimbursed",
+    "default_behavior": "fuel_prices=None gives exact corrected-model paths with no old source edits"
+  },
+  "limitations": [
+    "Annual realized price averages are ex-post operating conditions, not quotes demonstrably available at January investment time; this is a conditional historical sensitivity, not a real-time trading backtest",
+    "2014 initialization also uses reconstructed historical annual index; publication availability is not modelled",
+    "Index VAT basis unknown: 0 and 17% deductions are separate assumptions",
+    "Shared-market proxy simultaneously affects non-power demand; not a verified industrial coal price",
+    "2015 diagnostic endpoint does not demonstrate 2016-2024 capacity fit improvement"
+  ],
+  "scientific_acceptance": false,
+  "default_inputs_changed": false
+}

@@ -1,0 +1,318 @@
+{
+  "source_md5": "99805119256ece8c0b5b24181295b66d",
+  "source_sha256": "6a1a468ea14db9474defae069ee51a5a8097bf19b22712d4e022e4acca09acbd",
+  "same_vintage_closure": [
+    {
+      "year": 2005,
+      "component_sum_twh": 2500.2599999999998,
+      "reported_total_twh": 2500.2599999999998,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2006,
+      "component_sum_twh": 2865.7259999999997,
+      "reported_total_twh": 2865.726,
+      "residual_twh": -4.547473508864641e-13
+    },
+    {
+      "year": 2007,
+      "component_sum_twh": 3281.5530000000003,
+      "reported_total_twh": 3281.5530000000003,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2008,
+      "component_sum_twh": 3495.7599999999998,
+      "reported_total_twh": 3495.7599999999998,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2009,
+      "component_sum_twh": 3714.6510000000003,
+      "reported_total_twh": 3714.6510000000003,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2010,
+      "component_sum_twh": 4207.16,
+      "reported_total_twh": 4207.16,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2011,
+      "component_sum_twh": 4713.019000000001,
+      "reported_total_twh": 4713.019,
+      "residual_twh": 9.094947017729282e-13
+    },
+    {
+      "year": 2012,
+      "component_sum_twh": 4987.553,
+      "reported_total_twh": 4987.553,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2013,
+      "component_sum_twh": 5431.635,
+      "reported_total_twh": 5431.635,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2014,
+      "component_sum_twh": 5794.457000000001,
+      "reported_total_twh": 5794.457,
+      "residual_twh": 9.094947017729282e-13
+    },
+    {
+      "year": 2015,
+      "component_sum_twh": 5814.573,
+      "reported_total_twh": 5814.573,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2016,
+      "component_sum_twh": 6133.159999999999,
+      "reported_total_twh": 6133.16,
+      "residual_twh": -9.094947017729282e-13
+    },
+    {
+      "year": 2017,
+      "component_sum_twh": 6604.447,
+      "reported_total_twh": 6604.447,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2018,
+      "component_sum_twh": 7166.132999999999,
+      "reported_total_twh": 7166.133,
+      "residual_twh": -9.094947017729282e-13
+    },
+    {
+      "year": 2019,
+      "component_sum_twh": 7503.427999999999,
+      "reported_total_twh": 7503.428,
+      "residual_twh": -9.094947017729282e-13
+    },
+    {
+      "year": 2020,
+      "component_sum_twh": 7779.060000000001,
+      "reported_total_twh": 7779.060000000001,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2021,
+      "component_sum_twh": 8534.248,
+      "reported_total_twh": 8534.248,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2022,
+      "component_sum_twh": 8848.712,
+      "reported_total_twh": 8848.712,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2023,
+      "component_sum_twh": 9456.44,
+      "reported_total_twh": 9456.44,
+      "residual_twh": 0.0
+    },
+    {
+      "year": 2024,
+      "component_sum_twh": 10086.880000000001,
+      "reported_total_twh": 10086.880000000001,
+      "residual_twh": 0.0
+    }
+  ],
+  "notes": {
+    "Electricity Generation - TWh": {
+      "A115": " * Based on gross output."
+    },
+    "Coal inputs - Elec generation ": {
+      "A61": " * Based on gross output."
+    },
+    "Gas inputs - Elec generation": {
+      "A61": " * Based on gross output."
+    },
+    "Oil inputs - Elec generation ": {
+      "A61": " * Based on gross output."
+    },
+    "Hydro Generation - TWh": {
+      "A116": " * Based on gross primary hydroelectric generation and not accounting for cross-border electricity supply. "
+    },
+    "Nuclear Generation - TWh": {
+      "A116": " * Based on gross generation and not accounting for cross-border electricity supply."
+    },
+    "Wind Generation - TWh": {
+      "A116": " * Based on gross generation and not accounting for cross-border electricity supply."
+    },
+    "Solar Generation - TWh": {
+      "A116": " * Based on gross generation and not accounting for cross-border electricity supply."
+    },
+    "Geo Biomass Other - TWh": {
+      "A116": " * Based on gross generation and not accounting for cross-border electricity supply."
+    },
+    "Other inputs - Elec generation": {
+      "A61": " * Based on gross output. Includes uncategorized generation, statistical differences and sources not specified elsewhere e.g. pumped hydro, non renewable waste and heat from chemical sources."
+    }
+  },
+  "team_approved": false,
+  "allowed_use": [
+    "generation_category_review",
+    "same_vintage_crosscheck"
+  ],
+  "excluded_use": [
+    "other_is_all_oil",
+    "other_is_all_pumped_storage",
+    "geothermal_biomass_other_is_pure_biomass",
+    "fuel_input_measurement"
+  ],
+  "limitations": [
+    "Other includes statistical differences and multiple physical sources",
+    "Sheet names containing inputs still report electricity OUTPUT in TWh",
+    "Physical dispatch/primary energy need an explicit decomposition or uncertainty bounds",
+    "No replacement of the existing national model input or its prior admission contract"
+  ],
+  "legacy_oil_label_comparison": [
+    {
+      "year": 2005,
+      "frozen_owid_oil_label_twh": 50.51,
+      "ei_pure_oil_twh": 50.513,
+      "ei_other_unallocated_twh": 0.0,
+      "frozen_label_minus_ei_oil_and_other_twh": -0.0030000000000001137
+    },
+    {
+      "year": 2006,
+      "frozen_owid_oil_label_twh": 37.92,
+      "ei_pure_oil_twh": 37.917,
+      "ei_other_unallocated_twh": 0.0,
+      "frozen_label_minus_ei_oil_and_other_twh": 0.0030000000000001137
+    },
+    {
+      "year": 2007,
+      "frozen_owid_oil_label_twh": 28.09,
+      "ei_pure_oil_twh": 28.094,
+      "ei_other_unallocated_twh": 0.0,
+      "frozen_label_minus_ei_oil_and_other_twh": -0.004000000000001336
+    },
+    {
+      "year": 2008,
+      "frozen_owid_oil_label_twh": 18.81,
+      "ei_pure_oil_twh": 18.809,
+      "ei_other_unallocated_twh": 0.0,
+      "frozen_label_minus_ei_oil_and_other_twh": 0.0009999999999976694
+    },
+    {
+      "year": 2009,
+      "frozen_owid_oil_label_twh": 12.12,
+      "ei_pure_oil_twh": 12.124,
+      "ei_other_unallocated_twh": 0.0,
+      "frozen_label_minus_ei_oil_and_other_twh": -0.004000000000001336
+    },
+    {
+      "year": 2010,
+      "frozen_owid_oil_label_twh": 34.71,
+      "ei_pure_oil_twh": 14.856,
+      "ei_other_unallocated_twh": 19.851860000000272,
+      "frozen_label_minus_ei_oil_and_other_twh": 0.002139999999727138
+    },
+    {
+      "year": 2011,
+      "frozen_owid_oil_label_twh": 33.8,
+      "ei_pure_oil_twh": 12.13,
+      "ei_other_unallocated_twh": 21.669000000001134,
+      "frozen_label_minus_ei_oil_and_other_twh": 0.000999999998860801
+    },
+    {
+      "year": 2012,
+      "frozen_owid_oil_label_twh": 31.22,
+      "ei_pure_oil_twh": 10.937,
+      "ei_other_unallocated_twh": 20.27988999999959,
+      "frozen_label_minus_ei_oil_and_other_twh": 0.003110000000411617
+    },
+    {
+      "year": 2013,
+      "frozen_owid_oil_label_twh": 33.0,
+      "ei_pure_oil_twh": 10.013,
+      "ei_other_unallocated_twh": 22.982726600000547,
+      "frozen_label_minus_ei_oil_and_other_twh": 0.004273399999455307
+    },
+    {
+      "year": 2014,
+      "frozen_owid_oil_label_twh": 35.66,
+      "ei_pure_oil_twh": 9.517,
+      "ei_other_unallocated_twh": 26.146330000000873,
+      "frozen_label_minus_ei_oil_and_other_twh": -0.003330000000875799
+    },
+    {
+      "year": 2015,
+      "frozen_owid_oil_label_twh": 36.46,
+      "ei_pure_oil_twh": 9.679,
+      "ei_other_unallocated_twh": 26.78359000000059,
+      "frozen_label_minus_ei_oil_and_other_twh": -0.002590000000591175
+    },
+    {
+      "year": 2016,
+      "frozen_owid_oil_label_twh": 52.56,
+      "ei_pure_oil_twh": 10.367,
+      "ei_other_unallocated_twh": 42.19349999999927,
+      "frozen_label_minus_ei_oil_and_other_twh": -0.0004999999992705284
+    },
+    {
+      "year": 2017,
+      "frozen_owid_oil_label_twh": 56.05,
+      "ei_pure_oil_twh": 9.868982,
+      "ei_other_unallocated_twh": 46.18579600000015,
+      "frozen_label_minus_ei_oil_and_other_twh": -0.004778000000158045
+    },
+    {
+      "year": 2018,
+      "frozen_owid_oil_label_twh": 56.4,
+      "ei_pure_oil_twh": 10.861873,
+      "ei_other_unallocated_twh": 45.54164699999805,
+      "frozen_label_minus_ei_oil_and_other_twh": -0.0035199999980477514
+    },
+    {
+      "year": 2019,
+      "frozen_owid_oil_label_twh": 52.47,
+      "ei_pure_oil_twh": 10.528831,
+      "ei_other_unallocated_twh": 41.94294899999949,
+      "frozen_label_minus_ei_oil_and_other_twh": -0.0017799999994849713
+    },
+    {
+      "year": 2020,
+      "frozen_owid_oil_label_twh": 53.47,
+      "ei_pure_oil_twh": 11.469565000000001,
+      "ei_other_unallocated_twh": 41.99831199999966,
+      "frozen_label_minus_ei_oil_and_other_twh": 0.002123000000338493
+    },
+    {
+      "year": 2021,
+      "frozen_owid_oil_label_twh": 57.06,
+      "ei_pure_oil_twh": 11.406793,
+      "ei_other_unallocated_twh": 45.64905499999888,
+      "frozen_label_minus_ei_oil_and_other_twh": 0.004152000001120371
+    },
+    {
+      "year": 2022,
+      "frozen_owid_oil_label_twh": 69.93,
+      "ei_pure_oil_twh": 8.719237999999999,
+      "ei_other_unallocated_twh": 61.21201399999995,
+      "frozen_label_minus_ei_oil_and_other_twh": -0.0012519999999369702
+    },
+    {
+      "year": 2023,
+      "frozen_owid_oil_label_twh": 76.97,
+      "ei_pure_oil_twh": 9.267274,
+      "ei_other_unallocated_twh": 67.70192600000055,
+      "frozen_label_minus_ei_oil_and_other_twh": 0.0007999999994439122
+    },
+    {
+      "year": 2024,
+      "frozen_owid_oil_label_twh": 88.88,
+      "ei_pure_oil_twh": 9.44963419658422,
+      "ei_other_unallocated_twh": 79.42757747123835,
+      "frozen_label_minus_ei_oil_and_other_twh": 0.00278833217743113
+    }
+  ],
+  "legacy_source_sha256": "266f2e2baad7975351bc9bb4aa061d22b1da9fe4c47d51d2ac6071e01e171f76"
+}

@@ -1,0 +1,12 @@
+year,metric,value,unit,source_id,locator,scope
+2014,generation,13.19,TWh,cec_2014_reuse,HTML tr26; current-year2014 column,CEC national detailed unofficial reprint
+2014,capacity,22110,MW,cec_2014_reuse,HTML tr59; current-year2014 column,CEC later detailed vintage
+2014,capacity,21830,MW,nea_2014_reuse,"电源建设, 截至2014年底",NEA preliminary national vintage; do not average
+2021,generation,39,TWh,ndrc_2021,"2022-06-28 press conference, second answer on pumped storage",National annual
+2021,capacity,36390,MW,ndrc_2021,"same answer, 截至2021年底",National year-end
+2024,generation,65.7,TWh,hydrochina_2024,"PDF page26, section5.2, visually verified",National annual; expressly part of full-scope hydro
+2024,capacity,58690,MW,hydrochina_2024,"PDF page12, section3.1, visually verified",National year-end
+2024,capacity,58690,MW,nea_2024_reuse,（一）水电建设和运行情况,National year-end
+2014,pumping_electricity_consumption,,TWh,,No verified national annual observation obtained,missing; not zero; no inference from NBS-EI hydro difference or EIA net figure
+2021,pumping_electricity_consumption,,TWh,,No verified national annual observation obtained,missing; not zero; no inference from NBS-EI hydro difference or EIA net figure
+2024,pumping_electricity_consumption,,TWh,,No verified national annual observation obtained,missing; not zero; no inference from NBS-EI hydro difference or EIA net figure

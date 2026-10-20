@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-20T00:00:00.984905+00:00",
+  "status": "passed_entry_contract",
+  "checked_actual_training_models": [
+    {
+      "mode": "net55",
+      "authority": 5,
+      "train_loss": 0.692380731866883,
+      "holdout_data_perturbation_score_invariant": true
+    },
+    {
+      "mode": "net55",
+      "authority": 25,
+      "train_loss": 0.6923807318668831,
+      "holdout_data_perturbation_score_invariant": true
+    },
+    {
+      "mode": "net55",
+      "authority": 100,
+      "train_loss": 0.6923807318668831,
+      "holdout_data_perturbation_score_invariant": true
+    },
+    {
+      "mode": "net58",
+      "authority": 5,
+      "train_loss": 0.6925691631074832,
+      "holdout_data_perturbation_score_invariant": true
+    },
+    {
+      "mode": "net58",
+      "authority": 25,
+      "train_loss": 0.6925691631074833,
+      "holdout_data_perturbation_score_invariant": true
+    },
+    {
+      "mode": "net58",
+      "authority": 100,
+      "train_loss": 0.6925691631074833,
+      "holdout_data_perturbation_score_invariant": true
+    }
+  ],
+  "original_three_blocks_preserved": true,
+  "original_formal_expectation_investment_grid_preserved": true,
+  "original_targets_and_thresholds_preserved": true,
+  "selection_saved_before_evaluation": true,
+  "all_authority_and_composition_cases_reported": true,
+  "technical_mode_fixed_before_training": true,
+  "limitations": [
+    "Entry review does not certify eventual completed searches or results",
+    "Finite coordinate search does not prove global optimality",
+    "Evaluation remains already seen and cannot support blind validation claims"
+  ],
+  "source_sha256": {
+    "scripts/run_q2_thermal_recalibration.py": "7f5a4965c730a865c3ef7817a57424d040d3732ae67bbb1b36ad52efe9adcfbd",
+    "scripts/q2_thermal_configured_factory.py": "ccb44f6168aff928744b7e6b991b966f0a500857607a1c5e863511fe0d7d8a4c",
+    "scripts/q2_thermal_factory.py": "4e8043bdb78839a4f394983c58e7be80a4307b56fcd361e965c95b7cc9a98465",
+    "scripts/run_q2_revenue_recalibration.py": "b6df4d24c3f280050c04a801b1f53d1c38de256e33717f4f9b86f11fb1e47924",
+    "scripts/run_q2_national.py": "776174b8ddd6f8e1ec43c623ff356ef6c2346ea78db3cb809f6f7a48018fd01e",
+    "workflow/q2_thermal_net55_recalibration.json": "ac7a027c0fd566b9c6ba32bdeb0cc5633d8788af1a6f35fc9d5227d15328f190",
+    "workflow/q2_thermal_net58_recalibration.json": "4a3c1d402fca2ff18e6689b4b5f149fb68fa1e2660b0e8a61f2456054b70c68a",
+    "workflow/q2_corrected_recalibration.json": "3957e7281a17062bb223bf23874e97058046bebacfc5e997c72d3e17c1a75454",
+    "workflow/q2_national_design.json": "b10d73157d228750d596eabf481b26f7d06ed4ce2df3af7b70d97e754b49ba3c",
+    "scripts/review_q2_thermal_training_entry_independent.py": "e930bfaeaa15654a77ea1d3fe6134de7c2d1aa5487594ddea338ee0f1da13eb1"
+  }
+}

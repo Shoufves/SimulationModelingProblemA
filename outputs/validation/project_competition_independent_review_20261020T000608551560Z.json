@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-10-20T00:06:08.551560+00:00",
+  "status": "passed_with_scope_limits",
+  "specialized_tests": {
+    "run": 8,
+    "failures": 0,
+    "errors": 0
+  },
+  "actual_2015_2024_run": {
+    "completed": true,
+    "error": null,
+    "last_completed_year": 2024
+  },
+  "factory_switch_off_2015_2024_authority25_net58_exact": [
+    "paths",
+    "finance",
+    "behavior",
+    "operations",
+    "projects",
+    "assets",
+    "balances",
+    "thermal_fuel_ledger",
+    "year_end_operation"
+  ],
+  "review": {
+    "candidate_sales": "Actual LP total partitioned by effective thermal MW or renewable available output; does not require sector incremental sales",
+    "thermal_fuel": "Candidate fuel calculated using candidate efficiency; physical total still harmonic by common utilisation",
+    "support": "Thermal quote receives candidate own annualised hours and explicit support fraction; renewable screening receives own hours",
+    "incumbents": "Remaining LP sales allocated to incumbents; actual cohort operating accounts expose lower incumbent revenue without charging it to candidate",
+    "joint_screen": "Inherited finite shrink/remove/rescreen remains in force with revised project economics",
+    "finance": "Representative sector cash/debt pool remains; no separate firm property rights or independent entrant finance is inferred"
+  },
+  "identified_boundary": "Original sector ledger uses ETS cash inflows positive (negative payment); project ETS transfer must use the same sign and profit must add the transfer",
+  "limits": [
+    "Cohort records before support do not themselves attribute support cash received or debt service to independent firms",
+    "Within-technology common utilisation cannot represent efficient-unit merit order",
+    "First positive operating-year forecast is extended by PV assumption; it does not model later entrant competition over the entire plant life"
+  ],
+  "source_sha256": {
+    "src/energy_model/q2_project_competition.py": "40dca3cd9d5319cc4e4870f780af316019b3eb30c5c182f47412e76cf75894fb",
+    "tests/test_q2_project_competition.py": "6ba5aa9c8cc485a6152cbffac61da205dde896b7ed3370619886e62c5ebba8f6",
+    "scripts/q2_competition_factory.py": "036ecc86df52e03f59a200247bf4ebd93b81dc8fd4e86d57d6c65fc9c6b6dd5a",
+    "docs/sources/q2_project_competition.md": "77582ce69f8463b19dcd2cb803d9c132f31494c2429a45d2afe733c3d003d3ac",
+    "scripts/review_q2_project_competition_independent.py": "96ee751ec9b2183b7cb3c83b2fb1666a4cde228770daa1f36c103f65ae3e7bc7"
+  }
+}

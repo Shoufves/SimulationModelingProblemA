@@ -1,0 +1,15 @@
+test_default_is_opt_out_and_does_not_grant_free_subsidies (test_q2_revenue.RevenueIntegrationTests.test_default_is_opt_out_and_does_not_grant_free_subsidies) ... ok
+test_entitlements_cannot_finance_investment_when_fund_unfunded (test_q2_revenue.RevenueIntegrationTests.test_entitlements_cannot_finance_investment_when_fund_unfunded) ... ok
+test_fund_and_model_clock_must_match (test_q2_revenue.RevenueIntegrationTests.test_fund_and_model_clock_must_match) ... ok
+test_levy_must_be_a_funded_retail_component (test_q2_revenue.RevenueIntegrationTests.test_levy_must_be_a_funded_retail_component) ... ok
+test_missing_tariff_is_rejected_instead_of_carried_forward (test_q2_revenue.RevenueIntegrationTests.test_missing_tariff_is_rejected_instead_of_carried_forward) ... ok
+test_nonfinite_closing_cash_rejected_before_any_commit (test_q2_revenue.RevenueIntegrationTests.test_nonfinite_closing_cash_rejected_before_any_commit) ... ok
+test_only_actual_payment_enters_generator_cash_once (test_q2_revenue.RevenueIntegrationTests.test_only_actual_payment_enters_generator_cash_once) ... ok
+test_payment_year_deflator_applies_to_older_nominal_arrears (test_q2_revenue.RevenueIntegrationTests.test_payment_year_deflator_applies_to_older_nominal_arrears) ... ok
+test_settlement_precedes_actual_debt_service (test_q2_revenue.RevenueIntegrationTests.test_settlement_precedes_actual_debt_service) ... ok
+test_unknown_initial_payable_owner_fails_before_fund_changes (test_q2_revenue.RevenueIntegrationTests.test_unknown_initial_payable_owner_fails_before_fund_changes) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.222s
+
+OK

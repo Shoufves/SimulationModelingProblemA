@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-10-20T00:04:27.481988+00:00",
+  "status": "passed_with_scope_limits",
+  "specialized_tests": {
+    "run": 7,
+    "failures": 0,
+    "errors": 0
+  },
+  "actual_2015_2024_run": {
+    "completed": true,
+    "error": null,
+    "last_completed_year": 2024
+  },
+  "review": {
+    "candidate_sales": "Actual LP total partitioned by effective thermal MW or renewable available output; does not require sector incremental sales",
+    "thermal_fuel": "Candidate fuel calculated using candidate efficiency; physical total still harmonic by common utilisation",
+    "support": "Thermal quote receives candidate own annualised hours and explicit support fraction; renewable screening receives own hours",
+    "incumbents": "Remaining LP sales allocated to incumbents; actual cohort operating accounts expose lower incumbent revenue without charging it to candidate",
+    "joint_screen": "Inherited finite shrink/remove/rescreen remains in force with revised project economics",
+    "finance": "Representative sector cash/debt pool remains; no separate firm property rights or independent entrant finance is inferred"
+  },
+  "identified_boundary": "Original sector ledger uses ETS cash inflows positive (negative payment); project ETS transfer must use the same sign and profit must add the transfer",
+  "limits": [
+    "Cohort records before support do not themselves attribute support cash received or debt service to independent firms",
+    "Within-technology common utilisation cannot represent efficient-unit merit order",
+    "First positive operating-year forecast is extended by PV assumption; it does not model later entrant competition over the entire plant life"
+  ],
+  "source_sha256": {
+    "src/energy_model/q2_project_competition.py": "2a2187d81a0ce68aa7ddda9fbc0fd8b0a5ea41886787212d4c7d7f535263d2f7",
+    "tests/test_q2_project_competition.py": "1defd05d64203eec4f3cf7c6a9782af8a674ea8e7f25fa66e6b9d580e08dc3a8",
+    "scripts/review_q2_project_competition_independent.py": "1ce68c8b48c881808871cff6717d9c70eec2daa3de134cb4f1a2176639311ab3"
+  }
+}

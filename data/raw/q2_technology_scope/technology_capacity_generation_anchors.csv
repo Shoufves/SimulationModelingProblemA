@@ -1,0 +1,26 @@
+year,metric,value,evidence_level,source_file,scope_and_limitation
+2014,gas_capacity_mw,55670,NEA preliminary,nea_electricity2014.html,Full national year-end; later CEC detailed mirror differs
+2014,gas_capacity_mw,56970,CEC detailed unofficial mirror,cec2014_portal.html,"Full national year-end, not same vintage as NEA preliminary"
+2014,gas_generation_twh,133.283,CEC detailed unofficial mirror,cec2014_portal.html,Full national annual generation
+2014,oil_capacity_mw,5116,CEC detailed unofficial mirror,cec2014_portal.html,"Full national oil, excludes other thermal categories"
+2014,oil_generation_twh,4.424,CEC detailed unofficial mirror,cec2014_portal.html,"Full national oil, not OWID Other fossil"
+2014,biomass_capacity_mw,9480,NEA official reply,nea_biomass_2014_reply.html,Policy biomass category
+2014,biomass_capacity_mw,10300,CEC detailed unofficial mirror,cec2014_portal.html,Note4; preserve discrepancy from NEA9480
+2014,biomass_generation_twh,47.4,CEC detailed unofficial mirror,cec2014_portal.html,"Note4, includes waste; differs from OWID46.27"
+2014,waste_capacity_mw,4685,CEC detailed unofficial mirror,cec2014_portal.html,6000kW-and-above subset
+2014,agroforestry_capacity_mw,5117,CEC detailed unofficial mirror,cec2014_portal.html,6000kW-and-above straw/bagasse/wood subset
+2014,waste_generation_twh,24.51,CEC detailed unofficial mirror,cec2014_portal.html,6000kW-and-above subset
+2014,agroforestry_generation_twh,21.633,CEC detailed unofficial mirror,cec2014_portal.html,6000kW-and-above subset
+2018,biomass_capacity_mw,17810,NEA official,nea_biomass2018.html,National policy biomass category
+2018,biomass_generation_twh,90.6,NEA official,nea_biomass2018.html,National policy biomass category
+2020,biomass_capacity_mw,29520,NEA official,nea_biomass2020.html,Preserve published vintage
+2020,biomass_generation_twh,132.6,NEA official,nea_biomass2020.html,National policy biomass category
+2021,biomass_capacity_mw,37980,NEA official,nea_biomass2021.html,National policy biomass category
+2021,biomass_generation_twh,163.7,NEA official,nea_biomass2021.html,National policy biomass category
+2024,gas_capacity_mw,140000,CEC release rounded,cec_annual2025_release.html,"Approximate1.4e8kW, not exact capacity"
+2024,gas_generation_twh,320,Industry rounded secondary,gas2024_cq_exchange.html,Approximate0.32e12kWh
+2024,biomass_capacity_mw,45990,NEA official,../batch1_national/nea_renewable_2024.html,National policy biomass category includes waste
+2024,biomass_generation_twh,208.3,NEA official,../batch1_national/nea_renewable_2024.html,National policy biomass category includes waste
+2024,biomass_capacity_mw,45970,CEC release,cec_annual2025_release.html,Preserve difference from NEA45990
+2024,agroforestry_capacity_mw,17090,Industry report interview secondary,../q1/bio_industry_interview.html,Approximate; does not provide fossil fraction
+2024,waste_capacity_mw,27380,Industry report interview secondary,../q1/bio_industry_interview.html,Approximate; does not provide biogenic share

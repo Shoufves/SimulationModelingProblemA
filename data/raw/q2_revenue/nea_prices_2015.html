@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="国家能源网" />
+<meta name="keywords" content="国家能源网" />
+<title>政府信息公开目录---国家能源局---2015年度全国电力价格情况监管通报</title>
+<link href="http://www.nea.gov.cn/static/default/css/public/master_nyj_v1.0.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/static/default/css/article.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/2015nyj/xinban/topbase.css" rel="stylesheet" />
+<script src="http://www.nea.gov.cn/static/default/js/public/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../images/daublogic.js" type="text/javascript"></script>
+<script language="javascript">
+$(document).ready(function(){　
+
+var lefttmp = new Image();
+lefttmp.src= "http://www.xinhuanet.com/photo/static/arr_left.cur";
+var righttmp = new Image();
+righttmp.src= "http://www.xinhuanet.com/photo/static/arr_right.cur";
+leng = $("a",$("#div_currpage")).length;
+	
+if(leng!=0)
+//curr里有a标签==稿件不止一页
+	{
+
+		//看一共有多少个a标签
+		leng = leng -1;
+		var nextLin  = $("a",$("#div_currpage"))[leng].href;//对于多页的情况，取得下一页的地址
+		var oneword = location.href+"#";
+		if(nextLin==oneword)
+		{
+		leng = leng -1;
+		nextLin  = $("a",$("#div_currpage"))[leng].href;
+		}
+		var currurl = location.href;//当前页链接地址<meta http-equiv="expires" content="Sunday 26 October 2011 01:00 GMT" /> 
+				
+		var underpd = currurl.substring(currurl.indexOf("c_")+2,currurl.indexOf(".htm"));	
+		if (underpd.indexOf("_")==-1)
+			{
+
+			prevLink = location.href;//如果是文章首页，则左键仍是替换到本页面
+			nextLink = $("a",$("#div_currpage"))[0].href;      //下一页的赋值
+			setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+		}
+
+	else
+		//是末页，http://news.xinhuanet.com/photo/2011-08/06/c_121822530.htm
+		{
+			//当前页分页号判断
+			var currnum = currurl.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlineindex = currurl.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			//下一页的分页号
+			var nextnum = nextLin.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlinenext = nextLin.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			var undernum = nextLin.substr(nextLin.indexOf("c_")).split("_").length-1;
+			
+			var temp = currurl.substring(underlineindex,currnum);//当前页的分页号
+			var nexttemp = 	nextLin.substring(underlinenext,nextnum);//最后a标签的分页号
+			var boolx = parseInt(temp,10)>parseInt(nexttemp,10);
+			
+			if((boolx)||(undernum==1))//末页
+
+					{
+					
+						if($("img",$("a",$("#content"))).length==0)//没有带链接的图片
+			
+							{
+								prevLink = nextLin;
+									if(undernum==1)
+									{
+										nextLink = nextLin;
+									}
+									else
+									{
+										nextLink = prevLink.substr(0,(prevLink.lastIndexOf("_")))+".htm";
+									}
+								setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+							}
+			
+						else//末页正文图片有链接
+							{
+								prevLink = nextLin;
+								nextLink = $("a",$("#content"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							}
+
+					}
+
+				else//不是末页
+					{
+
+							prevLink = $("a",$("#div_currpage"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							nextLink = nextLin;//把正文最后一个带链接的链接地址赋给下一页
+					}
+
+		}
+	}
+else
+//只有一页
+	{
+		prevLink = location.href;
+		nextLink = location.href;
+	}
+
+document.onkeydown = pageEvent;
+  function pageEvent(evt) {
+    evt = evt || window.event;
+    var key = evt.which || evt.keyCode;
+    if (key == 37) location = prevLink;
+    if (key == 39) location = nextLink;
+  };
+		
+		var lefturl		= prevLink;
+		var righturl	= nextLink;
+		var imgurl		= righturl;
+
+			$("#content img").each(function(){ 
+				var width = $(this).width();
+				var thisImage=$(this); 
+				//alert("01");
+				$(thisImage)[0].onmousemove=function(){
+					
+					if(event.offsetX<width/2){
+					
+						this.style.cursor	= 'url('+lefttmp.src+'),auto';
+						imgurl				= lefturl;
+					}
+					
+					else{
+					
+						this.style.cursor	= 'url('+righttmp.src+'),auto';
+						imgurl				= righturl;
+					}
+					
+	                                                }
+	               
+				$(thisImage)[0].onmouseup=function(){
+					top.location=imgurl;
+	
+				}   
+             });
+　　　　
+　　	});
+</script>
+
+<style type="text/css">
+<!--
+
+.STYLE5 {
+    color: #006699;
+    font-size: 14px;
+    font-weight: bold;
+}
+td {
+    padding: 4px;
+}
+
+.table1 {
+    border: 1px solid #71AEE7;
+}
+
+.STYLE9 {
+    color: #006699;
+    font-size: 12px;
+}
+
+.STYLE10 {
+    color: #666666;
+}
+-->
+</style>
+</head>
+
+<body>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/topnav.js" type="text/javascript"></script>
+<div class="main-colum">
+	<div class="now-site">您当前位置：<a href="http://www.nea.gov.cn/" target="_blank">首页</a> > 正文</div>
+	<div class="hr_10"></div>
+	<div class="channel-page">
+		<div class="article-box">
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+			<div class="article-content">
+            <table width="800" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td height="35" class="STYLE5">目录项的基本信息</td>
+    </tr>
+  </tbody></table>
+            	<table width="800" cellspacing="0" cellpadding="0" border="0" class="table1">
+<tbody><tr>
+        <td width="131" height="28" bgcolor="#EEFCFF" align="right"><span class="STYLE10">公开事项名称:</span></td>
+      <td height="28" bgcolor="#EEFCFF" align="left" class="STYLE9" colspan="3">2015年度全国电力价格情况监管通报 </td>
+    </tr>
+      <tr>
+        <td height="28" bgcolor="#EEFCFF" align="right"><span class="STYLE10">索引号: </span></td>
+        <td width="290" height="28" bgcolor="#EEFCFF" align="left" class="STYLE9">000019705/2016-00366 </td>
+        <td width="75" bgcolor="#EEFCFF" align="left"><span class="STYLE10">主办单位:</span></td>
+        <td width="302" bgcolor="#EEFCFF" align="left" class="STYLE9">国家能源局 </td>
+    </tr>
+      <tr>
+        <td height="28" bgcolor="#EEFCFF" align="right"><span class="STYLE10">制发日期:</span></td>
+        <td height="28" bgcolor="#EEFCFF" align="left" class="STYLE9" colspan="3">2016-09-13 </td>
+    </tr>
+    </tbody></table>
+<table width="700" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td height="30">&nbsp;</td>
+    </tr>
+  </tbody></table>
+  
+<table width="800" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td><span class="font_14 line25 STYLE8"><p align="center"><font style="font-size: 18pt; line-height: 200%"><strong>2015年度全国电力价格情况监管通报</strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　为全面反映全国各地电力价格信息及变化情况，更好地实施成本与价格监管，切实维护好电力市场秩序，国家能源局组织对全国主要电力企业2015年度价格情况进行了统计分析，形成本报告。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　<strong>一、综合厂用电率 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　2015年，全国发电企业平均综合厂用电率为5.90%，同比下降0.60%。其中，生物质发电最高，为13.37%，水力发电最低，为1.71%。 </font></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　（一）燃煤机组 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　从全国（不含西藏，下同）看，2015年燃煤发电平均综合厂用电率为6.94%，同比下降0.62%。其中河南最高，为11.41%，江苏最低，为4.34%。详见附表1-1。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从山东、蒙西、江苏、河南、广东五个重点省份（重点省份选取该类型机组发电量排序前5名省份，下同。）看，2015年平均综合厂用电率为6.76%，同比下降1.72%。其中河南最高，为11.41%，江苏最低，为4.34%。详见图1-1。 </font></p><p align="center"><font style="font-size: 12pt; line-height: 200%" color="#000080">图1-1 重点省份燃煤机组综合厂用电率 </font></p><p align="center"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" oldsrc="W020161101358844302357.jpg" src="./W020161101358844302357.jpg" /></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　（二）水电机组 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　从全国看，2015年水力发电平均综合厂用电率为1.71%，同比增长9.62%。其中蒙东最高，为11.08%，山西最低，为0.35%。详见附表1-1。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从四川、湖北、云南、贵州、广西五个重点省份看，2015年平均综合厂用电率为0.86%，同比下降14.80%。其中贵州最高，为1%，湖北最低，为0.67%。详见图1-2。 </font></p><p align="center"><font style="font-size: 12pt; line-height: 200%" color="#000080">图1-2 重点省份水电机组综合厂用电率</font></p><p align="center"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" oldsrc="W020161101358844306725.jpg" src="./W020161101358844306725.jpg" /></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　（三）风电机组 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　从全国看，2015年风力发电平均综合厂用电率为3.08%，同比增长21.26%。其中甘肃最高，为5.87%，陕西最低，为1.19%。详见附表1-2。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从蒙东、山东、甘肃、辽宁、新疆五个重点省份（地区）看，2015年平均综合厂用电率为3.39%，同比增长46.07%。其中甘肃最高，为5.87%，蒙东最低，为2.37%。详见图1-3。 </font></p><p align="center"><font style="font-size: 12pt; line-height: 200%" color="#000080">图1-3 重点省份（地区）风电机组综合厂用电率</font></p><p align="center"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" oldsrc="W020161101358844318977.jpg" src="./W020161101358844318977.jpg" /></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　（四）其他机组 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　从全国看，2015年核电、生物质发电平均综合厂用电率分别为6.38%、13.37%，同比分别增长8.14%、7.91%；燃气发电、太阳能发电平均综合厂用电率分别为3.06%、2.43%，同比分别下降14.29%、0.82%。详见图1-4。 </font></p><p align="center"><font style="font-size: 12pt; line-height: 200%" color="#000080">图1-4 其他机组综合厂用电率</font></p><p align="center"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" oldsrc="W020161101358844311174.jpg" src="./W020161101358844311174.jpg" /></p><p><font style="font-size: 12pt; line-height: 200%">　　各省（区、市）燃气发电、核电、太阳能发电、生物质发电平均综合厂用电率详见附表1-1、1-2。 </font></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　二、平均上网电价（含税，下同） </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　2015年，全国发电企业平均上网电价为388.25元/千千瓦时，同比下降2.61%。其中，太阳能发电最高，为1056.89元/千千瓦时，水力发电最低，为286.93元/千千瓦时。 </font></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　（一）燃煤机组 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　从全国看，2015年燃煤机组平均上网电价为384.20元/千千瓦时，同比下降4.16%。其中广东最高，为504.76元/千千瓦时，蒙西最低，为284.85元/千千瓦时。详见附表2-1。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从山东、蒙西、江苏、河南、广东五个重点省份看，2015年平均上网电价为376.02元/千千瓦时，同比下降4.34%。其中广东最高，为504.76元/千千瓦时，蒙西最低，为284.85元/千千瓦时。详见图2-1。 </font></p><p align="center"><font style="font-size: 12pt; line-height: 200%" color="#000080">图2-1 重点省份燃煤机组平均上网电价</font></p><p align="center"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" src="./W020161104374874823988.jpg" OLDSRC="W020161104374874823988.jpg" /></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　（二）水电机组 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　从全国看，2015年水电机组平均上网电价为286.93元/千千瓦时，同比下降3.64%。其中浙江最高，为552.31元/千千瓦时，甘肃最低，为239.50元/千千瓦时。详见附表2-1。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从四川、湖北、云南、贵州、广西五个重点省份看，2015年平均上网电价为282.15元/千千瓦时，同比下降4.16%，其中四川最高，为298.14元/千千瓦时，云南最低，为252.94元/千千瓦时。详见图2-2。 </font></p><p align="center"><font style="font-size: 12pt; line-height: 200%" color="#000080">图2-2 重点省份水电机组平均上网电价</font></p><p align="center"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" oldsrc="W020161101358844314594.jpg" src="./W020161101358844314594.jpg" /></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　（三）风电机组 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　从全国看，2015年风电机组平均上网电价（新能源上网电价含度电补贴，下同。）为594.01元/千千瓦时，同比下降0.61%。其中青海最高，为985.23元/千千瓦时，河北最低，为474.19元/千千瓦时。详见附表2-2。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从蒙东、山东、甘肃、辽宁、新疆五个重点省份（地区）看，2015年平均上网电价为580.21元/千千瓦时，同比下降0.66%，其中山东最高，为674.26元/千千瓦时，甘肃最低，为529.78元/千千瓦时。详见图2-3。 </font></p><p align="center"><font style="font-size: 12pt; line-height: 200%" color="#000080">图2-3 重点省份（地区）风电机组平均上网电价 </font></p><p align="center"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" oldsrc="W020161101358844320175.jpg" src="./W020161101358844320175.jpg" /></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　（四）其他机组 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　从全国看，2015年燃气发电、太阳能发电平均上网电价分别为789.82元/千千瓦时、1056.89元/千千瓦时，同比分别增长5.2%、3.99%；核电、生物质发电平均上网电价为434.03元/千千瓦时、732.83元/千千瓦时，同比分别下降0.83%、0.07%。详见图2-4。 </font></p><p align="center"><font style="font-size: 12pt; line-height: 200%" color="#000080">图2-4 其他机组平均上网电价</font></p><p align="center"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" oldsrc="W020161101358844320677.jpg" src="./W020161101358844320677.jpg" /></p><p><font style="font-size: 12pt; line-height: 200%">　　各省（区、市）燃气发电、核电、太阳能发电、生物质发电平均上网电价详见附表2-1、2-2。 </font></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　三、线损率 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　2015年，电网企业平均线损率为6.15%，同比下降0.76%。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从企业看，国家电网公司线损率最高，为6.78 %，内蒙古电力公司最低，为4.35 %。详见表1。 </font></p><p align="center"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" oldsrc="W020161101358844321769.jpg" src="./W020161101358844321769.jpg" /></p><p><font style="font-size: 12pt; line-height: 200%">　　从各省（区、市）情况看，四川线损率最高，为9.37%，青海最低，为2.97%。详见附表3。 </font></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　四、平均购销差价（不含税，下同） </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　2015年，电网企业平均购销差价（含线损）为216.48元/千千瓦时，同比增长4.02%；扣除线损，电网企业平均购销差价为194.59元/千千瓦时，同比增长5.01%。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从企业看，南方电网公司购销差价（含线损）最高，为229.84元/千千瓦时，内蒙古电力公司最低，为116.62元/千千瓦时。详见表2。 </font></p><p align="center"><font style="font-size: 12pt; line-height: 200%"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" oldsrc="W020161101358844330029.jpg" src="./W020161101358844330029.jpg" /></font></p><p><font style="font-size: 12pt; line-height: 200%">　　从各省（区、市）情况看，江西购销差价（含线损）最高，为251.30元/千千瓦时，宁夏最低，为99.82元/千千瓦时。详见附表4。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　五、平均销售电价（含税，下同） </font></p><p><font style="font-size: 12pt; line-height: 200%">　　2015年，电网企业平均销售电价为643.33元/千千瓦时，同比下降0.57%。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从企业看，南方电网公司平均销售电价最高，为667.27元/千千瓦时，内蒙古电力公司最低，为420.77元/千千瓦时。详见表3。 </font></p><p align="center"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" oldsrc="W020161101358844335179.jpg" src="./W020161101358844335179.jpg" /></p><p><font style="font-size: 12pt; line-height: 200%">　　从各省（区、市）情况看，深圳平均销售电价最高，为807.88元/千千瓦时，青海最低，为381.37元/千千瓦时。详见附表5。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从分类销售电价看，一般工商业及其他用电平均电价最高，为825.14元/千千瓦时；大工业用电平均电价为643.97元/千千瓦时；居民用电类别平均电价（到户价）为548.04元/千千瓦时。详见图3。 </font></p><p align="center"><font style="font-size: 12pt; line-height: 200%" color="#000080">图3 分类销售电价对比图</font></p><p align="center"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" alt="" oldsrc="W020161101358844335229.jpg" src="./W020161101358844335229.jpg" /></p><p><font style="font-size: 12pt; line-height: 200%">　　注：分类销售电价为国家电网公司和南方电网公司加权平均数。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从各省（区、市）居民用电类别平均电价（到户价）水平看，深圳最高，为714.62元/千千瓦时，青海最低，为405.80元/千千瓦时。详见附表5。 </font></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　六、政府性基金及附加（含税，下同） </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　2015年，随销售电价征收的政府性基金及附加全国平均水平为39.25元/千千瓦时（电网企业省内售电量口径平均值，下同），同比增长0.74%。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　政府性基金及附加主要有5种，即重大水利工程建设基金、农网还贷资金、水库移民后期扶持资金、可再生能源发展基金、城市公用事业附加。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　从各省（区、市）情况看，重庆政府性基金及附加平均水平最高，为65.20元/千千瓦时，新疆最低，为9.02元/千千瓦时。详见附表6。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　（本文有删减） </font></p><p><font style="font-size: 12pt; line-height: 200%">　　附表：1.发电企业综合厂用电率情况统计表 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　2.发电企业平均上网电价情况统计表 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　3.电网企业线损率统计表 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　4.电网企业平均购销差价（不含税）统计表 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　5.电网企业平均销售电价和居民用电平均电价统计表 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　6.电网企业政府性基金及附加平均水平统计表</font></p></span></td>
+    </tr>
+  </tbody></table>
+  
+  <table width="700" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody></table>  
+  	
+			</div>
+			<div class="back-top"></div>
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>		
+		</div>
+		<div id="id_appendix" class="article-other" style="display:none">
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+            <div class="title-other">附件名称</div>
+<ul>
+<li id="id_appendix1"><a href="./P020161104365561152227.doc">附表1-附表6</a></li>
+
+
+
+</ul>
+<div class="clear"></div>
+		</div>
+		<div class="hr_10"></div>
+		<div class="hr_10"></div>
+		<div class="hr_10"></div>
+	</div>
+</div>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/bottom.js" type="text/javascript"></script>
+<script src="http://www.nea.gov.cn/static/default/js/public/article-font.js" type="text/javascript"></script>
+<SCRIPT language="javascript"> 
+<!--
+runDaubLogic();
+if(document.getElementById("id_appendix1") != null)
+{
+	document.getElementById("id_appendix").style.display = "block";
+}
+//-->
+</SCRIPT>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-10-20T00:07:44.537490+00:00",
+  "status": "passed_with_scope_limits",
+  "run": "outputs/q2_project_competition_pairs/20261020T000557617231Z",
+  "all_frozen_source_hashes_match": true,
+  "frozen_source_count": 194,
+  "six_owner_cases_exact_old_controls": [
+    "net55_authority_5_owner",
+    "net55_authority_25_owner",
+    "net55_authority_100_owner",
+    "net58_authority_5_owner",
+    "net58_authority_25_owner",
+    "net58_authority_100_owner"
+  ],
+  "six_project_cases_allocation_and_cash_checked": [
+    "net55_authority_5_project",
+    "net55_authority_25_project",
+    "net55_authority_100_project",
+    "net58_authority_5_project",
+    "net58_authority_25_project",
+    "net58_authority_100_project"
+  ],
+  "max_absolute_errors": {
+    "revenue_cny": 0.000244140625,
+    "fuel_bill_cny": 0.000244140625,
+    "om_cny": 0.0001220703125,
+    "ets_transfer_cny": 4.38690185546875e-05,
+    "generation_mwh": 9.5367431640625e-07,
+    "operating_profit_cny": 0.00028228759765625,
+    "individual_profit_identity_cny": 0.0,
+    "fuel_mwh": 3.814697265625e-06,
+    "subsidy_cash_transfer_cny": 1.049041748046875e-05,
+    "forecast_sales_partition_mwh": 1.1920928955078125e-07,
+    "forecast_candidate_meter_mwh": 0.0,
+    "forecast_candidate_fuel_mwh": 0.0
+  },
+  "merchant_cohorts_receive_no_subsidy": true,
+  "no_parameter_search_or_evaluation_based_selection": true,
+  "limits": [
+    "Common thermal utilisation and renewable curtailment remain aggregate approximations",
+    "Representative financing pool does not establish independent firm ownership or bankruptcy",
+    "Saved subsidy payments verify cash and ineligible exclusions; eligible lifetime metering remains implemented by previously reviewed revenue adapter"
+  ],
+  "default_inputs_changed": false,
+  "scientific_acceptance": false
+}

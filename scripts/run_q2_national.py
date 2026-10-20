@@ -28,8 +28,9 @@ from energy_model.q2_statistics import fit_bridge, bridge_diagnostics
 from energy_model.q2_identification import fit_nonpower, identified_parameters
 
 CODE = ["run.py","scripts/run_q2_national.py","scripts/build_q2_national_inputs.py","src/energy_model/q2_national.py","src/energy_model/q2_statistics.py","src/energy_model/q2_identification.py",
-        "src/energy_model/q2_finance.py","src/energy_model/q2_admission.py",
-        "src/energy_model/q2_operations.py","src/energy_model/q2_experiments.py","requirements-q2.txt"]
+        "src/energy_model/q2_finance.py","src/energy_model/q2_admission.py","src/energy_model/q2_subsidies.py","src/energy_model/q2_revenue.py","src/energy_model/q2_support_investment.py",
+        "src/energy_model/q2_operations.py","src/energy_model/q2_boundary.py","src/energy_model/q2_experiments.py",
+        "src/energy_model/q2_project_costs.py","src/energy_model/q2_renewable_vintages.py","src/energy_model/q2_bioenergy.py","src/energy_model/q2_exposure.py","requirements-q2.txt"]
 INPUTS = ["data/catalog/q2_national_input_review.json","data/processed/q2/national_observations.csv",
           "data/processed/q2/technical_references.json","workflow/q2_national_design.json",
           "data/processed/q2/gcb_peak_bridge_review.json","data/processed/q2/statistical_scope_review.json"]

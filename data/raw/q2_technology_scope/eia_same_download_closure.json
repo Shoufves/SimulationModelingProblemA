@@ -1,0 +1,62 @@
+{
+  "source": "eia_china_generation_api.json",
+  "checks": [
+    {
+      "year": 2014,
+      "fossil_sum_residual_twh": 0.0,
+      "total_sum_residual_twh": 9.094947017729282e-13
+    },
+    {
+      "year": 2015,
+      "fossil_sum_residual_twh": 0.0,
+      "total_sum_residual_twh": 0.0
+    },
+    {
+      "year": 2016,
+      "fossil_sum_residual_twh": 0.0,
+      "total_sum_residual_twh": 0.0
+    },
+    {
+      "year": 2017,
+      "fossil_sum_residual_twh": 0.0,
+      "total_sum_residual_twh": 0.0
+    },
+    {
+      "year": 2018,
+      "fossil_sum_residual_twh": 0.0,
+      "total_sum_residual_twh": 0.0
+    },
+    {
+      "year": 2019,
+      "fossil_sum_residual_twh": -9.094947017729282e-13,
+      "total_sum_residual_twh": 0.0
+    },
+    {
+      "year": 2020,
+      "fossil_sum_residual_twh": 0.0,
+      "total_sum_residual_twh": 0.0
+    },
+    {
+      "year": 2021,
+      "fossil_sum_residual_twh": 0.0,
+      "total_sum_residual_twh": -1.8189894035458565e-12
+    },
+    {
+      "year": 2022,
+      "fossil_sum_residual_twh": -9.094947017729282e-13,
+      "total_sum_residual_twh": 0.0
+    },
+    {
+      "year": 2023,
+      "fossil_sum_residual_twh": 0.0,
+      "total_sum_residual_twh": 0.0
+    },
+    {
+      "year": 2024,
+      "fossil_sum_residual_twh": 0.0,
+      "total_sum_residual_twh": -1.8189894035458565e-12
+    }
+  ],
+  "passed": true,
+  "limitation": "Arithmetic closure does not validate gross/net coverage, waste biogenic fraction or national fuel/emissions allocation."
+}

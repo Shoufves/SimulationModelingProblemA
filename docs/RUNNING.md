@@ -1,5 +1,34 @@
 # 运行与复现
 
+## 当前问题二答案入口（2026-10-20）
+
+当前主答案使用 `scripts/run_q2_portable.py --verify-reference` 重算24组问题二实验；从原件解析使用 `scripts/run_q2_current_delivery.py --only S0 --workers 1`。安装依赖、结果目录和边界见[问题二交付说明](solutions/QUESTION2_DELIVERY_20261020.md)。`run.py q2` 保留 PR #9 旧模型入口，不代表本次新答案。下方较早实验命令保留作研究追溯；本次PR只携带最终问题二复现所需结果，其他探索结果保留在作者研究工作区。
+
+
+2026-10-20新增新机效率与项目竞争版本，默认入口尚未替换。已保存原件时可离线运行：
+
+```powershell
+python -B -X utf8 scripts/run_q2_thermal_pairs.py outputs/q2_revenue_recalibration/20261019T225922280430Z
+python -B -X utf8 scripts/run_q2_project_competition_pairs.py
+python -B -X utf8 scripts/run_q2_thermal_coal_window.py
+python -B -X utf8 scripts/run_q2_competition_coal_window.py
+python -B -X utf8 scripts/run_q2_thermal_recalibration.py --design workflow/q2_thermal_net55_recalibration.json --workers 2
+python -B -X utf8 scripts/run_q2_thermal_recalibration.py --design workflow/q2_thermal_net58_recalibration.json --workers 2
+```
+
+固定参数对照使用程序中明确锁定的历史父目录，并逐项核对哈希；没有默认为最新目录。两种效率与三组承诺条件全部保留。最后两条是统一业主热机对照训练，不能当作竞争模型已经重训。520项全量测试收据和已完成实验见[本轮说明](solutions/q2_project_competition_round_20261020.md)。
+
+2026-10-20新增历史煤价动态诊断（原件存在时离线运行）：
+
+```powershell
+python -B -X utf8 scripts/collect_q2_coal_prices_extension.py
+python -B -X utf8 scripts/run_q2_fuel_price_diagnostic.py outputs/q2_revenue_recalibration/20261019T225922280430Z
+python -B -X utf8 scripts/run_q2_coal_index_window.py outputs/q2_revenue_recalibration/20261019T225922280430Z
+python -B -X utf8 scripts/diagnose_q2_new_thermal_efficiency.py outputs/q2_coal_index_window/20261019T233144607111Z
+```
+
+前两项动态运行生成新时间目录；最后一项参数应换成实际五年对照目录。税基未知和共用市场代理限制必须保留；效率诊断固定原路径，不能称新增项目已批准。见[煤价与效率核查](solutions/q2_fuel_price_round_20261020.md)。
+
 当前 Q1 采用 lb 主线与 mmj 增量整合，详见[整合说明](solutions/p1-yx-integration.md)。`python -B -X utf8 run.py q1` 默认写入 `outputs/q1/p1_yx/`，保留 lb 原候选产物。完整交付核验仍运行 `python -B -X utf8 scripts/review_q1_delivery.py`，本次证据写入 `outputs/q1_review/lb_mmj_integration/`；其中两次 Q1 分别写入 `p1_yx`、`yx_reproduction`。显式重建 `scripts/prepare_q1_review.py` 会重新核对 mmj 已用 IRENA 原文再重建六条成本参数，并拒绝未经重新审查的 lb 原输入变化。
 
 在A题目录执行。Python 3.11及以上；本轮使用本机捆绑Python 3.12.14。核心模型和测试主要使用标准库；附件需要openpyxl，yx/lb离线提取需要pandas/numpy/lxml/pypdf/pdfplumber。
@@ -54,6 +83,28 @@ Python3.11及以上；初次安装`python -m pip install -r requirements-q1.txt`
 
 ## P2/lb 全国聚合条件模型
 
+**2026-10-20状态补充：下述V10默认入口保留作历史追溯，不代表收入/补贴及统计边界修订后的正式答题模型。** 当前修订分支使用下列独立入口，避免覆盖历史结果。使用既有 `requirements-q2.txt` 与 `requirements-data.txt`；PDF可视核读另用pypdfium2 5.14.0。
+
+```powershell
+python -B -X utf8 scripts/run_q2_revenue_recalibration.py --design workflow/q2_exposure_recalibration.json
+python -B -X utf8 scripts/run_q2_joint_recalibration.py --workers 4
+python -B -X utf8 scripts/review_q2_joint_search.py outputs/q2_revenue_recalibration/<联合训练时间戳>
+python -B -X utf8 scripts/collect_q2_solar_entitlement.py
+python -B -X utf8 scripts/run_q2_solar_entitlement.py outputs/q2_revenue_recalibration/<联合训练时间戳>
+python -B -X utf8 scripts/review_q2_revenue_candidate.py outputs/q2_solar_entitlement/<资格修正时间戳>
+python -B -X utf8 scripts/review_q2_revenue_candidate.py outputs/q2_revenue_recalibration/<该次时间戳>
+python -B -X utf8 scripts/diagnose_q2_fit_drivers.py outputs/q2_revenue_recalibration/<该次时间戳>
+python -B -X utf8 scripts/run_q2_exposure_sensitivity.py outputs/q2_revenue_recalibration/<该次时间戳>
+python -B -X utf8 scripts/run_q3_paired_snapshot.py outputs/q2_revenue_recalibration/<该次时间戳>
+python -B -X utf8 scripts/build_q3_gas_evidence.py
+python -B -X utf8 scripts/run_q3_supply_boundary.py outputs/q2_revenue_recalibration/<该次时间戳>
+python -B -X utf8 scripts/run_q3_frozen_response.py outputs/q3_supply_boundary/<上一条输出的时间戳>
+```
+
+时间戳使用相应上一步实际输出的目录名。历史重新训练309个条件候选，三个承诺额度各自按2015—2021选择，然后才运行2022—2024已接触评估，保留全部三组及市政机制对照；没有选择误差最小的承诺额度。审查会拒绝来源或代码已变化的旧实验。Q3入口首先重现同一历史候选；气源入口报告全部六种气源/期末库存边界共24次连续配对。冻结入口核验保存设计和快照，以独立动作不等式固定气电增发上限，再报告另外24次对照的绝对缺供与交互变化。这是指定短期H02渠道实验，不是正式全国情景验收或完整长期H02。总体完成情况见[持续核对](rounds/ANSWER_READY_AUDIT.md)，政府支持覆盖情况见[专项说明](solutions/government_support_status.md)。
+
+2026-10-20后续：联合搜索另有717个实际唯一候选，完整范围/顺序/损失/择优独立审计见`outputs/q2_revenue_recalibration/20261019T223517292100Z/search_review.json`。它用先前完整训练作起点，不覆盖原309次研究。20年资格工厂通过现有政策接口配置，不修改旧研究源码；政策对照固定各组既有参数、共六案，不能称为重新训练。新取得官方原件先核验再登记；`collect_q2_solar_entitlement.py`在原件已存在时离线核验，不覆盖或自动刷新原件哈希。需求趋势失败试验可用`diagnose_q2_nonpower_trend.py`复现，未迁移系统模型。
+
 安装 `requirements-q2.txt`，数据审查和Q1回归还需已有的 `requirements-data.txt`、`requirements-q1.txt`。当前实测环境为Python3.12、Mesa3.3.1、SciPy1.16.3，原环境不自动升级依赖。
 
 ```powershell
@@ -74,5 +125,20 @@ V7统一Issue #7共同入口：`python -B -X utf8 run.py q2 --config workflow/q2
 复现只承诺冻结假设内的确定性结果；碳排放留出缺测、统计桥接、代表日和反复使用评估窗口的限制见[模型修订记录](solutions/p2-lb-national-review.md)。
 
 ## 版本与恢复
+
+2026-10-20后续修正入口（历史验证和Q3统一使用光伏资格＋独立投资审核工厂）：
+
+```powershell
+python -B -X utf8 scripts/run_q2_corrected_recalibration.py --workers 4
+python -B -X utf8 scripts/review_q2_joint_search.py outputs/q2_revenue_recalibration/20261019T225922280430Z
+python -B -X utf8 scripts/run_q2_corrected_followups.py timing outputs/q2_revenue_recalibration/20261019T225922280430Z
+python -B -X utf8 scripts/run_q2_corrected_followups.py snapshot outputs/q2_revenue_recalibration/20261019T225922280430Z
+python -B -X utf8 scripts/run_q2_corrected_followups.py boundary outputs/q2_revenue_recalibration/20261019T225922280430Z
+python -B -X utf8 scripts/run_q3_frozen_response.py outputs/q3_supply_boundary/20261019T230931220030Z
+python -B -X utf8 scripts/collect_q2_coal_prices.py
+python -B -X utf8 scripts/diagnose_q2_coal_price.py outputs/q2_revenue_recalibration/20261019T225922280430Z
+```
+
+新运行会生成新时间目录，后续参数改为该实际目录。旧后续脚本直接调用旧工厂，修正版历史必须使用`run_q2_corrected_followups.py`；适配器在运行记录中声明工厂和源哈希，且核对历史逐项复现。电煤原件已存在时离线核查；价格会计诊断不改变系统价格或投资轨迹。详见[本轮实际结果](solutions/q2_corrected_round_20261020.md)。
 
 `archive/organization_20261017/file_disposition.csv` 逐文件记录旧路径→新位置或删除理由。修改过的文档/脚本原字节保存在 `edited_originals.zip`；复算前的结果与目录在 `prior_results.zip`。恢复时按该映射提取单个文件，不把全部旧目录覆盖回当前工程。

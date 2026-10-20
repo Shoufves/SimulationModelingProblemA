@@ -1,0 +1,89 @@
+..............EE...EE
+======================================================================
+ERROR: test_old_plus_new_separates_stock_from_annual_operation (test_q2_exposure.NationalExposureTests.test_old_plus_new_separates_stock_from_annual_operation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q2_exposure.py", line 113, in test_old_plus_new_separates_stock_from_annual_operation
+    self.assertEqual(m.make_operation()["plants"]["wind"]["capacity_mw"], 150)
+                     ^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 994, in make_operation
+    op["demands"].update(c.demand())
+                         ^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 284, in demand
+    return self.demands_for(self.model.year,self.requested)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 264, in demands_for
+    m.suppliers[carrier].price+m.direct_carbon_cost(carrier))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 604, in direct_carbon_cost
+    return self.carbon*coverage*EF[fuel]
+           ^^^^^^^^^^^
+AttributeError: 'NationalModel' object has no attribute 'carbon'
+
+======================================================================
+ERROR: test_opt_out_keeps_full_birth_year_and_zero_retirement_year (test_q2_exposure.NationalExposureTests.test_opt_out_keeps_full_birth_year_and_zero_retirement_year)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q2_exposure.py", line 163, in test_opt_out_keeps_full_birth_year_and_zero_retirement_year
+    self.assertEqual(m.make_operation()["plants"]["wind"]["capacity_mw"], 100)
+                     ^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 994, in make_operation
+    op["demands"].update(c.demand())
+                         ^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 284, in demand
+    return self.demands_for(self.model.year,self.requested)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 264, in demands_for
+    m.suppliers[carrier].price+m.direct_carbon_cost(carrier))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 604, in direct_carbon_cost
+    return self.carbon*coverage*EF[fuel]
+           ^^^^^^^^^^^
+AttributeError: 'NationalModel' object has no attribute 'carbon'
+
+======================================================================
+ERROR: test_retirement_year_has_output_exposure_but_zero_end_stock (test_q2_exposure.NationalExposureTests.test_retirement_year_has_output_exposure_but_zero_end_stock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q2_exposure.py", line 122, in test_retirement_year_has_output_exposure_but_zero_end_stock
+    self.assertEqual(m.make_operation()["plants"]["wind"]["capacity_mw"], 50)
+                     ^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 994, in make_operation
+    op["demands"].update(c.demand())
+                         ^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 284, in demand
+    return self.demands_for(self.model.year,self.requested)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 264, in demands_for
+    m.suppliers[carrier].price+m.direct_carbon_cost(carrier))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 604, in direct_carbon_cost
+    return self.carbon*coverage*EF[fuel]
+           ^^^^^^^^^^^
+AttributeError: 'NationalModel' object has no attribute 'carbon'
+
+======================================================================
+ERROR: test_vintage_output_allocation_is_two_to_one_and_closes (test_q2_exposure.NationalExposureTests.test_vintage_output_allocation_is_two_to_one_and_closes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q2_exposure.py", line 193, in test_vintage_output_allocation_is_two_to_one_and_closes
+    op = m.make_operation()
+         ^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 994, in make_operation
+    op["demands"].update(c.demand())
+                         ^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 284, in demand
+    return self.demands_for(self.model.year,self.requested)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 264, in demands_for
+    m.suppliers[carrier].price+m.direct_carbon_cost(carrier))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 604, in direct_carbon_cost
+    return self.carbon*coverage*EF[fuel]
+           ^^^^^^^^^^^
+AttributeError: 'NationalModel' object has no attribute 'carbon'
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.118s
+
+FAILED (errors=4)

@@ -1,0 +1,48 @@
+[
+  {
+    "duplicate": "data/raw/q2_scope_components/cec2014_portal.txt",
+    "canonical": "data/raw/q2_capacity_detail/cec2014_portal.txt",
+    "sha256": "36bf16d823fb9c518a1aeed8b62eedddd37ed80cc51fe60213b3cc04792e42a5",
+    "acquisition_records": [],
+    "reason": "Byte-identical canonical original/derived text retained; no independent observation removed"
+  },
+  {
+    "duplicate": "data/raw/q2_scope_components/nea_renewable_2024.txt",
+    "canonical": "data/raw/q2_capacity_detail/nea_renewable_2024.txt",
+    "sha256": "65ba7036d30b086e17a574b6cef2bde6485f90cd9bfb43102b6aadf3e8bac0a1",
+    "acquisition_records": [],
+    "reason": "Byte-identical canonical original/derived text retained; no independent observation removed"
+  },
+  {
+    "duplicate": "data/raw/q2_revenue/ndrc_gas_tariff_2014.html",
+    "canonical": "data/raw/q2_revenue/ndrc_gas_tariff_2014_3009.html",
+    "sha256": "1dcaf346cfac0ef53c998c6184a0816ffe4d89152bc1f222925169d970f64e50",
+    "acquisition_records": [
+      {
+        "path": "data/raw/q2_revenue/ndrc_gas_tariff_2014.html",
+        "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/201501/t20150114_963735.html",
+        "sha256": "1dcaf346cfac0ef53c998c6184a0816ffe4d89152bc1f222925169d970f64e50",
+        "retrieved_at": "2026-10-19T19:25:19.015755+00:00",
+        "admitted": false,
+        "status": "original_saved_review_pending"
+      }
+    ],
+    "reason": "Byte-identical canonical original/derived text retained; no independent observation removed"
+  },
+  {
+    "duplicate": "data/raw/q2_revenue/ndrc_waste_tariff_2012.html",
+    "canonical": "data/raw/q2_revenue/ndrc_waste_tariff_2012_801.html",
+    "sha256": "600ecd1e7158e22e0c697c403e798fa145f2da97c2a5e901a2b1a59b5742d6cb",
+    "acquisition_records": [
+      {
+        "path": "data/raw/q2_revenue/ndrc_waste_tariff_2012.html",
+        "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/201204/t20120410_964415.html",
+        "sha256": "600ecd1e7158e22e0c697c403e798fa145f2da97c2a5e901a2b1a59b5742d6cb",
+        "retrieved_at": "2026-10-19T19:25:18.690279+00:00",
+        "admitted": false,
+        "status": "original_saved_review_pending"
+      }
+    ],
+    "reason": "Byte-identical canonical original/derived text retained; no independent observation removed"
+  }
+]

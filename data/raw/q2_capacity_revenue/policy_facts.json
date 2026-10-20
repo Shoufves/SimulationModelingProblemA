@@ -1,0 +1,86 @@
+{
+  "status": "historical_policy_evidence_not_national_cash_observation",
+  "shanghai_2019": {
+    "effective_from": "2019-09-01",
+    "fully_adjusted_from": "2020-09-01",
+    "peaking_capacity_nominal_cny_per_kw_month": 37.01,
+    "chp_capacity_nominal_cny_per_kw_month": 36.5,
+    "peaking_energy_nominal_cny_per_kwh": 0.4802,
+    "peaking_9e_first_300_hours_energy_premium_cny_per_kwh": 0.15,
+    "chp_energy_hour_bands": [
+      {
+        "up_to_hours": 2500,
+        "price": 0.5044
+      },
+      {
+        "up_to_hours": 5000,
+        "price": 0.424
+      },
+      {
+        "over_hours": 5000,
+        "price": "Shanghai coal benchmark"
+      }
+    ],
+    "distributed_single_part_cny_per_kwh": 0.787,
+    "vat_inclusive": true,
+    "limitation": "Eligible existing/resolved-tariff projects and five named exceptions; staged adjustment; not all gas capacity"
+  },
+  "shanghai_2024": {
+    "effective_from": "2024-07-01",
+    "peaking_cny_per_kw_month": 37.01,
+    "chp_cny_per_kw_month": 36.5,
+    "vat_inclusive": true,
+    "non_peak_months": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      11
+    ],
+    "peak_months": [
+      1,
+      7,
+      8,
+      12
+    ],
+    "capacity_basis": "Approved capacity outside summer/winter; declared maximum output within licence in peak months",
+    "peak_month_deduction_by_event_count": {
+      "2": 0.1,
+      "3": 0.2,
+      "4": 0.5,
+      "5_or_more": 1.0
+    },
+    "limitation": "Own-cause zero-generation months generally receive zero except planned maintenance/normal standby; grid/gas/force-majeure exemptions; provisional payment then true-up"
+  },
+  "guangdong_2023": {
+    "effective_from": "2024-01-01",
+    "gas_nominal_cny_per_kw_year": 100,
+    "vat_inclusive": true,
+    "capacity_basis": "Monthly declared maximum output",
+    "monthly_rate": "annual_rate / 12",
+    "monthly_deduction_by_event_count": {
+      "2": 0.1,
+      "3": 0.5,
+      "4_or_more": 1.0
+    },
+    "repeated_full_deduction_rule": "Three fully deducted months in a natural year cancels eligibility",
+    "new_plant_start": "month after commissioning",
+    "funding": "All provincial industrial/commercial users, proportional to monthly consumption, system operating expense",
+    "limitation": "Compliant in-service public plants only; excludes self-supply/noncompliant plants; actual declarations, deductions and receipts unobserved"
+  },
+  "nea_capacity_fee_inclusion": {
+    "explicit_definition_years": [
+      2016,
+      2017
+    ],
+    "definition": "average feed-in tariff = electricity sales revenue / exported electricity * 1.17",
+    "explicit_capacity_exclusion_found": false,
+    "capacity_fee_included_by_province_and_year": "unknown",
+    "inferred_overlap_risk": true,
+    "modelling_decision": "Do not add capacity revenue on top of NEA income-equivalent mean tariff absent reconciled decomposition",
+    "additional_limit": "2018 lacks this formula footnote; 2013-2015 saved HTML is abridged and lacks complete annex definitions"
+  }
+}

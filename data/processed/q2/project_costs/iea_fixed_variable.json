@@ -1,0 +1,48 @@
+{
+  "source": "data/raw/q2_project_costs/iea_projected_costs_2020_data.xlsx",
+  "source_sha256": "74782355333e065462b1cd3b2468643bebebad0db0ae42d2c8996926aaa3881a",
+  "scope": "China submitted hypothetical new plants commissioning 2025; net capacity and net output",
+  "status": "derived_technical_reference_not_historical_observation",
+  "method": "OM(cf)=variable + fixed/(8760*cf); same plant at 85% and 50% utilisation",
+  "parameters": {
+    "gas": {
+      "fixed_usd_2018_per_net_mw_year": 26000.000000000007,
+      "variable_om_usd_2018_per_net_mwh": 9.999999999999998,
+      "nuclear_fuel_usd_2018_per_net_mwh": 0,
+      "overnight_usd_2018_per_net_kw": 560.0,
+      "source_cells": {
+        "3.11.a.b!N24": 13.4918076819769,
+        "3.20a.b!N24": 15.93607305936073,
+        "3.2.a.b!F24": 560.0
+      },
+      "recovered_at_85": 13.4918076819769,
+      "recovered_at_50": 15.93607305936073
+    },
+    "coal": {
+      "fixed_usd_2018_per_net_mw_year": 37000.00000000004,
+      "variable_om_usd_2018_per_net_mwh": 9.999999999999993,
+      "nuclear_fuel_usd_2018_per_net_mwh": 0,
+      "overnight_usd_2018_per_net_kw": 800.0,
+      "source_cells": {
+        "3.12!N22": 14.969110932044048,
+        "3.21!N22": 18.447488584474886,
+        "3.3!F22": 800.0
+      },
+      "recovered_at_85": 14.969110932044048,
+      "recovered_at_50": 18.44748858447489
+    },
+    "nuclear": {
+      "fixed_usd_2018_per_net_mw_year": 84999.99999999999,
+      "variable_om_usd_2018_per_net_mwh": 15.000000000000016,
+      "nuclear_fuel_usd_2018_per_net_mwh": 10.0,
+      "overnight_usd_2018_per_net_kw": 2500.0,
+      "source_cells": {
+        "3.13.a.b1.b2!M13": 26.415525114155265,
+        "3.22.a.b1.b2!M13": 34.40639269406394,
+        "3.4.a.b!E13": 2500.0
+      },
+      "recovered_at_85": 26.415525114155265,
+      "recovered_at_50": 34.40639269406394
+    }
+  }
+}

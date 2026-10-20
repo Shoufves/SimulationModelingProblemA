@@ -1,0 +1,35 @@
+test_candidate_learning_does_not_count_new_fleet_savings_twice (test_q2_thermal_vintages.ThermalVintageTests.test_candidate_learning_does_not_count_new_fleet_savings_twice) ... ok
+test_candidate_learning_uses_actual_mixture_and_ets_fuel_term (test_q2_thermal_vintages.ThermalVintageTests.test_candidate_learning_uses_actual_mixture_and_ets_fuel_term) ... ok
+test_disabled_and_unavailable_exactly_reproduce_original (test_q2_thermal_vintages.ThermalVintageTests.test_disabled_and_unavailable_exactly_reproduce_original) ... ok
+test_future_planning_uses_known_commissioning_and_retires_old_units (test_q2_thermal_vintages.ThermalVintageTests.test_future_planning_uses_known_commissioning_and_retires_old_units) ... ok
+test_initial_fleet_and_initial_pipeline_not_retrofitted (test_q2_thermal_vintages.ThermalVintageTests.test_initial_fleet_and_initial_pipeline_not_retrofitted) ... ok
+test_invalid_technology_and_efficiency (test_q2_thermal_vintages.ThermalVintageTests.test_invalid_technology_and_efficiency) ... ok
+test_joint_thermal_audit_removes_failed_plant_then_rescreens_survivor (test_q2_thermal_vintages.ThermalVintageTests.test_joint_thermal_audit_removes_failed_plant_then_rescreens_survivor) ... ok
+test_marginal_audit_values_fuel_saving_without_fictitious_energy_sales (test_q2_thermal_vintages.ThermalVintageTests.test_marginal_audit_values_fuel_saving_without_fictitious_energy_sales) ... ok
+test_mixture_is_exposure_weighted_harmonic_not_arithmetic (test_q2_thermal_vintages.ThermalVintageTests.test_mixture_is_exposure_weighted_harmonic_not_arithmetic) ... ok
+test_other_candidate_keeps_annual_energy_budget (test_q2_thermal_vintages.ThermalVintageTests.test_other_candidate_keeps_annual_energy_budget) ... ok
+test_paid_commissioning_preserves_project_efficiency (test_q2_thermal_vintages.ThermalVintageTests.test_paid_commissioning_preserves_project_efficiency) ... ok
+test_real_annual_fuel_cash_and_cohort_emissions_close (test_q2_thermal_vintages.ThermalVintageTests.test_real_annual_fuel_cash_and_cohort_emissions_close) ... ok
+test_thermal_candidate_coexists_with_renewable_vintage_module (test_q2_thermal_vintages.ThermalVintageTests.test_thermal_candidate_coexists_with_renewable_vintage_module) ... ok
+test_thermal_support_requires_incremental_energy_and_honours_zero_fraction (test_q2_thermal_vintages.ThermalVintageTests.test_thermal_support_requires_incremental_energy_and_honours_zero_fraction) ... ERROR
+test_zero_exposure_does_not_invent_learning_sample (test_q2_thermal_vintages.ThermalVintageTests.test_zero_exposure_does_not_invent_learning_sample) ... ok
+
+======================================================================
+ERROR: test_thermal_support_requires_incremental_energy_and_honours_zero_fraction (test_q2_thermal_vintages.ThermalVintageTests.test_thermal_support_requires_incremental_energy_and_honours_zero_fraction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q2_thermal_vintages.py", line 174, in test_thermal_support_requires_incremental_energy_and_honours_zero_fraction
+    full = m.thermal_candidate_npv("gas", 10)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_thermal_vintages.py", line 214, in thermal_candidate_npv
+    contribution = delta_energy * (self.tariff(tech) - self.variable_om(tech)) - delta_fuel * self.suppliers[tech].price
+                                   ^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 905, in tariff
+    return self.revenue_policy.energy_tariff(self.year,tech)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'types.SimpleNamespace' object has no attribute 'energy_tariff'
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.735s
+
+FAILED (errors=1)

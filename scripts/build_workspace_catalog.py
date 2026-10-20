@@ -59,6 +59,29 @@ def sources(aliases):
         specs.append(('q1','data/catalog/q1_sources.json','data/catalog/q1_sources.json'))
     if (CAT/'q2_national_input_review.json').is_file():
         specs.append(('q2','data/catalog/q2_national_input_review.json','data/catalog/q2_national_input_review.json'))
+    for namespace,manifest in (
+        ('q2_revenue','data/raw/q2_revenue/source_inventory.json'),
+        ('q2_technology_scope','data/raw/q2_technology_scope/source_manifest.json'),
+        ('q2_fiscal','data/raw/q2_fiscal/source_manifest.json'),
+        ('q2_capacity_detail','data/raw/q2_capacity_detail/source_manifest.json'),
+        ('q2_scope_components','data/raw/q2_scope_components/source_manifest.json'),
+        ('q2_waste_fossil_ef','data/raw/q2_waste_fossil_ef/source_manifest.json'),
+        ('q2_project_costs','data/raw/q2_project_costs/manifest.json'),
+        ('q2_bioeconomics','data/raw/q2_bioeconomics/source_manifest.json'),
+        ('q2_waste_boundary','data/raw/q2_waste_boundary/source_manifest.json'),
+        ('q2_capacity_revenue','data/raw/q2_capacity_revenue/source_manifest.json'),
+        ('q2_cfd','data/raw/q2_cfd/source_manifest.json'),
+        ('q2_settlement_review','data/raw/q2_settlement_review/source_manifest.json'),
+        ('q2_gas_reit','data/raw/q2_gas_reit/source_manifest.json'),
+        ('q2_solar_entitlement','data/raw/q2_solar_entitlement/source_manifest.json'),
+        ('q2_coal_prices','data/raw/q2_coal_prices/source_manifest.json'),
+        ('q2_coal_prices_extension','data/raw/q2_coal_prices_extension/source_manifest.json'),
+        ('q2_thermal_efficiency_history','data/raw/q2_thermal_efficiency_history/source_manifest.json'),
+        ('q2_investor_behavior','data/raw/q2_investor_behavior/source_manifest.json'),
+        ('q2_coal_tax_basis','data/raw/q2_coal_tax_basis/source_manifest.json'),
+    ):
+        if (ROOT/manifest).is_file():
+            specs.append((namespace,manifest,manifest))
     specs.extend(('lb/'+('base' if Path(r['path'][len(LIB):]).parent.as_posix()=='.' else Path(r['path'][len(LIB):]).parent.as_posix()),r['path'],r['target']) for r in manifests)
     evidence=defaultdict(list)
     for review in load(ROOT/'data/evidence_reviews.json')['reviews']:
@@ -67,9 +90,42 @@ def sources(aliases):
     for namespace,old_manifest,manifest in specs:
         obj=load(ROOT/manifest)
         entries=obj if isinstance(obj,list) else obj.get('sources',[])
+        if namespace=='q2_capacity_revenue':
+            entries=[dict(row,publisher='Shanghai / Guangdong official policy',
+                notes='Regional capacity tariff rules only; do not add on top of NEA revenue-equivalent mean without decomposition')
+                for row in entries if row['role']=='new_official_local_policy_original']
+        if namespace=='q2_bioeconomics':
+            entries=[dict(row,id=key,path=(Path(manifest).parent/row['file']).as_posix(),
+                file=(Path(manifest).parent/row['file']).as_posix()) for key,row in obj.items()]
+        if namespace=='q2_project_costs':
+            entries=[dict(obj,id='iea_cost_workbook_2020',publisher='IEA / OECD-NEA')]
+        if namespace=='q2_waste_boundary':
+            entries=[dict(obj,id='nea_2015_waste_briefing',url=obj['source_url'],
+                path=(Path(manifest).parent/obj['path']).as_posix())]
         for row in entries:
             if not isinstance(row,dict): continue
-            sid=row.get('id',row.get('source_id',row.get('path','') if namespace=='q2' else ''))
+            if namespace=='q2_fiscal':
+                row={**row,'path':(Path(manifest).parent/row['source_file']).as_posix(),
+                     'publisher':'Ministry of Finance of China'}
+            if namespace=='q2_waste_fossil_ef':
+                original=(ROOT/'data/raw'/row['file']).resolve()
+                if not original.is_relative_to(ROOT/'data/raw'):
+                    raise ValueError('Waste evidence outside raw directory')
+                row={**row,'path':original.relative_to(ROOT).as_posix(),
+                     'file':original.relative_to(ROOT).as_posix(),
+                     'publisher':'Original research publisher',
+                     'notes':'Cross-study sensitivity bounds only; not paired plant measurements or national emission factor'}
+            if namespace in {'q2_capacity_detail','q2_scope_components'}:
+                original=(ROOT/Path(manifest).parent/row['file']).resolve()
+                if not original.is_relative_to(ROOT/'data/raw'):
+                    raise ValueError('Capacity reference outside raw evidence directory')
+                row={**row,'path':original.relative_to(ROOT).as_posix(),
+                     'file':original.relative_to(ROOT).as_posix(),
+                     'publisher':row.get('kind','scope-specific source'),
+                     'allowed_research_use':('Capacity/method review only; national and >=6MW coverage, vintages and quarantined errors retained'
+                         if namespace=='q2_capacity_detail' else
+                         'Pumped storage anchors and sampled waste carbon fractions only; no automatic EI mapping or nationwide carbon extrapolation')}
+            sid=row.get('id',row.get('source_id',row.get('path','') if namespace=='q2' or namespace.startswith('q2_') else ''))
             oldfile=str(row.get('file',row.get('path',''))).replace('\\','/')
             attempts=[]
             if oldfile:
@@ -82,18 +138,20 @@ def sources(aliases):
                 candidate=(ROOT/oldfile).resolve()
                 if not candidate.is_relative_to(ROOT/'data/raw/q1'):raise ValueError('Q1 original outside dedicated source directory')
                 canonical=candidate.relative_to(ROOT).as_posix()
-            elif namespace=='q2':
+            elif namespace=='q2' or namespace.startswith('q2_'):
                 candidate=(ROOT/oldfile).resolve()
                 if not candidate.is_relative_to(ROOT/'data') or candidate.is_relative_to(ROOT/'data/restricted'):
                     raise ValueError('Q2 reference outside public data directory')
                 canonical=candidate.relative_to(ROOT).as_posix()
             exists=bool(canonical and (ROOT/canonical).is_file())
             filehash=sha(ROOT/canonical) if exists else ''
+            if namespace.startswith('q2_') and exists and row.get('sha256') != filehash:
+                raise ValueError('Research source hash differs from acquisition manifest: '+canonical)
             registry.append(dict(source_key=namespace+':'+sid,namespace=namespace,original_source_id=sid,
                 title=row.get('title',row.get('allowed_use','')),publisher=row.get('agency',row.get('publisher','')),
                 url=row.get('url',''),canonical_path=canonical,sha256=filehash,
                 content_group=('sha256:'+filehash) if filehash else '',
-                original_path=oldfile,registry_path=manifest,status=row.get('status','registered'),
+                original_path=oldfile,registry_path=manifest,status=('research_reference_not_production_admitted' if namespace.startswith('q2_') else row.get('status','registered')),
                 file_available=exists,notes=row.get('notes',row.get('note',row.get('review',''))),
                 original_record=row,evidence_files=evidence[sid] if namespace=='mmj' else [],
                 evidence_available=bool(evidence[sid]) if namespace=='mmj' else exists))
@@ -112,7 +170,7 @@ def datasets(refs):
     rows=[]
     paths=sorted((ROOT/'data/processed').rglob('*.csv'))+sorted((ROOT/'data/observations').glob('*.json'))
     paths += [ROOT/'data/processed/attachment_assets.json']
-    paths += sorted((ROOT/'data/processed/q2').glob('*.json')) if (ROOT/'data/processed/q2').is_dir() else []
+    paths += sorted((ROOT/'data/processed/q2').rglob('*.json')) if (ROOT/'data/processed/q2').is_dir() else []
     for p in paths:
         rel=p.relative_to(ROOT).as_posix()
         if '/unified/' in rel: continue
@@ -139,6 +197,14 @@ def datasets(refs):
             status='q2_author_reviewed_conditional_research'
             use='Q2全国聚合条件模型；逐用途审查data/catalog/q2_national_input_review.json；不替代原契约或团队批准'
             boundary='原图复核的NBS值、原始API/CSV匹配、BTR CO2分项和IEA技术参照；重建及外推另列假设；PEO代理/CO2/已接触验证边界必须保留。'
+        if rel.startswith('data/processed/q2/revenue/'):
+            status='research_evidence_not_production_admitted'
+            use='收入与政策机制复核；来源审查见data/catalog/q2_revenue_review.json'
+            boundary='历史报表口径、含税和已含补贴须保留；全国预算、企业到账、资格初态及毛净电量未完成统一准入，不进入默认全国模型。'
+        if rel.startswith('data/processed/q2/electricity_scope/'):
+            status='research_evidence_not_production_admitted'
+            use='EI2025完整同版发电量及原单元格核对；见extraction_review.json'
+            boundary='大陆毛发电；Other保留未分类/统计差额/抽蓄等组成未知，地热生物质其他不改名纯生物质；不自动替换原全国输入。'
         if rel == 'data/processed/q1/cost_method_parameters.csv':
             use='mmj baf1975原参数；Q1风电统一融资条件成本；见docs/solutions/p1-yx-integration.md'
             boundary='2024 USD、25年、3/5/7%实际WACC研究假设；国家新项目均值未配对；CF通常事前估计，O&M为报告假设；非保供系统成本或全国在运成本。'

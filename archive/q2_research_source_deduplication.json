@@ -1,0 +1,40 @@
+[
+  {
+    "duplicate": "data/raw/q2_technology_scope/nea_renewable_2024.html",
+    "canonical": "data/raw/batch1_national/nea_renewable_2024.html",
+    "sha256": "13fabe3f96b292ab2aab7ab2332541d8839fe21e1f144b2f56184f65fbe552cd",
+    "acquisition_records": [
+      {
+        "path": "data/raw/q2_technology_scope/nea_renewable_2024.html",
+        "url": "https://www.nea.gov.cn/20250221/e10f363cabe3458aaf78ba4558970054/c.html",
+        "publisher": "NEA",
+        "retrieved_at_utc": "2026-10-19T18:12:19.515898+00:00",
+        "sha256": "13fabe3f96b292ab2aab7ab2332541d8839fe21e1f144b2f56184f65fbe552cd",
+        "bytes": 13012,
+        "locator": "（四）生物质发电建设和运行情况",
+        "allowed_research_use": "2024 capacity4599万kW; generation2083亿kWh. Existing catalog already held selected capture",
+        "production_admitted": false
+      }
+    ],
+    "reason": "Exact bytes already retained in the canonical source; no source or independent observation lost"
+  },
+  {
+    "duplicate": "data/raw/q2_technology_scope/biomass_2024_people.html",
+    "canonical": "data/raw/q1/bio_industry_interview.html",
+    "sha256": "3bb47743036f21a2dba4bebda60b0557a0bf11f4ff9357ce7ad2c9d7df6337b1",
+    "acquisition_records": [
+      {
+        "path": "data/raw/q2_technology_scope/biomass_2024_people.html",
+        "url": "https://paper.people.com.cn/zgnyb/pc/content/202504/14/content_30068709.html",
+        "publisher": "中国能源报/人民日报; industry report interview",
+        "retrieved_at_utc": "2026-10-19T18:19:30.646595+00:00",
+        "sha256": "3bb47743036f21a2dba4bebda60b0557a0bf11f4ff9357ce7ad2c9d7df6337b1",
+        "bytes": 38331,
+        "locator": "《2025中国生物质能产业年度报告》discussion",
+        "allowed_research_use": "2024 agriculture/forestry1709万kW; waste2738万kW. Not the full underlying industry report",
+        "production_admitted": false
+      }
+    ],
+    "reason": "Exact bytes already retained in the canonical source; no source or independent observation lost"
+  }
+]

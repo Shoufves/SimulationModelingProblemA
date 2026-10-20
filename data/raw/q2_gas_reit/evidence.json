@@ -1,0 +1,87 @@
+{
+  "status": "verified_single_project_mechanism_evidence_not_national_calibration",
+  "entity": "深圳市东部电力有限公司；鹏华深圳能源REIT底层项目",
+  "report_year": 2025,
+  "report_sent_date": "2026-03-30",
+  "retrieved_date": "2026-10-20",
+  "source_path": "data/raw/q2_gas_reit/penghua_energy_2025_annual.pdf",
+  "source_sha256": "3dcb3818e94760a553aebe5c5db8f8fd893a5f79c28561f9d4677677768fc88b",
+  "source_url": "https://dataclouds.cninfo.com.cn/sjother2/fund/2026/20260331/1f11af20f3144ed8a3ddf329c7149a47.pdf",
+  "visually_reviewed_physical_pages": [
+    16,
+    17,
+    69
+  ],
+  "source_page_count": 103,
+  "electricity_sales_vat_rate": 0.13,
+  "electricity_sales_vat_physical_page": 69,
+  "revenue_components": [
+    {
+      "category": "电网代购及跨省交易",
+      "revenue_nominal_cny_ex_vat": 42139500.0,
+      "reported_unit": "10k CNY excluding VAT",
+      "physical_page": 17
+    },
+    {
+      "category": "年度双边协商",
+      "revenue_nominal_cny_ex_vat": 840476100.0,
+      "reported_unit": "10k CNY excluding VAT",
+      "physical_page": 17
+    },
+    {
+      "category": "月度双边协商",
+      "revenue_nominal_cny_ex_vat": 7653100.0,
+      "reported_unit": "10k CNY excluding VAT",
+      "physical_page": 17
+    },
+    {
+      "category": "月度转让",
+      "revenue_nominal_cny_ex_vat": -37477900.0,
+      "reported_unit": "10k CNY excluding VAT",
+      "physical_page": 17
+    },
+    {
+      "category": "现货",
+      "revenue_nominal_cny_ex_vat": 293971600.0,
+      "reported_unit": "10k CNY excluding VAT",
+      "physical_page": 17
+    },
+    {
+      "category": "其他电费收入",
+      "revenue_nominal_cny_ex_vat": 85843700.0,
+      "reported_unit": "10k CNY excluding VAT",
+      "physical_page": 17
+    },
+    {
+      "category": "容量电费",
+      "revenue_nominal_cny_ex_vat": 120327300.0,
+      "reported_unit": "10k CNY excluding VAT",
+      "physical_page": 17
+    }
+  ],
+  "total_revenue_nominal_cny_ex_vat": 1352933480.27,
+  "net_exports_kwh": 3151087500.0,
+  "reported_mean_tariff_cny_per_kwh_inc_vat": 0.4852,
+  "rounding_residual_cny": -80.27,
+  "derived": {
+    "capacity_revenue_share": 0.0889380754891118,
+    "mean_total_revenue_per_net_kwh_ex_vat": 0.42935446263234517,
+    "mean_without_capacity_revenue_per_net_kwh_ex_vat": 0.39116850302316264,
+    "mean_without_capacity_and_other_revenue_per_net_kwh_ex_vat": 0.36392593993978267
+  },
+  "comparisons_2024": {
+    "total_revenue_nominal_cny_ex_vat": 1560469240.08,
+    "net_exports_kwh": 3511986500,
+    "reported_mean_tariff_cny_per_kwh_inc_vat": 0.5021,
+    "capacity_revenue": "not_separately_reported_in_the_reviewed_comparison_table"
+  },
+  "admitted_use": "Mechanism/decomposition example and double-counting diagnostic only",
+  "prohibited_uses": [
+    "No national weighting or extrapolation of this project share",
+    "No retroactive 2015-2024 policy or revenue inputs from 2025 rules",
+    "No equation of accrued operating revenue with same-year cash receipts",
+    "No claim that this report identifies NEA 2013-2018 income composition",
+    "No use of valuation forecasts as realised revenue observations"
+  ],
+  "model_parameters_changed": false
+}

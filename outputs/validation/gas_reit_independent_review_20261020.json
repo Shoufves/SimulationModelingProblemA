@@ -1,0 +1,84 @@
+{
+  "reviewed_at": "2026-10-19T22:19:44.609726+00:00",
+  "status": "independent_readonly_review_passed",
+  "scope": "Original PDF inspection, independent Decimal arithmetic, script and evidence interpretation review; only this receipt added. No original/model/training changes.",
+  "source_path": "data/raw/q2_gas_reit/penghua_energy_2025_annual.pdf",
+  "source_sha256": "3dcb3818e94760a553aebe5c5db8f8fd893a5f79c28561f9d4677677768fc88b",
+  "reviewed_files_sha256": {
+    "scripts/review_q2_gas_reit.py": "a3b31f1f6529484a77fb4935d0c80c8fb49d8fe8d7abb01f190a426c9c6a2a72",
+    "docs/sources/q2_gas_reit.md": "c29fe95ec5ed9d61e3512c08baaebecbae5848e2ea086af3da89045bff9bcec3",
+    "data/raw/q2_gas_reit/evidence.json": "a7f0748810bb55772b1be6c3c82e5846ce0d2348d216e68d77828ff5c572ceac",
+    "data/raw/q2_gas_reit/source_manifest.json": "c0ddda24e69f1af312f1873b9ef5a4480e41ff502dbc5fde1c6426fa2cc0ef9b"
+  },
+  "report_year": 2025,
+  "report_sent_date": "2026-03-30",
+  "page_count": 103,
+  "visually_reviewed_physical_pages": [
+    1,
+    16,
+    17,
+    69
+  ],
+  "checks": {
+    "original_sha256_matches_expected": true,
+    "report_identity_and_date": true,
+    "direct_project_company_13pct_VAT_anchor": true,
+    "components_rounding_within_7_times_50_cny": true,
+    "five_mode_volumes_close_exactly": true,
+    "2025_mean_rounds_to_disclosure": true,
+    "2024_mean_rounds_to_disclosure": true,
+    "saved_total_and_volume_match": true,
+    "saved_components_match": true,
+    "saved_rounding_residual_matches": true
+  },
+  "vat_evidence": {
+    "physical_page": 69,
+    "printed_page": 69,
+    "heading": "(2)项目公司主要税种及税率",
+    "item": "(a)",
+    "verbatim_quote": "增值税，电力销售、商品销售收入按13%的税率计算销项税，并按扣除当期允许抵扣的进项税额后的差额计缴增值税；",
+    "rate": "0.13",
+    "classification": "direct project-company electricity-sales VAT disclosure, not inferred from rounded tariff",
+    "limits": "This is output VAT; payable VAT is after input credits. Do not confuse with fund asset-management 3% VAT or LNG purchase 9% VAT."
+  },
+  "independent_recalculations": {
+    "2025_total_sales_revenue_nominal_cny_ex_vat": "1352933480.27",
+    "2025_settlement_net_exports_kwh": "3151087500",
+    "2025_capacity_revenue_nominal_cny_ex_vat": "120327300",
+    "2025_capacity_share_percent": "8.893807548911179256051806480",
+    "seven_component_sum_cny": "1352933400.00",
+    "component_sum_minus_exact_total_cny": "-80.27",
+    "rounding_bound_cny": "350",
+    "2025_total_sales_revenue_per_net_kwh_inc_vat": "0.4851705427745500561314149480",
+    "2025_total_sales_revenue_per_net_kwh_ex_vat": "0.4293544626323451824171813699",
+    "2025_revenue_without_capacity_per_net_kwh_ex_vat": "0.3911685030231626382955090901",
+    "2025_revenue_without_capacity_and_other_per_net_kwh_ex_vat": "0.3639259399397826940699044378",
+    "2024_comparison_sales_revenue_nominal_cny_ex_vat": "1560469240.08",
+    "2024_comparison_net_exports_kwh": "3511986500",
+    "2024_comparison_mean_inc_vat": "0.5020891285574133044076336854",
+    "overstatement_if_reconstructing_exact_ex_vat_revenue_from_rounded_04852_cny": "82143.623805309734513274"
+  },
+  "interpretation": "For this 2025 project, comprehensive settlement mean includes capacity and other electricity revenues. Adding capacity revenue again after converting all items to a common VAT basis double counts; retain negative monthly-transfer revenue. Rounded mean tariffs cannot reproduce exact revenue.",
+  "comparison_2024_limit": "Only a 2024 aggregate comparison inside the acquired 2025 annual report was verified. No independent 2024 annual report or separately disclosed 2024 capacity component was obtained by this review.",
+  "prohibited_inferences": [
+    "No national extrapolation or weighting from the project capacity-income share.",
+    "No 2025 backfill into 2015-2024 training or evaluation.",
+    "No assertion of NEA historical average-tariff income composition.",
+    "No equation of operating revenue with same-year cash receipts.",
+    "No valuation forecast treated as realised revenue."
+  ],
+  "new_blocking_issues": [],
+  "followup_reviews": [
+    {
+      "reviewed_at": "2026-10-19T22:24:35.214033+00:00",
+      "previous_reviewed_files_sha256": {
+        "scripts/review_q2_gas_reit.py": "a3b31f1f6529484a77fb4935d0c80c8fb49d8fe8d7abb01f190a426c9c6a2a72",
+        "docs/sources/q2_gas_reit.md": "c29fe95ec5ed9d61e3512c08baaebecbae5848e2ea086af3da89045bff9bcec3",
+        "data/raw/q2_gas_reit/evidence.json": "a7f0748810bb55772b1be6c3c82e5846ce0d2348d216e68d77828ff5c572ceac",
+        "data/raw/q2_gas_reit/source_manifest.json": "c0ddda24e69f1af312f1873b9ef5a4480e41ff502dbc5fde1c6426fa2cc0ef9b"
+      },
+      "changes_verified": "Extractor now requires page69 direct electricity-sales 13% VAT phrase; evidence records .13/page69 and visual page69; documentation adds direct VAT source, common tax basis and rounded-tariff limitation. Read-only extraction exactly matches updated evidence. Original PDF hash unchanged.",
+      "updated_extraction_matches_saved_evidence": true
+    }
+  ]
+}

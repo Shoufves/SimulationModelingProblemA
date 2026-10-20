@@ -10,7 +10,7 @@ from math import exp, sqrt, log, fsum
 
 from mesa import Agent, Model
 
-from .q2_operations import Q2Error, operate
+from .q2_operations import Q2Error, operate, number
 from .q2_finance import financing_limit, fund_project, service_debt, debt
 from .q2_statistics import coefficient
 from .q2_identification import FUEL_EFFICIENCIES
@@ -48,10 +48,10 @@ def operate_national(operation):
     for key in ("actual_dispatch_cost","behavioral_score","reference_fossil_mwh"):
         if result.get(key) is not None:
             result[key] *= scale
-    for group in ("fuel","generation","demand","storage","balances","stages"):
+    for group in ("fuel","generation","demand","storage","additional_storage","recoveries","balances","stages"):
         for row in result[group]:
             for key,value in list(row.items()):
-                if key.endswith("_mwh") or key in {"combustion_co2_t","residual","objective","max_residual"}:
+                if key.endswith(("_mwh","_co2_t")) or key in {"residual","objective","max_residual"}:
                     row[key] = value*scale
     return result
 
@@ -119,15 +119,16 @@ class NationalGenerator(NationalActor):
         super().__init__(model,name)
         self.initial_capacity, self.reference_cf = capacity,cf
         self.capex_2024,self.om = capex,om
-        self.margin = cf*8760*(model.tariff(name)-om)
-        if name == "wind":
-            self.margin -= 29*model.fx*1000
-        elif name in {"solar","hydro"}:
-            self.margin -= .015*capex
+        self.margin = cf*8760*(model.tariff(name)-model.variable_om(name, fallback=om))
+        fixed=model.fixed_om_per_mw(name, fallback_capex=capex)
+        self.margin -= fixed
         if name in FUELS:
             self.margin -= cf*8760*model.suppliers[name].price/model.efficiency[name]
         if name == "biomass":
             self.margin -= cf*8760*model.suppliers[name].price/.3
+        if model.renewable_vintages and name in {"wind","solar"}:
+            self.project_margin=model.renewable_vintages.prior_project_margin(
+                model,name,model.tariff(name)-model.variable_om(name,fallback=om),fixed)
         self.cash = capacity*capex*.1
         self.loans, self.arrears = [], 0.0
 
@@ -143,20 +144,45 @@ class NationalGenerator(NationalActor):
         if self.name=="hydro":
             limit *= m.theta.get("hydro_construction_response",1)
         if self.name == "solar":
+            limit *= number(m.theta.get("solar_construction_response",1),"solar construction capability")
             tau = a["manufacturing_growth_decay_years"]
             years = max(0,min(m.year,2024)-m.initial_year)
             years += tau*(1-exp(-max(0,m.year-2024)/tau))
             limit *= exp(m.theta.get("solar_construction_growth",0)*years)
         return limit
 
-    def proposal(self, realised_margin):
+    def expected_project_margin(self, *, additional_capacity_mw=0):
+        m=self.model
+        if m.bioenergy and self.name=="biomass":
+            return self.margin+m.bioenergy.expected_margin_per_mw(m,additional_capacity_mw=additional_capacity_mw)
+        if m.renewable_vintages and self.name in {"wind","solar"}:
+            return self.project_margin
+        return self.margin
+
+    def learn_margin(self,realised_margin,*,operation=None,result=None):
+        if operation is not None and operation["plants"][self.name]["capacity_mw"]<=0:
+            return  # No operating MW-year means no new full-year margin sample.
+        """Keep fleet beliefs and comparable new-project beliefs separate."""
+        m=self.model
+        rate=m.theta["expectation_rate"]
+        self.margin=(1-rate)*self.margin+rate*realised_margin
+        if m.renewable_vintages and self.name in {"wind","solar"} and operation is not None and result is not None:
+            observed=m.renewable_vintages.observed_project_margin(
+                m,self.name,operation,result,realised_margin)
+            if observed is not None:
+                self.project_margin=(1-rate)*self.project_margin+rate*observed
+
+    def proposal(self, realised_margin, *, operation=None,result=None):
         m,a = self.model,self.model.a
-        self.margin = (1-m.theta["expectation_rate"])*self.margin + m.theta["expectation_rate"]*realised_margin
+        self.learn_margin(realised_margin,operation=operation,result=result)
         r,life,lead = a["discount_rate"],LIFE[self.name],LEAD[self.name]
         capex = m.capex(self.name)
-        annuity = (1-(1+r)**(-life))/r
+        operating_pv = m.energy_pv_factor(lead=lead,life=life)
         pv_cost = sum(capex/lead/(1+r)**t for t in range(lead))
-        npv = self.margin*annuity/(1+r)**(lead-1)-pv_cost
+        project_margin=self.expected_project_margin()
+        energy_npv = project_margin*operating_pv-pv_cost
+        support_npv = m.revenue_policy.investment_value(m,self.name) if m.revenue_policy else 0.0
+        npv = energy_npv+support_npv
         limit = self.construction_limit()
         amount = limit*m.theta["investment_response"] if npv > 0 and m.investment else 0
         if self.name == "wind":
@@ -167,20 +193,32 @@ class NationalGenerator(NationalActor):
             amount *= max(0,1-m.last_curtailment[self.name])**2
         finance_cap = financing_limit(self,capex)
         amount = min(amount,finance_cap,limit)
+        if self.name=="biomass" and m.bioenergy and amount>0:
+            for _ in range(a["marginal_investment_halvings"]+1):
+                candidate_margin=self.expected_project_margin(additional_capacity_mw=amount)
+                if candidate_margin*operating_pv-pv_cost+support_npv>0:
+                    break
+                amount *= .5
+            else:
+                amount=0.0
         marginal = None
         if self.name in {"wind","solar"} and amount>0 and m.last_operation is not None:
             # Audit a candidate's incremental sales, not the old fleet's
             # average sales. Forecast uses only current demand and committed
             # assets; it is not a future realised-observation oracle.
             for _ in range(a["marginal_investment_halvings"]+1):
-                marginal = m.marginal_renewable_margin(self.name,amount)
-                prospective = min(self.margin,marginal)*annuity/(1+r)**(lead-1)-pv_cost
+                marginal,hours = m.marginal_renewable_economics(self.name,amount)
+                marginal_support = m.revenue_policy.investment_value(m,self.name,full_load_hours=hours) if m.revenue_policy else 0.0
+                prospective = min(project_margin,marginal)*operating_pv-pv_cost+marginal_support
                 if prospective>0:
                     break
                 amount *= .5
             else:
                 amount = 0.0
         self.log("investment_proposal",npv_cny_per_mw=npv,expected_margin_cny_per_mw=self.margin,
+                 expected_operating_pv_factor=operating_pv,
+                 expected_new_project_margin_cny_per_mw=project_margin,
+                 energy_only_npv_cny_per_mw=energy_npv,new_support_npv_cny_per_mw=support_npv,
                  capacity_mw=self.capacity,requested_mw=amount,capex_cny_per_mw=capex,
                  construction_limit_mw=limit,finance_limit_mw=finance_cap,cash_cny=self.cash,debt_cny=debt(self),
                  marginal_margin_cny_per_mw=marginal)
@@ -284,16 +322,57 @@ class NationalGovernment(NationalActor):
             for t in m.generators}
         approved = {p["tech"]:min(p["amount"]*ratio,financing_limit(m.generators[p["tech"]],p["capex"]),
             max(0,m.generators[p["tech"]].construction_limit()-committed[p["tech"]])) for p in generation}
+        physical_requests = dict(approved)
+        if m.revenue_policy:
+            approved = m.revenue_policy.limit_awards(m.year,generation,approved)
         approved = m.audit_renewable_portfolio(approved)
-        for p in generation:
+        supported = dict(approved)
+        if m.revenue_policy and m.revenue_policy.new_support:
+            # A finite subsidy award is not a ban on privately financed plants.
+            # Extra capacity must be viable with NO subsidy, including the
+            # joint market's incremental sales. Keep distinct physical cohorts
+            # so an unawarded project never inherits subsidised output meters.
+            merchant_candidates = dict(approved)
+            expanded = set()
+            for p in generation:
+                t = p["tech"]
+                r = a["discount_rate"]
+                energy_npv = m.generators[t].expected_project_margin(additional_capacity_mw=physical_requests[t])
+                energy_npv *= m.energy_pv_factor(lead=p["lead"],life=p["life"])
+                energy_npv -= sum(p["capex"]/p["lead"]/(1+r)**k for k in range(p["lead"]))
+                if physical_requests[t] > approved[t] and energy_npv > 0:
+                    merchant_candidates[t] = physical_requests[t]
+                    expanded.add(t)
+            if expanded:
+                checked = m.audit_renewable_portfolio(merchant_candidates,
+                    support_fractions={t:0.0 for t in expanded})
+                # Never replace a validated supported portfolio with a
+                # componentwise smaller result of the merchant trial.
+                if all(checked[t] >= approved[t] for t in approved):
+                    approved = checked
+                    self.log("merchant_expansion",capacities_mw={t:approved[t]-supported[t] for t in expanded},
+                        rule="positive unsubsidised NPV and joint incremental sales; no support entitlement")
+        tranches = [(p, min(supported[p["tech"]], approved[p["tech"]]), True) for p in generation]
+        tranches += [(p, max(0, approved[p["tech"]]-supported[p["tech"]]), False) for p in generation]
+        for p, amount, receives_support in tranches:
             generator = m.generators[p["tech"]]
-            amount = approved[p["tech"]]
             if amount <= 0:
                 continue
             cost = amount*p["capex"]
             project = dict(id=f"{m.year}/{p['tech']}/{len(m.projects)}",tech=p["tech"],capacity_mw=amount,
                 decision_year=m.year,online_year=m.year+p["lead"],exit_year=m.year+p["lead"]+p["life"],
                 cost=cost,instalment=cost/p["lead"],remaining=cost,status="construction",initial_reconstruction=False)
+            if not receives_support:
+                project["support_eligible"] = False
+            if m.renewable_vintages and p["tech"] in {"wind","solar"}:
+                project["generation_cf"]=m.new_project_cf(p["tech"])
+            if m.revenue_policy:
+                m.revenue_policy.register_project(project)
+                programme=m.revenue_policy.new_support
+                if programme and project["id"] in programme.awards:
+                    m.finance.append(dict(year=m.year,kind="new_subsidy_authorisation",actor=p["tech"],
+                        project=project["id"],nominal_lifetime_commitment_cny=programme.awards[project["id"]]["reserved_nominal_cny"],
+                        cash_delta_cny=0,resource_cost_cny=0))
             m.projects.append(project)
             fund_project(generator,cost,project["id"])
             m.construction_fund += cost
@@ -399,10 +478,25 @@ class NationalGrid(NationalActor):
 
 
 class NationalModel(Model):
-    def __init__(self, data, design, theta, initial_year, *, variant=None, investment=True, substitution=True, detail=True):
+    def __init__(self, data, design, theta, initial_year, *, variant=None, investment=True, substitution=True, detail=True, revenue_policy=None, operating_boundary=None, generation_costs=None, renewable_vintages=None, bioenergy=None, annual_exposure=None):
         super().__init__(seed=design["seed"])
         self.data,self.design,self.theta = data,deepcopy(design),dict(theta)
         self.a = self.design["assumptions"]
+        self.revenue_policy = deepcopy(revenue_policy)
+        self.operating_boundary = deepcopy(operating_boundary)
+        self.generation_costs = deepcopy(generation_costs)
+        self.renewable_vintages = deepcopy(renewable_vintages)
+        self.bioenergy = deepcopy(bioenergy)
+        from .q2_exposure import AnnualExposure
+        if annual_exposure is not None and not isinstance(annual_exposure,AnnualExposure):
+            raise ValueError("Expected an explicit annual exposure convention")
+        self.annual_exposure = deepcopy(annual_exposure)
+        if self.bioenergy and self.bioenergy.fund.last_year!=initial_year:
+            raise Q2Error("invalid_initial_state","Municipal fund and physical model initial years differ")
+        if self.operating_boundary is not None and self.operating_boundary.initial_year!=initial_year:
+            raise Q2Error("invalid_initial_state","Operating boundary and model initial years differ")
+        if self.revenue_policy is not None and self.revenue_policy.fund.last_year != initial_year:
+            raise Q2Error("invalid_initial_state","Public fund and physical model initial years differ")
         self.variant = {k:float(v) for k,v in (variant or {}).items()}
         for key in ("project_equity_fraction","grid_initial_headroom","grid_build_fraction"):
             if key in self.variant:
@@ -426,16 +520,24 @@ class NationalModel(Model):
         fuel_energy["biomass"] = get(data,initial_year,"biofuel_electricity_mwh")/.3*1.10
         prices = dict(coal=88*self.cost_conversion/(6000*4.1868/3600),
                       gas=9.1*self.cost_conversion/.293071,oil=self.a["oil_cost_cny_per_mwh"],biomass=self.a["biomass_cost_cny_per_mwh"])
+        if self.bioenergy:
+            prices["biomass"] *= 1-self.bioenergy.waste_fraction
         self.reference_fuel_prices = dict(prices)
         self.suppliers = {f:NationalSupplier(self,f,e,prices[f]*self.variant.get("fuel_price_multiplier",1)) for f,e in fuel_energy.items()}
         self.initial_generation = {t:get(data,initial_year,("biofuel" if t == "biomass" else t)+"_electricity_mwh") for t in TECHS}
         self.initial_capacities = self.capacity_split(initial_year)
+        if self.operating_boundary is not None:
+            self.operating_boundary.check_initial(self)
         self.initial_additions = {t:max(0,(self.initial_capacities[t]-self.capacity_split(initial_year-3)[t])/3) for t in TECHS}
         self.generators = {}
         capex = dict(coal=800*self.cost_conversion*1000,gas=560*self.cost_conversion*1000,
             nuclear=2500*self.cost_conversion*1000,wind=856*self.fx*1000,solar=591*self.fx*1000,
             hydro=self.a["hydro_capex_cny_per_kw"]*1000,oil=self.a["oil_capex_cny_per_kw"]*1000,
             biomass=self.a["biomass_capex_cny_per_kw"]*1000)
+        if self.generation_costs:
+            if not set(self.generation_costs.parameters).issubset(TECHS):
+                raise Q2Error("invalid_input", "Unknown technology in cost assumptions")
+            capex.update({t:self.generation_costs.capex(t) for t in self.generation_costs.parameters})
         om = dict(coal=14.97*self.cost_conversion,gas=13.49*self.cost_conversion,
             nuclear=(26.42+10)*self.cost_conversion,wind=0,solar=0,hydro=10,oil=100,biomass=100)
         for t in TECHS:
@@ -444,7 +546,9 @@ class NationalModel(Model):
                 # Initial-year generation is a flow; year-end capacity alone
                 # understates utilisation in rapidly expanding technologies.
                 # Midyear commissioning is an explicit aggregate approximation.
-                denominator = (denominator+get(data,initial_year-1,t+"_capacity_mw"))/2
+                previous_capacity=(self.capacity_split(initial_year-1)[t] if self.operating_boundary is not None
+                                   else get(data,initial_year-1,t+"_capacity_mw"))
+                denominator = (denominator+previous_capacity)/2
             cf = min(.9,self.initial_generation[t]/(denominator*8760))
             self.generators[t] = NationalGenerator(self,t,self.initial_capacities[t],cf,capex[t],om[t])
         self.build_initial_cohorts()
@@ -457,9 +561,18 @@ class NationalModel(Model):
             if terminal <= 0:
                 raise Q2Error("invalid_initial_state",f"Negative residual terminal {f}")
             self.consumers[f] = NationalConsumer(self,f,terminal*self.a["direct_fuel_efficiency"][f])
-        self.base_electric = get(data,initial_year,"electricity_generation_mwh")*self.a["grid_efficiency"]
+        own_use = sum(self.initial_generation[t]*(1-self.revenue_policy.export_fraction(initial_year,t))
+                      for t in TECHS) if self.revenue_policy else 0.0
+        pump_input,stat_adjustment=0.0,0.0
+        if self.operating_boundary is not None:
+            own_use += self.operating_boundary.initial_own_use()
+            pump_input=self.operating_boundary.initial_pumping_mwh
+            stat_adjustment=self.operating_boundary.initial_statistical_adjustment_mwh
+        self.base_electric = (get(data,initial_year,"electricity_generation_mwh")-own_use-pump_input-stat_adjustment)*self.a["grid_efficiency"]
         self.base_export = max(0,-get(data,initial_year,"net_elec_imports_mwh"))
         self.base_electric -= self.base_export
+        if self.base_electric<=0:
+            raise Q2Error("invalid_initial_state","Nonpositive terminal electricity after physical boundary deductions")
         self.consumers["electricity"] = NationalConsumer(self,"electricity",self.base_electric)
         self.consumer_by_name = {a.name:a for a in self.consumers.values()}
         # Estimate this structural elasticity strictly from pre-training 2005-2014.
@@ -531,11 +644,16 @@ class NationalModel(Model):
                 op["demands"].update(c.demands_for(future,requested))
                 op["spending_limits"][c.name] = dict(budget_cny=max(0,c.cash+c.endowment(requested))/365)
             for t,p in op["plants"].items():
-                capacity = sum(c["capacity_mw"] for c in self.cohorts if c["tech"]==t and c["status"]=="active" and c["exit_year"]>future)
-                capacity += sum(c["capacity_mw"] for c in self.projects if c["tech"]==t and self.year<c["online_year"]<=future)
-                p["window_energy_budget_mwh"] *= capacity/p["capacity_mw"] if p["capacity_mw"] else 0
+                if self.operating_boundary is not None and t in self.operating_boundary.plants:
+                    continue
+                capacity = self.generation_capacity(t,future)
+                p["window_energy_budget_mwh"] = capacity*24*(self.generators[t].reference_cf if t in {"hydro","nuclear","biomass"} else 1)
                 p["capacity_mw"] = capacity
                 p["ramp_mw_per_hour"] = capacity*.2
+                if self.bioenergy and t=="biomass":
+                    p["window_energy_budget_mwh"]=capacity*24*self.generators[t].reference_cf
+                if self.renewable_vintages and t in {"wind","solar"}:
+                    self.renewable_vintages.update_plant(self,t,p,future)
             op["grid"]["power_mw"] = sum(c["power"] for c in self.grid.network if c["exit"]>future)
             op["grid"]["power_mw"] += sum(c["power"] for c in self.grid.queue if c["kind"]=="grid" and self.year<c["online"]<=future)
             # Future retired storage is unavailable; inherited SOC may only be
@@ -546,29 +664,55 @@ class NationalModel(Model):
             current = self.grid.capacity()[1]
             op["storage"].update(power_mw=sum(c["power"] for c in live+pending),energy_mwh=retained+sum(c["energy"] for c in pending),
                 initial_mwh=self.storage_soc*min(1,retained/current) if current else 0)
+            if self.operating_boundary is not None:
+                self.operating_boundary.refresh_planning(op,future)
+            if self.bioenergy:
+                # The delivery path is an explicitly supplied scenario known
+                # to planning, never future realised national waste data.
+                self.bioenergy.apply(self,op,year=future)
             self.planning_cache[lead] = op
         return deepcopy(self.planning_cache[lead])
 
     def marginal_renewable_margin(self,tech,amount,portfolio=None):
-        op = self.planning_operation(LEAD[tech])
+        return self.marginal_renewable_economics(tech,amount,portfolio)[0]
+
+    def marginal_renewable_economics(self,tech,amount,portfolio=None):
+        # At alpha=0 the commissioning calendar year has no operating sample;
+        # use the first positive-exposure year for the normalised sales belief.
+        offset = int(self.annual_exposure is not None and self.annual_exposure.first_year_fraction==0)
+        horizon = LEAD[tech]+offset
+        year = self.year+horizon
+        candidate_weight = (self.annual_exposure.weight(dict(online_year=self.year+LEAD[tech],
+            exit_year=self.year+LEAD[tech]+LIFE[tech]),year) if self.annual_exposure else 1.0)
+        op = self.planning_operation(horizon)
         for other,capacity in (portfolio or {}).items():
-            if other!=tech and capacity>0 and LEAD[other]<=LEAD[tech]:
-                op["plants"][other]["capacity_mw"] += capacity
-                op["plants"][other]["ramp_mw_per_hour"] += capacity*.2
-                op["plants"][other]["window_energy_budget_mwh"] += capacity*24
+            if other!=tech and capacity>0 and LEAD[other]<=horizon:
+                weight = (self.annual_exposure.weight(dict(online_year=self.year+LEAD[other],
+                    exit_year=self.year+LEAD[other]+LIFE[other]),year) if self.annual_exposure else 1.0)
+                self.add_renewable_candidate(other,op["plants"][other],capacity*weight)
         baseline = operate_national(op)
         previous = sum(r["output_mwh"] for r in baseline["generation"] if r["plant"] in {"wind","solar"})*365
-        op["plants"][tech]["capacity_mw"] += amount
-        op["plants"][tech]["ramp_mw_per_hour"] += amount*.2
-        op["plants"][tech]["window_energy_budget_mwh"] += amount*24
+        self.add_renewable_candidate(tech,op["plants"][tech],amount*candidate_weight)
         result = operate_national(op)
         # Total renewable incremental sales avoid treating displacement of
         # another zero-cost renewable as newly created market demand.
         added = sum(r["output_mwh"] for r in result["generation"] if r["plant"] in {"wind","solar"})*365-previous
-        fixed = 29*self.fx*1000 if tech=="wind" else .015*self.generators[tech].capex_2024
-        return max(0,added)/amount*self.tariff(tech)-fixed
+        fixed = self.fixed_om_per_mw(tech)
+        incremental_hours = max(0,added)/(amount*candidate_weight)
+        # Subsidy entitlement follows the candidate's own exported generation,
+        # not the change in total wind+solar sales. Use the same within-tech
+        # capacity allocation as AnnualRevenuePolicy.settle; displacement of
+        # another renewable is not fictitious extra electricity sales, but it
+        # does not erase the candidate's legally eligible production either.
+        candidate_hours = sum(r["output_mwh"] for r in result["generation"] if r["plant"]==tech)*365/op["plants"][tech]["capacity_mw"]
+        if self.renewable_vintages:
+            candidate_hours=self.renewable_vintages.candidate_hours(self,tech,op["plants"][tech],result)
+        # LP floating-point noise must not imply more than a full year.
+        if incremental_hours > 8760+1e-6 or candidate_hours > 8760+1e-6:
+            raise Q2Error("accounting_failure","Marginal output exceeds physical annual capacity")
+        return min(8760,incremental_hours)*(self.tariff(tech)-self.variable_om(tech))-fixed,min(8760,candidate_hours)
 
-    def audit_renewable_portfolio(self, approved):
+    def audit_renewable_portfolio(self, approved, *, support_fractions=None):
         result = dict(approved)
         if self.last_operation is None:
             return result
@@ -577,9 +721,18 @@ class NationalModel(Model):
             return result
         r = self.a["discount_rate"]
         for attempt in range(self.a["marginal_investment_halvings"]+1):
-            margins = {t:self.marginal_renewable_margin(t,result[t],result) for t in renewable}
-            npvs = {t:min(self.generators[t].margin,margins[t])*(1-(1+r)**(-LIFE[t]))/r/(1+r)**(LEAD[t]-1)
-                    -sum(self.capex(t)/LEAD[t]/(1+r)**k for k in range(LEAD[t])) for t in renewable}
+            economics = {t:self.marginal_renewable_economics(t,result[t],result) for t in renewable}
+            margins = {t:v[0] for t,v in economics.items()}
+            support = {t:self.revenue_policy.investment_value(self,t,full_load_hours=economics[t][1])
+                       if self.revenue_policy else 0.0 for t in renewable}
+            if support_fractions is not None:
+                for t in renewable:
+                    fraction = support_fractions.get(t, 1.0)
+                    if not isinstance(fraction,(int,float)) or not 0 <= fraction <= 1:
+                        raise ValueError("Invalid support fraction for portfolio audit")
+                    support[t] *= fraction
+            npvs = {t:min(self.generators[t].expected_project_margin(),margins[t])*self.energy_pv_factor(lead=LEAD[t],life=LIFE[t])
+                    -sum(self.capex(t)/LEAD[t]/(1+r)**k for k in range(LEAD[t]))+support[t] for t in renewable}
             passed = all(v>0 for v in npvs.values())
             self.government.log("joint_renewable_audit",attempt=attempt,approved=passed,
                 capacities_mw={t:result[t] for t in renewable},incremental_npvs_cny_per_mw=npvs)
@@ -599,6 +752,8 @@ class NationalModel(Model):
         return self.carbon*(EF[tech]/self.efficiency[tech]-benchmark)
 
     def capacity_split(self, year):
+        if self.operating_boundary is not None:
+            return self.operating_boundary.capacities(year,TECHS)
         d = self.data
         # No post-initial observations: thermal subtypes allocated using that year's generation and explicit duty factors.
         factors = dict(coal=.55,gas=.4,oil=.2,biomass=.6)
@@ -660,7 +815,94 @@ class NationalModel(Model):
             cost *= factor
         return cost
 
+    def new_project_cf(self,tech):
+        if self.renewable_vintages and tech in {"wind","solar"}:
+            return self.renewable_vintages.new_project_cf[tech]
+        return self.generators[tech].reference_cf
+
+    def energy_pv_factor(self, *, lead, life):
+        r = self.a["discount_rate"]
+        if self.annual_exposure:
+            return self.annual_exposure.energy_pv_factor(lead=lead,life=life,discount_rate=r)
+        return (1-(1+r)**(-life))/r/(1+r)**(lead-1) if r else float(life)
+
+    def generation_assets(self,tech,year,*,physical=False):
+        """Known generator cohorts, with annual or year-end physical weights.
+
+        The opening snapshot is already closed: assets retired at/before that
+        snapshot never reappear. Future committed projects enter once only.
+        Retirements during the simulated year may still contribute annual flow.
+        """
+        cohorts=[c for c in self.cohorts if c["tech"]==tech]
+        ids={c["id"] for c in cohorts}
+        pending=[p for p in self.projects if p["tech"]==tech and p["id"] not in ids
+                 and p.get("status")=="construction" and self.year<p["online_year"]<=year]
+        result=[]
+        for asset in cohorts+pending:
+            if self.annual_exposure and not physical:
+                weight=(self.annual_exposure.weight(asset,year)
+                        if asset["exit_year"]>self.initial_year else 0.0)
+            else:
+                weight=float(asset["online_year"]<=year<asset["exit_year"]
+                    and (asset in pending or asset["status"]=="active"))
+            if weight>0:
+                result.append((asset,weight))
+        return result
+
+    def generation_capacity(self,tech,year,*,physical=False):
+        return fsum(c["capacity_mw"]*w for c,w in self.generation_assets(tech,year,physical=physical))
+
+    def year_end_operation(self):
+        """Frozen last-year demand/resources with actual year-end generator MW.
+
+        This is a conditional event snapshot, not a dated hourly observation.
+        Keep inherited fuel and storage initial states exactly; restoring MW
+        never supplies extra fuel or charges storage for free.
+        """
+        if self.last_operation is None or not self.paths:
+            raise ValueError("A completed operating year is required for a snapshot")
+        op=deepcopy(self.last_operation)
+        year=self.paths[-1]["year"]
+        for t,g in self.generators.items():
+            plant=op["plants"][t]
+            cap=self.generation_capacity(t,year,physical=True)
+            plant.update(capacity_mw=cap,ramp_mw_per_hour=.2*cap,
+                window_energy_budget_mwh=cap*24*(g.reference_cf if t in {"hydro","nuclear","biomass"} else 1))
+            if self.renewable_vintages and t in {"wind","solar"}:
+                self.renewable_vintages.update_plant(self,t,plant,year,physical=True)
+        if self.bioenergy:
+            self.bioenergy.apply(self,op,year=year)
+        op["generator_capacity_basis"]="year_end_physical_stock"
+        op["snapshot_year"]=year
+        op["snapshot_inventory_basis"]="unchanged_inherited_representative_day_initial_state"
+        return op
+
+    def add_renewable_candidate(self,tech,plant,amount):
+        if self.renewable_vintages:
+            self.renewable_vintages.add_candidate(self,tech,plant,amount)
+        else:
+            plant["capacity_mw"]+=amount
+            plant["ramp_mw_per_hour"]+=amount*.2
+            plant["window_energy_budget_mwh"]+=amount*24
+
+    def variable_om(self, tech, *, fallback=None, year=None):
+        if self.generation_costs and self.generation_costs.contains(tech):
+            fraction = self.revenue_policy.export_fraction(self.year if year is None else year,tech) if self.revenue_policy else 1
+            return self.generation_costs.variable_per_gross_mwh(tech,fraction)
+        return self.generators[tech].om if fallback is None else fallback
+
+    def fixed_om_per_mw(self, tech, *, fallback_capex=None):
+        if self.generation_costs and self.generation_costs.contains(tech):
+            return self.generation_costs.fixed_per_mw(tech)
+        if tech == "wind":
+            return 29*self.fx*1000
+        if tech in {"solar","hydro"}:
+            return .015*(self.generators[tech].capex_2024 if fallback_capex is None else fallback_capex)
+        return 0.0
+
     def tariff(self, tech):
+        if self.revenue_policy is not None:
+            return self.revenue_policy.energy_tariff(self.year,tech)
         price = self.a["generation_price_cny_per_mwh"]
         if tech in {"wind","solar"} and self.year < 2021:
             start = self.a["renewable_tariff_2014_proxy"][tech]*self.variant.get("historical_tariff_multiplier",1)
@@ -698,6 +940,8 @@ class NationalModel(Model):
                 self.cohorts.append(dict(id=p["id"],tech=p["tech"],capacity_mw=p["capacity_mw"],
                     online_year=p["online_year"],exit_year=p["exit_year"],status="active",reconstruction=p["initial_reconstruction"],
                     book_cost_cny_per_mw=p["cost"]/p["capacity_mw"] if p["capacity_mw"] else 0))
+                if "generation_cf" in p:
+                    self.cohorts[-1]["generation_cf"]=p["generation_cf"]
         for c in self.cohorts:
             if c["exit_year"] <= self.year:
                 c["status"] = "retired"
@@ -728,20 +972,25 @@ class NationalModel(Model):
             charge_efficiency=sqrt(a["storage_roundtrip_efficiency"]),discharge_efficiency=sqrt(a["storage_roundtrip_efficiency"]),throughput_cost=1)
         for t,g in self.generators.items():
             fuel = t if t in self.suppliers else None
+            operating_capacity = self.generation_capacity(t,self.year)
             availability = [(.85 if fuel else g.reference_cf)]*4
             if t in {"wind","solar"}:
                 availability = [min(1,g.reference_cf*v*self.variant.get("renewable_availability_multiplier",1)) for v in a[t+"_shape"]]
-            budget = g.capacity*24*(g.reference_cf if t in {"hydro","nuclear","biomass"} else 1)
+            budget = operating_capacity*24*(g.reference_cf if t in {"hydro","nuclear","biomass"} else 1)
             op["plants"][t] = dict(input=fuel,output="electricity",efficiency=self.efficiency.get(t,1),
-                capacity_mw=g.capacity,availability=availability,variable_cost_per_mwh=g.om,
-                minimum_fraction=0,ramp_mw_per_hour=g.capacity*.2,window_energy_budget_mwh=budget)
+                capacity_mw=operating_capacity,availability=availability,variable_cost_per_mwh=self.variable_om(t),
+                minimum_fraction=0,ramp_mw_per_hour=operating_capacity*.2,window_energy_budget_mwh=budget)
             op["plants"][t]["policy_cost_per_mwh"] = self.generator_carbon_cost(t)
+            if self.renewable_vintages and t in {"wind","solar"}:
+                self.renewable_vintages.update_plant(self,t,op["plants"][t],self.year)
+            if self.revenue_policy:
+                op["plants"][t]["auxiliary_use_fraction"] = 1-self.revenue_policy.export_fraction(self.year,t)
         kappa = self.theta.get("dispatch_kappa",a.get("dispatch_kappa_default",0))*self.variant.get("dispatch_kappa_multiplier",1)
         if kappa > 0:
             op["fossil_allocation_score"] = dict(kappa=kappa,
                 ratio_step=self.variant.get("dispatch_ratio_step",a.get("dispatch_ratio_step",.1)),plants={f:dict(
                 reference_cf=self.generators[f].reference_cf,
-                initial_marginal_cost=self.generators[f].om+self.reference_fuel_prices[f]/self.efficiency[f]) for f in FUELS})
+                initial_marginal_cost=self.variable_om(f,year=self.initial_year)+self.reference_fuel_prices[f]/self.efficiency[f]) for f in FUELS})
         for c in self.consumers.values():
             op["demands"].update(c.demand())
         op["spending_limits"] = {c.name:dict(budget_cny=max(0,c.cash+c.endowment(c.requested))/365)
@@ -755,6 +1004,10 @@ class NationalModel(Model):
                 input_capacity_mw=demand/8760*2,priority=0,service_mwh=[demand/365/4]*4)
         op["demands"]["exports"] = dict(sector="electricity_exports",carrier="electricity",efficiency=1,
             input_capacity_mw=self.base_export/8760*2,priority=0,service_mwh=[self.base_export/365/4]*4)
+        if self.operating_boundary is not None:
+            self.operating_boundary.apply(op,self.year)
+        if self.bioenergy:
+            self.bioenergy.apply(self,op)
         return op
 
     def settle(self, op, result):
@@ -766,32 +1019,40 @@ class NationalModel(Model):
         for r in result["fuel"]:
             nonenergy = sum(d["input_mwh"] for d in result["demand"] if d["sector"] == "nonenergy_feedstock" and d["carrier"] == r["fuel"] and d["period"] == r["period"])
             r["nonenergy_mwh"] = nonenergy
-            r["combustion_co2_t"] -= nonenergy*EF[r["fuel"]]
+            r["combustion_co2_t"] -= nonenergy*op["fuels"][r["fuel"]]["emission_t_per_mwh"]
         combustion = sum((fuel_use[f]-materials[f])*EF[f] for f in FUELS)
+        bio_physical=self.bioenergy.physical(self,outputs["biomass"]) if self.bioenergy else {}
+        combustion+=bio_physical.get("msw_fossil_co2_t",0)
         bridge = coefficient(self.data,self.design,self.initial_year,self.year,self.variant)
         peo = sum(outputs[t] for t in ("hydro","nuclear","wind","solar","biomass"))*bridge*TCE_MWH
         # Bioenergy is included in the initial PEO bridge; never add its fuel again.
         primary_mwh = sum(fuel_use[f] for f in FUELS)+peo
         ets_total,net_transfers,resource = 0.0,0.0,result["resource_cost"]
+        boundary_result = self.operating_boundary.settle(self,op,result) if self.operating_boundary else {}
+        resource += boundary_result.get("supplementary_fixed_om_cny",0)
         margins = {}
         for t,g in self.generators.items():
             revenue = outputs[t]*self.tariff(t)
             fuel_bill = outputs[t]/self.efficiency[t]*self.suppliers[t].price if t in self.suppliers else 0
-            fixed = g.capacity*(29*self.fx*1000 if t == "wind" else .015*g.capex_2024 if t in {"solar","hydro"} else 0)
+            operating_capacity = op["plants"][t]["capacity_mw"]
+            fixed = operating_capacity*self.fixed_om_per_mw(t)
+            variable = outputs[t]*self.variable_om(t)
             emissions = outputs[t]/self.efficiency[t]*EF[t] if t in self.suppliers else 0
             benchmark = (a["ets_2026_benchmarks"] if self.year >= 2027 else a["ets_2021_2025_proxy"]).get(t)
             allowance = outputs[t]*benchmark if benchmark is not None and self.year >= 2021 else 0
             net_allowances = emissions-allowance if benchmark is not None and self.year >= 2021 else 0
             payment = self.carbon*net_allowances
             ets_total += payment
-            delta = revenue-fuel_bill-outputs[t]*g.om-fixed-payment
+            delta = revenue-fuel_bill-variable-fixed-payment
             g.cash += delta
-            margins[t] = delta/g.capacity if g.capacity else 0
+            margins[t] = delta/operating_capacity if operating_capacity else 0
             resource += fixed
             self.finance.append(dict(year=self.year,kind="generator_operation",actor=t,revenue_cny=revenue,fuel_bill_cny=fuel_bill,
-                om_cny=outputs[t]*g.om+fixed,free_allowances_t=allowance,covered_emissions_t=emissions if benchmark is not None and self.year >= 2021 else 0,
+                om_cny=variable+fixed,fixed_om_cny=fixed,variable_om_and_embedded_nuclear_fuel_cny=variable,
+                operating_exposure_mw_year=operating_capacity,year_end_capacity_mw=g.capacity,
+                free_allowances_t=allowance,covered_emissions_t=emissions if benchmark is not None and self.year >= 2021 else 0,
                 net_allowances_t=net_allowances,ets_transfer_cny=-payment,cash_delta_cny=delta,cumulative_operating_cash_cny=g.cash,
-                resource_cost_cny=outputs[t]*g.om+fixed))
+                resource_cost_cny=variable+fixed))
         # Counterparty transfer, NOT a carbon tax or public fiscal revenue.
         direct_payment = sum(r["input_mwh"]*365*self.direct_carbon_cost(r["carrier"])
             for r in result["demand"] if r["carrier"] in FUELS and r["sector"]!="nonenergy_feedstock")
@@ -840,8 +1101,9 @@ class NationalModel(Model):
             service_income += income
             self.finance.append(dict(year=self.year,kind="consumer_operation",actor=name,external_service_income_cny=income,
                 energy_bill_cny=bill,cash_delta_cny=income-bill,resource_cost_cny=0,**extra))
-        generator_payments = sum(outputs[t]*self.tariff(t) for t in TECHS)
+        generator_payments = sum(outputs[t]*self.tariff(t) for t in TECHS)+boundary_result.get("recovery_payments_cny",0)
         storage_cost = sum((r["charge_mwh"]+r["discharge_mwh"])*365*op["storage"]["throughput_cost"] for r in result["storage"])
+        storage_cost += boundary_result.get("extra_storage_cost_cny",0)
         self.finance.append(dict(year=self.year,kind="grid_operation",actor="grid",retail_revenue_cny=retail,
             generator_payments_cny=generator_payments,cash_delta_cny=retail-generator_payments-storage_cost,
             resource_cost_cny=storage_cost))
@@ -864,26 +1126,37 @@ class NationalModel(Model):
             other_positive_co2_t=process,positive_co2_t=positive,net_removals_t=removal,net_co2_t=positive-removal,
             neutralisation_ratio=removal/positive,energy_intensity=primary_mwh/TCE_MWH/(self.gdp/get(self.data,2024,"real_gdp")),
             carbon_intensity=positive/(self.gdp/get(self.data,2024,"real_gdp")),
-            total_capacity_mw=sum(g.capacity for g in self.generators.values()),
+            total_capacity_mw=sum(g.capacity for g in self.generators.values())+boundary_result.get("supplementary_capacity_mw",0),
             wind_solar_capacity_mw=self.generators["wind"].capacity+self.generators["solar"].capacity,
-            electricity_generation_mwh=sum(outputs.values()),unmet_service_mwh=sum(r["unmet_service_mwh"] for r in result["demand"])*365,
+            electricity_generation_mwh=sum(outputs.values())+boundary_result.get("recovery_generation_mwh",0)+boundary_result.get("pumped_generation_mwh",0),unmet_service_mwh=sum(r["unmet_service_mwh"] for r in result["demand"])*365,
+            generation_auxiliary_use_mwh=sum(r["auxiliary_use_mwh"] for r in result["generation"])*365,
+            generation_bus_output_mwh=sum(r["bus_output_mwh"] for r in result["generation"])*365,
             requested_service_mwh=sum(r["requested_service_mwh"] for r in result["demand"])*365,
             operating_resource_cost_cny=resource,ets_net_transfer_cny=ets_total,ets_balance_cny=net_transfers,
             cash_balance_residual_cny=cash_residual,external_service_income_cny=service_income,
             max_residual=result["max_residual"],scope="mainland_conditional_CO2_not_all_GHG")
+        if self.operating_boundary is not None:
+            row.update(boundary_result)
+            row.update(generation_scope="gross_generators_plus_pumped_discharge_statistical_adjustments_excluded",
+                inherited_boundary_evidence=self.operating_boundary.evidence)
+        row.update(bio_physical)
         for t,value in outputs.items():
             row[t+"_generation_mwh"] = value
             row[t+"_capacity_mw"] = self.generators[t].capacity
+            row[t+"_operating_exposure_mw_year"] = op["plants"][t]["capacity_mw"]
         for fuel in FUELS:
             row[fuel+"_primary_tce"] = fuel_use[fuel]/TCE_MWH
             row[fuel+"_share"] = fuel_use[fuel]/primary_mwh
         clean = sum(outputs[t] for t in ("hydro","nuclear","wind","solar","biomass"))
-        direct_equivalent = sum(fuel_use[f] for f in FUELS)+clean
+        clean-=bio_physical.get("bioenergy_physical_fossil_generation_mwh",0)
+        direct_equivalent = sum(fuel_use[f] for f in FUELS)+clean+bio_physical.get("msw_fossil_fuel_input_mwh",0)
         row.update(clean_generation_mwh=clean,primary_direct_equivalent_tce=direct_equivalent/TCE_MWH,
                    clean_share_direct_equivalent=clean/direct_equivalent,
                    dispatch_policy_signal_cny=result["policy_signal_cost"],
                    dispatch_behavioral_score=result.get("behavioral_score",0),
                    dispatch_actual_cost_cny=result.get("actual_dispatch_cost",result["dispatch_objective"]))
+        if self.operating_boundary is not None:
+            row["hydro_including_pumped_capacity_mw"] = row["hydro_capacity_mw"]+row["pumped_capacity_mw"]
         return row,margins
 
     def step(self):
@@ -893,6 +1166,24 @@ class NationalModel(Model):
         op = self.make_operation()
         result = operate_national(op)
         row,margins = self.settle(op,result)
+        if self.bioenergy:
+            row.update(self.bioenergy.settle(self,row["biomass_generation_mwh"]))
+        if self.revenue_policy is not None:
+            outputs = {t:row[t+"_generation_mwh"] for t in TECHS}
+            cohort_output=(self.renewable_vintages.allocate_actual(self,op,result) if self.renewable_vintages else None)
+            row.update(self.revenue_policy.settle(self,outputs,cohort_outputs=cohort_output))
+            # Recheck the whole year's counterparties after public settlement.
+            cash_net = fsum(r.get("cash_delta_cny",0) for r in self.finance if r["year"]==self.year)+row["ets_net_transfer_cny"]
+            residual = cash_net-(row["external_service_income_cny"]-row["operating_resource_cost_cny"])
+            if abs(residual)>max(.01,row["operating_resource_cost_cny"]*1e-12):
+                raise Q2Error("accounting_failure","Public settlement unbalanced annual cash")
+            row["cash_balance_residual_cny"] = residual
+        elif self.bioenergy:
+            cash_net=fsum(r.get("cash_delta_cny",0) for r in self.finance if r["year"]==self.year)+row["ets_net_transfer_cny"]
+            residual=cash_net-(row["external_service_income_cny"]-row["operating_resource_cost_cny"])
+            if abs(residual)>max(.01,row["operating_resource_cost_cny"]*1e-12):
+                raise Q2Error("accounting_failure","Municipal settlement unbalanced annual cash")
+            row["cash_balance_residual_cny"]=residual
         self.last_operation = op
         self.planning_cache = {}
         self.storage_soc = result["storage"][-1]["closing_mwh"]
@@ -906,9 +1197,13 @@ class NationalModel(Model):
             curtailed += unused
         for g in self.generators.values():
             service_debt(g)
-        proposals = [self.generators[t].proposal(margins[t]) for t in TECHS]
+        proposals = [self.generators[t].proposal(margins[t],operation=op,result=result) for t in TECHS]
         devices = [c.proposal() for c in self.consumers.values()]
         self.government.approve(proposals,devices)
+        if self.revenue_policy and self.revenue_policy.new_support:
+            programme=self.revenue_policy.new_support
+            row.update(subsidy_new_commitment_nominal_cny=programme.reserved.get(self.year,0),
+                       subsidy_cumulative_authorised_nominal_cny=fsum(programme.reserved.values()))
         self.grid.propose(op,result,curtailed)
         self.grid.pay()
         row.update(grid_power_mw=op["grid"]["power_mw"],storage_power_mw=op["storage"]["power_mw"],
@@ -940,7 +1235,7 @@ class NationalModel(Model):
             self.assets.extend(dict(year=self.year,**c) for c in self.cohorts)
             for consumer in self.consumers.values():
                 self.assets.extend(dict(year=self.year,actor=consumer.name,kind="device",**c) for c in consumer.cohorts)
-            for kind in ("fuel","generation","demand","storage"):
+            for kind in ("fuel","generation","demand","storage","additional_storage","recoveries"):
                 self.operations.extend(dict(year=self.year,kind=kind,**r) for r in result[kind])
             self.balances.extend(dict(year=self.year,**r) for r in result["balances"])
             self.stages.extend(dict(year=self.year,**r) for r in result["stages"])

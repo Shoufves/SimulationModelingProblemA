@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-10-19T23:37:28.024647+00:00",
+  "status": "net_efficiency_interpretation_supported_by_original_report_and_algebra",
+  "read_only_sources": true,
+  "pdf_visual_pages_verified": [
+    {
+      "pdf_page": 39,
+      "printed_page": 37,
+      "evidence": "net rather than gross capacity; capacity-factor convention; generic own consumption when needed"
+    },
+    {
+      "pdf_page": 41,
+      "printed_page": 39,
+      "evidence": "Table 2.1 China coal 88 USD/t at 6000kcal/kg, gas9.1USD/MBtu; hypothetical2025 commissioning"
+    },
+    {
+      "pdf_page": 47,
+      "printed_page": 45,
+      "evidence": "Figure3.3 title and axis explicitly say net efficiency"
+    }
+  ],
+  "workbook_header_caution": "E4 says Electrical conversion efficiency (%), not net in isolation; report Figure3.3 and net-capacity costing support interpreting these as net-output efficiencies",
+  "checks": [
+    {
+      "tech": "coal",
+      "efficiency_cell": "3.3!E22",
+      "country": "China",
+      "technology": "Ultra-supercritical",
+      "net_efficiency": 0.45,
+      "reference_net_fraction": 0.9301,
+      "candidate_gross_efficiency": 0.4838189441995484,
+      "current_model_gross_efficiency": 0.41,
+      "current_implied_net_efficiency": 0.381341,
+      "fuel_usd_per_net_mwh_calculated": 28.024585204292855,
+      "fuel_usd_per_net_mwh_published": 28.024585208888894,
+      "fuel_component_cell": "3.12!L22",
+      "absolute_fuel_component_error": 4.596039104853844e-09,
+      "current_fuel_use_over_same_bundle_ratio": 1.1800462053647522
+    },
+    {
+      "tech": "gas",
+      "efficiency_cell": "3.2.a.b!E24",
+      "country": "China",
+      "technology": "CCGT",
+      "net_efficiency": 0.58,
+      "reference_net_fraction": 0.9741,
+      "candidate_gross_efficiency": 0.5954214146391541,
+      "current_model_gross_efficiency": 0.52,
+      "current_implied_net_efficiency": 0.506532,
+      "fuel_usd_per_net_mwh_calculated": 53.53533844158512,
+      "fuel_usd_per_net_mwh_published": 53.53532557413791,
+      "fuel_component_cell": "3.11.a.b!L24",
+      "absolute_fuel_component_error": 1.2867447210851424e-05,
+      "current_fuel_use_over_same_bundle_ratio": 1.1450411819983732
+    }
+  ],
+  "original_diagnostic_source_hashes_match": true,
+  "original_diagnostic_row_count": 150,
+  "original_diagnostic_sign_change_count": 27,
+  "conclusion": "Current model combines future-new-plant cost bundle with lower generic gross fleet efficiencies for both existing and new coal/gas assets. This is a disclosed hybrid scenario, but is not an internally matched IEA new-plant bundle. A cohort-specific new-plant efficiency sensitivity is justified; historical fleet efficiency is not established by IEA2025 reference.",
+  "conversion_caution": "Dividing net efficiency by the model reference_net_fraction is a conditional bridge. Those 2014 fractions are proxy fleet own-use values, not IEA plant-specific net/gross nameplate ratios.",
+  "change_boundary": [
+    "Do not overwrite all historical fleet efficiencies with the IEA new-plant values",
+    "Separate existing cohorts and new candidates and preserve fuel/emission/LP/cash consistency",
+    "Generic FUEL_EFFICIENCIES also identify nonpower residuals; changing them globally changes demand identification, not only project margin",
+    "Fixed-output diagnostic has no dispatch/investment/cash rerun; positive adjusted NPV does not prove actual new approvals"
+  ],
+  "model_code_modified": false,
+  "scientific_acceptance": false,
+  "source_sha256": {
+    "data/raw/q2_project_costs/iea_projected_costs_2020_data.xlsx": "74782355333e065462b1cd3b2468643bebebad0db0ae42d2c8996926aaa3881a",
+    "data/raw/lb/base/reports/iea_oecd_generation_cost_2020.pdf": "7471000f732fb256bb9c2ebfbaa74285ea4736e980983b10201e0fdbf71d0b7a",
+    "src/energy_model/q2_identification.py": "116e8f1b3b13794a32009ca4c00822d70cedca249605b236bafe530af7124899",
+    "src/energy_model/q2_project_costs.py": "7ca81bc51161d66ed99c8b889e79af492fb5095ef4529896f13b4df8c0969486",
+    "scripts/run_q2_cost_review.py": "9e171aeda0dc5efbcfe6e6f0d052decaa19b8b04ba4105985028d1020bafb4f5",
+    "outputs/validation/new_thermal_efficiency_diagnostic_20261020.json": "ce17a0d7e3c956f9b079a831bd8a18c61c91e5bd9fd3e6d264b9ecbaa6612a8e"
+  }
+}

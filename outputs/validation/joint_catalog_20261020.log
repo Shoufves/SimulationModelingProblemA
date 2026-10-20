@@ -1,0 +1,30 @@
+{
+  "final_references": 118,
+  "missing_references": [],
+  "source_records": 825,
+  "source_records_with_files": 769,
+  "dataset_files": 99,
+  "nbs": {
+    "candidate_cells": 704,
+    "unique_records": 362,
+    "repeated_cells_removed": 342,
+    "conflicting_keys": 0,
+    "years": [
+      2005,
+      2024
+    ],
+    "key": [
+      "edition",
+      "family",
+      "year",
+      "region",
+      "variable",
+      "unit"
+    ],
+    "policy": "No zero filling, no averaging, no scope promotion. GDP table 3-4 versus 9-8 retained separately.",
+    "outputs": {
+      "history": "1faceee41a1313ad8f927e03cabedffeadffbd7473ff85c23fc61c987bbf1efb",
+      "provenance": "6dc5bad2fb8c555759921824a8e4eeef80053fe32c8f47535fde2e635673d95f"
+    }
+  }
+}

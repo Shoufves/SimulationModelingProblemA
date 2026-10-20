@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="国家能源网" />
+<meta name="keywords" content="国家能源网" />
+<title>政府信息公开目录---国家能源局---对十二届全国人大三次会议第7435号建议的答复</title>
+<link href="http://www.nea.gov.cn/static/default/css/public/master_nyj_v1.0.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/static/default/css/article.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/2015nyj/xinban/topbase.css" rel="stylesheet" />
+<script src="http://www.nea.gov.cn/static/default/js/public/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../images/daublogic.js" type="text/javascript"></script>
+<script language="javascript">
+$(document).ready(function(){　
+
+var lefttmp = new Image();
+lefttmp.src= "http://www.xinhuanet.com/photo/static/arr_left.cur";
+var righttmp = new Image();
+righttmp.src= "http://www.xinhuanet.com/photo/static/arr_right.cur";
+leng = $("a",$("#div_currpage")).length;
+	
+if(leng!=0)
+//curr里有a标签==稿件不止一页
+	{
+
+		//看一共有多少个a标签
+		leng = leng -1;
+		var nextLin  = $("a",$("#div_currpage"))[leng].href;//对于多页的情况，取得下一页的地址
+		var oneword = location.href+"#";
+		if(nextLin==oneword)
+		{
+		leng = leng -1;
+		nextLin  = $("a",$("#div_currpage"))[leng].href;
+		}
+		var currurl = location.href;//当前页链接地址<meta http-equiv="expires" content="Sunday 26 October 2011 01:00 GMT" /> 
+				
+		var underpd = currurl.substring(currurl.indexOf("c_")+2,currurl.indexOf(".htm"));	
+		if (underpd.indexOf("_")==-1)
+			{
+
+			prevLink = location.href;//如果是文章首页，则左键仍是替换到本页面
+			nextLink = $("a",$("#div_currpage"))[0].href;      //下一页的赋值
+			setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+		}
+
+	else
+		//是末页，http://news.xinhuanet.com/photo/2011-08/06/c_121822530.htm
+		{
+			//当前页分页号判断
+			var currnum = currurl.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlineindex = currurl.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			//下一页的分页号
+			var nextnum = nextLin.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlinenext = nextLin.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			var undernum = nextLin.substr(nextLin.indexOf("c_")).split("_").length-1;
+			
+			var temp = currurl.substring(underlineindex,currnum);//当前页的分页号
+			var nexttemp = 	nextLin.substring(underlinenext,nextnum);//最后a标签的分页号
+			var boolx = parseInt(temp,10)>parseInt(nexttemp,10);
+			
+			if((boolx)||(undernum==1))//末页
+
+					{
+					
+						if($("img",$("a",$("#content"))).length==0)//没有带链接的图片
+			
+							{
+								prevLink = nextLin;
+									if(undernum==1)
+									{
+										nextLink = nextLin;
+									}
+									else
+									{
+										nextLink = prevLink.substr(0,(prevLink.lastIndexOf("_")))+".htm";
+									}
+								setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+							}
+			
+						else//末页正文图片有链接
+							{
+								prevLink = nextLin;
+								nextLink = $("a",$("#content"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							}
+
+					}
+
+				else//不是末页
+					{
+
+							prevLink = $("a",$("#div_currpage"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							nextLink = nextLin;//把正文最后一个带链接的链接地址赋给下一页
+					}
+
+		}
+	}
+else
+//只有一页
+	{
+		prevLink = location.href;
+		nextLink = location.href;
+	}
+
+document.onkeydown = pageEvent;
+  function pageEvent(evt) {
+    evt = evt || window.event;
+    var key = evt.which || evt.keyCode;
+    if (key == 37) location = prevLink;
+    if (key == 39) location = nextLink;
+  };
+		
+		var lefturl		= prevLink;
+		var righturl	= nextLink;
+		var imgurl		= righturl;
+
+			$("#content img").each(function(){ 
+				var width = $(this).width();
+				var thisImage=$(this); 
+				//alert("01");
+				$(thisImage)[0].onmousemove=function(){
+					
+					if(event.offsetX<width/2){
+					
+						this.style.cursor	= 'url('+lefttmp.src+'),auto';
+						imgurl				= lefturl;
+					}
+					
+					else{
+					
+						this.style.cursor	= 'url('+righttmp.src+'),auto';
+						imgurl				= righturl;
+					}
+					
+	                                                }
+	               
+				$(thisImage)[0].onmouseup=function(){
+					top.location=imgurl;
+	
+				}   
+             });
+　　　　
+　　	});
+</script>
+
+<style type="text/css">
+<!--
+
+.STYLE5 {
+    color: #006699;
+    font-size: 14px;
+    font-weight: bold;
+}
+td {
+    padding: 4px;
+}
+
+.table1 {
+    border: 1px solid #71AEE7;
+}
+
+.STYLE9 {
+    color: #006699;
+    font-size: 12px;
+}
+
+.STYLE10 {
+    color: #666666;
+}
+-->
+</style>
+</head>
+
+<body>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/topnav.js" type="text/javascript"></script>
+<div class="main-colum">
+	<div class="now-site">您当前位置：<a href="http://www.nea.gov.cn/" target="_blank">首页</a> > 正文</div>
+	<div class="hr_10"></div>
+	<div class="channel-page">
+		<div class="article-box">
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+			<div class="article-content">
+            <table width="800" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td height="35" class="STYLE5">目录项的基本信息</td>
+    </tr>
+  </tbody></table>
+            	<table width="800" cellspacing="0" cellpadding="0" border="0" class="table1">
+<tbody><tr>
+        <td width="131" height="28" bgcolor="#EEFCFF" align="right"><span class="STYLE10">公开事项名称:</span></td>
+      <td height="28" bgcolor="#EEFCFF" align="left" class="STYLE9" colspan="3">对十二届全国人大三次会议第7435号建议的答复 </td>
+    </tr>
+      <tr>
+        <td height="28" bgcolor="#EEFCFF" align="right"><span class="STYLE10">索引号: </span></td>
+        <td width="290" height="28" bgcolor="#EEFCFF" align="left" class="STYLE9">000019705/2015-00111 </td>
+        <td width="75" bgcolor="#EEFCFF" align="left"><span class="STYLE10">主办单位:</span></td>
+        <td width="302" bgcolor="#EEFCFF" align="left" class="STYLE9">国家能源局 </td>
+    </tr>
+      <tr>
+        <td height="28" bgcolor="#EEFCFF" align="right"><span class="STYLE10">制发日期:</span></td>
+        <td height="28" bgcolor="#EEFCFF" align="left" class="STYLE9" colspan="3">2015-06-25 </td>
+    </tr>
+    </tbody></table>
+<table width="700" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td height="30">&nbsp;</td>
+    </tr>
+  </tbody></table>
+  
+<table width="800" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td><span class="font_14 line25 STYLE8"><p align="center">　<img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" alt="" oldsrc="W020151211482305298713.png" src="./W020151211482305298713.png" /></p><p align="center">　　<font style="line-height: 200%; font-size: 18pt"><strong style="line-height: 200%">对十二届全国人大三次会议第7435号建议的答复 </strong></font></p><p><font style="line-height: 200%; font-size: 12pt"><font style="font-size: 12pt">&nbsp;&nbsp;&nbsp; 您们提出的关于开展《可再生能源法》修订工作的建议收悉，现答复如下： </font></font></p><p><font style="font-size: 12pt">　　开展《可再生能源法》修订工作，对大力促进可再生能源发展意义重大。《可再生能源法》出台以来，对改善能源结构、防治大气污染、保护生态环境和促进经济发展发挥了重要作用。近年来，在《可再生能源法》和有关配套政策的推动下，我国可再生能源发展迅速，已进入全面、快速、规模化发展的新阶段。截止2014年底，我国可再生能源电力装机接近4.4亿千瓦，同比增长14%。其中，水电装机3亿千瓦，风电装机9637万千瓦，太阳能发电装机2805万千瓦，生物质发电装机948万千瓦。您们提出的开展《可再生能源法》修订建议，对促进可再生能源持续健康发展具有重要意义，对此我们表示认可和感谢。 </font></p><p><font style="font-size: 12pt">　　目前，《可再生能源法》确实存在着配套政策不足、可操行性及执行性欠缺等问题，在促进可再生能源的推广利用等方面尚需进一步深化加强。同时，还存在着《可再生能源法》如何更好地与《节约能源法》、《环境保护法》等相关法律协调衔接问题。您们提出的修订《可再生能源法》建议，符合当前实际需要及可再生能源发展趋势，有利于更好地促进可再生能源持续健康发展，大力推动能源革命进程，我们将针对《可再生能源法》修订，深入开展研究。 </font></p><p><font style="font-size: 12pt">　　为促进可再生能源产业发展，我们开展了以下几方面工作：一是2015年3月，我们与发展改革委共同印发了《关于改善电力运行调节促进清洁能源多发满发的指导意见》，要求各省（区、市）政府主管部门组织编制本地区年度电力平衡方案时，应采取措施落实可再生能源发电全额保障性收购制度，在保障电网安全稳定的前提下，全额安排可再生能源发电。二是我们正在和有关单位共同开展《电力法》修订工作，《电力法》修订已列入国务院2015年立法工作计划“全面深化改革和全面依法治国急需的项目”。三是我们组织编制了《可再生能源发电全额保障性收购管理办法》及《可再生能源电力配额管理办法》，拟于2015年内印发。 </font></p><p><font style="font-size: 12pt">　　下一步，我们一方面将积极推进《可再生能源发电全额保障性收购管理办法》、《可再生能源电力配额管理办法》等可再生能源法配套政策法规的制定工作；另一方面，我们将组织开展调查研究，积极推动《可再生能源法》修订工作。感谢您们对可再生能源法制建设工作的关心和对我局工作的大力支持。 </font></p><p><font style="font-size: 12pt">　　</font></p><p><font style="font-size: 12pt">　　</font></p><p><font style="font-size: 12pt">　　</font></p><p align="center"><font style="font-size: 12pt">　　</font><font style="line-height: 200%; font-size: 12pt"><font style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 国家能源局 </font></font></p><p align="center"><font style="font-size: 12pt">　　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2015年6月25日 </font></p></span></td>
+    </tr>
+  </tbody></table>
+  
+  <table width="700" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody></table>  
+  	
+			</div>
+			<div class="back-top"></div>
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>		
+		</div>
+		<div id="id_appendix" class="article-other" style="display:none">
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+            <div class="title-other">附件名称</div>
+<ul>
+
+
+
+
+</ul>
+<div class="clear"></div>
+		</div>
+		<div class="hr_10"></div>
+		<div class="hr_10"></div>
+		<div class="hr_10"></div>
+	</div>
+</div>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/bottom.js" type="text/javascript"></script>
+<script src="http://www.nea.gov.cn/static/default/js/public/article-font.js" type="text/javascript"></script>
+<SCRIPT language="javascript"> 
+<!--
+runDaubLogic();
+if(document.getElementById("id_appendix1") != null)
+{
+	document.getElementById("id_appendix").style.display = "block";
+}
+//-->
+</SCRIPT>
+</body>
+</html>

@@ -1,0 +1,144 @@
+{
+  "status": "historical_technical_references_not_default_admitted",
+  "source_sha256": {
+    "data/raw/q2_thermal_efficiency_history/iea_nea_projected_costs_2010.pdf": "673a6a22cc62e26ff19cf07b0120be7e1fca99fa9033fac7150e33826a168c77",
+    "data/raw/q2_thermal_efficiency_history/iea_nea_projected_costs_2015.pdf": "8c4bb17d76204408c7069232d1dea9e727cf1ee7f783f4f8291ffecbaa16afdc",
+    "data/raw/q2_thermal_efficiency_history/nea_coal_upgrade_2014.html": "b78722a5cf66e4441c5300a2e618cfbc0d50c9618695c2562a9d1bf3487e2e27",
+    "data/raw/q2_thermal_efficiency_history/nea_power_statistics_2015.html": "aa4232ffe9ddfebe8b0c9693e35817c57787bdb1365c56819ec56d4f4c11ca1d"
+  },
+  "rows": [
+    {
+      "report_year": 2010,
+      "assumed_commissioning_year": 2015,
+      "fuel": "coal",
+      "technology": "Black ultra-supercritical PCC",
+      "net_capacity_mw": 932,
+      "net_lhv_efficiency": 0.46,
+      "pdf_page": 55,
+      "printed_page": 53,
+      "table": "3.3a"
+    },
+    {
+      "report_year": 2010,
+      "assumed_commissioning_year": 2015,
+      "fuel": "coal",
+      "technology": "Black supercritical",
+      "net_capacity_mw": 1119,
+      "net_lhv_efficiency": 0.46,
+      "pdf_page": 55,
+      "printed_page": 53,
+      "table": "3.3a"
+    },
+    {
+      "report_year": 2010,
+      "assumed_commissioning_year": 2015,
+      "fuel": "coal",
+      "technology": "Black supercritical",
+      "net_capacity_mw": 559,
+      "net_lhv_efficiency": 0.46,
+      "pdf_page": 55,
+      "printed_page": 53,
+      "table": "3.3a"
+    },
+    {
+      "report_year": 2010,
+      "assumed_commissioning_year": 2015,
+      "fuel": "gas",
+      "technology": "CCGT Fujian",
+      "net_capacity_mw": 340,
+      "net_lhv_efficiency": 0.58,
+      "pdf_page": 57,
+      "printed_page": 55,
+      "table": "3.4"
+    },
+    {
+      "report_year": 2010,
+      "assumed_commissioning_year": 2015,
+      "fuel": "gas",
+      "technology": "CCGT Shanghai",
+      "net_capacity_mw": 340,
+      "net_lhv_efficiency": 0.58,
+      "pdf_page": 57,
+      "printed_page": 55,
+      "table": "3.4"
+    },
+    {
+      "report_year": 2015,
+      "assumed_commissioning_year": 2020,
+      "fuel": "coal",
+      "technology": "Ultra-supercritical",
+      "net_capacity_mw": 1000,
+      "net_lhv_efficiency": 0.45,
+      "overnight_usd_2013_per_net_kw": 813,
+      "pdf_page": 41,
+      "printed_page": 39,
+      "table": "3.3"
+    },
+    {
+      "report_year": 2015,
+      "assumed_commissioning_year": 2020,
+      "fuel": "gas",
+      "technology": "CCGT",
+      "net_capacity_mw": 350,
+      "net_lhv_efficiency": 0.55,
+      "overnight_usd_2013_per_net_kw": 627,
+      "pdf_page": 40,
+      "printed_page": 38,
+      "table": "3.2"
+    }
+  ],
+  "definition": {
+    "iea_2010_net_lhv": {
+      "pdf_page": 105,
+      "printed_page": 103,
+      "locator": "Table5.2 note",
+      "text": "Thermal plant efficiencies are net (sent out basis), LHV (lower heating value)."
+    },
+    "iea_2010_china_limits": {
+      "pdf_page": 206,
+      "printed_page": 204,
+      "locator": "Annex1 China",
+      "scope": "IEA unilateral 2009 research on selected projects under construction; Chinese authorities did not submit cost data; load factors, auto consumption, efficiencies and fuels can be default assumptions"
+    },
+    "iea_2015_china_limits": {
+      "pdf_page": 19,
+      "printed_page": 17,
+      "locator": "Results from non-OECD countries",
+      "scope": "public sources and surveys, explicitly not official data from China"
+    },
+    "iea_2010_auto_consumption": {
+      "coal": 0.0679,
+      "gas": 0.03,
+      "source": "PDF206/printed204; assumptions, not each plant measured own use"
+    }
+  },
+  "official_policy": {
+    "published": "2014-09-22",
+    "new_coal_average_supply_coal_gce_kwh_below": 300,
+    "implied_net_efficiency_floor": 0.40945010850427876,
+    "design_supply_coal_gce_kwh": {
+      "1000MW_wet": 282,
+      "1000MW_air": 299,
+      "600MW_wet": 285,
+      "600MW_air": 302
+    },
+    "scope": "new-unit design/entry policy requirements, not observed operating performance or a universal 45% efficiency"
+  },
+  "official_operating_stat": {
+    "observation_year": 2015,
+    "published": "2016-01-15",
+    "scope": "6000kW and above power-plant supply standard coal consumption; reported aggregate, not new-unit vintage/coal-only panel",
+    "value_gce_kwh": 315,
+    "implied_net_standard_coal_efficiency": 0.3899524842897893,
+    "not_available_before_2015_operation": true
+  },
+  "assessment": "Early reports support efficient coal and gas technology already existing as references before 2015, but do not admit the 2025 package as the typical 2015 candidate or observed historical fleet. Do not infer a monotonic technology path from different study samples.",
+  "admission_limits": [
+    "2015 edition assumes2020 commissioning and was not available at2014 model initialization",
+    "2010 edition predates2015 and assumes2015 commissioning; still selected plants/default assumptions",
+    "Net LHV efficiency must match fuel LHV and net/gross bridge; historical2014 own-use proxy is not the original IEAs plant ratio",
+    "Do not swap only efficiency while describing the full2025 cost/efficiency bundle as observed2015 data",
+    "No official historical gas-consumption vintage panel acquired; CCGT references cannot represent all gas units/CHP/OCGT"
+  ],
+  "default_model_admission": false
+}

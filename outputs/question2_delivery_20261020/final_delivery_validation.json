@@ -1,0 +1,53 @@
+{
+  "checked_at_utc": "2026-10-20T01:26:06.508482+00:00",
+  "scope": "Question 2 only; Question 3 excluded",
+  "packages": {
+    "问题二轻量支撑包.zip": {
+      "bytes": 16936857,
+      "sha256": "a9a193701c9e3496eccec2d0fb138637814a77f6c981de492481099456b492bb",
+      "manifest_files_verified": 412,
+      "crc_passed": true
+    },
+    "问题二完整研究复现包.zip": {
+      "bytes": 146257323,
+      "sha256": "cf8990302287abf6568e14889ac95976c9e3cf5d4941f526e95fadc83b54ad97",
+      "manifest_files_verified": 662,
+      "crc_passed": true
+    }
+  },
+  "report_manifest_verified": true,
+  "frozen_model_sources_unchanged": true,
+  "pdf_pages": 11,
+  "video_duration_seconds": 125.2,
+  "existing_unit_tests_passed": 529,
+  "portable_cases_exactly_reproduced": 24,
+  "original_runner_isolated_smoke_test": "Passed S0 through 2027; see full_package_isolated_20261020.log",
+  "isolated_report_rebuild": "Passed; see full_package_report_rebuild_20261020.log",
+  "limitations": "Historical capacity errors and price/policy proxies remain disclosed; tests demonstrate implementation consistency, not empirical accuracy.",
+  "final_artifacts": {
+    "AI工具使用详情说明.md": {
+      "bytes": 2961,
+      "sha256": "98db433e86c561f5d0c1a0bd0f58d7aa154a533594b9093688d3cb58874592aa"
+    },
+    "AI工具使用详情说明.pdf": {
+      "bytes": 104514,
+      "sha256": "2c8018179b12c2124cf505b059171cef4f565518bcef74924afbd383bb53d50e"
+    },
+    "问题二-演示稿.mp4": {
+      "bytes": 1695752,
+      "sha256": "b79515f03953119a86ec5831ff4f9aabb2949d4f81e4180dab2576ae3480a1d1"
+    },
+    "问题二答题稿.md": {
+      "bytes": 21750,
+      "sha256": "53620db051b1afef5a6856d87e8a818caad0edfc7b6fc95ec12222b9f7d343bc"
+    },
+    "问题二答题稿.pdf": {
+      "bytes": 667233,
+      "sha256": "0bdf897f6d8dde96cce4e7977b3a97cf77b324bbd28167b41c9e7d325952ec5c"
+    },
+    "问题二视频讲稿.md": {
+      "bytes": 2229,
+      "sha256": "761ac24f1aa930645a460de058556e44833996a81743fe5ca5a3e0868e2a65c6"
+    }
+  }
+}
