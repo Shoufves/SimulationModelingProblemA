@@ -93,6 +93,9 @@ def operate(config, *, solver=linprog):
     cyclic = config["cyclic"]
     if type(cyclic) is not bool or (weight != 1 and not cyclic):
         raise Q2Error("invalid_input", "Repeated windows require cyclic fuel and storage boundaries")
+    terminal_rule = config.get("storage", {}).get("terminal_rule", "fixed")
+    if terminal_rule not in ("fixed", "free") or (cyclic and terminal_rule == "free"):
+        raise Q2Error("invalid_input", "Free terminal SOC is only defined for a noncyclic window")
     if weight * sum(hours) > 8760 + 1e-6:
         raise Q2Error("invalid_input", "Annual duration exceeds 8760 hours")
     n = len(periods)
@@ -253,7 +256,7 @@ def operate(config, *, solver=linprog):
         lp.le(delivery, grid_power * h, f"grid/{t}")
     if cyclic:
         lp.eq({s[n-1]: 1}, soc, "terminal-SOC")
-    else:
+    elif terminal_rule == "fixed":
         lp.eq({s[n-1]: 1}, number(store["terminal_mwh"], "terminal SOC", 0, ecap), "terminal-SOC")
     for (carrier, t), terms in bal.items():
         lp.eq(terms, 0, f"carrier/{carrier}/{t}")

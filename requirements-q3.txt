@@ -1,0 +1,5 @@
+# Same scientific kernels as the accepted Q2 model. Python 3.12 recommended.
+-r requirements-q2.txt
+# Original regression/audit tools (no extra model dependency).
+-r requirements-data.txt
+-r requirements-q1.txt

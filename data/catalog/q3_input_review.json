@@ -1,0 +1,49 @@
+{
+  "status": "author_reviewed_conditional_q3",
+  "team_approved": false,
+  "base_sha": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
+  "allowed_uses": [
+    "conditional_scenarios",
+    "conditional_events",
+    "h01",
+    "h02",
+    "bounded_policy_search"
+  ],
+  "products": {
+    "data/catalog/q2_national_input_review.json": "1cdd1273b336f82eee40b8764e6dd32b0c991fdf86d06ea2ef3128e71dcc8d54",
+    "data/processed/q2/national_observations.csv": "ef6893ccbc52d9bb829c2bc6b9e0451b133800a56bfa114fd09bc47b45a6f505",
+    "data/processed/q2/technical_references.json": "af38ccd89ece76b7e37f929ec8056acd1cc6bcba47a2e403589766afb16ca62f",
+    "workflow/q2_national_design.json": "b10d73157d228750d596eabf481b26f7d06ed4ce2df3af7b70d97e754b49ba3c",
+    "data/processed/q2/gcb_peak_bridge_review.json": "dd3a278703ab2c0ef2374d5d0613188dbf822d38d3f238ff8f4a24f3e3865a13",
+    "data/processed/q2/statistical_scope_review.json": "b00f8338ed2b16160827fba4305a77601f7fb645079ccbe4110db4fe40715b12",
+    "outputs/q2/p2_lb_national/calibration.json": "7dc1437ba4593a33d10b5474927ba586efd180abd44a74973742ca6bdbe4c079",
+    "outputs/q2/p2_lb_national/baseline_path.csv": "9b0797cd9efbdec03a12c024e1beb48206712c5a543af98164d8b6ac49fe485e"
+  },
+  "inherited_code": {
+    "scripts/run_q2_national.py": "bb1eb105368d8d8a229e2175ad2870b31e38e4f05f4bed5a5610cd7d38fbabbe",
+    "scripts/build_q2_national_inputs.py": "39bad2e449a2ee1e4595422c16194a0ce0d3d80c40d75adf7a4095970412f488",
+    "src/energy_model/q2_national.py": "15745cbeb61df7d3bfcb03e15c00883438f5674c2c88f82aa6c5800c48d1ae0a",
+    "src/energy_model/q2_statistics.py": "43e58dfd42234d30c33278a4c4c485b96105c6d575e864fb7cc265b5116c8120",
+    "src/energy_model/q2_identification.py": "116e8f1b3b13794a32009ca4c00822d70cedca249605b236bafe530af7124899",
+    "src/energy_model/q2_finance.py": "14f1cdfaa442994204407d85b79d62ee75f4e267bacd14320d75a7a7fc599fb4",
+    "src/energy_model/q2_admission.py": "e6f06e18b8d49ef9acb69eed12e2ed747ace88ec794535dc0c1d4d16c50a0941",
+    "src/energy_model/q2_operations.py": "1a36532a8258821c592e186e97e5973de5301da38ec6e94f63a6a0e7dde1d181",
+    "src/energy_model/q2_experiments.py": "87b99f4296def921b1fb130fa148841bcb590ea56c68c37dc5e207270815ddf7",
+    "requirements-q2.txt": "50c62bd316a2b2fa3ccad7a6fba0ca82bff2f5c8618dadd390095a12c73fc7a0"
+  },
+  "source_review": "data/catalog/q2_national_input_review.json",
+  "review_notes": [
+    "Existing 26-source Q2 admission checked by preflight; all original source hashes rechecked on every Q3 run. No additional historical observation or national disaster data introduced.",
+    "Current annual fuel envelope, device, finance and 2024 state are reused only under inherited reconstruction assumptions. Q3 does not turn annual import volumes into observed hourly rates.",
+    "Channel A is an explicitly hypothetical fraction of total imported gas delivery, not a country/route identification. Other imports and domestic supply remain unchanged.",
+    "Weather is a coherent joint low-wind/low-solar/low-hydro stress template, not a reconstructed historical event. Demand is unchanged.",
+    "Early retirement eligible age, permission, defer limit, public project costs and all risk/budget bounds below are conditional design assumptions, not verified national permits or public budgets."
+  ],
+  "prohibited_claims": [
+    "actual_disaster_probability",
+    "province_network_risk",
+    "official_attainment",
+    "global_optimum",
+    "scientific_priority"
+  ]
+}

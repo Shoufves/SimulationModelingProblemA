@@ -1,0 +1,26 @@
+{
+  "selected_rule": "rolling_guard",
+  "selection_scores": [
+    {
+      "rule": "schedule",
+      "worst_loss": 0.7184900895427879,
+      "total_cost": 6422796711884784.0
+    },
+    {
+      "rule": "cost_order",
+      "worst_loss": 0.7184900895427817,
+      "total_cost": 6419466244379297.0
+    },
+    {
+      "rule": "replacement_ready",
+      "worst_loss": 0.7184900895427879,
+      "total_cost": 6422796711884784.0
+    },
+    {
+      "rule": "rolling_guard",
+      "worst_loss": 0.7184900895427817,
+      "total_cost": 6417909524819511.0
+    }
+  ],
+  "scope": "finite disclosed grid; not universal superiority"
+}

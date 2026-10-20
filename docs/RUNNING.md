@@ -73,6 +73,24 @@ V7统一Issue #7共同入口：`python -B -X utf8 run.py q2 --config workflow/q2
 
 复现只承诺冻结假设内的确定性结果；碳排放留出缺测、统计桥接、代表日和反复使用评估窗口的限制见[模型修订记录](solutions/p2-lb-national-review.md)。
 
-## 版本与恢复
+## P3/yx 问题三
+
+先安装 `requirements-q3.txt`（推荐Python3.12），从仓库根目录执行：
+
+```powershell
+python -B -X utf8 run.py q3 --config workflow/q3_inputs.json --output-dir outputs/q3/p3_yx
+python -B -X utf8 scripts/review_q3_delivery.py
+python -B -X utf8 run.py q3 --config workflow/q3_inputs.json --output-dir outputs/q3/p3_yx_reproduction
+python -B -X utf8 scripts/compare_q3_runs.py
+python -B -X utf8 scripts/summarize_q3_evidence.py
+```
+
+全部实验离线执行，默认最多4进程，可设环境变量 `Q3_WORKERS=1` 串行。新尝试先使旧收据失效；失败返回非零并保留旧尝试。原问题二模块只增加非循环窗口的可选自由终端SOC，原默认行为有完整回归。科学范围、成本及资金、选参和检验边界见 [P3报告说明](solutions/p3-yx.md)。重复复现输出和失败尝试不重复提交，验收记录及必要失败证据保留。
+
+本次主批次实际约16.3分钟、独立完整复现约21.4分钟；硬件和并发会改变耗时。Q1/Q2回归分别使用独立输出目录`outputs/q1/q3_yx_regression`和`outputs/q2/q3_yx_regression`，运行后执行`python -B -X utf8 scripts/review_q3_regressions.py --q2`核对原产物和受保护文件。Q2回归会完整重做1012次训练及107项条件试验，需要额外时间。
+
+`outputs/q3_review/README.md`列出本次证据与复跑步骤。`scripts/accept_q3_delivery.py`只汇总已执行且指纹匹配的本地证据；不能用它替代前述实际运行或两位成员的C9批准。
+
+## 版本与恢复记录
 
 `archive/organization_20261017/file_disposition.csv` 逐文件记录旧路径→新位置或删除理由。修改过的文档/脚本原字节保存在 `edited_originals.zip`；复算前的结果与目录在 `prior_results.zip`。恢复时按该映射提取单个文件，不把全部旧目录覆盖回当前工程。
