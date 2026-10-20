@@ -1,0 +1,615 @@
+{
+  "research_date": "2026-10-20",
+  "scope": "technology classification and initial-state evidence; no production changes",
+  "sources": [
+    {
+      "path": "data/raw/q2_technology_scope/ei_2025_original.xlsx",
+      "url": "https://snapshots.owid.io/99/805119256ece8c0b5b24181295b66d",
+      "publisher": "Energy Institute, original bytes archived by OWID",
+      "retrieved_at_utc": "2026-10-19T18:51:09.982773+00:00",
+      "sha256": "6a1a468ea14db9474defae069ee51a5a8097bf19b22712d4e022e4acca09acbd",
+      "bytes": 3929428,
+      "locator": "China rows in 10 generation sheets; Definitions A50; Other inputs A61",
+      "allowed_research_use": "Original workbook MD5 matches OWID DVC99805119256ece8c0b5b24181295b66d. 2005-2024 all generation components close. Other is not all oil or all pumped; inputs-named sheets report electrical output.",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/owid_snapshot_download.py",
+      "url": "https://raw.githubusercontent.com/owid/etl/master/etl/snapshot.py",
+      "publisher": "OWID",
+      "retrieved_at_utc": "2026-10-19T18:50:51.577853+00:00",
+      "sha256": "988af3ecd00f3edacae93ba44d1191bdfba09ff399d9038edb2dcc10950017c3",
+      "bytes": 42725,
+      "locator": "_download_dvc_file; public MD5-addressed download",
+      "allowed_research_use": "Public snapshot retrieval method; master downloaded 2026-10-20",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/owid_snapshot_config.py",
+      "url": "https://raw.githubusercontent.com/owid/etl/master/etl/config.py",
+      "publisher": "OWID",
+      "retrieved_at_utc": "2026-10-19T18:50:52.056799+00:00",
+      "sha256": "f78b7c8f84f1aa9183a811a88097a9caca6326225420c5a1acaae243821f5cbb",
+      "bytes": 31180,
+      "locator": "R2_SNAPSHOTS_PUBLIC_READ",
+      "allowed_research_use": "Public snapshot base URL, not private bucket or credentials",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/owid_electricity_mix_20260424.py",
+      "url": "https://raw.githubusercontent.com/owid/etl/master/etl/steps/data/garden/energy/2026-04-24/electricity_mix.py",
+      "publisher": "OWID",
+      "retrieved_at_utc": "2026-10-19T18:11:16.732058+00:00",
+      "sha256": "0570a1d791c38363a1fe75667bf5a53a296bf006038ab01a7381ea5c5a537258",
+      "bytes": 30827,
+      "locator": "process_ember_data line 117; combine_ei_and_ember_data lines 202–225",
+      "allowed_research_use": "Confirms Other fossil renamed oil; master download, not a historical Git commit",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/ember_yearly_page.html",
+      "url": "https://ember-energy.org/data/yearly-electricity-data/",
+      "publisher": "Ember",
+      "retrieved_at_utc": "2026-10-19T18:12:19.377194+00:00",
+      "sha256": "7156f2149a6e48b4aa37a7f2eabdc57b67dc1afe50feeedaa3af5234355121db",
+      "bytes": 95883,
+      "locator": "Data download format update July 2026; monthly revisions; CSV/methodology links",
+      "allowed_research_use": "Version and provenance only",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/ember_yearly_global.csv",
+      "url": "https://files.ember-energy.org/public-downloads/generation/outputs/release_generation_yearly_global.csv",
+      "publisher": "Ember",
+      "retrieved_at_utc": "2026-10-19T18:13:16.100353+00:00",
+      "sha256": "b2ac49fa9b27035fedda3c6afb85917bf136de9253bfcbaf09c3410904ec7cd1",
+      "bytes": 16123048,
+      "locator": "ISO 3 code=CHN; Year=2014–2024; Generation (TWh), Capacity (GW)",
+      "allowed_research_use": "Current same-download full mix; not identical to frozen OWID vintage",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/ember_methodology.pdf",
+      "url": "https://files.ember-energy.org/public-downloads/ember_electricity_data_methodology.pdf",
+      "publisher": "Ember",
+      "retrieved_at_utc": "2026-10-19T18:13:19.831676+00:00",
+      "sha256": "67c5eaac3bfbeb7e67bb786f9ea9680f67f6f26e75318560562ee52d439de908",
+      "bytes": 1487777,
+      "locator": "PDF p9 fuel definitions; p10 gross generation; p31 China; p32 capacity",
+      "allowed_research_use": "Other fossil includes oil/petroleum products, manufactured gases and waste; aggregate does not identify composition",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/ember_china_generation_methodology.pdf",
+      "url": "https://storage.googleapis.com/emb-prod-bkt-publicdata/public-downloads/ember_china_generation_methodology.pdf",
+      "publisher": "Ember",
+      "retrieved_at_utc": "2026-10-19T18:14:36.817673+00:00",
+      "sha256": "34b5a999ffaecc6231c89d772ba108ee41205e0e3428a64ddcd60abaece8ae99",
+      "bytes": 334369,
+      "locator": "August 2026 version, PDF p3 bioenergy, p4 thermal disaggregation/annual pumped correction, p6 caveats",
+      "allowed_research_use": "Current methodology; not proof of all revisions between historical downloads",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/ember_api_openapi.json",
+      "url": "https://api.ember-energy.org/v1/openapi.json",
+      "publisher": "Ember",
+      "retrieved_at_utc": "2026-10-19T18:16:21.050412+00:00",
+      "sha256": "f6f7444876d8cce20a8a137a7df496915f541237e4e0a793a94a59bd0de52865",
+      "bytes": 55352,
+      "locator": "API definitions and fuel labels",
+      "allowed_research_use": "Corroborating primary metadata",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/eia_china_generation_api.json",
+      "url": "https://api.eia.gov/v2/international/data/?api_key=DEMO_KEY&frequency=annual&data[0]=value&facets[countryRegionId][]=CHN&facets[activityId][]=12&start=2014&end=2024&length=5000",
+      "publisher": "EIA",
+      "retrieved_at_utc": "2026-10-19T18:17:38.760585+00:00",
+      "sha256": "3cc9fa9ac0f7dde38ef63c424ce53e3db557fb093f186644ec777164ebaef712",
+      "bytes": 184484,
+      "locator": "Annual CHN Generation, BKWH, products 2,27–38,82,116,117,2890",
+      "allowed_research_use": "Separate oil/other gases; same-query full mix, all available years",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/eia_international_metadata.json",
+      "url": "https://api.eia.gov/v2/international/?api_key=DEMO_KEY",
+      "publisher": "EIA",
+      "retrieved_at_utc": "2026-10-19T18:18:36.469457+00:00",
+      "sha256": "df47511d93665035a281dd91db7f3197e639b62edef712a7967472862ede6e0e",
+      "bytes": 1135,
+      "locator": "International route metadata",
+      "allowed_research_use": "Route identity; does not document all Chinese source revisions",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/eia_oil_series_metadata.json",
+      "url": "https://api.eia.gov/v2/seriesid/INTL.32-12-CHN-BKWH.A?api_key=DEMO_KEY",
+      "publisher": "EIA",
+      "retrieved_at_utc": "2026-10-19T18:21:17.948744+00:00",
+      "sha256": "df495690d57aaa141655a950be83887269b98ec3517255038adc18f2ffa2b6a6",
+      "bytes": 15468,
+      "locator": "China Oil Generation annual series",
+      "allowed_research_use": "Separate pure oil series, not OWID Other fossil",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/eia_product_metadata.json",
+      "url": "https://api.eia.gov/v2/international/facet/productId/?api_key=DEMO_KEY&facets[productId][]=32&length=5000",
+      "publisher": "EIA",
+      "retrieved_at_utc": "2026-10-19T18:18:37.558878+00:00",
+      "sha256": "656f343f02edaf87ca148248f13a1102f218a5d22c4575e748aabea6f09f0f55",
+      "bytes": 1066,
+      "locator": "Oil facet",
+      "allowed_research_use": "Product identification",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/eia_net_generation_glossary.html",
+      "url": "https://www.eia.gov/tools/glossary/index.php?id=Net+generation",
+      "publisher": "EIA",
+      "retrieved_at_utc": "2026-10-19T18:22:33.914636+00:00",
+      "sha256": "dc5dd1a1ce03af0eb9dee6a9250ee48dccc16ef62ef0fd4f695a3a94870e8ca4",
+      "bytes": 47093,
+      "locator": "Net generation definition and pumped-storage note",
+      "allowed_research_use": "Gross minus station auxiliaries; pumping deducted",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/owid_eia_international_20260505.py",
+      "url": "https://raw.githubusercontent.com/owid/etl/master/etl/steps/data/garden/eia/2026-05-05/international_energy.py",
+      "publisher": "OWID",
+      "retrieved_at_utc": "2026-10-19T18:22:23.400459+00:00",
+      "sha256": "1e4aee0d9c75f08f8cd1fbf9a4c291e02a72c065c3de52d3d99481e0bb2ea728",
+      "bytes": 25858,
+      "locator": "Electricity flows tuples including Electricity net generation and Biomass and waste electricity net generation",
+      "allowed_research_use": "Corroborates net labels; does not establish China waste biogenic fraction",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/owid_ei_2025.py",
+      "url": "https://raw.githubusercontent.com/owid/etl/master/etl/steps/data/garden/energy_institute/2025-06-27/statistical_review_of_world_energy.py",
+      "publisher": "OWID",
+      "retrieved_at_utc": "2026-10-19T18:14:37.401733+00:00",
+      "sha256": "255357388f7a1b44eff08a9a3d9616d07e8584723f07c6771fb61400e5d27315",
+      "bytes": 60764,
+      "locator": "electbyfuel_oil mapped to oil_electricity_generation_twh; other field commented out",
+      "allowed_research_use": "Feather omits Other; original XLSX now read, do not drop it to manufacture closure",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/owid_ei_snapshot.dvc",
+      "url": "https://raw.githubusercontent.com/owid/etl/master/snapshots/energy_institute/2025-06-27/statistical_review_of_world_energy.xlsx.dvc",
+      "publisher": "OWID",
+      "retrieved_at_utc": "2026-10-19T18:16:17.167923+00:00",
+      "sha256": "e127127689d0b662e8bd1ad43cd76e02d6e416d933dccebc01f7acf260ae98e9",
+      "bytes": 944,
+      "locator": "Original EI xlsx URL and original MD5",
+      "allowed_research_use": "Original EI URL blocked by Cloudflare during this session",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/owid_ei_2025.meta.json",
+      "url": "https://catalog.ourworldindata.org/garden/energy_institute/2025-06-27/statistical_review_of_world_energy/statistical_review_of_world_energy.meta.json",
+      "publisher": "OWID",
+      "retrieved_at_utc": "2026-10-19T18:17:36.335375+00:00",
+      "sha256": "bdcc7eb119a5d856ae0ece3971949a96494f1fd36e70d930eb01c711605c2ce8",
+      "bytes": 117582,
+      "locator": "fields.oil_electricity_generation_twh; gross output metadata",
+      "allowed_research_use": "Public mirror metadata, compared to original workbook footnotes",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/owid_ei_2025.feather",
+      "url": "https://catalog.ourworldindata.org/garden/energy_institute/2025-06-27/statistical_review_of_world_energy/statistical_review_of_world_energy.feather",
+      "publisher": "OWID",
+      "retrieved_at_utc": "2026-10-19T18:17:35.374681+00:00",
+      "sha256": "30ff076ec12cf7ff1b0dae7a574c653c77575d4feece2932afe50c1a88ca9e3e",
+      "bytes": 792442,
+      "locator": "2025-06-27 EI garden table",
+      "allowed_research_use": "Read after installing pyarrow19.0.1; Float32 cross-check only. Canonical extraction now uses original XLSX full precision and includes Other.",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/cec2014_portal.html",
+      "url": "https://chinaenergyportal.org/2014-detailed-electricity-statistics/",
+      "publisher": "China Energy Portal, reproducing CEC",
+      "retrieved_at_utc": "2026-10-19T18:16:18.579000+00:00",
+      "sha256": "b64dfe3c7f9e2150e9da3b87f8ade46b1649c3492dd89c1919a62f4280128ee3",
+      "bytes": 305780,
+      "locator": "电力统计基本数据一览表: full generation/capacity; 6000kW+ subrows; note4",
+      "allowed_research_use": "Unofficial mirror. Original CEC 2015-11-30/146012.html returns404; distinguish preliminary NEA statistics",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/nea_biomass_2014_reply.html",
+      "url": "https://zfxxgk.nea.gov.cn/auto81/201512/t20151211_1994.htm",
+      "publisher": "NEA",
+      "retrieved_at_utc": "2026-10-19T18:16:47.781894+00:00",
+      "sha256": "965b761dd275d4a28a6522cfd622cd9aa7b8f0e1e789156102668c955f952349",
+      "bytes": 12154,
+      "locator": "2014-end renewable electricity capacity paragraph",
+      "allowed_research_use": "2014 biomass capacity948万kW, official",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/nea_electricity2014.html",
+      "url": "https://gzb.nea.gov.cn/dtyw/hyxx/202310/t20231023_192081.html",
+      "publisher": "NEA regional office",
+      "retrieved_at_utc": "2026-10-19T18:21:29.393076+00:00",
+      "sha256": "fc18bb249596948c7af5cc1d0bc8826646affff76955614592ab9f143babd10d",
+      "bytes": 23363,
+      "locator": "2014年电力工业运行简况, 电源建设",
+      "allowed_research_use": "Preliminary2014 gas capacity5567万kW; differs from later CEC detailed5697",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/nea_biomass2018.html",
+      "url": "https://www.nea.gov.cn/2019-01/28/c_137780519.htm",
+      "publisher": "NEA",
+      "retrieved_at_utc": "2026-10-19T18:22:34.072566+00:00",
+      "sha256": "43df760bb18fa97c8248fb2b2a8f15d16529d51b986e0ed408ffc8a7d168e98a",
+      "bytes": 15202,
+      "locator": "五、生物质发电建设和运行情况",
+      "allowed_research_use": "2018 capacity1781万kW; generation906亿kWh",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/nea_biomass2020.html",
+      "url": "https://hzj.nea.gov.cn/dtyw/gjnyjdt/202309/t20230913_74826.html",
+      "publisher": "NEA regional office",
+      "retrieved_at_utc": "2026-10-19T18:22:34.499829+00:00",
+      "sha256": "c6ab20ffa7b52409be914e1515363054a2c0d9832cfd7885e476ab0a26ba599b",
+      "bytes": 30846,
+      "locator": "2021Q1 press conference, 4.生物质发电建设和运行情况",
+      "allowed_research_use": "2020 capacity2952万kW; generation1326亿kWh",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/nea_biomass2021.html",
+      "url": "https://www.nea.gov.cn/2022-01/28/c_1310445390.htm",
+      "publisher": "NEA",
+      "retrieved_at_utc": "2026-10-19T18:21:29.033882+00:00",
+      "sha256": "f775ceb6e1ed3da8ee95669a342821311cd7605032569ecc39f3b71fbcc55e9a",
+      "bytes": 30223,
+      "locator": "2022Q1 press conference, 五、生物质发电建设和运行情况",
+      "allowed_research_use": "2021 capacity3798万kW; generation1637亿kWh",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/batch1_national/nea_renewable_2024.html",
+      "url": "https://www.nea.gov.cn/20250221/e10f363cabe3458aaf78ba4558970054/c.html",
+      "publisher": "NEA",
+      "retrieved_at_utc": "2026-10-18T05:46:38.388130+00:00",
+      "sha256": "13fabe3f96b292ab2aab7ab2332541d8839fe21e1f144b2f56184f65fbe552cd",
+      "bytes": 13012,
+      "locator": "（四）生物质发电建设和运行情况",
+      "allowed_research_use": "2024 capacity4599万kW; generation2083亿kWh. Existing catalog already held selected capture",
+      "production_admitted": false,
+      "canonical_reuse": true
+    },
+    {
+      "path": "data/raw/q1/bio_industry_interview.html",
+      "url": "https://paper.people.com.cn/zgnyb/pc/content/202504/14/content_30068709.html",
+      "publisher": "中国能源报/人民日报; industry report interview",
+      "retrieved_at_utc": "2026-10-18T14:53:10.365356+00:00",
+      "sha256": "3bb47743036f21a2dba4bebda60b0557a0bf11f4ff9357ce7ad2c9d7df6337b1",
+      "bytes": 38331,
+      "locator": "《2025中国生物质能产业年度报告》discussion",
+      "allowed_research_use": "2024 agriculture/forestry1709万kW; waste2738万kW. Not the full underlying industry report",
+      "production_admitted": false,
+      "canonical_reuse": true
+    },
+    {
+      "path": "data/raw/q2_technology_scope/cec_annual2025_release.html",
+      "url": "https://chinapower.org.cn/detail/447983.html",
+      "publisher": "中国电力发展促进会; CEC report release",
+      "retrieved_at_utc": "2026-10-19T18:21:29.595664+00:00",
+      "sha256": "200396e8b9dea919559029e673322dd08aaa4506f3eec738d3bb673125da5d94",
+      "bytes": 36443,
+      "locator": "三、电力总装机保持快速增长",
+      "allowed_research_use": "2024 gas approximately1.4亿kW; biomass4597万kW differs from NEA4599, preserve revision",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/q2_technology_scope/gas2024_cq_exchange.html",
+      "url": "https://www.chinacqpgx.com/hy/shownews?id=13164",
+      "publisher": "重庆石油天然气交易中心, industry analysis",
+      "retrieved_at_utc": "2026-10-19T18:19:31.286060+00:00",
+      "sha256": "3637ceffcc7e90a8ff28e47cfc7fd902c75ed044eb852a542aa93bf808300f0a",
+      "bytes": 83558,
+      "locator": "燃气发电产业 paragraph",
+      "allowed_research_use": "2024 gas approximately1.4亿kW/0.32万亿kWh, rounded secondary cross-check",
+      "production_admitted": false,
+      "canonical_reuse": false
+    },
+    {
+      "path": "data/raw/batch1_national/owid_energy_data.csv",
+      "url": "https://github.com/owid/energy-data",
+      "sha256": "266f2e2baad7975351bc9bb4aa061d22b1da9fe4c47d51d2ac6071e01e171f76",
+      "existing_read_only_source": true,
+      "note": "Frozen legacy OWID actual model source",
+      "production_admitted": "existing contract only"
+    },
+    {
+      "path": "data/raw/batch1_national/owid_energy_codebook.csv",
+      "url": "https://github.com/owid/energy-data",
+      "sha256": "3cc9b7db0d921496e2988568ce3aee5ed41f50431dd234a0663b5f0a4b2e32bb",
+      "existing_read_only_source": true,
+      "note": "oil_electricity names oil but cites mixed upstream",
+      "production_admitted": "existing contract only"
+    },
+    {
+      "path": "data/raw/lb/base/owid/energy_README.md",
+      "url": "https://github.com/owid/energy-data",
+      "sha256": "d014045a2eeb06343f9f107af80c2e86959df320525faf16cfb9155f9f3007d0",
+      "existing_read_only_source": true,
+      "note": "Links to exact ETL2026-04-24 step",
+      "production_admitted": "existing contract only"
+    },
+    {
+      "path": "data/raw/official/S25_selected_capture.txt",
+      "url": "https://www.nea.gov.cn/20250221/e10f363cabe3458aaf78ba4558970054/c.html",
+      "sha256": "5092f8d6083287214961de9c402abc8c9a77aee318c9b22a78b55f078ecba679",
+      "existing_read_only_source": true,
+      "note": "Already catalogued NEA2024 selected capture",
+      "production_admitted": "existing contract only"
+    }
+  ],
+  "files": {
+    "biomass_2024_people.txt": {
+      "sha256": "a14f6fc2538270269e34a93b542190055fe50a462ab4a658bddafa18436297ed",
+      "bytes": 11943
+    },
+    "cec2014_portal.html": {
+      "sha256": "b64dfe3c7f9e2150e9da3b87f8ade46b1649c3492dd89c1919a62f4280128ee3",
+      "bytes": 305780
+    },
+    "cec2014_portal.txt": {
+      "sha256": "9e8443c14ccd01f474a52f6c5e5a9fa9f87c4315f5d87394343ff198d15e6489",
+      "bytes": 20416
+    },
+    "cec_annual2025_release.html": {
+      "sha256": "200396e8b9dea919559029e673322dd08aaa4506f3eec738d3bb673125da5d94",
+      "bytes": 36443
+    },
+    "cec_annual2025_release.txt": {
+      "sha256": "819726dac5e898336687be019afaf4db6dd6c41c4810838fc5edac6c15026f02",
+      "bytes": 16299
+    },
+    "china_complete_anchors_new_ember.csv": {
+      "sha256": "86f9d92e24028ae566c9480cfabe828f62034e8c0433c9ffb3cf4d712c1aa4bb",
+      "bytes": 8247
+    },
+    "eia_china_generation_2014_2024.csv": {
+      "sha256": "16e96cc7c0e3feab0593826a11932b86a56fd182c4ecce715e4de8a89b6e174a",
+      "bytes": 18803
+    },
+    "eia_china_generation_api.json": {
+      "sha256": "3cc9fa9ac0f7dde38ef63c424ce53e3db557fb093f186644ec777164ebaef712",
+      "bytes": 184484
+    },
+    "eia_international_metadata.json": {
+      "sha256": "df47511d93665035a281dd91db7f3197e639b62edef712a7967472862ede6e0e",
+      "bytes": 1135
+    },
+    "eia_net_generation_glossary.html": {
+      "sha256": "dc5dd1a1ce03af0eb9dee6a9250ee48dccc16ef62ef0fd4f695a3a94870e8ca4",
+      "bytes": 47093
+    },
+    "eia_net_generation_glossary.txt": {
+      "sha256": "ce7f87bbb796d6652d86a222a549f8bdbb154112fcfd63c9fcb7ac19c45cfc65",
+      "bytes": 5110
+    },
+    "eia_oil_series_metadata.json": {
+      "sha256": "df495690d57aaa141655a950be83887269b98ec3517255038adc18f2ffa2b6a6",
+      "bytes": 15468
+    },
+    "eia_product_metadata.json": {
+      "sha256": "656f343f02edaf87ca148248f13a1102f218a5d22c4575e748aabea6f09f0f55",
+      "bytes": 1066
+    },
+    "eia_same_download_closure.json": {
+      "sha256": "ba987fe96f87469bbecbad0dc19ced08a4858bc74406661803e53e02720d8b13",
+      "bytes": 1556
+    },
+    "ei_2025_original.xlsx": {
+      "sha256": "6a1a468ea14db9474defae069ee51a5a8097bf19b22712d4e022e4acca09acbd",
+      "bytes": 3929428
+    },
+    "ember_api_openapi.json": {
+      "sha256": "f6f7444876d8cce20a8a137a7df496915f541237e4e0a793a94a59bd0de52865",
+      "bytes": 55352
+    },
+    "ember_china_2014_2024.csv": {
+      "sha256": "e416cbf278b2e0b6f8db2e7df960cc560c618e1cb09dfe95f8c476622138560b",
+      "bytes": 5702
+    },
+    "ember_china_generation_methodology.pdf": {
+      "sha256": "34b5a999ffaecc6231c89d772ba108ee41205e0e3428a64ddcd60abaece8ae99",
+      "bytes": 334369
+    },
+    "ember_china_generation_methodology.txt": {
+      "sha256": "7561b6067e749fc99150b590e7e4d9618e99a21a5bda96873cf1446a62a1ae03",
+      "bytes": 17092
+    },
+    "ember_china_generation_methodology_page4.png": {
+      "sha256": "87ddbadaa5080b631268870ba17dbfd3c5d6e17844c968a0417aa10b293bc276",
+      "bytes": 185963
+    },
+    "ember_china_generation_methodology_page6.png": {
+      "sha256": "f0f77aad4e73e71c9f87c8dd71a6456e8529f8609b17d1201f56032580e1d6ff",
+      "bytes": 158083
+    },
+    "ember_methodology.pdf": {
+      "sha256": "67c5eaac3bfbeb7e67bb786f9ea9680f67f6f26e75318560562ee52d439de908",
+      "bytes": 1487777
+    },
+    "ember_methodology.txt": {
+      "sha256": "af0c5161cd8f5190ba6eea42db3b31994cab7f3626cac2559894483e1428c74f",
+      "bytes": 141129
+    },
+    "ember_methodology_page9.png": {
+      "sha256": "9994dc54ac042d1b334e2a92043e27355ccbb9af848e6bb91cd05b36960d03ad",
+      "bytes": 164954
+    },
+    "ember_vs_frozen_owid_anchors.csv": {
+      "sha256": "6b18daeee4542e092aaa8582c321769796e1d2ba6ee8acf3a5bd087e7a884130",
+      "bytes": 2823
+    },
+    "ember_yearly_global.csv": {
+      "sha256": "b2ac49fa9b27035fedda3c6afb85917bf136de9253bfcbaf09c3410904ec7cd1",
+      "bytes": 16123048
+    },
+    "ember_yearly_page.html": {
+      "sha256": "7156f2149a6e48b4aa37a7f2eabdc57b67dc1afe50feeedaa3af5234355121db",
+      "bytes": 95883
+    },
+    "ember_yearly_page.txt": {
+      "sha256": "996e05ade702ad1217b5a8a862dd73bba26fe17ed6c03114508016af140abf6a",
+      "bytes": 7807
+    },
+    "frozen_owid_complete_anchors.csv": {
+      "sha256": "48045bf9f757085a7cbaf6e84349b4f440e6c3fc6d07b1d10bf5cf5801ad8426",
+      "bytes": 5768
+    },
+    "gas2024_cq_exchange.html": {
+      "sha256": "3637ceffcc7e90a8ff28e47cfc7fd902c75ed044eb852a542aa93bf808300f0a",
+      "bytes": 83558
+    },
+    "gas2024_cq_exchange.txt": {
+      "sha256": "f4e39ea640ff38f57e6f3842956a6d7f322d0ee9915900b3b0d64f175c5acfac",
+      "bytes": 19120
+    },
+    "nea_biomass2018.html": {
+      "sha256": "43df760bb18fa97c8248fb2b2a8f15d16529d51b986e0ed408ffc8a7d168e98a",
+      "bytes": 15202
+    },
+    "nea_biomass2018.txt": {
+      "sha256": "75d0776d93ad4d24a50882ec7b7a49139db4e554f1edcce76dd9142ef10ea3c7",
+      "bytes": 8038
+    },
+    "nea_biomass2020.html": {
+      "sha256": "c6ab20ffa7b52409be914e1515363054a2c0d9832cfd7885e476ab0a26ba599b",
+      "bytes": 30846
+    },
+    "nea_biomass2020.txt": {
+      "sha256": "68ff9db719b013f06cd05b16124d3b23de46155d7625d3d65f7ac10ac377e13a",
+      "bytes": 14657
+    },
+    "nea_biomass2021.html": {
+      "sha256": "f775ceb6e1ed3da8ee95669a342821311cd7605032569ecc39f3b71fbcc55e9a",
+      "bytes": 30223
+    },
+    "nea_biomass2021.txt": {
+      "sha256": "f2b8fa2e1358c65d20ccef241d3fe8d2ed19ee6bb0c0882406b1d53e38cfb15b",
+      "bytes": 21876
+    },
+    "nea_biomass_2014_reply.html": {
+      "sha256": "965b761dd275d4a28a6522cfd622cd9aa7b8f0e1e789156102668c955f952349",
+      "bytes": 12154
+    },
+    "nea_biomass_2014_reply.txt": {
+      "sha256": "15b9bf682efd59f0469f5b5f09f63b9c02538188ec7844b580c01a55df98c79d",
+      "bytes": 3185
+    },
+    "nea_electricity2014.html": {
+      "sha256": "fc18bb249596948c7af5cc1d0bc8826646affff76955614592ab9f143babd10d",
+      "bytes": 23363
+    },
+    "nea_electricity2014.txt": {
+      "sha256": "10102f2fae9f39e3e283a8b60635a75a5afa281156bd66425b9ab3ec8a9c02a7",
+      "bytes": 4234
+    },
+    "nea_renewable_2024.txt": {
+      "sha256": "2ebf38ae706fbf984fb2c10d1a33e59ca6fa162d7c902ec4d237b631962a9907",
+      "bytes": 3259
+    },
+    "owid_eia_international_20260505.py": {
+      "sha256": "1e4aee0d9c75f08f8cd1fbf9a4c291e02a72c065c3de52d3d99481e0bb2ea728",
+      "bytes": 25858
+    },
+    "owid_ei_2025.feather": {
+      "sha256": "30ff076ec12cf7ff1b0dae7a574c653c77575d4feece2932afe50c1a88ca9e3e",
+      "bytes": 792442
+    },
+    "owid_ei_2025.meta.json": {
+      "sha256": "bdcc7eb119a5d856ae0ece3971949a96494f1fd36e70d930eb01c711605c2ce8",
+      "bytes": 117582
+    },
+    "owid_ei_2025.py": {
+      "sha256": "255357388f7a1b44eff08a9a3d9616d07e8584723f07c6771fb61400e5d27315",
+      "bytes": 60764
+    },
+    "owid_ei_snapshot.dvc": {
+      "sha256": "e127127689d0b662e8bd1ad43cd76e02d6e416d933dccebc01f7acf260ae98e9",
+      "bytes": 944
+    },
+    "owid_electricity_mix_20260424.py": {
+      "sha256": "0570a1d791c38363a1fe75667bf5a53a296bf006038ab01a7381ea5c5a537258",
+      "bytes": 30827
+    },
+    "owid_snapshot_config.py": {
+      "sha256": "f78b7c8f84f1aa9183a811a88097a9caca6326225420c5a1acaae243821f5cbb",
+      "bytes": 31180
+    },
+    "owid_snapshot_download.py": {
+      "sha256": "988af3ecd00f3edacae93ba44d1191bdfba09ff399d9038edb2dcc10950017c3",
+      "bytes": 42725
+    },
+    "search_gas_2024.html": {
+      "sha256": "6f078cdc68b1ccbd2b71555e78c1d122f04fb77da551a97297ff606c820bdf25",
+      "bytes": 127043
+    },
+    "search_gas_2024.txt": {
+      "sha256": "e1c833fb2f2206087f5b306205a44ab9b8a5760efcbe798433846364b8cf8249",
+      "bytes": 3109
+    },
+    "search_gas_google.html": {
+      "sha256": "385d85fa211314f2efd7c9edfd739fe8d88f14ca0c5ee434893db169fb4b5abc",
+      "bytes": 92853
+    },
+    "search_suggest.json": {
+      "sha256": "dfd58874844938aca875121c6db17e53a099f9a9c29764c157243c832240e6fe",
+      "bytes": 410
+    },
+    "technology_capacity_generation_anchors.csv": {
+      "sha256": "f366792f1f25e5a8a3fc438a9709824985880eafb56360ebf725b957248e8cff",
+      "bytes": 3022
+    }
+  },
+  "retrieval_failures": [
+    "Official EI2025 XLSX and current download page returned Cloudflare challenge. Subsequently recovered exact original XLSX through official OWID public snapshot; MD5 matches DVC, not a challenge-page body.",
+    "Original CEC2014 URL returns404; China Energy Portal mirror explicitly labelled.",
+    "Initially pyarrow absent so feather unread. Resolved on2026-10-20 with pyarrow19.0.1; canonical extraction now standard-library original XLSX, no pyarrow production dependency.",
+    "EIA guessed sources-and-definitions path returned404; use official glossary plus OWID net-series naming, not this failed path.",
+    "Search result pages are discovery-only, not data evidence."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "status": "cross_study_sensitivity_only_not_national_observation",
+  "direct_fossil_kg_per_t_waste": [
+    249.0,
+    445.0
+  ],
+  "direct_basis": "Ma2024 untreated-gas MethodIV; combustion before gas cleanup",
+  "lhv_mj_per_kg_waste": [
+    4.0,
+    7.0
+  ],
+  "lhv_basis": "Bourtsalas2020 original comparative plant study, publisher abstract",
+  "fossil_ef_t_per_mwh_fuel": [
+    0.12805714285714284,
+    0.40049999999999997
+  ],
+  "fossil_ef_kg_per_gj_fuel": [
+    35.57142857142857,
+    111.25
+  ],
+  "scenario_center_rule": "arithmetic midpoint of waste-mass EF and LHV, not estimated national mean",
+  "scenario_center_t_per_mwh_fuel": 0.2271272727272727,
+  "post_cleanup_ma_method_v_kg_per_t": [
+    233.0,
+    405.0
+  ],
+  "post_cleanup_derived_envelope_t_per_mwh_fuel": [
+    0.11982857142857142,
+    0.3645
+  ],
+  "cautions": [
+    "No Ma2024 LHV measured for the same sampled waste was found.",
+    "The rectangular combination of two studies is deliberately conservative and has no measured joint distribution.",
+    "Ma2024 seven plants/eight conditions sampled 2022-11 to 2023-11, not national annual 2014-2024.",
+    "Do not treat flue-gas carbon fraction as waste mass, energy, or electricity fraction.",
+    "Apply only to separately declared waste fuel energy; not all biomass and not recovered industrial heat.",
+    "Combustion before gas cleanup and stack emission after gas cleanup are different physical boundaries.",
+    "Not a life-cycle EF: no avoided grid emissions or indirect upstream emissions included.",
+    "Ma abstract upper untreated value446 differs from body and conclusion445; use body445 consistently."
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "reviewed_on": "2026-10-20",
+  "generated_at": "2026-10-19T20:45:54.874475+00:00",
+  "scope": "Exactly three new local originals; existing NEA 2013-2018 originals reused",
+  "production_model_activated": false,
+  "sources": [
+    {
+      "path": "data/raw/q2_capacity_revenue/shanghai_2019_gas_two_part.html",
+      "url": "https://www.shanghai.gov.cn/nw12344/20200813/0001-12344_59562.html",
+      "sha256": "eefb901209718ee2d04798ce52890ef9914ee93f4873e87d78fa9938e291fdd2",
+      "bytes": 12892,
+      "role": "new_official_local_policy_original",
+      "admitted_to_model": false,
+      "document_date": "2019-07-11",
+      "verified_text_anchors": [
+        "37.01",
+        "36.50",
+        "0.4802",
+        "2019年9月1日",
+        "2020年9月1日"
+      ]
+    },
+    {
+      "path": "data/raw/q2_capacity_revenue/shanghai_2024_capacity_26.html",
+      "url": "https://fgw.sh.gov.cn/fgw_jggl/20240531/07bce8e660f2421bb5fcfee61413f96a.html",
+      "sha256": "c6a1a86462906ba6ff965237ab1cfe33655d8ba3e3636b879f10fad01b31f3ac",
+      "bytes": 11011,
+      "role": "new_official_local_policy_original",
+      "admitted_to_model": false,
+      "document_date": "2024-05-30",
+      "verified_text_anchors": [
+        "37.01",
+        "36.50",
+        "2024年7月1日",
+        "预结算",
+        "清算"
+      ]
+    },
+    {
+      "path": "data/raw/q2_capacity_revenue/guangdong_2023_capacity_1990.html",
+      "url": "https://www.lufengshi.gov.cn/swlufeng/zdly/jghsf/jgzf/zfdt/content/mpost_999871.html",
+      "sha256": "cc5f8e644efacab97b08758c313b6a268dbf79225f29eb310d9672c5cb1fcbe2",
+      "bytes": 15659,
+      "role": "new_official_local_policy_original",
+      "admitted_to_model": false,
+      "document_date": "2023-12-27",
+      "verified_text_anchors": [
+        "1990",
+        "每年每千瓦100元",
+        "2024年1月1日",
+        "单独归集",
+        "系统运行费用"
+      ]
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_prices_2013_2014.html",
+      "url": "https://zfxxgk.nea.gov.cn/auto92/201509/t20150902_1959.htm",
+      "sha256": "0759ac883bb7bf19f283fdcfdf4d9fb1379ac2dd9082b766574d633807b36e40",
+      "bytes": 102247,
+      "role": "reused_original_no_duplicate_download",
+      "admitted_to_model": false
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_prices_2015.html",
+      "url": "https://zfxxgk.nea.gov.cn/auto92/201611/t20161101_2312.htm",
+      "sha256": "742c2308eebdda0eee2e09661cd374e4c75d38d923fa7a14c4ba37992662e88d",
+      "bytes": 23440,
+      "role": "reused_original_no_duplicate_download",
+      "admitted_to_model": false
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_prices_2016.pdf",
+      "url": "https://zfxxgk.nea.gov.cn/auto92/201712/P020171228590567105234.pdf",
+      "sha256": "9f17016dce53aadac69571e4cc61e58a577f574940bbc1b5cde7ff157feb6268",
+      "bytes": 661341,
+      "role": "reused_original_no_duplicate_download",
+      "admitted_to_model": false
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_prices_2017.pdf",
+      "url": "https://www.nea.gov.cn/137519800_15390499899481n.pdf",
+      "sha256": "25a8fc54314273b90f8509dbd7203df110a31deb90845f8b625bfe2fb3e40623",
+      "bytes": 308964,
+      "role": "reused_original_no_duplicate_download",
+      "admitted_to_model": false
+    },
+    {
+      "path": "data/raw/q2_revenue/nea_prices_2018.pdf",
+      "url": "https://www.nea.gov.cn/138530255_15729388881531n.pdf",
+      "sha256": "0419bb45012036a862c9e9fffa52c72247a48ef4c7eddf243dc3b5a7f6122902",
+      "bytes": 535028,
+      "role": "reused_original_no_duplicate_download",
+      "admitted_to_model": false
+    }
+  ]
+}

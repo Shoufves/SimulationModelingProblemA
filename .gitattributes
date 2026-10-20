@@ -1,0 +1,11 @@
+# Source/data snapshots are verified by byte SHA256 across platforms.
+# Preserve existing LF/CRLF bytes; checkout must not rewrite frozen evidence.
+* -text
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.xlsx binary
+*.xls binary
+*.zip binary
+*.mp4 binary

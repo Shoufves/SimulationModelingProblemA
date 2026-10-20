@@ -1,0 +1,36 @@
+{
+  "source": "data/raw/q2_investor_behavior/nber_25437_2019.pdf",
+  "source_sha256": "b2c2f3f243a1bfca8b3e576f6eccee05accdf7c5451e68c816bcf2bc4b72d3e6",
+  "pdf_pages": 38,
+  "verified_page_anchors": {
+    "1": [
+      "WHY HAS CHINA OVERINVESTED IN COAL POWER?",
+      "Mengjia Ren",
+      "Lee G. Branstetter",
+      "January 2019"
+    ],
+    "2": [
+      "2013 to 2016",
+      "approval authority"
+    ],
+    "7": [
+      "equal share dispatch"
+    ],
+    "12": [
+      "business-stealing",
+      "if his firm did not"
+    ],
+    "13": [
+      "private investments tend to be excessive",
+      "firm therefore selects capacity"
+    ]
+  },
+  "interpretation": "Private entrant profitability can differ from aggregate industry or social profitability. Equal-share output and regulated prices are historical mechanisms discussed by authors.",
+  "model_use": "Justifies comparing investor objectives; no numerical calibration or guaranteed generation quota imported.",
+  "limits": [
+    "Working paper and historical selected policy episode, not official statistics",
+    "Does not establish equal-share dispatch for all technologies or all years",
+    "Our candidate LP accounts for own added capacity reducing utilisation; paper simplifies that belief",
+    "Our sector financing pool does not reproduce paper firm-level ownership or administrative approval costs"
+  ]
+}

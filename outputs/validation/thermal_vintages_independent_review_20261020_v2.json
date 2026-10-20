@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-10-19T23:57:02.593275+00:00",
+  "status": "passed_with_scope_limits",
+  "run": "outputs/q2_thermal_pairs/20261019T235331010638Z",
+  "all_frozen_source_hashes_match": true,
+  "frozen_source_count": 183,
+  "specialized_tests_reexecuted": {
+    "passed": 15,
+    "failed": 0
+  },
+  "authority25_net58_actual_rebuild_exact": [
+    "paths",
+    "finance",
+    "behavior",
+    "operations",
+    "projects",
+    "assets",
+    "balances",
+    "thermal_fuel_ledger",
+    "year_end_operation"
+  ],
+  "three_disabled_cases_full_history_exact": true,
+  "nine_cases_checked": [
+    "authority_5_disabled",
+    "authority_5_net55",
+    "authority_5_net58",
+    "authority_25_disabled",
+    "authority_25_net55",
+    "authority_25_net58",
+    "authority_100_disabled",
+    "authority_100_net55",
+    "authority_100_net58"
+  ],
+  "max_cohort_fuel_vs_lp_error_mwh": 3.814697265625e-06,
+  "max_cohort_co2_vs_lp_error_t": 9.5367431640625e-07,
+  "max_cash_residual_cny": 0.00390625,
+  "max_generator_bill_error_cny": 0.000244140625,
+  "synthetic_additional_checks": {
+    "zero_halvings_cascading_thermal_removal": true,
+    "unaffected_nuclear_capacity_preserved": true,
+    "quarter_exposure_real_lp_ets_and_fuel_npv_error": 4.3655745685100555e-11,
+    "zero_first_year_exposure_shifts_to_first_positive_year": true
+  },
+  "code_review": {
+    "initial_fleet_and_pipeline": "original efficiency retained; original nonpower residual identification unchanged",
+    "mixing": "exposure-weighted harmonic efficiency; physical stock separately used in snapshots",
+    "future_planning": "known projects and survival only, no future realised decisions or fuel prices",
+    "learning": "candidate heat saving relative to current mixed fleet, avoids repeating initial-vs-new saving; ETS marginal fuel term included",
+    "projects": "approval-year tagging, commissioning copies persisted value to cohort",
+    "screening": "separate real LP candidate contribution, then joint renewable/thermal rescreen; bounded failure/removal",
+    "cash": "operating LP mixed efficiency matches inherited fuel bill/ETS and independent per-cohort fuel/carbon ledger"
+  },
+  "remaining_limits": [
+    "Shared utilisation within each technology is not unit-level merit order; efficient-new and inefficient-old plants cannot dispatch separately",
+    "2015 availability and 2025 technical costs remain conditional assumptions, not observed historical vintage data",
+    "2014 fleet own-use ratios remain proxies for converting net technical efficiency to gross",
+    "Aggregate annual exposure cannot model seasonal commissioning or part-load heat rates",
+    "Fuel-price and efficiency sensitivities do not resolve national historical model acceptance"
+  ],
+  "default_inputs_changed": false,
+  "scientific_acceptance": false,
+  "source_sha256": {
+    "src/energy_model/q2_thermal_vintages.py": "1715bcf437fc9dcb8149fb4e3d88131e291f3e83d219201e5108e46819be6d12",
+    "scripts/q2_thermal_factory.py": "4e8043bdb78839a4f394983c58e7be80a4307b56fcd361e965c95b7cc9a98465",
+    "scripts/run_q2_thermal_pairs.py": "9e588c73c01670109e525e7bb45f1bd9eac73e8ff169d573b1de5f154040365b",
+    "tests/test_q2_thermal_vintages.py": "38ebba2676ae5f07b3941c3bceaf62c930bab0f7a540c1f7d35a0cc37beae8ff",
+    "docs/sources/q2_thermal_vintages.md": "d8fd11f5bb5103fbc04b175b23a2b31b08e76e06fd9e797adb777a3d19980b3a",
+    "scripts/review_q2_thermal_vintages_independent_v2.py": "c4423f21610aea072f58bce54aa2529805e4f300b0454734805e101166541d02"
+  }
+}

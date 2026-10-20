@@ -1,0 +1,278 @@
+[
+  {
+    "key": "renewable_full_purchase_2007",
+    "value": 2007,
+    "unit": "start_year",
+    "source_path": "data/raw/q2_revenue/nea_full_purchase_2007_25.html",
+    "source_sha256": "23bd1e7f03f0741a8330cd00ee4260332864648cf1f96842bf14ffdf9b526aa3",
+    "source_url": "https://gzb.nea.gov.cn/dtyw/tzgg/202308/t20230821_3250.html",
+    "verified_text_anchors": [
+      "2007年9月1日",
+      "生物质发电",
+      "优先调度"
+    ],
+    "limitation": "Safety/connection conditions still apply; does not include nuclear as renewable or prove nationwide perfect enforcement",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "clean_dispatch_annual_plan_2015",
+    "value": 2015,
+    "unit": "start_year",
+    "source_path": "data/raw/q2_revenue/nea_clean_dispatch_2015_518.html",
+    "source_sha256": "27a95717063a702349f130668d310b952d81a8dbc20f8f94329628324842568d",
+    "source_url": "https://www.nea.gov.cn/2015-04/09/c_134136821.htm",
+    "verified_text_anchors": [
+      "发改运行[2015]518号",
+      "风电、光伏发电、生物质发电按照本地区资源条件全额安排发电",
+      "气电根据供热、调峰及平衡需要"
+    ],
+    "limitation": "Annual aggregate approximation; nuclear has safety/peaking conditions; gas not assigned baseload or guaranteed universal utilisation",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "biomass_lifetime_hours",
+    "value": 82500,
+    "unit": "hours",
+    "source_path": "data/raw/q2_revenue/mof_subsidy_lifetime_2020_426.html",
+    "source_sha256": "e06cf30027505716a928ea766a75a5ece7c893570f8bd1a22374068b2b47676d",
+    "source_url": "https://m.mof.gov.cn/zcfb/202010/t20201015_3604104.htm",
+    "verified_text_anchors": [
+      "82500",
+      "沼气"
+    ],
+    "limitation": "Eligible approved/listed projects only; commissioned capacity and prior generation required",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "biomass_years",
+    "value": 15,
+    "unit": "years_since_grid_connection",
+    "source_path": "data/raw/q2_revenue/mof_subsidy_lifetime_2020_426.html",
+    "source_sha256": "e06cf30027505716a928ea766a75a5ece7c893570f8bd1a22374068b2b47676d",
+    "source_url": "https://m.mof.gov.cn/zcfb/202010/t20201015_3604104.htm",
+    "verified_text_anchors": [
+      "满15年"
+    ],
+    "limitation": "Full anniversary boundary; do not reset clock at simulation initial year",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "wind_solar_years",
+    "value": 20,
+    "unit": "years_since_grid_connection",
+    "source_path": "data/raw/q2_revenue/mof_subsidy_lifetime_2020_426.html",
+    "source_sha256": "e06cf30027505716a928ea766a75a5ece7c893570f8bd1a22374068b2b47676d",
+    "source_url": "https://m.mof.gov.cn/zcfb/202010/t20201015_3604104.htm",
+    "verified_text_anchors": [
+      "满20年"
+    ],
+    "limitation": "Existing listed projects; new project eligibility determined separately",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "wind_resource_zone_hours",
+    "value": [
+      48000,
+      44000,
+      40000,
+      36000
+    ],
+    "unit": "hours",
+    "source_path": "data/raw/q2_revenue/mof_subsidy_lifetime_2020_426.html",
+    "source_sha256": "e06cf30027505716a928ea766a75a5ece7c893570f8bd1a22374068b2b47676d",
+    "source_url": "https://m.mof.gov.cn/zcfb/202010/t20201015_3604104.htm",
+    "verified_text_anchors": [
+      "48000",
+      "44000",
+      "40000",
+      "36000"
+    ],
+    "limitation": "No unobserved nationwide average; offshore 52000 separate",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "solar_resource_zone_hours",
+    "value": [
+      32000,
+      26000,
+      22000
+    ],
+    "unit": "hours",
+    "source_path": "data/raw/q2_revenue/mof_subsidy_lifetime_2020_426.html",
+    "source_sha256": "e06cf30027505716a928ea766a75a5ece7c893570f8bd1a22374068b2b47676d",
+    "source_url": "https://m.mof.gov.cn/zcfb/202010/t20201015_3604104.htm",
+    "verified_text_anchors": [
+      "32000",
+      "26000",
+      "22000"
+    ],
+    "limitation": "Qualifying leader/2019-2020 bidding projects have 10% increase; zones required",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "subsidy_formula",
+    "value": "(eligible_supported_tariff-local_coal_reference)/(1+applicable_VAT_rate)",
+    "unit": "CNY_per_kWh",
+    "source_path": "data/raw/q2_revenue/mof_subsidy_lifetime_2020_426.html",
+    "source_sha256": "e06cf30027505716a928ea766a75a5ece7c893570f8bd1a22374068b2b47676d",
+    "source_url": "https://m.mof.gov.cn/zcfb/202010/t20201015_3604104.htm",
+    "verified_text_anchors": [
+      "当地燃煤发电上网基准价",
+      "适用增值税率"
+    ],
+    "limitation": "NEA total tariff already contains support: never add full support twice; CPI applies after nominal settlement",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "levy_2013_09_25",
+    "value": 15,
+    "unit": "CNY_per_MWh",
+    "source_path": "data/raw/q2_revenue/mof_levy_2013.html",
+    "source_sha256": "9f0ae13eb921698b92848921f5da22ae967a844d736d846ff56a1dc60261eb5b",
+    "source_url": "https://zhs.mof.gov.cn/zhengcefabu/201310/t20131009_996652.htm",
+    "verified_text_anchors": [
+      "2013年9月25日",
+      "1.5",
+      "居民生活和农业生产以外"
+    ],
+    "limitation": "Tax base is eligible consumption, not nationwide gross generation",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "levy_2016_01_01",
+    "value": 19,
+    "unit": "CNY_per_MWh",
+    "source_path": "data/raw/q2_revenue/mof_levy_2016.html",
+    "source_sha256": "9258e773dead3be3a0e9a746b28a6dbbd0bec4eb78648d23b14ae644cdbc776a",
+    "source_url": "https://www.mof.gov.cn/gkml/caizhengwengao/wg2016/wg201602/201606/t20160601_2118609.htm",
+    "verified_text_anchors": [
+      "2016年1月1日",
+      "不含新疆维吾尔自治区、西藏自治区",
+      "居民生活和农业生产以外"
+    ],
+    "limitation": "Regional exemptions; eligible self-supply/direct transactions; collection rate and actual appropriations are not observed here",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "finite_budget",
+    "value": true,
+    "unit": "rule",
+    "source_path": "data/raw/q2_revenue/mof_subsidy_budget_rules_2020.html",
+    "source_sha256": "09f36364129d59a39f2e62ea04f8a05d0b7d7208aeb7766b77866a2cdfd8c777",
+    "source_url": "https://jjs.mof.gov.cn/zhengcefagui/202001/t20200122_3463379.htm",
+    "verified_text_anchors": [
+      "以收定支",
+      "年度补贴总额",
+      "优先顺序"
+    ],
+    "limitation": "An equal-priority allocation algorithm is a research rule; actual recipient priority/annual cash remain separate inputs",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "general_goods_vat_2018_05_01",
+    "value": 0.16,
+    "unit": "fraction",
+    "source_path": "data/raw/q2_revenue/mof_vat_2018.html",
+    "source_sha256": "ddd6bae0df0c06a569ac624f46badfd599ff310eb0aea640bcf3a56a99bf8aaf",
+    "source_url": "https://szs.mof.gov.cn/zhengcefabu/201804/t20180404_2862283.htm",
+    "verified_text_anchors": [
+      "17%",
+      "16%",
+      "2018年5月1日"
+    ],
+    "limitation": "General-regime goods rate; not an observed effective rate for the whole power fleet or tax refunds",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "general_goods_vat_2019_04_01",
+    "value": 0.13,
+    "unit": "fraction",
+    "source_path": "data/raw/q2_revenue/mof_vat_2019.html",
+    "source_sha256": "e4aca708bb1426ae3db14e925fb6ee9b5bc4a0a23aaf4651ed0ac2e8586c5eb7",
+    "source_url": "https://m.mof.gov.cn/czxw/201903/t20190320_3200168.htm",
+    "verified_text_anchors": [
+      "16%",
+      "13%",
+      "2019年4月1日"
+    ],
+    "limitation": "General-regime rate; exemptions, refunds and input credits require separate treatment",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "agroforestry_supported_tariff_2010",
+    "value": 750,
+    "unit": "nominal_VAT_inclusive_CNY_per_MWh",
+    "source_path": "data/raw/q2_revenue/ndrc_biomass_tariff_2010.html",
+    "source_sha256": "6ebf6ceade034784609678c809a26a39fc59e1e2184a47ab3d5da742b6a601b3",
+    "source_url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/201007/t20100728_964666.html",
+    "verified_text_anchors": [
+      "0.75",
+      "2010年7月1日",
+      "高出部分"
+    ],
+    "limitation": "Agroforestry, not municipal waste or the whole aggregated bioenergy category; tender and pre-existing approved prices differ; only premium above local coal benchmark uses levy fund",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "municipal_waste_tariff_2012",
+    "value": 650,
+    "unit": "nominal_VAT_inclusive_CNY_per_MWh",
+    "source_path": "data/raw/q2_revenue/ndrc_waste_tariff_2012_801.html",
+    "source_sha256": "600ecd1e7158e22e0c697c403e798fa145f2da97c2a5e901a2b1a59b5742d6cb",
+    "source_url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/201204/t20120410_964415.html",
+    "verified_text_anchors": [
+      "0.65",
+      "280",
+      "50%",
+      "0.1"
+    ],
+    "limitation": "Eligible waste electricity capped by verified waste tonnes times 280kWh/t and actual exports; low waste-equivalent fraction loses eligibility; provincial grid bears 0.1CNY/kWh premium before central allocation; exact 50% boundary requires separate clarification",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "gas_provincial_differentiated_revenue_2015",
+    "value": true,
+    "unit": "rule",
+    "source_path": "data/raw/q2_revenue/ndrc_gas_tariff_2014_3009.html",
+    "source_sha256": "1dcaf346cfac0ef53c998c6184a0816ffe4d89152bc1f222925169d970f64e50",
+    "source_url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/201501/t20150114_963735.html",
+    "verified_text_anchors": [
+      "2015年1月1日",
+      "省级负责制",
+      "财政补贴",
+      "气价优惠"
+    ],
+    "limitation": "CHP, peaking and distributed gas have distinct provincial mechanisms; no nationwide uniform gas subsidy amount; heat revenues require heat load and physical output",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "new_onshore_wind_and_nonhousehold_pv_no_central_subsidy_2021",
+    "value": true,
+    "unit": "rule",
+    "source_path": "data/raw/q2_revenue/ndrc_renewable_parity_2021.html",
+    "source_sha256": "cf213a8a0322850c1a19b3efed7432b015b5198e03635e0febe546782a76840c",
+    "source_url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202106/t20210611_1283088.html",
+    "verified_text_anchors": [
+      "2021年起",
+      "中央财政不再补贴",
+      "陆上风电"
+    ],
+    "limitation": "Scope is new approvals/filings specified by policy, not cancellation of existing qualified claims or all solar/wind categories",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  },
+  {
+    "key": "renewable_market_difference_settlement_2025",
+    "value": true,
+    "unit": "rule",
+    "source_path": "data/raw/q2_revenue/ndrc_renewable_market_2025.html",
+    "source_sha256": "5e7657e07ca5db9092691ade4f8c4b5ba3ca27c00e0c307db15f15fcd682e3ff",
+    "source_url": "https://www.ndrc.gov.cn/xwdt/tzgg/202502/t20250209_1396067.html",
+    "verified_text_anchors": [
+      "2025年6月1日",
+      "差价结算",
+      "系统运行费用"
+    ],
+    "limitation": "Provincial eligible energy, mechanism price, term and project vintage required; two-sided price settlement is not renewable-levy fiscal subsidy; not yet connected to default model",
+    "allowed_use": "policy_rule_only_not_national_cash_observation"
+  }
+]

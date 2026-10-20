@@ -1,0 +1,42 @@
+.......................................................................................................Q1 FAILED: Input hash mismatch: cost
+......................................Q1 FAILED: [Errno 2] No such file or directory: 'E:\\Team\\2026JM\\SimulationModelingProblemA\\tmp\\pr_q2_test_temp\\tmp90ucq9to\\missing.csv'
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+.........................................................................................................................................................EE.......................................................................................................................................................................................................................
+======================================================================
+ERROR: test_existing_success_missing_input_invalidates_and_can_retry (test_q2_national.NationalTests.test_existing_success_missing_input_invalidates_and_can_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tmp\pr_q2_review\tests\test_q2_national.py", line 493, in test_existing_success_missing_input_invalidates_and_can_retry
+    self._missing_startup_and_retry(True)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tmp\pr_q2_review\tests\test_q2_national.py", line 458, in _missing_startup_and_retry
+    with tempfile.TemporaryDirectory(dir=ROOT/"tmp") as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 886, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 384, in mkdtemp
+    _os.mkdir(file, 0o700)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\Team\\2026JM\\SimulationModelingProblemA\\tmp\\pr_q2_review\\tmp\\tmpaito7ogh'
+
+======================================================================
+ERROR: test_first_run_missing_input_records_failure_and_can_retry (test_q2_national.NationalTests.test_first_run_missing_input_records_failure_and_can_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tmp\pr_q2_review\tests\test_q2_national.py", line 490, in test_first_run_missing_input_records_failure_and_can_retry
+    self._missing_startup_and_retry(False)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tmp\pr_q2_review\tests\test_q2_national.py", line 458, in _missing_startup_and_retry
+    with tempfile.TemporaryDirectory(dir=ROOT/"tmp") as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 886, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 384, in mkdtemp
+    _os.mkdir(file, 0o700)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\Team\\2026JM\\SimulationModelingProblemA\\tmp\\pr_q2_review\\tmp\\tmpz0fr9omo'
+
+----------------------------------------------------------------------
+Ran 511 tests in 83.038s
+
+FAILED (errors=2)
+{"passed": false, "status": "failed", "checks": 0, "error": "ValueError: injected audit failure"}

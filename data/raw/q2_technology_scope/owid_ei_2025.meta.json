@@ -1,0 +1,2235 @@
+{
+  "short_name": "statistical_review_of_world_energy",
+  "title": "Statistical Review of World Energy",
+  "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+  "dataset": {
+    "channel": "garden",
+    "namespace": "energy_institute",
+    "short_name": "statistical_review_of_world_energy",
+    "title": "Statistical Review of World Energy",
+    "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+    "is_public": true,
+    "version": "2025-06-27",
+    "update_period_days": 365,
+    "non_redistributable": false,
+    "jsonld": false,
+    "owners": [
+      "Pablo Rosado"
+    ],
+    "source_checksum": "a6ce9e999075cb3cc71cebebeae291d6"
+  },
+  "primary_key": [
+    "country",
+    "year"
+  ],
+  "dimensions": [
+    {
+      "name": "Year",
+      "slug": "country"
+    },
+    {
+      "name": "Year",
+      "slug": "year"
+    }
+  ],
+  "fields": {
+    "country": {
+      "title": "Country",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Consolidated dataset panel format",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/file/0011/1659656/panel.csv",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        },
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ]
+    },
+    "year": {
+      "title": "Year",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Consolidated dataset panel format",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/file/0011/1659656/panel.csv",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        },
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ]
+    },
+    "biodiesel_consumption_pj": {
+      "title": "Biofuels consumption (biodiesel) - PJ",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Consolidated dataset panel format",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/file/0011/1659656/panel.csv",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "petajoules",
+      "short_unit": "PJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Biofuels consumption (biodiesel)",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "biodiesel_consumption_twh": {
+      "title": "Biofuels consumption (biodiesel) - TWh",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Consolidated dataset panel format",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/file/0011/1659656/panel.csv",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Biofuels consumption (biodiesel)",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "biodiesel_production_pj": {
+      "title": "Biofuels production (biodiesel) - PJ",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Consolidated dataset panel format",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/file/0011/1659656/panel.csv",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "petajoules",
+      "short_unit": "PJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Biofuels production (biodiesel)",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "biodiesel_production_twh": {
+      "title": "Biofuels production (biodiesel) - TWh",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Consolidated dataset panel format",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/file/0011/1659656/panel.csv",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Biofuels production (biodiesel)",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "biofuels_consumption_ej": {
+      "title": "Biofuels consumption - EJ",
+      "description_short": "Includes biogasoline (such as ethanol) and biodiesel. Volumes have been adjusted for energy content.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Consolidated dataset panel format",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/file/0011/1659656/panel.csv",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Biofuels consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "biofuels_consumption_twh": {
+      "title": "Biofuels consumption - TWh",
+      "description_short": "Includes biogasoline (such as ethanol) and biodiesel. Volumes have been adjusted for energy content.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Consolidated dataset panel format",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/file/0011/1659656/panel.csv",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Biofuels"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Biofuels consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "biofuels_production_pj": {
+      "title": "Biofuels production - PJ",
+      "description_short": "Includes biogasoline (such as ethanol) and biodiesel. Volumes have been adjusted for energy content.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "petajoules",
+      "short_unit": "PJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Biofuels production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "biofuels_production_twh": {
+      "title": "Biofuels production - TWh",
+      "description_short": "Includes biogasoline (such as ethanol) and biodiesel. Volumes have been adjusted for energy content.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Biofuels"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Biofuels production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "coal_consumption_ej": {
+      "title": "Coal consumption - EJ",
+      "description_key": [
+        "Includes commercial solid fuels only, i.e. bituminous coal and anthracite (hard coal), and lignite and brown (sub-bituminous) coal, and other commercial solid fuels. Excludes coal converted to liquid or gaseous fuels, but includes coal consumed in transformation processes. Differences between the consumption figures and the world production statistics are accounted for by stock changes, and unavoidable disparities in the definition, measurement or conversion of coal supply and demand data."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Coal consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "coal_consumption_twh": {
+      "title": "Coal consumption - TWh",
+      "description_key": [
+        "Includes commercial solid fuels only, i.e. bituminous coal and anthracite (hard coal), and lignite and brown (sub-bituminous) coal, and other commercial solid fuels. Excludes coal converted to liquid or gaseous fuels, but includes coal consumed in transformation processes. Differences between the consumption figures and the world production statistics are accounted for by stock changes, and unavoidable disparities in the definition, measurement or conversion of coal supply and demand data."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Coal"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Coal consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "coal_electricity_generation_twh": {
+      "title": "Coal electricity generation - TWh",
+      "description_short": "Based on gross output.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Electricity generation from coal",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "coal_production_ej": {
+      "title": "Coal production - EJ",
+      "description_key": [
+        "Includes commercial solid fuels only, i.e. bituminous coal and anthracite (hard coal), and lignite and brown (sub-bituminous) coal, and other commercial solid fuels. Includes coal produced for Coal-to-Liquids and Coal-to-Gas transformations."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Coal production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "coal_production_mt": {
+      "title": "Coal production - Mt",
+      "description_key": [
+        "Includes commercial solid fuels only, i.e. bituminous coal and anthracite (hard coal), and lignite and brown (sub-bituminous) coal, and other commercial solid fuels. Includes coal produced for Coal-to-Liquids and Coal-to-Gas transformations."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "million tonnes",
+      "short_unit": "Mt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Coal production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "coal_production_twh": {
+      "title": "Coal production - TWh",
+      "description_key": [
+        "Includes commercial solid fuels only, i.e. bituminous coal and anthracite (hard coal), and lignite and brown (sub-bituminous) coal, and other commercial solid fuels. Includes coal produced for Coal-to-Liquids and Coal-to-Gas transformations."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Coal production"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Coal production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "coal_reserves_anthracite_and_bituminous_mt": {
+      "title": "Coal reserves (anthracite and bituminous) - Mt",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "million tonnes",
+      "short_unit": "Mt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Coal reserves (anthracite and bituminous)",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "coal_reserves_mt": {
+      "title": "Coal reserves - Mt",
+      "description_key": [
+        "Total proved reserves of coal are generally taken to be those quantities that geological and engineering information indicates with reasonable certainty can be recovered in the future from known reservoirs under existing economic and operating conditions. The data series for total proved coal reserves does not necessarily meet the definitions, guidelines and practices used for determining proved reserves at company level, for instance as published by the US Securities and Exchange Commission, nor does it necessarily represent BP's view of proved reserves by country. Reserves-to-production (R/P) ratio: If the reserves remaining at the end of any year are divided by the production in that year, the result is the length of time that those remaining reserves would last if production were to continue at that rate."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "million tonnes",
+      "short_unit": "Mt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Coal proved reserves",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "coal_reserves_subbituminous_and_lignite_mt": {
+      "title": "Coal reserves (sub-bituminous and lignite) - Mt",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "million tonnes",
+      "short_unit": "Mt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Coal reserves (sub-bituminous and lignite)",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "cobalt_production_kt": {
+      "title": "Cobalt production-reserves - kt",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "thousand tonnes",
+      "short_unit": "kt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Cobalt production-reserves",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "cobalt_reserves_kt": {
+      "title": "Cobalt reserves - kT",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "thousand tonnes",
+      "short_unit": "kt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Cobalt reserves",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "efficiency_factor": {
+      "title": "Thermal equivalent efficiency factors",
+      "description": "Thermal equivalent efficiency factors used to convert non-fossil electricity to primary energy.",
+      "description_short": "Thermal equivalent efficiency factors used to convert non-fossil electricity in input-equivalent to direct primary energy.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "",
+      "short_unit": "",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Thermal equivalent efficiency factors",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "electricity_generation_twh": {
+      "title": "Electricity generation - TWh",
+      "description_short": "Based on gross output.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Total electricity generation",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "gas_consumption_bcfd": {
+      "title": "Gas consumption - BCFD",
+      "description_key": [
+        "Excludes natural gas converted to liquid fuels but includes derivatives of coal as well as natural gas consumed in Gas-to-Liquids transformation. The difference between the world consumption figures and the world production statistics is due to variations in stocks at storage facilities and liquefaction plants, together with unavoidable disparities in the definition, measurement or conversion of gas supply and demand data."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "billion cubic feet per day",
+      "short_unit": "BCFD",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Gas consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "gas_consumption_bcm": {
+      "title": "Gas consumption - BCM",
+      "description_key": [
+        "Excludes natural gas converted to liquid fuels but includes derivatives of coal as well as natural gas consumed in Gas-to-Liquids transformation. As far as possible, the data represent standard cubic meters (measured at 15C and 1013 mbar); as they are derived directly from measures of energy content using an average conversion factor and have been standardized using a Gross Calorific Value (GCV) of 40 MJ/m3, they do not necessarily equate with gas volumes expressed in specific national terms. The difference between the world consumption figures and the world production statistics is due to variations in stocks at storage facilities and liquefaction plants, together with unavoidable disparities in the definition, measurement or conversion of gas supply and demand data."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "billion cubic meters",
+      "short_unit": "BCM",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Gas consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "gas_consumption_ej": {
+      "title": "Gas consumption - EJ",
+      "description_key": [
+        "Excludes natural gas converted to liquid fuels but includes derivatives of coal as well as natural gas consumed in Gas-to-Liquids transformation. The difference between the world consumption figures and the world production statistics is due to variations in stocks at storage facilities and liquefaction plants, together with unavoidable disparities in the definition, measurement or conversion of gas supply and demand data."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Gas consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "gas_consumption_twh": {
+      "title": "Gas consumption - TWh",
+      "description_key": [
+        "Excludes natural gas converted to liquid fuels but includes derivatives of coal as well as natural gas consumed in Gas-to-Liquids transformation. The difference between the world consumption figures and the world production statistics is due to variations in stocks at storage facilities and liquefaction plants, together with unavoidable disparities in the definition, measurement or conversion of gas supply and demand data."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Gas"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Gas consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "gas_electricity_generation_twh": {
+      "title": "Gas electricity generation - TWh",
+      "description_short": "Based on gross output.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Electricity generation from gas",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "gas_production_bcfd": {
+      "title": "Gas production - BCFD",
+      "description_key": [
+        "Excludes gas flared or recycled. Includes natural gas produced for Gas-to-Liquids transformation. As the data are derived directly from measures of energy content, they do not necessarily equate with gas volumes expressed in specific national terms."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "billion cubic feet per day",
+      "short_unit": "BCFD",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Gas production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "gas_production_bcm": {
+      "title": "Gas production - BCM",
+      "description_key": [
+        "Excludes gas flared or recycled. Includes natural gas produced for Gas-to-Liquids transformation. As far as possible, the data represents standard cubic meters (measured at 15C and 1013 mbar); as they are derived directly from measures of energy content using an average conversion factor and have been standardized using a Gross Calorific Value (GCV) of 40 MJ/m3, they do not necessarily equate with gas volumes expressed in specific national terms."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "billion cubic meters",
+      "short_unit": "BCM",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Gas production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "gas_production_ej": {
+      "title": "Gas production - EJ",
+      "description_short": "Excludes gas flared or recycled. Includes natural gas produced for Gas-to-Liquids transformation.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Gas production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "gas_production_twh": {
+      "title": "Gas production - TWh",
+      "description_short": "Excludes gas flared or recycled. Includes natural gas produced for Gas-to-Liquids transformation.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Gas production"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Gas production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "gas_reserves_tcm": {
+      "title": "Gas proved reserves - TCM",
+      "description_key": [
+        "Total proved reserves of natural gas is generally taken to be those quantities that geological and engineering information indicates with reasonable certainty can be recovered in the future from known reservoirs under existing economic and operating conditions. The data series for total proved natural gas does not necessarily meet the definitions, guidelines and practices used for determining proved reserves at company level, for instance as published by the US Securities and Exchange Commission, nor does it necessarily represent BP's view of proved reserves by country. Reserves-to-production (R/P) ratio: If the reserves remaining at the end of any year are divided by the production in that year, the result is the length of time that those remaining reserves would last if production were to continue at that rate. As far as possible, the data represents standard cubic meters (measured at 15C and 1013 mbar) and has been standardized using a gross calorific value (GCV) of 40 MJ/m3."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "trillion cubic meters",
+      "short_unit": "TCM",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Gas proved reserves",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "graphite_production_kt": {
+      "title": "Graphite production - kt",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "thousand tonnes",
+      "short_unit": "kt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Graphite production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "graphite_reserves_kt": {
+      "title": "Graphite reserves - kt",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "thousand tonnes",
+      "short_unit": "kt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Graphite reserves",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "hydro_consumption_equivalent_ej": {
+      "title": "Hydro consumption - EJ",
+      "description_short": "Input equivalent energy is based on gross generation and does not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Hydropower consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      },
+      "description_processing": "* Primary energy consumption is expressed in input-equivalents (using the [substitution method](#dod:substitutionmethod)). For nuclear, hydro, solar, and wind, we divide gross electricity generation by a time-dependent thermal efficiency factor (around 41% in recent years). This represents the average efficiency of fossil fuel power plants globally and reflects the amount of fuel that would have been required to produce the same electricity in such plants. This approach follows the methodology used by the Statistical Review of World Energy up to the 2024 release. In 2025, the Statistical Review switched to the Physical Energy Content method to calculate Total Energy Supply. For now, we continue to use the substitution method to maintain consistency across our articles and charts."
+    },
+    "hydro_consumption_equivalent_twh": {
+      "title": "Hydro consumption - TWh",
+      "description_short": "Input-equivalent energy is based on gross generation and does not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Hydropower"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Hydropower consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      },
+      "description_processing": "* Primary energy consumption is expressed in input-equivalents (using the [substitution method](#dod:substitutionmethod)). For nuclear, hydro, solar, and wind, we divide gross electricity generation by a time-dependent thermal efficiency factor (around 41% in recent years). This represents the average efficiency of fossil fuel power plants globally and reflects the amount of fuel that would have been required to produce the same electricity in such plants. This approach follows the methodology used by the Statistical Review of World Energy up to the 2024 release. In 2025, the Statistical Review switched to the Physical Energy Content method to calculate Total Energy Supply. For now, we continue to use the substitution method to maintain consistency across our articles and charts."
+    },
+    "hydro_electricity_generation_twh": {
+      "title": "Hydro generation - TWh",
+      "description_short": "Figures are based on gross primary hydroelectric generation and do not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Hydropower"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Electricity generation from hydropower",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "lithium_production_kt": {
+      "title": "Lithium production - kt",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "thousand tonnes",
+      "short_unit": "kt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Lithium production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "lithium_reserves_kt": {
+      "title": "Lithium reserves - kt",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "thousand tonnes",
+      "short_unit": "kt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Lithium reserves",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "nuclear_consumption_equivalent_ej": {
+      "title": "Nuclear consumption - EJ",
+      "description_short": "Input-equivalent energy is based on gross generation and does not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Nuclear consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      },
+      "description_processing": "* Primary energy consumption is expressed in input-equivalents (using the [substitution method](#dod:substitutionmethod)). For nuclear, hydro, solar, and wind, we divide gross electricity generation by a time-dependent thermal efficiency factor (around 41% in recent years). This represents the average efficiency of fossil fuel power plants globally and reflects the amount of fuel that would have been required to produce the same electricity in such plants. This approach follows the methodology used by the Statistical Review of World Energy up to the 2024 release. In 2025, the Statistical Review switched to the Physical Energy Content method to calculate Total Energy Supply. For now, we continue to use the substitution method to maintain consistency across our articles and charts."
+    },
+    "nuclear_consumption_equivalent_twh": {
+      "title": "Nuclear consumption - TWh",
+      "description_short": "Input-equivalent energy is based on gross generation and does not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Nuclear"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Nuclear consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      },
+      "description_processing": "* Primary energy consumption is expressed in input-equivalents (using the [substitution method](#dod:substitutionmethod)). For nuclear, hydro, solar, and wind, we divide gross electricity generation by a time-dependent thermal efficiency factor (around 41% in recent years). This represents the average efficiency of fossil fuel power plants globally and reflects the amount of fuel that would have been required to produce the same electricity in such plants. This approach follows the methodology used by the Statistical Review of World Energy up to the 2024 release. In 2025, the Statistical Review switched to the Physical Energy Content method to calculate Total Energy Supply. For now, we continue to use the substitution method to maintain consistency across our articles and charts."
+    },
+    "nuclear_electricity_generation_twh": {
+      "title": "Nuclear generation - TWh",
+      "description_short": "Figures are based on gross generation and do not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Nuclear"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Electricity generation from nuclear power",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "oil_consumption_ej": {
+      "title": "Oil consumption - EJ",
+      "description_key": [
+        "Includes inland demand plus international aviation and marine bunkers and refinery fuel and loss. Consumption of biogasoline (such as ethanol) and biodiesel are excluded while derivatives of coal and natural gas are included. Differences between the world consumption figures and world production statistics are accounted for by stock changes, consumption of non-petroleum additives and substitute fuels and unavoidable disparities in the definition, measurement or conversion of oil supply and demand data."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Oil consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "oil_consumption_kbd": {
+      "title": "Oil consumption - kBD",
+      "description_key": [
+        "Includes inland demand plus international aviation and marine bunkers and refinery fuel and loss. Consumption of biogasoline (such as ethanol) and biodiesel are excluded while derivatives of coal and natural gas are included. Differences between the world consumption figures and world production statistics are accounted for by stock changes, consumption of non-petroleum additives and substitute fuels and unavoidable disparities in the definition, measurement or conversion of oil supply and demand data."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "thousand barrels per day",
+      "short_unit": "kBD",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Oil consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "oil_consumption_m3d": {
+      "title": "Oil consumption - m\u00b3/day",
+      "description_key": [
+        "Includes inland demand plus international aviation and marine bunkers and refinery fuel and loss. Consumption of biogasoline (such as ethanol) and biodiesel are excluded while derivatives of coal and natural gas are included. Differences between the world consumption figures and world production statistics are accounted for by stock changes, consumption of non-petroleum additives and substitute fuels and unavoidable disparities in the definition, measurement or conversion of oil supply and demand data."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "cubic meters per day",
+      "short_unit": "m\u00b3/day",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Oil consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "oil_consumption_mt": {
+      "title": "Oil consumption - Mt",
+      "description_key": [
+        "Includes inland demand plus international aviation and marine bunkers and refinery fuel and loss. Consumption of biogasoline (such as ethanol) and biodiesel are excluded while derivatives of coal and natural gas are included. Differences between the world consumption figures and world production statistics are accounted for by stock changes, consumption of non-petroleum additives and substitute fuels and unavoidable disparities in the definition, measurement or conversion of oil supply and demand data."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "million tonnes",
+      "short_unit": "Mt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Oil consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "oil_consumption_twh": {
+      "title": "Oil consumption - TWh",
+      "description_key": [
+        "Includes inland demand plus international aviation and marine bunkers and refinery fuel and loss. Consumption of biogasoline (such as ethanol) and biodiesel are excluded while derivatives of coal and natural gas are included. Differences between the world consumption figures and world production statistics are accounted for by stock changes, consumption of non-petroleum additives and substitute fuels and unavoidable disparities in the definition, measurement or conversion of oil supply and demand data."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Oil"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Oil consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "oil_electricity_generation_twh": {
+      "title": "Oil electricity generation - TWh",
+      "description_short": "Based on gross output.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Electricity generation from oil",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "oil_production_mt": {
+      "title": "Oil production - Mt",
+      "description_key": [
+        "Includes crude oil, shale oil, oil sands, condensates (lease condensate or gas condensates that require further refining) and NGLs (natural gas liquids - ethane, LPG and naphtha separated from the production of natural gas). Excludes liquid fuels from other sources such as biofuels and synthetic derivatives of coal and natural gas. This also excludes liquid fuel adjustment factors such as refinery processing gain. Excludes oil shales/kerogen extracted in solid form."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "million tonnes",
+      "short_unit": "Mt",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Oil production",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "oil_production_twh": {
+      "title": "Oil production - TWh",
+      "description_key": [
+        "Includes crude oil, shale oil, oil sands, condensates (lease condensate or gas condensates that require further refining) and NGLs (natural gas liquids - ethane, LPG and naphtha separated from the production of natural gas). Excludes liquid fuels from other sources such as biofuels and synthetic derivatives of coal and natural gas. This also excludes liquid fuel adjustment factors such as refinery processing gain. Excludes oil shales/kerogen extracted in solid form."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Oil production"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Oil production",
+        "topic_tags": [
+          "Energy"
+        ]
+      },
+      "description_processing": "* Oil production is approximately converted from million tonnes to energy using a standard average oil-equivalent conversion factor of 41.868 petajoules per million tonnes. We then convert 1 petajoule to 0.278 terawatt-hours."
+    },
+    "oil_reserves_bbl": {
+      "title": "Oil proved reserves - BBL",
+      "description_key": [
+        "Estimates have been compiled using a combination of primary official sources, third-party data from the OPEC Secretariat, World Oil, Oil & Gas Journal and Chinese reserves based on official data and information in the public domain. Canadian oil sands 'under active development' are an official estimate. Venezuelan Orinoco Belt reserves are based on the OPEC Secretariat and government announcements. Reserves and R/P ratio for Canada includes Canadian oil sands. Reserves and R/P ratio for Venezuela includes the Orinoco Belt. Saudi Arabia's oil reserves include NGLs from 2017. Total proved reserves of oil are generally taken to be those quantities that geological and engineering information indicates with reasonable certainty can be recovered in the future from known reservoirs under existing economic and operating conditions. The data series for total proved oil reserves does not necessarily meet the definitions, guidelines and practices used for determining proved reserves at company level, for instance as published by the US Securities and Exchange Commission, nor does it necessarily represent BP's view of proved reserves by country. Reserves-to-production (R/P) ratio: If the reserves remaining at the end of any year are divided by the production in that year, the result is the length of time that those remaining reserves would last if production were to continue at that rate. Reserves include gas condensate and natural gas liquids (NGLs) as well as crude oil."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "billion barrels",
+      "short_unit": "BBL",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Oil proved reserves",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "oil_reserves_t": {
+      "title": "Oil proved reserves - t",
+      "description_key": [
+        "Estimates have been compiled using a combination of primary official sources, third-party data from the OPEC Secretariat, World Oil, Oil & Gas Journal and Chinese reserves based on official data and information in the public domain. Canadian oil sands 'under active development' are an official estimate. Venezuelan Orinoco Belt reserves are based on the OPEC Secretariat and government announcements. Reserves and R/P ratio for Canada includes Canadian oil sands. Reserves and R/P ratio for Venezuela includes the Orinoco Belt. Saudi Arabia's oil reserves include NGLs from 2017. Total proved reserves of oil are generally taken to be those quantities that geological and engineering information indicates with reasonable certainty can be recovered in the future from known reservoirs under existing economic and operating conditions. The data series for total proved oil reserves does not necessarily meet the definitions, guidelines and practices used for determining proved reserves at company level, for instance as published by the US Securities and Exchange Commission, nor does it necessarily represent BP's view of proved reserves by country. Reserves-to-production (R/P) ratio: If the reserves remaining at the end of any year are divided by the production in that year, the result is the length of time that those remaining reserves would last if production were to continue at that rate. Reserves include gas condensate and natural gas liquids (NGLs) as well as crude oil."
+      ],
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "tonnes",
+      "short_unit": "t",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Oil proved reserves",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "other_renewables_consumption_equivalent_ej": {
+      "title": "Other renewables (including geothermal and biomass) - EJ",
+      "description_short": "Input-equivalent energy, in exajoules, is based on gross generation and does not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Other renewables (including geothermal and biomass)",
+        "topic_tags": [
+          "Energy"
+        ]
+      },
+      "description_processing": "* Primary energy consumption is expressed in input-equivalents (using the [substitution method](#dod:substitutionmethod)). For \"other renewables\", we divide gross electricity generation by a factor of 0.32, which reflects an assumed efficiency of 32% for typical biomass power plants \u2014 the dominant source of electricity in this category globally. This approach follows the methodology used by the Statistical Review of World Energy up to the 2024 release. In 2025, the Statistical Review switched to the Physical Energy Content method to calculate Total Energy Supply. For now, we continue to use the substitution method to maintain consistency across our articles and charts."
+    },
+    "other_renewables_consumption_equivalent_twh": {
+      "title": "Other renewables (including geothermal and biomass) - TWh",
+      "description_short": "Input-equivalent energy, in terawatt-hours, is based on gross generation and does not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Other renewables"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Other renewables (including geothermal and biomass)",
+        "topic_tags": [
+          "Energy"
+        ]
+      },
+      "description_processing": "* Primary energy consumption is expressed in input-equivalents (using the [substitution method](#dod:substitutionmethod)). For \"other renewables\", we divide gross electricity generation by a factor of 0.32, which reflects an assumed efficiency of 32% for typical biomass power plants \u2014 the dominant source of electricity in this category globally. This approach follows the methodology used by the Statistical Review of World Energy up to the 2024 release. In 2025, the Statistical Review switched to the Physical Energy Content method to calculate Total Energy Supply. For now, we continue to use the substitution method to maintain consistency across our articles and charts."
+    },
+    "other_renewables_electricity_generation_twh": {
+      "title": "Other renewables (including geothermal and biomass) electricity generation - TWh",
+      "description_short": "Figures are based on gross generation and do not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Other renewables"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Other renewables (including geothermal and biomass)",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "primary_energy_consumption_equivalent_ej": {
+      "title": "Primary energy consumption - EJ",
+      "description_short": "Comprises commercially-traded fuels, including modern renewables used to generate electricity. Energy from all sources of non-fossil power generation is accounted for on an input-equivalent basis.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Primary energy consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "primary_energy_consumption_equivalent_twh": {
+      "title": "Primary energy consumption - TWh",
+      "description_short": "Comprises commercially-traded fuels, including modern renewables used to generate electricity. Energy from all sources of non-fossil power generation is accounted for on an input-equivalent basis.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Primary energy consumption"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Primary energy consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "renewables_electricity_generation_twh": {
+      "title": "Renewables electricity generation - TWh",
+      "description_short": "Renewable power is based on gross generation from renewable sources including wind, geothermal, solar, biomass and waste, and does not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Renewables"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Electricity generation from renewables",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "solar_consumption_equivalent_ej": {
+      "title": "Solar consumption - EJ",
+      "description_short": "Input-equivalent energy, in exajoules, is based on gross generation and does not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Solar consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      },
+      "description_processing": "* Primary energy consumption is expressed in input-equivalents (using the [substitution method](#dod:substitutionmethod)). For nuclear, hydro, solar, and wind, we divide gross electricity generation by a time-dependent thermal efficiency factor (around 41% in recent years). This represents the average efficiency of fossil fuel power plants globally and reflects the amount of fuel that would have been required to produce the same electricity in such plants. This approach follows the methodology used by the Statistical Review of World Energy up to the 2024 release. In 2025, the Statistical Review switched to the Physical Energy Content method to calculate Total Energy Supply. For now, we continue to use the substitution method to maintain consistency across our articles and charts."
+    },
+    "solar_consumption_equivalent_twh": {
+      "title": "Solar consumption - TWh",
+      "description_short": "Input-equivalent energy, in terawatt-hours, is based on gross generation and does not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Solar"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Solar consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      },
+      "description_processing": "* Primary energy consumption is expressed in input-equivalents (using the [substitution method](#dod:substitutionmethod)). For nuclear, hydro, solar, and wind, we divide gross electricity generation by a time-dependent thermal efficiency factor (around 41% in recent years). This represents the average efficiency of fossil fuel power plants globally and reflects the amount of fuel that would have been required to produce the same electricity in such plants. This approach follows the methodology used by the Statistical Review of World Energy up to the 2024 release. In 2025, the Statistical Review switched to the Physical Energy Content method to calculate Total Energy Supply. For now, we continue to use the substitution method to maintain consistency across our articles and charts."
+    },
+    "solar_electricity_generation_twh": {
+      "title": "Solar generation - TWh",
+      "description_short": "Figures are based on gross generation and do not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Solar"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Electricity generation from solar power",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    },
+    "wind_consumption_equivalent_ej": {
+      "title": "Wind consumption - EJ",
+      "description_short": "Input-equivalent energy, in exajoules, is based on gross generation and does not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "exajoules",
+      "short_unit": "EJ",
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Wind consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      },
+      "description_processing": "* Primary energy consumption is expressed in input-equivalents (using the [substitution method](#dod:substitutionmethod)). For nuclear, hydro, solar, and wind, we divide gross electricity generation by a time-dependent thermal efficiency factor (around 41% in recent years). This represents the average efficiency of fossil fuel power plants globally and reflects the amount of fuel that would have been required to produce the same electricity in such plants. This approach follows the methodology used by the Statistical Review of World Energy up to the 2024 release. In 2025, the Statistical Review switched to the Physical Energy Content method to calculate Total Energy Supply. For now, we continue to use the substitution method to maintain consistency across our articles and charts."
+    },
+    "wind_consumption_equivalent_twh": {
+      "title": "Wind consumption - TWh",
+      "description_short": "Input-equivalent energy, in terawatt-hours, is based on gross generation and does not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Wind"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Wind consumption",
+        "topic_tags": [
+          "Energy"
+        ]
+      },
+      "description_processing": "* Primary energy consumption is expressed in input-equivalents (using the [substitution method](#dod:substitutionmethod)). For nuclear, hydro, solar, and wind, we divide gross electricity generation by a time-dependent thermal efficiency factor (around 41% in recent years). This represents the average efficiency of fossil fuel power plants globally and reflects the amount of fuel that would have been required to produce the same electricity in such plants. This approach follows the methodology used by the Statistical Review of World Energy up to the 2024 release. In 2025, the Statistical Review switched to the Physical Energy Content method to calculate Total Energy Supply. For now, we continue to use the substitution method to maintain consistency across our articles and charts."
+    },
+    "wind_electricity_generation_twh": {
+      "title": "Wind generation - TWh",
+      "description_short": "Figures are based on gross generation and do not account for cross-border electricity supply.",
+      "origins": [
+        {
+          "producer": "Energy Institute",
+          "title": "Statistical Review of World Energy",
+          "description": "The Energy Institute Statistical Review of World Energy analyses data on world energy markets from the prior year.",
+          "title_snapshot": "Statistical Review of World Energy \u2013 Key data",
+          "citation_full": "Energy Institute \u2013 Statistical Review of World Energy (2025).",
+          "attribution": "Energy Institute \u2013 Statistical Review of World Energy (2025)",
+          "attribution_short": "Energy Institute",
+          "url_main": "https://www.energyinst.org/statistical-review/",
+          "url_download": "https://www.energyinst.org/__data/assets/excel_doc/0008/1656215/EI-Stats-Review-ALL-data.xlsx",
+          "date_accessed": "2025-06-27",
+          "date_published": "2025-06-26",
+          "license": {
+            "name": "\u00a9 Energy Institute 2025",
+            "url": "https://www.energyinst.org/terms"
+          }
+        }
+      ],
+      "unit": "terawatt-hours",
+      "short_unit": "TWh",
+      "display": {
+        "name": "Wind"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "title_public": "Electricity generation from wind power",
+        "topic_tags": [
+          "Energy"
+        ]
+      }
+    }
+  }
+}

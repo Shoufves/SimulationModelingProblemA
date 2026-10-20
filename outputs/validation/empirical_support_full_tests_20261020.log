@@ -1,0 +1,20 @@
+.......................................................................................................Q1 FAILED: Input hash mismatch: cost
+......................................Q1 FAILED: [Errno 2] No such file or directory: 'E:\\Team\\2026JM\\SimulationModelingProblemA\\tmp\\tests\\tmpfgdn5g91\\missing.csv'
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+{"status": "success_conditional_candidate", "elapsed_seconds": 0.026189900003373623}
+{"status": "success_conditional_candidate", "elapsed_seconds": 0.023814200001652353}
+................................................................................................................................................................................................F.............................
+======================================================================
+FAIL: test_approved_project_waits_for_commissioning_and_receives_only_funded_cash (test_q2_support_investment.SupportNationalLoopTests.test_approved_project_waits_for_commissioning_and_receives_only_funded_cash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q2_support_investment.py", line 147, in test_approved_project_waits_for_commissioning_and_receives_only_funded_cash
+    self.assertLessEqual(model.paths[-1]["subsidy_paid_nominal_cny"],1000000)
+AssertionError: 1000000.0000000001 not less than or equal to 1000000
+
+----------------------------------------------------------------------
+Ran 363 tests in 42.853s
+
+FAILED (failures=1)
+{"passed": false, "status": "failed", "checks": 0, "error": "ValueError: injected audit failure"}

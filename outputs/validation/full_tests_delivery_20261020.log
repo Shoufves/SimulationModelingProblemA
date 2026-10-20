@@ -1,0 +1,1077 @@
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+{"status": "success_conditional_candidate", "elapsed_seconds": 0.040767300000879914}
+{"status": "success_conditional_candidate", "elapsed_seconds": 0.04038859999855049}
+...................E.E.........EEEEEEEEEE.............................................................EEEEEEEEEE..................................EE...E.........................................................................................................................................................................................E....................................................................................................................................................................................................
+======================================================================
+ERROR: test_missing_or_tampered_admission_creates_no_output (test_asset_lifecycle.AssetLifecycleTests.test_missing_or_tampered_admission_creates_no_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_asset_lifecycle.py", line 113, in test_missing_or_tampered_admission_creates_no_output
+    target.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpscx0hpt2\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpscx0hpt2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_asset_lifecycle.py", line 107, in test_missing_or_tampered_admission_creates_no_output
+    with TemporaryDirectory() as temporary:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpscx0hpt2'
+
+======================================================================
+ERROR: test_reviewed_case_runs_reproducibly_with_case_insensitive_original_hash (test_asset_lifecycle.AssetLifecycleTests.test_reviewed_case_runs_reproducibly_with_case_insensitive_original_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_asset_lifecycle.py", line 138, in test_reviewed_case_runs_reproducibly_with_case_insensitive_original_hash
+    target.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp6nyu0je0\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp6nyu0je0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_asset_lifecycle.py", line 122, in test_reviewed_case_runs_reproducibly_with_case_insensitive_original_hash
+    with TemporaryDirectory() as temporary:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp6nyu0je0'
+
+======================================================================
+ERROR: test_changed_evaluation_design_fails_before_calculation (test_demand_hindcast.DemandHindcastTests.test_changed_evaluation_design_fails_before_calculation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 157, in test_changed_evaluation_design_fails_before_calculation
+    config = fixture(root)
+             ^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 26, in fixture
+    write(root, CONFIG, config)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 19, in write
+    destination.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpd2l501ej\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpd2l501ej'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 155, in test_changed_evaluation_design_fails_before_calculation
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpd2l501ej'
+
+======================================================================
+ERROR: test_changed_observation_is_rejected_by_hash (test_demand_hindcast.DemandHindcastTests.test_changed_observation_is_rejected_by_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 86, in test_changed_observation_is_rejected_by_hash
+    fixture(root)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 26, in fixture
+    write(root, CONFIG, config)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 19, in write
+    destination.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp8nan_l38\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp8nan_l38'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 84, in test_changed_observation_is_rejected_by_hash
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp8nan_l38'
+
+======================================================================
+ERROR: test_check_only_has_no_results_and_excludes_2025 (test_demand_hindcast.DemandHindcastTests.test_check_only_has_no_results_and_excludes_2025)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 130, in test_check_only_has_no_results_and_excludes_2025
+    config = fixture(root)
+             ^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 26, in fixture
+    write(root, CONFIG, config)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 19, in write
+    destination.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpqmhc5q_w\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpqmhc5q_w'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 128, in test_check_only_has_no_results_and_excludes_2025
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpqmhc5q_w'
+
+======================================================================
+ERROR: test_configured_source_mismatch_is_rejected (test_demand_hindcast.DemandHindcastTests.test_configured_source_mismatch_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 199, in test_configured_source_mismatch_is_rejected
+    config = fixture(root)
+             ^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 26, in fixture
+    write(root, CONFIG, config)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 19, in write
+    destination.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp2ahyif5d\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp2ahyif5d'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 197, in test_configured_source_mismatch_is_rejected
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp2ahyif5d'
+
+======================================================================
+ERROR: test_explicitly_configured_and_reviewed_alternative_path_runs (test_demand_hindcast.DemandHindcastTests.test_explicitly_configured_and_reviewed_alternative_path_runs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 167, in test_explicitly_configured_and_reviewed_alternative_path_runs
+    config = fixture(root)
+             ^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 26, in fixture
+    write(root, CONFIG, config)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 19, in write
+    destination.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp6md_cit9\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp6md_cit9'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 165, in test_explicitly_configured_and_reviewed_alternative_path_runs
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp6md_cit9'
+
+======================================================================
+ERROR: test_holdout_energy_does_not_affect_fit_or_predictions (test_demand_hindcast.DemandHindcastTests.test_holdout_energy_does_not_affect_fit_or_predictions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 115, in test_holdout_energy_does_not_affect_fit_or_predictions
+    config = fixture(root)
+             ^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 26, in fixture
+    write(root, CONFIG, config)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 19, in write
+    destination.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpvgn3kfar\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpvgn3kfar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 113, in test_holdout_energy_does_not_affect_fit_or_predictions
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpvgn3kfar'
+
+======================================================================
+ERROR: test_missing_admission_creates_no_calibration_directory (test_demand_hindcast.DemandHindcastTests.test_missing_admission_creates_no_calibration_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 76, in test_missing_admission_creates_no_calibration_directory
+    fixture(root)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 26, in fixture
+    write(root, CONFIG, config)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 19, in write
+    destination.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpvytipv7b\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpvytipv7b'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 74, in test_missing_admission_creates_no_calibration_directory
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpvytipv7b'
+
+======================================================================
+ERROR: test_success_is_reproducible_with_evidence_and_yearly_errors (test_demand_hindcast.DemandHindcastTests.test_success_is_reproducible_with_evidence_and_yearly_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 139, in test_success_is_reproducible_with_evidence_and_yearly_errors
+    fixture(root)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 26, in fixture
+    write(root, CONFIG, config)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 19, in write
+    destination.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp_c18n1cb\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp_c18n1cb'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 137, in test_success_is_reproducible_with_evidence_and_yearly_errors
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp_c18n1cb'
+
+======================================================================
+ERROR: test_units_checked_even_with_structurally_valid_review (test_demand_hindcast.DemandHindcastTests.test_units_checked_even_with_structurally_valid_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 99, in test_units_checked_even_with_structurally_valid_review
+    fixture(root)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 26, in fixture
+    write(root, CONFIG, config)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 19, in write
+    destination.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp_84ekqeg\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp_84ekqeg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 97, in test_units_checked_even_with_structurally_valid_review
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp_84ekqeg'
+
+======================================================================
+ERROR: test_unrelated_unreviewed_input_does_not_block_this_module (test_demand_hindcast.DemandHindcastTests.test_unrelated_unreviewed_input_does_not_block_this_module)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 189, in test_unrelated_unreviewed_input_does_not_block_this_module
+    fixture(root)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 26, in fixture
+    write(root, CONFIG, config)
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 19, in write
+    destination.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpvy85t5q9\\workflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpvy85t5q9'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_demand_hindcast.py", line 187, in test_unrelated_unreviewed_input_does_not_block_this_module
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpvy85t5q9'
+
+======================================================================
+ERROR: test_changed_actual_input_rejects_old_success (test_q1.Q1DeliveryTests.test_changed_actual_input_rejects_old_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpptgvn79k\\outputs\\q1\\test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpptgvn79k\\outputs\\q1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q1.py", line 260, in setUp
+    self.root=Path(self.tmp.name);self.out=self.root/'outputs/q1/test';self.out.mkdir(parents=True)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpptgvn79k\\outputs'
+
+======================================================================
+ERROR: test_changed_actual_input_rejects_old_success (test_q1.Q1DeliveryTests.test_changed_actual_input_rejects_old_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpptgvn79k'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpptgvn79k'
+
+======================================================================
+ERROR: test_failed_run_then_restored_input_still_rejects_old_success (test_q1.Q1DeliveryTests.test_failed_run_then_restored_input_still_rejects_old_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpc7h_c0ib\\outputs\\q1\\test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpc7h_c0ib\\outputs\\q1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q1.py", line 260, in setUp
+    self.root=Path(self.tmp.name);self.out=self.root/'outputs/q1/test';self.out.mkdir(parents=True)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpc7h_c0ib\\outputs'
+
+======================================================================
+ERROR: test_failed_run_then_restored_input_still_rejects_old_success (test_q1.Q1DeliveryTests.test_failed_run_then_restored_input_still_rejects_old_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpc7h_c0ib'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpc7h_c0ib'
+
+======================================================================
+ERROR: test_manifest_cannot_claim_different_input_identity (test_q1.Q1DeliveryTests.test_manifest_cannot_claim_different_input_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp3zht0jn6\\outputs\\q1\\test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp3zht0jn6\\outputs\\q1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q1.py", line 260, in setUp
+    self.root=Path(self.tmp.name);self.out=self.root/'outputs/q1/test';self.out.mkdir(parents=True)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp3zht0jn6\\outputs'
+
+======================================================================
+ERROR: test_manifest_cannot_claim_different_input_identity (test_q1.Q1DeliveryTests.test_manifest_cannot_claim_different_input_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp3zht0jn6'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp3zht0jn6'
+
+======================================================================
+ERROR: test_matching_current_artifacts_are_accepted (test_q1.Q1DeliveryTests.test_matching_current_artifacts_are_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpf8fjo3_s\\outputs\\q1\\test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpf8fjo3_s\\outputs\\q1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q1.py", line 260, in setUp
+    self.root=Path(self.tmp.name);self.out=self.root/'outputs/q1/test';self.out.mkdir(parents=True)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpf8fjo3_s\\outputs'
+
+======================================================================
+ERROR: test_matching_current_artifacts_are_accepted (test_q1.Q1DeliveryTests.test_matching_current_artifacts_are_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpf8fjo3_s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpf8fjo3_s'
+
+======================================================================
+ERROR: test_missing_original_rejects_old_success (test_q1.Q1DeliveryTests.test_missing_original_rejects_old_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpopbw40ae\\outputs\\q1\\test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpopbw40ae\\outputs\\q1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q1.py", line 260, in setUp
+    self.root=Path(self.tmp.name);self.out=self.root/'outputs/q1/test';self.out.mkdir(parents=True)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpopbw40ae\\outputs'
+
+======================================================================
+ERROR: test_missing_original_rejects_old_success (test_q1.Q1DeliveryTests.test_missing_original_rejects_old_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpopbw40ae'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpopbw40ae'
+
+======================================================================
+ERROR: test_failed_attempt_preserves_previous_output_without_claiming_success (test_q1.Q1OutputTests.test_failed_attempt_preserves_previous_output_without_claiming_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpt_sio60n\\outputs\\q1\\test'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpt_sio60n\\outputs\\q1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q1.py", line 236, in test_failed_attempt_preserves_previous_output_without_claiming_success
+    root=Path(folder);out=root/'outputs/q1/test';out.mkdir(parents=True)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpt_sio60n\\outputs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpt_sio60n'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q1.py", line 235, in test_failed_attempt_preserves_previous_output_without_claiming_success
+    with tempfile.TemporaryDirectory() as folder:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpt_sio60n'
+
+======================================================================
+ERROR: test_unowned_output_and_non_output_path_rejected (test_q1.Q1OutputTests.test_unowned_output_and_non_output_path_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp6fkla2rf\\outputs\\q1\\other'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp6fkla2rf\\outputs\\q1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q1.py", line 249, in test_unowned_output_and_non_output_path_rejected
+    root=Path(folder);out=root/'outputs/q1/other';out.mkdir(parents=True)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp6fkla2rf\\outputs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp6fkla2rf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q1.py", line 248, in test_unowned_output_and_non_output_path_rejected
+    with tempfile.TemporaryDirectory() as folder:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp6fkla2rf'
+
+======================================================================
+ERROR: test_scanner_never_opens_restricted_or_virtual_environment (test_q1_supplement.CommonWindCostTests.test_scanner_never_opens_restricted_or_virtual_environment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpaoligmjf\\data\\restricted'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q1_supplement.py", line 26, in test_scanner_never_opens_restricted_or_virtual_environment
+    path.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpaoligmjf\\data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpaoligmjf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q1_supplement.py", line 22, in test_scanner_never_opens_restricted_or_virtual_environment
+    with tempfile.TemporaryDirectory() as folder:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmpaoligmjf'
+
+======================================================================
+ERROR: test_running_review_replaces_stale_success_before_checks (test_q2_national.NationalTests.test_running_review_replaces_stale_success_before_checks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp48yh99fa\\outputs\\q2_review\\p2_lb_national'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp48yh99fa\\outputs\\q2_review'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q2_national.py", line 349, in test_running_review_replaces_stale_success_before_checks
+    root=Path(temp);out=root/"outputs/q2_review/p2_lb_national";out.mkdir(parents=True)
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp48yh99fa\\outputs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp48yh99fa'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\tests\test_q2_national.py", line 348, in test_running_review_replaces_stale_success_before_checks
+    with tempfile.TemporaryDirectory() as temp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\SUPER\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\SUPER\\AppData\\Local\\Packages\\sandbox.{afbbb56b-df6b-4ef8-8255-373ce0341eb3}\\AC\\Temp\\tmp48yh99fa'
+
+----------------------------------------------------------------------
+Ran 529 tests in 77.071s
+
+FAILED (errors=26)

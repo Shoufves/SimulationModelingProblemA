@@ -1,0 +1,230 @@
+{
+  "created_at": "2026-10-19T23:30:53.803734+00:00",
+  "status": "passed",
+  "independent_method": "regex table extraction from raw HTML; did not import collector HTMLParser",
+  "source_count": 9,
+  "raw_observations": 65,
+  "extension_unique_months": 49,
+  "combined_old_new_nonnull_months": 73,
+  "complete_years_combining_old_new": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+  ],
+  "annual_simple_means": {
+    "2014": 444.4433333333333,
+    "2015": 362.78416666666664,
+    "2016": 380.925,
+    "2017": 515.99,
+    "2018": 531.0416666666666,
+    "2019": 493.87833333333333
+  },
+  "all_values_match": true,
+  "overlaps": 25,
+  "all_overlaps_agree": true,
+  "all_source_hashes_match": true,
+  "all_previous_archive_and_collector_hashes_unchanged": true,
+  "offline_reextraction_exitcode": 0,
+  "offline_reextraction_bytes_identical": true,
+  "source_sha256": {
+    "data/raw/q2_coal_prices_extension/cctd_2020_01_comparison.html": "b01a8588fd1181b6203c0586e175580b4db79f4936758566252ec8b096ad362e",
+    "data/raw/q2_coal_prices_extension/cctd_2020_01_comparison.txt": "fbe7e0b5cb43cb900a0b9fc67d25e4b92b230200bd5c3ecc142d4e15a7c4ce0c",
+    "data/raw/q2_coal_prices_extension/evidence.json": "9b20ee3b1db5194110efccea4d6d856ce9494843647f4c50a295b0640ec41a7e",
+    "data/raw/q2_coal_prices_extension/guizhou_2016_01_10.html": "bfac8d8d9efafcd2c70564a7df2978b1cdbdb9fa0beded7d4fa5320ed4a04b82",
+    "data/raw/q2_coal_prices_extension/guizhou_2016_01_10.txt": "789f0a751e57ab57cbbb7f605839a19b9b8c8747ac0054968b38c7a36577e2d8",
+    "data/raw/q2_coal_prices_extension/guizhou_2016_11_comparison.html": "86678c75443f17ed8d6e0d1d81e07e206f53b8dda78dffce5c1940e376778050",
+    "data/raw/q2_coal_prices_extension/guizhou_2016_11_comparison.txt": "d3cc030530b4c342227c2fe89585fdbbed215ca935e2273ccb3c49c02b0ecef8",
+    "data/raw/q2_coal_prices_extension/guizhou_2017_01_06.html": "5f67654dbe345cda64127142df9525f32d3d93829c646678914c06d52f00b483",
+    "data/raw/q2_coal_prices_extension/guizhou_2017_01_06.txt": "e34b8465269146616c0622024afffb0ba165ffaa09617bbeaad4facc4a7c2712",
+    "data/raw/q2_coal_prices_extension/guizhou_2017_01_comparison.html": "6b181852e7d410d9349e3b7cd08c0c0f1704ab65eee6be2c3d3dc020935f82dd",
+    "data/raw/q2_coal_prices_extension/guizhou_2017_01_comparison.txt": "2de56bf9635b8c41994a2b39c8f77e9d2d88b659c19ec681fd0e851e7466797a",
+    "data/raw/q2_coal_prices_extension/guizhou_2017_full.html": "625c2ad7a087c8ba1953f1bf3859d54089bf8534a285709a03c2345bc2f3e7c9",
+    "data/raw/q2_coal_prices_extension/guizhou_2017_full.txt": "2392d225727c56b7021bf5ee8bcce3f70c66d7a55e7e88b2b558f0c3fadf8318",
+    "data/raw/q2_coal_prices_extension/guizhou_2018_full.html": "b3e0ba6a64b441b5b9bf0d6af4093069e42b3100d12d24fcb1d7d5af326cfe5c",
+    "data/raw/q2_coal_prices_extension/guizhou_2018_full.txt": "a15bf9371e4505af9225f3acd6572e5f9a52a8bb9f0927d479766769a43a2fc1",
+    "data/raw/q2_coal_prices_extension/guizhou_2019_01_07.html": "6043a93f0792e044c53e1de62b8809e0e3f6b21ce6fc47bd52d3c6f2b7032475",
+    "data/raw/q2_coal_prices_extension/guizhou_2019_01_07.txt": "ebfc045f7a63d389b0bf0fc181c963b489cfc7d71a64f944a036f8502fcee9ed",
+    "data/raw/q2_coal_prices_extension/guizhou_2019_full.html": "89c9dee1719184b5f3876847f6e91a96e8c0a5c3f27645531608440465378293",
+    "data/raw/q2_coal_prices_extension/guizhou_2019_full.txt": "5d04d22f3e6bab871161c4df6d87fab132ea256747d2af3af21ac186434b7c59",
+    "data/raw/q2_coal_prices_extension/source_manifest.json": "df60e691a9977b3deecb41458cb85648a1d6b7d63b33a2fb5dde396e489a4d09",
+    "scripts/collect_q2_coal_prices_extension.py": "8fce822fef4d23cfa7401f0ce0f9f59d47787216b4f2da3bd3937db1cc666ddf"
+  },
+  "metadata": [
+    {
+      "id": "guizhou_2016_01_10",
+      "published_datetime": "2016-11-29 15:55:00",
+      "original_table_release_dates": [],
+      "sha256": "bfac8d8d9efafcd2c70564a7df2978b1cdbdb9fa0beded7d4fa5320ed4a04b82",
+      "national_row": [
+        "全国",
+        "326.67",
+        "318.36",
+        "322.75",
+        "317.20",
+        "315.00",
+        "321.00",
+        "340.72",
+        "369.74",
+        "414.07",
+        "469.01"
+      ]
+    },
+    {
+      "id": "guizhou_2016_11_comparison",
+      "published_datetime": "2016-12-21 11:43:00",
+      "original_table_release_dates": [
+        "2016/12/12"
+      ],
+      "sha256": "86678c75443f17ed8d6e0d1d81e07e206f53b8dda78dffce5c1940e376778050",
+      "national_row": [
+        "全国",
+        "521.66",
+        "469.01",
+        "11.23%",
+        "59.62%"
+      ]
+    },
+    {
+      "id": "guizhou_2017_01_comparison",
+      "published_datetime": "2017-02-17 16:00:00",
+      "original_table_release_dates": [
+        "2017/2/13"
+      ],
+      "sha256": "6b181852e7d410d9349e3b7cd08c0c0f1704ab65eee6be2c3d3dc020935f82dd",
+      "national_row": [
+        "全国",
+        "528.54",
+        "534.92",
+        "-1.19%",
+        "61.80%"
+      ]
+    },
+    {
+      "id": "guizhou_2017_01_06",
+      "published_datetime": "2017-07-17 15:35:06",
+      "original_table_release_dates": [],
+      "sha256": "5f67654dbe345cda64127142df9525f32d3d93829c646678914c06d52f00b483",
+      "national_row": [
+        "全国",
+        "528.54",
+        "522.49",
+        "511.29",
+        "510.12",
+        "501.92",
+        "490.91"
+      ]
+    },
+    {
+      "id": "guizhou_2017_full",
+      "published_datetime": "2018-01-16 17:41:00",
+      "original_table_release_dates": [],
+      "sha256": "625c2ad7a087c8ba1953f1bf3859d54089bf8534a285709a03c2345bc2f3e7c9",
+      "national_row": [
+        "全国",
+        "528.54",
+        "522.49",
+        "511.29",
+        "510.12",
+        "501.92",
+        "490.91",
+        "493.26",
+        "509.74",
+        "519.68",
+        "534.76",
+        "532.98",
+        "536.19"
+      ]
+    },
+    {
+      "id": "guizhou_2018_full",
+      "published_datetime": "2019-02-02 17:46:00",
+      "original_table_release_dates": [],
+      "sha256": "b3e0ba6a64b441b5b9bf0d6af4093069e42b3100d12d24fcb1d7d5af326cfe5c",
+      "national_row": [
+        "全国",
+        "549.12",
+        "567.21",
+        "546.58",
+        "522.78",
+        "515.39",
+        "528.57",
+        "532.53",
+        "522.40",
+        "522.16",
+        "523.47",
+        "520.09",
+        "522.20"
+      ]
+    },
+    {
+      "id": "guizhou_2019_01_07",
+      "published_datetime": "2019-08-19 09:50:00",
+      "original_table_release_dates": [],
+      "sha256": "6043a93f0792e044c53e1de62b8809e0e3f6b21ce6fc47bd52d3c6f2b7032475",
+      "national_row": [
+        "全国",
+        "511.02",
+        "511.34",
+        "500.29",
+        "495.26",
+        "499.12",
+        "492.04",
+        "488.13"
+      ]
+    },
+    {
+      "id": "guizhou_2019_full",
+      "published_datetime": "2020-01-23 14:58:13",
+      "original_table_release_dates": [],
+      "sha256": "89c9dee1719184b5f3876847f6e91a96e8c0a5c3f27645531608440465378293",
+      "national_row": [
+        "全国",
+        "511.02",
+        "511.34",
+        "500.29",
+        "495.26",
+        "499.12",
+        "492.04",
+        "488.13",
+        "486.79",
+        "489.88",
+        "492.01",
+        "483.09",
+        "477.57"
+      ]
+    },
+    {
+      "id": "cctd_2020_01_comparison",
+      "published_datetime": "2020-02-25 09:58:22",
+      "original_table_release_dates": [],
+      "sha256": "b01a8588fd1181b6203c0586e175580b4db79f4936758566252ec8b096ad362e",
+      "national_row": [
+        "全国",
+        "480.10",
+        "477.57",
+        "0.53%",
+        "-6.05%"
+      ]
+    }
+  ],
+  "unresolved": [
+    "2020 February-December and 2021-2024 not acquired; CECI not spliced",
+    "VAT/tax basis not explicit in acquired index issuer methodology or tables"
+  ],
+  "tax_search_lead": {
+    "url": "https://dnr.yn.gov.cn/uploadfile/dnr_old/manage/ewebeditor/uploadfile/20200325171714163.pdf",
+    "actual_open_result": "web open timed out; search result only, not admitted tax evidence"
+  },
+  "further_search": {
+    "actual_opened_latest_CCTD_index": "https://www.cctd.com.cn/list-46-1.html",
+    "latest_listed": "2020 January, published 2020-02-25",
+    "interpretation": "limited search finding, not evidence index ceased",
+    "original_issuer_endpoint": "http://jgjc.ndrc.gov.cn/dmzs.aspx?clmId=741",
+    "issuer_open_result": "HTTP and HTTPS actual web open failed"
+  },
+  "model_admission": false,
+  "common_market_sensitivity_only": true
+}

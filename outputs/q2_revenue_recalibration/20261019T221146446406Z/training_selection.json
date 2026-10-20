@@ -1,0 +1,584 @@
+{
+  "selection_uses": "2015_2021_only",
+  "scenarios": {
+    "5": {
+      "index": 69,
+      "parameters": {
+        "activity_elasticity": -0.2630338162680476,
+        "expectation_rate": 0.25,
+        "investment_response": 1.25,
+        "renewable_mix_response": 0.55,
+        "replacement_adoption": 0,
+        "solar_construction_growth": 0.2,
+        "oil_activity_elasticity": 0.8407667837806919,
+        "gas_activity_elasticity": 1.5949742951774175,
+        "dispatch_kappa": 1000,
+        "hydro_initial_pipeline_multiplier": 0.5,
+        "nuclear_initial_pipeline_multiplier": 2,
+        "hydro_construction_response": 1,
+        "new_wind_cf": 0.33,
+        "new_solar_cf": 0.2,
+        "waste_fuel_fraction": 0.75,
+        "waste_delivery_growth": 0.16,
+        "biomass_initial_pipeline_multiplier": 3,
+        "solar_construction_response": 2,
+        "solar_initial_pipeline_multiplier": 3
+      },
+      "loss": 0.8799705180539306,
+      "components": [
+        {
+          "metric": "primary_energy_tce",
+          "n": 7,
+          "loss": 0.03227421386801376,
+          "mape": 0.0163000773157358,
+          "mae": 75316689.42113344,
+          "missing_years": []
+        },
+        {
+          "metric": "peo_share",
+          "n": 7,
+          "loss": 0.0052896705359160275,
+          "mape": 0.018474673462786355,
+          "mae": 0.002877598667465558,
+          "missing_years": []
+        },
+        {
+          "metric": "total_capacity_mw",
+          "n": 7,
+          "loss": 0.1005599106529275,
+          "mape": 0.08002836787665801,
+          "mae": 161813.1049627683,
+          "missing_years": []
+        },
+        {
+          "metric": "wind_capacity_mw",
+          "n": 7,
+          "loss": 0.07507984543282266,
+          "mape": 0.0778582919167684,
+          "mae": 17428.58963704821,
+          "missing_years": []
+        },
+        {
+          "metric": "solar_capacity_mw",
+          "n": 7,
+          "loss": 0.10339272043166171,
+          "mape": 0.11624747326230363,
+          "mae": 17498.78104611387,
+          "missing_years": []
+        },
+        {
+          "metric": "electricity_generation_mwh",
+          "n": 7,
+          "loss": 0.06192784706520912,
+          "mape": 0.0330225422227718,
+          "mae": 216180742.69288105,
+          "missing_years": []
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 2,
+          "loss": 0.0010611024074985665,
+          "mape": 0.004037947952961114,
+          "mae": 39250134.43368149,
+          "missing_years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ]
+        },
+        {
+          "metric": "coal_share",
+          "n": 7,
+          "loss": 0.01160220489383326,
+          "mape": 0.010578940961159317,
+          "mae": 0.006268525362402141,
+          "missing_years": []
+        },
+        {
+          "metric": "oil_share",
+          "n": 7,
+          "loss": 0.007235406640452802,
+          "mape": 0.024131392995615564,
+          "mae": 0.004520464361621219,
+          "missing_years": []
+        },
+        {
+          "metric": "gas_share",
+          "n": 7,
+          "loss": 0.002086226718440362,
+          "mape": 0.033732473865755036,
+          "mae": 0.0024935973622881055,
+          "missing_years": []
+        },
+        {
+          "metric": "coal_generation_mwh",
+          "n": 7,
+          "loss": 0.005144174411414389,
+          "mape": 0.05133740878527732,
+          "mae": 225096648.24846014,
+          "missing_years": []
+        },
+        {
+          "metric": "gas_generation_mwh",
+          "n": 7,
+          "loss": 0.01815386354971523,
+          "mape": 0.10630044540179258,
+          "mae": 21507787.56500926,
+          "missing_years": []
+        },
+        {
+          "metric": "oil_generation_mwh",
+          "n": 7,
+          "loss": 0.08750645351049299,
+          "mape": 0.20276274789229948,
+          "mae": 2210665.3964325883,
+          "missing_years": []
+        },
+        {
+          "metric": "biomass_generation_mwh",
+          "n": 7,
+          "loss": 0.0181438807772391,
+          "mape": 0.06334368449649183,
+          "mae": 7460671.24386677,
+          "missing_years": []
+        },
+        {
+          "metric": "hydro_generation_mwh",
+          "n": 7,
+          "loss": 0.0007364638316091686,
+          "mape": 0.01824811771697621,
+          "mae": 22614679.158376694,
+          "missing_years": []
+        },
+        {
+          "metric": "nuclear_generation_mwh",
+          "n": 7,
+          "loss": 0.0014351274166928831,
+          "mape": 0.017658619362964107,
+          "mae": 5551925.049480681,
+          "missing_years": []
+        },
+        {
+          "metric": "wind_generation_mwh",
+          "n": 7,
+          "loss": 0.025746322803008172,
+          "mape": 0.08035328266500293,
+          "mae": 32146618.780894283,
+          "missing_years": []
+        },
+        {
+          "metric": "solar_generation_mwh",
+          "n": 7,
+          "loss": 0.27807932144628045,
+          "mape": 0.17937309274323604,
+          "mae": 44689984.90038891,
+          "missing_years": []
+        },
+        {
+          "metric": "hydro_including_pumped_capacity_mw",
+          "n": 7,
+          "loss": 0.019632154979776748,
+          "mape": 0.04489430458828255,
+          "mae": 16434.875862360124,
+          "missing_years": []
+        },
+        {
+          "metric": "nuclear_capacity_mw",
+          "n": 7,
+          "loss": 0.02488360668092567,
+          "mape": 0.059798317988598734,
+          "mae": 2376.4761904761913,
+          "missing_years": []
+        }
+      ]
+    },
+    "25": {
+      "index": 172,
+      "parameters": {
+        "activity_elasticity": -0.2630338162680476,
+        "expectation_rate": 0.25,
+        "investment_response": 1.25,
+        "renewable_mix_response": 0.55,
+        "replacement_adoption": 0,
+        "solar_construction_growth": 0.2,
+        "oil_activity_elasticity": 0.8407667837806919,
+        "gas_activity_elasticity": 1.5949742951774175,
+        "dispatch_kappa": 1000,
+        "hydro_initial_pipeline_multiplier": 0.5,
+        "nuclear_initial_pipeline_multiplier": 2,
+        "hydro_construction_response": 1,
+        "new_wind_cf": 0.33,
+        "new_solar_cf": 0.2,
+        "waste_fuel_fraction": 0.75,
+        "waste_delivery_growth": 0.16,
+        "biomass_initial_pipeline_multiplier": 3,
+        "solar_construction_response": 2,
+        "solar_initial_pipeline_multiplier": 3
+      },
+      "loss": 0.8799705180539306,
+      "components": [
+        {
+          "metric": "primary_energy_tce",
+          "n": 7,
+          "loss": 0.03227421386801376,
+          "mape": 0.0163000773157358,
+          "mae": 75316689.42113344,
+          "missing_years": []
+        },
+        {
+          "metric": "peo_share",
+          "n": 7,
+          "loss": 0.0052896705359160275,
+          "mape": 0.018474673462786355,
+          "mae": 0.002877598667465558,
+          "missing_years": []
+        },
+        {
+          "metric": "total_capacity_mw",
+          "n": 7,
+          "loss": 0.1005599106529275,
+          "mape": 0.08002836787665801,
+          "mae": 161813.1049627683,
+          "missing_years": []
+        },
+        {
+          "metric": "wind_capacity_mw",
+          "n": 7,
+          "loss": 0.07507984543282266,
+          "mape": 0.0778582919167684,
+          "mae": 17428.58963704821,
+          "missing_years": []
+        },
+        {
+          "metric": "solar_capacity_mw",
+          "n": 7,
+          "loss": 0.10339272043166171,
+          "mape": 0.1162474732623036,
+          "mae": 17498.781046113865,
+          "missing_years": []
+        },
+        {
+          "metric": "electricity_generation_mwh",
+          "n": 7,
+          "loss": 0.06192784706520912,
+          "mape": 0.0330225422227718,
+          "mae": 216180742.69288105,
+          "missing_years": []
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 2,
+          "loss": 0.0010611024074985665,
+          "mape": 0.004037947952961114,
+          "mae": 39250134.43368149,
+          "missing_years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ]
+        },
+        {
+          "metric": "coal_share",
+          "n": 7,
+          "loss": 0.01160220489383326,
+          "mape": 0.010578940961159317,
+          "mae": 0.006268525362402141,
+          "missing_years": []
+        },
+        {
+          "metric": "oil_share",
+          "n": 7,
+          "loss": 0.007235406640452802,
+          "mape": 0.024131392995615564,
+          "mae": 0.004520464361621219,
+          "missing_years": []
+        },
+        {
+          "metric": "gas_share",
+          "n": 7,
+          "loss": 0.002086226718440362,
+          "mape": 0.033732473865755036,
+          "mae": 0.0024935973622881055,
+          "missing_years": []
+        },
+        {
+          "metric": "coal_generation_mwh",
+          "n": 7,
+          "loss": 0.005144174411414389,
+          "mape": 0.05133740878527732,
+          "mae": 225096648.24846014,
+          "missing_years": []
+        },
+        {
+          "metric": "gas_generation_mwh",
+          "n": 7,
+          "loss": 0.01815386354971523,
+          "mape": 0.10630044540179258,
+          "mae": 21507787.56500926,
+          "missing_years": []
+        },
+        {
+          "metric": "oil_generation_mwh",
+          "n": 7,
+          "loss": 0.08750645351049299,
+          "mape": 0.20276274789229948,
+          "mae": 2210665.3964325883,
+          "missing_years": []
+        },
+        {
+          "metric": "biomass_generation_mwh",
+          "n": 7,
+          "loss": 0.0181438807772391,
+          "mape": 0.06334368449649183,
+          "mae": 7460671.24386677,
+          "missing_years": []
+        },
+        {
+          "metric": "hydro_generation_mwh",
+          "n": 7,
+          "loss": 0.0007364638316091686,
+          "mape": 0.01824811771697621,
+          "mae": 22614679.158376694,
+          "missing_years": []
+        },
+        {
+          "metric": "nuclear_generation_mwh",
+          "n": 7,
+          "loss": 0.0014351274166928831,
+          "mape": 0.017658619362964107,
+          "mae": 5551925.049480681,
+          "missing_years": []
+        },
+        {
+          "metric": "wind_generation_mwh",
+          "n": 7,
+          "loss": 0.025746322803008172,
+          "mape": 0.08035328266500293,
+          "mae": 32146618.780894283,
+          "missing_years": []
+        },
+        {
+          "metric": "solar_generation_mwh",
+          "n": 7,
+          "loss": 0.27807932144628045,
+          "mape": 0.17937309274323604,
+          "mae": 44689984.90038891,
+          "missing_years": []
+        },
+        {
+          "metric": "hydro_including_pumped_capacity_mw",
+          "n": 7,
+          "loss": 0.019632154979776748,
+          "mape": 0.04489430458828255,
+          "mae": 16434.875862360124,
+          "missing_years": []
+        },
+        {
+          "metric": "nuclear_capacity_mw",
+          "n": 7,
+          "loss": 0.02488360668092567,
+          "mape": 0.059798317988598734,
+          "mae": 2376.4761904761913,
+          "missing_years": []
+        }
+      ]
+    },
+    "100": {
+      "index": 275,
+      "parameters": {
+        "activity_elasticity": -0.2630338162680476,
+        "expectation_rate": 0.25,
+        "investment_response": 1.25,
+        "renewable_mix_response": 0.55,
+        "replacement_adoption": 0,
+        "solar_construction_growth": 0.2,
+        "oil_activity_elasticity": 0.8407667837806919,
+        "gas_activity_elasticity": 1.5949742951774175,
+        "dispatch_kappa": 1000,
+        "hydro_initial_pipeline_multiplier": 0.5,
+        "nuclear_initial_pipeline_multiplier": 2,
+        "hydro_construction_response": 1,
+        "new_wind_cf": 0.33,
+        "new_solar_cf": 0.2,
+        "waste_fuel_fraction": 0.75,
+        "waste_delivery_growth": 0.16,
+        "biomass_initial_pipeline_multiplier": 3,
+        "solar_construction_response": 2,
+        "solar_initial_pipeline_multiplier": 3
+      },
+      "loss": 0.8799705180539306,
+      "components": [
+        {
+          "metric": "primary_energy_tce",
+          "n": 7,
+          "loss": 0.03227421386801376,
+          "mape": 0.0163000773157358,
+          "mae": 75316689.42113344,
+          "missing_years": []
+        },
+        {
+          "metric": "peo_share",
+          "n": 7,
+          "loss": 0.0052896705359160275,
+          "mape": 0.018474673462786355,
+          "mae": 0.002877598667465558,
+          "missing_years": []
+        },
+        {
+          "metric": "total_capacity_mw",
+          "n": 7,
+          "loss": 0.1005599106529275,
+          "mape": 0.08002836787665801,
+          "mae": 161813.1049627683,
+          "missing_years": []
+        },
+        {
+          "metric": "wind_capacity_mw",
+          "n": 7,
+          "loss": 0.07507984543282266,
+          "mape": 0.0778582919167684,
+          "mae": 17428.58963704821,
+          "missing_years": []
+        },
+        {
+          "metric": "solar_capacity_mw",
+          "n": 7,
+          "loss": 0.10339272043166171,
+          "mape": 0.11624747326230363,
+          "mae": 17498.78104611387,
+          "missing_years": []
+        },
+        {
+          "metric": "electricity_generation_mwh",
+          "n": 7,
+          "loss": 0.06192784706520912,
+          "mape": 0.0330225422227718,
+          "mae": 216180742.69288105,
+          "missing_years": []
+        },
+        {
+          "metric": "combustion_co2_t",
+          "n": 2,
+          "loss": 0.0010611024074985665,
+          "mape": 0.004037947952961114,
+          "mae": 39250134.43368149,
+          "missing_years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ]
+        },
+        {
+          "metric": "coal_share",
+          "n": 7,
+          "loss": 0.01160220489383326,
+          "mape": 0.010578940961159317,
+          "mae": 0.006268525362402141,
+          "missing_years": []
+        },
+        {
+          "metric": "oil_share",
+          "n": 7,
+          "loss": 0.007235406640452802,
+          "mape": 0.024131392995615564,
+          "mae": 0.004520464361621219,
+          "missing_years": []
+        },
+        {
+          "metric": "gas_share",
+          "n": 7,
+          "loss": 0.002086226718440362,
+          "mape": 0.033732473865755036,
+          "mae": 0.0024935973622881055,
+          "missing_years": []
+        },
+        {
+          "metric": "coal_generation_mwh",
+          "n": 7,
+          "loss": 0.005144174411414389,
+          "mape": 0.05133740878527732,
+          "mae": 225096648.24846014,
+          "missing_years": []
+        },
+        {
+          "metric": "gas_generation_mwh",
+          "n": 7,
+          "loss": 0.01815386354971523,
+          "mape": 0.10630044540179258,
+          "mae": 21507787.56500926,
+          "missing_years": []
+        },
+        {
+          "metric": "oil_generation_mwh",
+          "n": 7,
+          "loss": 0.08750645351049299,
+          "mape": 0.20276274789229948,
+          "mae": 2210665.3964325883,
+          "missing_years": []
+        },
+        {
+          "metric": "biomass_generation_mwh",
+          "n": 7,
+          "loss": 0.0181438807772391,
+          "mape": 0.06334368449649183,
+          "mae": 7460671.24386677,
+          "missing_years": []
+        },
+        {
+          "metric": "hydro_generation_mwh",
+          "n": 7,
+          "loss": 0.0007364638316091686,
+          "mape": 0.01824811771697621,
+          "mae": 22614679.158376694,
+          "missing_years": []
+        },
+        {
+          "metric": "nuclear_generation_mwh",
+          "n": 7,
+          "loss": 0.0014351274166928831,
+          "mape": 0.017658619362964107,
+          "mae": 5551925.049480681,
+          "missing_years": []
+        },
+        {
+          "metric": "wind_generation_mwh",
+          "n": 7,
+          "loss": 0.025746322803008172,
+          "mape": 0.08035328266500293,
+          "mae": 32146618.780894283,
+          "missing_years": []
+        },
+        {
+          "metric": "solar_generation_mwh",
+          "n": 7,
+          "loss": 0.27807932144628045,
+          "mape": 0.17937309274323604,
+          "mae": 44689984.90038891,
+          "missing_years": []
+        },
+        {
+          "metric": "hydro_including_pumped_capacity_mw",
+          "n": 7,
+          "loss": 0.019632154979776748,
+          "mape": 0.04489430458828255,
+          "mae": 16434.875862360124,
+          "missing_years": []
+        },
+        {
+          "metric": "nuclear_capacity_mw",
+          "n": 7,
+          "loss": 0.02488360668092567,
+          "mape": 0.059798317988598734,
+          "mae": 2376.4761904761913,
+          "missing_years": []
+        }
+      ]
+    }
+  }
+}

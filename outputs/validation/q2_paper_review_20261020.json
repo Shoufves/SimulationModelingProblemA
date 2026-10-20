@@ -1,0 +1,188 @@
+{
+  "status": "final_Q2_text_and_portable_review_complete",
+  "created_utc": "2026-10-20T01:25:06.059001+00:00",
+  "scope": "Only the four required Q2 tasks; Q1 reused and Q3 review stopped per latest instruction.",
+  "reviewed_paper_sha256": "53620db051b1afef5a6856d87e8a818caad0edfc7b6fc95ec12222b9f7d343bc",
+  "frozen_S0_sha256": "207586245a56922e8b39d133a8b119be56dc3d5bda32ef0889b95d52f8ff3c13",
+  "required_coverage": {
+    "Q2_1_agents": "Present: 18 aggregate agents with attributes, information and actions.",
+    "Q2_2_rules_calibration_validation": "Present: rules, fiscal/physical interaction, 2015-2021 selection and honestly labelled already-seen 2022-2024 evaluation; corrected annual chronology, recursive demand and private project NPV match implementation.",
+    "Q2_3_current_baseline_outputs": "Present: independent 2024 opening, 2030/2060 consumption/share/emissions, peak/time/value, two intensity reductions, R/P and remaining emissions.",
+    "Q2_4_sensitivity": "Present: GDP growth +/-1 percentage point, cost decline 2/4%, carbon price x0.5/1.5, plus disclosed initial-state uncertainty."
+  },
+  "expected_rounded_baseline_values": {
+    "2030": {
+      "energy_100m_tce": "66.76",
+      "nonfossil_pct": "35.59",
+      "positive_co2_gt": "10.96",
+      "net_co2_gt": "9.62",
+      "neutralisation_pct": "12.28",
+      "capacity_tw": "6.04"
+    },
+    "2060": {
+      "energy_100m_tce": "80.40",
+      "nonfossil_pct": "49.79",
+      "positive_co2_gt": "9.17",
+      "net_co2_gt": "7.82",
+      "neutralisation_pct": "14.69",
+      "capacity_tw": "15.35"
+    }
+  },
+  "rounded_value_presence_checks": {
+    "2030": {
+      "energy_100m_tce": true,
+      "nonfossil_pct": true,
+      "positive_co2_gt": true,
+      "net_co2_gt": true,
+      "neutralisation_pct": true,
+      "capacity_tw": true
+    },
+    "2060": {
+      "energy_100m_tce": true,
+      "nonfossil_pct": true,
+      "positive_co2_gt": true,
+      "net_co2_gt": true,
+      "neutralisation_pct": true,
+      "capacity_tw": true
+    }
+  },
+  "numerical_finding": "No material baseline number mismatch found in the reviewed copy. Presence checks supplement manual table-to-result comparison; they do not verify every prose occurrence.",
+  "reviewed_target": "outputs/question2_delivery_20261020/问题二答题稿.md",
+  "corrected_original_findings": [
+    {
+      "priority": 2,
+      "topic": "annual chronology",
+      "old_text_present": false,
+      "issue": "Original paragraph placed proposals and approval before current operation and cash settlement.",
+      "correction": "Drivers, maturity/retirement, operation, settlement and debt service precede learning/proposals, approval and construction payment.",
+      "source": "src/energy_model/q2_national.py:NationalModel.step"
+    },
+    {
+      "priority": 2,
+      "topic": "recursive changing-elasticity demand",
+      "old_text_present": false,
+      "issue": "A current elasticity applied to cumulative GDP is not the implemented sequence of changing annual elasticities.",
+      "correction": "D_t=D_(t-1)*(GDP_t/GDP_(t-1))^epsilon_t*(1-g_eff), with device composition treated separately.",
+      "source": "src/energy_model/q2_national.py:NationalModel.drivers"
+    },
+    {
+      "priority": 2,
+      "topic": "private project versus system increment",
+      "old_text_present": false,
+      "issue": "Competitive entrant profitability uses allocated finite LP sales, including sales displaced from incumbents; it is not positive incremental sector profit or additional system output.",
+      "correction": "Describe own project NPV and shared finite saleable output, construction, finance and pending projects.",
+      "source": "src/energy_model/q2_project_competition.py:ProjectCompetitionModel.project_economics"
+    },
+    {
+      "priority": 2,
+      "topic": "price-year versus observed-price provenance",
+      "explicit_correction_present": true,
+      "issue": "A 2024 real-price unit must not imply observed 2024 national tariff or delivered fuel prices.",
+      "correction": "State 2019-2024 tariff and auxiliary fractions persist 2018 nominal observations; fuel prices are fixed technical/reference assumptions, all expressed in 2024 CNY.",
+      "source": "scripts/run_q2_historical_support.py:policy_inputs; src/energy_model/q2_national.py:NationalModel.__init__"
+    }
+  ],
+  "unresolved_material_findings": [],
+  "gas_price_scope": {
+    "scope": "Answer to the parent's implementation-scope question, not an additional Q3 review",
+    "implemented": "gas supplier.price multiplied by 1.3; both domestic and imported offer costs rise, imported premium remains 5%",
+    "public_text_needed": "A national common-gas supply price pressure affecting domestic and imported supply; not an import-cost-only shock.",
+    "source": "src/energy_model/q2_forward_current.py:ForwardModel.drivers; src/energy_model/q2_national.py:NationalSupplier.offer",
+    "Q2_paper_scope": "Gas stress scenario removed together with Q3; national fuel-price sensitivities remain."
+  },
+  "portable_review": {
+    "status": "read_only_snapshot_and_full_result_comparison_complete",
+    "original_source_hashes_checked_here": 220,
+    "portable_runtime_rechecks_originals": false,
+    "records": {
+      "net58/25": {
+        "data_year_min": 2005,
+        "data_year_max": 2024,
+        "scoped_data_year_max": 2024,
+        "readers": [
+          "cost_inputs",
+          "policy_inputs",
+          "scope_inputs",
+          "verified_costs",
+          "verify_history",
+          "verify_policy"
+        ],
+        "future_model_paths_in_record": false
+      },
+      "net58/5": {
+        "data_year_min": 2005,
+        "data_year_max": 2024,
+        "scoped_data_year_max": 2024,
+        "readers": [
+          "cost_inputs",
+          "policy_inputs",
+          "scope_inputs",
+          "verified_costs",
+          "verify_history",
+          "verify_policy"
+        ],
+        "future_model_paths_in_record": false
+      },
+      "net58/100": {
+        "data_year_min": 2005,
+        "data_year_max": 2024,
+        "scoped_data_year_max": 2024,
+        "readers": [
+          "cost_inputs",
+          "policy_inputs",
+          "scope_inputs",
+          "verified_costs",
+          "verify_history",
+          "verify_policy"
+        ],
+        "future_model_paths_in_record": false
+      },
+      "net55/25": {
+        "data_year_min": 2005,
+        "data_year_max": 2024,
+        "scoped_data_year_max": 2024,
+        "readers": [
+          "cost_inputs",
+          "policy_inputs",
+          "scope_inputs",
+          "verified_costs",
+          "verify_history",
+          "verify_policy"
+        ],
+        "future_model_paths_in_record": false
+      }
+    },
+    "exact_matches_to_full_run": [
+      "S0",
+      "S0_authority100",
+      "S0_authority5",
+      "S0_net55",
+      "opening_double_arrears",
+      "opening_high_cash",
+      "opening_high_debt",
+      "opening_large_queue",
+      "opening_low_cash",
+      "opening_low_debt",
+      "opening_no_arrears",
+      "opening_no_queue",
+      "opening_older",
+      "opening_younger",
+      "sensitivity_carbon_price_multiplier_0",
+      "sensitivity_carbon_price_multiplier_1",
+      "sensitivity_cost_decline_delta_0",
+      "sensitivity_cost_decline_delta_1",
+      "sensitivity_fuel_price_multiplier_0",
+      "sensitivity_fuel_price_multiplier_1",
+      "sensitivity_gdp_growth_delta_0",
+      "sensitivity_gdp_growth_delta_1",
+      "sensitivity_removals_multiplier_0",
+      "sensitivity_removals_multiplier_1"
+    ],
+    "snapshot_manifest_sha256": "3efed82264d75db0b08d5154261ab211b3cd92d91aa5f243423adc19ae194d11",
+    "verification_sha256": "cc9a625f84ed56cc1043d9af295c58d1bf1ce75a98edf0c33110b0ebb4b69dcc",
+    "information_scope": "Snapshot supplies immutable reader returns and historical training parameters; the unchanged factory constructs all 2025+ state and forecasts. Reference paths are used only after simulation for comparison.",
+    "finding": "No material future-output injection or changed-model-logic issue found in the inspected adapter."
+  },
+  "conclusion": "The Q2-only paper covers all four required tasks, the four previously identified descriptions are corrected, and the 24 portable cases exactly reproduce full-run paths, targets and peak. No new mechanism or accuracy gate was introduced.",
+  "subsequent_regeneration": "Findings and exact matches refer to the paper and input hashes in this receipt."
+}

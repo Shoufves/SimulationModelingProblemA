@@ -1,0 +1,130 @@
+{
+  "status": "frozen_conditional_research_search_not_production_acceptance",
+  "training_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "evaluation_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "evaluation_identity": "already_seen_not_blind",
+  "authority_scenarios": [
+    5,
+    25,
+    100
+  ],
+  "authority_selection": "none; report all three separately; these are assumed commitment authorities, not observed Chinese rules",
+  "passes": 2,
+  "blocks": [
+    {
+      "new_wind_cf": [
+        0.25,
+        0.3,
+        0.33
+      ],
+      "new_solar_cf": [
+        0.15,
+        0.18,
+        0.2
+      ]
+    },
+    {
+      "waste_fuel_fraction": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "waste_delivery_growth": [
+        0.08,
+        0.12,
+        0.16
+      ]
+    },
+    {
+      "investment_response": [
+        0.75,
+        1.25,
+        1.75
+      ],
+      "renewable_mix_response": [
+        0.55,
+        0.7,
+        1,
+        1.3
+      ]
+    },
+    {
+      "solar_construction_response": [
+        0.75,
+        1,
+        1.5,
+        2
+      ],
+      "solar_construction_growth": [
+        0.1,
+        0.2,
+        0.3
+      ]
+    },
+    {
+      "dispatch_kappa": [
+        100,
+        300,
+        1000
+      ]
+    },
+    {
+      "biomass_initial_pipeline_multiplier": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "solar_initial_pipeline_multiplier": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "initial": {
+    "new_wind_cf": 0.3,
+    "new_solar_cf": 0.18,
+    "waste_fuel_fraction": 0.5,
+    "waste_delivery_growth": 0.12,
+    "biomass_initial_pipeline_multiplier": 1,
+    "solar_construction_response": 1,
+    "solar_initial_pipeline_multiplier": 1
+  },
+  "objective": "existing formal multi-target weighted training loss only; scales recalculated from the same revised training vintage; no evaluation fitting",
+  "bioenergy": {
+    "waste_fossil_energy_fraction": 0.5,
+    "fossil_co2_t_per_mwh_whole_waste": 0.2,
+    "waste_lhv_mwh_per_t": 1.3333333333333333,
+    "initial_delivery_headroom": 1.1,
+    "maximum_municipal_waste_delivery_t": 350000000,
+    "treatment_fee_real_2024_cny_per_t": 75,
+    "municipal_funding_fraction_of_full_service": 0.75,
+    "expected_collection_fraction": 0.75,
+    "scope": "fixed-composition whole-project statistical bucket scenario; shared 0.3 electrical efficiency; not national waste composition observations",
+    "fee_status": "real-price sensitivity assumption within company-sample nominal fee range; source VAT and national weights unknown",
+    "delivery_status": "finite initial reconstruction and bounded growth hypothesis, not future national observations"
+  },
+  "limits": [
+    "Existing fleet and reconstructed initial pipeline do not receive new project yields",
+    "IEA cost split is a 2025 technical reference held constant, not annual observed fleet costs",
+    "No municipal heat revenue without a physical useful-heat model",
+    "Statistical PEO remains distinct from physical fossil waste energy and emissions",
+    "All grid results and failed trials retained; no threshold relaxation or official-attainment claim",
+    "Solar construction response is a calibrated latent capability relative to the 2014 supply envelope; initial pipeline multiplier only affects inherited 2014 queue. Neither is observed annual national capacity."
+  ],
+  "design_rationale": "Two passes permit new-project yield and construction volume to adjust jointly; all selection uses unchanged 2015-2021 multi-target loss. Early solar stock and annual construction constraint identified as major training residuals; no holdout-based authority selection."
+}

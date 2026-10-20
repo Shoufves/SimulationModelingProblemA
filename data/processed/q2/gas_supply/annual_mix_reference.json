@@ -1,0 +1,57 @@
+{
+  "status": "reviewed_annual_volume_reference_not_hourly_capacity",
+  "source_sha256": {
+    "data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf": "6e46cb5edb3bec945c45871750b7c35b267341fbce37745200414993106fea5d"
+  },
+  "source_url": "https://www.nea.gov.cn/20250829/a4e2deb9b6444df1a191b9d60c111ffd/20250829a4e2deb9b6444df1a191b9d60c111ffd_43ab87a785d1b64d49b9210dbc15d3781e.pdf",
+  "visual_review": "Original PDF pages 11 and 12 rendered and read on 2026-10-20",
+  "records": [
+    {
+      "year": 2024,
+      "metric": "domestic_production",
+      "value": 2465,
+      "unit": "100_million_m3",
+      "source_path": "data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf",
+      "pdf_page_1based": 11,
+      "printed_page": 6,
+      "anchor": "全国天然气产量2465亿立方米"
+    },
+    {
+      "year": 2024,
+      "metric": "gross_import",
+      "value": 1817,
+      "unit": "100_million_m3",
+      "source_path": "data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf",
+      "pdf_page_1based": 12,
+      "printed_page": 7,
+      "anchor": "全国进口天然气1817亿立方米"
+    },
+    {
+      "year": 2024,
+      "metric": "pipeline_import",
+      "value": 760,
+      "unit": "100_million_m3",
+      "source_path": "data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf",
+      "pdf_page_1based": 12,
+      "printed_page": 7,
+      "anchor": "管道气进口量760亿立方米"
+    },
+    {
+      "year": 2024,
+      "metric": "lng_import",
+      "value": 1057,
+      "unit": "100_million_m3",
+      "source_path": "data/raw/batch2_mechanisms/nea_natural_gas_2025.pdf",
+      "pdf_page_1based": 12,
+      "printed_page": 7,
+      "anchor": "LNG进口量1057亿立方米"
+    }
+  ],
+  "domestic_fraction_of_production_plus_gross_imports": 0.5756655768332555,
+  "limitations": [
+    "Gross imports plus production are not net domestic consumption: exports and stock changes are not resolved here",
+    "Annual volumes are not hourly capacity, source reliability, or observed delivery headroom",
+    "Using volume proportions for energy requires an explicit equal-heating-value approximation",
+    "Q3 fixed-2024-state research only; not inserted into 2015-2021 agents' information sets"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-19T23:02:34.029699+00:00",
+  "tested_command": "tmp/q2-venv/Scripts/python.exe -B tests/test_q2_portfolio.py",
+  "tests_run": 9,
+  "tests_passed": 9,
+  "test_scope": [
+    "real LP asymmetric positive/negative NPVs",
+    "symmetric crowded market",
+    "exhaustion removes failed technology and reaudits survivor",
+    "all failed rejected while nonrenewables preserved",
+    "bounded halving only failing technology",
+    "removal recheck can reject survivor too",
+    "zero support fraction excludes merchant support",
+    "invalid support fractions",
+    "merchant expansion cannot replace validated supported portfolio with smaller result"
+  ],
+  "source_sha256": {
+    "src/energy_model/q2_portfolio.py": "8118ac052b978a5a10dd35ed643d20f7ce40c62c2223146b4bc848b354289659",
+    "scripts/q2_corrected_factory.py": "7b540156694f0ba409ad6ba2829022907f781641d2d89e870d706a2b4affa469",
+    "tests/test_q2_portfolio.py": "e32d2129be9a3a097779d306f6cf0d25b23478b2992690d177380376c5c51e68",
+    "src/energy_model/q2_solar_entitlement.py": "1284b4ceb7c8e27d74d830d6f0fe7513a66eebc59f840cf8fae4a65e24e4ef42"
+  },
+  "base_run": "outputs/q2_revenue_recalibration/20261019T223517292100Z",
+  "independent_noop_checks": {
+    "authority25_full": {
+      "paths": true,
+      "finance": true,
+      "operations": true,
+      "projects": true,
+      "assets": true,
+      "balances": true,
+      "behavior": true,
+      "fund_history": true,
+      "municipal_service_history": true,
+      "year_end_operation": true,
+      "prices": true,
+      "lifetime_rule_changes": true
+    },
+    "authority25_without_municipal_composition": {
+      "paths": true,
+      "finance": true,
+      "operations": true,
+      "projects": true,
+      "assets": true,
+      "balances": true,
+      "behavior": true,
+      "fund_history": true,
+      "municipal_service_history": true,
+      "year_end_operation": true,
+      "prices": true,
+      "lifetime_rule_changes": true
+    }
+  },
+  "noop_method": "In-memory patch only: q2_corrected_factory.PortfolioNationalModel -> original NationalModel; apply_solar_duration -> no-op. Each mode rebuilt 2015-2024 independently with unchanged base-selected authority25 parameters and compared exactly with original build.",
+  "boundary": "Checks isolate two mechanism changes, do not certify empirical fit, real fiscal authority, global optimum, forecasts or scientific admission. Old model/entry points and frozen data remain unchanged. New class overrides only audit_renewable_portfolio; government financing/construction/support limits and merchant componentwise protection remain inherited.",
+  "scientific_acceptance": false,
+  "team_approved": false
+}

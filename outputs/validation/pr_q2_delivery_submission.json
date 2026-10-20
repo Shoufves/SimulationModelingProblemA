@@ -1,0 +1,23 @@
+{
+  "base_sha": "500436ffe8a9ecdf0ebcad3cdae87ef9deddbf93",
+  "scope": "Question 2 follow-up to merged PR 9; Question 3 excluded",
+  "clean_directory_tests": 511,
+  "clean_directory_audit": true,
+  "google_key_scan_passed": true,
+  "frozen_source_hashes_verified": 220,
+  "staged_export_review": "git checkout-index export; test fixture then fixed to create its own temporary parent directory",
+  "initial_test_errors": "Two tests assumed ROOT/tmp existed; fixture now creates it. Assertions and model source unchanged. Initial failure log retained.",
+  "portable_S0_full_horizon": "passed with exact reference verification",
+  "original_S0_through_2027": "passed",
+  "prior_full_portable_cases": 24,
+  "whitespace_scope": "Source, tests, docs and README; raw source bytes preserved, existing EOF blank lines not reformatted",
+  "logs": {
+    "pr_q2_delivery_audit.log": "ac1ed970f419d961e9a8076784a2ceac6fbaebac3ef3c438e82bcd0bccb8646d",
+    "pr_q2_delivery_diff_check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pr_q2_delivery_original.log": "63da214525cb8d5edc7e9de2c592372540b381e5af5e08f6b3654226b6f5b0ab",
+    "pr_q2_delivery_portable.log": "25cdde1a17b343c814715166ebe0843e9abcb49eb6398bf8f10840bf5e4806d3",
+    "pr_q2_delivery_tests.log": "de2316f438fe7e99c882e2001c59c7073cf7cea13cb49e49f6d17c39f21804bc",
+    "pr_q2_delivery_tests_initial.log": "221814811e03df8320d7bd75d2fce769f111ed6076e7a1d76478a5560cd6f562"
+  },
+  "scientific_limitations": "Historical total and solar capacity MAPE 24.90%/26.77% do not pass old internal thresholds; partial price/policy proxies retained; no claim of full empirical acceptance."
+}

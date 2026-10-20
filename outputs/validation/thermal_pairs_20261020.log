@@ -1,0 +1,35 @@
+authority_5_disabled {'coal': 0, 'gas': 3}
+Traceback (most recent call last):
+  File "E:\Team\2026JM\SimulationModelingProblemA\scripts\run_q2_thermal_pairs.py", line 81, in <module>
+    main()
+  File "E:\Team\2026JM\SimulationModelingProblemA\scripts\run_q2_thermal_pairs.py", line 42, in main
+    model, assumptions, prices, changes, extra = build(data, design, config, parameters, authority,
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\scripts\q2_thermal_factory.py", line 38, in build
+    m.run(year)
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_fuel_prices.py", line 108, in run
+    return super().run(end_year)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 1248, in run
+    self.step()
+  File "E:\Team\2026JM\SimulationModelingProblemA\tmp\q2-venv\Lib\site-packages\mesa\model.py", line 122, in _wrapped_step
+    self._user_step(*args, **kwargs)
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_thermal_vintages.py", line 260, in step
+    super().step()
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 1200, in step
+    proposals = [self.generators[t].proposal(margins[t],operation=op,result=result) for t in TECHS]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_thermal_vintages.py", line 86, in proposal
+    if m.thermal_candidate_npv(tech, p["amount"]) > 0:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_thermal_vintages.py", line 200, in thermal_candidate_npv
+    self.add_renewable_candidate(tech, op["plants"][tech], amount * weight(tech))
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_thermal_vintages.py", line 183, in add_renewable_candidate
+    return super().add_renewable_candidate(tech, plant, amount)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_national.py", line 882, in add_renewable_candidate
+    self.renewable_vintages.add_candidate(self,tech,plant,amount)
+  File "E:\Team\2026JM\SimulationModelingProblemA\src\energy_model\q2_renewable_vintages.py", line 41, in add_candidate
+    profile=self.profile(model,tech,self.new_project_cf[tech])
+                                    ~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'gas'

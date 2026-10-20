@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-19T23:56:57.132378+00:00",
+  "status": "passed_with_scope_limits",
+  "original_sources_hash_verified": 4,
+  "visually_reviewed_pdf_pages": {
+    "IEA2010": [
+      55,
+      57,
+      105,
+      206
+    ],
+    "IEA2015": [
+      19,
+      40,
+      41
+    ]
+  },
+  "china_technical_references": {
+    "IEA2010_coal_net_lhv": 0.46,
+    "IEA2010_ccgt_net_lhv": 0.58,
+    "IEA2010_assumed_commissioning_year": 2015,
+    "IEA2015_coal_net_lhv": 0.45,
+    "IEA2015_ccgt_net_lhv": 0.55,
+    "IEA2015_assumed_commissioning_year": 2020
+  },
+  "official_policy_2014": {
+    "new_coal_supply_standard_coal_g_per_kwh_ceiling": 300,
+    "implied_net_efficiency_floor": 0.40945010850427876,
+    "scope": "design/entry policy, not observed vintage performance"
+  },
+  "official_statistics_2015": {
+    "supply_standard_coal_g_per_kwh": 315,
+    "implied_group_net_efficiency": 0.3899524842897893,
+    "publication_date": "2016-01-15",
+    "scope": "6000kW+ group aggregate, not new-vintage or pure-coal panel"
+  },
+  "qualifications": [
+    "IEA2010 China sample was independently collected in 2009 from construction projects; it is not an official national census",
+    "IEA2015 China records use public-source/survey collection, not an official Chinese submission",
+    "IEA2015 publication cannot be part of a 2014 information snapshot",
+    "Cross-edition technical samples cannot identify a monotonic efficiency trend",
+    "Early technology availability does not establish typical actual 2015 vintage efficiency or historical national fleet costs",
+    "No official historical gas vintage efficiency panel was acquired",
+    "2014 fleet own-use bridge remains an assumption for gross conversion"
+  ],
+  "source_sha256": {
+    "data/raw/q2_thermal_efficiency_history/iea_nea_projected_costs_2010.pdf": "673a6a22cc62e26ff19cf07b0120be7e1fca99fa9033fac7150e33826a168c77",
+    "data/raw/q2_thermal_efficiency_history/iea_nea_projected_costs_2015.pdf": "8c4bb17d76204408c7069232d1dea9e727cf1ee7f783f4f8291ffecbaa16afdc",
+    "data/raw/q2_thermal_efficiency_history/nea_coal_upgrade_2014.html": "b78722a5cf66e4441c5300a2e618cfbc0d50c9618695c2562a9d1bf3487e2e27",
+    "data/raw/q2_thermal_efficiency_history/nea_power_statistics_2015.html": "aa4232ffe9ddfebe8b0c9693e35817c57787bdb1365c56819ec56d4f4c11ca1d"
+  },
+  "default_inputs_changed": false,
+  "scientific_acceptance": false,
+  "documentation": "docs/sources/q2_thermal_efficiency_history.md"
+}

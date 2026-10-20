@@ -1,0 +1,1155 @@
+
+--- PDF page 1 ---
+Ma et al. Carbon Research            (2024) 3:74  
+https://doi.org/10.1007/s44246-024-00162-9
+ORIGINAL ARTICLE Open Access
+© The Author(s) 2024. Open Access  This article is licensed under a Creative Commons Attribution 4.0 International License, which 
+permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the 
+original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or 
+other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line 
+to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory 
+regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this 
+licence, visit http:// creat iveco mmons. org/ licen ses/ by/4. 0/.
+Improving the method for calculating 
+carbon emissions from waste incineration: 
+confirmed with carbon-14 testing of flue gas
+Yifei Ma1, Pinjing He1,2, Fan Lü1,2 and Hua Zhang1,2* 
+Abstract 
+An improved method was developed to calculate direct emissions from seven municipal solid waste incinera-
+tion plants by adjusting the physical compositions of waste by invoking the proportion of co-incinerated waste 
+and the bottom ash yield. The fossil carbon fractions of the waste components were determined by carbon-14 (14C) 
+testing. Based on the improved method, direct emissions were in the range of 222–610 kg  CO2-eq/t waste, cor-
+responding to reductions of 3.4–221 kg  CO2-eq/t waste compared with the method without waste composition 
+adjustment. The 14C contents of the flue gas before and after gas cleaning were tested to validate the improved 
+method, and indicated fossil  CO2 emissions of 249–446 and 233–405 kg  CO2-eq/t waste, respectively. The direct emis-
+sions obtained by the improved method were closer to the results of 14C testing, due to more accurate estimations 
+of the actual waste composition. The method was further combined with a life cycle analysis of the waste incinera-
+tion process, obtaining total carbon emissions in the range from –33.2 to 483 kg  CO2-eq/t waste. The findings provide 
+a new means of accurately calculating carbon emissions from waste incineration.
+Highlights 
+• Co-incinerated waste and bottom ash yield were used to adjust waste composition.
+• Fossil carbon contents of the waste and flue gas were determined by 14C testing.
+• The improved method reduced fossil  CO2 emissions by 3.4–221 kg  CO2-eq/t waste.
+• Life cycle GHG emissions from waste incineration was –33.2–483 kg  CO2-eq/t waste.
+Keywords Direct emissions, Fossil carbon fraction, Accelerator mass spectrometry, Co-incineration, Bottom ash, 
+Waste composition adjustment
+Handling Editor: Xiangzhou Yuan.
+*Correspondence:
+Hua Zhang
+zhanghua_tj@tongji.edu.cn
+Full list of author information is available at the end of the article
+
+--- PDF page 2 ---
+Page 2 of 15Ma et al. Carbon Research            (2024) 3:74 
+Graphical Abstract
+1 Introduction
+Improving the carbon accounting system is a necessary 
+procedure to achieve carbon neutrality (Wu et al. 2022). 
+In the area of solid waste management, municipal solid 
+waste incineration (MSWI) is one of the most promising 
+pathways to reduce greenhouse gas (GHG) emissions, 
+as incineration facilities provide both electricity genera -
+tion and an alternative to landfilling (Liao et al. 2023; Fei 
+et al. 2024). As the waste composition and energy mix in 
+China have changed over the years, the carbon benefits 
+of waste incineration have incurred a downward trend 
+(China Academy of Environmental Planning 2023; Han 
+et  al. 2023; Zhang et  al. 2023). Accurate accounting of 
+carbon emissions from MSWI is now widely scrutinized 
+(Zhao et al. 2022; Xiao et al. 2023).
+The accounting methods for carbon emissions from 
+MSWI include the method established by the intergov -
+ernmental panel on climate change (IPCC) (Eggles -
+ton et  al. 2006), life cycle assessment (LCA) (Liao et  al. 
+2023), the balance method (Schwarzböck et  al. 2016), 
+the carbon-14 ( 14C) method (Lee et  al. 2021), and the 
+clean development mechanism (Yao et al. 2019). Recent 
+studies have primarily focused on the IPCC method and 
+LCA. The IPCC method employs emission factors and 
+formulas to calculate direct emissions from fossil compo-
+nents in waste. The LCA method, which further utilizes 
+operational data from MSWI plants, identifies both indi -
+rect emissions from energy and material consumption 
+as well as the offset avoided emissions from electricity 
+generation. Due to abundant operational data and the 
+existence of product life cycle databases, the calculation 
+of indirect emissions and avoided emissions is typically 
+straightforward. However, the calculation of direct emis -
+sions is more complex, as determining the fossil carbon 
+fraction (FCF) in waste often involves complicated data 
+research and experimental work. To date, such determi -
+nation of FCF has involved sorting waste into more uni -
+form components (paper, plastic, glass, metal, textiles, 
+etc.) and analyzing the total carbon content (TC) and 
+the distribution of FCFs among these components (Chen 
+et al. 2020).
+Nevertheless, due to a lack of visual identifiability, a 
+significant fraction is often overlooked due to small par -
+ticle size, with the most significant impact being on the 
+content of inert waste such as dust and debris. In recent 
+studies, the total ash contents of waste components in 
+industrial analysis often appeared to be low (Malakah -
+mad et al. 2017; Pérez et al. 2018; Zhao et al. 2022), but 
+the actual yields of bottom ash in MSWI plants were 
+high (20%–30%) (Sabbas et al. 2003; Li et al. 2020; Chen 
+et al. 2023). This implies that the ash content in the waste 
+was underestimated, while the contents of other compo -
+nents, such as plastics, which have a significant impact 
+on carbon emissions, were overestimated. Furthermore, 
+changes in waste management policies have led to altera -
+tions in the reality of MSWI. The implementation of 
+waste sorting policies has resulted in the diversion of a 
+significant amount of food waste from municipal solid 
+waste (MSW) (Shi et  al. 2024), leading to a substantial 
+reduction in the waste sent to MSWI plants. Meanwhile, 
+the rapid increase of MSWI plants in recent years has 
+led to a challenge of their underutilization. In response 
+to this situation, MSWI plants have shifted towards the 
+co-incineration of various types of waste, including 
+
+--- PDF page 3 ---
+Page 3 of 15
+Ma et al. Carbon Research            (2024) 3:74 
+ 
+non-hazardous industrial solid waste, disinfected medi -
+cal waste, dried sludge, residues from food waste treat -
+ment, and so on (Zhao et al. 2021; Ying et al. 2023; Guo 
+et al. 2023; Chu et al. 2024). However, the components of 
+these co-incinerated wastes are typically not considered 
+in MSWI carbon emission accounting (Zhao et al. 2022; 
+Liao et al. 2023; Han et al. 2023).
+Currently, research efforts on the FCFs of various waste 
+components primarily rely on the default values provided 
+by IPCC guidelines (Kourkoumpas et al. 2015; Liu et al. 
+2017; Wang et al. 2017), which may not accurately reflect 
+the characteristics of China’s waste. Studies have indi -
+cated differences between the IPCC default values and 
+the actual FCFs (Kang et al. 2017a; Liu et al. 2024). There-
+fore, to improve the reliability of accounting results, it is 
+necessary to determine the FCF of each component in 
+waste. The 14C test is an effective method for quantifying 
+the fossil carbon content in waste. Theoretically, mod -
+ern biomass has 100% radiocarbon content, in contrast 
+to fossil fuels, which contain virtually no radiocarbons 
+(American Society for Testing and Materials 2024). The 
+biogenic fraction correlates directly with the 14C content, 
+allowing for its precise determination. Consequently, the 
+14C method adeptly differentiates between fossil and bio -
+genic carbon sources (Kang et  al. 2020). This approach 
+ensures the accurate assessment of fossil carbon in waste. 
+Additionally, employing 14C testing to determine the 
+concentrations of fossil  CO2 in flue gas is a more pre -
+cise method for directly calculating carbon emissions 
+from waste incineration (Wang et al. 2022). The flue gas 
+from incineration is the most suitable target for validat -
+ing direct carbon emissions (Kim et al. 2016; Kang et al. 
+2018), because the homogeneous nature of flue gas 
+allows for avoidance of the issue raised by unrepresenta -
+tive sampling of heterogeneous solid waste (Mohn et al. 
+2012). Nevertheless, the challenges of flue gas sampling 
+and the expense of 14C testing often discourage research-
+ers from conducting extensive sampling and tests.
+Therefore, this study proposes an improved method 
+for determining direct emissions from MSWI plants by 
+invoking the adjusted physical composition of waste. 
+The improvement comprises two steps: step 1, adjust -
+ing the physical composition of incinerated waste based 
+on the quantities of co-incinerated waste materials; step 
+2, adjusting the physical composition from step 1 based 
+on the actual bottom ash production. Additionally, 14C 
+testing was adopted to determine the FCF of each com -
+ponent in waste, providing carbon emission account -
+ing parameters that align with the current situation in 
+China, further improving the method. To validate the 
+results, direct emissions from waste incineration under 
+eight different conditions were determined through 14C 
+testing of flue gas. The direct emissions determined by 
+the improved method were then combined with a full 
+life cycle inventory analysis to evaluate the current level 
+of carbon emissions from MSWI in China.
+2  Method
+2.1  MSWI plants
+Seven typical MSWI plants in Shanghai (plants A–E), 
+Jiangsu (plant F), and Hebei province (plant G) in 
+China were selected as study cases, with eight sets of 
+operating conditions. For plant G, two sets of work -
+ing conditions were operative, namely incineration of 
+MSW alone, denoted as G(1), and co-incineration of 
+MSW with 10% polyester textiles, denoted as G(2). The 
+three regions selected, with different climatic and eco -
+nomic conditions, level of development and population 
+densities (179,907, 144,390 and 56,995 CNY for per 
+capita gross regional product,  and 3950, 794 and 393 
+persons/km 2 for population density in 2022 in Shang -
+hai, Jiangsu, and Hebei province, respectively), ensured 
+that the waste samples were broadly representative. The 
+waste management practices in the three regions, in 
+turn, represent the typical waste segregation patterns 
+and levels today. At the MSWI plants A–E sites, MSW 
+was collected separately as hazardous waste, recycla -
+bles, food waste and residual waste, with residual waste 
+ultimately being sent to MSWI plants. At the locations 
+of MSWI plant F and MSWI plant G, MSW was col -
+lected separately as hazardous waste, recyclables and 
+other waste, so the residual waste sent to the MSWI 
+plant had a high food waste content. The incineration 
+sizes of the MSWI plants in the three regions ranged 
+from 750 t/d to 6,000 t/d, and the incineration and pol -
+lutant management technologies used covered typical 
+waste incineration scenarios. During the period from 
+November 2022 to November 2023, samples and opera -
+tional data were collected from the MSWI plants. The 
+main parameters and system indicators of the investi -
+gated plants are shown in Table 1 .
+Table 1 Characteristics of the investigated MSWI plants
+Facility Incinerator type Capability
+(t/day)
+Live steam pressure/ 
+temperature 
+(MPa/℃)
+Plant A Grate incinerator 1000 4.0/400
+Plant B Grate incinerator 1500 4.0/400
+Plant C Grate incinerator 3500 6.4/450
+Plant D Grate incinerator 6000 5.4/450
+Plant E Grate incinerator 1500 4.0/400
+Plant F Grate incinerator 750 4.0/400
+Plant G(1) Grate incinerator 2000 13.5/450
+Plant G(2) Grate incinerator 2000 13.5/450
+
+--- PDF page 4 ---
+Page 4 of 15Ma et al. Carbon Research            (2024) 3:74 
+2.2  Sample collection and characterization
+Besides MSW, other types of waste are co-incinerated in 
+the plants. Therefore, sample collection and analysis of 
+the physical compositions of incoming waste materials 
+at the plants became more complicated, covering MSW 
+as well as blended industrial solid waste, medical waste, 
+sludge, and food waste treatment residues. MSW, as the 
+bulk of the incoming waste, was sampled in the same 
+way as in the study by Liao et al. (2023). The amounts of 
+other co-incinerated waste materials were obtained from 
+the operational data. Typical co-incinerated waste com -
+ponents included polyester textiles and rubber in indus -
+trial solid waste; syringes, surgical drape, surgical gowns, 
+and medical pads in medical waste; organic solid residues 
+and biogas residues in food waste treatment residues; and 
+sludge (Table 2).
+Each typical component of the MSW and co-inciner -
+ated waste materials was dried and crushed separately, 
+and then passed through a 100-mesh sieve to ensure 
+homogeneity of the samples. The TC of the samples was 
+determined by elemental analysis (Vario EL Cube, Ele -
+mentar, Germany). The FCFs of the samples were deter -
+mined by accelerator mass spectrometry (AMS). Each 
+solid waste sample with an absolute carbon content of 
+200–1000 µg was placed in a quartz tube to which an 
+excess of copper oxide particles had been added, which 
+was then connected to a vacuum system. The quartz tube 
+containing the sample was then sealed and placed in a 
+muffle furnace at 850 °C for 1 h, during which the organic 
+carbon was oxidized to  CO2. The gaseous products were 
+then collected for 14C testing, the protocol for which is 
+described in Sect. 2.4.
+2.3  Flue gas sampling and  CO2 analysis
+The method ASTM D7459-08 (American Society for 
+Testing and Materials 2016) defines specific procedures 
+for the collection of gas samples from stationary emis -
+sion sources for subsequent laboratory determination of 
+the ratio of fossil carbon to biogenic carbon according to 
+method ASTM D6866-22 (American Society for Testing 
+and Materials 2024). In this study, a sampling method 
+was established with reference to ASTM D7459-08, 
+and flue gas samples were collected from seven MSWI 
+plants operated under eight sets of conditions. Two sam -
+pling points were selected at each MSWI plant, namely 
+the boiler economizer outlet and the chimney outlet, 
+to determine the total  CO2 and fossil  CO2 concentra -
+tions in flue gas before and after the gas cleaning system, 
+respectively.
+Figure 1 shows a schematic diagram of the flue gas col -
+lection and monitoring. A primary filter made of stainless 
+steel was set up at the back end of the 1 m long sampling 
+probe to prioritize the removal of particles larger than 0.1 
+mm in the flue gas. The flue gas was then passed through 
+a tracer line maintained at 180 °C to avoid losses of its 
+components due to condensation. A specific conden -
+sation system (PSS-20, M&C TechGroup, Germany), 
+equipped with a polytetrafluoroethylene gas filter to 
+remove particles larger than 2 μm, was used to remove 
+moisture from the flue gas. The condensation system 
+Table 2 FCFs in this study and IPCC default values
+IPCC category FCF category in this study FCF (%) TC value in 
+this study (dry 
+basis)Average in this study IPCC default 
+value
+Food waste Food waste 3.67 ± 0.95 0 41.74 ± 1.69
+Paper and cardboard Paper 3.51 ± 0.69 1 40.53 ± 2.56
+Plastics Plastics 90.52 ± 0.81 100 74.01 ± 6.20
+Syringe 89.28 ± 1.05 49.63 ± 0.19
+Textiles Surgical drape 98.71 ± 0.08 20 76.29 ± 0.66
+Surgical gown 98.71 ± 0.01 73.35 ± 0.78
+Cotton textiles 0.00 52.54 ± 8.45
+Polyester textiles 93.60 ± 0.02 45.64 ± 1.14
+Mixed textiles 62.40 ± 0.01 47.94 ± 2.92
+Wood Wood 0.64 ± 0.46 0 47.07 ± 0.78
+Nappies Nappies 73.11 ± 7.28 10 56.78 ± 7.30
+Medical Pads 74.06 ± 0.30 46.28 ± 3.38
+Rubber and leather Rubber 94.98 ± 2.24 20 86.19 ± 0.01
+No corresponding category Biogas residue 1.26 ± 0.09 / 23.98 ± 0.47
+Organic solid residue 3.09 ± 1.92 44.06 ± 2.51
+Sludge 23.08 ± 0.59 27.90 ± 0.01
+
+--- PDF page 5 ---
+Page 5 of 15
+Ma et al. Carbon Research            (2024) 3:74 
+ 
+featured a high-performance Peltier electronic condenser 
+for rapid condensation (below 5 °C) and dehydration of 
+the flue gas. A gas pump provided power to the sampling 
+system, and a mass flow controller (MFC) ensured that 
+the flue gas was collected in a Devex gas sampling bag at 
+a flow rate of 0.25 L/min during a continuous sampling 
+period of 1 h.
+CO2 concentrations in the flue gas were tested using 
+a gas analyzer (DX4000, Gasmet Technologies Oy, Van -
+taa, Finland). The flow rates of flue gas were determined 
+according to the continuous emission monitoring sys -
+tems of the respective MSWI plants. It is worth noting 
+that, due to the difficulty of obtaining flue gas flow rate 
+data at the boiler, this study chose to overlook the change 
+in flue gas flow rate after the gas cleaning system. It is 
+assumed that the flue gas flow rate at the outlet of the 
+boiler economizer is consistent with that at the chimney 
+outlet, and the latter was used for the calculation (Bellani 
+et al. 2023).
+2.4  14C test
+Flue gas samples and gaseous products from solid waste 
+components were purified and graphitized prior to 14C 
+testing by AMS. Gas samples were transferred to a vac -
+uum system at a flow rate of 200 mL/min, in which  H2O 
+and  CO2 were sequentially frozen by passage through a 
+liquid nitrogen cold trap (–196 ℃), while other impurity 
+gases were pumped out of the system through a vacuum 
+line. The  H2O was then removed by an ethanol-liquid 
+nitrogen water-cooling trap (–78 ℃ to –90 ℃) to obtain 
+purified  CO2. The purified  CO2 was then transferred to 
+a glass reaction casing, the outer tube of which was filled 
+with Zn and  TiH2 powders, and the inner tube was filled 
+with Fe powder. After flame-sealing under vacuum, the 
+glass casing was heated in a muffle furnace.  CO2 under-
+went a reduction reaction on the surface of the Fe powder 
+in the inner tube after successive stepwise heating at 500 
+°C for 3 h and at 550 °C for 4 h, and was finally reduced 
+to graphite. The graphite sample was then pressed into an 
+aluminum support prior to analysis.
+The 14C levels of the graphite samples were measured 
+by AMS (0.5 MV, NEC, USA) and the errors in the 14C 
+measurements were within 3‰ of the 14C concentration 
+of the samples. The biological carbon fractions (BCFs) 
+of the samples were expressed in terms of modern car -
+bon fraction f M,sample (unit: pMC). The test data were 
+Fig. 1 Schematic diagram of the field setup for flue gas sampling. MFC: mass flow controller
+
+--- PDF page 6 ---
+Page 6 of 15Ma et al. Carbon Research            (2024) 3:74 
+calibrated externally using oxalate (OXII) ( fM = 134.07 
+pMC) as a primary standard and hyaluronan (HA) 
+(fM = 65.76 pMC) as a secondary standard. The isotopic 
+mass fractionation index correction model was used to 
+correct 14C/13C using δ 13C data from the AMS online 
+test, as expressed by Eq. (1):
+where ( 14C/13C)sample is the 14C/13C ratio of the sam -
+ple normalized to the δ 13C value, and ( 14C/13C)ABS is the 
+absolute radiocarbon reference standard after the appli -
+cation of fractionation and decay corrections.
+It was necessary to adjust all fM,sample values by apply -
+ing an atmospheric reference correction factor (REF) to 
+obtain the true BCFs of the samples. According to ASTM 
+D6866-22, modern atmospheric levels of 14C are con -
+stantly being diluted as fossil fuel combustion continues 
+to emit fossil carbon into the modern atmosphere, cur -
+rently with an atmospheric fM,REF of 100.00 pMC. BCF 
+and FCF can be calculated according to Eq. (2):
+2.5  Fossil  CO2 emissions accounting
+2.5.1  Method I based on MSW physical composition
+Combining specific physical composition data of waste 
+from different MSWI plants, the fossil  CO2 emission fac-
+tor  (FCO2EF) of MSW was determined according to Eq. 
+(3) (Han et al. 2023; Ma et al. 2024).
+where  FCO2EF(1) denotes the fossil  CO2 emission from 
+waste incineration calculated by Method I, kg  CO2-eq/t 
+waste; WFi is the weight fraction of component i in the 
+MSW on a wet basis  (%); DMi is the dry matter (DM) 
+content of component i by weight (%); CFi is the weight 
+fraction of TC in the DM of component i (%); FCFi is the 
+weight fraction of fossil carbon in the TC of component 
+(1)fM,sample =
+(14C/13C)sample
+(14C/13C)ABS
+(2)BCF = 100% − FCF = fM,sample
+fM,REF
+(3)FCO2EF(1) = n
+i=1
+WF i
+100 × DMi
+100 × CF i
+100 × FCF i
+100 × 44
+12 × 1000
+i (%); 44/12 is a conversion factor relating C to  CO2; and i 
+is a given component in the MSW, i = 1, 2, …, n.
+2.5.2  Method II improved by invoking co‑incinerated waste 
+materials
+Through data recorded from the MSWI plants, the other 
+co-incinerated waste materials were included in the 
+physical composition of the incinerated waste in each 
+case. The calculation of carbon emissions from waste 
+incineration was improved by applying Eq. ( 4) based on 
+these co-incinerated waste materials.
+where  FCO2EF(2) denotes the fossil  CO2 emission from 
+waste incineration calculated by Method II, kg  CO2-eq/t 
+waste; R1 is the proportion of MSW in the incinerated 
+waste; WFj is the weight fraction of the co-incinerated 
+waste j in the total incinerated waste on a wet basis (%); 
+DMj is the DM content of waste j by weight (%); CFj is the 
+weight fraction of TC in the DM of waste j (%); FCFj is the 
+weight fraction of fossil carbon in the TC of waste j (%); 
+and j is the type of co-incinerated waste, j = 1, 2, …, m.
+2.5.3  Method III modified by invoking co‑incinerated waste 
+materials and bottom ash
+Further adjustment of the physical compositions of inciner-
+ated waste samples was based on the actual bottom ash yields 
+from the MSWI plants, as expressed by Eqs. (5) and (6):
+where R2 is the percentage of neglected inert compo -
+nents in the incinerated waste; BA is the bottom ash yield 
+in the incineration plant (%); DMBA is the DM content of 
+bottom ash by weight (%); PBA is the combustible fraction 
+of bottom ash (%); Ashi is the ash content of MSW com -
+ponent i on a dry basis (%); Ashj is the ash content of co-
+incinerated waste j on a dry basis (%); Minert is the water 
+content of neglected inert components in the incinerated 
+waste, which is supposed to be the same as the fraction of 
+dust and debris detected (25.0%); and  FCO2EF(3) is the 
+fossil  CO2 emission from waste incineration calculated 
+by Method III, kg  CO2-eq/t waste.
+(4)
+FCO2 EF(2) = FCO2 EF(1) × R1 + ∑m
+j=1
+( WF j
+100 × DMj
+100 × CF j
+100 × FCF j
+100
+)
+× 44
+12 × 1000
+(5)R2 =
+BA
+100 × DMBA
+100 × (100−PBA)
+100 − R1 × ∑m
+i
+(
+WF i
+100 × DMi
+100 × Ashi
+100
+)
+− ∑m
+j
+( WFj
+100 × DMj
+100 × Ashj
+100
+)
+1 − Minert
+100 −
+[
+R1 × ∑m
+i
+(
+WF i
+100 × DMi
+100 × Ashi
+100
+)
++ ∑m
+j
+( WFj
+100 × DMj
+100 × Ashj
+100
+)]
+(6)FCO2EF(3) = FCO2EF(2) × (1 − R2)
+
+--- PDF page 7 ---
+Page 7 of 15
+Ma et al. Carbon Research            (2024) 3:74 
+ 
+2.6  Method validation based on analyzed fossil  CO2 
+concentrations in flue gas
+Fossil  CO2 emissions were determined by combin -
+ing the flow rate,  CO2 concentration, and the FCF fg of 
+flue gas. Method IV and Method V determine the fos -
+sil  CO2 emissions before and after flue gas treatment by 
+using untreated flue gas and treated flue gas parameters, 
+respectively, according to Eq. (7):
+where Qn is the volumetric flow rate of dry flue gas at 
+the stack outlet under standard conditions (273.15 K, 
+101,325 Pa)  (m3/t waste); C CO2 is the  CO2 concentra -
+tion in dry flue gas under standard conditions (273.15 K, 
+101,325 Pa) (volume%); and FCF fg is the fossil  CO2 frac-
+tion in the total  CO2 (%).
+2.7  Total GHG emissions associated with waste 
+incineration
+When the LCA method is used, the total GHG emission 
+ (GHGtotal) from waste incineration includes the direct 
+emission  (GHGdirect) due to fossil  CO2 emission, indirect 
+emission  (GHGindirect), and avoided emission  (GHGavoid), 
+calculated according to Eq. (8).
+Indirect emissions in MSWI plants are associated with 
+auxiliary fuel and electricity consumption, flue gas clean -
+ing, leachate treatment, and fly ash/bottom ash treatment 
+and disposal.  GHGindirect is determined by multiplying 
+the consumption of energy and materials involved in 
+the indirect emissions process with the relevant prod -
+uct carbon footprint factors. The MSWI plants studied 
+here were located in three different geographic locations 
+and had varying waste collection and transportation 
+routes. Considering that emissions from the collection 
+and transportation phase are extremely low compared 
+to the overall carbon emission level of waste incineration 
+(Pfadt-Trilling et  al. 2021; Zhao et  al. 2022), they were 
+excluded from the indirect emission accounting in this 
+study. Avoided emissions from waste incineration plants 
+were embodied in energy recovery in terms of electric -
+ity, determined by multiplying the amount of electricity 
+generated from waste incineration by the carbon emis -
+sion factor of the electricity in which the MSWI plant 
+is located. Due to variations in electricity generation 
+efficiency and regional carbon emission factors for elec -
+tricity, different MSWI plants achieved varying degrees 
+of GHG emission reduction. The life cycle inventory of 
+indirect and avoided emissions is shown in Table S1. The 
+calculation was conducted using Microsoft Excel, and 
+(7)F CO2EF =
+(
+Qn × CCO 2
+100 × 44
+22.4
+)
+×
+FCF fg
+100
+(8)
+GHGtotal = GHGdirect + GHGindirect + GHGavoid
+the result was discounted to the carbon emissions from 
+incineration of one tonne waste. For the calculation, 
+the product carbon footprint factor data were obtained 
+from the Ecoinvent database and the China Product Car -
+bon Footprint Factor Database. The actual operational 
+data used were divided into three parts according to the 
+type of GHG emissions, where the operational data for 
+indirect and avoided emissions were collected from the 
+incineration plant ledger, and the data related to direct 
+emissions were obtained by investigating the physical and 
+chemical properties of the waste.
+3  Results and discussion
+3.1  Influence of FCF on fossil  CO2 emissions by Method I
+The FCFs of the MSW components obtained by 14C test-
+ing showed characteristic differences from the IPCC 
+default values (Table  2). As a result, the direct carbon 
+emissions from waste incineration calculated accord -
+ing to Method I using these two sets of data also showed 
+some differences (Fig. 2).
+Plastic waste is the main contributor to fossil  CO2 
+emissions from MSW due to its high proportion therein 
+and high FCF. The analyzed FCF of plastic in MSW was 
+90.52% ± 0.81%, somewhat lower than the IPCC default 
+value of 100%, leading to a significant difference in the 
+fossil  CO2 emissions from plastic incineration (Fig.  2). 
+For textiles, significant differences in FCF between cotton 
+and polyester textiles were found, 0% and 93.6% ± 0.02%, 
+respectively, whereas the IPCC stipulated an average 
+value of 20% based on surveys and expert opinion. In 
+order to provide an FCF applicable to textiles in Chinese 
+MSW, a value of 62.4% ± 0.01% was calculated for mixed 
+textiles therein, based on the ratio of pure natural cot -
+ton textiles to polyester textiles produced in China (1:2) 
+(China Association of Circular Economy 2023). In the 
+case of a higher proportion of mixed textiles in MSW 
+(plants A–E and plant F), the fossil  CO2 emissions from 
+textiles evaluated using the analyzed FCF and IPCC 
+default values were significantly different. In plant G(2), 
+in which 10% polyester textiles are co-incinerated, the 
+fossil  CO2 emission from the polyester textiles fraction 
+using the analyzed FCF (157 kg  CO2-eq/t waste) was 
+123 kg  CO2-eq/t waste higher than that using the IPCC 
+default, making it the main carbon emission contributor. 
+The analyzed FCF results for food waste (3.67% ± 0.95%), 
+paper (3.51% ± 0.69%), and wood fractions (0.64% ± 0.46%) 
+were slightly higher than the IPCC defaults, and the ana -
+lyzed FCF for nappies (73.11% ± 7.28%) was significantly 
+higher than the IPCC default. However, due to the low 
+FCF values of the first three fractions and the low pro -
+portion of nappies in MSW, they did not lead to a signifi -
+cant increase in fossil  CO2 emissions.
+
+--- PDF page 8 ---
+Page 8 of 15Ma et al. Carbon Research            (2024) 3:74 
+Overall, there was no significant difference in fossil 
+ CO2 emissions between the 14C test values and the IPCC 
+default values (Fig.  2), but when the proportions of plas -
+tics and textiles were high, the difference in fossil  CO2 
+emissions between the two methods reached a maximum 
+of 98.73 kg  CO2-eq/t waste. This implies that it is neces -
+sary to use the tested FCF data for waste components to 
+accurately calculate the fossil  CO2 emissions from MSWI 
+plants in various regions of China with large differences 
+in the physical composition of waste.
+Considering the co-incineration in MSWI plants, FCF 
+test data of other typical components were determined, 
+including industrial waste (rubber), medical waste 
+(syringes, surgical drapes, surgical gowns, and medical 
+pads), food waste treatment residues (biogas residue, 
+and  organic solid residue), and sludge (Table  2). These 
+were used to determine parameters commensurate with 
+the characteristics of China’s solid waste, which should 
+expedite carbon emission accounting at MSWI plants.
+3.2  Fossil  CO2 emissions accounting by improved methods
+3.2.1  Improvement by consideration of co‑incinerated waste 
+materials (Method II)
+Figure  3a presents the physical compositions of 
+waste and fossil  CO2 emissions of MSWI plants 
+A–G calculated according to Methods I and II with 
+analyzed FCF values. Obviously, co-incineration 
+reduces the proportion of MSW in the incinerated 
+waste, such that the relative content of plastic waste, 
+which has a significant impact on fossil  CO2 emis -
+sions (Shen et  al. 2020), also decreases. Except for 
+plants B, G(1), and G(2), which did not co-incinerate 
+other types of waste, in the other five MSWI plants, 
+the plastic waste contents (dry basis) were reduced 
+from 17.91%–22.36% (Method I) to 17.27%–20.23% 
+Fig. 2 Physical composition of MSW and fossil  CO2 emissions. The t-test and Mann–Whitney test were used to compare the fossil  CO2 emissions 
+from calculated by different methods, and the significant levels were expressed as P values
+
+--- PDF page 9 ---
+Page 9 of 15
+Ma et al. Carbon Research            (2024) 3:74 
+ 
+(Method II) due to co-incineration. Correspondingly, 
+fossil  CO2 emissions from plastic waste incinera -
+tion decreased from 501–613 kg  CO2-eq/t waste to 
+476–565 kg  CO2-eq/t waste. Compared to the com -
+monly used Method I, the total fossil  CO2 emissions 
+of the five MSWI plants using Method II, which con -
+siders the proportion of co-incinerated waste, were 
+reduced by 2.95%–22.44%. The proportions and 
+types of co-incinerated waste materials are crucial 
+factors influencing fossil  CO2 emissions. In plant E, 
+due to the co-incineration of 23% garden waste, the 
+content of plastic waste was reduced without intro -
+ducing other fossil source waste materials. This led 
+to a decrease in fossil  CO2 emissions from 613 kg 
+ CO2-eq/t waste to 476 kg  CO2-eq/t waste, making 
+it the most pronounced case of reducing fossil  CO2 
+emissions through co-incineration of biogenic waste. 
+In fact, through investigation of co-incinerated waste 
+components (Table  S2), it was found that the waste 
+materials currently co-incinerated in MSWI plants 
+mainly include residues from food waste treatment, 
+dried sludge, and paper, which have relatively high 
+BCFs. This significantly reduces the FCFs in the 
+incinerated waste. Therefore, Method II, which con -
+siders the proportions of co-incinerated waste mate -
+rials, can further improve the accuracy of fossil  CO2 
+emissions accounting in MSWI plants.
+3.2.2  Improvement by considering co‑incinerated waste 
+materials and bottom ash (Method III)
+Ash residues were analyzed for each physical component 
+of the incinerated waste samples. The theoretical bottom 
+ash yield of each MSWI plant was calculated based on 
+the ash contents and physical composition data. Actual 
+Fig. 3 Results of physical composition of incinerated waste and fossil  CO2 emissions under different accounting methods and in various literature 
+reports (Kourkoumpas et al. 2015; Liu et al. 2017; Wang et al. 2017; Malakahmad et al. 2017; Pérez et al. 2018; Zhao et al. 2022)
+
+--- PDF page 10 ---
+Page 10 of 15Ma et al. Carbon Research            (2024) 3:74 
+bottom ash yield data for each MSWI plant were then 
+compared and differences were analyzed (Fig. 4).
+The total ash contents from the incinerated waste 
+materials ranged from 4.50% to 10.09%, while the actual 
+bottom ash yields (wet weight) accounted for 13.08%–
+45.95% of the waste. Because the bottom ash from MSWI 
+plants was subjected to water quenching before col -
+lection and weighing, it had a certain moisture content 
+(Tang et al. 2015; Shen et al. 2021). After deducting the 
+contents of moisture and combustible materials, pure 
+bottom ash yields were in the range 10.02%–35.21%. A 
+significant discrepancy between the total ash residues of 
+incinerated waste and the pure bottom ash yield is thus 
+apparent. Considering the sampling and analysis process 
+for determining physical composition, this can be mainly 
+attributed to the neglect of inorganic particles due to 
+waste heterogenicity and a lack of visual recognizability.
+In Fig.  3a, Method III shows the contents of neglected 
+inorganic fractions in incinerated waste (0.04%–43.56%) 
+for MSWI plants A–G using actual pure bottom ash 
+yields. The physical compositions of the waste materi -
+als were then re-determined based on the content of the 
+inorganic fraction. It is evident that the consideration of 
+neglected inorganic fractions, as adjusted by Method III, 
+resulted in different percentage reductions in other waste 
+fractions for different MSWI plants. This confirms the 
+necessity of using bottom ash yield to adjust the physi -
+cal compositions of waste materials from different MSWI 
+plants. Decreases in the proportion of plastic waste were 
+found, by 0.01%–6.69% compared to Method II and by 
+0.12%–8.10% compared to Method I. Since the inorganic 
+fractions do not participate in incineration or contribute 
+to fossil-derived  CO2 emissions, the fossil  CO2 emissions 
+further decreased to 222–610 kg  CO2-eq/t waste using 
+Method III. This equates to reductions of 0.2–171 kg 
+ CO2-eq/t waste compared to Method II and 3.4–221 kg 
+ CO2-eq/t waste compared to Method I.
+In previous literature reports (Fig.  3b), the plastic frac -
+tion contents ranged from 6.92% to 22.93%, and the fos -
+sil  CO2 emissions ranged from 180 to 719 kg  CO2-eq/t 
+waste. This range covers the results under Methods I–III. 
+However, the non-combustible fraction was less than 
+5% in most of the studies, reaching 7.90% and 11.30% in 
+only two cases. The non-combustible content in waste 
+is significantly influenced by the subjective judgment of 
+the sampling analysts. Further validation and adjustment 
+may be based on the actual input and output conditions 
+of incineration. The use of actual bottom ash yield in 
+Fig. 4 Total ash contents of incinerated waste versus actual bottom ash yields
+
+--- PDF page 11 ---
+Page 11 of 15
+Ma et al. Carbon Research            (2024) 3:74 
+ 
+incineration plants may assist in more accurately deter -
+mining the physical composition of waste and fossil  CO2 
+emissions under different incineration conditions.
+Due to differences in the characteristics of the inciner -
+ated waste, the variation in the physical composition of 
+the waste substantially differed among various MSWI 
+plants when applying Method II and Method III for 
+adjustments and calculations. MSWI plants B and G(1) 
+did not co-incinerate other waste materials, leading to 
+least impact on their physical composition when utiliz -
+ing Method II. In contrast, other plants that accepted an 
+additional 3.04% to 22.75% of other waste types experi -
+enced varying degrees of reduction in the components of 
+MSW. The composition of inert waste, such as dust and 
+debris, in the incoming waste varied significantly across 
+different MSWI plants. Method III considered these inert 
+components in the waste composition, further decreasing 
+the proportions of other MSW components in the over -
+all incinerated waste. Similarly, due to variations in waste 
+characteristics, the sensitivity of different incineration 
+plants to Method III differed considerably. Compared to 
+Method II, Method III indicated a reduction of 0.03% to 
+43.56% in the total content of MSW components (exclud-
+ing the supplementary inert components) across different 
+incineration plants.
+3.3  Validation of the improved method based on flue gas 
+analysis
+The flue gas samples collected from MSWI plants A–G 
+were subjected to 14C testing to determine the proportion 
+of fossil  CO2 in the total  CO2. Successful development 
+and implementation of the 14C method for measuring 
+FCFfg from MSWI plants was demonstrated by Mohn 
+et  al. (2008). Validation was performed by the balance 
+method (Fellner et al. 2007), as a completely independent 
+method, at three different MSWI plants, and the results 
+of both methods were in good agreement. Furthermore, 
+the 14C test method for flue gas has been successfully 
+applied for the measurement of  CO2 emissions from 
+the incineration of sludge (Kang et al. 2017b), industrial 
+waste (Kang et al. 2020), and solid refuse fuel (Lee et al. 
+2021).
+In Fig. 5a, the FCFfg (proportion of fossil  CO2 in the total 
+ CO2) in untreated flue gas and treated flue gas are seen 
+to be 44.64%–53.19% and 44.54%–53.12%, respectively, 
+in general agreement with the test results of (Mohn et al. 
+2012). and (Palstra and Meijer 2010). The  CO2 concentra-
+tions in the flue gas and other data in Table S3 were used 
+to evaluate emissions of fossil  CO2 from untreated flue 
+gas (Method IV) and treated flue gas (Method V), which 
+resulted in ranges of 249–445 kg  CO2-eq/t waste and 
+233–405 kg  CO2-eq/t waste, respectively (Fig.  5b). The 
+t-test showed that there was no significant difference in 
+the results of fossil  CO2 emissions determined by Method 
+IV and Method V (p  = 0.393). The flue gas cleaning sys -
+tems of the MSWI plants did not significantly change 
+the relative proportions of fossil  CO2 in the total  CO2, 
+but they affected the total amount of  CO2 in the flue gas. 
+After treatment, the  CO2 concentrations in the flue gases 
+of MSWI plants A–G were reduced by 0.26%–2.14%. This 
+was due to  CO2 fixation by Ca(OH) 2 and other alkaline 
+substances, the dissolution of  CO2 in water, and the dilu-
+tion of  CO2 by air infiltration in the flue gas system.
+Fig. 5 FCFfg and fossil  CO2 emissions from flue gas. The t-test was used to compare the fossil  CO2 emissions calculated by different methods, 
+and the significant levels were expressed as P values
+
+--- PDF page 12 ---
+Page 12 of 15Ma et al. Carbon Research            (2024) 3:74 
+Compared to Method III, there are further reductions 
+in average fossil  CO2 emissions calculated using Methods 
+IV and V based on flue gas analysis. However, it is worth 
+noting that the sampling and characterization of solid 
+waste are more uncertain than those of flue gas samples, 
+which are relatively homogeneous and stable in nature. 
+The use of averages to compare the fossil  CO2 emissions 
+by several methods is not justified, and the uncertainties 
+in the calculated parameters should be fully considered.
+Figure 6 illustrates the distribution of fossil  CO2 emis-
+sion results for incineration plants A–G using the five 
+methods, taking full account of the uncertainties in the 
+calculation parameters (Table  S4). The distributions of 
+fossil  CO2 emissions vary considerably in different MSWI 
+plants due to the fluctuating physical composition of 
+waste, but the overall trend is the same, with the range 
+of fossil  CO2 emissions gradually approaching the valida -
+tion values of Methods IV and V on going from Method I 
+to Method III. This shows that it is reasonable and neces-
+sary to improve generic Method I by invoking co-incin -
+erated waste and actual bottom ash production, which is 
+highly conducive to improving the accuracy of account -
+ing for fossil  CO2 from waste incineration.
+Fig. 6 Distribution of calculation results for the five methods
+Fig. 7 Total GHG emissions from waste incineration plants
+
+--- PDF page 13 ---
+Page 13 of 15
+Ma et al. Carbon Research            (2024) 3:74 
+ 
+3.4  Life cycle GHG emissions by the improved method
+The total climate change contributions of MSWI plants 
+A–G are given in Fig.  7. Direct emissions are based on 
+the results of fossil  CO2 emission obtained from Method 
+III, indirect emission accounting is based on operational 
+data from MSWI plants, and avoided emissions are based 
+on electricity substitution. Electricity exchange is based 
+on the marginal mixes in the area in which the incinera -
+tion plant is located, amounting to 0.420 kg  CO2-eq/kWh 
+for plants A–E, 0.695 kg  CO2-eq/kWh for plant F, and 
+1.092 kg  CO2-eq/kWh for plants G(1) and G(2). The total 
+carbon emissions from all MSWI plants ranged from 
+–33.2 to 483 kg  CO2-eq/t waste, with large discrepancies 
+between different MSWI plants.
+In all of the studied MSWI plants, indirect emissions 
+were in the range  of 15.59–40.39 kg  CO2-eq/t waste, 
+corresponding to only 3.80%–9.06% of the direct emis -
+sions. The main concern when considering carbon emis -
+sions from waste incineration remains direct and avoided 
+emissions. The improved method of direct emission 
+accounting shows that it is mainly affected by the physi -
+cal composition of the waste, especially the content of 
+fossil source waste. Better waste management and recy -
+cling of fossil source waste with high recycling value, 
+such as plastics, may yield better carbon emission reduc -
+tion benefits.
+The avoided emissions of MSWI plants A–G ranged 
+from –299 to –115 kg  CO2-eq/t waste. It is worth noting 
+that the GHG emission reduction from electricity gen -
+eration does not depend entirely on the efficiency of the 
+MSWI plant. The carbon emission factor of the electric -
+ity in the area in which the incineration plant is situated 
+is a non-negligible factor. MSWI plant D had the high -
+est electricity generation efficiency, 494 kWh/t waste, 
+but its carbon emission reduction through electricity 
+generation was only 207 kg  CO2-eq/t waste, much lower 
+than that of MSWI plant G(2) (–299 kg  CO2-eq/t waste), 
+which had an electricity generation efficiency of only 274 
+kWh/t waste. This is due to the fact that the carbon emis-
+sion factor for electricity in MSWI plant D was 0.420 kg 
+ CO2-eq/kWh, whereas that in MSWI plant G(2) was 2.6 
+times higher (1.092 kg  CO2-eq/kWh).
+The improved Method III reveals a certain reduction 
+in direct carbon emissions from MSWI compared to the 
+generic Method I. Due to the high carbon emission fac -
+tor, the avoided GHG emission in some areas can offset 
+the direct and indirect GHG emissions to a great extent, 
+and even achieve negative net carbon emissions (–35.1 
+kg  CO2-eq/t waste in plant G[1]), making waste incinera -
+tion a carbon sink. However, as the energy mix becomes 
+cleaner, the carbon reduction benefits of waste incinera -
+tion will diminish, making waste incineration a carbon 
+source. Therefore, reducing direct carbon emissions 
+by increasing the recycling value of fossil waste, and 
+increasing emission reductions from energy utilization 
+by improving the efficiency of electricity generation or 
+developing other energy-efficient thermal energy utiliza -
+tion methods, such as combined heat and power, should 
+be the direction of future efforts to effectively reduce 
+GHG emissions associated with waste incineration.
+4  Conclusions
+This study proposed an improved method for calculating 
+direct emissions from waste incineration on the basis of 
+the common method (Method I) and their validation by 
+the method of 14C testing of flue gas. The physical com -
+position was adjusted by considering the co-incinerated 
+waste materials (Method II) and the actual bottom ash 
+yield (Method III). Furthermore, life cycle carbon emis -
+sions from waste incineration were evaluated by taking 
+into account actual operational data from MSWI plants.
+14C testing was applied to obtain the FCFs of different 
+types of solid waste materials that are more in line with 
+current Chinese waste characteristics. The fossil carbon 
+contents of plastics, polyester textiles, and mixed textiles, 
+which play a major role in carbon emissions from waste 
+incineration, showed significant deviations from the 
+IPCC default values, being evaluated as 90.52% ± 0.81%, 
+93.6% ± 0.02%, and 62.4% ± 0.01%, respectively. Under 
+the eight different incineration conditions, Method III 
+yielded fossil  CO2 emissions of 222–610 kg  CO2-eq/t 
+waste, corresponding to reductions of 3.4–221 kg 
+ CO2-eq/t waste compared to Method I. Flue gas was ana-
+lyzed to verify Method III. The fossil  CO2 emissions were 
+249–445 kg  CO2-eq/t waste before flue gas treatment 
+(Method IV) and 233–405 kg  CO2-eq/t waste after flue 
+gas treatment (Method V). After fully considering the 
+uncertainties in the calculation parameters, the results of 
+improved Method III were closer to the validation values 
+than in the case of Method I, and should further improve 
+the accuracy of the calculated results of carbon emissions 
+from waste incineration. Life cycle carbon emissions 
+from MSWI plants, taking into account operational data, 
+ranged from –33.2 to 483 kg  CO2-eq/t waste. That is to 
+say, some incineration plants are currently able to achieve 
+negative net carbon emissions, due to the lower propor -
+tion of fossil-source waste materials and the higher local 
+carbon emission factor for electricity.
+The results of this study should contribute to more accu-
+rate accounting of carbon emissions from waste incin -
+eration and provide data and methodological support for 
+GHG emission accounting for waste management. Data 
+of this study on the fossil carbon contents of solid waste 
+samples and waste incineration flue gases derived from 14C 
+tests should greatly enrich the database of waste manage-
+ment and the life cycle inventory of GHG emissions.
+
+--- PDF page 14 ---
+Page 14 of 15Ma et al. Carbon Research            (2024) 3:74 
+Supplementary Information
+The online version contains supplementary material available at https:// doi. 
+org/ 10. 1007/ s44246- 024- 00162-9.
+Supplementary Material 1.
+Acknowledgements
+Not applicable.
+Authors’ contributions
+Study conception, material preparation, data collection and analysis were 
+performed by Yifei Ma and Hua Zhang. Hua Zhang provided the funding acqui-
+sition. All writers provided feedback on earlier drafts of the manuscript after Yifei 
+Ma wrote the original draft. All authors have read and approved the final draft.
+Funding
+This study was financially supported by National Key R&D Program of China 
+(2020YFC1910100).
+Data availability
+The datasets used or analyzed during the current study are available from the 
+corresponding author on reasonable request.
+Declarations
+Competing interests
+All authors certify that they have no affiliations with or involvement in any 
+organization or entity with any financial interest or non-financial interest in the 
+subject matter or materials discussed in this manuscript.
+Author details
+1 Institute of Waste Treatment & Reclamation, Tongji University, Shang-
+hai 200092, P .R. China. 2 Shanghai Institute of Pollution Control and Ecological 
+Security, Shanghai 200092, P .R. China. 
+Received: 24 June 2024   Revised: 7 October 2024   Accepted: 7 October 
+2024
+References
+ASTM (2024) ASTM D6866-24 Standard test methods for determining the 
+biobased content of solid, liquid, and gaseous samples using radiocarbon 
+analysis. American Society of Testing and Materials, West Conshohocken, 
+PA 19428–2959, United States
+ASTM (2016) ASTM D7459–08 Standard practice for collection of integrated 
+samples for the speciation of biomass (biogenic) and fossil-derived 
+carbon dioxide emitted from stationary emissions sources. American 
+Society of Testing and Materials, West Conshohocken, PA 19428–2959, 
+United States
+Bellani G, Lazzarini L, Dal Pozzo A, Moretti S, Zattini M, Cozzani V, Talamelli A 
+(2023) Experimental assessment of an indirect method to measure the 
+post-combustion flue gas flow rate in waste-to-energy plant based on 
+multi-point measurements. Waste Manage 157:91–99. https:// doi. org/ 10. 
+1016/j. wasman. 2022. 12. 004
+Chen SS, Huang JL, Xiao TT, Gao J, Bai JF, Luo W, Dong B (2020) Carbon emis-
+sions under different domestic waste treatment modes induced by gar-
+bage classification: Case study in pilot communities in Shanghai. China Sci 
+Total Environ 717:137193. https:// doi. org/ 10. 1016/j. scito tenv. 2020. 137193
+Chen BY, Perumal P , Illikainen M, Ye G (2023) A review on the utilization of 
+municipal solid waste incineration (MSWI) bottom ash as a mineral 
+resource for construction materials. J Build Eng 71:106386. https:// doi. 
+org/ 10. 1016/j. jobe. 2023. 106386
+China Academy of Environmental Planning (2023) China reginal power grids 
+carbon dioxide emission factors. https:// www. caep. org. cn/ sy/ tdftz hyjzx/ 
+zxdt/ 202310/ t2023 1027_ 10441 79. shtml. Accessed 11 Jan 2024
+China Association of Circular Economy. (2023) The potential for recycling 
+waste textiles is huge. https:// www. china cace. org/ news/ view? id= 14859. 
+Accessed 13 Jan 2024
+Chu X, Fei ZX, Chu ZJ, Huang WC (2024) Decarbonizing the sludge treatment 
+industry: Assessing the feasibility of achieving carbon reduction from 
+carbon peaking to carbon neutrality. J Clean Prod 434:140023. https:// 
+doi. org/ 10. 1016/j. jclep ro. 2023. 140023
+Eggleston S, Buendia L, Miwa K, Tanabe K (2006) 2006 IPCC guidelines for 
+national greenhouse gas inventories. Institute for Global Environmental 
+Strategies (IGES), Japan
+Fei F, Wen ZG, Zhang JY, Xing Y, Zhang HB, Li Y (2024) New multi-source waste 
+co-incineration and clustering park operating model for small- and 
+medium-sized city: A case study in China. J Environ Manage 355:120514. 
+https:// doi. org/ 10. 1016/j. jenvm an. 2024. 120514
+Fellner J, Cencic O, Rechberger H (2007) A new method to determine the ratio 
+of electricity production from fossil and biogenic sources in waste-to-
+energy plants. Environ Sci Technol 41:2579–2586. https:// doi. org/ 10. 
+1021/ es061 7587
+Guo J, He PJ, Liao NL, Zhang H, Xu QY, Zhou XY, Zeng Q, Lü F (2023) Climate 
+change impact of diverse food waste valorization processes beyond 
+anaerobic digestion. ACS Sustainable Chem Eng 11:5656–5664. https:// 
+doi. org/ 10. 1021/ acssu schem eng. 3c001 45
+Han XQ, Chang HZ, Wang C, Tai J, Karellas S, Yan JJ, Song LJ, Bi ZJ (2023) 
+Tracking the life-cycle greenhouse gas emissions of municipal solid 
+waste incineration power plant: A case study in Shanghai. J Clean Prod 
+398:136635. https:// doi. org/ 10. 1016/j. jclep ro. 2023. 136635
+Kang S, Kim S, Lee D, Lee J, Kim KH, Jeon EC (2017) The study on biomass frac-
+tion estimation for waste incinerated in Korea: A case study. Sustainability 
+9:511. https:// doi. org/ 10. 3390/ su904 0511
+Kang S, Kim S, Lee J, Jeon Y, Kim KH, Jeon EC (2017) A study on applying 
+biomass fraction for greenhouse gases emission estimation of a sewage 
+sludge incinerator in Korea: A case study. Sustainability 9:557. https:// doi. 
+org/ 10. 3390/ su904 0557
+Kang S, Cha JH, Hong YJ, Lee D, Kim KH, Jeon EC (2018) Estimation of optimal 
+biomass fraction measuring cycle for municipal solid waste incineration 
+facilities in Korea. Waste Manage 71:176–180. https:// doi. org/ 10. 1016/j. 
+wasman. 2017. 09. 028
+Kang S, Cho SH, Cho C, Jeon EC (2020) Fossil carbon fraction of industrial 
+waste incineration and optimal cycle for measurement. Energy Environ 
+31:1191–1199. https:// doi. org/ 10. 1177/ 09583 05X19 882397
+Kim S, Kang S, Lee J, Lee S, Kim KH, Jeon EC (2016) The comparison of fossil 
+carbon fraction and greenhouse gas emissions through an analysis of 
+exhaust gases from urban solid waste incineration facilities. J Air Waste 
+Manage Assoc 66:978–987. https:// doi. org/ 10. 1080/ 10962 247. 2016. 
+11920 70
+Kourkoumpas DS, Karellas S, Kouloumoundras S, Koufodimos G, Grammelis 
+P , Kakaras E (2015) Comparison of waste-to-energy processes by means 
+of life cycle analysis principles regarding the global warming potential 
+impact: Applied case studies in Greece, France and Germany. Waste 
+Biomass Valor 6:605–621. https:// doi. org/ 10. 1007/ s12649- 015- 9367-2
+Lee YJ, Go YJ, Yoo HN, Choi GG, Lee WS, Shin SK (2021) Measurement and 
+analysis of biomass content using gas emissions from solid refuse fuel 
+incineration. Waste Manage 120:392–399. https:// doi. org/ 10. 1016/j. was-
+man. 2020. 09. 036
+Li YM, Wu XQ, Wang LJ, Li RQ, Huang TY, Wen XQ (2020) Comparative study on 
+utilization of different types of municipal solid waste incineration bottom 
+ash for clinker sintering. J Mater Cycles Waste Manage 22:1828–1843. 
+https:// doi. org/ 10. 1007/ s10163- 020- 01067-6
+Liao NL, Lü F, Zhang H, He PJ (2023) Life cycle assessment of waste manage-
+ment in rural areas in the transition period from mixed collection to 
+source-separation. Waste Manage 158:57–65. https:// doi. org/ 10. 1016/j. 
+wasman. 2023. 01. 008
+Liu YL, Sun WX, Liu JG (2017) Greenhouse gas emissions from different 
+municipal solid waste management scenarios in China: Based on carbon 
+and energy flow analysis. Waste Manage 68:653–661. https:// doi. org/ 10. 
+1016/j. wasman. 2017. 06. 020
+Liu GF, Huang QX, Song K, Pan Y, Zhang H (2024) Improved method for 
+calculating CO2 emission from industrial solid wastes combustion system 
+based on fossil and biogenic carbon fraction. Waste Manage 174:164–
+173. https:// doi. org/ 10. 1016/j. wasman. 2023. 12. 001
+
+--- PDF page 15 ---
+Page 15 of 15
+Ma et al. Carbon Research            (2024) 3:74 
+ 
+Ma YF, He PJ, Lü F, Zhang H (2024) Greenhouse gas emissions and mitigation 
+strategies across the life cycle of municipal solid waste incineration plants 
+in China. ACS Sustainable Chem Eng 12:9268–9278. https:// doi. org/ 10. 
+1021/ acssu schem eng. 4c023 24
+Malakahmad A, Abualqumboz MS, Kutty SRM, Abunama TJ (2017) Assessment 
+of carbon footprint emissions and environmental concerns of solid waste 
+treatment and disposal techniques; case study of Malaysia. Waste Man-
+age 70:282–292. https:// doi. org/ 10. 1016/j. wasman. 2017. 08. 044
+Mohn J, Szidat S, Fellner J, Rechberger H, Quartier R, Buchmann B, Emmeneg-
+ger L (2008) Determination of biogenic and fossil  CO2 emitted by waste 
+incineration based on 14CO2 and mass balances. Bioresour Technol 
+99:6471–6479. https:// doi. org/ 10. 1016/j. biort ech. 2007. 11. 042
+Mohn J, Szidat S, Zeyer K, Emmenegger L (2012) Fossil and biogenic CO2 from 
+waste incineration based on a yearlong radiocarbon study. Waste Man-
+age 32:1516–1520. https:// doi. org/ 10. 1016/j. wasman. 2012. 04. 002
+Palstra SWL, Meijer HAJ (2010) Carbon-14 based determination of the biogenic 
+fraction of industrial CO2 emissions – Application and validation. Biore-
+sour Technol 101:3702–3710. https:// doi. org/ 10. 1016/j. biort ech. 2009. 12. 
+004
+Pérez J, de Andrés JM, Lumbreras J, Rodríguez E (2018) Evaluating carbon foot-
+print of municipal solid waste treatment: Methodological proposal and 
+application to a case study. J Clean Prod 205:419–431. https:// doi. org/ 10. 
+1016/j. jclep ro. 2018. 09. 103
+Pfadt-Trilling AR, Volk TA, Fortier MOP (2021) Climate change impacts of 
+electricity generated at a waste-to-energy facility. Environ Sci Technol 
+55:1436–1445. https:// doi. org/ 10. 1021/ acs. est. 0c034 77
+Sabbas T, Polettini A, Pomi R, Astrup T, Hjelmar O, Mostbauer P , Cappai G, 
+Magel G, Salhofer S, Speiser C, Heuss-Assbichler S, Klein R, Lechner P 
+(2003) Management of municipal solid waste incineration residues. Waste 
+Manage 23:61–88. https:// doi. org/ 10. 1016/ S0956- 053X(02) 00161-7
+Schwarzböck T, Rechberger H, Cencic O, Fellner J (2016) Determining national 
+greenhouse gas emissions from waste-to-energy using the Balance 
+Method. Waste Manage 49:263–271. https:// doi. org/ 10. 1016/j. wasman. 
+2016. 01. 025
+Shen MC, Huang W, Chen M, Song B, Zeng G-M, Zhang Y-X (2020) (Micro)plas-
+tic crisis: Un-ignorable contribution to global greenhouse gas emissions 
+and climate change. J Clean Prod 254:120138. https:// doi. org/ 10. 1016/j. 
+jclep ro. 2020. 120138
+Shen PL, Zheng HB, Lu JX, Poon CS (2021) Utilization of municipal solid waste 
+incineration bottom ash (IBA) aggregates in high-strength pervious 
+concrete. Resour, Conserv Recycl 174:105736. https:// doi. org/ 10. 1016/j. 
+resco nrec. 2021. 105736
+Shi ZC, He PJ, Guo J, Zou JL, Peng W, Zhang H, Lü F (2024) Carbon reduction 
+trade-off between pretreatment and anaerobic digestion: A field study of 
+an industrial-scale biogas plant. Environ Res 246:118139. https:// doi. org/ 
+10. 1016/j. envres. 2024. 118139
+Tang P , Florea MVA, Spiesz P , Brouwers HJH (2015) Characteristics and applica-
+tion potential of municipal solid waste incineration (MSWI) bottom ashes 
+from two waste-to-energy plants. Constr Build Mater 83:77–94. https:// 
+doi. org/ 10. 1016/j. conbu ildmat. 2015. 02. 033
+Wang Y, Yan YY, Chen GY, Zuo J, Yan BB, Yin PH (2017) Effectiveness of waste-
+to-energy approaches in China: from the perspective of greenhouse gas 
+emission reduction. J Clean Prod 163:99–105. https:// doi. org/ 10. 1016/j. 
+jclep ro. 2015. 09. 060
+Wang YC, Luo ZY, Tang YX, Wang QH, Yu CJ, Yang XD, Chen QY (2022) Establish-
+ment and verification of a metering scheme for biomass-coal blending 
+ratios based on 14C determination. Fuel 327:125198. https:// doi. org/ 10. 
+1016/j. fuel. 2022. 125198
+Wu FC, Li FB, Zhao XL, Bolan NS, Fu PQ, Lam SS, Mašek O, Ong HC, Pan B, Qiu 
+XQ, Rinklebe J, Tsang DCW, Van Zwieten L, Vithanage M, Wang S, Xing 
+B, Zhang G, Wang HL (2022) Meet the challenges in the “Carbon Age.” 
+Carbon Res 1:1. https:// doi. org/ 10. 1007/ s44246- 022- 00001-9
+Xiao W, Liu T, Tong X (2023) Assessing the carbon reduction potential of 
+municipal solid waste management transition: Effects of incinera-
+tion, technology and sorting in Chinese cities. Resour, Conserv Recycl 
+188:106713. https:// doi. org/ 10. 1016/j. resco nrec. 2022. 106713
+Yao XL, Guo Z, Liu Y, Li JY, Feng W, Lei HT, Gao YT (2019) Reduction potential 
+of GHG emissions from municipal solid waste incineration for power 
+generation in Beijing. J Clean Prod 241:118283. https:// doi. org/ 10. 1016/j. 
+jclep ro. 2019. 118283
+Ying YX, Ma YF, Wang XX, Yu H, Wu AJ, Lu SY, Li XD, Lin XQ, Liu LJ, Yin WH (2023) 
+Emission, partition, and formation pathway of polychlorinated dibenzo-
+p-dioxins and dibenzofurans during co-disposal of industrial waste with 
+municipal solid waste. J Environ Chem Eng 11:109242. https:// doi. org/ 10. 
+1016/j. jece. 2022. 109242
+Zhang K, Cui JC, Zhou YX, Chen AY, Ouyang C, Palocz Andresen M, Lou ZY 
+(2023) GHG emissions reduction patterns from waste sectors after forced 
+source separation. Process Saf Environ Prot 180:443–450. https:// doi. org/ 
+10. 1016/j. psep. 2023. 10. 006
+Zhao HL, Wang L, Liu F, Liu HQ, Zhang N, Zhu YW (2021) Energy, environment 
+and economy assessment of medical waste disposal technologies in 
+China. Sci Total Environ 796:148964. https:// doi. org/ 10. 1016/j. scito tenv. 
+2021. 148964
+Zhao Y, Chang HM, Liu X, Bisinella V, Christensen TH (2022) Climate change 
+impact of the development in household waste management in China. 
+Environ Sci Technol 56:8993–9002. https:// doi. org/ 10. 1021/ acs. est. 1c079 21
+Publisher’s Note
+Springer Nature remains neutral with regard to jurisdictional claims in pub-
+lished maps and institutional affiliations.

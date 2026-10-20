@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="publishid" content="134136821.11.1002.0"/><meta name="pageid" content="11200.1157.0.0.1117575.0.0.0.0.0.11247.134136821"/>
+<meta name="SiteName" content="国家能源局" />
+<meta name="SiteDomain" content="www.nea.gov.cn" />
+<meta name="SiteIDCode" content="bm62000002号" />
+<meta name="ArticleTitle" content="关于改善电力运行调节促进清洁能源多发满发的指导意见" />
+<meta name="PubDate" content="2015-04-09 12:35:59" />
+<meta name="ContentSource" content="发展改革委网站" />
+<meta name="description" content="国家能源网" />
+<meta name="keywords" content="国家能源网" />
+<script src="http://www.xinhuanet.com/global/js/pageCore.js"></script>
+<title>
+关于改善电力运行调节促进清洁能源多发满发的指导意见---国家能源局
+</title>
+<link href="http://www.nea.gov.cn/static/default/css/public/master_nyj_v1.0.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/static/default/css/article.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/2015nyj/xinban/topbase.css" rel="stylesheet" />
+<script src="http://www.nea.gov.cn/static/default/js/public/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script language="javascript">
+$(document).ready(function(){　
+
+var lefttmp = new Image();
+lefttmp.src= "http://www.xinhuanet.com/photo/static/arr_left.cur";
+var righttmp = new Image();
+righttmp.src= "http://www.xinhuanet.com/photo/static/arr_right.cur";
+leng = $("a",$("#div_currpage")).length;
+	
+if(leng!=0)
+//curr里有a标签==稿件不止一页
+	{
+
+		//看一共有多少个a标签
+		leng = leng -1;
+		var nextLin  = $("a",$("#div_currpage"))[leng].href;//对于多页的情况，取得下一页的地址
+		var oneword = location.href+"#";
+		if(nextLin==oneword)
+		{
+		leng = leng -1;
+		nextLin  = $("a",$("#div_currpage"))[leng].href;
+		}
+		var currurl = location.href;//当前页链接地址<meta http-equiv="expires" content="Sunday 26 October 2011 01:00 GMT" /> 
+				
+		var underpd = currurl.substring(currurl.indexOf("c_")+2,currurl.indexOf(".htm"));	
+		if (underpd.indexOf("_")==-1)
+			{
+
+			prevLink = location.href;//如果是文章首页，则左键仍是替换到本页面
+			nextLink = $("a",$("#div_currpage"))[0].href;      //下一页的赋值
+			setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+		}
+
+	else
+		//是末页，http://news.xinhuanet.com/photo/2011-08/06/c_121822530.htm
+		{
+			//当前页分页号判断
+			var currnum = currurl.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlineindex = currurl.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			//下一页的分页号
+			var nextnum = nextLin.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlinenext = nextLin.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			var undernum = nextLin.substr(nextLin.indexOf("c_")).split("_").length-1;
+			
+			var temp = currurl.substring(underlineindex,currnum);//当前页的分页号
+			var nexttemp = 	nextLin.substring(underlinenext,nextnum);//最后a标签的分页号
+			var boolx = parseInt(temp,10)>parseInt(nexttemp,10);
+			
+			if((boolx)||(undernum==1))//末页
+
+					{
+					
+						if($("img",$("a",$("#content"))).length==0)//没有带链接的图片
+			
+							{
+								prevLink = nextLin;
+									if(undernum==1)
+									{
+										nextLink = nextLin;
+									}
+									else
+									{
+										nextLink = prevLink.substr(0,(prevLink.lastIndexOf("_")))+".htm";
+									}
+								setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+							}
+			
+						else//末页正文图片有链接
+							{
+								prevLink = nextLin;
+								nextLink = $("a",$("#content"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							}
+
+					}
+
+				else//不是末页
+					{
+
+							prevLink = $("a",$("#div_currpage"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							nextLink = nextLin;//把正文最后一个带链接的链接地址赋给下一页
+					}
+
+		}
+	}
+else
+//只有一页
+	{
+		prevLink = location.href;
+		nextLink = location.href;
+	}
+
+document.onkeydown = pageEvent;
+  function pageEvent(evt) {
+    evt = evt || window.event;
+    var key = evt.which || evt.keyCode;
+    if (key == 37) location = prevLink;
+    if (key == 39) location = nextLink;
+  };
+		
+		var lefturl		= prevLink;
+		var righturl	= nextLink;
+		var imgurl		= righturl;
+
+			$("#content img").each(function(){ 
+				var width = $(this).width();
+				var thisImage=$(this); 
+				//alert("01");
+				$(thisImage)[0].onmousemove=function(){
+					
+					if(event.offsetX<width/2){
+					
+						this.style.cursor	= 'url('+lefttmp.src+'),auto';
+						imgurl				= lefturl;
+					}
+					
+					else{
+					
+						this.style.cursor	= 'url('+righttmp.src+'),auto';
+						imgurl				= righturl;
+					}
+					
+	                                                }
+	               
+				$(thisImage)[0].onmouseup=function(){
+					top.location=imgurl;
+	
+				}   
+             });
+　　　　
+　　	});
+</script>
+</head>
+<body>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/topnav.js" type="text/javascript"></script>
+<div class="main-colum">
+<div class="now-site">您当前位置：<a href="http://www.nea.gov.cn/" target="_blank">首页</a> > 正文</div>
+<div class="channel-page">
+<div class="article-title">
+<div class="hr_10"></div>
+<div class="titles">
+关于改善电力运行调节促进清洁能源多发满发的指导意见
+</div>
+<div class="hr_10"></div>
+<span class="times">
+发布时间：2015-04-09
+</span>
+<span class="author">
+来源：发展改革委网站
+</span>
+<span class="switchsize"><b class="bigger">大</b><b class="medium">中</b><b class="smaller">小</b></span>
+<div class="arrow"></div>
+</div>
+<div class="article-box">
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="article-content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" valign="top">
+<p style="TEXT-ALIGN: center" align="center"><strong><font style="FONT-SIZE: 16pt" size="1">国家发展改革委 国家能源局 </font></strong></p>
+<p style="TEXT-ALIGN: center" align="center"><strong><font style="FONT-SIZE: 16pt" size="1">关于改善电力运行调节促进清洁能源多发满发的指导意见</font></strong></p>
+<p style="TEXT-ALIGN: center" align="center"><font face="楷体">发改运行[2015]518号</font></p>
+<p>北京市、河北省、江西省、河南省、陕西省、西藏自治区发展改革委，各省、自治区、直辖市经信委（工信委、工信厅、经贸委、经委），国家能源局派出机构，中国电力企业联合会，国家电网公司、中国南方电网有限责任公司，中国华能集团公司、中国大唐集团公司、中国华电集团公司、中国国电集团公司、中国电力投资集团公司、中国长江三峡集团公司、神华集团有限责任公司、国家开发投资公司：</p>
+<p>    为贯彻中央财经领导小组第六次会议和国家能源委员会第一次会议部署，落实《中共中央、国务院关于进一步深化电力体制改革的若干意见》（中发[2015]9号）有关要求，现就改善电力运行调节，促进清洁能源持续健康发展，提出以下指导意见：</p>
+<p>    <strong>一、统筹年度电力电量平衡，积极促进清洁能源消纳</strong></p>
+<p>    （一）各省（区、市）政府主管部门组织编制本地区年度电力电量平衡方案时，应采取措施落实可再生能源发电全额保障性收购制度，在保障电网安全稳定的前提下，全额安排可再生能源发电。</p>
+<p>    （二）在编制年度发电计划时，优先预留水电、风电、光伏发电等清洁能源机组发电空间；鼓励清洁能源发电参与市场，对于已通过直接交易等市场化方式确定的电量，可从发电计划中扣除。对于同一地区同类清洁能源的不同生产主体，在预留空间上应公平公正。风电、光伏发电、生物质发电按照本地区资源条件全额安排发电；水电兼顾资源条件和历史均值确定发电量；核电在保证安全的情况下兼顾调峰需要安排发电；气电根据供热、调峰及平衡需要确定发电量。煤电机组进一步加大差别电量计划力度，确保高效节能环保机组的利用小时数明显高于其他煤电机组，并可在一定期限内增加大气污染物排放浓度接近或达到燃气轮机组排放限值的燃煤发电机组利用小时数。</p>
+<p>    （三）各省（区、市）政府主管部门在统筹平衡年度电力电量时，新增用电需求原则上优先用于安排清洁能源发电和消纳区外清洁能源，以及奖励为保障清洁能源多发满发而调峰的煤电机组发电。</p>
+<p>    （四）能源资源丰富地区、清洁能源装机比重较大地区在统筹平衡年度电力电量时，新增用电需求如无法满足清洁能源多发满发，应采取市场化方式，鼓励清洁能源优先与用户直接交易，充分挖掘本地区用电潜力，最大限度消纳清洁能源。</p>
+<p>    （五）京津冀、长三角、珠三角以及清洁能源比重较小地区在统筹平衡年度电力电量时，新增用电需求优先满足清洁能源消纳，明确接受外输电中清洁能源的比例并逐步提高，促进大气环境质量改善。</p>
+<p>    （六）政府主管部门在组织国家电网公司、南方电网公司制定年度跨省区送受电计划时，应切实贯彻国家能源战略和政策，充分利用现有输电通道，增加电网调度灵活性，统筹考虑配套电源和清洁能源，优先安排清洁能源送出并明确送电比例，提高输电的稳定性和安全性。对于同一地区内同类清洁能源的不同生产主体，在送出安排计划上应公平公正。</p>
+<p>    （七）跨省区送受电各方应统筹电力供需、输电通道能力，充分自主协商确定年度送受电计划，尽可能增加清洁能源送出与消纳，全力避免弃水、弃风、弃光。经协商无法达成一致意见的，由国家发展改革委协调确定，协调结果抄送国家能源局。</p>
+<p>    （八）国家发展改革委会同各省（区、市）政府主管部门、电力企业，按照简政放权和规范行政审批事项的要求，健全省级发供电计划和跨省区发供电计划协商机制。省级年度发电计划、跨省区送受电计划在每年一季度前报国家发展改革委备案。经备案的年度发电计划、跨省区送受电计划纳入各省（区、市）电力电量平衡，电网企业负责组织实施。</p>
+<p>    <strong>二、加强日常运行调节，充分运用利益补偿机制为清洁能源开拓市场空间</strong></p>
+<p>    （九）各省（区、市）政府主管部门在确定年度发电计划和跨省区送受电计划后，电力企业应据此协商签订购售电合同，并通过替代发电（发电权交易）、辅助服务等市场机制，实现不同类型电源的利益调节，促进清洁能源多发满发。具备条件的地区，可跨省区实施。</p>
+<p>    （十）各地应建立完善调峰补偿机制，加大调峰补偿力度，鼓励通过市场化方式确定调峰承担方，鼓励清洁能源直接购买辅助服务。对于煤电机组为避免弃水、弃风、弃光而进行的深度调峰或机组启停，应通过增加发电量等方式进行奖励，所需电量在年度电量计划安排中统筹考虑，年终结清。</p>
+<p>    （十一）可再生能源消纳困难的地区，可通过市场化的经济补偿机制激励煤电机组调峰。调峰深度没有达到平均调峰率的，不予补偿；调峰深度超过平均调峰率的，予以递进补偿；实施启停调峰的，予以一次性补偿。补偿所需费用由受益的可再生能源和煤电机组根据程度进行相应分摊。补偿与分摊费用应保持平衡。</p>
+<p>    （十二）水电装机比重较大地区应研究制定水火发电互济机制。在明确煤电机组最小开机方式的前提下，组织水电机组、煤电机组进行替代发电，对为保障水电多发满发而减发的煤电机组进行补偿。如产生电网增收，应主要用于煤电机组补偿。并可尝试通过梯级电站流域补偿、冷备用补偿、股权置换等方式实现不同发电主体间的利益调节。</p>
+<p>    （十三）各省（区、市）政府主管部门应会同相应能源监管机构，结合运行经验和供需形势，重新核定煤电机组（含热电）的最小技术出力和开机方式，不断研究探索水电、风电、光伏发电与煤电（含热电）等联合运行和优化运行。</p>
+<p>    （十四）健全跨省区送受电利益调节机制。跨省区送受电协议已由国家协调明确价格的应遵照执行，市场机制比较完善的也可由送受电双方根据实际运行情况，按照风险共担、利益共享原则全部或部分重新协商确定，并将协商结果报送国家发展改革委和国家能源局；国家未明确价格的，由送受电双方协商确定送电价格和电量。</p>
+<p>    （十五）各省（区、市）政府主管部门应和有关部门定期公布发电运行考核结果，及时公开发布电网运行信息和机组调峰参数等信息。能源监管机构应按月向省（区、市）政府有关部门通报辅助服务管理和并网运行管理数据。</p>
+<p>    <strong>三、加强电力需求侧管理，通过移峰填谷为清洁能源多发满发创造有利条件</strong></p>
+<p>    （十六）各省（区、市）政府主管部门应加强电力需求侧管理，鼓励电力用户优化用电负荷特性、参与调峰调频，加大峰谷电价差，用价格手段引导移峰填谷，缓解发电侧调峰压力，促进多消纳清洁能源。</p>
+<p>    （十七）各省（区、市）政府主管部门要加快电力需求侧管理平台开发建设，推广在线监测，帮助用户实现用电精细化，为减少电网峰谷差提供技术支持。</p>
+<p>    （十八）各省（区、市）政府主管部门要积极尝试开展需求响应试点，以在线监测和互联网技术为支撑，综合运用补贴政策、价格政策等，对在高峰时段主动削减负荷的用户给予经济补偿，或通过与清洁能源开展直接交易给予补偿。</p>
+<p>    （十九）各省（区、市）政府主管部门应研究完善配套政策，创新工作思路，督促电网企业落实分布式发电并网政策，促使电网企业多吸纳分布式发电。</p>
+<p>    （二十）鼓励有条件的地区推广热电机组蓄热技术，开展低谷电力供热试点。</p>
+<p>    <strong>四、加强相互配合和监督管理，确保清洁能源多发满发政策落到实处</strong></p>
+<p>    （二十一）清洁能源发电企业应满足并网技术要求，提高出力预测精度，加强生产运行管理，提升电能质量，减轻电网稳定运行的压力。</p>
+<p>    （二十二）电网企业应统一负责清洁能源发电出力预测，科学安排机组组合，充分挖掘系统调峰潜力，合理调整旋转备用容量，在保证电网安全运行的前提下，促进清洁能源优先上网，落实可再生能源全额保障性收购；加快点对网输电线路改造，提升吸纳可再生能源能力。有条件的电网，可以开展清洁能源优先调度试点，即以最大限度消纳清洁能源上网电量为目标，联合优化调度，灵活安排运行备用容量。</p>
+<p>    （二十三）电网企业应加强清洁能源富集地区送电通道的建设，发展智能电网技术，改善清洁能源并网条件，扩大资源配置范围。</p>
+<p>    （二十四）各省（区、市）政府主管部门应会同相应能源监管机构，加强对电力调度、发电运行和年度发电计划实施的监督，定期组织通报电力运行信息，协调清洁能源并网及运行矛盾，切实保障清洁能源多发满发。</p>
+<p>    （二十五）能源监管机构要对可再生能源全额上网情况进行监管，对未能全额上网的，应查明原因，理清责任，督促相关方限期改正。</p>
+<p> </p>
+<p style="TEXT-ALIGN: center" align="center">国家发展改革委</p>
+<p style="TEXT-ALIGN: center" align="center">国 家 能 源 局</p>
+<p style="TEXT-ALIGN: center" align="center">2015年3月20日</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="back-top"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+</div>
+<div class="article-other">
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+
+<div class="clear"></div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+</div>
+</div>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/bottom.js" type="text/javascript"></script>
+<script src="http://www.nea.gov.cn/static/default/js/public/article-font.js" type="text/javascript"></script>
+</body>
+</html>

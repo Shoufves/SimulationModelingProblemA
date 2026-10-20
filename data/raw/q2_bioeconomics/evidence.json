@@ -1,0 +1,130 @@
+{
+  "status": "research_only; company/project samples, not national estimates",
+  "agroforestry": {
+    "fuel_purchase_cny_per_t": [
+      {
+        "period": "2016",
+        "value": 245.69
+      },
+      {
+        "period": "2017",
+        "value": 284.43
+      },
+      {
+        "period": "2018",
+        "value": 311.39
+      },
+      {
+        "period": "2019H1",
+        "value": 291.29
+      }
+    ],
+    "fuel_locator": "changqing_2020_prospectus PDF/printed p124; VAT basis not expressly labelled in table",
+    "ningan_heat": [
+      {
+        "period": "2016",
+        "heat_gj": 41023.33,
+        "revenue_cny": 1089100.0,
+        "derived_cny_per_gj": 26.548307999374988
+      },
+      {
+        "period": "2017",
+        "heat_gj": 182268.2,
+        "revenue_cny": 4877900.0,
+        "derived_cny_per_gj": 26.76221085192041
+      },
+      {
+        "period": "2018",
+        "heat_gj": 205262.48,
+        "revenue_cny": 5571100.0,
+        "derived_cny_per_gj": 27.141346046291556
+      },
+      {
+        "period": "2019H1",
+        "heat_gj": 127495.53,
+        "revenue_cny": 3480500.0,
+        "derived_cny_per_gj": 27.29899628637961
+      }
+    ],
+    "heat_locator": "changqing_2020_prospectus PDF/printed p120; Ningan 30MW only",
+    "capex_projects": [
+      {
+        "name": "铁岭",
+        "mw": 35,
+        "total_cny": 395560000,
+        "idc_cny": 14290000,
+        "initial_working_capital_cny": 44700000,
+        "derived_total_cny_per_kw": 11301.714285714286,
+        "derived_ex_idc_and_working_capital_cny_per_kw": 9616.285714285714,
+        "locator": "changqing_2020_prospectus PDF/printed pp257–258"
+      },
+      {
+        "name": "永城",
+        "mw": 35,
+        "total_cny": 392020000,
+        "idc_cny": 13980000,
+        "initial_working_capital_cny": 48910000,
+        "derived_total_cny_per_kw": 11200.57142857143,
+        "derived_ex_idc_and_working_capital_cny_per_kw": 9403.714285714286,
+        "locator": "changqing_2020_prospectus PDF/printed pp261–262"
+      }
+    ]
+  },
+  "msw": {
+    "treatment_service_fee_cny_per_t": [
+      50,
+      105
+    ],
+    "service_fee_scope": "Sanfeng operating projects at end-2022; contract price, monthly/quarterly settlement with local government; VAT not expressly stated",
+    "service_fee_locator": "sanfeng_2023_bond PDF p112 / printed p111",
+    "electricity": [
+      {
+        "year": 2020,
+        "gross_kwh": 3237703200.0,
+        "export_kwh": 2849855000.0,
+        "reported_gross_kwh_per_t": 394.79,
+        "derived_export_fraction": 0.8802088468146184,
+        "conditional_export_kwh_per_same_t": 347.49765063394324
+      },
+      {
+        "year": 2021,
+        "gross_kwh": 4194668000.0,
+        "export_kwh": 3679855600.0,
+        "reported_gross_kwh_per_t": 408.52,
+        "derived_export_fraction": 0.8772698101494564,
+        "conditional_export_kwh_per_same_t": 358.3822628422559
+      },
+      {
+        "year": 2022,
+        "gross_kwh": 5024229000.0,
+        "export_kwh": 4405066000.0,
+        "reported_gross_kwh_per_t": 422.06,
+        "derived_export_fraction": 0.8767645742262146,
+        "conditional_export_kwh_per_same_t": 370.0472561979161
+      }
+    ],
+    "electricity_locator": "sanfeng_2023_bond PDF p111 / printed p110; excludes heat-only project in per-tonne statement (PDF p114)",
+    "warning": "Do not reconstruct a paired per-tonne factor from all-company reception or furnace tonnes: their scopes differ from the reported generation-intensity denominator.",
+    "capex_projects": [
+      {
+        "name": "重庆洛碛",
+        "total_cny": 2008036400.0000002,
+        "additional_t_per_day": 3000,
+        "derived_cny_per_t_day": 669345.4666666668
+      },
+      {
+        "name": "汕尾二期",
+        "total_cny": 560000000,
+        "additional_t_per_day": 1400,
+        "derived_cny_per_t_day": 400000.0
+      },
+      {
+        "name": "东营二期",
+        "total_cny": 239860300.0,
+        "additional_t_per_day": 600,
+        "derived_cny_per_t_day": 399767.1666666667
+      }
+    ],
+    "capex_locator": "sanfeng_2020_ipo_summary PDF p114 / printed p113; project total investment, not just equity or raised funds"
+  }
+}

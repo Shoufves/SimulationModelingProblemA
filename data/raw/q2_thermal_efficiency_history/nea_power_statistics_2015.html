@@ -1,0 +1,624 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="publishid" content="135013789.11.3.0"/><meta name="pageid" content="11200.1157.0.0.1117575.0.0.0.0.0.11247.135013789"/>
+<meta name="SiteName" content="国家能源局" />
+<meta name="SiteDomain" content="www.nea.gov.cn" />
+<meta name="SiteIDCode" content="bm62000002号" />
+<meta name="ArticleTitle" content="国家能源局发布2015年全社会用电量" />
+<meta name="PubDate" content="2016-01-15 20:26:37" />
+<meta name="ContentSource" content="国家能源局" />
+<meta name="description" content="国家能源网" />
+<meta name="keywords" content="国家能源网" />
+<script src="http://www.xinhuanet.com/global/js/pageCore.js"></script>
+<title>
+国家能源局发布2015年全社会用电量---国家能源局
+</title>
+<link href="http://www.nea.gov.cn/static/default/css/public/master_nyj_v1.0.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/static/default/css/article.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/2015nyj/xinban/topbase.css" rel="stylesheet" />
+<script src="http://www.nea.gov.cn/static/default/js/public/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script language="javascript">
+$(document).ready(function(){　
+
+var lefttmp = new Image();
+lefttmp.src= "http://www.xinhuanet.com/photo/static/arr_left.cur";
+var righttmp = new Image();
+righttmp.src= "http://www.xinhuanet.com/photo/static/arr_right.cur";
+leng = $("a",$("#div_currpage")).length;
+	
+if(leng!=0)
+//curr里有a标签==稿件不止一页
+	{
+
+		//看一共有多少个a标签
+		leng = leng -1;
+		var nextLin  = $("a",$("#div_currpage"))[leng].href;//对于多页的情况，取得下一页的地址
+		var oneword = location.href+"#";
+		if(nextLin==oneword)
+		{
+		leng = leng -1;
+		nextLin  = $("a",$("#div_currpage"))[leng].href;
+		}
+		var currurl = location.href;//当前页链接地址<meta http-equiv="expires" content="Sunday 26 October 2011 01:00 GMT" /> 
+				
+		var underpd = currurl.substring(currurl.indexOf("c_")+2,currurl.indexOf(".htm"));	
+		if (underpd.indexOf("_")==-1)
+			{
+
+			prevLink = location.href;//如果是文章首页，则左键仍是替换到本页面
+			nextLink = $("a",$("#div_currpage"))[0].href;      //下一页的赋值
+			setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+		}
+
+	else
+		//是末页，http://news.xinhuanet.com/photo/2011-08/06/c_121822530.htm
+		{
+			//当前页分页号判断
+			var currnum = currurl.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlineindex = currurl.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			//下一页的分页号
+			var nextnum = nextLin.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlinenext = nextLin.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			var undernum = nextLin.substr(nextLin.indexOf("c_")).split("_").length-1;
+			
+			var temp = currurl.substring(underlineindex,currnum);//当前页的分页号
+			var nexttemp = 	nextLin.substring(underlinenext,nextnum);//最后a标签的分页号
+			var boolx = parseInt(temp,10)>parseInt(nexttemp,10);
+			
+			if((boolx)||(undernum==1))//末页
+
+					{
+					
+						if($("img",$("a",$("#content"))).length==0)//没有带链接的图片
+			
+							{
+								prevLink = nextLin;
+									if(undernum==1)
+									{
+										nextLink = nextLin;
+									}
+									else
+									{
+										nextLink = prevLink.substr(0,(prevLink.lastIndexOf("_")))+".htm";
+									}
+								setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+							}
+			
+						else//末页正文图片有链接
+							{
+								prevLink = nextLin;
+								nextLink = $("a",$("#content"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							}
+
+					}
+
+				else//不是末页
+					{
+
+							prevLink = $("a",$("#div_currpage"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							nextLink = nextLin;//把正文最后一个带链接的链接地址赋给下一页
+					}
+
+		}
+	}
+else
+//只有一页
+	{
+		prevLink = location.href;
+		nextLink = location.href;
+	}
+
+document.onkeydown = pageEvent;
+  function pageEvent(evt) {
+    evt = evt || window.event;
+    var key = evt.which || evt.keyCode;
+    if (key == 37) location = prevLink;
+    if (key == 39) location = nextLink;
+  };
+		
+		var lefturl		= prevLink;
+		var righturl	= nextLink;
+		var imgurl		= righturl;
+
+			$("#content img").each(function(){ 
+				var width = $(this).width();
+				var thisImage=$(this); 
+				//alert("01");
+				$(thisImage)[0].onmousemove=function(){
+					
+					if(event.offsetX<width/2){
+					
+						this.style.cursor	= 'url('+lefttmp.src+'),auto';
+						imgurl				= lefturl;
+					}
+					
+					else{
+					
+						this.style.cursor	= 'url('+righttmp.src+'),auto';
+						imgurl				= righturl;
+					}
+					
+	                                                }
+	               
+				$(thisImage)[0].onmouseup=function(){
+					top.location=imgurl;
+	
+				}   
+             });
+　　　　
+　　	});
+</script>
+</head>
+<body>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/topnav.js" type="text/javascript"></script>
+<div class="main-colum">
+<div class="now-site">您当前位置：<a href="http://www.nea.gov.cn/" target="_blank">首页</a> > 正文</div>
+<div class="channel-page">
+<div class="article-title">
+<div class="hr_10"></div>
+<div class="titles">
+国家能源局发布2015年全社会用电量
+</div>
+<div class="hr_10"></div>
+<span class="times">
+发布时间：2016-01-15
+</span>
+<span class="author">
+来源：国家能源局
+</span>
+<span class="switchsize"><b class="bigger">大</b><b class="medium">中</b><b class="smaller">小</b></span>
+<div class="arrow"></div>
+</div>
+<div class="article-box">
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="article-content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" valign="top">
+<p>    1月15日，国家能源局发布2015年全社会用电量等数据。</p>
+<p>    2015年，全社会用电量55500亿千瓦时，同比增长0.5%。分产业看，第一产业用电量1020亿千瓦时，同比增长2.5%；第二产业用电量40046亿千瓦时，同比下降1.4%；第三产业用电量7158亿千瓦时，同比增长7.5%；城乡居民生活用电量7276亿千瓦时，同比增长5.0%。</p>
+<p>    2015年，全国6000千瓦及以上电厂发电设备累计平均利用小时为3969小时，同比减少349小时。其中，水电设备平均利用小时为3621小时，同比减少48小时；火电设备平均利用小时为4329小时，同比减少410小时。</p>
+<p>    2015年，全国电源新增生产能力（正式投产）12974万千瓦，其中，水电1608万千瓦，火电6400万千瓦。</p>
+<p><span>    附表：</span></p>
+<p style="TEXT-ALIGN: center" align="center">
+<table style="WIDTH: 419.15pt; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 4.45pt" border="1" cellspacing="0" cellpadding="0" width="559">
+<tbody>
+<tr style="HEIGHT: 30.75pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 419.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 30.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none; PADDING-TOP: 0cm" width="559" colspan="4" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><b><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 14pt">全国电力工业统计数据<span></span></span></b></p>
+</td>
+</tr>
+<tr style="HEIGHT: 15.95pt">
+<td style="BORDER-BOTTOM: black 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.95pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" rowspan="2" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><b><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">指</span></b><b><span style="COLOR: black; FONT-SIZE: 10pt"><span>  </span></span></b><b><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">标</span></b><b><span style="COLOR: black; FONT-SIZE: 10pt"><span>  </span></span></b><b><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">名</span></b><b><span style="COLOR: black; FONT-SIZE: 10pt"><span>  </span></span></b><b><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">称<span></span></span></b></p>
+</td>
+<td style="BORDER-BOTTOM: black 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.95pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" rowspan="2" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><b><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">计算单位<span></span></span></b></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 4cm; PADDING-RIGHT: 5.4pt; HEIGHT: 15.95pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0cm" width="151" colspan="2" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><b><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">全年累计<span></span></span></b></p>
+</td>
+</tr>
+<tr style="HEIGHT: 15.95pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 15.95pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><b><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">绝对量<span></span></span></b></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 15.95pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><b><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 9pt">增长率(<span>%)</span><span></span></span></b></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">全国全社会用电量<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿千瓦时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">55500 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">0.5</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center; TEXT-INDENT: 20pt" align="left"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">其中：第一产业用电量<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿千瓦时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">1020 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">2.5</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt"><span>     </span><span>     </span></span><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">第二产业用电量<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿千瓦时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">40046 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">-1.4</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt"><span>         </span><span>     </span></span><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">工业用电量<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿千瓦时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">39348 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">-1.4 </span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt"><span>                  </span></span><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">轻工业用电量<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿千瓦时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">6729 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">1.3</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt"><span>                  </span></span><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">重工业用电量<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿千瓦时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">32620 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">-1.9</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt"><span>     </span><span>     </span></span><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">第三产业用电量<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿千瓦时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">7158 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">7.5</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt"><span>     </span><span>     </span></span><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">城乡居民生活用电量<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿千瓦时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">7276 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">5.0 </span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">全口径发电设备容量<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">万千瓦<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">150673 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">10.4</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt"><span>    </span></span><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">其中：水 电<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">万千瓦<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">31937 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">4.9</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt"><span>        </span><span> </span><span> </span></span><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">火 电<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">万千瓦<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">99021 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">7.8</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt"><span>        </span><span> </span><span> </span></span><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">核 电<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">万千瓦<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">2608</span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">29.9</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">6000</span><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">千瓦及以上电厂供电标准煤耗<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">克<span>/</span>千瓦时</span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">315 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">-4.0 </span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">全国线路损失率<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">％<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">6.6 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">0.0</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">6000</span><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">千瓦及以上电厂发电设备利用小时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">小时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">3969 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">-349</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt"><span>    </span></span><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">其中：水电<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">小时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">3621 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">-48</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt"><span>          </span></span><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">火电<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">小时<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">4329 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">-410</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">电源基本建设投资完成额<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿元<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">4091 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">11.0 </span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt"><span>    </span></span><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">其中：水电<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿元<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">782 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">-17.0</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt"><span>         </span><span> </span></span><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">火电<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿元<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">1396 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">22.0 </span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt"><span>         </span><span> </span></span><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">核电<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿元<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">560 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">5.2</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">电网基本建设投资完成额<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">亿元<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">4603 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">11.7 </span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">发电新增设备容量<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">万千瓦<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">12974 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">24.2</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt"><span>    </span></span><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">其中：水电<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">万千瓦<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">1608 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">-26.2</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt"><span>        </span><span> </span><span> </span></span><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">火电<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">万千瓦<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">6400 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">33.6</span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">新增<span>220</span>千伏及以上变电设备容量</span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">万千伏安<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">21785</span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">-2.6 </span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 17.4pt">
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 227.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="304" nowrap="">
+<p style="TEXT-ALIGN: center" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">新增<span>220</span>千伏及以上输电线路回路长度</span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 78pt; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="104" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">千米<span></span></span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">33152 </span></p>
+</td>
+<td style="BORDER-BOTTOM: windowtext 1pt solid; TEXT-ALIGN: center; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 2cm; PADDING-RIGHT: 5.4pt; HEIGHT: 17.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" width="76" nowrap="">
+<p style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: 黑体; FONT-SIZE: 10pt">-7.8 </span></p>
+</td>
+</tr>
+<tr style="HEIGHT: 15.95pt">
+<td style="TEXT-ALIGN: center; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 419.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.95pt; PADDING-TOP: 0cm" valign="bottom" width="559" colspan="4" nowrap="">
+<p style="TEXT-ALIGN: left" align="left"><span style="FONT-FAMILY: 黑体; COLOR: black; FONT-SIZE: 10pt">注：全社会用电量指标是全口径数据，电源、电网基本建设投资为纳入行业统计的大型电力企业完成数。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p><span> </span></p>
+<p> </p>
+</td>
+</tr>
+</table>
+</div>
+<div class="back-top"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+</div>
+<div class="article-other">
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+
+<div class="clear"></div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+</div>
+</div>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/bottom.js" type="text/javascript"></script>
+<script src="http://www.nea.gov.cn/static/default/js/public/article-font.js" type="text/javascript"></script>
+</body>
+</html>

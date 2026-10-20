@@ -1,0 +1,464 @@
+{
+  "created_at": "2026-10-19T23:20:09.994666+00:00",
+  "reviewer": "independent review_scope agent",
+  "status": "passed_after_metadata_and_missingness_corrections",
+  "read_only_review_except_this_receipt": true,
+  "source_sha256": {
+    "data/raw/q2_coal_prices/guizhou_ndrc_index_2014.html": "3ff998f5d93a23a78e4464e64d9e8eef2dc06058ef58ef44fd917815b5029076",
+    "data/raw/q2_coal_prices/guizhou_ndrc_index_2015.html": "a1ae6beef71de3837260ed16e92f5805a8baacc511277baee881aaa2d384e60a",
+    "data/raw/q2_coal_prices/guizhou_ndrc_index_2016.html": "08a26c50a862cf15cc46226d1d0cdf1e2a15bc1313e3544e0be70d7425369fc2",
+    "data/raw/q2_coal_prices/guizhou_index_method.html": "276bddb21911ae74ceb3e0c72d06339121e5f91c81fd4dfef324669490dae3cc",
+    "data/raw/q2_coal_prices/guizhou_ndrc_index_2016_partial.html": "8b15fe4e50d83e269e5406ac4fd5f354a866a771f33a29d59fe7b20d0511aa7f",
+    "data/raw/q2_coal_prices/source_manifest.json": "f863fb76b23073c8d625a1f992950a7a157b1f7cb62c7c4c1c4b2605d15887ec",
+    "data/raw/q2_coal_prices/evidence.json": "ee4b92dde1b249b5963b36498d76828315b684da86934590f0dbe1822e20956a",
+    "scripts/collect_q2_coal_prices.py": "30cf84621b1d0b01d399a331499fb3d50b8a308543377883483cf05fe94925ef"
+  },
+  "all_five_original_html_hashes_match_initial_frozen_hashes": true,
+  "all_evidence_source_hashes_match_originals": true,
+  "sources": [
+    {
+      "id": "guizhou_ndrc_index_2014",
+      "url": "https://nyj.guizhou.gov.cn/zwgk/xxgkml/zdlyxx/tjsj/201704/t20170427_27677542.html",
+      "path": "data/raw/q2_coal_prices/guizhou_ndrc_index_2014.html",
+      "sha256": "3ff998f5d93a23a78e4464e64d9e8eef2dc06058ef58ef44fd917815b5029076",
+      "original_bytes_unchanged": true,
+      "title": "2014年中国电煤价格指数",
+      "html_publication_datetime": "2016-10-19 10:09:00",
+      "manifest_publication_date": "2016-10-19",
+      "content_source": "国家发改委网站",
+      "national_rows": [
+        [
+          "全国",
+          "495.79",
+          "484.88",
+          "470.61",
+          "461.02",
+          "454.23",
+          "443.48",
+          "430.77",
+          "417.76",
+          "412.30",
+          "415.58",
+          "422.22",
+          "424.68"
+        ]
+      ],
+      "chrome_live_page_verified": true
+    },
+    {
+      "id": "guizhou_ndrc_index_2015",
+      "url": "https://nyj.guizhou.gov.cn/zwgk/xxgkml/zdlyxx/tjsj/201704/t20170427_27677541.html",
+      "path": "data/raw/q2_coal_prices/guizhou_ndrc_index_2015.html",
+      "sha256": "a1ae6beef71de3837260ed16e92f5805a8baacc511277baee881aaa2d384e60a",
+      "original_bytes_unchanged": true,
+      "title": "2015年中国电煤价格指数",
+      "html_publication_datetime": "2016-10-19 10:07:00",
+      "manifest_publication_date": "2016-10-19",
+      "content_source": "国家发改委网站",
+      "national_rows": [
+        [
+          "全国",
+          "423.10",
+          "412.27",
+          "402.85",
+          "383.11",
+          "362.55",
+          "357.16",
+          "348.10",
+          "340.79",
+          "337.45",
+          "330.13",
+          "326.81",
+          "329.09"
+        ]
+      ],
+      "chrome_live_page_verified": true
+    },
+    {
+      "id": "guizhou_ndrc_index_2016",
+      "url": "https://nyj.guizhou.gov.cn/zwgk/xxgkml/zdlyxx/tjsj/201704/t20170427_27677540.html",
+      "path": "data/raw/q2_coal_prices/guizhou_ndrc_index_2016.html",
+      "sha256": "08a26c50a862cf15cc46226d1d0cdf1e2a15bc1313e3544e0be70d7425369fc2",
+      "original_bytes_unchanged": true,
+      "title": "2016年9月各价区电煤价格指数",
+      "html_publication_datetime": "2016-10-19 09:59:00",
+      "manifest_publication_date": "2016-10-19",
+      "content_source": "国家发改委网站",
+      "national_rows": [
+        [
+          "全国",
+          "414.07",
+          "369.74",
+          "11.99%",
+          "22.71%"
+        ]
+      ],
+      "chrome_live_page_verified": true,
+      "body_original_table_release_date": "2016-10-14"
+    },
+    {
+      "id": "guizhou_index_method",
+      "url": "https://nyj.guizhou.gov.cn/zwgk/xxgkml/zdlyxx/tjsj/201704/t20170427_27677544.html",
+      "path": "data/raw/q2_coal_prices/guizhou_index_method.html",
+      "sha256": "276bddb21911ae74ceb3e0c72d06339121e5f91c81fd4dfef324669490dae3cc",
+      "original_bytes_unchanged": true,
+      "title": "中国电煤价格指数编制方案",
+      "html_publication_datetime": "2016-10-19 10:15:00",
+      "manifest_publication_date": "2016-10-19",
+      "content_source": "国家发改委网站",
+      "national_rows": [],
+      "chrome_live_page_verified": true
+    },
+    {
+      "id": "guizhou_ndrc_index_2016_partial",
+      "url": "https://nyj.guizhou.gov.cn/zwgk/xxgkml/zdlyxx/tjsj/201704/t20170427_27677543.html",
+      "path": "data/raw/q2_coal_prices/guizhou_ndrc_index_2016_partial.html",
+      "sha256": "8b15fe4e50d83e269e5406ac4fd5f354a866a771f33a29d59fe7b20d0511aa7f",
+      "original_bytes_unchanged": true,
+      "title": "2016年1-9月中国电煤价格指数",
+      "html_publication_datetime": "2016-10-19 10:11:00",
+      "manifest_publication_date": "2016-10-19",
+      "content_source": "国家发改委网站",
+      "national_rows": [
+        [
+          "全国",
+          "326.67",
+          "318.36",
+          "322.75",
+          "317.20",
+          "315.00",
+          "321.00",
+          "340.72",
+          "369.74",
+          "414.07"
+        ]
+      ],
+      "chrome_live_page_verified": true
+    }
+  ],
+  "independent_extraction": {
+    "parser": "separate HTMLParser implementation; did not import or execute collector",
+    "actual_month_headers_verified": true,
+    "unique_month_slots": 36,
+    "nonnull_national_months": 33,
+    "nonnull_by_year": {
+      "2014": 12,
+      "2015": 12,
+      "2016": 9
+    },
+    "all_values_match_evidence": true,
+    "months": [
+      {
+        "year": 2014,
+        "month": 1,
+        "value": 495.79
+      },
+      {
+        "year": 2014,
+        "month": 2,
+        "value": 484.88
+      },
+      {
+        "year": 2014,
+        "month": 3,
+        "value": 470.61
+      },
+      {
+        "year": 2014,
+        "month": 4,
+        "value": 461.02
+      },
+      {
+        "year": 2014,
+        "month": 5,
+        "value": 454.23
+      },
+      {
+        "year": 2014,
+        "month": 6,
+        "value": 443.48
+      },
+      {
+        "year": 2014,
+        "month": 7,
+        "value": 430.77
+      },
+      {
+        "year": 2014,
+        "month": 8,
+        "value": 417.76
+      },
+      {
+        "year": 2014,
+        "month": 9,
+        "value": 412.3
+      },
+      {
+        "year": 2014,
+        "month": 10,
+        "value": 415.58
+      },
+      {
+        "year": 2014,
+        "month": 11,
+        "value": 422.22
+      },
+      {
+        "year": 2014,
+        "month": 12,
+        "value": 424.68
+      },
+      {
+        "year": 2015,
+        "month": 1,
+        "value": 423.1
+      },
+      {
+        "year": 2015,
+        "month": 2,
+        "value": 412.27
+      },
+      {
+        "year": 2015,
+        "month": 3,
+        "value": 402.85
+      },
+      {
+        "year": 2015,
+        "month": 4,
+        "value": 383.11
+      },
+      {
+        "year": 2015,
+        "month": 5,
+        "value": 362.55
+      },
+      {
+        "year": 2015,
+        "month": 6,
+        "value": 357.16
+      },
+      {
+        "year": 2015,
+        "month": 7,
+        "value": 348.1
+      },
+      {
+        "year": 2015,
+        "month": 8,
+        "value": 340.79
+      },
+      {
+        "year": 2015,
+        "month": 9,
+        "value": 337.45
+      },
+      {
+        "year": 2015,
+        "month": 10,
+        "value": 330.13
+      },
+      {
+        "year": 2015,
+        "month": 11,
+        "value": 326.81
+      },
+      {
+        "year": 2015,
+        "month": 12,
+        "value": 329.09
+      },
+      {
+        "year": 2016,
+        "month": 1,
+        "value": 326.67
+      },
+      {
+        "year": 2016,
+        "month": 2,
+        "value": 318.36
+      },
+      {
+        "year": 2016,
+        "month": 3,
+        "value": 322.75
+      },
+      {
+        "year": 2016,
+        "month": 4,
+        "value": 317.2
+      },
+      {
+        "year": 2016,
+        "month": 5,
+        "value": 315.0
+      },
+      {
+        "year": 2016,
+        "month": 6,
+        "value": 321.0
+      },
+      {
+        "year": 2016,
+        "month": 7,
+        "value": 340.72
+      },
+      {
+        "year": 2016,
+        "month": 8,
+        "value": 369.74
+      },
+      {
+        "year": 2016,
+        "month": 9,
+        "value": 414.07
+      },
+      {
+        "year": 2016,
+        "month": 10,
+        "value": null
+      },
+      {
+        "year": 2016,
+        "month": 11,
+        "value": null
+      },
+      {
+        "year": 2016,
+        "month": 12,
+        "value": null
+      }
+    ],
+    "overlapping_2016_august_september_agree": [
+      {
+        "year": 2016,
+        "month": 8,
+        "value": 369.74
+      },
+      {
+        "year": 2016,
+        "month": 9,
+        "value": 414.07
+      }
+    ],
+    "missing_month_rows": [
+      {
+        "year": 2016,
+        "month": 10,
+        "value": null,
+        "unit": "nominal_CNY_per_tonne_5000kcal_kg_delivered; VAT_basis_unverified",
+        "geography": "national_index_coverage",
+        "missing_reason": "not_present_in_original",
+        "source": "data/raw/q2_coal_prices/guizhou_ndrc_index_2016_partial.html",
+        "source_sha256": "8b15fe4e50d83e269e5406ac4fd5f354a866a771f33a29d59fe7b20d0511aa7f",
+        "locator": "not present"
+      },
+      {
+        "year": 2016,
+        "month": 11,
+        "value": null,
+        "unit": "nominal_CNY_per_tonne_5000kcal_kg_delivered; VAT_basis_unverified",
+        "geography": "national_index_coverage",
+        "missing_reason": "not_present_in_original",
+        "source": "data/raw/q2_coal_prices/guizhou_ndrc_index_2016_partial.html",
+        "source_sha256": "8b15fe4e50d83e269e5406ac4fd5f354a866a771f33a29d59fe7b20d0511aa7f",
+        "locator": "not present"
+      },
+      {
+        "year": 2016,
+        "month": 12,
+        "value": null,
+        "unit": "nominal_CNY_per_tonne_5000kcal_kg_delivered; VAT_basis_unverified",
+        "geography": "national_index_coverage",
+        "missing_reason": "not_present_in_original",
+        "source": "data/raw/q2_coal_prices/guizhou_ndrc_index_2016_partial.html",
+        "source_sha256": "8b15fe4e50d83e269e5406ac4fd5f354a866a771f33a29d59fe7b20d0511aa7f",
+        "locator": "not present"
+      }
+    ],
+    "complete_years": [
+      2014,
+      2015
+    ],
+    "annual_simple_means": {
+      "2014": 444.4433333333333,
+      "2015": 362.78416666666664
+    },
+    "annual_mean_scope": "arithmetic average of monthly indices, not annual arrival-volume-weighted procurement cost"
+  },
+  "definition": {
+    "representative_heat_kcal_kg": 5000,
+    "heat_mwh_per_tonne": 5.815,
+    "price_unit": "nominal CNY per tonne",
+    "provincial_index_scope": "weighted monitoring-unit price, mainly representative-spec delivered-to-plant coal; inputs include delivered, Bohai FOB and composite monitoring",
+    "national_weight": "current-month provincial power-plant coal arrival tonnage",
+    "coverage": "30 provinces, excluding Tibet; monitored index, not a census of all plant invoices",
+    "tax_vat_basis": "not explicit in acquired originals; unknown"
+  },
+  "methodology_evidence": [
+    {
+      "locator": "编制方案 二 监测范围和内容",
+      "text": "全国30个省份（西藏除外）"
+    },
+    {
+      "locator": "编制方案 三 代表规格品",
+      "text": "5000大卡/千克"
+    },
+    {
+      "locator": "编制方案 四 省级电煤价格指数",
+      "text": "主要反映电煤（折代表规格品）到厂价格"
+    },
+    {
+      "locator": "编制方案 四 全国电煤价格指数",
+      "text": "权重为当月各省电厂电煤到货量"
+    }
+  ],
+  "initial_findings_and_corrections": [
+    {
+      "issue": "Methodology and 2016 January-September repost publication dates initially omitted",
+      "initial": "published_date was null for these two sources",
+      "correction": "both manifest and collector now record 2016-10-19, agreeing with original PubDate and live Chrome page",
+      "verified": true
+    },
+    {
+      "issue": "September table original release date not separately captured",
+      "initial": "2016-10-19 repost date existed but distinct original release date was absent",
+      "correction": "original_table_release_date now 2016-10-14, agreeing with table body; repost date stays 2016-10-19",
+      "verified": true
+    },
+    {
+      "issue": "Absent October-December columns described as blank cells",
+      "initial": "2016 October-December missing_reason was blank_in_original",
+      "correction": "not_present_in_original with locator not present; original table has only nine month columns",
+      "verified": true
+    }
+  ],
+  "publication_date_caution": "URL directory 201704 does not establish publication date; original HTML metadata and live page date are October 19, 2016",
+  "live_browser_review": {
+    "browser": "Chrome",
+    "pages_verified": 5,
+    "method": "read actual page accessibility text in a separate review tab; inspected methodology, full-year national rows, nine-month headers and September comparison",
+    "september_body_date": "2016/10/14",
+    "repost_date": "2016年10月19日"
+  },
+  "collector_review": {
+    "existing_html_integrity_checked_against_manifest": true,
+    "nonnull_conflicting_overlaps_rejected": true,
+    "nonnull_preserved_over_absent_placeholders": true,
+    "does_not_infer_vat": true,
+    "limitation": "Collector maps full-year month columns positionally and validates row width; this review separately checked actual month headers. Future collector robustness could validate month header labels."
+  },
+  "model_admission": false,
+  "scientific_acceptance": false,
+  "unresolved": [
+    "VAT/tax-inclusive basis is not explicit in acquired originals; no tax-exclusive model cost admission",
+    "2016 October-December are absent and remain null"
+  ],
+  "blocked_interpretations": [
+    "absent month as zero",
+    "2016 nine-month mean as full-year price",
+    "same per-tonne index applied directly to 6000 kcal/kg coal",
+    "monitoring index equated to all-plant invoice census"
+  ],
+  "evidence_basis": "Saved originals plus direct Chrome inspection. Earlier empty search results are not evidence about source existence or content."
+}

@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-10-19T23:09:27.587602+00:00",
+  "checks": {
+    "declared_candidate_coverage": true,
+    "deterministic_training_only_selection": true,
+    "every_successful_training_loss_recomputed": true,
+    "training_trajectories_preserved_in_evaluation": true,
+    "all_frozen_source_hashes_match": true,
+    "six_evaluation_cases_preserved": true,
+    "before_and_after_source_snapshots_match": true
+  },
+  "passed": true,
+  "trial_count": 717,
+  "failed_count": 0,
+  "maximum_training_loss_difference": 0.0,
+  "selected_training_loss": {
+    "5": 0.6927509450701155,
+    "25": 0.6927509450701156,
+    "100": 0.6927509450701156
+  },
+  "unchanged_fit_failures": {
+    "authority_5_full": [
+      "capacity",
+      "solar_capacity"
+    ],
+    "authority_5_without_municipal_composition": [
+      "capacity",
+      "solar_capacity"
+    ],
+    "authority_25_full": [
+      "capacity",
+      "solar_capacity"
+    ],
+    "authority_25_without_municipal_composition": [
+      "capacity",
+      "solar_capacity"
+    ],
+    "authority_100_full": [
+      "capacity",
+      "solar_capacity"
+    ],
+    "authority_100_without_municipal_composition": [
+      "capacity",
+      "solar_capacity"
+    ]
+  },
+  "source_sha256": {
+    "scripts/review_q2_joint_search.py": "d007c0f82fa70ae4980fd811904e77853b76933d2649e039b84eedf41771c712",
+    "outputs/q2_revenue_recalibration/20261019T225922280430Z/trials.json": "98f1661ee06503fcc3256b8d17deba14c5236f6f1ebd7e90004f9e36da87449b",
+    "outputs/q2_revenue_recalibration/20261019T225922280430Z/training_stages.json": "2b42308cff6649d8241d522e7c1aa8b408db1249181ad2eec6ffa379ae1a6e8f",
+    "outputs/q2_revenue_recalibration/20261019T225922280430Z/training_selection.json": "df237c59b377e0b8ef2ac50885c5e0fa0cb4db906f62c83746ff8854870a0377",
+    "outputs/q2_revenue_recalibration/20261019T225922280430Z/results.json": "31f65489870334392dfd14ab6496406b7a83f4b9967593832da428f63e6fff57"
+  },
+  "scientific_acceptance": false,
+  "team_approved": false
+}

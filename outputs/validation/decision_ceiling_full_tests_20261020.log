@@ -1,0 +1,12 @@
+.......................................................................................................Q1 FAILED: Input hash mismatch: cost
+......................................Q1 FAILED: [Errno 2] No such file or directory: 'E:\\Team\\2026JM\\SimulationModelingProblemA\\tmp\\tests\\tmpx8xffri_\\missing.csv'
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+Q2 common entry: q2_inputs.json remains the legacy candidate inventory. Execution uses the separately reviewed q2_national_design.json and q2_national_input_review.json; no candidate-inventory use is promoted. For inventory-only checks use scripts/run_q2.py explicitly.
+{"status": "success_conditional_candidate", "elapsed_seconds": 0.03717579999647569}
+{"status": "success_conditional_candidate", "elapsed_seconds": 0.03910679999535205}
+..............................................................................................................................................................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 443 tests in 51.866s
+
+OK
+{"passed": false, "status": "failed", "checks": 0, "error": "ValueError: injected audit failure"}

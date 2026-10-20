@@ -1,0 +1,358 @@
+{
+  "status": "predeclared_conditional_forward_design_not_official_prediction",
+  "created_local": "2026-10-20",
+  "start_year": 2025,
+  "end_year": 2060,
+  "historical_runs": {
+    "net58": "outputs/q2_revenue_recalibration/20261020T001729054583Z",
+    "net55": "outputs/q2_revenue_recalibration/20261020T001729046749Z"
+  },
+  "authority_default": 25,
+  "authority_basis": "existing predeclared middle research condition; 5 and 100 reported separately",
+  "thermal_default_basis": "IEA technical reference continuity; alternative net55 reported; not evaluation-based choice",
+  "scientific_acceptance": false,
+  "scenarios": [
+    {
+      "name": "S0",
+      "kind": "main"
+    },
+    {
+      "name": "SP",
+      "kind": "main",
+      "variant": {
+        "carbon_price_multiplier": 1.5
+      }
+    },
+    {
+      "name": "ST",
+      "kind": "main",
+      "variant": {
+        "cost_decline_delta": 0.01
+      }
+    },
+    {
+      "name": "SG",
+      "kind": "main",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 0.5,
+        "gas_price_multiplier": 1.3
+      }
+    },
+    {
+      "name": "SW",
+      "kind": "main",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "renewable_availability_multiplier": 0.8,
+        "hydro_energy_multiplier": 0.8
+      }
+    },
+    {
+      "name": "SGW",
+      "kind": "main",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 0.5,
+        "gas_price_multiplier": 1.3,
+        "renewable_availability_multiplier": 0.8,
+        "hydro_energy_multiplier": 0.8
+      }
+    },
+    {
+      "name": "SG_volume_only",
+      "kind": "mechanism",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 0.5,
+        "gas_price_multiplier": 1
+      }
+    },
+    {
+      "name": "SG_price_only",
+      "kind": "mechanism",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 1,
+        "gas_price_multiplier": 1.3
+      }
+    },
+    {
+      "name": "S0_freeze_gas",
+      "kind": "H02",
+      "event": {},
+      "freeze_new_gas": true
+    },
+    {
+      "name": "SG_freeze_gas",
+      "kind": "H02",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 0.5,
+        "gas_price_multiplier": 1.3
+      },
+      "freeze_new_gas": true
+    },
+    {
+      "name": "SW_freeze_gas",
+      "kind": "H02",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "renewable_availability_multiplier": 0.8,
+        "hydro_energy_multiplier": 0.8
+      },
+      "freeze_new_gas": true
+    },
+    {
+      "name": "SGW_freeze_gas",
+      "kind": "H02",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 0.5,
+        "gas_price_multiplier": 1.3,
+        "renewable_availability_multiplier": 0.8,
+        "hydro_energy_multiplier": 0.8
+      },
+      "freeze_new_gas": true
+    },
+    {
+      "name": "H01_exit0_lag0",
+      "kind": "H01",
+      "retirement_acceleration_years": 0,
+      "infrastructure_delay_years": 0,
+      "replacement_adoption": 0.5
+    },
+    {
+      "name": "H01_exit0_lag2",
+      "kind": "H01",
+      "retirement_acceleration_years": 0,
+      "infrastructure_delay_years": 2,
+      "replacement_adoption": 0.5
+    },
+    {
+      "name": "H01_exit0_lag4",
+      "kind": "H01",
+      "retirement_acceleration_years": 0,
+      "infrastructure_delay_years": 4,
+      "replacement_adoption": 0.5
+    },
+    {
+      "name": "H01_exit3_lag0",
+      "kind": "H01",
+      "retirement_acceleration_years": 3,
+      "infrastructure_delay_years": 0,
+      "replacement_adoption": 0.5
+    },
+    {
+      "name": "H01_exit3_lag2",
+      "kind": "H01",
+      "retirement_acceleration_years": 3,
+      "infrastructure_delay_years": 2,
+      "replacement_adoption": 0.5
+    },
+    {
+      "name": "H01_exit3_lag4",
+      "kind": "H01",
+      "retirement_acceleration_years": 3,
+      "infrastructure_delay_years": 4,
+      "replacement_adoption": 0.5
+    },
+    {
+      "name": "H01_exit5_lag0",
+      "kind": "H01",
+      "retirement_acceleration_years": 5,
+      "infrastructure_delay_years": 0,
+      "replacement_adoption": 0.5
+    },
+    {
+      "name": "H01_exit5_lag2",
+      "kind": "H01",
+      "retirement_acceleration_years": 5,
+      "infrastructure_delay_years": 2,
+      "replacement_adoption": 0.5
+    },
+    {
+      "name": "H01_exit5_lag4",
+      "kind": "H01",
+      "retirement_acceleration_years": 5,
+      "infrastructure_delay_years": 4,
+      "replacement_adoption": 0.5
+    },
+    {
+      "name": "sensitivity_gdp_growth_delta_0",
+      "kind": "sensitivity",
+      "variant": {
+        "gdp_growth_delta": -0.01
+      }
+    },
+    {
+      "name": "sensitivity_gdp_growth_delta_1",
+      "kind": "sensitivity",
+      "variant": {
+        "gdp_growth_delta": 0.01
+      }
+    },
+    {
+      "name": "sensitivity_cost_decline_delta_0",
+      "kind": "sensitivity",
+      "variant": {
+        "cost_decline_delta": -0.01
+      }
+    },
+    {
+      "name": "sensitivity_cost_decline_delta_1",
+      "kind": "sensitivity",
+      "variant": {
+        "cost_decline_delta": 0.01
+      }
+    },
+    {
+      "name": "sensitivity_carbon_price_multiplier_0",
+      "kind": "sensitivity",
+      "variant": {
+        "carbon_price_multiplier": 0.5
+      }
+    },
+    {
+      "name": "sensitivity_carbon_price_multiplier_1",
+      "kind": "sensitivity",
+      "variant": {
+        "carbon_price_multiplier": 1.5
+      }
+    },
+    {
+      "name": "sensitivity_removals_multiplier_0",
+      "kind": "sensitivity",
+      "variant": {
+        "removals_multiplier": 0.5
+      }
+    },
+    {
+      "name": "sensitivity_removals_multiplier_1",
+      "kind": "sensitivity",
+      "variant": {
+        "removals_multiplier": 1.5
+      }
+    },
+    {
+      "name": "sensitivity_fuel_price_multiplier_0",
+      "kind": "sensitivity",
+      "variant": {
+        "fuel_price_multiplier": 0.7
+      }
+    },
+    {
+      "name": "sensitivity_fuel_price_multiplier_1",
+      "kind": "sensitivity",
+      "variant": {
+        "fuel_price_multiplier": 1.3
+      }
+    },
+    {
+      "name": "S0_authority5",
+      "kind": "uncertain_authority",
+      "authority": 5
+    },
+    {
+      "name": "S0_authority100",
+      "kind": "uncertain_authority",
+      "authority": 100
+    },
+    {
+      "name": "S0_net55",
+      "kind": "thermal_reference",
+      "thermal_mode": "net55"
+    },
+    {
+      "name": "P0",
+      "kind": "policy_candidate",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 0.5,
+        "gas_price_multiplier": 1.3,
+        "renewable_availability_multiplier": 0.8,
+        "hydro_energy_multiplier": 0.8
+      }
+    },
+    {
+      "name": "P_grid15",
+      "kind": "policy_candidate",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 0.5,
+        "gas_price_multiplier": 1.3,
+        "renewable_availability_multiplier": 0.8,
+        "hydro_energy_multiplier": 0.8
+      },
+      "infrastructure_budget_multiplier": 1.5
+    },
+    {
+      "name": "P_grid20",
+      "kind": "policy_candidate",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 0.5,
+        "gas_price_multiplier": 1.3,
+        "renewable_availability_multiplier": 0.8,
+        "hydro_energy_multiplier": 0.8
+      },
+      "infrastructure_budget_multiplier": 2
+    },
+    {
+      "name": "P_adopt",
+      "kind": "policy_candidate",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 0.5,
+        "gas_price_multiplier": 1.3,
+        "renewable_availability_multiplier": 0.8,
+        "hydro_energy_multiplier": 0.8
+      },
+      "replacement_adoption": 0.5
+    },
+    {
+      "name": "P_carbon",
+      "kind": "policy_candidate",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 0.5,
+        "gas_price_multiplier": 1.3,
+        "renewable_availability_multiplier": 0.8,
+        "hydro_energy_multiplier": 0.8
+      },
+      "variant": {
+        "carbon_price_multiplier": 1.5
+      }
+    },
+    {
+      "name": "P_combined",
+      "kind": "policy_candidate",
+      "event": {
+        "start_year": 2028,
+        "end_year": 2030,
+        "gas_import_multiplier": 0.5,
+        "gas_price_multiplier": 1.3,
+        "renewable_availability_multiplier": 0.8,
+        "hydro_energy_multiplier": 0.8
+      },
+      "infrastructure_budget_multiplier": 1.5,
+      "replacement_adoption": 0.5,
+      "variant": {
+        "carbon_price_multiplier": 1.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+trained 5 block ['new_solar_cf', 'new_wind_cf'] loss 1.82701 trials 10
+trained 5 block ['waste_delivery_growth', 'waste_fuel_fraction'] loss 1.73068 trials 19
+trained 5 block ['investment_response', 'renewable_mix_response'] loss 1.72015 trials 28
+trained 5 block ['dispatch_kappa'] loss 1.72015 trials 31
+trained 5 block ['biomass_initial_pipeline_multiplier'] loss 1.55351 trials 34
+trained 25 block ['new_solar_cf', 'new_wind_cf'] loss 1.81641 trials 44
+trained 25 block ['waste_delivery_growth', 'waste_fuel_fraction'] loss 1.73068 trials 53
+trained 25 block ['investment_response', 'renewable_mix_response'] loss 1.72015 trials 62
+trained 25 block ['dispatch_kappa'] loss 1.72015 trials 65
+trained 25 block ['biomass_initial_pipeline_multiplier'] loss 1.55351 trials 68
+trained 100 block ['new_solar_cf', 'new_wind_cf'] loss 1.76922 trials 78
+trained 100 block ['waste_delivery_growth', 'waste_fuel_fraction'] loss 1.73068 trials 87
+trained 100 block ['investment_response', 'renewable_mix_response'] loss 1.72015 trials 96
+trained 100 block ['dispatch_kappa'] loss 1.72015 trials 99
+trained 100 block ['biomass_initial_pipeline_multiplier'] loss 1.55351 trials 102
+authority_5_full {'gas': 5.75, 'oil': 14.2, 'biomass': 29.41, 'wind': 2.18, 'solar': 26.47}
+authority_5_without_municipal_composition {'gas': 5.75, 'oil': 14.2, 'biomass': 37.82, 'wind': 2.18, 'solar': 26.47}
+authority_25_full {'gas': 5.75, 'oil': 14.2, 'biomass': 29.8, 'wind': 2.18, 'solar': 26.47}
+authority_25_without_municipal_composition {'gas': 5.75, 'oil': 14.2, 'biomass': 37.82, 'wind': 2.18, 'solar': 26.47}
+authority_100_full {'gas': 5.75, 'oil': 14.2, 'biomass': 28.53, 'wind': 2.18, 'solar': 26.47}
+authority_100_without_municipal_composition {'gas': 5.75, 'oil': 14.2, 'biomass': 37.82, 'wind': 2.18, 'solar': 26.47}
+outputs/q2_revenue_recalibration/20261019T220826979881Z

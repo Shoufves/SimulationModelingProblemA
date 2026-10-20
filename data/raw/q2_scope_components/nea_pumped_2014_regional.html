@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="国家能源网" />
+<meta name="keywords" content="国家能源网" />
+<title>政府信息公开目录---国家能源局---华北华东区域抽水蓄能电站运营情况监管报告</title>
+<link href="http://www.nea.gov.cn/static/default/css/public/master_nyj_v1.0.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/static/default/css/article.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/2015nyj/xinban/topbase.css" rel="stylesheet" />
+<script src="http://www.nea.gov.cn/static/default/js/public/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../images/daublogic.js" type="text/javascript"></script>
+<script language="javascript">
+$(document).ready(function(){　
+
+var lefttmp = new Image();
+lefttmp.src= "http://www.xinhuanet.com/photo/static/arr_left.cur";
+var righttmp = new Image();
+righttmp.src= "http://www.xinhuanet.com/photo/static/arr_right.cur";
+leng = $("a",$("#div_currpage")).length;
+	
+if(leng!=0)
+//curr里有a标签==稿件不止一页
+	{
+
+		//看一共有多少个a标签
+		leng = leng -1;
+		var nextLin  = $("a",$("#div_currpage"))[leng].href;//对于多页的情况，取得下一页的地址
+		var oneword = location.href+"#";
+		if(nextLin==oneword)
+		{
+		leng = leng -1;
+		nextLin  = $("a",$("#div_currpage"))[leng].href;
+		}
+		var currurl = location.href;//当前页链接地址<meta http-equiv="expires" content="Sunday 26 October 2011 01:00 GMT" /> 
+				
+		var underpd = currurl.substring(currurl.indexOf("c_")+2,currurl.indexOf(".htm"));	
+		if (underpd.indexOf("_")==-1)
+			{
+
+			prevLink = location.href;//如果是文章首页，则左键仍是替换到本页面
+			nextLink = $("a",$("#div_currpage"))[0].href;      //下一页的赋值
+			setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+		}
+
+	else
+		//是末页，http://news.xinhuanet.com/photo/2011-08/06/c_121822530.htm
+		{
+			//当前页分页号判断
+			var currnum = currurl.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlineindex = currurl.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			//下一页的分页号
+			var nextnum = nextLin.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlinenext = nextLin.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			var undernum = nextLin.substr(nextLin.indexOf("c_")).split("_").length-1;
+			
+			var temp = currurl.substring(underlineindex,currnum);//当前页的分页号
+			var nexttemp = 	nextLin.substring(underlinenext,nextnum);//最后a标签的分页号
+			var boolx = parseInt(temp,10)>parseInt(nexttemp,10);
+			
+			if((boolx)||(undernum==1))//末页
+
+					{
+					
+						if($("img",$("a",$("#content"))).length==0)//没有带链接的图片
+			
+							{
+								prevLink = nextLin;
+									if(undernum==1)
+									{
+										nextLink = nextLin;
+									}
+									else
+									{
+										nextLink = prevLink.substr(0,(prevLink.lastIndexOf("_")))+".htm";
+									}
+								setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+							}
+			
+						else//末页正文图片有链接
+							{
+								prevLink = nextLin;
+								nextLink = $("a",$("#content"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							}
+
+					}
+
+				else//不是末页
+					{
+
+							prevLink = $("a",$("#div_currpage"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							nextLink = nextLin;//把正文最后一个带链接的链接地址赋给下一页
+					}
+
+		}
+	}
+else
+//只有一页
+	{
+		prevLink = location.href;
+		nextLink = location.href;
+	}
+
+document.onkeydown = pageEvent;
+  function pageEvent(evt) {
+    evt = evt || window.event;
+    var key = evt.which || evt.keyCode;
+    if (key == 37) location = prevLink;
+    if (key == 39) location = nextLink;
+  };
+		
+		var lefturl		= prevLink;
+		var righturl	= nextLink;
+		var imgurl		= righturl;
+
+			$("#content img").each(function(){ 
+				var width = $(this).width();
+				var thisImage=$(this); 
+				//alert("01");
+				$(thisImage)[0].onmousemove=function(){
+					
+					if(event.offsetX<width/2){
+					
+						this.style.cursor	= 'url('+lefttmp.src+'),auto';
+						imgurl				= lefturl;
+					}
+					
+					else{
+					
+						this.style.cursor	= 'url('+righttmp.src+'),auto';
+						imgurl				= righturl;
+					}
+					
+	                                                }
+	               
+				$(thisImage)[0].onmouseup=function(){
+					top.location=imgurl;
+	
+				}   
+             });
+　　　　
+　　	});
+</script>
+
+<style type="text/css">
+<!--
+
+.STYLE5 {
+    color: #006699;
+    font-size: 14px;
+    font-weight: bold;
+}
+td {
+    padding: 4px;
+}
+
+.table1 {
+    border: 1px solid #71AEE7;
+}
+
+.STYLE9 {
+    color: #006699;
+    font-size: 12px;
+}
+
+.STYLE10 {
+    color: #666666;
+}
+-->
+</style>
+</head>
+
+<body>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/topnav.js" type="text/javascript"></script>
+<div class="main-colum">
+	<div class="now-site">您当前位置：<a href="http://www.nea.gov.cn/" target="_blank">首页</a> > 正文</div>
+	<div class="hr_10"></div>
+	<div class="channel-page">
+		<div class="article-box">
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+			<div class="article-content">
+            <table width="800" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td height="35" class="STYLE5">目录项的基本信息</td>
+    </tr>
+  </tbody></table>
+            	<table width="800" cellspacing="0" cellpadding="0" border="0" class="table1">
+<tbody><tr>
+        <td width="131" height="28" bgcolor="#EEFCFF" align="right"><span class="STYLE10">公开事项名称:</span></td>
+      <td height="28" bgcolor="#EEFCFF" align="left" class="STYLE9" colspan="3">华北华东区域抽水蓄能电站运营情况监管报告 </td>
+    </tr>
+      <tr>
+        <td height="28" bgcolor="#EEFCFF" align="right"><span class="STYLE10">索引号: </span></td>
+        <td width="290" height="28" bgcolor="#EEFCFF" align="left" class="STYLE9">000019705/2015-00046 </td>
+        <td width="75" bgcolor="#EEFCFF" align="left"><span class="STYLE10">主办单位:</span></td>
+        <td width="302" bgcolor="#EEFCFF" align="left" class="STYLE9">国家能源局 </td>
+    </tr>
+      <tr>
+        <td height="28" bgcolor="#EEFCFF" align="right"><span class="STYLE10">制发日期:</span></td>
+        <td height="28" bgcolor="#EEFCFF" align="left" class="STYLE9" colspan="3">2015-04-16 </td>
+    </tr>
+    </tbody></table>
+<table width="700" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td height="30">&nbsp;</td>
+    </tr>
+  </tbody></table>
+  
+<table width="800" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td><span class="font_14 line25 STYLE8"><p align="center"><font style="line-height: 200%"><font style="font-size: 18pt; line-height: 200%"><strong>国家能源局</strong></font></font></p><p align="center"><font style="font-size: 18pt; line-height: 200%"><strong>监管公告</strong></font></p><p align="center"><font style="font-size: 18pt; line-height: 200%"><strong>2015年第11号 </strong></font></p><p align="center"><font style="font-size: 18pt; line-height: 200%"><strong>（总第28号） </strong></font></p><p align="center"><font style="font-size: 18pt; line-height: 200%"><font style="line-height: 200%"><strong><font style="font-size: 18pt; line-height: 200%">华北华东区域抽水蓄能电站运营情</font>况监管报告</strong></font></font></p><p align="center"><font style="font-size: 18pt; line-height: 200%"><strong style="font-size: 18pt">二〇一五年四月</strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　为促进抽水蓄能电站(以下简称抽蓄电站)健康发展，进一步摸清抽蓄电站运营中存在的问题，确保抽蓄电站科学合理发挥效用，国家能源局组织华北、华东能监局和山西、山东、江苏、福建能监办等派出机构于2014年9月至11月开展了华北、华东区域抽蓄电站运营情况专项监管，形成本报告。 </font></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　一、基本情况&nbsp;</strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　截止2014年9月底，全国已建成抽蓄电站23家，装机容量2151万千瓦，其中电网企业控股21家。本次开展专项监管选取有代表性的华北、华东区域，抽蓄电站共14家，占全国60.8%；装机容量1133万千瓦，占全国52.7%；2014年1-9月份发电利用小时数为518.8小时，抽水利用小时数为642.5小时；价格机制有单一电量电价、单一容量电价（租赁制）、两部制电价等三种（详见附表）。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　华北区域电网火电占比大，风电发展快，缺少事故情况下可快速启动的常规水电，是抽蓄电站发展最早的地区。华东区域电网峰谷差、核电装机容量和调峰压力都比较大，是典型受端电网，亟需增加抽蓄电站参与调峰和整体平衡，以提高全网运行的安全性与经济性。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　总体来看，华北、华东区域抽蓄电站基本满足电网安全运行需要，一定程度上减少弃风、弃水，促进了节能减排，对电力系统的整体优化起到了积极作用。一是基本发挥了顶峰填谷及调频调相作用。例如，华东区域抽蓄电站能够提供高峰发电能力706万千瓦，低谷抽水能力733万千瓦，理论上最大调峰能力可达1439万千瓦，占2013年华东区域平均用电峰谷差（3838万千瓦）的37%，对电网峰谷差压力起到缓解作用（典型运行方式负荷曲线见下图）。二是在紧急情况下能够较好地发挥事故备用作用。例如，2010年1月20日，河北沧东电厂#2、#3、#4机因东骅一二线跳闸而停运，电网损失容量180万千瓦。张河湾电站在6分钟内启动3台机组，共带出力100万千瓦，为电网紧急事故处理提供了有力保障。三是有效地促进了风电等可再生能源的消纳。例如，2014年1-2月份，冀北电网共有12天因负荷不足出现弃风，其间十三陵电站上库水位有5天抽水达到563米以上，有5天上库提前放空至542－543米水位，较平时增加7米以上，增加了低谷时段的抽水能力，有效缓解了弃风问题。 </font></p><p align="center"><font style="line-height: 200%"><img style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; line-height: 200%; border-right-width: 0px" alt="" oldsrc="W020150519419048654853.jpg" src="./W020150519419048654853.jpg" /></font></p><p align="center"><font style="font-size: 12pt; line-height: 200%" color="#0000ff">顶峰填谷时段抽蓄电站典型运行方式负荷曲线图 </font></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　二、存在问题 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　本次专项监管发现，抽蓄电站总体上存在抽蓄电站发展慢、电价机制待完善、电站作用未充分发挥、投资主体单一等问题，导致部分抽蓄电站机组利用率较低、顶峰发电能力未能充分发挥。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　<strong>(一)抽蓄电站发展慢，部分项目建设不及时 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　一是根据《国家发展改革委关于促进抽水蓄能电站健康有序发展有关问题的意见》（发改能源〔2014〕2482号），到2025年，全国抽蓄电站总装机容量达到约1亿千瓦，占全国电力总装机的比重达到4%左右。”目前，全国抽蓄电站总装机容量仅为2151万千瓦，占全国电力总装机比重不到2%，离发展目标仍有较大差距。随着我国经济社会发展，电力系统规模不断扩大，用电负荷和峰谷差持续增大，亟需大力发展抽蓄电站作为电网安全和系统调峰的有力支撑。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　二是部分项目落实慢，建设周期长。部分抽蓄电站建设不及时，实际建设时间远远超过设计工期，增加了不必要建设成本，也推高了抽蓄电站运营费用。 </font></p><p><font style="font-size: 12pt; line-height: 200%; background-color: #ccffff" face="楷体,楷体_GB2312">　　专栏1： </font></p><p><font style="font-size: 12pt; line-height: 200%; background-color: #ccffff" face="楷体,楷体_GB2312">　　内蒙古呼和浩特抽蓄电站于2006年8月26日获得项目核准，设计工期51个月。由于资金不到位，项目于2007年11月停工，直至2009年11月项目才恢复建设。目前仅有2台机组并网试运，建成时间落后4年，项目建设成本由49.34亿元增加至56.43亿元。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　<strong>（二）价格机制仍需进一步完善 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　一是单一容量电价对抽蓄电站调用缺乏激励作用，导致机组利用率不高。此类抽蓄电站收入来自固定容量电费，电站收益与机组利用率基本无关，机组运行时间增加反而会提高运营成本，抽蓄电站缺乏发电积极性。例如，华北、华东区域共9家抽蓄电站执行单一容量电价，2014年1-9月平均发电利用小时仅为439小时，与执行其他两种电价机制的抽蓄电站差距明显。其中，山西西龙池电站、河北张河湾电站发电利用小时数甚至低于300小时。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　二是单一电量电价造成抽蓄电站效益过度依赖抽发电量，导致抽蓄电站调用频繁、多发超发。此类抽蓄电站没有固定容量电费收入，只能通过抽发电量盈利，个别电站利用小时数明显偏高。例如，全国实行单一电量电价的抽蓄电站共有4家，年平均发电利用小时数为1600小时左右，远高于国内抽蓄电站平均水平，个别电站甚至违背了抽蓄电站调度运行导则规定的年度发电利用小时不超过设计值的原则。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　三是两部制电价机制等措施仍需细化落实。《国家发展改革委关于完善抽水蓄能电站价格形成机制有关问题的通知》（发改价格〔2014〕1763号）要求，在具备条件的地区，鼓励采用招标、市场竞价等方式确定抽水蓄能电站项目业主、电量、容量电价、抽水电价和上网电价，同时已核定电价的抽蓄电站应逐步实行两部制上网电价。但相关招标竞价方式、电价测算方法、工作时间节点、各方职责等尚未明确，两部制电价推进工作无实质性进展。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　<strong>（三）现有抽蓄电站作用未得到充分发挥 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　一是部分地区由于电力系统网源情况变化较大，以及电网与抽蓄电站发展不协调、建设不配套等原因，导致抽蓄电站投运后，运行需求不足，未能充分发挥顶峰填谷等相应作用。例如，山西西龙池电站所在的晋北地区由于风电快速增长、网源发展不协调，存在窝电问题，4台机组中有2台在高峰时段不能全启顶峰发电，低谷时段不能全启抽水蓄能，难以充分发挥作用。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　二是抽蓄电站与其他类型机组在调峰、事故备用的调用先后顺序上没有明确规定，对抽蓄电站的调用合理性难以进行精确评价。同时，抽蓄电站的水库运用也有待进一步优化，警戒水位的设定需要更加科学地统筹调峰与备用间关系，以充分挖掘抽蓄电站的调峰能力。 </font></p><p><font style="font-size: 12pt; line-height: 200%; background-color: #ccffff" face="楷体,楷体_GB2312">　　专栏2: </font></p><p><font style="font-size: 12pt; line-height: 200%; background-color: #ccffff" face="楷体,楷体_GB2312">　　北京十三陵抽蓄电站上库水位范围为535米至566米， 华北网调设定下警戒水位550米，与死水位相差15米，留作事故备用和黑启动；上警戒水位560米，与设计水位相差6米，留作事故备用，原则上在此范围内调用。但是，下警戒水位与死水位差距较大，上警戒水位也有一定利用空间，事故备用和黑启动功能如何合理预留水库水位尚未有明确规定，一定程度上影响电站顶峰填谷作用的有效发挥。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　三是抽蓄电站调度运行规程制定和定期评价工作未得到落实。《国家能源局关于印发抽水蓄能电站调度运行导则的通知》（国能新能〔2013〕318号）要求，调度机构应制定抽蓄电站调度运行规程和年度调度方案并报备。从现场检查情况来看，部分调度机构已起草完成调度运行规程，但未按要求印发执行和报备。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　<strong>（四）投资主体单一，多元化投资格局尚未形成 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　由于历史政策原因，华北、华东区域14家抽蓄电站中仅2家由非电网企业控股，投资运营主体大多为电网企业，其他投资主体难以进入。同时，电力调度机构并未完全按照发电厂的管理方式对抽蓄电站进行调度管理，抽蓄电站依据电网企业每年下达的年度发电计划制定生产计划，调用方式受体制影响较大。 </font></p><p><font style="font-size: 12pt; line-height: 200%; background-color: #ccffff" face="楷体,楷体_GB2312">　　专栏3: </font></p><p><font style="font-size: 12pt; line-height: 200%; background-color: #ccffff" face="楷体,楷体_GB2312">　　福建省投资开发集团意欲开发被电网企业搁置多年的永泰抽蓄电站。国网新源控股有限公司获知消息后，多次致函福建省发改委，意欲购买福建省投资开发集团2010年以来的前期成果。目前该项目仍在搁置，未有实质性进展。 </font></p><p><font style="font-size: 12pt; line-height: 200%; background-color: #ccffff" face="楷体,楷体_GB2312">　　另据了解，湖南黑麋峰抽蓄电站是国内唯一一家由发电企业全资建设的抽蓄电站。因电价不明确，租赁协议一直未能签订，电站亏损严重，难以正常运营。2013年3月，投资方湖南五凌电力公司将电站资产整体转让给国网新源控股有限公司。 </font></p><p><font style="font-size: 12pt; line-height: 200%"><strong>　　三、监管意见 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　<strong>（一）完善规划、实施政策后评估，引导电站健康发展 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　能源主管部门应进一步完善相关政策文件要求，适度加大抽蓄电站发展力度，促进抽蓄电站持续健康有序发展。要在规划、核准新建抽蓄电站时，引入效果评价机制，并对现有抽蓄电站实际利用效果进行综合评估，防止盲目建设和资源浪费，避免不必要的成本增长；要做好选点规划，统筹协调电网与抽蓄电站的配套建设，减少网络约束，保证抽蓄电站发挥应有作用；要落实投资主体责任，强化电网、电站批复刚性约束，对长期不落实、整改不到位的企业实施项目进行限批。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　<strong>（二）加快实施两部制电价，利用市场机制挖掘功能潜力 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　建议价格主管部门会同有关部门根据《国家发展改革委关于完善抽水蓄能电站价格形成机制有关问题的通知》(发改价格〔2014〕1763号）制定具体实施方案，推动两部制电价尽快实施。积极探索市场化机制，通过投资主体竞争，降低建设成本，形成市场化的容量电价；通过辅助服务补偿及调峰交易手段，形成市场化的电量电价，实现常规电源与抽蓄电站的互利共赢；通过市场交易方式，招标用电低谷时期抽水电量，适当降低抽水电价，进一步消纳负荷低谷时段的风电、水电等可再生能源。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　<strong>（三）制定标准规程，进一步发挥抽蓄电站作用 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　国家能源局派出机构会同电力调度机构根据抽蓄电站运行要求和特点，综合考虑系统顶峰需求、低谷深度调峰、电网事故备用和可再生能源全额保障性收购等因素制定调度标准，防止“建而不用”或“过度使用”。电力调度机构要根据有关规定，抓紧制定具体调度运行规程，报国家能源局及所在地派出机构备案。抽蓄电站要严格执行调度指令，规范运行行为，同时加强设备管理，合理制定检修计划，确保随调随用。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　<strong>（四）吸引社会投资，促进抽蓄电站投资建设市场化 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　建议国家发改委会同国家能源局出台配套政策，落实《国务院关于创新重点领域投融资机制鼓励社会投资的指导意见》（国发〔2014〕60号），建立多元化的投资机制，鼓励社会资本投资，促进抽蓄电站投资建设市场化。研究推行抽蓄电站和核电、风电等项目协调配套投资及运营管理模式，实现项目联合优化运行，促进优势互补、良性互动，减少资源浪费。 </font></p><p><font style="font-size: 12pt; line-height: 200%">　　<strong>（五）加强监管考核，确保政策落地 </strong></font></p><p><font style="font-size: 12pt; line-height: 200%">　　国家能源局派出机构要加大抽蓄电站运行调度等情况的监管力度，建立健全监管和考核机制，明确考核标准及监管措施，定期发布运行调度情况和监管考核信息。加强日常监管，重点对顶峰发电、调峰、调频、事故备用、可再生能源消纳以及价格成本等情况进行检查，促进抽蓄电站规范运行。 </font></p><p><font style="line-height: 200%"><font style="line-height: 200%"><font style="font-size: 12pt">　　<font style="font-size: 12pt; line-height: 200%">附表：华北、华东区域抽水蓄能电站基本情况表 </font></font></font></font></p><p>&nbsp;</p><p align="center"><font style="font-size: 18pt; line-height: 200%"><strong>二〇一五年四月</strong></font></p></span></td>
+    </tr>
+  </tbody></table>
+  
+  <table width="700" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody></table>  
+  	
+			</div>
+			<div class="back-top"></div>
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>		
+		</div>
+		<div id="id_appendix" class="article-other" style="display:none">
+			<div class="hr_10"></div>
+			<div class="hr_10"></div>
+            <div class="title-other">附件名称</div>
+<ul>
+<li id="id_appendix1"><a href="./P020150519419050634475.doc">华北、华东区域抽水蓄能电站基本情况表</a></li>
+
+
+
+</ul>
+<div class="clear"></div>
+		</div>
+		<div class="hr_10"></div>
+		<div class="hr_10"></div>
+		<div class="hr_10"></div>
+	</div>
+</div>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/bottom.js" type="text/javascript"></script>
+<script src="http://www.nea.gov.cn/static/default/js/public/article-font.js" type="text/javascript"></script>
+<SCRIPT language="javascript"> 
+<!--
+runDaubLogic();
+if(document.getElementById("id_appendix1") != null)
+{
+	document.getElementById("id_appendix").style.display = "block";
+}
+//-->
+</SCRIPT>
+</body>
+</html>
