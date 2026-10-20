@@ -1,0 +1,31 @@
+{
+  "round": "R4",
+  "identity": "exploratory_after_V01_contact_not_independent_validation",
+  "hypothesis": "Anchoring the rollout refinement to the original rolling guard's retention decisions prevents the V01 extra-retention counterexample while retaining the delayed-case savings.",
+  "falsifier": "More retained MW-years or any later cohort exit than rolling_guard, service/year regret above 0.001, or increased total cost.",
+  "end_year": 2060,
+  "method": {
+    "horizon": 3,
+    "pressure": 0.85,
+    "risk_limit": 0.02
+  },
+  "rules": [
+    "anchored_guard"
+  ],
+  "conditions": [
+    {
+      "id": "V01_speed4_lag1",
+      "acceleration": 4,
+      "scenario": {
+        "infrastructure_delay_years": 1
+      }
+    },
+    {
+      "id": "delayed",
+      "acceleration": 5,
+      "scenario": {
+        "infrastructure_delay_years": 3
+      }
+    }
+  ]
+}

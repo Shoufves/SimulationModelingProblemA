@@ -1,0 +1,16 @@
+START V06_net55__schedule
+V06_net55__schedule cost_T 181.101197 retention_MWyr 0 seconds 9.5
+START V06_net55__cost_order
+V06_net55__cost_order cost_T 181.931341 retention_MWyr 3292652 seconds 9.56
+START V06_net55__capacity_ready
+V06_net55__capacity_ready cost_T 181.931341 retention_MWyr 3292652 seconds 9.69
+START V06_net55__replacement_ready
+V06_net55__replacement_ready cost_T 181.817533 retention_MWyr 2312688 seconds 10.77
+START V06_net55__rolling_guard
+V06_net55__rolling_guard cost_T 181.817666 retention_MWyr 2442117 seconds 13.31
+START V06_net55__paired_myopic
+V06_net55__paired_myopic cost_T 181.796185 retention_MWyr 2183258 seconds 13.39
+START V06_net55__paired_guard
+V06_net55__paired_guard cost_T 181.796185 retention_MWyr 2183258 seconds 21.87
+START V06_net55__rollout_guard
+V06_net55__rollout_guard cost_T 181.806938 retention_MWyr 2405137 seconds 123.44

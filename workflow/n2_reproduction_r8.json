@@ -1,0 +1,32 @@
+{
+  "round": "R8",
+  "candidate": "anchored_guard",
+  "identity": "independent_process_reproduction_not_new_effectiveness_evidence",
+  "hypothesis": "W08 compound scenario scientific records reproduce under PYTHONHASHSEED=83 in another process and directory.",
+  "end_year": 2060,
+  "method": {
+    "horizon": 3,
+    "pressure": 0.85,
+    "risk_limit": 0.02
+  },
+  "rules": [
+    "anchored_guard"
+  ],
+  "conditions": [
+    {
+      "id": "W08_compound",
+      "acceleration": 6,
+      "scenario": {
+        "infrastructure_delay_years": 2,
+        "event": {
+          "start_year": 2038,
+          "end_year": 2041,
+          "gas_import_multiplier": 0.5,
+          "hydro_energy_multiplier": 0.65,
+          "renewable_availability_multiplier": 0.65
+        }
+      }
+    }
+  ],
+  "pythonhashseed": 83
+}

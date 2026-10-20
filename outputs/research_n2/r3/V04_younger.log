@@ -1,0 +1,16 @@
+START V04_younger__schedule
+V04_younger__schedule cost_T 180.824133 retention_MWyr 0 seconds 7.68
+START V04_younger__cost_order
+V04_younger__cost_order cost_T 181.662997 retention_MWyr 3236477 seconds 7.73
+START V04_younger__capacity_ready
+V04_younger__capacity_ready cost_T 181.662997 retention_MWyr 3236477 seconds 8.91
+START V04_younger__replacement_ready
+V04_younger__replacement_ready cost_T 181.551658 retention_MWyr 2319291 seconds 10.46
+START V04_younger__rolling_guard
+V04_younger__rolling_guard cost_T 181.564489 retention_MWyr 2569432 seconds 13.9
+START V04_younger__paired_myopic
+V04_younger__paired_myopic cost_T 181.554405 retention_MWyr 1969092 seconds 14.69
+START V04_younger__paired_guard
+V04_younger__paired_guard cost_T 181.533301 retention_MWyr 2135853 seconds 24.54
+START V04_younger__rollout_guard
+V04_younger__rollout_guard cost_T 181.538629 retention_MWyr 2419347 seconds 151.26

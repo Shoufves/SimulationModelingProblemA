@@ -1,0 +1,38 @@
+{
+  "round": "R1",
+  "identity": "exploratory_not_validation",
+  "hypothesis": "Paired service/year screening avoids retirement deferral that cannot mitigate the binding shortage; lower retained MW-years without materially worse service than replacement_ready and rolling_guard.",
+  "falsifier": "No deployment difference, worse service by over 0.001 absolute fraction, or reductions only against schedule/cost-order; none supports N2.",
+  "end_year": 2060,
+  "method": {
+    "horizon": 3,
+    "pressure": 0.85,
+    "risk_limit": 0.02
+  },
+  "rules": [
+    "schedule",
+    "cost_order",
+    "capacity_ready",
+    "replacement_ready",
+    "rolling_guard",
+    "paired_myopic",
+    "paired_guard"
+  ],
+  "conditions": [
+    {
+      "id": "standard",
+      "acceleration": 5
+    },
+    {
+      "id": "delayed",
+      "acceleration": 5,
+      "scenario": {
+        "infrastructure_delay_years": 3
+      }
+    },
+    {
+      "id": "fast",
+      "acceleration": 10
+    }
+  ]
+}

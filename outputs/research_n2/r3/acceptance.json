@@ -1,0 +1,238 @@
+{
+  "protocol_sha256": "0bd85b6439c2e3a27cda716666474bbebb769fc186a75c36ec6add3d9f895fac",
+  "gates": {
+    "all_finished": true,
+    "technical": true,
+    "no_individual_violation": false,
+    "enough_material_improvements": true,
+    "enough_positive_improvements": true,
+    "enough_nondominated": false
+  },
+  "counts": {
+    "completed_conditions": 8,
+    "positive_retention_saving": 7,
+    "at_least_five_percent_retention_saving": 4,
+    "nondominated": 4,
+    "hard_service_limit_passed": 0
+  },
+  "technical_errors": [],
+  "conditions": [
+    {
+      "condition": "V01_speed4_lag1",
+      "comparison": {
+        "candidate": "V01_speed4_lag1__rollout_guard",
+        "baseline": "V01_speed4_lag1__rolling_guard",
+        "maximum_service_fraction_regret": 0.0,
+        "worst_cell": [
+          2025,
+          "building_heat_proxy"
+        ],
+        "improved_cells": 0,
+        "worsened_cells": 0,
+        "retention_reduction_fraction": -0.015901734819821822,
+        "cost_change_fraction": -5.0198788605237965e-05,
+        "co2_change_fraction": 7.75060432398611e-05,
+        "forecast_solves": 321,
+        "terminal_managed_capacity_change_mw": 0.0
+      },
+      "violations": [
+        "exit_date"
+      ],
+      "max_exit_delay_years": 3,
+      "dominated_by": [
+        "paired_guard"
+      ],
+      "elapsed_seconds": 142.07630449999124,
+      "system_hard_service_limit_passed": false
+    },
+    {
+      "condition": "V02_speed7_lag2",
+      "comparison": {
+        "candidate": "V02_speed7_lag2__rollout_guard",
+        "baseline": "V02_speed7_lag2__rolling_guard",
+        "maximum_service_fraction_regret": 0.0,
+        "worst_cell": [
+          2025,
+          "building_heat_proxy"
+        ],
+        "improved_cells": 0,
+        "worsened_cells": 0,
+        "retention_reduction_fraction": 0.07478999194113034,
+        "cost_change_fraction": -0.00019783270488837879,
+        "co2_change_fraction": -7.456809463446401e-05,
+        "forecast_solves": 333,
+        "terminal_managed_capacity_change_mw": 0
+      },
+      "violations": [
+        "exit_date"
+      ],
+      "max_exit_delay_years": 3,
+      "dominated_by": [],
+      "elapsed_seconds": 163.0872152999509,
+      "system_hard_service_limit_passed": false
+    },
+    {
+      "condition": "V03_speed9_lag4",
+      "comparison": {
+        "candidate": "V03_speed9_lag4__rollout_guard",
+        "baseline": "V03_speed9_lag4__rolling_guard",
+        "maximum_service_fraction_regret": 0.0,
+        "worst_cell": [
+          2025,
+          "building_heat_proxy"
+        ],
+        "improved_cells": 0,
+        "worsened_cells": 0,
+        "retention_reduction_fraction": 0.16556443444741475,
+        "cost_change_fraction": -0.0004154277847771004,
+        "co2_change_fraction": -0.00025250526920317373,
+        "forecast_solves": 327,
+        "terminal_managed_capacity_change_mw": 0
+      },
+      "violations": [
+        "exit_date"
+      ],
+      "max_exit_delay_years": 3,
+      "dominated_by": [],
+      "elapsed_seconds": 136.4983532000333,
+      "system_hard_service_limit_passed": false
+    },
+    {
+      "condition": "V04_younger",
+      "comparison": {
+        "candidate": "V04_younger__rollout_guard",
+        "baseline": "V04_younger__rolling_guard",
+        "maximum_service_fraction_regret": 0.0,
+        "worst_cell": [
+          2025,
+          "building_heat_proxy"
+        ],
+        "improved_cells": 0,
+        "worsened_cells": 0,
+        "retention_reduction_fraction": 0.058411782740644846,
+        "cost_change_fraction": -0.00014243071387254336,
+        "co2_change_fraction": -4.743678355334513e-05,
+        "forecast_solves": 369,
+        "terminal_managed_capacity_change_mw": 0
+      },
+      "violations": [],
+      "max_exit_delay_years": 0,
+      "dominated_by": [],
+      "elapsed_seconds": 151.26262310001766,
+      "system_hard_service_limit_passed": false
+    },
+    {
+      "condition": "V05_older",
+      "comparison": {
+        "candidate": "V05_older__rollout_guard",
+        "baseline": "V05_older__rolling_guard",
+        "maximum_service_fraction_regret": 0.0,
+        "worst_cell": [
+          2025,
+          "building_heat_proxy"
+        ],
+        "improved_cells": 0,
+        "worsened_cells": 0,
+        "retention_reduction_fraction": 0.022046098022862504,
+        "cost_change_fraction": -0.000160887942201704,
+        "co2_change_fraction": 5.158723876785842e-05,
+        "forecast_solves": 312,
+        "terminal_managed_capacity_change_mw": 0
+      },
+      "violations": [
+        "exit_date"
+      ],
+      "max_exit_delay_years": 3,
+      "dominated_by": [
+        "paired_guard"
+      ],
+      "elapsed_seconds": 146.9550010000239,
+      "system_hard_service_limit_passed": false
+    },
+    {
+      "condition": "V06_net55",
+      "comparison": {
+        "candidate": "V06_net55__rollout_guard",
+        "baseline": "V06_net55__rolling_guard",
+        "maximum_service_fraction_regret": 0.0,
+        "worst_cell": [
+          2025,
+          "building_heat_proxy"
+        ],
+        "improved_cells": 0,
+        "worsened_cells": 0,
+        "retention_reduction_fraction": 0.015142509685698968,
+        "cost_change_fraction": -5.900375741951791e-05,
+        "co2_change_fraction": -4.743734020740131e-05,
+        "forecast_solves": 321,
+        "terminal_managed_capacity_change_mw": 0
+      },
+      "violations": [
+        "exit_date"
+      ],
+      "max_exit_delay_years": 3,
+      "dominated_by": [
+        "paired_myopic",
+        "paired_guard"
+      ],
+      "elapsed_seconds": 123.43687029997818,
+      "system_hard_service_limit_passed": false
+    },
+    {
+      "condition": "V07_no_queue",
+      "comparison": {
+        "candidate": "V07_no_queue__rollout_guard",
+        "baseline": "V07_no_queue__rolling_guard",
+        "maximum_service_fraction_regret": 0.0,
+        "worst_cell": [
+          2025,
+          "building_heat_proxy"
+        ],
+        "improved_cells": 0,
+        "worsened_cells": 0,
+        "retention_reduction_fraction": 0.11792552010208945,
+        "cost_change_fraction": -0.0003782425431441139,
+        "co2_change_fraction": -8.721475196382666e-05,
+        "forecast_solves": 375,
+        "terminal_managed_capacity_change_mw": 0
+      },
+      "violations": [],
+      "max_exit_delay_years": 0,
+      "dominated_by": [],
+      "elapsed_seconds": 144.51381849998143,
+      "system_hard_service_limit_passed": false
+    },
+    {
+      "condition": "V08_compound",
+      "comparison": {
+        "candidate": "V08_compound__rollout_guard",
+        "baseline": "V08_compound__rolling_guard",
+        "maximum_service_fraction_regret": 0.0,
+        "worst_cell": [
+          2025,
+          "building_heat_proxy"
+        ],
+        "improved_cells": 0,
+        "worsened_cells": 0,
+        "retention_reduction_fraction": 0.04314110305887464,
+        "cost_change_fraction": -9.300718092986049e-05,
+        "co2_change_fraction": 1.0270497062592199e-05,
+        "forecast_solves": 330,
+        "terminal_managed_capacity_change_mw": 0
+      },
+      "violations": [
+        "exit_date"
+      ],
+      "max_exit_delay_years": 3,
+      "dominated_by": [
+        "paired_guard"
+      ],
+      "elapsed_seconds": 145.08383700001286,
+      "system_hard_service_limit_passed": false
+    }
+  ],
+  "n2_empirical_gate_passed": false,
+  "n3_supported": false,
+  "human_review": "pending",
+  "note": "Internal conditional-method criteria only. Passing does not prove global novelty, system feasibility, or national policy validity."
+}

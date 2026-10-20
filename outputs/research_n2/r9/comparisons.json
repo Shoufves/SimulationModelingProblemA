@@ -1,0 +1,514 @@
+[
+  {
+    "candidate": "W01_speed6_lag1__anchored_guard",
+    "baseline": "W01_speed6_lag1__schedule",
+    "maximum_service_fraction_regret": 5.165815445971522e-16,
+    "worst_cell": [
+      2058,
+      "transport_proxy"
+    ],
+    "improved_cells": 20,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": null,
+    "cost_change_fraction": 0.003993211404889951,
+    "co2_change_fraction": 0.017820843462307723,
+    "forecast_solves": 348,
+    "terminal_managed_capacity_change_mw": 42638.8212796472
+  },
+  {
+    "candidate": "W01_speed6_lag1__anchored_guard",
+    "baseline": "W01_speed6_lag1__replacement_ready",
+    "maximum_service_fraction_regret": 0.0002260651185106502,
+    "worst_cell": [
+      2049,
+      "existing_electric_services"
+    ],
+    "improved_cells": 1,
+    "worsened_cells": 10,
+    "retention_reduction_fraction": -0.0241782415563494,
+    "cost_change_fraction": -0.00013137125427109542,
+    "co2_change_fraction": 0.0002904085420531999,
+    "forecast_solves": 348,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W01_speed6_lag1__anchored_guard",
+    "baseline": "W01_speed6_lag1__rolling_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.045086170172830675,
+    "cost_change_fraction": -0.00010912440430999037,
+    "co2_change_fraction": -3.1478926163397425e-05,
+    "forecast_solves": 348,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W01_speed6_lag1__anchored_guard",
+    "baseline": "W01_speed6_lag1__rollout_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.045086170172830675,
+    "cost_change_fraction": -3.016368098962552e-05,
+    "co2_change_fraction": -0.00010647059174562212,
+    "forecast_solves": 348,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W02_speed6_lag3__anchored_guard",
+    "baseline": "W02_speed6_lag3__schedule",
+    "maximum_service_fraction_regret": 2.698312248638256e-16,
+    "worst_cell": [
+      2040,
+      "transport_proxy"
+    ],
+    "improved_cells": 26,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": null,
+    "cost_change_fraction": 0.003908118466650734,
+    "co2_change_fraction": 0.019205077889257405,
+    "forecast_solves": 402,
+    "terminal_managed_capacity_change_mw": 42638.8212796472
+  },
+  {
+    "candidate": "W02_speed6_lag3__anchored_guard",
+    "baseline": "W02_speed6_lag3__replacement_ready",
+    "maximum_service_fraction_regret": 0.0025670818632651804,
+    "worst_cell": [
+      2046,
+      "existing_electric_services"
+    ],
+    "improved_cells": 8,
+    "worsened_cells": 10,
+    "retention_reduction_fraction": 0.09928613120953167,
+    "cost_change_fraction": -0.0004306982287975991,
+    "co2_change_fraction": 0.00011673659662947422,
+    "forecast_solves": 402,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W02_speed6_lag3__anchored_guard",
+    "baseline": "W02_speed6_lag3__rolling_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.13369111428746683,
+    "cost_change_fraction": -0.0003140037743198931,
+    "co2_change_fraction": -0.00017077950038890677,
+    "forecast_solves": 402,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W02_speed6_lag3__anchored_guard",
+    "baseline": "W02_speed6_lag3__rollout_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.0,
+    "cost_change_fraction": 0.0,
+    "co2_change_fraction": 0.0,
+    "forecast_solves": 402,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W03_speed8_lag2__anchored_guard",
+    "baseline": "W03_speed8_lag2__schedule",
+    "maximum_service_fraction_regret": 0.0038466190331831185,
+    "worst_cell": [
+      2060,
+      "existing_electric_services"
+    ],
+    "improved_cells": 26,
+    "worsened_cells": 1,
+    "retention_reduction_fraction": null,
+    "cost_change_fraction": 0.004177681505538322,
+    "co2_change_fraction": 0.01880569965057699,
+    "forecast_solves": 366,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W03_speed8_lag2__anchored_guard",
+    "baseline": "W03_speed8_lag2__replacement_ready",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.09085921220257531,
+    "cost_change_fraction": -0.00027256077004123025,
+    "co2_change_fraction": -3.0467853660010036e-06,
+    "forecast_solves": 366,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W03_speed8_lag2__anchored_guard",
+    "baseline": "W03_speed8_lag2__rolling_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.10953014817796625,
+    "cost_change_fraction": -0.00027315616767109585,
+    "co2_change_fraction": -9.497970165106562e-05,
+    "forecast_solves": 366,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W03_speed8_lag2__anchored_guard",
+    "baseline": "W03_speed8_lag2__rollout_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.022543085086415338,
+    "cost_change_fraction": -2.385148335959375e-05,
+    "co2_change_fraction": -3.7947993666631596e-05,
+    "forecast_solves": 366,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W04_authority5__anchored_guard",
+    "baseline": "W04_authority5__schedule",
+    "maximum_service_fraction_regret": 5.165815445971522e-16,
+    "worst_cell": [
+      2058,
+      "transport_proxy"
+    ],
+    "improved_cells": 20,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": null,
+    "cost_change_fraction": 0.003994004801824769,
+    "co2_change_fraction": 0.017820843462307723,
+    "forecast_solves": 348,
+    "terminal_managed_capacity_change_mw": 42638.8212796472
+  },
+  {
+    "candidate": "W04_authority5__anchored_guard",
+    "baseline": "W04_authority5__replacement_ready",
+    "maximum_service_fraction_regret": 0.0002260651185106502,
+    "worst_cell": [
+      2049,
+      "existing_electric_services"
+    ],
+    "improved_cells": 1,
+    "worsened_cells": 10,
+    "retention_reduction_fraction": -0.0241782415563494,
+    "cost_change_fraction": -0.00013139724870558922,
+    "co2_change_fraction": 0.0002904085420531999,
+    "forecast_solves": 348,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W04_authority5__anchored_guard",
+    "baseline": "W04_authority5__rolling_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.045086170172830675,
+    "cost_change_fraction": -0.00010914599724010099,
+    "co2_change_fraction": -3.1478926163397425e-05,
+    "forecast_solves": 348,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W04_authority5__anchored_guard",
+    "baseline": "W04_authority5__rollout_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.045086170172830675,
+    "cost_change_fraction": -3.0169650082401134e-05,
+    "co2_change_fraction": -0.00010647059174562212,
+    "forecast_solves": 348,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W05_authority100__anchored_guard",
+    "baseline": "W05_authority100__schedule",
+    "maximum_service_fraction_regret": 0.0038466190331831185,
+    "worst_cell": [
+      2060,
+      "existing_electric_services"
+    ],
+    "improved_cells": 26,
+    "worsened_cells": 1,
+    "retention_reduction_fraction": null,
+    "cost_change_fraction": 0.004177681505538322,
+    "co2_change_fraction": 0.01880569965057699,
+    "forecast_solves": 366,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W05_authority100__anchored_guard",
+    "baseline": "W05_authority100__replacement_ready",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.09085921220257531,
+    "cost_change_fraction": -0.00027256077004123025,
+    "co2_change_fraction": -3.0467853660010036e-06,
+    "forecast_solves": 366,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W05_authority100__anchored_guard",
+    "baseline": "W05_authority100__rolling_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.10953014817796625,
+    "cost_change_fraction": -0.00027315616767109585,
+    "co2_change_fraction": -9.497970165106562e-05,
+    "forecast_solves": 366,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W05_authority100__anchored_guard",
+    "baseline": "W05_authority100__rollout_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.022543085086415338,
+    "cost_change_fraction": -2.385148335959375e-05,
+    "co2_change_fraction": -3.7947993666631596e-05,
+    "forecast_solves": 366,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W06_low_cash__anchored_guard",
+    "baseline": "W06_low_cash__schedule",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 24,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": null,
+    "cost_change_fraction": 0.003938301343841655,
+    "co2_change_fraction": 0.018841180834745286,
+    "forecast_solves": 390,
+    "terminal_managed_capacity_change_mw": 42638.8212796472
+  },
+  {
+    "candidate": "W06_low_cash__anchored_guard",
+    "baseline": "W06_low_cash__replacement_ready",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.04223017489520031,
+    "cost_change_fraction": -0.00014113440286889212,
+    "co2_change_fraction": -3.803305513705446e-05,
+    "forecast_solves": 390,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W06_low_cash__anchored_guard",
+    "baseline": "W06_low_cash__rolling_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.08103809678979368,
+    "cost_change_fraction": -0.00020033607751845928,
+    "co2_change_fraction": -7.815770494656871e-05,
+    "forecast_solves": 390,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W06_low_cash__anchored_guard",
+    "baseline": "W06_low_cash__rollout_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.0,
+    "cost_change_fraction": 0.0,
+    "co2_change_fraction": 0.0,
+    "forecast_solves": 390,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W07_high_growth__anchored_guard",
+    "baseline": "W07_high_growth__schedule",
+    "maximum_service_fraction_regret": 3.1059270034065547e-16,
+    "worst_cell": [
+      2057,
+      "transport_proxy"
+    ],
+    "improved_cells": 30,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": null,
+    "cost_change_fraction": 0.004581012116902539,
+    "co2_change_fraction": 0.019434138275320034,
+    "forecast_solves": 432,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W07_high_growth__anchored_guard",
+    "baseline": "W07_high_growth__replacement_ready",
+    "maximum_service_fraction_regret": 0.0021569961457863227,
+    "worst_cell": [
+      2037,
+      "existing_electric_services"
+    ],
+    "improved_cells": 6,
+    "worsened_cells": 10,
+    "retention_reduction_fraction": 0.01332635900317325,
+    "cost_change_fraction": -0.0002576246777609148,
+    "co2_change_fraction": 0.0002779811630830853,
+    "forecast_solves": 432,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W07_high_growth__anchored_guard",
+    "baseline": "W07_high_growth__rolling_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.051256258122012954,
+    "cost_change_fraction": -0.00015575728296246538,
+    "co2_change_fraction": 0.0,
+    "forecast_solves": 432,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W07_high_growth__anchored_guard",
+    "baseline": "W07_high_growth__rollout_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.019857226241906334,
+    "cost_change_fraction": -2.6439830056457225e-05,
+    "co2_change_fraction": -3.6879595337824256e-05,
+    "forecast_solves": 432,
+    "terminal_managed_capacity_change_mw": 0
+  },
+  {
+    "candidate": "W08_compound__anchored_guard",
+    "baseline": "W08_compound__schedule",
+    "maximum_service_fraction_regret": 3.865408328490645e-16,
+    "worst_cell": [
+      2057,
+      "transport_proxy"
+    ],
+    "improved_cells": 25,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": null,
+    "cost_change_fraction": 0.004202796399279229,
+    "co2_change_fraction": 0.019480764461946576,
+    "forecast_solves": 390,
+    "terminal_managed_capacity_change_mw": 42638.8212796472
+  },
+  {
+    "candidate": "W08_compound__anchored_guard",
+    "baseline": "W08_compound__replacement_ready",
+    "maximum_service_fraction_regret": 0.00017757825932020188,
+    "worst_cell": [
+      2049,
+      "existing_electric_services"
+    ],
+    "improved_cells": 5,
+    "worsened_cells": 8,
+    "retention_reduction_fraction": 0.02157055152943732,
+    "cost_change_fraction": -0.00020464876507619856,
+    "co2_change_fraction": 0.0008081993083868255,
+    "forecast_solves": 390,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W08_compound__anchored_guard",
+    "baseline": "W08_compound__rolling_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.08103809678979368,
+    "cost_change_fraction": -0.00019903175556723607,
+    "co2_change_fraction": -7.790458659584498e-05,
+    "forecast_solves": 390,
+    "terminal_managed_capacity_change_mw": 0.0
+  },
+  {
+    "candidate": "W08_compound__anchored_guard",
+    "baseline": "W08_compound__rollout_guard",
+    "maximum_service_fraction_regret": 0.0,
+    "worst_cell": [
+      2025,
+      "building_heat_proxy"
+    ],
+    "improved_cells": 0,
+    "worsened_cells": 0,
+    "retention_reduction_fraction": 0.0,
+    "cost_change_fraction": 0.0,
+    "co2_change_fraction": 0.0,
+    "forecast_solves": 390,
+    "terminal_managed_capacity_change_mw": 0.0
+  }
+]

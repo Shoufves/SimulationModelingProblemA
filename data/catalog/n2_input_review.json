@@ -1,0 +1,31 @@
+{
+  "review_id":"n2-pr14-parsed-snapshot-20261020",
+  "review_kind":"AI-assisted technical review of a new conditional research use; not human source approval",
+  "review_date":"2026-10-20",
+  "baseline_commit":"1b8f465783afe7505c8d4e65ec43ada18c311daf",
+  "manifest_sha256":"e6938053118425baf4cdf6d06f159efa5ff1b3fcb80118240bcda2dded6487ed",
+  "allowed_use":"conditional_yearly_q3_research",
+  "original_contracts_modified":false,
+  "raw_originals_reverified":false,
+  "checks_completed":[
+    "Read the PR14 forward adapter and factory snapshot contract; retain six evidence-reader calls and unchanged model logic.",
+    "Exported exact Git objects; verified all 52 upstream code hashes and both parsed-input/design hashes.",
+    "Re-executed 2025-2060 S0 against the PR14 reference: 4147 numeric fields passed bounded reference comparison; floating money differences disclosed.",
+    "Preserved the 2024 observed aggregate opening and separately labelled reconstructed ages, debt, cash, queue and subsidy arrears.",
+    "Retained original service units, thermal/renewable cohort accounting, fiscal receipts, project competition, paid construction and device renewal.",
+    "Kept all service/year cells including exports; annual representative-day scenarios are not relabelled as historical disasters or continuous H02 events.",
+    "Retirement fee, fiscal ceiling, risk limit, duration and stress factors are declared scenario assumptions; not new official observations or legal policy limits.",
+    "New purpose evaluated in a separate namespace; original Q1/Q2/Q3 scientific assets and original source-use contracts remain unchanged."
+  ],
+  "conditional_decision":"The extracted inputs can support comparative conditional retirement experiments with inherited limitations. They cannot certify national adequacy, calibrated policy effects or net-zero achievement.",
+  "prohibited_upgrades":["new independent historical validation","original PDF revalidation","official national prediction","whole-year hourly reliability","cross-province network validation","human approval"],
+  "new_assumption_provenance":{
+    "retention_fee_cny_per_mw_year":{"value":20000,"source":"workflow/q3_inputs.json h01.retention_fee_cny_per_mw_year; conditional additional service cost"},
+    "public_budget_gdp_fraction":{"value":0.0005,"source":"workflow/q3_inputs.json policy.public_budget_gdp_fraction; conditional separate appropriation"},
+    "forecast_horizon_years":{"value":3,"source":"workflow/q3_inputs.json information.forecast_horizon_years"},
+    "renewable_pressure":{"value":0.85,"source":"workflow/q3_inputs.json information.pressure_renewable_factor"},
+    "service_limit":{"value":0.02,"source":"workflow/q3_inputs.json h01.risk_limit; research convention, not official standard"},
+    "scenario_combinations":{"source":"workflow/n2_pilot_r1.json through workflow/n2_validation_r9.json; author-defined conditional experimental designs"}
+  },
+  "human_review":"pending"
+}

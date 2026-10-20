@@ -1,0 +1,19 @@
+test_anchor_can_release_demonstrably_irrelevant_retention (test_pr14_retirement.RetirementTests.test_anchor_can_release_demonstrably_irrelevant_retention) ... ok
+test_anchor_cannot_create_retention_when_original_rule_releases (test_pr14_retirement.RetirementTests.test_anchor_cannot_create_retention_when_original_rule_releases) ... ok
+test_current_information_rollout_cannot_read_future_gdp_regime (test_pr14_retirement.RetirementTests.test_current_information_rollout_cannot_read_future_gdp_regime) ... ok
+test_disabled_retirement_preserves_upstream_reference (test_pr14_retirement.RetirementTests.test_disabled_retirement_preserves_upstream_reference) ... ok
+test_max_deferral_and_transfer_pair (test_pr14_retirement.RetirementTests.test_max_deferral_and_transfer_pair) ... ok
+test_mesa_bound_hook_really_executes (test_pr14_retirement.RetirementTests.test_mesa_bound_hook_really_executes) ... ok
+test_nonfinite_retention_fee_rejected_before_activation (test_pr14_retirement.RetirementTests.test_nonfinite_retention_fee_rejected_before_activation) ... ok
+test_rollout_restores_state_and_cannot_see_future_event (test_pr14_retirement.RetirementTests.test_rollout_restores_state_and_cannot_see_future_event) ... ok
+test_solver_failure_restores_exit_dates_and_cache (test_pr14_retirement.RetirementTests.test_solver_failure_restores_exit_dates_and_cache) ... ok
+test_static_forecast_restores_live_state (test_pr14_retirement.RetirementTests.test_static_forecast_restores_live_state) ... ok
+test_zero_retention_budget_cannot_create_free_capacity (test_pr14_retirement.RetirementTests.test_zero_retention_budget_cannot_create_free_capacity) ... ok
+test_cost_emissions_tradeoff_is_not_dominance (test_research_comparisons.ComparisonTests.test_cost_emissions_tradeoff_is_not_dominance) ... ok
+test_maximum_hides_another_service_regression (test_research_comparisons.ComparisonTests.test_maximum_hides_another_service_regression) ... ok
+test_missing_service_cannot_improve_comparison (test_research_comparisons.ComparisonTests.test_missing_service_cannot_improve_comparison) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 9.269s
+
+OK

@@ -1,0 +1,16 @@
+START V07_no_queue__schedule
+V07_no_queue__schedule cost_T 179.943506 retention_MWyr 0 seconds 7.78
+START V07_no_queue__cost_order
+V07_no_queue__cost_order cost_T 180.814291 retention_MWyr 3292652 seconds 8.63
+START V07_no_queue__capacity_ready
+V07_no_queue__capacity_ready cost_T 180.814291 retention_MWyr 3292652 seconds 9.19
+START V07_no_queue__replacement_ready
+V07_no_queue__replacement_ready cost_T 180.781316 retention_MWyr 3052283 seconds 10.28
+START V07_no_queue__rolling_guard
+V07_no_queue__rolling_guard cost_T 180.814291 retention_MWyr 3292652 seconds 13.18
+START V07_no_queue__paired_myopic
+V07_no_queue__paired_myopic cost_T 180.655065 retention_MWyr 2553056 seconds 13.44
+START V07_no_queue__paired_guard
+V07_no_queue__paired_guard cost_T 180.64018 retention_MWyr 2700975 seconds 24.12
+START V07_no_queue__rollout_guard
+V07_no_queue__rollout_guard cost_T 180.745899 retention_MWyr 2904364 seconds 144.51
